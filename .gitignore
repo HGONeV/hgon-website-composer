@@ -65,3 +65,4 @@
 # =======================================================
 !/web/typo3conf/ext/bm_pdf2content
 !/web/typo3conf/ext/dd_googlesitemap
+!/web/typo3conf/ext/varnish
