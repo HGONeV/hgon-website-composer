@@ -1,0 +1,67 @@
+# =======================================================
+# Ignore Editor-files, vendor and other basic stuff
+# =======================================================
+/_*
+/.DS_Store
+/.settings
+/.buildpath
+/.project
+/.idea
+/.build
+/.env
+/.php-version
+/vendor
+/gitpull.php
+/.htaccess
+/.htpasswd
+/data.txt
+/data1.txt
+/data2.xt
+
+# =======================================================
+# Ignore cache folders and logs
+# =======================================================
+/var/cache/*
+!/var/cache/.gitkeep
+/var/log/*
+!/var/log/.gitkeep
+/web/typo3conf/AdditionalConfiguration.php
+/web/typo3conf/RealUrlConfigurationAdditional.php
+
+# =======================================================
+# Ignore extensions and defaults from composer
+# =======================================================
+/web/index.php
+/web/typo3
+/web/typo3conf/ENABLE_INSTALL_TOOL
+/web/typo3conf/ext/*
+!/web/typo3conf/ext/.gitkeep
+/web/typo3conf/PackageStates.php
+/web/typo3conf/AdditionalConfiguration.php
+/web/typo3conf/RealUrlConfigurationAdditional.php
+/web/typo3conf/temp_CACHED*
+/web/typo3conf/temp_fieldInfo.php
+/web/typo3conf/deprecation_*
+/web/typo3temp
+/web/uploads
+
+# =======================================================
+# Add folders for mountpoints
+# =======================================================
+/web/fileadmin/*
+!/web/fileadmin/.gitkeep
+!/web/fileadmin/media
+!/web/fileadmin/media/.gitkeep
+!/web/fileadmin/media/kompetenzzentrum/.gitkeep
+!/web/fileadmin/media/bremen/.gitkeep
+!/web/fileadmin/media/eanpc/.gitkeep
+!/web/fileadmin/media/nord/.gitkeep
+!/web/fileadmin/media/sachsen/.gitkeep
+!/web/fileadmin/media/sachsenanhalt/.gitkeep
+!/web/fileadmin/media/thueringen/.gitkeep
+
+# =======================================================
+# Add the custom extensions outside of composer here 
+# =======================================================
+!/web/typo3conf/ext/bm_pdf2content
+!/web/typo3conf/ext/dd_googlesitemap
