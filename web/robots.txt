@@ -1,0 +1,4 @@
+User-agent: *
+Allow: *
+Disallow: /fileadmin/media/images/Medienpool
+Disallow: /fileadmin/media_thueringen/Fotos
