@@ -85,21 +85,24 @@ This file contains a list of all extensions to be activated. If this file is cop
 ### File: .gitignore
 
 Contains the files and folders to ignore for versioning. 
+
 **Please note that all changes to this file will be versioned. Therefore, do not save any specific changes for the local environment here.**
 
 ### File: settings-for-phpstorm.jar
 
-Settings for PHP-Storm. ** These HAVE TO BE USED for development.**
+Settings for PHP-Storm. **These HAVE TO BE USED for development.**
 
 ### File: LocalConfiguration.php
 
 This file contains all configurations for live- and dev- environments. At the same time you have to make sure that neither passwords nor salted strings are saved here. With regard to security settings, this file is always based on the live version, i.e. it tends to be more restrictive.
-** Do NOT make any changes here! Use your local `AdditionalConfiguration.php` instead **
+
+**Do NOT make any changes here! Use your local `AdditionalConfiguration.php` instead**
 
 ### AdditionalConfigurationLive.php
 
 This file serves as a template for the settings relevant to the live environment. Copy this file to `AdditionalConfiguration.php` to make settings for the live environment.
-** Do NOT put any access data or enycryption keys into versioning that are relevant for the live environment. These are ONLY to be put into `AdditionConfiguation.php` on the Live!!!**
+
+**Do NOT put any access data or enycryption keys into versioning that are relevant for the live environment. These are ONLY to be put into `AdditionConfiguation.php` on the Live!!!**
 
 ### AdditionalConfigurationDev.php
 
@@ -107,7 +110,9 @@ This file serves as a template for the settings relevant for the DEV-environment
 
 ### RealUrlConfiguration.php
 
-The default configuration for RealUrl. ** Do NOT make any changes here that are not intended for the LIVE-environment. **
+The default configuration for RealUrl. 
+
+**Do NOT make any changes here that are not intended for the LIVE-environment.**
 
 ### RealUrlConfigurationDev.php
 
