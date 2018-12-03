@@ -554,7 +554,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['nord.rkw-kompetenzzentrum.de']['pagePath
 
 
 // check for local file
-if (file_exists(PATH_site . 'typo3conf/RealUrlConfigurationAdditional.php')) {
-    require('RealUrlConfigurationAdditional.php');
+if (file_exists(PATH_site . 'typo3conf/RealUrlAdditionalConfiguration.php')) {
+    require('RealUrlAdditionalConfiguration.php');
 }
 

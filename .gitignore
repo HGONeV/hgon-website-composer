@@ -1,7 +1,6 @@
 # =======================================================
 # Ignore Editor-files, vendor and other basic stuff
 # =======================================================
-/_*
 /.DS_Store
 /.settings
 /.buildpath
