@@ -64,3 +64,50 @@ composer update
 ./vendor/bin/typo3cms database:updateschema
 ./vendor/bin/typo3cms cache:flush
 ```
+
+## Infos to files
+
+### File: composer.json
+
+Contains the packages to install. 
+To be able to install packages that themselves have dependencies on packages that are only available as @dev, you need to specify the `minimum-stabilty` in combination with `prefer-stable`.
+With `preferred-install` you can specify that certain packages should be installed as GIT repositories so that you can work on them directly. 
+
+### Folder: dev
+
+This folder contains dummy files and a cleaned database dump for the development environment. Copy the dummy files to `/web/fileadmin`. They replace all file and image links.
+The database dump can be imported directly into the Vagrant- environment. 
+
+### File: _env
+
+This file contains a list of all extensions to be activated. If this file is copied to `.env` before installation, the package "helhum/dotenv-connector" will automatically create a corresponding `PackageStates.php`.
+
+### File: .gitignore
+
+Contains the files and folders to ignore for versioning.
+
+### File: settings-for-phpstorm.jar
+
+Settings for PHP-Storm. Please use them for developing.
+
+### File: LocalConfiguration.php
+
+This file contains all configurations for live- and dev- environments. At the same time you have to make sure that neither passwords nor salted strings are saved here. With regard to security settings, this file is always based on the live version, i.e. it tends to be more restrictive.
+
+### AdditionalConfigurationLive.php
+
+This file serves as a template for the settings relevant to the live environment. Copy this file to `AdditionalConfiguration.php` to make settings for the live environment.
+Do NOT put any access data or enycryption keys into versioning that are relevant for the live environment. These are ONLY to be put into `AdditionConfiguation.php` on the Live!!!
+
+### AdditionalConfigurationDev.php
+
+This file serves as a template for the settings relevant for the DEV-environment. Copy this file to `AdditionalConfiguration.php` to make settings for your own DEV-environment.
+
+### RealUrlConfiguration.php
+
+The default configuration for RealUrl. This is also the live version!
+
+### RealUrlConfigurationDev.php
+
+Can be copied to `RealUrlAdditionalConfiguation.php` to override or add to the default configuration for the DEV-environment.
+
