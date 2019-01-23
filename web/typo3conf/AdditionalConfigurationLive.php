@@ -1,34 +1,6 @@
 <?php
 
 // ====================================================
-// Backend
-// ====================================================
-// InstallTool-Password; should be kept secret
-$GLOBALS['TYPO3_CONF_VARS']['BE']['installToolPassword'] = '$P$C8.8X90tS2Djh1XOCTFehnh6Xu5uAp1'; // joh316
-
-// ====================================================
-// Database-Credentials; should be kept secret
-// ====================================================
-$GLOBALS['TYPO3_CONF_VARS']['DB']['database'] = 'rkw_live_komze';
-$GLOBALS['TYPO3_CONF_VARS']['DB']['host']     = 'localhost';
-$GLOBALS['TYPO3_CONF_VARS']['DB']['username'] = 'rkw_live_komze';
-$GLOBALS['TYPO3_CONF_VARS']['DB']['password'] = 'rkw';
-
-// ====================================================
-// Mailing-Credentials; should be kept secret
-// ====================================================
-$GLOBALS['TYPO3_CONF_VARS']['BE']['MAIL']['transport_smtp_server'] => 'localhost:25';
-$GLOBALS['TYPO3_CONF_VARS']['BE']['MAIL']['transport_smtp_username'] => 'service@mein.rkw.de',
-$GLOBALS['TYPO3_CONF_VARS']['BE']['MAIL']['transport_smtp_password'] = 'rkw';
-
-// ====================================================
-// Security; should be set on live!
-// ====================================================
-// is used for salted passwords etc.; should be kept secret
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey'] = 'WhatSoEver';
-
-
-// ====================================================
 // OrientDb 
 // ====================================================
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_search']['OrientDB']['DB'] = array (
@@ -63,10 +35,6 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['www.aprodi-projekt.de'] = 
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['www.baumitbim.de'] = array (
     'fallbackPid' => 4375,
     'defaultDomain' => 'www.baumitbim.de'
-);
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['www.digitalisierungs-cockpit.de'] = array (
-    'fallbackPid' => 4180,
-    'defaultDomain' => 'www.digitalisierungs-cockpit.de'
 );
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['www.eanpc.eu'] = array (
     'fallbackPid' => 3902,
@@ -112,10 +80,4 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['nord.rkw-kompetenzzentrum.
     'defaultDomain' => 'nord.rkw-kompetenzzentrum.de'
 );
 
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['management-digital.rkw-kompetenzzentrum.de'] = array (
-    'fallbackPid' => 3647,
-    'defaultDomain' => 'management-digital.rkw-kompetenzzentrum.de'
-);
 
-
-?>

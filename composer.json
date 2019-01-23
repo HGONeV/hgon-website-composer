@@ -11,9 +11,9 @@
     "require": {
          "typo3/cms": "~7.6.0",
          "helhum/typo3-console": "^4.9",
-	 "helhum/dotenv-connector": "^1.0",
+	     "helhum/dotenv-connector": "^1.0",
          "sjbr/static-info-tables" : "6.3.10",
-	 "dmitryd/typo3-realurl": "~2.2.1",
+	     "dmitryd/typo3-realurl": "~2.2.1",
          "rkw/rkw-alerts": "~7.6.3",
          "rkw/rkw-authors": "~7.6.13",
          "rkw/rkw-basics": "~7.6.12",
@@ -35,6 +35,7 @@
          "rkw/rkw-search": "~7.6.5",
          "rkw/rkw-soap": "~7.6.3",
          "rkw/rkw-survey": "~7.6.2",
+         "rkw/rkw-template": "~7.6.0",
          "rkw/rkw-tools": "~7.6.4",
          "rkw/rkw-webcheck": "~7.6.8",
          "rkw/rkw-wepstra": "~7.6.6"
@@ -42,7 +43,7 @@
     "require-dev": {
          "mikey179/vfsStream": "1.4.*@dev",
          "phpunit/phpunit": "~4.7.0",
-	 "friendsoftypo3/extension-builder": "~7.6.0"
+	     "friendsoftypo3/extension-builder": "~7.6.0"
     },
     "scripts": {
          "package-states": [

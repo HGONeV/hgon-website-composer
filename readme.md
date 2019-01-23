@@ -8,7 +8,8 @@ An RKW Vagrant instance is required for installation. This can be found here:
 https://github.com/RKWKomZe/Vagrant.git
 
 Within the www directory this git repository will be cloned and checked out.
-Important: The respective vagrant user must be used for this! 
+
+**Important: The respective vagrant user must be used for this!**
 
 ```
 cd /var/www/rkw-kompetenzzentrum.de/tmp
@@ -26,19 +27,21 @@ cd ..
 chown -R vagrant:vagrant public_html
 ```
 
-Now the database will be imported
+Now import the database
 ```
 cd /var/www/rkw-kompetenzzentrum.de/public_html/dev
+tar -xvzf rkw_live_komze.dev.tar.gz
 CREATE USER 'rkw_dev_komze'@'localhost' IDENTIFIED BY 'rkw'" | mysql -uroot -prkw
 CREATE DATABASE rkw_dev_komze" | mysql -uroot -prkw
 GRANT SELECT, UPDATE, INSERT, DELETE, DROP, ALTER, CREATE, INDEX, CREATE VIEW, SHOW VIEW ON rkw_dev_komze.* TO 'rkw_dev_komze'@'localhost'" | mysql -uroot -prkw
-mysql -u root -prkw rkw_dev_komze < mysql-rkw_live_komze.sql
+mysql -u root -prkw rkw_dev_komze < rkw_live_komze.dev.sql
+rm rkw_live_komze.dev.sql
 ```
 
 Now copy the dummy files. These replace all file and image references of the Live.
 ```
 cd /var/www/rkw-kompetenzzentrum.de/public_html/dev
-cp fileadmin/* ../web/fileadmin
+cp fileadmin/media/* ../web/fileadmin/media
 ```
 
 After that everything is installed with Composer. The .env file must be copied before.
@@ -94,27 +97,21 @@ Settings for PHP-Storm. **These HAVE TO BE USED for development.**
 
 ### File: LocalConfiguration.php
 
-This file contains all configurations for live- and dev- environments. At the same time you have to make sure that neither passwords nor salted strings are saved here. With regard to security settings, this file is always based on the live version, i.e. it tends to be more restrictive.
+This file contains all configurations for and dev- environments. At the same time you have to make sure that this file is NEVER deployed into a LIVE or STAGE-Environment. 
 
-**Do NOT make any changes here! Use your local `AdditionalConfiguration.php` instead**
-
-### AdditionalConfigurationLive.php
+### File: AdditionalConfigurationLive.php
 
 This file serves as a template for the settings relevant to the live environment. Copy this file to `AdditionalConfiguration.php` to make settings for the live environment.
 
 **Do NOT put any access data or enycryption keys into versioning that are relevant for the live environment. These are ONLY to be put into `AdditionConfiguation.php` on the Live!!!**
 
-### AdditionalConfigurationDev.php
+### File: AdditionalConfigurationDev.php
 
 This file serves as a template for the settings relevant for the DEV-environment. Copy this file to `AdditionalConfiguration.php` to make settings for your own DEV-environment.
 
-### RealUrlConfiguration.php
+### File: RealUrlConfiguration.php
 
 The default configuration for RealUrl. 
 
 **Do NOT make any changes here that are not intended for the LIVE-environment.**
-
-### RealUrlConfigurationDev.php
-
-Can be copied to `RealUrlAdditionalConfiguation.php` to override or add to the default configuration for the DEV-environment.
 

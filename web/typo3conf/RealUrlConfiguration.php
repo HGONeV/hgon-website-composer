@@ -517,9 +517,6 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.aprodi-projekt.de']['pagePath']['roo
 $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.baumitbim.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
 $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.baumitbim.de']['pagePath']['rootpage_id'] = 4367;
 
-$TYPO3_CONF_VARS['EXTCONF']['realurl']['www.digitalisierungs-cockpit.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
-$TYPO3_CONF_VARS['EXTCONF']['realurl']['www.digitalisierungs-cockpit.de']['pagePath']['rootpage_id'] = 4172;
-
 $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.eanpc.eu'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
 $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.eanpc.eu']['pagePath']['rootpage_id'] = 3881;
 
@@ -541,20 +538,64 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.rkw-sachsenanhalt.de']['pagePath']['
 $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.rkw-thueringen.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
 $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.rkw-thueringen.de']['pagePath']['rootpage_id'] = 3757;
 
-
 // =================================================
 $TYPO3_CONF_VARS['EXTCONF']['realurl']['bremen.rkw-kompetenzzentrum.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
 $TYPO3_CONF_VARS['EXTCONF']['realurl']['bremen.rkw-kompetenzzentrum.de']['pagePath']['rootpage_id'] = 4763;
-
-$TYPO3_CONF_VARS['EXTCONF']['realurl']['management-digital.rkw-kompetenzzentrum.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
-$TYPO3_CONF_VARS['EXTCONF']['realurl']['management-digital.rkw-kompetenzzentrum.de']['pagePath']['rootpage_id'] = 3639;
 
 $TYPO3_CONF_VARS['EXTCONF']['realurl']['nord.rkw-kompetenzzentrum.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
 $TYPO3_CONF_VARS['EXTCONF']['realurl']['nord.rkw-kompetenzzentrum.de']['pagePath']['rootpage_id'] = 3595;
 
 
-// check for local file
-if (file_exists(PATH_site . 'typo3conf/RealUrlAdditionalConfiguration.php')) {
-    require('RealUrlAdditionalConfiguration.php');
+/**
+ * Development environment
+ * TYPO3_CONTEXT Development
+ */
+if(\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopment()) {
+
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['mein.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['mein.rkw.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['wepstra-app.rkw-kompetenzzentrum.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['wepstra-app.rkw-kompetenzzentrum.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['aprodi-projekt.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.aprodi-projekt.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['baumitbim.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.baumitbim.de'];
+
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['eanpc.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.eanpc.eu'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['frauenambau.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.frauenambau.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['karriereseiten-check.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.karriereseiten-check.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['ressinnobau.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.ressinnobau.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['.rkw.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.rkw.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['rkw-sachsenanhalt.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.rkw-sachsenanhalt.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['rkw-thueringen.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.rkw-thueringen.de'];
+
+    # ==========================================
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['bremen.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['bremen.rkw-kompetenzzentrum.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['nord.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['nord.rkw-kompetenzzentrum.de'];
+
+}
+
+/**
+ * Staging environment
+ * TYPO3_CONTEXT Production/Staging
+ */
+if(
+    (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isProduction())
+    && (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->__toString() === 'Production/Staging')
+){
+
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['mein.rkw.codes'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['mein.rkw.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['wepstra-app.rkw.codes'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['wepstra-app.rkw-kompetenzzentrum.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['aprodi-projekt.rkw.codes'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.aprodi-projekt.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['baumitbim.rkw.codes'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.baumitbim.de'];
+
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['eanpc.rkw.codes'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.eanpc.eu'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['frauenambau.rkw.codes'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.frauenambau.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['karriereseiten-check.rkw.codes'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.karriereseiten-check.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['ressinnobau.rkw.codes'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.ressinnobau.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['rkw.codes'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.rkw.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['rkw-sachsenanhalt.rkw.codes'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.rkw-sachsenanhalt.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['rkw-thueringen.rkw.codes'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.rkw-thueringen.de'];
+
+    # ==========================================
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['bremen.rkw.codes'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['bremen.rkw-kompetenzzentrum.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['nord.rkw.codes'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['nord.rkw-kompetenzzentrum.de'];
+    
 }
 
