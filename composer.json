@@ -24,8 +24,8 @@
          "rkw/rkw-geolocation": "~7.6.11",
          "rkw/rkw-info-layer": "~7.6.2",
          "rkw/rkw-mailer": "~7.6.13",
-         "rkw/rkw-newsletter": "~7.6.1",
-         "rkw/rkw-order": "~7.6.6",
+         "rkw/rkw-newsletter": "~7.6.2",
+         "rkw/rkw-order": "~7.6.9",
          "rkw/rkw-projects": "~7.6.1",
          "rkw/rkw-quickcheck": "~7.6.1",
          "rkw/rkw-registration": "~7.6.11",
@@ -35,7 +35,7 @@
          "rkw/rkw-search": "~7.6.5",
          "rkw/rkw-soap": "~7.6.3",
          "rkw/rkw-survey": "~7.6.2",
-         "rkw/rkw-template": "~7.6.0",
+         "rkw/rkw-template": "~7.6.4",
          "rkw/rkw-tools": "~7.6.4",
          "rkw/rkw-webcheck": "~7.6.8",
          "rkw/rkw-wepstra": "~7.6.6"
@@ -46,15 +46,30 @@
 	     "friendsoftypo3/extension-builder": "~7.6.0"
     },
     "scripts": {
-         "package-states": [
+         "git-set-filemode" : [
+              "git config --global core.filemode false"
+         ],
+         "typo3-build-package-states": [
               "./vendor/bin/typo3cms install:generatepackagestates"
          ],
-         "folder-structure": [
+         "typo3-fix-folder-structure": [
               "./vendor/bin/typo3cms install:fixfolderstructure"
          ],
+         "typo3-clear-cache" : [
+              "./vendor/bin/typo3cms cache:flush"
+         ],
+         "pre-install-cmd": [
+           "@git-set-filemode"
+         ],
+         "pre-update-cmd": [
+            "@git-set-filemode"
+         ],
+         "post-update-cmd": [
+            "@typo3-clear-cache"
+         ],
          "post-autoload-dump": [
-              "@package-states",
-              "@folder-structure"
+              "@typo3-build-package-states",
+              "@typo3-fix-folder-structure"
          ]
     },
     "extra": {
@@ -77,5 +92,12 @@
             "rkw/*": "source",
             "*": "dist"
         }
+    },
+    "autoload": {
+        "psr-4": {
+            "BM\\BmPdf2content\\": "web/typo3conf/ext/bm_pdf2content/Classes",
+            "DmitryDulepov\\DdGooglesitemap\\": "web/typo3conf/ext/dd_googlesitemap/Classes",
+            "Snowflake\\Varnish\\": "web/typo3conf/ext/varnish/Classes"
+        }
     }
-} 
+}

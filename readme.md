@@ -38,25 +38,34 @@ mysql -u root -prkw rkw_dev_komze < rkw_live_komze.dev.sql
 rm rkw_live_komze.dev.sql
 ```
 
-Now copy the dummy files. These replace all file and image references of the Live.
+After that everything is installed with Composer.
+ Then the `.env` file  has to be copied
 ```
-cd /var/www/rkw-kompetenzzentrum.de/public_html/dev
-cp fileadmin/media/* ../web/fileadmin/media
+cd /var/www/rkw-kompetenzzentrum.de/public_html/
+cp _env .env
 ```
 
-After that everything is installed with Composer. The .env file must be copied before.
+Now we make sure that `chmod`-changes are not versioned. NEVER!
+```
+git config --global core.fileMode false
+```
+
+Install everything with composer now
 ```
 cd /var/www/rkw-kompetenzzentrum.de/public_html/
 cp _env .env
 composer install
 ```
 
-Finally we copy a few central files and make individual adjustments if necessary.
+Finally we copy a some central files and make individual adjustments if necessary.
 ```
 cd /var/www/rkw-kompetenzzentrum.de/public_html/web/typo3conf
 cp AdditionalConfigurationDev.php AdditionalConfiguration.php
-cp RealUrlConfigurationDev.php RealUrlAdditionalConfiguration.php
 ```
+
+Now we have to let your local machine know which hosts are to be directed to your local DEV.
+You will find an example `/etc/hosts` (`etc-hosts.txt`) in `/dev`
+
 
 ## Update
 To get the latest changes, proceed as follows:

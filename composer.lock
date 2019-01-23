@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d148655bd50250c1121ef30c76a37b09",
+    "content-hash": "15a2c1dafb0961569ae2681597203e69",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -1768,16 +1768,16 @@
         },
         {
             "name": "rkw/rkw-ecosystem",
-            "version": "v7.6.3-beta",
+            "version": "v7.6.4-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwEcosystem.git",
-                "reference": "324f83485c6b74fafa1d709dd4cdf85c9dca6abb"
+                "reference": "1c63032626704daa6c617d0731055a92a01a74da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEcosystem/zipball/324f83485c6b74fafa1d709dd4cdf85c9dca6abb",
-                "reference": "324f83485c6b74fafa1d709dd4cdf85c9dca6abb",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEcosystem/zipball/1c63032626704daa6c617d0731055a92a01a74da",
+                "reference": "1c63032626704daa6c617d0731055a92a01a74da",
                 "shasum": ""
             },
             "require": {
@@ -1795,7 +1795,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Ecosystem\\": "Classes/"
+                    "RKW\\RkwEcosystem\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1823,20 +1823,20 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2018-11-26T15:19:26+00:00"
+            "time": "2019-01-23T14:52:36+00:00"
         },
         {
             "name": "rkw/rkw-etracker",
-            "version": "v7.6.3-stable",
+            "version": "v7.6.4-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwEtracker.git",
-                "reference": "18588b9dbc114684b590aa56232637838a277b28"
+                "reference": "cd2c59e49262ebb7d1a743c8b6e16c5f6f841fa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEtracker/zipball/18588b9dbc114684b590aa56232637838a277b28",
-                "reference": "18588b9dbc114684b590aa56232637838a277b28",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEtracker/zipball/cd2c59e49262ebb7d1a743c8b6e16c5f6f841fa7",
+                "reference": "cd2c59e49262ebb7d1a743c8b6e16c5f6f841fa7",
                 "shasum": ""
             },
             "require": {
@@ -1852,7 +1852,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Etracker\\": "Classes/"
+                    "RKW\\RkwEtracker\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1874,20 +1874,20 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2018-11-28T21:11:54+00:00"
+            "time": "2019-01-23T14:51:25+00:00"
         },
         {
             "name": "rkw/rkw-events",
-            "version": "v7.6.7-stable",
+            "version": "v7.6.8-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwEvents.git",
-                "reference": "49aef41547466c2eb2f85e1522d587b6f752ac65"
+                "reference": "3723a7d0950eef3ec45627ea265c20e67b100f42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/49aef41547466c2eb2f85e1522d587b6f752ac65",
-                "reference": "49aef41547466c2eb2f85e1522d587b6f752ac65",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/3723a7d0950eef3ec45627ea265c20e67b100f42",
+                "reference": "3723a7d0950eef3ec45627ea265c20e67b100f42",
                 "shasum": ""
             },
             "require": {
@@ -1905,7 +1905,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Events\\": "Classes/"
+                    "RKW\\RkwEvents\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1939,20 +1939,20 @@
                 "TYPO3 CMS",
                 "events"
             ],
-            "time": "2018-11-28T22:08:40+00:00"
+            "time": "2019-01-23T14:48:54+00:00"
         },
         {
             "name": "rkw/rkw-geolocation",
-            "version": "v7.6.11-stable",
+            "version": "v7.6.12-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwGeolocation.git",
-                "reference": "ad003840e56a715fa038db0f6e5810eaa19c29aa"
+                "reference": "d1b1cb5966aedc0aadd71843e086d5a90ae8ec6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwGeolocation/zipball/ad003840e56a715fa038db0f6e5810eaa19c29aa",
-                "reference": "ad003840e56a715fa038db0f6e5810eaa19c29aa",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwGeolocation/zipball/d1b1cb5966aedc0aadd71843e086d5a90ae8ec6d",
+                "reference": "d1b1cb5966aedc0aadd71843e086d5a90ae8ec6d",
                 "shasum": ""
             },
             "require": {
@@ -1966,7 +1966,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Geolocation\\": "Classes/"
+                    "RKW\\RkwGeolocation\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1995,20 +1995,20 @@
                 "geolocation",
                 "google maps"
             ],
-            "time": "2018-11-28T21:17:48+00:00"
+            "time": "2019-01-23T14:47:48+00:00"
         },
         {
             "name": "rkw/rkw-info-layer",
-            "version": "v7.6.2-stable",
+            "version": "v7.6.3-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwInfoLayer.git",
-                "reference": "ff937af553d1c484b4f41059ce4b7291daf2e4dc"
+                "reference": "4e2c10e19bf2cdbefe6786907c1ad2d2a8a6fa3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwInfoLayer/zipball/ff937af553d1c484b4f41059ce4b7291daf2e4dc",
-                "reference": "ff937af553d1c484b4f41059ce4b7291daf2e4dc",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwInfoLayer/zipball/4e2c10e19bf2cdbefe6786907c1ad2d2a8a6fa3f",
+                "reference": "4e2c10e19bf2cdbefe6786907c1ad2d2a8a6fa3f",
                 "shasum": ""
             },
             "require": {
@@ -2022,7 +2022,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\InfoLayer\\": "Classes/"
+                    "RKW\\RkwInfoLayer\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2052,20 +2052,20 @@
                 "TYPO3 CMS",
                 "overlay"
             ],
-            "time": "2018-11-28T20:51:15+00:00"
+            "time": "2019-01-23T14:46:25+00:00"
         },
         {
             "name": "rkw/rkw-mailer",
-            "version": "v7.6.13-stable",
+            "version": "v7.6.15-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwMailer.git",
-                "reference": "d68f00d8ba10708cbb063b394e1b98bd51cf6ff2"
+                "reference": "d18a2e4a10294349e97b9a6380c823b801eae957"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/d68f00d8ba10708cbb063b394e1b98bd51cf6ff2",
-                "reference": "d68f00d8ba10708cbb063b394e1b98bd51cf6ff2",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/d18a2e4a10294349e97b9a6380c823b801eae957",
+                "reference": "d18a2e4a10294349e97b9a6380c823b801eae957",
                 "shasum": ""
             },
             "require": {
@@ -2079,7 +2079,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Mailer\\": "Classes/"
+                    "RKW\\RkwMailer\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2108,20 +2108,20 @@
                 "TYPO3 CMS",
                 "newsletter"
             ],
-            "time": "2018-11-28T21:19:23+00:00"
+            "time": "2019-01-23T15:12:12+00:00"
         },
         {
             "name": "rkw/rkw-newsletter",
-            "version": "v7.6.1-beta",
+            "version": "v7.6.2-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwNewsletter.git",
-                "reference": "3ef5fe36dbba73136d8b543376f382bd3e4ba44d"
+                "reference": "13237ce5eae3304470be71f86d3e7c636fdd3e93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwNewsletter/zipball/3ef5fe36dbba73136d8b543376f382bd3e4ba44d",
-                "reference": "3ef5fe36dbba73136d8b543376f382bd3e4ba44d",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwNewsletter/zipball/13237ce5eae3304470be71f86d3e7c636fdd3e93",
+                "reference": "13237ce5eae3304470be71f86d3e7c636fdd3e93",
                 "shasum": ""
             },
             "require": {
@@ -2138,7 +2138,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Newsletter\\": "Classes/"
+                    "RKW\\RkwNewsletter\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2166,20 +2166,20 @@
                 "TYPO3 CMS",
                 "newsletter"
             ],
-            "time": "2018-11-28T21:20:42+00:00"
+            "time": "2019-01-23T15:32:09+00:00"
         },
         {
             "name": "rkw/rkw-order",
-            "version": "v7.6.6-stable",
+            "version": "v7.6.9-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwOrder.git",
-                "reference": "a79a5612de7e2b7b6d50441af200337be3c20905"
+                "reference": "78fc6781480f10cfa88739b300e29ff598237fab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwOrder/zipball/a79a5612de7e2b7b6d50441af200337be3c20905",
-                "reference": "a79a5612de7e2b7b6d50441af200337be3c20905",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwOrder/zipball/78fc6781480f10cfa88739b300e29ff598237fab",
+                "reference": "78fc6781480f10cfa88739b300e29ff598237fab",
                 "shasum": ""
             },
             "require": {
@@ -2191,12 +2191,12 @@
             "type": "typo3-cms-extension",
             "extra": {
                 "typo3/cms": {
-                    "extension-key": "rkw_newsletter"
+                    "extension-key": "rkw_order"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Newsletter\\": "Classes/"
+                    "RKW\\RkwOrder\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2224,20 +2224,20 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2018-11-28T14:00:48+00:00"
+            "time": "2019-01-23T15:22:38+00:00"
         },
         {
             "name": "rkw/rkw-projects",
-            "version": "v7.6.10-stable",
+            "version": "v7.6.11-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwProjects.git",
-                "reference": "86737cd49b6011c20513be290c4f6924fe9f21d3"
+                "reference": "df191fd0d2ec9f0bbd608f1bb6a534f4e054514f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/86737cd49b6011c20513be290c4f6924fe9f21d3",
-                "reference": "86737cd49b6011c20513be290c4f6924fe9f21d3",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/df191fd0d2ec9f0bbd608f1bb6a534f4e054514f",
+                "reference": "df191fd0d2ec9f0bbd608f1bb6a534f4e054514f",
                 "shasum": ""
             },
             "require": {
@@ -2253,7 +2253,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Projects\\": "Classes/"
+                    "RKW\\RkwProjects\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2281,20 +2281,20 @@
                 "TYPO3 CMS",
                 "projects"
             ],
-            "time": "2018-11-28T21:39:24+00:00"
+            "time": "2019-01-23T14:43:11+00:00"
         },
         {
             "name": "rkw/rkw-quickcheck",
-            "version": "v7.6.1-stable",
+            "version": "v7.6.3-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwQuickcheck.git",
-                "reference": "82d08e52c51f8285a4c46b832785e13449ab76b6"
+                "reference": "9778de59abba9bf0b504b6711d68e75d54b1c093"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwQuickcheck/zipball/82d08e52c51f8285a4c46b832785e13449ab76b6",
-                "reference": "82d08e52c51f8285a4c46b832785e13449ab76b6",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwQuickcheck/zipball/9778de59abba9bf0b504b6711d68e75d54b1c093",
+                "reference": "9778de59abba9bf0b504b6711d68e75d54b1c093",
                 "shasum": ""
             },
             "require": {
@@ -2308,7 +2308,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Quickcheck\\": "Classes/"
+                    "RKW\\RkwQuickcheck\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2336,20 +2336,20 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2018-11-28T21:22:54+00:00"
+            "time": "2019-01-23T15:16:38+00:00"
         },
         {
             "name": "rkw/rkw-registration",
-            "version": "v7.6.12-stable",
+            "version": "v7.6.13-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwRegistration.git",
-                "reference": "2e242460df16ea51299d96bb6d07cdcd74bfa88a"
+                "reference": "905afbc75c7bd3643975ffc42e746d3b6defdcdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/2e242460df16ea51299d96bb6d07cdcd74bfa88a",
-                "reference": "2e242460df16ea51299d96bb6d07cdcd74bfa88a",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/905afbc75c7bd3643975ffc42e746d3b6defdcdc",
+                "reference": "905afbc75c7bd3643975ffc42e746d3b6defdcdc",
                 "shasum": ""
             },
             "require": {
@@ -2364,7 +2364,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Registration\\": "Classes/"
+                    "RKW\\RkwRegistration\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2396,20 +2396,20 @@
                 "register",
                 "registration"
             ],
-            "time": "2018-12-03T15:57:14+00:00"
+            "time": "2019-01-23T14:40:53+00:00"
         },
         {
             "name": "rkw/rkw-related",
-            "version": "v7.6.3-stable",
+            "version": "v7.6.4-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwRelated.git",
-                "reference": "0687336e6bd1460dc75868ef815d2a8aedfc0b4a"
+                "reference": "2ba5f7850246d12f98b931a6cd350b3910e6752f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRelated/zipball/0687336e6bd1460dc75868ef815d2a8aedfc0b4a",
-                "reference": "0687336e6bd1460dc75868ef815d2a8aedfc0b4a",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwRelated/zipball/2ba5f7850246d12f98b931a6cd350b3910e6752f",
+                "reference": "2ba5f7850246d12f98b931a6cd350b3910e6752f",
                 "shasum": ""
             },
             "require": {
@@ -2425,7 +2425,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Related\\": "Classes/"
+                    "RKW\\RkwRelated\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2453,20 +2453,20 @@
                 "Related Content",
                 "TYPO3 CMS"
             ],
-            "time": "2018-11-28T14:14:23+00:00"
+            "time": "2019-01-23T14:39:45+00:00"
         },
         {
             "name": "rkw/rkw-resourcespace",
-            "version": "v7.6.2-beta",
+            "version": "v7.6.3-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwResourcespace.git",
-                "reference": "1eabdd6d91557a1582348439379b3e5ec819e2dd"
+                "reference": "47c6dc2f12757a316548059c0fe25b612ab3e9c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwResourcespace/zipball/1eabdd6d91557a1582348439379b3e5ec819e2dd",
-                "reference": "1eabdd6d91557a1582348439379b3e5ec819e2dd",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwResourcespace/zipball/47c6dc2f12757a316548059c0fe25b612ab3e9c2",
+                "reference": "47c6dc2f12757a316548059c0fe25b612ab3e9c2",
                 "shasum": ""
             },
             "require": {
@@ -2481,7 +2481,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Resourcespace\\": "Classes/"
+                    "RKW\\RkwResourcespace\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2503,20 +2503,20 @@
                 "Resourcespace",
                 "TYPO3 CMS"
             ],
-            "time": "2018-11-28T21:24:30+00:00"
+            "time": "2019-01-23T14:38:43+00:00"
         },
         {
             "name": "rkw/rkw-rss",
-            "version": "v7.6.2-beta",
+            "version": "v7.6.3-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwRss.git",
-                "reference": "5cf6ce6d32c3cd2d485d2f0514278a213644db90"
+                "reference": "aad400fa76315092b8af75bf05644d6032662328"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRss/zipball/5cf6ce6d32c3cd2d485d2f0514278a213644db90",
-                "reference": "5cf6ce6d32c3cd2d485d2f0514278a213644db90",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwRss/zipball/aad400fa76315092b8af75bf05644d6032662328",
+                "reference": "aad400fa76315092b8af75bf05644d6032662328",
                 "shasum": ""
             },
             "require": {
@@ -2530,7 +2530,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Rss\\": "Classes/"
+                    "RKW\\RkwRss\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2552,20 +2552,20 @@
                 "Related Content",
                 "TYPO3 CMS"
             ],
-            "time": "2018-11-28T14:34:03+00:00"
+            "time": "2019-01-23T14:37:38+00:00"
         },
         {
             "name": "rkw/rkw-search",
-            "version": "v7.6.5-beta",
+            "version": "v7.6.6-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwSearch.git",
-                "reference": "6b6f26c44e8b7111834259c936c56d2f0728333a"
+                "reference": "3cfe5a714654fb2b05553acbc4d865e20d6ddd65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwSearch/zipball/6b6f26c44e8b7111834259c936c56d2f0728333a",
-                "reference": "6b6f26c44e8b7111834259c936c56d2f0728333a",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwSearch/zipball/3cfe5a714654fb2b05553acbc4d865e20d6ddd65",
+                "reference": "3cfe5a714654fb2b05553acbc4d865e20d6ddd65",
                 "shasum": ""
             },
             "require": {
@@ -2585,7 +2585,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Search\\": "Classes/"
+                    "RKW\\RkwSearch\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2608,20 +2608,20 @@
                 "TYPO3 CMS",
                 "orientdb"
             ],
-            "time": "2018-11-28T22:10:46+00:00"
+            "time": "2019-01-23T14:36:12+00:00"
         },
         {
             "name": "rkw/rkw-soap",
-            "version": "v7.6.3-beta",
+            "version": "v7.6.5-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwSoap.git",
-                "reference": "352ed54b5316c73d3a89fbea2a8faf59ed208122"
+                "reference": "4c3a1eb5f6926b8031a7642c71667f6f75b01f17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwSoap/zipball/352ed54b5316c73d3a89fbea2a8faf59ed208122",
-                "reference": "352ed54b5316c73d3a89fbea2a8faf59ed208122",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwSoap/zipball/4c3a1eb5f6926b8031a7642c71667f6f75b01f17",
+                "reference": "4c3a1eb5f6926b8031a7642c71667f6f75b01f17",
                 "shasum": ""
             },
             "require": {
@@ -2635,7 +2635,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Soap\\": "Classes/"
+                    "RKW\\RkwSoap\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2657,20 +2657,20 @@
                 "TYPO3 CMS",
                 "soap"
             ],
-            "time": "2018-11-28T15:41:38+00:00"
+            "time": "2019-01-23T15:15:16+00:00"
         },
         {
             "name": "rkw/rkw-survey",
-            "version": "v7.6.2-beta",
+            "version": "v7.6.3-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwSurvey.git",
-                "reference": "013ff0898b6a425c56e916e55b3ae2c0ddbdc0aa"
+                "reference": "ad4eeb42305e409f32b0c255390b846ab2845f86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwSurvey/zipball/013ff0898b6a425c56e916e55b3ae2c0ddbdc0aa",
-                "reference": "013ff0898b6a425c56e916e55b3ae2c0ddbdc0aa",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwSurvey/zipball/ad4eeb42305e409f32b0c255390b846ab2845f86",
+                "reference": "ad4eeb42305e409f32b0c255390b846ab2845f86",
                 "shasum": ""
             },
             "require": {
@@ -2686,7 +2686,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Survey\\": "Classes/"
+                    "RKW\\RkwSurvey\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2708,20 +2708,20 @@
                 "Related Content",
                 "TYPO3 CMS"
             ],
-            "time": "2018-11-28T15:54:07+00:00"
+            "time": "2019-01-23T14:33:37+00:00"
         },
         {
             "name": "rkw/rkw-template",
-            "version": "v7.6.2-beta",
+            "version": "v7.6.3-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwTemplate.git",
-                "reference": "2369bf88decc005f90f5a784dd32d5f8fee2895b"
+                "reference": "78af336f0cac7654676697ac81263e8a61247bca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwTemplate/zipball/2369bf88decc005f90f5a784dd32d5f8fee2895b",
-                "reference": "2369bf88decc005f90f5a784dd32d5f8fee2895b",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwTemplate/zipball/78af336f0cac7654676697ac81263e8a61247bca",
+                "reference": "78af336f0cac7654676697ac81263e8a61247bca",
                 "shasum": ""
             },
             "require": {
@@ -2758,20 +2758,20 @@
                 "TYPO3 CMS",
                 "templates"
             ],
-            "time": "2019-01-23T12:32:17+00:00"
+            "time": "2019-01-23T15:47:00+00:00"
         },
         {
             "name": "rkw/rkw-tools",
-            "version": "v7.6.4-beta",
+            "version": "v7.6.5-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwTools.git",
-                "reference": "b9252cfbb1bb9de783bcd060cc1eb6c688e5985c"
+                "reference": "25aaf9757a2efc66a00681662092eff6d68482b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwTools/zipball/b9252cfbb1bb9de783bcd060cc1eb6c688e5985c",
-                "reference": "b9252cfbb1bb9de783bcd060cc1eb6c688e5985c",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwTools/zipball/25aaf9757a2efc66a00681662092eff6d68482b6",
+                "reference": "25aaf9757a2efc66a00681662092eff6d68482b6",
                 "shasum": ""
             },
             "require": {
@@ -2787,7 +2787,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Tools\\": "Classes/"
+                    "RKW\\RkwTools\\": "Classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2809,20 +2809,20 @@
                 "TYPO3 CMS",
                 "tools"
             ],
-            "time": "2018-11-28T15:52:55+00:00"
+            "time": "2019-01-23T14:31:54+00:00"
         },
         {
             "name": "rkw/rkw-webcheck",
-            "version": "v7.6.8-stable",
+            "version": "v7.6.9-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwWebcheck.git",
-                "reference": "ee288745c499330c689bfd892e3d8b25c54b5d53"
+                "reference": "6450875aaaa848b9b43a58a7cf67212ecaca564d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwWebcheck/zipball/ee288745c499330c689bfd892e3d8b25c54b5d53",
-                "reference": "ee288745c499330c689bfd892e3d8b25c54b5d53",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwWebcheck/zipball/6450875aaaa848b9b43a58a7cf67212ecaca564d",
+                "reference": "6450875aaaa848b9b43a58a7cf67212ecaca564d",
                 "shasum": ""
             },
             "require": {
@@ -2840,7 +2840,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Webcheck\\": "Classes/"
+                    "RKW\\RkwWebcheck\\": "Classes"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2881,20 +2881,20 @@
                 "TYPO3 CMS",
                 "benchmarks"
             ],
-            "time": "2018-11-28T20:32:58+00:00"
+            "time": "2019-01-23T14:30:24+00:00"
         },
         {
             "name": "rkw/rkw-wepstra",
-            "version": "v7.6.6-stable",
+            "version": "v7.6.7-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwWepstra.git",
-                "reference": "2d00c44892da6d9067a9f64349cf7c75c81e4c2b"
+                "reference": "56f8e806a60a17bf86fd03d0c3d8e813d7da97a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwWepstra/zipball/2d00c44892da6d9067a9f64349cf7c75c81e4c2b",
-                "reference": "2d00c44892da6d9067a9f64349cf7c75c81e4c2b",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwWepstra/zipball/56f8e806a60a17bf86fd03d0c3d8e813d7da97a0",
+                "reference": "56f8e806a60a17bf86fd03d0c3d8e813d7da97a0",
                 "shasum": ""
             },
             "require": {
@@ -2910,7 +2910,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "RKW\\Wepstra\\": "Classes/"
+                    "RKW\\RkwWepstra\\": "Classes"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2931,7 +2931,7 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2018-11-28T20:44:23+00:00"
+            "time": "2019-01-23T14:15:31+00:00"
         },
         {
             "name": "sjbr/static-info-tables",

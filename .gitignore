@@ -51,7 +51,8 @@
 /web/fileadmin/*
 !/web/fileadmin/.gitkeep
 /web/fileadmin/media
-!/web/fileadmin/media/.gitkeep
+!/web/fileadmin/media/file-placeholder.pdf
+!/web/fileadmin/media/image-placeholder.jpg
 
 # =======================================================
 # Add the custom extensions outside of composer here 
