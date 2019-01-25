@@ -25,15 +25,13 @@ $application->setOption('transferMethod', 'rsync');
 $application->setOption('updateMethod', null);
 $application->setOption('keepReleases', 3);
 $application->setOption('composerCommandPath', 'composer');
-$application->setOption('phpBinaryPathAndFilename', '/usr/bin/php5.6');
+$application->setOption('phpBinaryPathAndFilename', $phpPath);
 $application->setOption('rsyncFlags', implode(' ', $rsyncFlags));
 $application->setOption('branch', $gitBranch);
 $application->setOption('typo3.surf:gitCheckout[branch]', $gitBranch);
 $application->setOption('applicationRootDirectory', 'src');
 $application->setDeploymentPath($absolutePath);
 $application->setSymlinks(array(
-  //  './var/cache' => '../../../shared/cache',
-  //  './var/log' => '../../../shared/log',
     './web/uploads' => '../../../shared/uploads',
     './web/fileadmin' => '../../../shared/fileadmin',
 ));
@@ -58,10 +56,6 @@ $application->addNode($node);
 /** @var \TYPO3\Surf\Domain\Model\SimpleWorkflow $workflow */
 $workflow = new \TYPO3\Surf\Domain\Model\SimpleWorkflow;
 
-// remove tasks
-$workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\CreatePackageStatesTask');
-$workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\SetUpExtensionsTask');
-
 // define task executed locally
 $workflow->defineTask(
     'RKW\Task\FixRights',
@@ -78,7 +72,7 @@ $workflow->defineTask(
 $workflow->defineTask(
     'RKW\\Task\\Apc\\ClearCache',
     \TYPO3\Surf\Task\ShellTask::class,
-    array('command' => 'php apc_clear_cache() > /dev/null')
+    array('command' => 'cd {releasePath} && ' . $phpPath . ' apc_clear_cache() > /dev/null')
 );
 $workflow->defineTask(
     'RKW\\Task\\TYPO3\\FixFolderStructure',
@@ -99,35 +93,45 @@ $workflow->defineTask(
 $deployment->setWorkflow($workflow);
 
 
-// Add tasks
+// Add / remove tasks
 $deployment->onInitialize(function () use ($workflow, $application) {
 
-
+    // remove tasks we don't need
     $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\CreatePackageStatesTask');
     $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\SetUpExtensionsTask');
-    
+
+
+    // -----------------------------------------------
     // Step 1: initialize - This is normally used only for an initial deployment to an instance. At this stage you may prefill certain directories for example.
 
+    // -----------------------------------------------
     // Step 2: package - This stage is where you normally package all files and assets, which will be transferred to the next stage.
     $workflow->afterTask('TYPO3\Surf\Task\Package\GitTask', 'RKW\Task\CopyEnv');
     $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\Task\FixRights');
 
+    // -----------------------------------------------
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
 
+    // -----------------------------------------------
     // Step 4: update - If necessary, the transferred assets can be updated at this stage on the foreign instance.
 
+    // -----------------------------------------------
     // Step 5: migration - Here you can define tasks to do some database updates / migrations. Be careful and do not delete old tables or columns, because the old code, relying on these, is still live.
     $workflow->addTask('RKW\Task\TYPO3\UpdateSchema', 'migrate');
 
+    // -----------------------------------------------
     // Step 6: finalize - This stage is meant for tasks, that should be done short before going live, like cache warm ups and so on.
 
+    // -----------------------------------------------
     // Step 7: test - In the test stage you can make tests, to check if everything is fine before switching the releases.
 
+    // -----------------------------------------------
     // Step 8: switch - This is the crucial stage. Here the old live instance is switched with the new prepared instance. Normally the new instance is symlinked.
     $workflow->beforeStage('switch', 'RKW\Task\Apc\ClearCache');
     $workflow->afterStage('switch', 'RKW\Task\Apc\ClearCache');
     $workflow->afterStage('switch', 'RKW\Task\TYPO3\ClearCache');
 
+    // -----------------------------------------------
     // Step 9: cleanup - At this stage you would cleanup old releases or remove other unused stuff.
 
 });

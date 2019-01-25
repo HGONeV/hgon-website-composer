@@ -9,6 +9,7 @@
 
 $projectName = 'RKW Kompetenzzentrum';
 $absolutePath = '/var/www/rkw.codes/surf';
+$phpPath = '/usr/bin/php5.6';
 
 $domain = '';
 $server = '';
