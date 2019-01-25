@@ -46,7 +46,6 @@ $rsyncFlags = array(
     '--exclude /web/fileadmin',
     '--exclude /web/typo3conf/ENABLE_INSTALL_TOOL',
     '--exclude /web/typo3conf/LocalConfiguration.php',
-    '--exclude /web/typo3conf/PackageStates.php',
     '--exclude /web/typo3conf/temp_CACHED*',
     '--exclude /web/typo3conf/temp_fieldInfo.php',
     '--exclude /web/typo3conf/deprecation_*',

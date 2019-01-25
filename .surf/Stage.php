@@ -60,17 +60,22 @@ $application->addNode($node);
 $workflow = new \TYPO3\Surf\Domain\Model\SimpleWorkflow;
 
 // executed locally
+);
+/*
 $workflow->defineTask(
     'RKW\Task\CheckVarCache',
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && if [ ! -d "var/cache" ]; then mkdir -p var/cache; echo "Built cache-directory"; fi')
-);
 $workflow->defineTask(
     'RKW\Task\RemoveComposerLock',
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && if [ -f "composer.lock" ]; then rm -f composer.lock; fi')
+);*/
+$workflow->defineTask(
+    'RKW\CopyEnv',
+    \TYPO3\Surf\Task\ShellTask::class,
+    array('command' => '\'cd {workspacePath} && if [ -f "_env" ]; then cp _env .env; fi')
 );
-
 
 
 // executed remotely
@@ -111,7 +116,7 @@ $deployment->onInitialize(function () use ($workflow, $application) {
 
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
     //  $workflow->afterStage('transfer', 'RKW\Task\CheckVarCache');
-    $workflow->afterStage('transfer', 'RKW\Task\RemoveComposerLock');
+    $workflow->afterStage('transfer', 'RKW\CopyEnv');
     //$workflow->afterStage('transfer', 'RKW\Task\FixRights');
     //$workflow->afterStage('transfer', 'RKW\Task\FixRights');
 
