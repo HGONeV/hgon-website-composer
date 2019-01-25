@@ -13,7 +13,7 @@ $server = 'vm1.rkw.de';
 $port = '2222';
 
 $gitBranch = 'stage';
-$gitRepository = 'git@github.com:RKWKomZe/RkwWebsite.git';
+$gitRepository = 'https://github.com/RKWKomZe/RkwWebsite.git';
 $projectName = 'RKW Kompetenzzentrum';
 $absolutePath = '/var/www/rkw.codes/surf';
 
@@ -42,8 +42,8 @@ $application->setOption('typo3.surf:gitCheckout[branch]', $gitBranch);
 $application->setOption('applicationRootDirectory', 'src');
 $application->setDeploymentPath($absolutePath);
 $application->setSymlinks(array(
-    './var/cache' => '../../../shared/cache',
-    './var/log' => '../../../shared/log',
+  //  './var/cache' => '../../../shared/cache',
+  //  './var/log' => '../../../shared/log',
     './web/uploads' => '../../../shared/uploads',
     './web/fileadmin' => '../../../shared/fileadmin',
 ));
