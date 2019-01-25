@@ -34,6 +34,7 @@ $application->setDeploymentPath($absolutePath);
 $application->setSymlinks(array(
     './web/uploads' => '../../../shared/uploads',
     './web/fileadmin' => '../../../shared/fileadmin',
+    './web/typo3conf/LocalConfiguration.php' => '../../../shared/typo3conf/LocalConfiguration.php',
 ));
 $deployment->addApplication($application);
 
