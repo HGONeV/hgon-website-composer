@@ -58,26 +58,31 @@ $workflow = new \TYPO3\Surf\Domain\Model\SimpleWorkflow;
 
 // define task executed locally
 $workflow->defineTask(
-    'RKW\Task\FixRightsLocal',
+    'RKW\\Task\\FixRightsLocal',
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && chmod -R 777 ./web && echo "Fixed rights"')
 );
 $workflow->defineTask(
-    'RKW\Task\CopyEnv',
+    'RKW\\Task\\CopyEnv',
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && if [ -f "_env.stage" ]; then cp _env.stage .env; fi')
 );
 
 // define task executed remotely
 $workflow->defineTask(
-    'RKW\Task\FixRightsRemote',
+    'RKW\\Task\\CopyDummyFiles',
+    \TYPO3\Surf\Task\ShellTask::class,
+    array('command' => 'cd {releasePath} && if [ -d "./dev/files/media" ]; then cp ./dev/files/media/* ./web/fileadmin; fi; && echo "Copied dummy files."')
+);
+$workflow->defineTask(
+    'RKW\\Task\\FixRightsRemote',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && find ./web -type f -exec chmod 640 {} \; && find ./web -type d -exec chmod 750 {} \; && echo "Fixed rights"')
 );
 $workflow->defineTask(
     'RKW\\Task\\Apc\\ClearCache',
     \TYPO3\Surf\Task\ShellTask::class,
-    array('command' => 'cd {releasePath} && ' . $phpPath . ' -r \'apc_clear_cache();\'')
+    array('command' => 'cd {releasePath} && ' . $phpPath . ' -r \'apc_clear_cache("' . $user . '"");\'')
 );
 $workflow->defineTask(
     'RKW\\Task\\TYPO3\\FixFolderStructure',
@@ -111,11 +116,12 @@ $deployment->onInitialize(function () use ($workflow, $application) {
 
     // -----------------------------------------------
     // Step 2: package - This stage is where you normally package all files and assets, which will be transferred to the next stage.
-    $workflow->afterTask('TYPO3\Surf\Task\Package\GitTask', 'RKW\Task\CopyEnv');
-    $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\Task\FixRightsLocal');
+    $workflow->afterTask('TYPO3\\Surf\\Task\\Package\\GitTask', 'RKW\\Task\\CopyEnv');
+    $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\\Task\\FixRightsLocal');
 
     // -----------------------------------------------
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
+    $workflow->afterTask('TYPO3\\Surf\\Task\\Generic\\CreateSymlinksTask', 'RKW\\Task\\CopyDummyFiles');
 
     // -----------------------------------------------
     // Step 4: update - If necessary, the transferred assets can be updated at this stage on the foreign instance.
@@ -123,7 +129,7 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     // -----------------------------------------------
     // Step 5: migration - Here you can define tasks to do some database updates / migrations. Be careful and do not delete old tables or columns, because the old code, relying on these, is still live.
     $workflow->addTask('RKW\Task\TYPO3\UpdateSchema', 'migrate');
-    $workflow->afterStage('migrate', 'RKW\Task\FixRightsRemote');
+    $workflow->afterStage('migrate', 'RKW\\Task\\FixRightsRemote');
 
     // -----------------------------------------------
     // Step 6: finalize - This stage is meant for tasks, that should be done short before going live, like cache warm ups and so on.
@@ -133,13 +139,11 @@ $deployment->onInitialize(function () use ($workflow, $application) {
 
     // -----------------------------------------------
     // Step 8: switch - This is the crucial stage. Here the old live instance is switched with the new prepared instance. Normally the new instance is symlinked.
-    $workflow->beforeStage('switch', 'RKW\Task\Apc\ClearCache');
-    $workflow->beforeStage('switch', 'RKW\Task\FixRightsRemote');
-    $workflow->afterStage('switch', 'RKW\Task\Apc\ClearCache');
+    $workflow->beforeStage('switch', 'RKW\\Task\\Apc\\ClearCache');
+    $workflow->afterStage('switch', 'RKW\\Task\\Apc\\ClearCache');
 
     // -----------------------------------------------
     // Step 9: cleanup - At this stage you would cleanup old releases or remove other unused stuff.
-    $workflow->afterStage('cleanup', 'RKW\Task\FixRightsRemote');
 
 });
 
