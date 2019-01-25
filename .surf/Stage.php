@@ -72,7 +72,7 @@ $workflow->defineTask(
 $workflow->defineTask(
     'RKW\\Task\\CopyDummyFiles',
     \TYPO3\Surf\Task\ShellTask::class,
-    array('command' => 'cd {releasePath} && if [ -d "./dev/files/media" ]; then cp ./dev/files/media/* ./web/fileadmin; fi; && echo "Copied dummy files."')
+    array('command' => 'cd {releasePath} && if [ -d "./dev/files/media" ]; then cp ./dev/files/media/* ./web/fileadmin; fi && echo "Copied dummy files."')
 );
 $workflow->defineTask(
     'RKW\\Task\\FixRightsRemote',
