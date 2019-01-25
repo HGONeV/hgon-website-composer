@@ -66,7 +66,7 @@ $workflow->defineTask(
 $workflow->defineTask(
     'RKW\\Task\\CopyEnv',
     \TYPO3\Surf\Task\LocalShellTask::class,
-    array('command' => 'cd {workspacePath} && if [ -f "_env.stage" ]; then cp _env.stage .env; fi')
+    array('command' => 'cd {workspacePath} && if [ -f "_env.' . $gitBranch . '" ]; then cp _env.' . $gitBranch . ' .env; fi')
 );
 
 // define task executed remotely
@@ -74,6 +74,16 @@ $workflow->defineTask(
     'RKW\\Task\\CopyDummyFiles',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && if [ -d "./dev/files/media" ]; then cp ./dev/files/media/* ./web/fileadmin; fi && echo "Copied dummy files."')
+);
+$workflow->defineTask(
+    'RKW\\Task\\CopyAdditionalConfiguration',
+    \TYPO3\Surf\Task\ShellTask::class,
+    array('command' => 'cd {releasePath} && if [ -f "./web/typo3conf/AdditionalConfiguration.' . $gitBranch . '.php" ]; then cp ./web/typo3conf/AdditionalConfiguration.' . $gitBranch . '.php ./web/typo3conf/AdditionalConfiguration.php; fi && echo "Copied AdditionalConfiguration.php."')
+);
+$workflow->defineTask(
+    'RKW\\Task\\CopyHtaccess',
+    \TYPO3\Surf\Task\ShellTask::class,
+    array('command' => 'cd {releasePath} && if [ -f "./web/_htaccess.' . $gitBranch . '" ]; then cp ./web/_htaccess.' . $gitBranch . ' ./web/.htaccess; fi && echo "Copied .htaccess."')
 );
 $workflow->defineTask(
     'RKW\\Task\\FixRightsRemote',
@@ -123,6 +133,8 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     // -----------------------------------------------
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
     $workflow->afterTask('TYPO3\\Surf\\Task\\Generic\\CreateSymlinksTask', 'RKW\\Task\\CopyDummyFiles');
+    $workflow->afterStage('transfer', 'RKW\\Task\\CopyAdditionalConfiguration');
+    $workflow->afterStage('transfer', 'RKW\\Task\\CopyHtaccess');
 
     // -----------------------------------------------
     // Step 4: update - If necessary, the transferred assets can be updated at this stage on the foreign instance.

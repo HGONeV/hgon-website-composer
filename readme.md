@@ -158,9 +158,9 @@ Contains the files and folders to ignore for versioning.
 
 This file contains all configurations for and dev- environments. At the same time you have to make sure that this file is NEVER deployed into a LIVE or STAGE-Environment. 
 
-### File: web/typo3conf/AdditionalConfigurationLive.php
+### File: web/typo3conf/AdditionalConfigurationProd.php
 
-This file serves as a template for the settings relevant to the live environment. Copy this file to `AdditionalConfiguration.php` to make settings for the live environment.
+This file serves as a template for the settings relevant to the production environment. Copy this file to `AdditionalConfiguration.php` to make settings for the live environment.
 
 **Do NOT put any access data or enycryption keys into versioning that are relevant for the live environment. These are ONLY to be put into `AdditionConfiguation.php` on the Live!!!**
 
