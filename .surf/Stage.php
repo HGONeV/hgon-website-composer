@@ -73,16 +73,16 @@ $workflow->defineTask(
 $workflow->defineTask(
     'RKW\CopyEnv',
     \TYPO3\Surf\Task\LocalShellTask::class,
-    array('command' => 'cd {workspacePath} && if [ -f "_env" ]; then cp _env .env; fi')
+    array('command' => 'cd {workspacePath} && if [ -f "_env.stage" ]; then cp _env.stage .env; fi')
 );
 
-
 // executed remotely
+/*
 $workflow->defineTask(
     'RKW\Task\FixRights',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && chmod -r ug+rw ./web && echo "Fixed rights"')
-);
+);*/
 $workflow->defineTask(
     'RKW\Task\Apc\ClearCache',
     \TYPO3\Surf\Task\ShellTask::class,
@@ -114,8 +114,9 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     // Step 2: package - This stage is where you normally package all files and assets, which will be transferred to the next stage.
 
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
+    $workflow->beforeStage('package', 'RKW\CopyEnv');
+
     //  $workflow->afterStage('transfer', 'RKW\Task\CheckVarCache');
-    $workflow->afterStage('transfer', 'RKW\CopyEnv');
     //$workflow->afterStage('transfer', 'RKW\Task\FixRights');
     //$workflow->afterStage('transfer', 'RKW\Task\FixRights');
 
