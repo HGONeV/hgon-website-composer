@@ -107,13 +107,12 @@ $workflow->defineTask(
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && if [ -f "./web/typo3conf/LocalConfiguration.php" ]; then ./vendor/bin/typo3cms database:updateschema "*.add,*.change"; fi')
 );
-$deployment->setWorkflow($workflow);
 
 // remove tasks
-use TYPO3\Surf\Task\TYPO3\CMS\CreatePackageStatesTask;
-use TYPO3\Surf\Task\TYPO3\CMS\SetUpExtensionsTask;
 $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\CreatePackageStatesTask');
 $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\SetUpExtensionsTask');
+
+$deployment->setWorkflow($workflow);
 
 
 // Add tasks
