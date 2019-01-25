@@ -58,7 +58,11 @@ $application->addNode($node);
 /** @var \TYPO3\Surf\Domain\Model\SimpleWorkflow $workflow */
 $workflow = new \TYPO3\Surf\Domain\Model\SimpleWorkflow;
 
-// executed locally
+// remove tasks
+$workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\CreatePackageStatesTask');
+$workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\SetUpExtensionsTask');
+
+// define task executed locally
 /*
 $workflow->defineTask(
     'RKW\Task\CheckVarCache',
@@ -80,7 +84,7 @@ $workflow->defineTask(
     array('command' => 'cd {workspacePath} && if [ -f "_env.stage" ]; then cp _env.stage .env; fi')
 );
 
-// executed remotely
+// define task executed remotely
 /*
 $workflow->defineTask(
     'RKW\Task\FixRights',
@@ -108,9 +112,7 @@ $workflow->defineTask(
     array('command' => 'cd {releasePath} && if [ -f "./web/typo3conf/LocalConfiguration.php" ]; then ./vendor/bin/typo3cms database:updateschema "*.add,*.change"; fi')
 );
 
-// remove tasks
-$workflow->removeTask('TYPO3\Surf\Task\TYPO3\CMS\CreatePackageStatesTask');
-$workflow->removeTask(TYPO3\Surf\Task\TYPO3\CMS\SetUpExtensionsTask::class);
+
 
 $deployment->setWorkflow($workflow);
 
