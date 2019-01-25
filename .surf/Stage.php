@@ -106,7 +106,7 @@ $workflow->defineTask(
 $workflow->defineTask(
     'RKW\Task\TYPO3\UpdateSchema',
     \TYPO3\Surf\Task\ShellTask::class,
-    array('command' => 'cd {releasePath} && ./vendor/bin/typo3cms database:updateschema "*.add,*.change"')
+    array('command' => 'cd {releasePath} && if [ -f "./web/typo3conf/LocalConfiguration.php" ]; then ./vendor/bin/typo3cms database:updateschema "*.add,*.change"; fi')
 );
 $deployment->setWorkflow($workflow);
 
@@ -122,12 +122,7 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     $workflow->afterTask('TYPO3\Surf\Task\Package\GitTask', 'RKW\Task\CopyEnv');
     $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\Task\FixRights');
 
-
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
-
-    //  $workflow->afterStage('transfer', 'RKW\Task\CheckVarCache');
-    //$workflow->afterStage('transfer', 'RKW\Task\FixRights');
-    //$workflow->afterStage('transfer', 'RKW\Task\FixRights');
 
     // Step 4: update - If necessary, the transferred assets can be updated at this stage on the foreign instance.
 
@@ -140,7 +135,6 @@ $deployment->onInitialize(function () use ($workflow, $application) {
 
     // Step 8: switch - This is the crucial stage. Here the old live instance is switched with the new prepared instance. Normally the new instance is symlinked.
     $workflow->beforeStage('switch', 'RKW\Task\Apc\ClearCache');
-    //$workflow->beforeStage('switch', 'RKW\Task\FixRights');
     $workflow->afterStage('switch', 'RKW\Task\Apc\ClearCache');
     $workflow->afterStage('switch', 'RKW\Task\TYPO3\ClearCache');
 
