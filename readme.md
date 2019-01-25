@@ -77,6 +77,36 @@ composer update
 ./vendor/bin/typo3cms cache:flush
 ```
 
+## Deployment
+Deployment is triggered via the local VM. Best as root or via `sudo`.
+
+**IMPORTANT: Deployment with password login (instead of RSA key) requires `expect` on the executing machine (local VM)**
+```
+apt-get install expect
+```
+
+**IMPORTANT: The surf extension requires PHP 7 on the CLI**
+
+For the deployment you need a branch with all changes commited and pushed to the repository.
+Examples:
+- If you want to deploy into the stage-enviroment you have to push everything to `stage`-branch.
+- If you want to deploy into the live-enviroment you have to push everything to the `production'-branch. 
+
+You also need a Deployment-Script with the same name as your branch e.g `./.surf/Stage.php` for `stage`-branch.
+
+Do the Deployment using this command form DocumentRoot:
+```
+sudo php ./vendor/typo3/surf/surf deploy <DEPLOYMENT-FILE>
+sudo php ./vendor/typo3/surf/surf deploy Stage
+```
+
+You can use verbose-output to get more information:
+```
+sudo php ./vendor/typo3/surf/surf deploy Stage -v
+sudo php ./vendor/typo3/surf/surf deploy Stage -vv
+sudo php ./vendor/typo3/surf/surf deploy Stage -vvv
+```
+
 ## About the files and folders
 
 ### File: composer.json
@@ -84,6 +114,18 @@ composer update
 Contains the packages to install. 
 To be able to install packages that themselves have dependencies on packages that are only available as @dev, you need to specify the `minimum-stabilty` in combination with `prefer-stable`.
 With `preferred-install` you can specify that certain packages should be installed as GIT repositories so that you can work on them directly. 
+
+### Folder: .surf
+
+Contains the configuration for the TYPO3 extension Surf for deployment and the corresponding Deployment-Scripts.
+
+### Folder: .surf/Credentials
+
+Contains the access data for the respective environments
+
+### Folder: .surf/Includes
+
+Contains ncludes for the Deployment Script 
 
 ### Folder: dev
 
@@ -112,21 +154,21 @@ Contains the files and folders to ignore for versioning.
 
 **Please note that all changes to this file will be versioned. Therefore, do not save any specific changes for the local environment here.**
 
-### File: LocalConfiguration.php
+### File: web/typo3conf/LocalConfiguration.php
 
 This file contains all configurations for and dev- environments. At the same time you have to make sure that this file is NEVER deployed into a LIVE or STAGE-Environment. 
 
-### File: AdditionalConfigurationLive.php
+### File: web/typo3conf/AdditionalConfigurationLive.php
 
 This file serves as a template for the settings relevant to the live environment. Copy this file to `AdditionalConfiguration.php` to make settings for the live environment.
 
 **Do NOT put any access data or enycryption keys into versioning that are relevant for the live environment. These are ONLY to be put into `AdditionConfiguation.php` on the Live!!!**
 
-### File: AdditionalConfigurationDev.php
+### File: web/typo3conf/AdditionalConfigurationDev.php
 
 This file serves as a template for the settings relevant for the DEV-environment. Copy this file to `AdditionalConfiguration.php` to make settings for your own DEV-environment.
 
-### File: RealUrlConfiguration.php
+### File: web/typo3conf/RealUrlConfiguration.php
 
 The default configuration for RealUrl. 
 

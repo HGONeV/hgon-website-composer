@@ -9,6 +9,9 @@
 $rsyncFlags = array(
 
     '-az',
+    '--no-perms',
+    '--no-owner',
+    '--no-group',
     '--recursive',
     '--delete',
     '--delete-excluded',
