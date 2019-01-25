@@ -63,20 +63,10 @@ $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\CreatePackageStatesTask');
 $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\SetUpExtensionsTask');
 
 // define task executed locally
-/*
-$workflow->defineTask(
-    'RKW\Task\CheckVarCache',
-    \TYPO3\Surf\Task\LocalShellTask::class,
-    array('command' => 'cd {workspacePath} && if [ ! -d "var/cache" ]; then mkdir -p var/cache; echo "Built cache-directory"; fi')
-$workflow->defineTask(
-    'RKW\Task\RemoveComposerLock',
-    \TYPO3\Surf\Task\LocalShellTask::class,
-    array('command' => 'cd {workspacePath} && if [ -f "composer.lock" ]; then rm -f composer.lock; fi')
-);*/
 $workflow->defineTask(
     'RKW\Task\FixRights',
     \TYPO3\Surf\Task\LocalShellTask::class,
-    array('command' => 'cd {workspacePath} && chmod -R 777 ./web && chmod -R 777 .git && echo "Fixed rights"')
+    array('command' => 'cd {workspacePath} && chmod -R 777 ./web && echo "Fixed rights"')
 );
 $workflow->defineTask(
     'RKW\Task\CopyEnv',
@@ -85,12 +75,6 @@ $workflow->defineTask(
 );
 
 // define task executed remotely
-/*
-$workflow->defineTask(
-    'RKW\Task\FixRights',
-    \TYPO3\Surf\Task\ShellTask::class,
-    array('command' => 'cd {releasePath} && chmod -r ug+rw ./web && echo "Fixed rights"')
-);*/
 $workflow->defineTask(
     'RKW\\Task\\Apc\\ClearCache',
     \TYPO3\Surf\Task\ShellTask::class,
@@ -112,14 +96,16 @@ $workflow->defineTask(
     array('command' => 'cd {releasePath} && if [ -f "./web/typo3conf/LocalConfiguration.php" ]; then ./vendor/bin/typo3cms database:updateschema "*.add,*.change"; fi')
 );
 
-
-
 $deployment->setWorkflow($workflow);
 
 
 // Add tasks
 $deployment->onInitialize(function () use ($workflow, $application) {
 
+
+    $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\CreatePackageStatesTask');
+    $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\SetUpExtensionsTask');
+    
     // Step 1: initialize - This is normally used only for an initial deployment to an instance. At this stage you may prefill certain directories for example.
 
     // Step 2: package - This stage is where you normally package all files and assets, which will be transferred to the next stage.
