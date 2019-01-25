@@ -1,35 +1,35 @@
 # =======================================================
 # Ignore Editor-files, vendor and other basic stuff
 # =======================================================
-/.DS_Store
-/.settings
-/.buildpath
-/.project
-/.idea
 /.build
+/.buildpath
+/.bowerrc
+/.bundle
+/.DS_Store
 /.env
+/.idea
+/.settings
+/.project
 /.php-version
 /vendor
-/gitpull.php
-/.htaccess
-/.htpasswd
-/data.txt
-/data1.txt
-/data2.xt
+
+/web/.htaccess
+/web/.htpasswd
+/web/gitpull.php
+/web/data*.txt
 
 # =======================================================
 # Ignore cache folders and logs
 # =======================================================
+/dev/*.sql
+
 /var/cache/*
 !/var/cache/.gitkeep
 /var/log/*
 !/var/log/.gitkeep
-/web/typo3conf/AdditionalConfiguration.php
-/web/typo3conf/RealUrlConfigurationAdditional.php
-/dev/*.sql
 
 # =======================================================
-# Ignore extensions and defaults from composer
+# Ignore sensitive files from TYPO3
 # =======================================================
 /web/index.php
 /web/typo3
@@ -38,7 +38,6 @@
 !/web/typo3conf/ext/.gitkeep
 /web/typo3conf/PackageStates.php
 /web/typo3conf/AdditionalConfiguration.php
-/web/typo3conf/RealUrlConfigurationAdditional.php
 /web/typo3conf/temp_CACHED*
 /web/typo3conf/temp_fieldInfo.php
 /web/typo3conf/deprecation_*

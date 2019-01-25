@@ -19,6 +19,7 @@ return [
         'username' => 'rkw_dev_komze',
     ],
     'EXT' => [
+        'extCache' => 0,
         'extConf' => [
             'be_acl' => 'a:2:{s:26:"disableOldPermissionSystem";s:1:"1";s:20:"enableFilterSelector";s:1:"1";}',
             'be_secure_pw' => 'a:7:{s:10:"validUntil";s:6:"1 year";s:14:"passwordLength";s:2:"10";s:13:"lowercaseChar";s:1:"1";s:11:"capitalChar";s:1:"1";s:5:"digit";s:1:"1";s:11:"specialChar";s:1:"1";s:8:"patterns";s:1:"3";}',

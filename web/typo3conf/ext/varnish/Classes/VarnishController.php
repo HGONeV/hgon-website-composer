@@ -39,7 +39,7 @@ class VarnishController {
 	 * List of Varnish hostnames
 	 * @var Array
 	 */
-	protected static $instanceHostnames = array();
+	protected $instanceHostnames = array();
 
 
 	/**

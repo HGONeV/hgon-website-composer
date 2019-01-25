@@ -87,8 +87,20 @@ With `preferred-install` you can specify that certain packages should be install
 
 ### Folder: dev
 
-This folder contains dummy files and a cleaned database dump for the development environment. Copy the dummy files to `/web/fileadmin`. They replace all file and image links.
+This folder contains some important files, scripts and a cleaned database dump for the development environment. Copy the dummy files to `/web/fileadmin`. They replace all file and image links.
 The database dump can be imported directly into the Vagrant- environment. 
+
+### File: dev/files/settings-for-phpstorm.jar
+
+Settings for PHP-Storm. **These HAVE TO BE USED for development.**
+
+#### File: dev/scripts/git-status-recursive.sh
+
+Shell script to recursively check the status of GIT repositories.
+
+#### File: dev/scripts/etc-hosts.txt
+
+Example file for the local '''etc/hosts'''
 
 ### File: _env
 
@@ -99,10 +111,6 @@ This file contains a list of all extensions to be activated. If this file is cop
 Contains the files and folders to ignore for versioning. 
 
 **Please note that all changes to this file will be versioned. Therefore, do not save any specific changes for the local environment here.**
-
-### File: settings-for-phpstorm.jar
-
-Settings for PHP-Storm. **These HAVE TO BE USED for development.**
 
 ### File: LocalConfiguration.php
 
