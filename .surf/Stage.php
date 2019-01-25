@@ -63,7 +63,7 @@ $workflow = new \TYPO3\Surf\Domain\Model\SimpleWorkflow;
 $workflow->defineTask(
     'RKW\Task\CheckVarCache',
     \TYPO3\Surf\Task\LocalShellTask::class,
-    array('command' => 'cd {workspacePath} && if [ ! -d "var/cache" ]; then mkdir -p var/cache; echo "Built cache-directory" fi')
+    array('command' => 'cd {workspacePath} && if [ ! -d "var/cache" ]; then mkdir -p var/cache; echo "Built cache-directory"; fi')
 );
 
 
