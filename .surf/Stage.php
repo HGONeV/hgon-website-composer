@@ -110,8 +110,10 @@ $workflow->defineTask(
 $deployment->setWorkflow($workflow);
 
 // remove tasks
-$workflow->removeTask(TYPO3\Surf\Task\TYPO3\CMS\CreatePackageStatesTask::class);
-$workflow->removeTask(TYPO3\Surf\Task\TYPO3\CMS\SetUpExtensionsTask::class);
+use TYPO3\Surf\Task\TYPO3\CMS\CreatePackageStatesTask;
+use TYPO3\Surf\Task\TYPO3\CMS\SetUpExtensionsTask;
+$workflow->removeTask(CreatePackageStatesTask::class);
+$workflow->removeTask(SetUpExtensionsTask::class);
 
 
 // Add tasks
