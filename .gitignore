@@ -22,6 +22,8 @@
 # Ignore cache folders and logs
 # =======================================================
 /dev/*.sql
+/.surf/Credentials/*
+!/.surf/Credentials/.gitkeep
 
 /var/cache/*
 !/var/cache/.gitkeep

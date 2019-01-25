@@ -1,6 +1,6 @@
 <?php
 /**
- * Deployment for RKW Website
+ * Deployment for RKW Website (Stage)
  *
  * @author Steffen Kroggel <developer@steffenkroggel.de>
  * @copyright Rkw Kompetenzzentrum
@@ -10,18 +10,17 @@
 
 $domain = 'rkw.codes';
 $server = 'vm1.rkw.de';
-$user = 'rkw.codes';
 $port = '2222';
 
 $gitBranch = 'stage';
 $gitRepository = 'git@github.com:RKWKomZe/RkwWebsite.git';
 $projectName = 'RKW Kompetenzzentrum';
-$absolutePath = '/var/www/rkw.codes/public_html';
+$absolutePath = '/var/www/rkw.codes/surf';
 
 // Requires
+require_once __DIR__ . '/Credentials/Stage.php';
 require_once __DIR__ . '/Includes/SecurityQuestion.php';
 require_once __DIR__ . '/Includes/RsyncFlags.php';
-
 
 
 /*
@@ -36,6 +35,7 @@ $application->setOption('transferMethod', 'rsync');
 $application->setOption('updateMethod', null);
 $application->setOption('keepReleases', 3);
 $application->setOption('composerCommandPath', 'composer');
+$application->setOption('phpBinaryPathAndFilename', '/usr/bin/php5.6');
 $application->setOption('rsyncFlags', implode(' ', $rsyncFlags));
 $application->setOption('branch', $gitBranch);
 $application->setOption('typo3.surf:gitCheckout[branch]', $gitBranch);
@@ -57,6 +57,7 @@ $deployment->addApplication($application);
 $node = new \TYPO3\Surf\Domain\Model\Node($server);
 $node->setHostname($server);
 $node->setOption('username', $user);
+$node->setOption('password', $password);
 $node->setOption('port', $port);
 $application->addNode($node);
 
