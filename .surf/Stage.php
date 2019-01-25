@@ -72,7 +72,7 @@ $workflow->defineTask(
 $workflow->defineTask(
     'RKW\Task\FixRightsRemote',
     \TYPO3\Surf\Task\LocalShellTask::class,
-    array('command' => 'cd {workspacePath} && find ./web -type f -exec chmod 640 {} \; && find ./web -type d -exec chmod 750 {} \; && echo "Fixed rights"')
+    array('command' => 'cd {releasePath} && find ./web -type f -exec chmod 640 {} \; && find ./web -type d -exec chmod 750 {} \; && echo "Fixed rights"')
 );
 $workflow->defineTask(
     'RKW\\Task\\Apc\\ClearCache',
