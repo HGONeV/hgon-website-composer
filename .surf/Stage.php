@@ -71,7 +71,7 @@ $workflow->defineTask(
 // define task executed remotely
 $workflow->defineTask(
     'RKW\Task\FixRightsRemote',
-    \TYPO3\Surf\Task\LocalShellTask::class,
+    \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && find ./web -type f -exec chmod 640 {} \; && find ./web -type d -exec chmod 750 {} \; && echo "Fixed rights"')
 );
 $workflow->defineTask(
