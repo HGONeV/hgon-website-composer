@@ -72,7 +72,7 @@ $workflow->defineTask(
 );*/
 $workflow->defineTask(
     'RKW\CopyEnv',
-    \TYPO3\Surf\Task\ShellTask::class,
+    \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && if [ -f "_env" ]; then cp _env .env; fi')
 );
 
