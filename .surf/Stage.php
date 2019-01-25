@@ -88,22 +88,22 @@ $workflow->defineTask(
     array('command' => 'cd {releasePath} && chmod -r ug+rw ./web && echo "Fixed rights"')
 );*/
 $workflow->defineTask(
-    'RKW\Task\Apc\ClearCache',
+    'RKW\\Task\\Apc\\ClearCache',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'php apc_clear_cache() > /dev/null')
 );
 $workflow->defineTask(
-    'RKW\Task\TYPO3\FixFolderStructure',
+    'RKW\\Task\\TYPO3\\FixFolderStructure',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && ./vendor/bin/typo3cms install:fixfolderstructure')
 );
 $workflow->defineTask(
-    'RKW\Task\TYPO3\ClearCache',
+    'RKW\\Task\\TYPO3\\ClearCache',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && ./vendor/bin/typo3cms cache:flush')
 );
 $workflow->defineTask(
-    'RKW\Task\TYPO3\UpdateSchema',
+    'RKW\\Task\\TYPO3\\UpdateSchema',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && if [ -f "./web/typo3conf/LocalConfiguration.php" ]; then ./vendor/bin/typo3cms database:updateschema "*.add,*.change"; fi')
 );
@@ -112,8 +112,8 @@ $deployment->setWorkflow($workflow);
 // remove tasks
 use TYPO3\Surf\Task\TYPO3\CMS\CreatePackageStatesTask;
 use TYPO3\Surf\Task\TYPO3\CMS\SetUpExtensionsTask;
-$workflow->removeTask(CreatePackageStatesTask::class);
-$workflow->removeTask(SetUpExtensionsTask::class);
+$workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\CreatePackageStatesTask');
+$workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\SetUpExtensionsTask');
 
 
 // Add tasks
