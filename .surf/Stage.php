@@ -71,7 +71,12 @@ $workflow->defineTask(
     array('command' => 'cd {workspacePath} && if [ -f "composer.lock" ]; then rm -f composer.lock; fi')
 );*/
 $workflow->defineTask(
-    'RKW\CopyEnv',
+    'RKW\Task\FixRights',
+    \TYPO3\Surf\Task\LocalShellTask::class,
+    array('command' => 'cd {releasePath} && chmod -r 777 ./web && echo "Fixed rights"')
+);*/
+$workflow->defineTask(
+    'RKW\Task\CopyEnv',
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && if [ -f "_env.stage" ]; then cp _env.stage .env; fi')
 );
@@ -114,7 +119,9 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     // Step 1: initialize - This is normally used only for an initial deployment to an instance. At this stage you may prefill certain directories for example.
 
     // Step 2: package - This stage is where you normally package all files and assets, which will be transferred to the next stage.
-    $workflow->beforeStage('package', 'RKW\CopyEnv');
+    $workflow->afterTask('TYPO3\Surf\Task\Package\GitTask', 'RKW\Task\CopyEnv');
+    $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\Task\FixRights');
+
 
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
 
