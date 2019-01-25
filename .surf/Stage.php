@@ -111,8 +111,8 @@ $workflow->defineTask(
 $deployment->setWorkflow($workflow);
 
 // remove tasks
-$workflow->removeTask('CreatePackageStatesTask');
-$workflow->removeTask('SetUpExtensionsTask');
+$workflow->removeTask('CreatePackageStatesTask::class');
+$workflow->removeTask('SetUpExtensionsTask::class');
 
 
 // Add tasks
