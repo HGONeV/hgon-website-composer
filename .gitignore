@@ -23,12 +23,8 @@
 # =======================================================
 /dev/*.sql
 /.surf/Credentials/*
-!/.surf/Credentials/.gitkeep
+!/.surf/Credentials/_Example.php
 
-/var/cache/*
-!/var/cache/.gitkeep
-/var/log/*
-!/var/log/.gitkeep
 
 # =======================================================
 # Ignore sensitive files from TYPO3

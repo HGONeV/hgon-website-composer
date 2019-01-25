@@ -8,15 +8,6 @@
  * @var \TYPO3\Surf\Domain\Model\Deployment $deployment
  */
 
-$domain = 'rkw.codes';
-$server = 'vm1.rkw.de';
-$port = '2222';
-
-$gitBranch = 'stage';
-$gitRepository = 'https://github.com/RKWKomZe/RkwWebsite.git';
-$projectName = 'RKW Kompetenzzentrum';
-$absolutePath = '/var/www/rkw.codes/surf';
-
 // Requires
 require_once __DIR__ . '/Credentials/Stage.php';
 require_once __DIR__ . '/Includes/SecurityQuestion.php';

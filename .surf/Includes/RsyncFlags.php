@@ -39,8 +39,6 @@ $rsyncFlags = array(
     "--exclude '*.md'",
 
     '--exclude /dev',
-    '--exclude /var/cache/*',
-    '--exclude /var/log/*',
 
     '--exclude /web/.htaccess',
     '--exclude /web/.htpasswd',
