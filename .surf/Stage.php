@@ -134,11 +134,12 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     // -----------------------------------------------
     // Step 8: switch - This is the crucial stage. Here the old live instance is switched with the new prepared instance. Normally the new instance is symlinked.
     $workflow->beforeStage('switch', 'RKW\Task\Apc\ClearCache');
+    $workflow->beforeStage('switch', 'RKW\Task\FixRightsRemote');
     $workflow->afterStage('switch', 'RKW\Task\Apc\ClearCache');
-    $workflow->afterStage('switch', 'RKW\Task\TYPO3\ClearCache');
 
     // -----------------------------------------------
     // Step 9: cleanup - At this stage you would cleanup old releases or remove other unused stuff.
+    $workflow->afterStage('cleanup', 'RKW\Task\FixRightsRemote');
 
 });
 
