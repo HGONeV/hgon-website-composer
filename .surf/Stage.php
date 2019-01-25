@@ -72,7 +72,7 @@ $workflow->defineTask(
 $workflow->defineTask(
     'RKW\\Task\\Apc\\ClearCache',
     \TYPO3\Surf\Task\ShellTask::class,
-    array('command' => 'cd {releasePath} && ' . $phpPath . ' apc_clear_cache() > /dev/null')
+    array('command' => 'cd {releasePath} && ' . $phpPath . ' -r "apc_clear_cache()"')
 );
 $workflow->defineTask(
     'RKW\\Task\\TYPO3\\FixFolderStructure',
