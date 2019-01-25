@@ -105,6 +105,8 @@ $workflow->defineTask(
 );
 $deployment->setWorkflow($workflow);
 
+// remove tasks
+$workflow->removeTask('TYPO3\Surf\Task\TYPO3\CMS\CreatePackageStatesTask');
 
 // Add tasks
 $deployment->onInitialize(function () use ($workflow, $application) {
@@ -112,9 +114,9 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     // Step 1: initialize - This is normally used only for an initial deployment to an instance. At this stage you may prefill certain directories for example.
 
     // Step 2: package - This stage is where you normally package all files and assets, which will be transferred to the next stage.
+    $workflow->beforeStage('package', 'RKW\CopyEnv');
 
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
-    $workflow->beforeStage('package', 'RKW\CopyEnv');
 
     //  $workflow->afterStage('transfer', 'RKW\Task\CheckVarCache');
     //$workflow->afterStage('transfer', 'RKW\Task\FixRights');
