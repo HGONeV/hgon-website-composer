@@ -65,6 +65,12 @@ $workflow->defineTask(
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && if [ ! -d "var/cache" ]; then mkdir -p var/cache; echo "Built cache-directory"; fi')
 );
+$workflow->defineTask(
+    'RKW\Task\RemoveComposerLock',
+    \TYPO3\Surf\Task\LocalShellTask::class,
+    array('command' => 'cd {workspacePath} && if [ -f "composer.lock" ]; then rm -f composer.lock; fi')
+);
+
 
 
 // executed remotely
@@ -104,9 +110,10 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     // Step 2: package - This stage is where you normally package all files and assets, which will be transferred to the next stage.
 
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
-    $workflow->afterStage('transfer', 'RKW\Task\CheckVarCache');
-    $workflow->afterStage('transfer', 'RKW\Task\TYPO3\FixFolderStructure');
-    $workflow->afterStage('transfer', 'RKW\Task\FixRights');
+    //  $workflow->afterStage('transfer', 'RKW\Task\CheckVarCache');
+    $workflow->afterStage('transfer', 'RKW\Task\RemoveComposerLock');
+    //$workflow->afterStage('transfer', 'RKW\Task\FixRights');
+    //$workflow->afterStage('transfer', 'RKW\Task\FixRights');
 
     // Step 4: update - If necessary, the transferred assets can be updated at this stage on the foreign instance.
 
@@ -119,7 +126,7 @@ $deployment->onInitialize(function () use ($workflow, $application) {
 
     // Step 8: switch - This is the crucial stage. Here the old live instance is switched with the new prepared instance. Normally the new instance is symlinked.
     $workflow->beforeStage('switch', 'RKW\Task\Apc\ClearCache');
-    $workflow->beforeStage('switch', 'RKW\Task\FixRights');
+    //$workflow->beforeStage('switch', 'RKW\Task\FixRights');
     $workflow->afterStage('switch', 'RKW\Task\Apc\ClearCache');
     $workflow->afterStage('switch', 'RKW\Task\TYPO3\ClearCache');
 
