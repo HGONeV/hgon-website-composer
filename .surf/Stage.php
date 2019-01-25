@@ -13,7 +13,6 @@ require_once __DIR__ . '/Credentials/Stage.php';
 require_once __DIR__ . '/Includes/SecurityQuestion.php';
 require_once __DIR__ . '/Includes/RsyncFlags.php';
 
-
 /*
  * Set application
  */
@@ -111,8 +110,8 @@ $workflow->defineTask(
 $deployment->setWorkflow($workflow);
 
 // remove tasks
-$workflow->removeTask('CreatePackageStatesTask::class');
-$workflow->removeTask('SetUpExtensionsTask::class');
+$workflow->removeTask(TYPO3\Surf\Task\TYPO3\CMS\CreatePackageStatesTask::class);
+$workflow->removeTask(TYPO3\Surf\Task\TYPO3\CMS\SetUpExtensionsTask::class);
 
 
 // Add tasks
