@@ -60,7 +60,6 @@ $application->addNode($node);
 $workflow = new \TYPO3\Surf\Domain\Model\SimpleWorkflow;
 
 // executed locally
-);
 /*
 $workflow->defineTask(
     'RKW\Task\CheckVarCache',
