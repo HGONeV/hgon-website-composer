@@ -58,7 +58,7 @@ $workflow = new \TYPO3\Surf\Domain\Model\SimpleWorkflow;
 
 // define task executed locally
 $workflow->defineTask(
-    'RKW\Task\FixRights',
+    'RKW\Task\FixRightsLocal',
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && chmod -R 777 ./web && echo "Fixed rights"')
 );
@@ -69,6 +69,11 @@ $workflow->defineTask(
 );
 
 // define task executed remotely
+$workflow->defineTask(
+    'RKW\Task\FixRightsRemote',
+    \TYPO3\Surf\Task\LocalShellTask::class,
+    array('command' => 'cd {workspacePath} && find ./web -type f -exec chmod 640 {} \; && find ./web -type d -exec chmod 750 {} \; && echo "Fixed rights"')
+);
 $workflow->defineTask(
     'RKW\\Task\\Apc\\ClearCache',
     \TYPO3\Surf\Task\ShellTask::class,
@@ -107,7 +112,7 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     // -----------------------------------------------
     // Step 2: package - This stage is where you normally package all files and assets, which will be transferred to the next stage.
     $workflow->afterTask('TYPO3\Surf\Task\Package\GitTask', 'RKW\Task\CopyEnv');
-    $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\Task\FixRights');
+    $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\Task\FixRightsLocal');
 
     // -----------------------------------------------
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
@@ -118,6 +123,7 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     // -----------------------------------------------
     // Step 5: migration - Here you can define tasks to do some database updates / migrations. Be careful and do not delete old tables or columns, because the old code, relying on these, is still live.
     $workflow->addTask('RKW\Task\TYPO3\UpdateSchema', 'migrate');
+    $workflow->afterStage('migrate', 'RKW\Task\FixRightsRemote');
 
     // -----------------------------------------------
     // Step 6: finalize - This stage is meant for tasks, that should be done short before going live, like cache warm ups and so on.
