@@ -73,7 +73,7 @@ $workflow->defineTask(
 $workflow->defineTask(
     'RKW\Task\FixRights',
     \TYPO3\Surf\Task\LocalShellTask::class,
-    array('command' => 'cd {releasePath} && chmod -r 777 ./web && echo "Fixed rights"')
+    array('command' => 'cd {workspacePath} && chmod -r 777 ./web && echo "Fixed rights"')
 );
 $workflow->defineTask(
     'RKW\Task\CopyEnv',
