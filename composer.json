@@ -59,14 +59,18 @@
          "typo3-clear-cache" : [
               "./vendor/bin/typo3cms cache:flush"
          ],
+         "typo3-database-compare" : [
+              "./vendor/bin/typo3cms database:updateschema"
+         ],
          "pre-install-cmd": [
-           "@git-set-filemode"
+              "@git-set-filemode"
          ],
          "pre-update-cmd": [
-            "@git-set-filemode"
+              "@git-set-filemode"
          ],
          "post-update-cmd": [
-            "@typo3-clear-cache"
+              "@typo3-clear-cache",
+              "@typo3-database-compare"
          ],
          "post-autoload-dump": [
               "@typo3-build-package-states",

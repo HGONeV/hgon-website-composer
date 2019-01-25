@@ -40,12 +40,11 @@ $rsyncFlags = array(
     "--exclude 'README.*'",
     '--exclude Rakefile',
     "--exclude '*.md'",
+    "--exclude '*.dev*'",
+    "--exclude '*.prod*'",
+    "--exclude '*.stage*'",
 
     '--exclude /dev',
-    '--include /dev/files/media/*',
-
-    '--exclude /web/.htaccess',
-    '--exclude /web/.htpasswd',
     '--exclude /web/data*.txt',
     '--exclude /web/fileadmin',
     '--exclude /web/typo3conf/ENABLE_INSTALL_TOOL',

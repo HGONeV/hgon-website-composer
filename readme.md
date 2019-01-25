@@ -27,6 +27,11 @@ cd ..
 chown -R vagrant:vagrant public_html
 ```
 
+Now we make sure that `chmod`-changes are not versioned. NEVER!
+```
+git config --global core.fileMode false
+```
+
 Now import the database
 ```
 cd /var/www/rkw-kompetenzzentrum.de/public_html/dev
@@ -38,47 +43,35 @@ mysql -u root -prkw rkw_dev_komze < rkw_live_komze.dev.sql
 rm rkw_live_komze.dev.sql
 ```
 
-After that everything is installed with Composer.
- Then the `.env` file  has to be copied
+After that we have to copy some important files
 ```
 cd /var/www/rkw-kompetenzzentrum.de/public_html/
-cp _env .env
-```
-
-Now we make sure that `chmod`-changes are not versioned. NEVER!
-```
-git config --global core.fileMode false
+cp _env.dev .env
+cp web/_htaccess.dev web/.htaccess
+cp web/typo3conf/AdditionalConfiguration.dev.php web/typo3conf/AdditionalConfiguration.php
 ```
 
 Install everything with composer now
 ```
 cd /var/www/rkw-kompetenzzentrum.de/public_html/
-cp _env .env
 composer install
 ```
 
-Finally we copy a some central files and make individual adjustments if necessary.
-```
-cd /var/www/rkw-kompetenzzentrum.de/public_html/web/typo3conf
-cp AdditionalConfigurationDev.php AdditionalConfiguration.php
-```
-
 Now we have to let your local machine know which hosts are to be directed to your local DEV.
-You will find an example `/etc/hosts` (`etc-hosts.txt`) in `/dev`
+You will find an example `/etc/hosts` (`etc-hosts.txt`) in `/dev/files`
 
 
 ## Update
-To get the latest changes, proceed as follows:
+To get the latest changes, proceed as follows.
+Database-compare and cache-flush will be done automatically. 
 ```
 cd /var/www/rkw-kompetenzzentrum.de/public_html/
 git pull origin develop
 composer update
-./vendor/bin/typo3cms database:updateschema
-./vendor/bin/typo3cms cache:flush
 ```
 
 ## Deployment
-Deployment is triggered via the local VM. Best as root or via `sudo`.
+Deployment is triggered via your local VM. 
 
 **IMPORTANT: Deployment with password login (instead of RSA key) requires `expect` on the executing machine (local VM)**
 ```
@@ -94,10 +87,10 @@ Examples:
 
 You also need a Deployment-Script with the same name as your branch e.g `./.surf/Stage.php` for `stage`-branch.
 
-Do the Deployment using this command form DocumentRoot:
+Do the Deployment using the following command form your DocumentRoot. It may be necessary to do this as root or via `sudo`.
 ```
-sudo php ./vendor/typo3/surf/surf deploy <DEPLOYMENT-FILE>
-sudo php ./vendor/typo3/surf/surf deploy Stage
+php ./vendor/typo3/surf/surf deploy <DEPLOYMENT-FILE>
+php ./vendor/typo3/surf/surf deploy Stage
 ```
 
 You can use verbose-output to get more information:
@@ -109,11 +102,10 @@ sudo php ./vendor/typo3/surf/surf deploy Stage -vvv
 
 ## About the files and folders
 
-### File: composer.json
 
-Contains the packages to install. 
-To be able to install packages that themselves have dependencies on packages that are only available as @dev, you need to specify the `minimum-stabilty` in combination with `prefer-stable`.
-With `preferred-install` you can specify that certain packages should be installed as GIT repositories so that you can work on them directly. 
+### File: .gitignore
+
+Contains the files and folders to ignore for versioning. 
 
 ### Folder: .surf
 
@@ -126,6 +118,20 @@ Contains the access data for the respective environments
 ### Folder: .surf/Includes
 
 Contains ncludes for the Deployment Script 
+
+### File: _htaccess.dev / _htaccess.prod / _htaccess.stage
+
+Contains the settings for the given environment. Copy `_htaccess.dev` to `.htaccess` in your local environment to get startet.
+
+### File: _htpasswd.dev / _htpasswd.prod / _htpasswd.stage
+
+Same as _htaccess.*
+
+### File: composer.json
+
+Contains the packages to install. 
+To be able to install packages that themselves have dependencies on packages that are only available as @dev, you need to specify the `minimum-stabilty` in combination with `prefer-stable`.
+With `preferred-install` you can specify that certain packages should be installed as GIT repositories so that you can work on them directly. 
 
 ### Folder: dev
 
@@ -144,13 +150,15 @@ Shell script to recursively check the status of GIT repositories.
 
 Example file for the local '''etc/hosts'''
 
-### File: _env
+### Folder: dummy
 
-This file contains a list of all extensions to be activated. If this file is copied to `.env` before installation, the package "helhum/dotenv-connector" will automatically create a corresponding `PackageStates.php`.
+Contains dummy files for sys_file-references.
 
-### File: .gitignore
+### File: _env.dev / _env.prod / _env.stage
 
-Contains the files and folders to ignore for versioning. 
+This file contains a list of all extensions to be activated in the given enviroment. 
+If this file is copied to `.env` before installation, the package "helhum/dotenv-connector" will automatically create a corresponding `PackageStates.php`.
+
 
 **Please note that all changes to this file will be versioned. Therefore, do not save any specific changes for the local environment here.**
 
@@ -158,15 +166,11 @@ Contains the files and folders to ignore for versioning.
 
 This file contains all configurations for and dev- environments. At the same time you have to make sure that this file is NEVER deployed into a LIVE or STAGE-Environment. 
 
-### File: web/typo3conf/AdditionalConfigurationProd.php
+### File: web/typo3conf/AdditionalConfiguration.dev.php / web/typo3conf/AdditionalConfiguration.prod.php / web/typo3conf/AdditionalConfiguration.stage.php 
 
-This file serves as a template for the settings relevant to the production environment. Copy this file to `AdditionalConfiguration.php` to make settings for the live environment.
+This file contains the relevant settings for the according environment.  Copy `web/typo3conf/AdditionalConfiguration.dev.php` to `web/typo3conf/AdditionalConfiguration.php` in your local environment to get startet.
 
 **Do NOT put any access data or enycryption keys into versioning that are relevant for the live environment. These are ONLY to be put into `AdditionConfiguation.php` on the Live!!!**
-
-### File: web/typo3conf/AdditionalConfigurationDev.php
-
-This file serves as a template for the settings relevant for the DEV-environment. Copy this file to `AdditionalConfiguration.php` to make settings for your own DEV-environment.
 
 ### File: web/typo3conf/RealUrlConfiguration.php
 

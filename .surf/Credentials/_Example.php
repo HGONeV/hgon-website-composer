@@ -17,5 +17,6 @@ $user = '';
 $password = '';
 $port = '22';
 
-$gitBranch = 'stage';
+$fileExtension = 'stage';
+$gitBranch = 'staging';
 $gitRepository = 'https://github.com/RKWKomZe/RkwWebsite.git';

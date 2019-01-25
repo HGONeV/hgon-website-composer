@@ -1,5 +1,10 @@
 SetEnv TYPO3_CONTEXT Production/Staging
 
+AuthName "Staging"
+AuthType Basic
+AuthUserFile /var/www/rkw.codes/public_html/.htpasswd
+require valid-user
+
 #####
 # 
 # Example .htaccess file for TYPO3 CMS - for use with Apache Webserver
