@@ -155,17 +155,14 @@ With `preferred-install` you can specify that certain packages should be install
 This folder contains some important files, scripts and a cleaned database dump for the development environment. Copy the dummy files to `/web/fileadmin`. They replace all file and image links.
 The database dump can be imported directly into the Vagrant- environment. 
 
-### File: dev/files/settings-for-phpstorm.jar
+#### File: dev/etc-hosts.txt
+
+Example file for the local `etc/hosts`
+
+### File: dev/settings-for-phpstorm.jar
 
 Settings for PHP-Storm. **These HAVE TO BE USED for development.**
 
-#### File: dev/scripts/git-status-recursive.sh
-
-Shell script to recursively check the status of GIT repositories.
-
-#### File: dev/scripts/etc-hosts.txt
-
-Example file for the local '''etc/hosts'''
 
 ### Folder: dummy
 
@@ -176,8 +173,19 @@ Contains dummy files for sys_file-references.
 This file contains a list of all extensions to be activated in the given enviroment. 
 If this file is copied to `.env` before installation, the package "helhum/dotenv-connector" will automatically create a corresponding `PackageStates.php`.
 
-
 **Please note that all changes to this file will be versioned. Therefore, do not save any specific changes for the local environment here.**
+
+### Folder: scripts
+
+Contains shell scripts for development and deployment
+
+#### File: scripts/git-status-recursive.sh
+
+Shell script to recursively check the status of GIT repositories.
+
+#### File: scripts/git-status-recursive.sh
+
+Shell script for setting `git config core.filemode false` recursively.
 
 ### File: web/typo3conf/LocalConfiguration.php
 
