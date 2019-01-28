@@ -64,6 +64,11 @@ $workflow->defineTask(
     array('command' => 'cd {workspacePath} && chmod -R 777 ./ && echo "Fixed rights"')
 );
 $workflow->defineTask(
+    'RKW\\Task\\SetGitFileModeIgnore',
+    \TYPO3\Surf\Task\LocalShellTask::class,
+    array('command' => 'cd {workspacePath} && ./dev/scripts/git-filemode-recursive.sh && echo "Set \'git config core.filemode false\' on all repositories"')
+);
+$workflow->defineTask(
     'RKW\\Task\\CopyEnv',
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && if [ -f "_env.' . $fileExtension . '" ]; then cp _env.' . $fileExtension . ' .env; fi')
@@ -136,6 +141,7 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     $workflow->beforeTask('TYPO3\\Surf\\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\CopyEnv');
     $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\CopyHtaccess');
     $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\CopyAdditionalConfiguration');
+    $workflow->beforeTask('TYPO3\\Surf\\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\SetGitFileModeIgnore');
     $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\FixRightsLocal');
 
     // -----------------------------------------------
