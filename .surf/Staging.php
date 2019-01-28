@@ -66,7 +66,7 @@ $workflow->defineTask(
 $workflow->defineTask(
     'RKW\\Task\\Local\\SetGitFileModeIgnore',
     \TYPO3\Surf\Task\LocalShellTask::class,
-    array('command' => 'cd {workspacePath} && cd ./dev/scripts && chmod 770 ./* && ./git-filemode-recursive.sh && echo "Set \'git config core.filemode false\' on all repositories"')
+    array('command' => 'cd {workspacePath} && chmod 770 ./scripts/* && ./scripts/git-filemode-recursive.sh && echo "Set \'git config core.filemode false\' on all repositories"')
 );
 $workflow->defineTask(
     'RKW\\Task\\Local\\CopyEnv',
