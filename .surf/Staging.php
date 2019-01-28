@@ -89,7 +89,7 @@ $workflow->defineTask(
 $workflow->defineTask(
     'RKW\\Task\\CopyDummyFiles',
     \TYPO3\Surf\Task\ShellTask::class,
-    array('command' => 'cd {releasePath} && if [ -d "./dummy" ]; then cp ./dummy/* ./web/fileadmin/media/; fi && echo "Copied dummy files."')
+    array('command' => 'cd {releasePath} && if [ -d "./dummy" ] && [ -d "./web/fileadmin/" ]; then if [ ! -d "./web/fileadmin/media" ]; then mkdir ./web/fileadmin/media; fi && cp ./dummy/* ./web/fileadmin/media/ && echo "Copied dummy files."; fi')
 );
 $workflow->defineTask(
     'RKW\\Task\\FixRightsRemote',
@@ -126,32 +126,34 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     // remove tasks we don't need
     $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\CreatePackageStatesTask');
     $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\SetUpExtensionsTask');
-
+    $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\FlushCachesTask');
 
     // -----------------------------------------------
     // Step 1: initialize - This is normally used only for an initial deployment to an instance. At this stage you may prefill certain directories for example.
 
     // -----------------------------------------------
     // Step 2: package - This stage is where you normally package all files and assets, which will be transferred to the next stage.
-    $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\\Task\\CopyEnv');
-    $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\\Task\\CopyHtaccess');
-    $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\\Task\\CopyAdditionalConfiguration');
-    $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\\Task\\FixRightsLocal');
+    $workflow->beforeTask('TYPO3\\Surf\\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\CopyEnv');
+    $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\CopyHtaccess');
+    $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\CopyAdditionalConfiguration');
+    $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\FixRightsLocal');
 
     // -----------------------------------------------
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
-    $workflow->afterTask('TYPO3\\Surf\\Task\\Generic\\CreateSymlinksTask', 'RKW\\Task\\CopyDummyFiles');
 
     // -----------------------------------------------
     // Step 4: update - If necessary, the transferred assets can be updated at this stage on the foreign instance.
 
     // -----------------------------------------------
     // Step 5: migration - Here you can define tasks to do some database updates / migrations. Be careful and do not delete old tables or columns, because the old code, relying on these, is still live.
-    $workflow->addTask('RKW\Task\TYPO3\UpdateSchema', 'migrate');
-    $workflow->afterStage('migrate', 'RKW\\Task\\FixRightsRemote');
+    // $workflow->beforeTask('RKW\\Task\\TYPO3\\UpdateSchema', 'RKW\\Task\\TYPO3\\ClearCache'); // maybe not needed!
+    $workflow->addTask('RKW\\Task\\TYPO3\\UpdateSchema', 'migrate');
 
     // -----------------------------------------------
     // Step 6: finalize - This stage is meant for tasks, that should be done short before going live, like cache warm ups and so on.
+    $workflow->beforeStage('finalize', 'RKW\\Task\\FixRightsRemote');
+    $workflow->afterStage('finalize', 'RKW\\Task\\TYPO3\\FixFolderStructure');
+    $workflow->afterStage('finalize', 'RKW\\Task\\CopyDummyFiles');
 
     // -----------------------------------------------
     // Step 7: test - In the test stage you can make tests, to check if everything is fine before switching the releases.
@@ -159,6 +161,7 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     // -----------------------------------------------
     // Step 8: switch - This is the crucial stage. Here the old live instance is switched with the new prepared instance. Normally the new instance is symlinked.
     $workflow->beforeStage('switch', 'RKW\\Task\\Apc\\ClearCache');
+    $workflow->afterStage('switch', 'RKW\\Task\\TYPO3\\ClearCache');
     $workflow->afterStage('switch', 'RKW\\Task\\Apc\\ClearCache');
 
     // -----------------------------------------------
