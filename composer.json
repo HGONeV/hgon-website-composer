@@ -48,7 +48,7 @@
     },
     "scripts": {
          "git-set-filemode" : [
-              "git config --global core.filemode false"
+              "cd ./scripts && ./git-filemode-recursive.sh && cd ../"
          ],
          "typo3-build-package-states": [
               "./vendor/bin/typo3cms install:generatepackagestates"
@@ -62,13 +62,14 @@
          "typo3-database-compare" : [
               "./vendor/bin/typo3cms database:updateschema"
          ],
-         "pre-install-cmd": [
+         "post-install-cmd": [
               "@git-set-filemode"
          ],
          "pre-update-cmd": [
               "@git-set-filemode"
          ],
          "post-update-cmd": [
+              "@git-set-filemode",
               "@typo3-clear-cache",
               "@typo3-database-compare"
          ],

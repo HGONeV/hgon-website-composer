@@ -47,6 +47,7 @@ $rsyncFlags = array(
     "--exclude '*.stage*'",
 
     '--exclude /dev',
+    '--exclude /scripts',
     '--exclude /web/data*.txt',
     '--exclude /web/fileadmin',
     '--exclude /web/typo3conf/ENABLE_INSTALL_TOOL',
