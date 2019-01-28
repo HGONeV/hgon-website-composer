@@ -59,32 +59,32 @@ $workflow = new \TYPO3\Surf\Domain\Model\SimpleWorkflow;
 
 // define task executed locally
 $workflow->defineTask(
-    'RKW\\Task\\FixRightsLocal',
+    'RKW\\Task\\Local\\FixRights',
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && chmod -R 777 ./ && echo "Fixed rights"')
 );
 $workflow->defineTask(
-    'RKW\\Task\\SetGitFileModeIgnore',
+    'RKW\\Task\\Local\\SetGitFileModeIgnore',
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && ./dev/scripts/git-filemode-recursive.sh && echo "Set \'git config core.filemode false\' on all repositories"')
 );
 $workflow->defineTask(
-    'RKW\\Task\\CopyEnv',
+    'RKW\\Task\\Local\\CopyEnv',
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && if [ -f "_env.' . $fileExtension . '" ]; then cp _env.' . $fileExtension . ' .env; fi')
 );
 $workflow->defineTask(
-    'RKW\\Task\\CopyAdditionalConfiguration',
+    'RKW\\Task\\Local\\CopyAdditionalConfiguration',
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && if [ -f "./web/typo3conf/AdditionalConfiguration.' . $fileExtension . '.php" ]; then cp ./web/typo3conf/AdditionalConfiguration.' . $fileExtension . '.php ./web/typo3conf/AdditionalConfiguration.php; fi && echo "Copied AdditionalConfiguration.php."')
 );
 $workflow->defineTask(
-    'RKW\\Task\\CopyHtaccess',
+    'RKW\\Task\\Local\\CopyHtaccess',
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && if [ -f "./web/_htaccess.' . $fileExtension . '" ]; then cp ./web/_htaccess.' . $fileExtension . ' ./web/.htaccess; fi && if [ -f "./web/_htpasswd.' . $fileExtension . '" ]; then cp ./web/_htpasswd.' . $fileExtension . ' ./web/.htpasswd; fi && echo "Copied .htaccess."')
 );
 $workflow->defineTask(
-    'RKW\\Task\\TYPO3\\GeneratePackageStates',
+    'RKW\\Task\\Local\\TYPO3\\GeneratePackageStates',
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {releasePath} && ./vendor/bin/typo3cms install:generatepackagestates')
 );
@@ -92,32 +92,32 @@ $workflow->defineTask(
 
 // define task executed remotely
 $workflow->defineTask(
-    'RKW\\Task\\CopyDummyFiles',
+    'RKW\\Task\\Remote\\CopyDummyFiles',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && if [ -d "./dummy" ] && [ -d "./web/fileadmin/" ]; then if [ ! -d "./web/fileadmin/media" ]; then mkdir ./web/fileadmin/media; fi && cp ./dummy/* ./web/fileadmin/media/ && echo "Copied dummy files."; fi')
 );
 $workflow->defineTask(
-    'RKW\\Task\\FixRightsRemote',
+    'RKW\\Task\\Remote\\FixRights',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && find ./web -type f -exec chmod 640 {} \; && find ./web -type d -exec chmod 750 {} \; && echo "Fixed rights"')
 );
 $workflow->defineTask(
-    'RKW\\Task\\Apc\\ClearCache',
+    'RKW\\Task\\Remote\\Apc\\ClearCache',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && ' . $phpPath . ' -r \'apc_clear_cache("' . $user . '");\'')
 );
 $workflow->defineTask(
-    'RKW\\Task\\TYPO3\\FixFolderStructure',
+    'RKW\\Task\\Remote\\TYPO3\\FixFolderStructure',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && ./vendor/bin/typo3cms install:fixfolderstructure')
 );
 $workflow->defineTask(
-    'RKW\\Task\\TYPO3\\ClearCache',
+    'RKW\\Task\\Remote\\TYPO3\\ClearCache',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && ./vendor/bin/typo3cms cache:flush')
 );
 $workflow->defineTask(
-    'RKW\\Task\\TYPO3\\UpdateSchema',
+    'RKW\\Task\\Remote\\TYPO3\\UpdateSchema',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && if [ -f "./web/typo3conf/LocalConfiguration.php" ]; then ./vendor/bin/typo3cms database:updateschema "*.add,*.change"; fi')
 );
@@ -138,11 +138,11 @@ $deployment->onInitialize(function () use ($workflow, $application) {
 
     // -----------------------------------------------
     // Step 2: package - This stage is where you normally package all files and assets, which will be transferred to the next stage.
-    $workflow->beforeTask('TYPO3\\Surf\\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\CopyEnv');
-    $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\CopyHtaccess');
-    $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\CopyAdditionalConfiguration');
-    $workflow->beforeTask('TYPO3\\Surf\\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\SetGitFileModeIgnore');
-    $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\FixRightsLocal');
+    $workflow->beforeTask('TYPO3\\Surf\\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\Local\\CopyEnv');
+    $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\Local\\CopyHtaccess');
+    $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\Local\\CopyAdditionalConfiguration');
+    $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\Local\\FixRights');
+    $workflow->beforeTask('RKW\\Task\\FixRights', 'RKW\\Task\\SetGitFileModeIgnore');
 
     // -----------------------------------------------
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
@@ -152,23 +152,23 @@ $deployment->onInitialize(function () use ($workflow, $application) {
 
     // -----------------------------------------------
     // Step 5: migration - Here you can define tasks to do some database updates / migrations. Be careful and do not delete old tables or columns, because the old code, relying on these, is still live.
-    // $workflow->beforeTask('RKW\\Task\\TYPO3\\UpdateSchema', 'RKW\\Task\\TYPO3\\ClearCache'); // maybe not needed!
-    $workflow->addTask('RKW\\Task\\TYPO3\\UpdateSchema', 'migrate');
+    // $workflow->beforeTask('RKW\\Task\\Remote\\TYPO3\\UpdateSchema', 'RKW\\Task\\Remote\\TYPO3\\ClearCache'); // maybe not needed!
+    $workflow->addTask('RKW\\Task\\Remote\\TYPO3\\UpdateSchema', 'migrate');
 
     // -----------------------------------------------
     // Step 6: finalize - This stage is meant for tasks, that should be done short before going live, like cache warm ups and so on.
-    $workflow->beforeStage('finalize', 'RKW\\Task\\FixRightsRemote');
-    $workflow->afterStage('finalize', 'RKW\\Task\\TYPO3\\FixFolderStructure');
-    $workflow->afterStage('finalize', 'RKW\\Task\\CopyDummyFiles');
+    $workflow->beforeStage('finalize', 'RKW\\Task\\Remote\\FixRights');
+    $workflow->afterStage('finalize', 'RKW\\Task\\Remote\\TYPO3\\FixFolderStructure');
+    $workflow->afterStage('finalize', 'RKW\\Task\\Remote\\CopyDummyFiles');
 
     // -----------------------------------------------
     // Step 7: test - In the test stage you can make tests, to check if everything is fine before switching the releases.
 
     // -----------------------------------------------
     // Step 8: switch - This is the crucial stage. Here the old live instance is switched with the new prepared instance. Normally the new instance is symlinked.
-    $workflow->beforeStage('switch', 'RKW\\Task\\Apc\\ClearCache');
-    $workflow->afterStage('switch', 'RKW\\Task\\TYPO3\\ClearCache');
-    $workflow->afterStage('switch', 'RKW\\Task\\Apc\\ClearCache');
+    $workflow->beforeStage('switch', 'RKW\\Task\\Remote\\Apc\\ClearCache');
+    $workflow->afterStage('switch', 'RKW\\Task\\Remote\\TYPO3\\ClearCache');
+    $workflow->afterStage('switch', 'RKW\\Task\\Remote\\Apc\\ClearCache');
 
     // -----------------------------------------------
     // Step 9: cleanup - At this stage you would cleanup old releases or remove other unused stuff.
