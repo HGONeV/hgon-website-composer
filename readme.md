@@ -67,11 +67,12 @@ To get the latest changes, proceed as follows.
 Database-compare and cache-flush will be done automatically. 
 ```
 cd /var/www/rkw-kompetenzzentrum.de/public_html/
-git pull origin develop
+git pull origin development
 composer update
 ```
 
 ## Deployment
+### General notes
 Deployment is triggered via your local VM. 
 
 **IMPORTANT: Deployment with password login (instead of RSA key) requires `expect` on the executing machine (local VM)**
@@ -79,14 +80,23 @@ Deployment is triggered via your local VM.
 apt-get install expect
 ```
 
-For the deployment you need a corresponding branch with all changes committed and pushed to the repository.
-The branch needs to have the same name as the deployment-step you want to execute.
+For the deployment you need a branch with the same name as the deployment-step you want to execute.
 
 Examples:
 - If you want to deploy into the staging-enviroment you have to push everything to the `staging`-branch.
 - If you want to deploy into the production-enviroment you have to push everything to the `production`-branch. 
 
 You also need a Deployment-Script with the same name as the branch you want to deploy, e.g `./.surf/Staging.php` for `staging`-branch.
+
+### Before you deploy
+- If you worked in an extension with an own repository you have to commit all the changes with a corresponding tag on the `master`-branch of the extension first.
+- In order to make your changes effective, the `composer.lock` has to get the new version information. So in your website-repository do a  
+``` 
+composer update
+``` 
+- The new `composer.lock` has be committed as well. So you need to push the changes of your website-repository before executing a deployment.
+
+### How to deploy
 
 Do the deployment using the following command from your DocumentRoot. 
 
