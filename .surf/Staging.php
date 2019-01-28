@@ -66,7 +66,7 @@ $workflow->defineTask(
 $workflow->defineTask(
     'RKW\\Task\\Local\\SetGitFileModeIgnore',
     \TYPO3\Surf\Task\LocalShellTask::class,
-    array('command' => 'cd {workspacePath} && ./dev/scripts/git-filemode-recursive.sh && echo "Set \'git config core.filemode false\' on all repositories"')
+    array('command' => 'cd {workspacePath} && cd ./dev/scripts && chmod 770 ./* && ./git-filemode-recursive.sh && echo "Set \'git config core.filemode false\' on all repositories"')
 );
 $workflow->defineTask(
     'RKW\\Task\\Local\\CopyEnv',
@@ -142,7 +142,7 @@ $deployment->onInitialize(function () use ($workflow, $application) {
     $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\Local\\CopyHtaccess');
     $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\Local\\CopyAdditionalConfiguration');
     $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\Local\\FixRights');
-    $workflow->beforeTask('RKW\\Task\\FixRights', 'RKW\\Task\\SetGitFileModeIgnore');
+    $workflow->beforeTask('RKW\\Task\\Local\\FixRights', 'RKW\\Task\\Local\\SetGitFileModeIgnore');
 
     // -----------------------------------------------
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
