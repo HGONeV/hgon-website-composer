@@ -6,6 +6,7 @@
  * @copyright Rkw Kompetenzzentrum
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  * @var \TYPO3\Surf\Domain\Model\Deployment $deployment
+ * @version 1.0.1
  */
 
 // Requires

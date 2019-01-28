@@ -5,6 +5,7 @@
  * @author Steffen Kroggel <developer@steffenkroggel.de>
  * @copyright Rkw Kompetenzzentrum
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
+ * @version 1.0.1
  */
 $rsyncFlags = array(
 
