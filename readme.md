@@ -5,11 +5,11 @@ This repository contains the TYPO3 website of the RKW with all relevant configur
 ## Installation of a local dev environment
 
 An RKW Vagrant instance is required for installation. This can be found here:
-https://github.com/RKWKomZe/Vagrant.git
+
+`https://github.com/RKWKomZe-Wesbites/Vagrant.git`
 
 Within the www directory this git repository will be cloned and checked out.
 
-**Important: The respective vagrant user must be used for this!**
 
 ```
 cd /var/www/rkw-kompetenzzentrum.de/tmp
@@ -17,10 +17,10 @@ git init
 git config core.filemode false
 git config user.name "John Doe"
 git config user.email joe@rkw.de
-git add remote add origin https://github.com/RKWKomZe/RkwWebsite.git
-git fetch origin develop
-git pull origin develop
-git checkout develop
+git add remote add origin https://github.com/RKWKomZe-Websites/RkwWebsite.git
+git fetch origin development
+git pull origin development
+git checkout development
 mv ../public_html public_html_bak
 mv RkwTemplate ../public_html
 cd ..
@@ -50,8 +50,9 @@ cp _env.dev .env
 cp web/_htaccess.dev web/.htaccess
 cp web/typo3conf/AdditionalConfiguration.dev.php web/typo3conf/AdditionalConfiguration.php
 ```
-
 Install everything with composer now
+
+**IMPORTANT: Do NOT run composer with `root` or super-user !!! Always use your local user (e.g. `vagrant`)**
 ```
 cd /var/www/rkw-kompetenzzentrum.de/public_html/
 composer install
@@ -78,27 +79,33 @@ Deployment is triggered via your local VM.
 apt-get install expect
 ```
 
+For the deployment you need a corresponding branch with all changes committed and pushed to the repository.
+The branch needs to have the same name as the deployment-step you want to execute.
+
+Examples:
+- If you want to deploy into the staging-enviroment you have to push everything to the `staging`-branch.
+- If you want to deploy into the production-enviroment you have to push everything to the `production`-branch. 
+
+You also need a Deployment-Script with the same name as the branch you want to deploy, e.g `./.surf/Staging.php` for `staging`-branch.
+
+Do the deployment using the following command from your DocumentRoot. 
+
 **IMPORTANT: The surf extension requires PHP 7 on the CLI**
 
-For the deployment you need a branch with all changes commited and pushed to the repository.
-Examples:
-- If you want to deploy into the stage-enviroment you have to push everything to `stage`-branch.
-- If you want to deploy into the live-enviroment you have to push everything to the `production'-branch. 
-
-You also need a Deployment-Script with the same name as your branch e.g `./.surf/Stage.php` for `stage`-branch.
-
-Do the Deployment using the following command form your DocumentRoot. It may be necessary to do this as root or via `sudo`.
+**IMPORTANT: Do NOT run deployment with `root` or super-user !!! Always use your local user (e.g. `vagrant`)**
 ```
 php ./vendor/typo3/surf/surf deploy <DEPLOYMENT-FILE>
-php ./vendor/typo3/surf/surf deploy Stage
+php ./vendor/typo3/surf/surf deploy Staging
 ```
 
-You can use verbose-output to get more information:
+You can use verbose-output to get more information if something goes wrong:
 ```
-sudo php ./vendor/typo3/surf/surf deploy Stage -v
-sudo php ./vendor/typo3/surf/surf deploy Stage -vv
-sudo php ./vendor/typo3/surf/surf deploy Stage -vvv
+sudo php ./vendor/typo3/surf/surf deploy Staging -v
+sudo php ./vendor/typo3/surf/surf deploy Staging -vv
+sudo php ./vendor/typo3/surf/surf deploy Staging -vvv
 ```
+
+
 
 ## About the files and folders
 
@@ -166,7 +173,7 @@ If this file is copied to `.env` before installation, the package "helhum/dotenv
 
 This file contains all configurations for and dev- environments. At the same time you have to make sure that this file is NEVER deployed into a LIVE or STAGE-Environment. 
 
-### File: web/typo3conf/AdditionalConfiguration.dev.php / web/typo3conf/AdditionalConfiguration.prod.php / web/typo3conf/AdditionalConfiguration.stage.php 
+### File: web/typo3conf/AdditionalConfiguration.dev.php / AdditionalConfiguration.prod.php / AdditionalConfiguration.stage.php 
 
 This file contains the relevant settings for the according environment.  Copy `web/typo3conf/AdditionalConfiguration.dev.php` to `web/typo3conf/AdditionalConfiguration.php` in your local environment to get startet.
 

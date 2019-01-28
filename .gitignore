@@ -1,11 +1,12 @@
 # =======================================================
 # Ignore Editor-files, vendor and other basic stuff
 # =======================================================
+.DS_Store
+
 /.build
 /.buildpath
 /.bowerrc
 /.bundle
-/.DS_Store
 /.env
 /.idea
 /.settings

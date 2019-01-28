@@ -9,7 +9,7 @@
  */
 
 // Requires
-require_once __DIR__ . '/Credentials/Stage.php';
+require_once __DIR__ . '/Credentials/Staging.php';
 require_once __DIR__ . '/Includes/SecurityQuestion.php';
 require_once __DIR__ . '/Includes/RsyncFlags.php';
 
@@ -61,7 +61,7 @@ $workflow = new \TYPO3\Surf\Domain\Model\SimpleWorkflow;
 $workflow->defineTask(
     'RKW\\Task\\FixRightsLocal',
     \TYPO3\Surf\Task\LocalShellTask::class,
-    array('command' => 'cd {workspacePath} && chmod -R 777 ./web && echo "Fixed rights"')
+    array('command' => 'cd {workspacePath} && chmod -R 777 ./ && echo "Fixed rights"')
 );
 $workflow->defineTask(
     'RKW\\Task\\CopyEnv',
@@ -78,13 +78,18 @@ $workflow->defineTask(
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && if [ -f "./web/_htaccess.' . $fileExtension . '" ]; then cp ./web/_htaccess.' . $fileExtension . ' ./web/.htaccess; fi && if [ -f "./web/_htpasswd.' . $fileExtension . '" ]; then cp ./web/_htpasswd.' . $fileExtension . ' ./web/.htpasswd; fi && echo "Copied .htaccess."')
 );
+$workflow->defineTask(
+    'RKW\\Task\\TYPO3\\GeneratePackageStates',
+    \TYPO3\Surf\Task\LocalShellTask::class,
+    array('command' => 'cd {releasePath} && ./vendor/bin/typo3cms install:generatepackagestates')
+);
 
 
 // define task executed remotely
 $workflow->defineTask(
     'RKW\\Task\\CopyDummyFiles',
     \TYPO3\Surf\Task\ShellTask::class,
-    array('command' => 'cd {releasePath} && if [ -d "./dev/dummy" ]; then cp ./dev/dummy/* ./web/fileadmin; fi && echo "Copied dummy files."')
+    array('command' => 'cd {releasePath} && if [ -d "./dummy" ]; then cp ./dummy/* ./web/fileadmin/media/; fi && echo "Copied dummy files."')
 );
 $workflow->defineTask(
     'RKW\\Task\\FixRightsRemote',
@@ -128,9 +133,9 @@ $deployment->onInitialize(function () use ($workflow, $application) {
 
     // -----------------------------------------------
     // Step 2: package - This stage is where you normally package all files and assets, which will be transferred to the next stage.
-    $workflow->afterTask('TYPO3\\Surf\\Task\\Package\\GitTask', 'RKW\\Task\\CopyEnv');
-    $workflow->afterTask('TYPO3\\Surf\\Task\\Package\\GitTask', 'RKW\\Task\\CopyHtaccess');
-    $workflow->afterTask('TYPO3\\Surf\\Task\\Package\\GitTask', 'RKW\\Task\\CopyAdditionalConfiguration');
+    $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\\Task\\CopyEnv');
+    $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\\Task\\CopyHtaccess');
+    $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\\Task\\CopyAdditionalConfiguration');
     $workflow->beforeTask('TYPO3\Surf\DefinedTask\Composer\LocalInstallTask', 'RKW\\Task\\FixRightsLocal');
 
     // -----------------------------------------------

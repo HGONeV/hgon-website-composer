@@ -25,7 +25,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['_DEFAULT'] = array (
     'defaultDomain' => 'rkw-kompetenzzentrum.rkw.local'
 );
 // =====================================
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['rkw.rkw.local'] = array (
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['mein.rkw.local'] = array (
     'fallbackPid' => 3579,
     'defaultDomain' => 'mein.rkw.local'
 );
