@@ -58,7 +58,9 @@ $application->addNode($node);
 /** @var \TYPO3\Surf\Domain\Model\SimpleWorkflow $workflow */
 $workflow = new \TYPO3\Surf\Domain\Model\SimpleWorkflow;
 
+//---------------------------------------
 // define task executed locally
+//---------------------------------------
 $workflow->defineTask(
     'RKW\\Task\\Local\\FixRights',
     \TYPO3\Surf\Task\LocalShellTask::class,
@@ -87,11 +89,17 @@ $workflow->defineTask(
 $workflow->defineTask(
     'RKW\\Task\\Local\\TYPO3\\GeneratePackageStates',
     \TYPO3\Surf\Task\LocalShellTask::class,
-    array('command' => 'cd {releasePath} && ./vendor/bin/typo3cms install:generatepackagestates')
+    array('command' => 'cd {workspacePath} && ./vendor/bin/typo3cms install:generatepackagestates')
+);
+$workflow->defineTask(
+    'RKW\\Task\\Local\\ComposerInstall',
+    \TYPO3\Surf\Task\LocalShellTask::class,
+    array('command' => 'cd {workspacePath} && composer install --no-ansi --no-interaction --no-dev --no-progress --classmap-authoritative --prefer-dist 2>&1')
 );
 
-
+//---------------------------------------
 // define task executed remotely
+//---------------------------------------
 $workflow->defineTask(
     'RKW\\Task\\Remote\\CopyDummyFiles',
     \TYPO3\Surf\Task\ShellTask::class,
@@ -129,24 +137,32 @@ $deployment->setWorkflow($workflow);
 // Add / remove tasks
 $deployment->onInitialize(function () use ($workflow, $application) {
 
-    // remove tasks we don't need
-    $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\CreatePackageStatesTask');
-    $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\SetUpExtensionsTask');
-    $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\FlushCachesTask');
+    // remove tasks we don't need or we want to handle ourselves!
+    $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\CopyConfigurationTask'); // is deprecated
+    $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\CreatePackageStatesTask'); // is done via composer.json
+    $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\SetUpExtensionsTask'); // not needed, throws exceptions
+    $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\FlushCachesTask'); // we do this by ourselves
+    $workflow->removeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask'); // we need the --prefer-dist flag for composer here here
+    $workflow->removeTask('TYPO3\\Surf\\Task\\Package\\GitTask'); // we need the --prefer-dist flag for composer here here
 
     // -----------------------------------------------
     // Step 1: initialize - This is normally used only for an initial deployment to an instance. At this stage you may prefill certain directories for example.
 
     // -----------------------------------------------
     // Step 2: package - This stage is where you normally package all files and assets, which will be transferred to the next stage.
-    $workflow->beforeTask('TYPO3\\Surf\\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\Local\\CopyEnv');
-    $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\Local\\CopyHtaccess');
-    $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\Local\\CopyAdditionalConfiguration');
-    $workflow->beforeTask('TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask', 'RKW\\Task\\Local\\FixRights');
+    $workflow->addTask('RKW\\Task\\Local\\ComposerInstall', 'package');
+
+    $workflow->beforeTask('RKW\\Task\\Local\\ComposerInstall', 'TYPO3\\Surf\\Task\\Package\\GitTask'); // is excluded when TYPO3\\Surf\\DefinedTask\\Composer\\LocalInstallTask is removed
+    $workflow->afterTask('TYPO3\\Surf\\Task\\Package\\GitTask', 'RKW\\Task\\Local\\CopyEnv');
+    $workflow->afterTask('TYPO3\\Surf\\Task\\Package\\GitTask', 'RKW\\Task\\Local\\CopyHtaccess');
+    $workflow->afterTask('TYPO3\\Surf\\Task\\Package\\GitTask', 'RKW\\Task\\Local\\CopyAdditionalConfiguration');
+    $workflow->afterTask('TYPO3\\Surf\\Task\\Package\\GitTask', 'RKW\\Task\\Local\\FixRights');
+
     $workflow->afterTask('RKW\\Task\\Local\\FixRights', 'RKW\\Task\\Local\\SetGitFileModeIgnore');
 
     // -----------------------------------------------
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
+    // $workflow->beforeStage('transfer', 'RKW\\Task\\Local\\TYPO3\\GeneratePackageStates');
 
     // -----------------------------------------------
     // Step 4: update - If necessary, the transferred assets can be updated at this stage on the foreign instance.
