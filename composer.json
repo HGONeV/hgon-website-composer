@@ -9,37 +9,37 @@
     "description": "TYPO3 CMS Distribution with console support",
     "license": "GPL-2.0+",
     "require": {
-         "typo3/cms": "~7.6.0",
-         "helhum/typo3-console": "^4.9",
+       "typo3/cms": "~7.6.0",
+       "helhum/typo3-console": "^4.9",
 	     "helhum/dotenv-connector": "^1.0",
-         "typo3/surf": "^2.0.0",
-         "sjbr/static-info-tables" : "6.3.10",
+       "typo3/surf": "^2.0.0",
+       "sjbr/static-info-tables" : "6.3.10",
 	     "dmitryd/typo3-realurl": "~2.2.1",
-         "rkw/rkw-alerts": "~7.6.3",
-         "rkw/rkw-authors": "~7.6.13",
-         "rkw/rkw-basics": "~7.6.12",
-         "rkw/rkw-consultant": "~7.6.4",
-         "rkw/rkw-ecosystem": "~7.6.3",
-         "rkw/rkw-etracker": "~7.6.3",
-         "rkw/rkw-events": "~7.6.7",
-         "rkw/rkw-geolocation": "~7.6.11",
-         "rkw/rkw-info-layer": "~7.6.2",
-         "rkw/rkw-mailer": "~7.6.13",
-         "rkw/rkw-newsletter": "~7.6.2",
-         "rkw/rkw-order": "~7.6.9",
-         "rkw/rkw-projects": "~7.6.1",
-         "rkw/rkw-quickcheck": "~7.6.1",
-         "rkw/rkw-registration": "~7.6.11",
-         "rkw/rkw-related": "~7.6.3",
-         "rkw/rkw-resourcespace": "~7.6.2",
-         "rkw/rkw-rss": "~7.6.2",
-         "rkw/rkw-search": "~7.6.5",
-         "rkw/rkw-soap": "~7.6.3",
-         "rkw/rkw-survey": "~7.6.2",
-         "rkw/rkw-template": "~7.6.4",
-         "rkw/rkw-tools": "~7.6.4",
-         "rkw/rkw-webcheck": "~7.6.8",
-         "rkw/rkw-wepstra": "~7.6.6"
+       "rkw/rkw-alerts": "~7.6.3",
+       "rkw/rkw-authors": "~7.6.13",
+       "rkw/rkw-basics": "~7.6.12",
+       "rkw/rkw-consultant": "~7.6.4",
+       "rkw/rkw-ecosystem": "~7.6.3",
+       "rkw/rkw-etracker": "~7.6.3",
+       "rkw/rkw-events": "~7.6.7",
+       "rkw/rkw-geolocation": "~7.6.11",
+       "rkw/rkw-info-layer": "~7.6.2",
+       "rkw/rkw-mailer": "~7.6.13",
+       "rkw/rkw-newsletter": "~7.6.2",
+       "rkw/rkw-order": "~7.6.9",
+       "rkw/rkw-projects": "~7.6.1",
+       "rkw/rkw-quickcheck": "~7.6.1",
+       "rkw/rkw-registration": "~7.6.11",
+       "rkw/rkw-related": "~7.6.3",
+       "rkw/rkw-resourcespace": "~7.6.2",
+       "rkw/rkw-rss": "~7.6.2",
+       "rkw/rkw-search": "~7.6.5",
+       "rkw/rkw-soap": "~7.6.3",
+       "rkw/rkw-survey": "~7.6.2",
+       "rkw/rkw-template": "~7.6.4",
+       "rkw/rkw-tools": "~7.6.4",
+       "rkw/rkw-webcheck": "~7.6.8",
+       "rkw/rkw-wepstra": "~7.6.6"
     },
     "require-dev": {
          "mikey179/vfsStream": "1.4.*@dev",
@@ -47,36 +47,23 @@
 	     "friendsoftypo3/extension-builder": "~7.6.0"
     },
     "scripts": {
-         "git-set-filemode" : [
-              "cd ./scripts && ./git-filemode-recursive.sh && cd ../"
-         ],
-         "typo3-build-package-states": [
-              "./vendor/bin/typo3cms install:generatepackagestates"
-         ],
-         "typo3-fix-folder-structure": [
-              "./vendor/bin/typo3cms install:fixfolderstructure"
-         ],
-         "typo3-clear-cache" : [
-              "./vendor/bin/typo3cms cache:flush"
-         ],
-         "typo3-database-compare" : [
-              "./vendor/bin/typo3cms database:updateschema"
-         ],
-         "post-install-cmd": [
-              "@git-set-filemode"
-         ],
-         "pre-update-cmd": [
-              "@git-set-filemode"
-         ],
-         "post-update-cmd": [
-              "@git-set-filemode",
-              "@typo3-clear-cache",
-              "@typo3-database-compare"
-         ],
-         "post-autoload-dump": [
-              "@typo3-build-package-states",
-              "@typo3-fix-folder-structure"
-         ]
+        "git-set-filemode" : [
+            "if [ $COMPOSER_DEV_MODE -eq 1 ]; then ./scripts/git-filemode-recursive.sh; fi"
+        ],
+        "typo3-cleanup" : [
+            "if [ $COMPOSER_DEV_MODE -eq 1 ]; then ./scripts/typo3-cleanup.sh; fi"
+        ],
+        "post-install-cmd": [
+            "@git-set-filemode",
+            "@typo3-cleanup"
+        ],
+        "pre-update-cmd": [
+            "@git-set-filemode"
+        ],
+        "post-update-cmd": [
+            "@git-set-filemode",
+            "@typo3-cleanup"
+        ]
     },
     "extra": {
          "typo3/cms": {
@@ -94,6 +81,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
+        "platform": {
+            "php": "5.6"
+        },
         "preferred-install": {
             "rkw/*": "source",
             "*": "dist"

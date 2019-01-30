@@ -5,7 +5,7 @@
  * @author Steffen Kroggel <developer@steffenkroggel.de>
  * @copyright Rkw Kompetenzzentrum
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
- * @version 1.0.1
+ * @version 1.0.2
  */
 $rsyncFlags = array(
 
@@ -22,8 +22,6 @@ $rsyncFlags = array(
     '--exclude /.buildpath',
     '--exclude /.bowerrc',
     '--exclude /.bundle',
-    '--exclude /.editorconfig',
-    '--exclude /_env.*',
     '--exclude /.idea',
     '--exclude /.settings',
     '--exclude /.project',
@@ -35,8 +33,7 @@ $rsyncFlags = array(
     '--exclude node_modules',
     '--exclude .node-version',
     '--exclude package.json',
-    '--exclude composer.json',
-    '--exclude composer.lock',
+    '--exclude .editorconfig',
 
     "--exclude 'LICENSE.*'",
     "--exclude 'Readme.*'",

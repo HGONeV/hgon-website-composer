@@ -1,8 +1,10 @@
-# Version 1.0.1
+# Version 1.0.2
 # =======================================================
 # Ignore Editor-files, vendor and other basic stuff
 # =======================================================
 .DS_Store
+node_modules
+bower_components
 
 /.build
 /.buildpath
@@ -27,7 +29,6 @@
 /.surf/Credentials/*
 !/.surf/Credentials/_Example.php
 
-
 # =======================================================
 # Ignore sensitive files from TYPO3
 # =======================================================
@@ -50,8 +51,7 @@
 /web/fileadmin/*
 !/web/fileadmin/.gitkeep
 /web/fileadmin/media
-!/web/fileadmin/media/file-placeholder.pdf
-!/web/fileadmin/media/image-placeholder.jpg
+!/web/fileadmin/media/.gitkeep
 
 # =======================================================
 # Add the custom extensions outside of composer here 

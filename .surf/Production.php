@@ -10,9 +10,7 @@
  */
 
 // Requires
-require_once __DIR__ . '/Credentials/Staging.php';
+require_once __DIR__ . '/Credentials/Production.php';
 require_once __DIR__ . '/Includes/SecurityQuestion.php';
 require_once __DIR__ . '/Includes/RsyncFlags.php';
 require_once __DIR__ . '/Includes/Deployment.php';
-
-

@@ -1,4 +1,7 @@
 <?php
+// add application-context to sitename
+$applicationContext = \TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->__toString();
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'] .= ' / ' . $applicationContext;
 
 // ====================================================
 // OrientDb 
