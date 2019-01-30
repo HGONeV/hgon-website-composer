@@ -561,7 +561,7 @@ if(\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopmen
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['frauenambau.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.frauenambau.de'];
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['karriereseiten-check.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.karriereseiten-check.de'];
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['ressinnobau.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.ressinnobau.de'];
-    $TYPO3_CONF_VARS['EXTCONF']['realurl']['.rkw.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.rkw.de'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.rkw.de'];
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['rkw-sachsenanhalt.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.rkw-sachsenanhalt.de'];
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['rkw-thueringen.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.rkw-thueringen.de'];
 

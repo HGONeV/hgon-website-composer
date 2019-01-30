@@ -5,11 +5,11 @@ This repository contains the TYPO3 website of the RKW with all relevant configur
 ## Installation of a local dev environment
 
 An RKW Vagrant instance is required for installation. This can be found here:
-https://github.com/RKWKomZe/Vagrant.git
+
+`https://github.com/RKWKomZe-Wesbites/Vagrant.git`
 
 Within the www directory this git repository will be cloned and checked out.
 
-**Important: The respective vagrant user must be used for this!**
 
 ```
 cd /var/www/rkw-kompetenzzentrum.de/tmp
@@ -17,67 +17,190 @@ git init
 git config core.filemode false
 git config user.name "John Doe"
 git config user.email joe@rkw.de
-git add remote add origin https://github.com/RKWKomZe/RkwWebsite.git
-git fetch origin develop
-git pull origin develop
-git checkout develop
+git add remote add origin https://github.com/RKWKomZe-Websites/RkwWebsite.git
+git fetch origin development
+git pull origin development
+git checkout development
 mv ../public_html public_html_bak
 mv RkwTemplate ../public_html
 cd ..
 chown -R vagrant:vagrant public_html
 ```
 
-Now import the database
-```
-cd /var/www/rkw-kompetenzzentrum.de/public_html/dev
-tar -xvzf rkw_live_komze.dev.tar.gz
-CREATE USER 'rkw_dev_komze'@'localhost' IDENTIFIED BY 'rkw'" | mysql -uroot -prkw
-CREATE DATABASE rkw_dev_komze" | mysql -uroot -prkw
-GRANT SELECT, UPDATE, INSERT, DELETE, DROP, ALTER, CREATE, INDEX, CREATE VIEW, SHOW VIEW ON rkw_dev_komze.* TO 'rkw_dev_komze'@'localhost'" | mysql -uroot -prkw
-mysql -u root -prkw rkw_dev_komze < rkw_live_komze.dev.sql
-rm rkw_live_komze.dev.sql
-```
-
-After that everything is installed with Composer.
- Then the `.env` file  has to be copied
-```
-cd /var/www/rkw-kompetenzzentrum.de/public_html/
-cp _env .env
-```
-
 Now we make sure that `chmod`-changes are not versioned. NEVER!
 ```
 git config --global core.fileMode false
 ```
+**IMPORTANT: If you are using vagrant you have to use the `vagrant` user of the local VM for the following steps (e.g. `vagrant`)**
 
-Install everything with composer now
+Now import the database
 ```
-cd /var/www/rkw-kompetenzzentrum.de/public_html/
-cp _env .env
+cd /var/www/[WEBSITE]/public_html/dev
+tar -xvzf rkw_live_komze.dev.tar.gz
+mysql -uroot -prkw
+CREATE DATABASE rkw_dev_komze CHARACTER SET utf8 COLLATE utf8_general_ci;;
+CREATE USER 'rkw_dev_komze'@'localhost' IDENTIFIED BY 'rkw';
+GRANT SELECT, UPDATE, INSERT, DELETE, DROP, ALTER, CREATE, INDEX, CREATE VIEW, SHOW VIEW ON rkw_dev_komze.* TO 'rkw_dev_komze'@'localhost';
+exit;
+mysql -u root -prkw rkw_dev_komze < rkw_live_komze.dev.sql
+rm rkw_live_komze.dev.sql
+```
+
+After that we have to copy some important files and set some chmods
+```
+cd /var/www/[WEBSITE]/public_html/
+cp _.env.dev .env
+cp web/_.htaccess.dev web/.htaccess
+cp web/typo3conf/AdditionalConfiguration.dev.php web/typo3conf/AdditionalConfiguration.php
+chmod 755 scripts/*
+```
+
+Make sure your command line uses the same PHP-version that your web-user needs
+Check it with:
+```
+php -v
+```
+
+You can set you PHP-version for CLI using this command:
+```
+sudo update-alternatives --set php /usr/bin/php7.0
+```
+
+If everything is fine, install with composer now
+
+**IMPORTANT: Do NOT run composer with `root` or super-user!!!**
+```
+cd /var/www/[WEBSITE]/public_html/
 composer install
 ```
 
-Finally we copy a some central files and make individual adjustments if necessary.
-```
-cd /var/www/rkw-kompetenzzentrum.de/public_html/web/typo3conf
-cp AdditionalConfigurationDev.php AdditionalConfiguration.php
-```
-
 Now we have to let your local machine know which hosts are to be directed to your local DEV.
-You will find an example `/etc/hosts` (`etc-hosts.txt`) in `/dev`
+You will find an example `/etc/hosts` (`etc-hosts.txt`) in `/dev/files`
 
+## Password
+The install-tool password is set to the known default value
+```
+joh316
+```
+
+You should be able to login into the backend with
+```
+User: admin
+Pass: testtest
+```
 
 ## Update
-To get the latest changes, proceed as follows:
+To get the latest changes, proceed as follows.
+Database-compare and cache-flush will be done automatically. 
 ```
-cd /var/www/rkw-kompetenzzentrum.de/public_html/
-git pull origin develop
+cd /var/www/[WEBSITE]/public_html/
+git pull origin development
 composer update
-./vendor/bin/typo3cms database:updateschema
-./vendor/bin/typo3cms cache:flush
 ```
 
+If composer can't execute on your VM, check if your `vagrant` user is in the `www-data`-group:
+```
+sudo usermod -a -G www-data vagrant
+```
+
+## Some usefull commands for CLI
+Flush TYPO3 Caches
+```
+cd /var/www/[WEBSITE]/public_html/
+./vendor/bin/typo3cms cache:flush --force
+```
+
+Fix folder structure
+```
+cd /var/www/[WEBSITE]/public_html/
+./vendor/bin/typo3cms install:fixfolderstructure
+```
+
+Update database
+```
+cd /var/www/[WEBSITE]/public_html/
+./vendor/bin/typo3cms database:updateschema
+```
+
+## Deployment
+### General notes
+Deployment is triggered via your local VM. 
+
+**IMPORTANT: Deployment with password login (instead of RSA key) requires `expect` on the executing machine (local VM)**
+```
+apt-get install expect
+```
+
+For the deployment you need a branch with the same name as the deployment-step you want to execute.
+
+Examples:
+- If you want to deploy into the staging-enviroment you have to push everything to the `staging`-branch.
+- If you want to deploy into the production-enviroment you have to push everything to the `production`-branch. 
+
+You also need a Deployment-Script with the same name as the branch you want to deploy, e.g `./.surf/Staging.php` for `staging`-branch.
+
+### Before you deploy
+- If you worked in an extension with an own repository you have to commit all the changes with a corresponding tag on the `master`-branch of the extension first.
+- In order to make your changes effective, the `composer.lock` has to get the new version information. So in your website-repository do a  
+``` 
+composer update
+``` 
+- The new `composer.lock` has be committed as well. So you need to push the changes of your website-repository before executing a deployment.
+
+### How to deploy
+
+Do the deployment using the following command from your DocumentRoot. 
+
+**IMPORTANT: The surf extension requires PHP 7 on the CLI**
+
+**IMPORTANT: Do NOT run deployment with `root` or super-user !!! Always use your local user (e.g. `vagrant`)**
+```
+php ./vendor/typo3/surf/surf deploy <DEPLOYMENT-FILE>
+php ./vendor/typo3/surf/surf deploy Staging
+```
+
+You can use verbose-output to get more information if something goes wrong:
+```
+sudo php ./vendor/typo3/surf/surf deploy Staging -v
+sudo php ./vendor/typo3/surf/surf deploy Staging -vv
+sudo php ./vendor/typo3/surf/surf deploy Staging -vvv
+```
+
+#### Troubleshooting
+It may be the case that your first deployment hangs on the first task on the remote server.
+This is because of the security question concerning adding ECDSA key fingerprint.
+Workaround: Just login via SSH using your VM and confirm adding the ECDSA key fingerprint.
+```
+ssh [USER]@[SERVER] -p[PORT]
+```
+
+
 ## About the files and folders
+
+
+### File: .gitignore
+
+Contains the files and folders to ignore for versioning. 
+
+### Folder: .surf
+
+Contains the configuration for the TYPO3 extension Surf for deployment and the corresponding Deployment-Scripts.
+
+### Folder: .surf/Credentials
+
+Contains the access data for the respective environments
+
+### Folder: .surf/Includes
+
+Contains ncludes for the Deployment Script 
+
+### File: _.htaccess.dev / _.htaccess.prod / _.htaccess.stage
+
+Contains the settings for the given environment. Copy `_.htaccess.dev` to `.htaccess` in your local environment to get startet.
+
+### File: _.htpasswd.dev / _.htpasswd.prod / _.htpasswd.stage
+
+Same as _htaccess.*
 
 ### File: composer.json
 
@@ -90,43 +213,49 @@ With `preferred-install` you can specify that certain packages should be install
 This folder contains some important files, scripts and a cleaned database dump for the development environment. Copy the dummy files to `/web/fileadmin`. They replace all file and image links.
 The database dump can be imported directly into the Vagrant- environment. 
 
-### File: dev/files/settings-for-phpstorm.jar
+#### File: dev/etc-hosts.txt
+
+Example file for the local `etc/hosts`
+
+### File: dev/settings-for-phpstorm.jar
 
 Settings for PHP-Storm. **These HAVE TO BE USED for development.**
 
-#### File: dev/scripts/git-status-recursive.sh
 
-Shell script to recursively check the status of GIT repositories.
+### Folder: dummy
 
-#### File: dev/scripts/etc-hosts.txt
+Contains dummy files for sys_file-references.
 
-Example file for the local '''etc/hosts'''
+### File: _.env.dev / _.env.prod / _.env.stage
 
-### File: _env
-
-This file contains a list of all extensions to be activated. If this file is copied to `.env` before installation, the package "helhum/dotenv-connector" will automatically create a corresponding `PackageStates.php`.
-
-### File: .gitignore
-
-Contains the files and folders to ignore for versioning. 
+This file contains a list of all extensions to be activated in the given enviroment. 
+If this file is copied to `.env` before installation, the package "helhum/dotenv-connector" will automatically create a corresponding `PackageStates.php`.
 
 **Please note that all changes to this file will be versioned. Therefore, do not save any specific changes for the local environment here.**
 
-### File: LocalConfiguration.php
+### Folder: scripts
+
+Contains shell scripts for development and deployment
+
+#### File: scripts/git-status-recursive.sh
+
+Shell script to recursively check the status of GIT repositories.
+
+#### File: scripts/git-status-recursive.sh
+
+Shell script for setting `git config core.filemode false` recursively.
+
+### File: web/typo3conf/LocalConfiguration.php
 
 This file contains all configurations for and dev- environments. At the same time you have to make sure that this file is NEVER deployed into a LIVE or STAGE-Environment. 
 
-### File: AdditionalConfigurationLive.php
+### File: web/typo3conf/AdditionalConfiguration.dev.php / AdditionalConfiguration.prod.php / AdditionalConfiguration.stage.php 
 
-This file serves as a template for the settings relevant to the live environment. Copy this file to `AdditionalConfiguration.php` to make settings for the live environment.
+This file contains the relevant settings for the according environment.  Copy `web/typo3conf/AdditionalConfiguration.dev.php` to `web/typo3conf/AdditionalConfiguration.php` in your local environment to get startet.
 
-**Do NOT put any access data or enycryption keys into versioning that are relevant for the live environment. These are ONLY to be put into `AdditionConfiguation.php` on the Live!!!**
+**Do NOT put any access data or enycryption keys into versioning that are relevant for the live environment.**
 
-### File: AdditionalConfigurationDev.php
-
-This file serves as a template for the settings relevant for the DEV-environment. Copy this file to `AdditionalConfiguration.php` to make settings for your own DEV-environment.
-
-### File: RealUrlConfiguration.php
+### File: web/typo3conf/RealUrlConfiguration.php
 
 The default configuration for RealUrl. 
 

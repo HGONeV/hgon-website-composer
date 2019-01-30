@@ -1,4 +1,7 @@
 <?php
+// add application-context to sitename
+$applicationContext = \TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->__toString();
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'] .= ' / ' . $applicationContext;
 
 // ====================================================
 // OrientDb 
@@ -25,7 +28,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['_DEFAULT'] = array (
     'defaultDomain' => 'rkw-kompetenzzentrum.rkw.local'
 );
 // =====================================
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['rkw.rkw.local'] = array (
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['mein.rkw.local'] = array (
     'fallbackPid' => 3579,
     'defaultDomain' => 'mein.rkw.local'
 );
