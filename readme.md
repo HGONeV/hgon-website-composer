@@ -15,14 +15,14 @@ Within the www directory this git repository will be cloned and checked out.
 cd /var/www/rkw-kompetenzzentrum.de/tmp
 git init
 git config core.filemode false
-git config user.name "John Doe"
-git config user.email joe@rkw.de
-git add remote add origin https://github.com/RKWKomZe-Websites/RkwWebsite.git
+git config user.name "[YOUR NAME]"
+git config user.email [YOUR@EMAIL]
+git add remote add origin [YOUR REPOSITORY]
 git fetch origin development
 git pull origin development
 git checkout development
 mv ../public_html public_html_bak
-mv RkwTemplate ../public_html
+mv [FOLDER_FROM_REPOSITORY] ../public_html
 cd ..
 chown -R vagrant:vagrant public_html
 ```
@@ -36,14 +36,14 @@ git config --global core.fileMode false
 Now import the database
 ```
 cd /var/www/[WEBSITE]/public_html/dev
-tar -xvzf rkw_live_komze.dev.tar.gz
+tar -xvzf [MYSQL_DUMP].tar.gz
 mysql -uroot -prkw
-CREATE DATABASE rkw_dev_komze CHARACTER SET utf8 COLLATE utf8_general_ci;;
-CREATE USER 'rkw_dev_komze'@'localhost' IDENTIFIED BY 'rkw';
-GRANT SELECT, UPDATE, INSERT, DELETE, DROP, ALTER, CREATE, INDEX, CREATE VIEW, SHOW VIEW ON rkw_dev_komze.* TO 'rkw_dev_komze'@'localhost';
+CREATE DATABASE [YOUR_DATABASE] CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER '[YOUR_USER]'@'localhost' IDENTIFIED BY '[YOUR_PASSWORD]';
+GRANT SELECT, UPDATE, INSERT, DELETE, DROP, ALTER, CREATE, INDEX, CREATE VIEW, SHOW VIEW ON [YOUR_DATABASE].* TO '[YOUR_USER]'@'localhost';
 exit;
-mysql -u root -prkw rkw_dev_komze < rkw_live_komze.dev.sql
-rm rkw_live_komze.dev.sql
+mysql -u root -[YOUR_DATABASE] < [MYSQL_DUMP].dev.sql
+rm [MYSQL_DUMP].dev.sql
 ```
 
 After that we have to copy some important files and set some chmods
@@ -72,6 +72,11 @@ If everything is fine, install with composer now
 ```
 cd /var/www/[WEBSITE]/public_html/
 composer install
+```
+
+If you run into problems with composer, try to update composer first
+```
+composer self-update
 ```
 
 Now we have to let your local machine know which hosts are to be directed to your local DEV.
@@ -161,9 +166,9 @@ php ./vendor/typo3/surf/surf deploy Staging
 
 You can use verbose-output to get more information if something goes wrong:
 ```
-sudo php ./vendor/typo3/surf/surf deploy Staging -v
-sudo php ./vendor/typo3/surf/surf deploy Staging -vv
-sudo php ./vendor/typo3/surf/surf deploy Staging -vvv
+php ./vendor/typo3/surf/surf deploy Staging -v
+php ./vendor/typo3/surf/surf deploy Staging -vv
+php ./vendor/typo3/surf/surf deploy Staging -vvv
 ```
 
 #### Troubleshooting
@@ -217,7 +222,7 @@ The database dump can be imported directly into the Vagrant- environment.
 
 Example file for the local `etc/hosts`
 
-### File: dev/settings-for-phpstorm.jar
+### File: dev/settings-for-phpstorm.zip
 
 Settings for PHP-Storm. **These HAVE TO BE USED for development.**
 
@@ -253,7 +258,7 @@ This file contains all configurations for and dev- environments. At the same tim
 
 This file contains the relevant settings for the according environment.  Copy `web/typo3conf/AdditionalConfiguration.dev.php` to `web/typo3conf/AdditionalConfiguration.php` in your local environment to get startet.
 
-**Do NOT put any access data or enycryption keys into versioning that are relevant for the live environment.**
+**Do NOT put any access data or enycryption keys into versioning that are relevant for the live environment. These are ONLY to be put into `AdditionConfiguation.php` on the Live!!!**
 
 ### File: web/typo3conf/RealUrlConfiguration.php
 
