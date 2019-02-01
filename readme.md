@@ -1,4 +1,4 @@
-# RKW TYPO3 7.6 LTS installation
+# RKW TYPO3 8.7 LTS installation
 
 This repository contains the TYPO3 website of the RKW with all relevant configurations.
 
@@ -54,6 +54,8 @@ cp web/_.htaccess.dev web/.htaccess
 cp web/typo3conf/AdditionalConfiguration.dev.php web/typo3conf/AdditionalConfiguration.php
 chmod 755 scripts/*
 ```
+
+**IMPORTANT: Don' forget to set your local database credentials in your `AdditionalConfiguration.php` or `LocalConfiguration.php`**
 
 Make sure your command line uses the same PHP-version that your web-user needs
 Check it with:
