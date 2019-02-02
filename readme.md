@@ -68,10 +68,21 @@ Now set your local database credentials in your `AdditionalConfiguration.php`.
 vm$ cd /var/www/[THIS_PROJECT]
 vm$ nano web/typo3conf/AdditionalConfiguration.php
 ```
+For TYPO3 7.6:
+```
+$GLOBALS['TYPO3_CONF_VARS']['DB'] = [
+    'database' => '[YOUR_DATABASE]',
+    'extTablesDefinitionScript' => 'extTables.php',
+    'host' => 'localhost',
+    'password' => 'YOUR_PASSWORD]',
+    'socket' => '',
+    'username' => '[YOUR_USER]',
+];
+```
 
 For TYPO3 8.7:
 ```
-$GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default'] => [
+$GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default'] = [
     'charset' => 'utf8',
     'dbname' => '[YOUR_DATABASE]',
     'driver' => 'mysqli',
@@ -81,15 +92,17 @@ $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default'] => [
 ];
 ```
 ### Step 7
-Make sure your command line uses the same PHP-version that your web-user needs
+Make sure your command line uses the same PHP-version that your web-user needs.
 Check it with:
 ```
 vm$ php -v
 ```
 
-You can set you PHP-version for CLI using this command:
+You can set you PHP-version for CLI using one of the following commands:
 ```
+vm$ sudo update-alternatives --set php /usr/bin/php5.6
 vm$ sudo update-alternatives --set php /usr/bin/php7.0
+vm$ sudo update-alternatives --set php /usr/bin/php7.2
 ```
 
 ### Step 8
@@ -101,11 +114,6 @@ vm$ cd /var/www/[THIS_PROJECT]
 vm$ composer install
 ```
 
-If you run into problems with composer, try to update composer itself first
-```
-vm$ composer self-update
-```
-
 ### Step 9
 Now we have to let your local machine know which hosts are to be directed to your local DEV.
 You will find an example `/etc/hosts` (`etc-hosts.txt`) in `/dev/files`
@@ -113,7 +121,7 @@ You will find an example `/etc/hosts` (`etc-hosts.txt`) in `/dev/files`
 ### Step 10
 Ready :-)
 
-## Password
+## Passwords
 The install-tool password is set to the known default value
 ```
 joh316
@@ -139,7 +147,7 @@ If composer can't execute on your VM, check if your `vagrant` user is in the `ww
 vm$ sudo usermod -a -G www-data vagrant
 ```
 
-## Some usefull commands for CLI
+## Some useful commands for CLI
 Flush TYPO3 Caches
 ```
 vm$ cd /var/www/[THIS_PROJECT]
@@ -173,7 +181,9 @@ Examples:
 - If you want to deploy into the staging-enviroment you have to push everything to the `staging`-branch.
 - If you want to deploy into the production-enviroment you have to push everything to the `production`-branch. 
 
-You also need a Deployment-Script with the same name as the branch you want to deploy, e.g `./.surf/Staging.php` for `staging`-branch.
+You also need a **deployment script** with the same name as the branch you want to deploy, e.g `./.surf/Staging.php` for `staging`-branch.
+
+Beyond that it is necessary to create a corresponding **credential file** in .`surf/Credentials`. Use `_Example.php` as template. 
 
 ### Before you deploy
 - If you worked in an extension with an own repository you have to commit all the changes with a corresponding tag on the `master`-branch of the extension first.
@@ -202,17 +212,7 @@ vm$ php ./vendor/typo3/surf/surf deploy Staging -vv
 vm$ php ./vendor/typo3/surf/surf deploy Staging -vvv
 ```
 
-#### Troubleshooting
-It may be the case that your first deployment hangs on the first task on the remote server.
-This is because of the security question concerning adding ECDSA key fingerprint.
-Workaround: Just login via SSH using your VM and confirm adding the ECDSA key fingerprint.
-```
-vm$ ssh [USER]@[SERVER] -p[PORT]
-```
-
-
 ## About the files and folders
-
 
 ### File: .gitignore
 
@@ -297,7 +297,16 @@ The default configuration for RealUrl.
 
 **Do NOT make any changes here that are not intended for the LIVE-environment.**
 
+
 # Troubleshooting
+
+## `composer install` not working
+
+If you run into problems with composer during installation, try to update composer itself first
+```
+vm$ composer self-update
+```
+
 ##  `./vendor/bin/typo3cms install:generatepackagestates` crashes
 The following errors may occur if your database connection is not configured correctly.
 ```
@@ -319,4 +328,12 @@ So do what the message implies:
 vm$ sudo chmod 777 /home/vagrant/.config/*
 vm$ cd /var/www/[THIS_PROJECT]
 vm$ composer install
+```
+
+## Deployment hangs during first execution
+It may be the case that your first deployment hangs on the first task on the remote server.
+This is because of the security question concerning adding ECDSA key fingerprint.
+Workaround: Just login via SSH using your VM and confirm adding the ECDSA key fingerprint.
+```
+vm$ ssh [USER]@[SERVER] -p[PORT]
 ```
