@@ -6,16 +6,7 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'] .= ' / ' . $applicationContext;
 // ====================================================
 // OrientDb 
 // ====================================================
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_search']['OrientDB']['DB'] = array (
-    'user' => 'rkw-search-dev',
-    'password' => 'rkj2QxFwpfEaxMcDSqcuYeqSSYkw6fRns2e8pKuCQXDdAGHhVLBLQRuzFEVC',
-    'database' => 'RkwSearchDev',
-    'host' => 'localhost',
-
-    'debug' => 0,
-    'driver' => 'binary',
-    'readOnly' => 0
-);
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_search']['OrientDB']['DB'] = [];
 
 
 // ====================================================

@@ -1,48 +1,50 @@
 {
     "repositories": [
          {
-              "type": "composer",
-              "url": "https://composer.typo3.org/"
+             "type": "composer",
+             "url": "https://composer.typo3.org/"
          }
     ],
-    "name": "RKW/typo3-distribution",
-    "description": "TYPO3 CMS Distribution with console support",
+    "name": "rkw/typo3-distribution",
+    "description": "TYPO3 CMS Distribution with console support - ",
     "license": "GPL-2.0+",
     "require": {
+       "php": "~5.6.0",
        "typo3/cms": "~7.6.0",
        "helhum/typo3-console": "^4.9",
-	     "helhum/dotenv-connector": "^1.0",
+	   "helhum/dotenv-connector": "^1.0",
        "typo3/surf": "^2.0.0",
        "sjbr/static-info-tables" : "6.3.10",
-	     "dmitryd/typo3-realurl": "~2.2.1",
+	   "dmitryd/typo3-realurl": "~2.2.1",
        "rkw/rkw-alerts": "~7.6.3",
        "rkw/rkw-authors": "~7.6.13",
-       "rkw/rkw-basics": "~7.6.12",
+       "rkw/rkw-basics": "~7.6.12 || ~8.7.2",
        "rkw/rkw-consultant": "~7.6.4",
        "rkw/rkw-ecosystem": "~7.6.3",
-       "rkw/rkw-etracker": "~7.6.3",
-       "rkw/rkw-events": "~7.6.7",
+       "rkw/rkw-etracker": "~7.6.3 || ~8.7.0",
+       "rkw/rkw-events": "~7.6.7 || ~8.7.0",
        "rkw/rkw-geolocation": "~7.6.11",
        "rkw/rkw-info-layer": "~7.6.2",
-       "rkw/rkw-mailer": "~7.6.13",
-       "rkw/rkw-newsletter": "~7.6.2",
-       "rkw/rkw-order": "~7.6.9",
+       "rkw/rkw-mailer": "~7.6.13 || ~8.7.1",
+       "rkw/rkw-newsletter": "~7.6.5",
        "rkw/rkw-projects": "~7.6.1",
        "rkw/rkw-quickcheck": "~7.6.1",
-       "rkw/rkw-registration": "~7.6.11",
+       "rkw/rkw-registration": "~7.6.11 || ~8.7.0",
        "rkw/rkw-related": "~7.6.3",
        "rkw/rkw-resourcespace": "~7.6.2",
        "rkw/rkw-rss": "~7.6.2",
        "rkw/rkw-search": "~7.6.5",
-       "rkw/rkw-soap": "~7.6.3",
        "rkw/rkw-survey": "~7.6.2",
        "rkw/rkw-template": "~7.6.4",
-       "rkw/rkw-tools": "~7.6.4",
+       "rkw/rkw-tools": "~7.6.6",
        "rkw/rkw-webcheck": "~7.6.8",
-       "rkw/rkw-wepstra": "~7.6.6"
+       "rkw/rkw-wepstra": "~7.6.6",
+
+        "rkw/rkw-order": "~8.7.0-alpha",
+        "rkw/rkw-soap": "~8.7.0-alpha"
     },
     "require-dev": {
-         "mikey179/vfsStream": "1.4.*@dev",
+         "mikey179/vfsstream": "1.4.*@dev",
          "phpunit/phpunit": "~4.7.0",
 	     "friendsoftypo3/extension-builder": "~7.6.0"
     },
@@ -53,8 +55,12 @@
         "typo3-cleanup" : [
             "if [ $COMPOSER_DEV_MODE -eq 1 ]; then ./scripts/typo3-cleanup.sh; fi"
         ],
+        "typo3-generate-packagestates" : [
+            "if [ $COMPOSER_DEV_MODE -eq 1 ]; then ./scripts/typo3-generate-packagestates.sh; fi"
+        ],
         "post-install-cmd": [
             "@git-set-filemode",
+            "@typo3-generate-packagestates",
             "@typo3-cleanup"
         ],
         "pre-update-cmd": [

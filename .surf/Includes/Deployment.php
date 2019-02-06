@@ -6,7 +6,7 @@
  * @copyright Rkw Kompetenzzentrum
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  * @var \TYPO3\Surf\Domain\Model\Deployment $deployment
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 
@@ -123,11 +123,25 @@ $workflow->defineTask(
     array('command' => 'cd {releasePath} && if [ -f "./web/typo3conf/LocalConfiguration.php" ]; then ./vendor/bin/typo3cms database:updateschema "*.add,*.change"; fi')
 );
 
+
+// Set options for varnish ban
+if ($varnishAdmPath) {
+    $workflow->setTaskOptions('TYPO3\\Surf\\Task\\VarnishBanTask',
+        [
+            'varnishadm' => $varnishAdmPath,
+            'secretFile' => $varnishSecret,
+            'banUrl' => $varnishBanUrl
+        ]
+    );
+}
+
+
+
 $deployment->setWorkflow($workflow);
 
 
 // Add / remove tasks
-$deployment->onInitialize(function () use ($workflow, $application, $gitBranch) {
+$deployment->onInitialize(function () use ($workflow, $application, $gitBranch, $varnishAdmPath) {
 
     // remove tasks we don't need or we want to handle ourselves!
     $workflow->removeTask('TYPO3\\Surf\\Task\\TYPO3\\CMS\\CopyConfigurationTask'); // is deprecated
@@ -173,10 +187,16 @@ $deployment->onInitialize(function () use ($workflow, $application, $gitBranch) 
 
     // -----------------------------------------------
     // Step 8: switch - This is the crucial stage. Here the old live instance is switched with the new prepared instance. Normally the new instance is symlinked.
+    $workflow->beforeStage('switch', 'RKW\\Task\\Remote\\Apc\\ClearCache');
+    $workflow->afterTask('RKW\\Task\\Remote\\Apc\\ClearCache', 'TYPO3\\Surf\\Task\\TYPO3\\CMS\\FlushCachesTask');
 
     // -----------------------------------------------
     // Step 9: cleanup - At this stage you would cleanup old releases or remove other unused stuff.
     $workflow->beforeStage('cleanup', 'RKW\\Task\\Remote\\Apc\\ClearCache');
     $workflow->afterTask(' TYPO3\\Surf\\Task\\TYPO3\\CMS\\FlushCachesTask', 'RKW\\Task\\Remote\\Apc\\ClearCache');
+    // @toDo: Make it work :)
+    /*if ($varnishAdmPath) {
+        $workflow->addTask('TYPO3\\Surf\\Task\\VarnishBanTask', 'cleanup');
+    }*/
 
 });

@@ -1,83 +1,127 @@
-# RKW TYPO3 7.6 LTS installation
+# RKW TYPO3 8.7 LTS installation
 
-This repository contains the TYPO3 website of the RKW with all relevant configurations.
+This repository contains the TYPO3 CMS with all relevant configurations.
 
 ## Installation of a local dev environment
 
-An RKW Vagrant instance is required for installation. This can be found here:
+**IMPORTANT: An RKW Vagrant instance should be used for installation.** 
 
-`https://github.com/RKWKomZe-Wesbites/Vagrant.git`
-
-Within the www directory this git repository will be cloned and checked out.
-
+### Step 1
+Within the www directory on your host this GIT repository can be cloned and checked out.
+Do this on you host machine.
 
 ```
-cd /var/www/rkw-kompetenzzentrum.de/tmp
-git init
-git config core.filemode false
-git config user.name "John Doe"
-git config user.email joe@rkw.de
-git add remote add origin https://github.com/RKWKomZe-Websites/RkwWebsite.git
-git fetch origin development
-git pull origin development
-git checkout development
-mv ../public_html public_html_bak
-mv RkwTemplate ../public_html
-cd ..
-chown -R vagrant:vagrant public_html
+host$ cd www/
+host$ mkdir [THIS_PROJECT]
+host$ git init
+host$ git config core.filemode false
+host$ git config user.name "[YOUR NAME]"
+host$ git config user.email [YOUR@EMAIL]
+host$ git add remote add origin [YOUR REPOSITORY]
+host$ git fetch origin development
+host$ git checkout development
 ```
 
+### Step 2
 Now we make sure that `chmod`-changes are not versioned. NEVER!
 ```
-git config --global core.fileMode false
+host$ git config --global core.fileMode false
 ```
-**IMPORTANT: If you are using vagrant you have to use the `vagrant` user of the local VM for the following steps (e.g. `vagrant`)**
 
+### Step 3
+**IMPORTANT: If you are using vagrant you have to use the `vagrant`-user of the local VM for the following steps.**
+
+Login into your vagrant machine and continue with the `vagrant`-user on your VM.
+```
+vagrant ssh
+```
+
+### Step 4
 Now import the database
 ```
-cd /var/www/[WEBSITE]/public_html/dev
-tar -xvzf rkw_live_komze.dev.tar.gz
-mysql -uroot -prkw
-CREATE DATABASE rkw_dev_komze CHARACTER SET utf8 COLLATE utf8_general_ci;;
-CREATE USER 'rkw_dev_komze'@'localhost' IDENTIFIED BY 'rkw';
-GRANT SELECT, UPDATE, INSERT, DELETE, DROP, ALTER, CREATE, INDEX, CREATE VIEW, SHOW VIEW ON rkw_dev_komze.* TO 'rkw_dev_komze'@'localhost';
-exit;
-mysql -u root -prkw rkw_dev_komze < rkw_live_komze.dev.sql
-rm rkw_live_komze.dev.sql
+vm$ cd /var/www/[THIS_PROJECT]/dev
+vm$ tar -xvzf [MYSQL_DUMP].tar.gz
+vm$ mysql -uroot -prkw
+vm$ CREATE DATABASE [YOUR_DATABASE] CHARACTER SET utf8 COLLATE utf8_general_ci;
+vm$ CREATE USER '[YOUR_USER]'@'localhost' IDENTIFIED BY '[YOUR_PASSWORD]';
+vm$ GRANT SELECT, UPDATE, INSERT, DELETE, DROP, ALTER, CREATE, INDEX, CREATE VIEW, SHOW VIEW ON [YOUR_DATABASE].* TO '[YOUR_USER]'@'localhost';
+vm$ exit;
+vm$ mysql -u root -p[YOU_PASSWORD] [YOUR_DATABASE] < [MYSQL_DUMP].dev.sql
+vm$ rm [MYSQL_DUMP].dev.sql
 ```
 
+### Step 5
 After that we have to copy some important files and set some chmods
 ```
-cd /var/www/[WEBSITE]/public_html/
-cp _.env.dev .env
-cp web/_.htaccess.dev web/.htaccess
-cp web/typo3conf/AdditionalConfiguration.dev.php web/typo3conf/AdditionalConfiguration.php
-chmod 755 scripts/*
+vm$ cd /var/www/[THIS_PROJECT]
+vm$ cp _.env.dev .env
+vm$ cp web/_.htaccess.dev web/.htaccess
+vm$ cp web/typo3conf/AdditionalConfiguration.dev.php web/typo3conf/AdditionalConfiguration.php
+vm$ mkdir web/fileadmin/media
+vm$ cp dummy/* web/fileadmin/media/
+vm$ chmod 755 scripts/*
 ```
 
-Make sure your command line uses the same PHP-version that your web-user needs
+### Step 6
+Now set your local database credentials in your `AdditionalConfiguration.php`.
+```
+vm$ cd /var/www/[THIS_PROJECT]
+vm$ nano web/typo3conf/AdditionalConfiguration.php
+```
+For TYPO3 7.6:
+```
+$GLOBALS['TYPO3_CONF_VARS']['DB'] = [
+    'database' => '[YOUR_DATABASE]',
+    'extTablesDefinitionScript' => 'extTables.php',
+    'host' => 'localhost',
+    'password' => 'YOUR_PASSWORD]',
+    'socket' => '',
+    'username' => '[YOUR_USER]',
+];
+```
+
+For TYPO3 8.7:
+```
+$GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default'] = [
+    'charset' => 'utf8',
+    'dbname' => '[YOUR_DATABASE]',
+    'driver' => 'mysqli',
+    'host' => 'localhost',
+    'password' => '[YOUR_PASSWORD]',
+    'user' => '[YOUR_USER]'   
+];
+```
+### Step 7
+Make sure your command line uses the same PHP-version that your web-user needs.
 Check it with:
 ```
-php -v
+vm$ php -v
 ```
 
-You can set you PHP-version for CLI using this command:
+You can set you PHP-version for CLI using one of the following commands:
 ```
-sudo update-alternatives --set php /usr/bin/php7.0
+vm$ sudo update-alternatives --set php /usr/bin/php5.6
+vm$ sudo update-alternatives --set php /usr/bin/php7.0
+vm$ sudo update-alternatives --set php /usr/bin/php7.2
 ```
 
+### Step 8
 If everything is fine, install with composer now
 
 **IMPORTANT: Do NOT run composer with `root` or super-user!!!**
 ```
-cd /var/www/[WEBSITE]/public_html/
-composer install
+vm$ cd /var/www/[THIS_PROJECT]
+vm$ composer install
 ```
 
+### Step 9
 Now we have to let your local machine know which hosts are to be directed to your local DEV.
 You will find an example `/etc/hosts` (`etc-hosts.txt`) in `/dev/files`
 
-## Password
+### Step 10
+Ready :-)
+
+## Passwords
 The install-tool password is set to the known default value
 ```
 joh316
@@ -93,33 +137,33 @@ Pass: testtest
 To get the latest changes, proceed as follows.
 Database-compare and cache-flush will be done automatically. 
 ```
-cd /var/www/[WEBSITE]/public_html/
-git pull origin development
-composer update
+vm$ cd /var/www/[THIS_PROJECT]
+vm$ git pull origin development
+vm$ composer update
 ```
 
 If composer can't execute on your VM, check if your `vagrant` user is in the `www-data`-group:
 ```
-sudo usermod -a -G www-data vagrant
+vm$ sudo usermod -a -G www-data vagrant
 ```
 
-## Some usefull commands for CLI
+## Some useful commands for CLI
 Flush TYPO3 Caches
 ```
-cd /var/www/[WEBSITE]/public_html/
-./vendor/bin/typo3cms cache:flush --force
+vm$ cd /var/www/[THIS_PROJECT]
+vm$ ./vendor/bin/typo3cms cache:flush --force
 ```
 
 Fix folder structure
 ```
-cd /var/www/[WEBSITE]/public_html/
-./vendor/bin/typo3cms install:fixfolderstructure
+vm$ cd /var/www/[THIS_PROJECT]
+vm$ ./vendor/bin/typo3cms install:fixfolderstructure
 ```
 
 Update database
 ```
-cd /var/www/[WEBSITE]/public_html/
-./vendor/bin/typo3cms database:updateschema
+vm$ cd /var/www/[THIS_PROJECT]
+vm$ ./vendor/bin/typo3cms database:updateschema
 ```
 
 ## Deployment
@@ -128,7 +172,7 @@ Deployment is triggered via your local VM.
 
 **IMPORTANT: Deployment with password login (instead of RSA key) requires `expect` on the executing machine (local VM)**
 ```
-apt-get install expect
+vm$ apt-get install expect
 ```
 
 For the deployment you need a branch with the same name as the deployment-step you want to execute.
@@ -137,13 +181,15 @@ Examples:
 - If you want to deploy into the staging-enviroment you have to push everything to the `staging`-branch.
 - If you want to deploy into the production-enviroment you have to push everything to the `production`-branch. 
 
-You also need a Deployment-Script with the same name as the branch you want to deploy, e.g `./.surf/Staging.php` for `staging`-branch.
+You also need a **deployment script** with the same name as the branch you want to deploy, e.g `./.surf/Staging.php` for `staging`-branch.
+
+Beyond that it is necessary to create a corresponding **credential file** in .`surf/Credentials`. Use `_Example.php` as template. 
 
 ### Before you deploy
 - If you worked in an extension with an own repository you have to commit all the changes with a corresponding tag on the `master`-branch of the extension first.
 - In order to make your changes effective, the `composer.lock` has to get the new version information. So in your website-repository do a  
 ``` 
-composer update
+vm$ composer update
 ``` 
 - The new `composer.lock` has be committed as well. So you need to push the changes of your website-repository before executing a deployment.
 
@@ -155,28 +201,18 @@ Do the deployment using the following command from your DocumentRoot.
 
 **IMPORTANT: Do NOT run deployment with `root` or super-user !!! Always use your local user (e.g. `vagrant`)**
 ```
-php ./vendor/typo3/surf/surf deploy <DEPLOYMENT-FILE>
-php ./vendor/typo3/surf/surf deploy Staging
+vm$ php ./vendor/typo3/surf/surf deploy <DEPLOYMENT-FILE>
+vm$ php ./vendor/typo3/surf/surf deploy Staging
 ```
 
 You can use verbose-output to get more information if something goes wrong:
 ```
-sudo php ./vendor/typo3/surf/surf deploy Staging -v
-sudo php ./vendor/typo3/surf/surf deploy Staging -vv
-sudo php ./vendor/typo3/surf/surf deploy Staging -vvv
+vm$ php ./vendor/typo3/surf/surf deploy Staging -v
+vm$ php ./vendor/typo3/surf/surf deploy Staging -vv
+vm$ php ./vendor/typo3/surf/surf deploy Staging -vvv
 ```
-
-#### Troubleshooting
-It may be the case that your first deployment hangs on the first task on the remote server.
-This is because of the security question concerning adding ECDSA key fingerprint.
-Workaround: Just login via SSH using your VM and confirm adding the ECDSA key fingerprint.
-```
-ssh [USER]@[SERVER] -p[PORT]
-```
-
 
 ## About the files and folders
-
 
 ### File: .gitignore
 
@@ -217,7 +253,7 @@ The database dump can be imported directly into the Vagrant- environment.
 
 Example file for the local `etc/hosts`
 
-### File: dev/settings-for-phpstorm.jar
+### File: dev/settings-for-phpstorm.zip
 
 Settings for PHP-Storm. **These HAVE TO BE USED for development.**
 
@@ -253,7 +289,7 @@ This file contains all configurations for and dev- environments. At the same tim
 
 This file contains the relevant settings for the according environment.  Copy `web/typo3conf/AdditionalConfiguration.dev.php` to `web/typo3conf/AdditionalConfiguration.php` in your local environment to get startet.
 
-**Do NOT put any access data or enycryption keys into versioning that are relevant for the live environment.**
+**Do NOT put any access data or enycryption keys into versioning that are relevant for the live environment. These are ONLY to be put into `AdditionConfiguation.php` on the Live!!!**
 
 ### File: web/typo3conf/RealUrlConfiguration.php
 
@@ -261,3 +297,43 @@ The default configuration for RealUrl.
 
 **Do NOT make any changes here that are not intended for the LIVE-environment.**
 
+
+# Troubleshooting
+
+## `composer install` not working
+
+If you run into problems with composer during installation, try to update composer itself first
+```
+vm$ composer self-update
+```
+
+##  `./vendor/bin/typo3cms install:generatepackagestates` crashes
+The following errors may occur if your database connection is not configured correctly.
+```
+There are no commands defined in the "database" namespace.
+```
+```
+The command "database:updateschema" does not exist. 
+```
+
+In that case check your `LocalConfiguration.php` / `AdditionalConfiguration.php`
+
+## Frontend build not working
+```
+Error: EACCES: permission denied, open '/home/vagrant/.config/configstore/bower-github.json
+```
+
+So do what the message implies:
+```
+vm$ sudo chmod 777 /home/vagrant/.config/*
+vm$ cd /var/www/[THIS_PROJECT]
+vm$ composer install
+```
+
+## Deployment hangs during first execution
+It may be the case that your first deployment hangs on the first task on the remote server.
+This is because of the security question concerning adding ECDSA key fingerprint.
+Workaround: Just login via SSH using your VM and confirm adding the ECDSA key fingerprint.
+```
+vm$ ssh [USER]@[SERVER] -p[PORT]
+```
