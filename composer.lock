@@ -2723,16 +2723,16 @@
         },
         {
             "name": "rkw/rkw-search",
-            "version": "v7.6.6-beta",
+            "version": "v7.6.7-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwSearch.git",
-                "reference": "5ad2fbce5ffd0f3e01cf27a9911d0d9c7f1056bf"
+                "reference": "bc7ae9a0da7a739372cca875c81666d55250a188"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwSearch/zipball/5ad2fbce5ffd0f3e01cf27a9911d0d9c7f1056bf",
-                "reference": "5ad2fbce5ffd0f3e01cf27a9911d0d9c7f1056bf",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwSearch/zipball/bc7ae9a0da7a739372cca875c81666d55250a188",
+                "reference": "bc7ae9a0da7a739372cca875c81666d55250a188",
                 "shasum": ""
             },
             "require": {
@@ -2776,20 +2776,20 @@
                 "TYPO3 CMS",
                 "orientdb"
             ],
-            "time": "2019-02-05T13:44:44+00:00"
+            "time": "2019-02-06T09:27:43+00:00"
         },
         {
             "name": "rkw/rkw-soap",
-            "version": "v8.7.0-alpha",
+            "version": "v8.7.1-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwSoap.git",
-                "reference": "08750575d1b417630536baf3786e9e1d62f53526"
+                "reference": "3d1b73b7d2177f25d49591700e6aac80b27f1cb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwSoap/zipball/08750575d1b417630536baf3786e9e1d62f53526",
-                "reference": "08750575d1b417630536baf3786e9e1d62f53526",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwSoap/zipball/3d1b73b7d2177f25d49591700e6aac80b27f1cb5",
+                "reference": "3d1b73b7d2177f25d49591700e6aac80b27f1cb5",
                 "shasum": ""
             },
             "require": {
@@ -2839,7 +2839,7 @@
                 "TYPO3 CMS",
                 "soap"
             ],
-            "time": "2019-02-05T13:47:07+00:00"
+            "time": "2019-02-06T09:57:57+00:00"
         },
         {
             "name": "rkw/rkw-survey",
