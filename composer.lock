@@ -1927,16 +1927,16 @@
         },
         {
             "name": "rkw/rkw-ecosystem",
-            "version": "v7.6.4-beta",
+            "version": "v7.6.5-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwEcosystem.git",
-                "reference": "54badfc92d3f9c4258d98545d59353be1edc3784"
+                "reference": "d0be59fb0f933db8bf0c9fc9783dfe82380bc524"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEcosystem/zipball/54badfc92d3f9c4258d98545d59353be1edc3784",
-                "reference": "54badfc92d3f9c4258d98545d59353be1edc3784",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEcosystem/zipball/d0be59fb0f933db8bf0c9fc9783dfe82380bc524",
+                "reference": "d0be59fb0f933db8bf0c9fc9783dfe82380bc524",
                 "shasum": ""
             },
             "require": {
@@ -1983,7 +1983,7 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2019-02-05T12:56:10+00:00"
+            "time": "2019-02-06T14:37:27+00:00"
         },
         {
             "name": "rkw/rkw-etracker",
