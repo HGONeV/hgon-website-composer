@@ -2780,16 +2780,16 @@
         },
         {
             "name": "rkw/rkw-soap",
-            "version": "v8.7.1-alpha",
+            "version": "v8.7.2-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwSoap.git",
-                "reference": "3d1b73b7d2177f25d49591700e6aac80b27f1cb5"
+                "reference": "e0977904f200bb8fbb487a4a029442503275ade5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwSoap/zipball/3d1b73b7d2177f25d49591700e6aac80b27f1cb5",
-                "reference": "3d1b73b7d2177f25d49591700e6aac80b27f1cb5",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwSoap/zipball/e0977904f200bb8fbb487a4a029442503275ade5",
+                "reference": "e0977904f200bb8fbb487a4a029442503275ade5",
                 "shasum": ""
             },
             "require": {
@@ -2839,7 +2839,7 @@
                 "TYPO3 CMS",
                 "soap"
             ],
-            "time": "2019-02-06T09:57:57+00:00"
+            "time": "2019-02-06T10:38:13+00:00"
         },
         {
             "name": "rkw/rkw-survey",
