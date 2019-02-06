@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "621ae459cfc182ed6354d63583a2fb6c",
+    "content-hash": "94eb354d21a512c844dc665b2383ef17",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -1703,19 +1703,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwAlerts.git",
-                "reference": "7b4e7d6a4ef8d78ad3e0f2887a758a1a84c1754d"
+                "reference": "e4191f443337971d242836208de75d6ea051fafa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwAlerts/zipball/7b4e7d6a4ef8d78ad3e0f2887a758a1a84c1754d",
-                "reference": "7b4e7d6a4ef8d78ad3e0f2887a758a1a84c1754d",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwAlerts/zipball/e4191f443337971d242836208de75d6ea051fafa",
+                "reference": "e4191f443337971d242836208de75d6ea051fafa",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-basics": "~7.6.10",
-                "rkw/rkw-mailer": "~7.6.10",
-                "rkw/rkw-projects": "~7.6.10",
-                "rkw/rkw-registration": "~7.6.10",
+                "rkw/rkw-basics": ">=7.6.10",
+                "rkw/rkw-mailer": ">=7.6.10",
+                "rkw/rkw-projects": ">=7.6.10",
+                "rkw/rkw-registration": ">=7.6.10",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -1748,7 +1748,7 @@
                 "TYPO3 CMS",
                 "alerts"
             ],
-            "time": "2018-11-28T21:09:47+00:00"
+            "time": "2019-02-05T12:25:29+00:00"
         },
         {
             "name": "rkw/rkw-authors",
@@ -1756,16 +1756,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwAuthors.git",
-                "reference": "f02ae3af3acc560226b174fef84bd1faa8d8ae26"
+                "reference": "57048d62ba32483621b5dad6b2be63aed4ed85aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwAuthors/zipball/f02ae3af3acc560226b174fef84bd1faa8d8ae26",
-                "reference": "f02ae3af3acc560226b174fef84bd1faa8d8ae26",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwAuthors/zipball/57048d62ba32483621b5dad6b2be63aed4ed85aa",
+                "reference": "57048d62ba32483621b5dad6b2be63aed4ed85aa",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-basics": "~7.6.12",
+                "php": ">=5.6",
+                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -1805,23 +1806,24 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2018-11-26T15:20:15+00:00"
+            "time": "2019-02-05T14:06:54+00:00"
         },
         {
             "name": "rkw/rkw-basics",
-            "version": "v7.6.14-stable",
+            "version": "v8.7.2-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwBasics.git",
-                "reference": "4b231c11682abe63928710ec2d698ca02c4c21a5"
+                "reference": "c8c654f201edf5f12613ead5224f00d2a04ad986"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/4b231c11682abe63928710ec2d698ca02c4c21a5",
-                "reference": "4b231c11682abe63928710ec2d698ca02c4c21a5",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/c8c654f201edf5f12613ead5224f00d2a04ad986",
+                "reference": "c8c654f201edf5f12613ead5224f00d2a04ad986",
                 "shasum": ""
             },
             "require": {
+                "php": ">=5.6",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -1859,7 +1861,7 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2018-11-26T15:20:59+00:00"
+            "time": "2019-02-05T12:48:29+00:00"
         },
         {
             "name": "rkw/rkw-consultant",
@@ -1867,19 +1869,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RKWConsultant.git",
-                "reference": "33e4f5fd38a24867726983a15282b8db8cb87ebc"
+                "reference": "19936b57f8c5ce709284f68f800c298fbdcaf0ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RKWConsultant/zipball/33e4f5fd38a24867726983a15282b8db8cb87ebc",
-                "reference": "33e4f5fd38a24867726983a15282b8db8cb87ebc",
+                "url": "https://api.github.com/repos/RKWKomZe/RKWConsultant/zipball/19936b57f8c5ce709284f68f800c298fbdcaf0ad",
+                "reference": "19936b57f8c5ce709284f68f800c298fbdcaf0ad",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-basics": "~7.6.12",
-                "rkw/rkw-geolocation": "~7.6.10",
-                "rkw/rkw-mailer": "~7.6.0",
-                "rkw/rkw-registration": "~7.6.10",
+                "php": ">=5.6",
+                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
+                "rkw/rkw-geolocation": ">=7.6.10 <=8.7.99",
+                "rkw/rkw-mailer": ">=7.6.0 <=8.7.99",
+                "rkw/rkw-registration": ">=7.6.10 <=8.7.99",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -1919,7 +1922,7 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2018-11-26T15:21:27+00:00"
+            "time": "2019-02-05T14:06:09+00:00"
         },
         {
             "name": "rkw/rkw-ecosystem",
@@ -1927,18 +1930,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwEcosystem.git",
-                "reference": "1c63032626704daa6c617d0731055a92a01a74da"
+                "reference": "54badfc92d3f9c4258d98545d59353be1edc3784"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEcosystem/zipball/1c63032626704daa6c617d0731055a92a01a74da",
-                "reference": "1c63032626704daa6c617d0731055a92a01a74da",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEcosystem/zipball/54badfc92d3f9c4258d98545d59353be1edc3784",
+                "reference": "54badfc92d3f9c4258d98545d59353be1edc3784",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-basics": "~7.6.12",
-                "rkw/rkw-mailer": "~7.6.10",
-                "rkw/rkw-registration": "~7.6.10",
+                "php": ">=5.6",
+                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
+                "rkw/rkw-mailer": ">=7.6.10 <=8.7.99",
+                "rkw/rkw-registration": ">=7.6.10 <=8.7.99",
                 "spipu/html2pdf": "^5.0",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
@@ -1978,25 +1982,26 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2019-01-23T14:52:36+00:00"
+            "time": "2019-02-05T12:56:10+00:00"
         },
         {
             "name": "rkw/rkw-etracker",
-            "version": "v7.6.5-stable",
+            "version": "v8.7.0-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwEtracker.git",
-                "reference": "bad5b1954dcc2c1ca03b6dcde209e4afa89df81f"
+                "reference": "29e1060c4b51200aa846d57300df897d28c4844d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEtracker/zipball/bad5b1954dcc2c1ca03b6dcde209e4afa89df81f",
-                "reference": "bad5b1954dcc2c1ca03b6dcde209e4afa89df81f",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEtracker/zipball/29e1060c4b51200aa846d57300df897d28c4844d",
+                "reference": "29e1060c4b51200aa846d57300df897d28c4844d",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-basics": "~7.6.12",
-                "rkw/rkw-mailer": "~7.6.10",
+                "php": ">=5.6",
+                "rkw/rkw-basics": ">=8.7.0",
+                "rkw/rkw-mailer": ">=8.7.0",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -2029,26 +2034,25 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2019-01-25T06:58:07+00:00"
+            "time": "2019-02-05T12:59:38+00:00"
         },
         {
             "name": "rkw/rkw-events",
-            "version": "v7.6.8-stable",
+            "version": "v8.7.6-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwEvents.git",
-                "reference": "3723a7d0950eef3ec45627ea265c20e67b100f42"
+                "reference": "996f84cb04c394a03fdd98e940f1c15a63a3eafd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/3723a7d0950eef3ec45627ea265c20e67b100f42",
-                "reference": "3723a7d0950eef3ec45627ea265c20e67b100f42",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/996f84cb04c394a03fdd98e940f1c15a63a3eafd",
+                "reference": "996f84cb04c394a03fdd98e940f1c15a63a3eafd",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-basics": "~7.6.12",
-                "rkw/rkw-mailer": "~7.6.10",
-                "rkw/rkw-survey": "~7.6.2",
+                "rkw/rkw-basics": "~8.7.0",
+                "rkw/rkw-mailer": "~8.7.0",
                 "sjbr/static-info-tables": "^6.3.7@dev",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
@@ -2094,7 +2098,7 @@
                 "TYPO3 CMS",
                 "events"
             ],
-            "time": "2019-01-23T14:48:54+00:00"
+            "time": "2019-02-01T06:34:46+00:00"
         },
         {
             "name": "rkw/rkw-geolocation",
@@ -2102,12 +2106,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwGeolocation.git",
-                "reference": "d1b1cb5966aedc0aadd71843e086d5a90ae8ec6d"
+                "reference": "edc47c98da79eeeebaf9470f79e0a80a3b42a541"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwGeolocation/zipball/d1b1cb5966aedc0aadd71843e086d5a90ae8ec6d",
-                "reference": "d1b1cb5966aedc0aadd71843e086d5a90ae8ec6d",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwGeolocation/zipball/edc47c98da79eeeebaf9470f79e0a80a3b42a541",
+                "reference": "edc47c98da79eeeebaf9470f79e0a80a3b42a541",
                 "shasum": ""
             },
             "require": {
@@ -2158,12 +2162,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwInfoLayer.git",
-                "reference": "4e2c10e19bf2cdbefe6786907c1ad2d2a8a6fa3f"
+                "reference": "adeb239e04b3914cff200aa33a94eb4df3a657dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwInfoLayer/zipball/4e2c10e19bf2cdbefe6786907c1ad2d2a8a6fa3f",
-                "reference": "4e2c10e19bf2cdbefe6786907c1ad2d2a8a6fa3f",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwInfoLayer/zipball/adeb239e04b3914cff200aa33a94eb4df3a657dd",
+                "reference": "adeb239e04b3914cff200aa33a94eb4df3a657dd",
                 "shasum": ""
             },
             "require": {
@@ -2211,19 +2215,21 @@
         },
         {
             "name": "rkw/rkw-mailer",
-            "version": "v7.6.15-stable",
+            "version": "v8.7.1-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwMailer.git",
-                "reference": "d18a2e4a10294349e97b9a6380c823b801eae957"
+                "reference": "20abbf2ec2d09cad95f98a0d482367cbd8b4d980"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/d18a2e4a10294349e97b9a6380c823b801eae957",
-                "reference": "d18a2e4a10294349e97b9a6380c823b801eae957",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/20abbf2ec2d09cad95f98a0d482367cbd8b4d980",
+                "reference": "20abbf2ec2d09cad95f98a0d482367cbd8b4d980",
                 "shasum": ""
             },
             "require": {
+                "php": ">=5.6",
+                "rkw/rkw-basics": "~8.7.2",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -2263,26 +2269,27 @@
                 "TYPO3 CMS",
                 "newsletter"
             ],
-            "time": "2019-01-23T15:12:12+00:00"
+            "time": "2019-02-05T13:17:26+00:00"
         },
         {
             "name": "rkw/rkw-newsletter",
-            "version": "v7.6.2-beta",
+            "version": "v7.6.5-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwNewsletter.git",
-                "reference": "13237ce5eae3304470be71f86d3e7c636fdd3e93"
+                "reference": "a5da7e9686789c79d688b237e7952bcacd878f25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwNewsletter/zipball/13237ce5eae3304470be71f86d3e7c636fdd3e93",
-                "reference": "13237ce5eae3304470be71f86d3e7c636fdd3e93",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwNewsletter/zipball/a5da7e9686789c79d688b237e7952bcacd878f25",
+                "reference": "a5da7e9686789c79d688b237e7952bcacd878f25",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-basics": "~7.6.12",
-                "rkw/rkw-mailer": "~7.6.13",
-                "rkw/rkw-registration": "~7.6.10",
+                "php": ">=5.6",
+                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
+                "rkw/rkw-mailer": ">=7.6.13 <=8.7.99",
+                "rkw/rkw-registration": ">=7.6.10 <=8.7.99",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -2321,26 +2328,27 @@
                 "TYPO3 CMS",
                 "newsletter"
             ],
-            "time": "2019-01-23T15:32:09+00:00"
+            "time": "2019-02-05T15:00:59+00:00"
         },
         {
             "name": "rkw/rkw-order",
-            "version": "v7.6.9-stable",
+            "version": "v8.7.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwOrder.git",
-                "reference": "78fc6781480f10cfa88739b300e29ff598237fab"
+                "reference": "067c452537381a5066083ec3b218f386fdd3f659"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwOrder/zipball/78fc6781480f10cfa88739b300e29ff598237fab",
-                "reference": "78fc6781480f10cfa88739b300e29ff598237fab",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwOrder/zipball/067c452537381a5066083ec3b218f386fdd3f659",
+                "reference": "067c452537381a5066083ec3b218f386fdd3f659",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-basics": "~7.6.12",
-                "rkw/rkw-mailer": "~7.6.13",
-                "rkw/rkw-registration": "~7.6.10",
+                "php": ">=5.6",
+                "rkw/rkw-basics": ">=8.7.2",
+                "rkw/rkw-mailer": ">=8.7.1",
+                "rkw/rkw-registration": ">=8.7.0",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -2379,7 +2387,7 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2019-01-23T15:22:38+00:00"
+            "time": "2019-02-05T13:25:01+00:00"
         },
         {
             "name": "rkw/rkw-projects",
@@ -2387,17 +2395,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwProjects.git",
-                "reference": "df191fd0d2ec9f0bbd608f1bb6a534f4e054514f"
+                "reference": "6ca96c66071d6e97a948911a3c1e6219fef5e232"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/df191fd0d2ec9f0bbd608f1bb6a534f4e054514f",
-                "reference": "df191fd0d2ec9f0bbd608f1bb6a534f4e054514f",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/6ca96c66071d6e97a948911a3c1e6219fef5e232",
+                "reference": "6ca96c66071d6e97a948911a3c1e6219fef5e232",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-authors": "~7.6.10",
-                "rkw/rkw-basics": "~7.6.12",
+                "rkw/rkw-authors": ">=7.6.10 <=8.7.99",
+                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -2436,7 +2444,7 @@
                 "TYPO3 CMS",
                 "projects"
             ],
-            "time": "2019-01-23T14:43:11+00:00"
+            "time": "2019-02-05T13:30:26+00:00"
         },
         {
             "name": "rkw/rkw-quickcheck",
@@ -2444,12 +2452,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwQuickcheck.git",
-                "reference": "9778de59abba9bf0b504b6711d68e75d54b1c093"
+                "reference": "0637ca48025d40d42a5c575e0cd97ca21b8b0c44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwQuickcheck/zipball/9778de59abba9bf0b504b6711d68e75d54b1c093",
-                "reference": "9778de59abba9bf0b504b6711d68e75d54b1c093",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwQuickcheck/zipball/0637ca48025d40d42a5c575e0cd97ca21b8b0c44",
+                "reference": "0637ca48025d40d42a5c575e0cd97ca21b8b0c44",
                 "shasum": ""
             },
             "require": {
@@ -2495,20 +2503,22 @@
         },
         {
             "name": "rkw/rkw-registration",
-            "version": "v7.6.13-stable",
+            "version": "v8.7.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwRegistration.git",
-                "reference": "905afbc75c7bd3643975ffc42e746d3b6defdcdc"
+                "reference": "332f32a57f00cf8e31f4f86260653506db76a7b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/905afbc75c7bd3643975ffc42e746d3b6defdcdc",
-                "reference": "905afbc75c7bd3643975ffc42e746d3b6defdcdc",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/332f32a57f00cf8e31f4f86260653506db76a7b9",
+                "reference": "332f32a57f00cf8e31f4f86260653506db76a7b9",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-mailer": "~7.6.13",
+                "php": ">=5.6",
+                "rkw/rkw-basics": "~8.7.2",
+                "rkw/rkw-mailer": "~8.7.1",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -2551,7 +2561,7 @@
                 "register",
                 "registration"
             ],
-            "time": "2019-01-23T14:40:53+00:00"
+            "time": "2019-02-05T13:34:53+00:00"
         },
         {
             "name": "rkw/rkw-related",
@@ -2559,17 +2569,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwRelated.git",
-                "reference": "2ba5f7850246d12f98b931a6cd350b3910e6752f"
+                "reference": "aefcb8c0e610a1191cc7eb8a7510d4d3aa7107e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRelated/zipball/2ba5f7850246d12f98b931a6cd350b3910e6752f",
-                "reference": "2ba5f7850246d12f98b931a6cd350b3910e6752f",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwRelated/zipball/aefcb8c0e610a1191cc7eb8a7510d4d3aa7107e0",
+                "reference": "aefcb8c0e610a1191cc7eb8a7510d4d3aa7107e0",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-basics": "~7.6.12",
-                "rkw/rkw-projects": "~7.6.10",
+                "php": ">=5.6",
+                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
+                "rkw/rkw-projects": ">=7.6.10 <=8.7.99",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -2608,7 +2619,7 @@
                 "Related Content",
                 "TYPO3 CMS"
             ],
-            "time": "2019-01-23T14:39:45+00:00"
+            "time": "2019-02-05T13:38:45+00:00"
         },
         {
             "name": "rkw/rkw-resourcespace",
@@ -2616,16 +2627,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwResourcespace.git",
-                "reference": "47c6dc2f12757a316548059c0fe25b612ab3e9c2"
+                "reference": "383b5407c7edbc794c160da49f2fc3d8dfaec09d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwResourcespace/zipball/47c6dc2f12757a316548059c0fe25b612ab3e9c2",
-                "reference": "47c6dc2f12757a316548059c0fe25b612ab3e9c2",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwResourcespace/zipball/383b5407c7edbc794c160da49f2fc3d8dfaec09d",
+                "reference": "383b5407c7edbc794c160da49f2fc3d8dfaec09d",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-basics": "~7.6.12",
+                "php": ">=5.6",
+                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -2658,7 +2670,7 @@
                 "Resourcespace",
                 "TYPO3 CMS"
             ],
-            "time": "2019-01-23T14:38:43+00:00"
+            "time": "2019-02-05T13:40:21+00:00"
         },
         {
             "name": "rkw/rkw-rss",
@@ -2666,12 +2678,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwRss.git",
-                "reference": "aad400fa76315092b8af75bf05644d6032662328"
+                "reference": "da5ec0aef24347d6e2fc1ea9befb24173711a88d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRss/zipball/aad400fa76315092b8af75bf05644d6032662328",
-                "reference": "aad400fa76315092b8af75bf05644d6032662328",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwRss/zipball/da5ec0aef24347d6e2fc1ea9befb24173711a88d",
+                "reference": "da5ec0aef24347d6e2fc1ea9befb24173711a88d",
                 "shasum": ""
             },
             "require": {
@@ -2715,21 +2727,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwSearch.git",
-                "reference": "3cfe5a714654fb2b05553acbc4d865e20d6ddd65"
+                "reference": "5ad2fbce5ffd0f3e01cf27a9911d0d9c7f1056bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwSearch/zipball/3cfe5a714654fb2b05553acbc4d865e20d6ddd65",
-                "reference": "3cfe5a714654fb2b05553acbc4d865e20d6ddd65",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwSearch/zipball/5ad2fbce5ffd0f3e01cf27a9911d0d9c7f1056bf",
+                "reference": "5ad2fbce5ffd0f3e01cf27a9911d0d9c7f1056bf",
                 "shasum": ""
             },
             "require": {
                 "doctrine/orientdb-odm": "dev-master@dev",
                 "orientdb-php/orientdb-php": "dev-master@dev",
-                "rkw/rkw-authors": "~7.6.10",
-                "rkw/rkw-basics": "~7.6.12",
-                "rkw/rkw-geolocation": "~7.6.10",
-                "rkw/rkw-projects": "~7.6.10",
+                "php": ">=5.6",
+                "rkw/rkw-authors": ">=7.6.10 <=8.7.99",
+                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
+                "rkw/rkw-geolocation": ">=7.6.10 <=8.7.99",
+                "rkw/rkw-projects": ">=7.6.10 <=8.7.99",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -2763,24 +2776,38 @@
                 "TYPO3 CMS",
                 "orientdb"
             ],
-            "time": "2019-01-23T14:36:12+00:00"
+            "time": "2019-02-05T13:44:44+00:00"
         },
         {
             "name": "rkw/rkw-soap",
-            "version": "v7.6.5-beta",
+            "version": "v8.7.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwSoap.git",
-                "reference": "4c3a1eb5f6926b8031a7642c71667f6f75b01f17"
+                "reference": "08750575d1b417630536baf3786e9e1d62f53526"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwSoap/zipball/4c3a1eb5f6926b8031a7642c71667f6f75b01f17",
-                "reference": "4c3a1eb5f6926b8031a7642c71667f6f75b01f17",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwSoap/zipball/08750575d1b417630536baf3786e9e1d62f53526",
+                "reference": "08750575d1b417630536baf3786e9e1d62f53526",
                 "shasum": ""
             },
             "require": {
+                "ext-soap": "*",
+                "php": ">=5.6",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
+            },
+            "conflict": {
+                "rkw/rkw-basics": "<8.7.2",
+                "rkw/rkw-mailer": "<8.7.1",
+                "rkw/rkw-order": "<8.7",
+                "rkw/rkw-registration": "<8.7"
+            },
+            "suggest": {
+                "rkw/rkw-basics": "~8.7.2",
+                "rkw/rkw-mailer": "~8.7.1",
+                "rkw/rkw-order": "~8.7.0",
+                "rkw/rkw-registration": "~8.7.0"
             },
             "type": "typo3-cms-extension",
             "extra": {
@@ -2812,7 +2839,7 @@
                 "TYPO3 CMS",
                 "soap"
             ],
-            "time": "2019-01-23T15:15:16+00:00"
+            "time": "2019-02-05T13:47:07+00:00"
         },
         {
             "name": "rkw/rkw-survey",
@@ -2820,17 +2847,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwSurvey.git",
-                "reference": "ad4eeb42305e409f32b0c255390b846ab2845f86"
+                "reference": "320a3ad289d059873737dffca24568e8c68bb8dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwSurvey/zipball/ad4eeb42305e409f32b0c255390b846ab2845f86",
-                "reference": "ad4eeb42305e409f32b0c255390b846ab2845f86",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwSurvey/zipball/320a3ad289d059873737dffca24568e8c68bb8dd",
+                "reference": "320a3ad289d059873737dffca24568e8c68bb8dd",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-mailer": "~7.6.10",
-                "rkw/rkw-registration": "~7.6.10",
+                "php": ">=5.6",
+                "rkw/rkw-mailer": ">=7.6.10 <=8.7.99",
+                "rkw/rkw-registration": ">=7.6.10 <=8.7.99",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -2863,7 +2891,7 @@
                 "Related Content",
                 "TYPO3 CMS"
             ],
-            "time": "2019-01-23T14:33:37+00:00"
+            "time": "2019-02-05T13:50:02+00:00"
         },
         {
             "name": "rkw/rkw-template",
@@ -2871,16 +2899,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwTemplate.git",
-                "reference": "ffeb33fabd1fc156acd3589561c169f09aeaf830"
+                "reference": "15ed214de6eccb41ab85158e079909c33cdb60d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwTemplate/zipball/ffeb33fabd1fc156acd3589561c169f09aeaf830",
-                "reference": "ffeb33fabd1fc156acd3589561c169f09aeaf830",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwTemplate/zipball/15ed214de6eccb41ab85158e079909c33cdb60d3",
+                "reference": "15ed214de6eccb41ab85158e079909c33cdb60d3",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-basics": "~7.6.12",
+                "php": ">=5.6",
+                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -2913,25 +2942,26 @@
                 "TYPO3 CMS",
                 "templates"
             ],
-            "time": "2019-01-25T07:01:17+00:00"
+            "time": "2019-02-05T13:52:19+00:00"
         },
         {
             "name": "rkw/rkw-tools",
-            "version": "v7.6.5-beta",
+            "version": "v7.6.6-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwTools.git",
-                "reference": "25aaf9757a2efc66a00681662092eff6d68482b6"
+                "reference": "4eaeae4a45b63eb44ac56757f3522c1b885130ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwTools/zipball/25aaf9757a2efc66a00681662092eff6d68482b6",
-                "reference": "25aaf9757a2efc66a00681662092eff6d68482b6",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwTools/zipball/4eaeae4a45b63eb44ac56757f3522c1b885130ba",
+                "reference": "4eaeae4a45b63eb44ac56757f3522c1b885130ba",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-basics": "~7.6.12",
-                "rkw/rkw-projects": "~7.6.10",
+                "php": ">=5.6",
+                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
+                "rkw/rkw-projects": ">=7.6.10 <=8.7.99",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -2964,7 +2994,7 @@
                 "TYPO3 CMS",
                 "tools"
             ],
-            "time": "2019-01-23T14:31:54+00:00"
+            "time": "2019-02-05T14:57:00+00:00"
         },
         {
             "name": "rkw/rkw-webcheck",
@@ -2972,18 +3002,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwWebcheck.git",
-                "reference": "6450875aaaa848b9b43a58a7cf67212ecaca564d"
+                "reference": "f19c98cce20b24227204bf817ea0ab5d286feb66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwWebcheck/zipball/6450875aaaa848b9b43a58a7cf67212ecaca564d",
-                "reference": "6450875aaaa848b9b43a58a7cf67212ecaca564d",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwWebcheck/zipball/f19c98cce20b24227204bf817ea0ab5d286feb66",
+                "reference": "f19c98cce20b24227204bf817ea0ab5d286feb66",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-basics": "~7.6.12",
-                "rkw/rkw-mailer": "~7.6.10",
-                "rkw/rkw-registration": "~7.6.10",
+                "php": ">=5.6",
+                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
+                "rkw/rkw-mailer": ">=7.6.10 <=8.7.99",
+                "rkw/rkw-registration": ">=7.6.10 <=8.7.99",
                 "spipu/html2pdf": "^5.0",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
@@ -3036,25 +3067,25 @@
                 "TYPO3 CMS",
                 "benchmarks"
             ],
-            "time": "2019-01-23T14:30:24+00:00"
+            "time": "2019-02-05T14:01:38+00:00"
         },
         {
             "name": "rkw/rkw-wepstra",
-            "version": "v7.6.7-stable",
+            "version": "v7.6.8-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwWepstra.git",
-                "reference": "56f8e806a60a17bf86fd03d0c3d8e813d7da97a0"
+                "reference": "10c8f3aceae89509035a736e3dc6f2eba70fcc7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwWepstra/zipball/56f8e806a60a17bf86fd03d0c3d8e813d7da97a0",
-                "reference": "56f8e806a60a17bf86fd03d0c3d8e813d7da97a0",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwWepstra/zipball/10c8f3aceae89509035a736e3dc6f2eba70fcc7b",
+                "reference": "10c8f3aceae89509035a736e3dc6f2eba70fcc7b",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-mailer": "~7.6.10",
-                "rkw/rkw-registration": "~7.6.10",
+                "rkw/rkw-mailer": ">=7.6.10 <=8.7.99",
+                "rkw/rkw-registration": ">=7.6.10 <=8.7.99",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
             "type": "typo3-cms-extension",
@@ -3086,7 +3117,7 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2019-01-23T14:15:31+00:00"
+            "time": "2019-02-05T14:03:13+00:00"
         },
         {
             "name": "sjbr/static-info-tables",
@@ -3234,16 +3265,16 @@
         },
         {
             "name": "symfony/class-loader",
-            "version": "v3.4.21",
+            "version": "v3.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/class-loader.git",
-                "reference": "4513348012c25148f8cbc3a7761a1d1e60ca3e87"
+                "reference": "4459eef5298dedfb69f771186a580062b8516497"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/class-loader/zipball/4513348012c25148f8cbc3a7761a1d1e60ca3e87",
-                "reference": "4513348012c25148f8cbc3a7761a1d1e60ca3e87",
+                "url": "https://api.github.com/repos/symfony/class-loader/zipball/4459eef5298dedfb69f771186a580062b8516497",
+                "reference": "4459eef5298dedfb69f771186a580062b8516497",
                 "shasum": ""
             },
             "require": {
@@ -3286,7 +3317,7 @@
             ],
             "description": "Symfony ClassLoader Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-01T13:45:19+00:00"
+            "time": "2019-01-16T09:39:14+00:00"
         },
         {
             "name": "symfony/console",
@@ -3634,16 +3665,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.21",
+            "version": "v3.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "0d41dd7d95ed179aed6a13393b0f4f97bfa2d25c"
+                "reference": "009f8dda80930e89e8344a4e310b08f9ff07dd2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/0d41dd7d95ed179aed6a13393b0f4f97bfa2d25c",
-                "reference": "0d41dd7d95ed179aed6a13393b0f4f97bfa2d25c",
+                "url": "https://api.github.com/repos/symfony/process/zipball/009f8dda80930e89e8344a4e310b08f9ff07dd2e",
+                "reference": "009f8dda80930e89e8344a4e310b08f9ff07dd2e",
                 "shasum": ""
             },
             "require": {
@@ -3679,7 +3710,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-02T21:24:08+00:00"
+            "time": "2019-01-16T13:27:11+00:00"
         },
         {
             "name": "tecnickcom/tcpdf",
@@ -5395,7 +5426,9 @@
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "~5.6.0"
+    },
     "platform-dev": [],
     "platform-overrides": {
         "php": "5.6"

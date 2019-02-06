@@ -4,7 +4,7 @@
 172.28.128.3	eanpc.rkw.local
 172.28.128.3	frauenambau.rkw.local
 172.28.128.3	karriereseiten-check.rkw.local
-172.28.128.3	mein.rkw.rkw.local
+172.28.128.3	mein.rkw.local
 172.28.128.3	ressinnobau.rkw.local
 172.28.128.3	rkw.local
 172.28.128.3	rkw-kompetenzzentrum.rkw.local
