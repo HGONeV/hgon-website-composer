@@ -17,12 +17,12 @@ $client = new \SoapClient("http://soap.rkw.codes/index.php?type=1445105145&wsdl=
 echo "<hr>";
 
 # $result = $client->findOrdersByTimestamp(12);
-# $result = $client->findAllPublications();
+$result = $client->findAllPublications();
 # $result = $client->findEventsByTimestamp(1507230588);
 # $result = $client->findEventReservationsByTimestamp();
 # $result = $client->findEventReservationAddPersonsByTimestamp();
 # $result = $client->findEventPlacesByTimestamp();
-$result = $client->findAllSeries();
+# $result = $client->findAllSeries();
 # $result = $client->findFeUsersByTimestamp(12);
 # $result = $client->findFeUserGroupsByTimestamp(12);
 var_dump($result);
