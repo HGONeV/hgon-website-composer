@@ -17,6 +17,9 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_search']['OrientDB']['DB'] = array (
     'readOnly' => 0
 );
 
+// Return-Path for email
+$GLOBALS['TYPO3_CONF_VARS']['MAIL']['defaultMailReturnAddress'] = 'no-reply@mein.rkw.de';
+
 // ====================================================
 // Page not found handling
 // ====================================================
