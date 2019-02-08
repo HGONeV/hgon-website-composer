@@ -110,7 +110,6 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array(
 
             '_DEFAULT' => array(
 
-
                 //===============================================
                 // Search
                 'tx-rkw-search' => array (
