@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94eb354d21a512c844dc665b2383ef17",
+    "content-hash": "ecfb966755c346619c110a2dceeaffd3",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -1811,16 +1811,16 @@
         },
         {
             "name": "rkw/rkw-basics",
-            "version": "v8.7.2-alpha",
+            "version": "v8.7.3-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwBasics.git",
-                "reference": "c8c654f201edf5f12613ead5224f00d2a04ad986"
+                "reference": "f7e4be6588487602876ebc8ad7bef8a2c479561e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/c8c654f201edf5f12613ead5224f00d2a04ad986",
-                "reference": "c8c654f201edf5f12613ead5224f00d2a04ad986",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/f7e4be6588487602876ebc8ad7bef8a2c479561e",
+                "reference": "f7e4be6588487602876ebc8ad7bef8a2c479561e",
                 "shasum": ""
             },
             "require": {
@@ -1862,7 +1862,7 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2019-02-05T12:48:29+00:00"
+            "time": "2019-02-08T10:22:34+00:00"
         },
         {
             "name": "rkw/rkw-consultant",
@@ -2039,16 +2039,16 @@
         },
         {
             "name": "rkw/rkw-events",
-            "version": "v8.7.7-beta",
+            "version": "v8.7.8-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwEvents.git",
-                "reference": "011e5321c712d828b9e872ae9f595cda9d2dc4f5"
+                "reference": "c92689151365db3a215beebdfd480d6d9e11912f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/011e5321c712d828b9e872ae9f595cda9d2dc4f5",
-                "reference": "011e5321c712d828b9e872ae9f595cda9d2dc4f5",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/c92689151365db3a215beebdfd480d6d9e11912f",
+                "reference": "c92689151365db3a215beebdfd480d6d9e11912f",
                 "shasum": ""
             },
             "require": {
@@ -2100,7 +2100,7 @@
                 "TYPO3 CMS",
                 "events"
             ],
-            "time": "2019-02-06T15:57:12+00:00"
+            "time": "2019-02-08T10:36:40+00:00"
         },
         {
             "name": "rkw/rkw-geolocation",
@@ -2157,6 +2157,57 @@
                 "google maps"
             ],
             "time": "2019-01-23T14:47:48+00:00"
+        },
+        {
+            "name": "rkw/rkw-graphics",
+            "version": "v7.6.0-alpha",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RKWKomZe/RkwGraphics.git",
+                "reference": "c52725353c1e2b02447e3487c54c2fd4b945c303"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwGraphics/zipball/c52725353c1e2b02447e3487c54c2fd4b945c303",
+                "reference": "c52725353c1e2b02447e3487c54c2fd4b945c303",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "typo3/cms-core": "^7.6.0 || ^8.7.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "rkw_graphics"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "RKW\\RkwGraphics\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Steffen Kroggel",
+                    "email": "developer@steffenkroggel.de",
+                    "homepage": "http://www.steffenkroggel.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Extension for displaying charts with ApexCharts",
+            "homepage": "https://www.rkw-kompetenzzentrum.de",
+            "keywords": [
+                "E-Mails",
+                "RKW",
+                "TYPO3 CMS",
+                "newsletter"
+            ],
+            "time": "2019-02-08T15:09:29+00:00"
         },
         {
             "name": "rkw/rkw-info-layer",
