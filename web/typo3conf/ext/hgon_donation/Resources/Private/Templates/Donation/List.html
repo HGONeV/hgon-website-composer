@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+	<h1>Listing for Donation</h1>
+
+	<f:flashMessages />
+
+	<f:for each="{donationTypeList}" as="donationType">
+		<div>
+			<f:if condition="{donationType.type} == 3">
+				<f:then>
+					<f:link.typolink parameter="{donationType.link}">
+						<f:render partial="DonationType/ListItem" arguments="{donationType:donationType}" />
+					</f:link.typolink>
+				</f:then>
+				<f:else>
+					<f:link.action action="showDonationType" arguments="{donationType:donationType}">
+						<f:render partial="DonationType/ListItem" arguments="{donationType:donationType}" />
+					</f:link.action>
+				</f:else>
+			</f:if>
+		</div>
+	</f:for>
+
+</f:section>
+
+</html>

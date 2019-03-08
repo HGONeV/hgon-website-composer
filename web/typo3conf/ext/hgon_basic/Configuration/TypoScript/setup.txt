@@ -1,0 +1,65 @@
+#########################
+# EXTBASE
+#########################
+config.tx_extbase.persistence {
+	classes {
+		HGON\HgonBasic\Domain\Model\BackendUser {
+			mapping {
+				# tablename
+				tableName = be_users
+				recordType =
+			}
+		}
+		HGON\HgonBasic\Domain\Model\FrontendUser {
+			mapping {
+				# tablename
+				tableName = fe_users
+				recordType =
+				columns {
+					tstamp.mapOnProperty = tstamp
+					starttime.mapOnProperty = starttime
+					endtime.mapOnProperty = endtime
+					crdate.mapOnProperty = crdate
+					disable.mapOnProperty = disable
+					deleted.mapOnProperty = deleted
+					password.mapOnProperty = password
+				}
+			}
+		}
+		HGON\HgonBasic\Domain\Model\FrontendUserGroup {
+			mapping {
+				# tablename
+				tableName = fe_groups
+				recordType =
+				columns {
+					tstamp.mapOnProperty = tstamp
+					crdate.mapOnProperty = crdate
+					hidden.mapOnProperty = hidden
+					deleted.mapOnProperty = deleted
+				}
+			}
+		}
+	}
+}
+
+plugin.tx_hgonbasic {
+	view {
+		templateRootPaths.0 = EXT:hgon_basic/Resources/Private/Templates/
+		templateRootPaths.1 = {$plugin.tx_hgonbasic.view.templateRootPath}
+		partialRootPaths.0 = EXT:hgon_basic/Resources/Private/Partials/
+		partialRootPaths.1 = {$plugin.tx_hgonbasic.view.partialRootPath}
+		layoutRootPaths.0 = EXT:hgon_basic/Resources/Private/Layouts/
+		layoutRootPaths.1 = {$plugin.tx_hgonbasic.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_hgonbasic.persistence.storagePid}
+		#recursive = 1
+	}
+	features {
+		#skipDefaultArguments = 1
+	}
+	mvc {
+		#callDefaultActionIfActionCantBeResolved = 1
+	}
+}
+

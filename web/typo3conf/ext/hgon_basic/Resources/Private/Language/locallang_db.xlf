@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-15T13:29:51Z" product-name="hgon_basic">
+		<header/>
+		<body>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator">
+				<source>Operator</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.middle_name">
+				<source>Middle Name</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.title_after">
+				<source>Title After</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.title_before">
+				<source>Title Before</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.house_number">
+				<source>House Number</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.phone_fixed">
+				<source>Phone Fixed</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.phone_mobile">
+				<source>Phone Mobile</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.url">
+				<source>Url</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.facebook_url">
+				<source>Facebook Url</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.twitter_url">
+				<source>Twitter Url</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.xing_url">
+				<source>Xing Url</source>
+			</trans-unit>
+			<trans-unit id="tx_hgonbasic_domain_model_associationoperator.image">
+				<source>Image</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

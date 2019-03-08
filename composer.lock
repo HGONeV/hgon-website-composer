@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ecfb966755c346619c110a2dceeaffd3",
+    "content-hash": "b1ae8c3083fa222a449ef43c2910aeb8",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -115,21 +115,22 @@
         },
         {
             "name": "dmitryd/typo3-realurl",
-            "version": "2.2.1",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dmitryd/typo3-realurl.git",
-                "reference": "ce1fe49770c7cd86b101fa7f09dc304e4255d59e"
+                "reference": "beb6010830c2bced17432433fafcdf7834a70daa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dmitryd/typo3-realurl/zipball/ce1fe49770c7cd86b101fa7f09dc304e4255d59e",
-                "reference": "ce1fe49770c7cd86b101fa7f09dc304e4255d59e",
+                "url": "https://api.github.com/repos/dmitryd/typo3-realurl/zipball/beb6010830c2bced17432433fafcdf7834a70daa",
+                "reference": "beb6010830c2bced17432433fafcdf7834a70daa",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0",
-                "typo3/cms-core": ">=6.2.0,<8.7.999"
+                "ext-mbstring": "*",
+                "php": ">=5.4.0,<7.3.0",
+                "typo3/cms-core": ">=6.2.0,<9.0.0"
             },
             "conflict": {
                 "bednee/cooluri": ">0.0.1",
@@ -177,34 +178,34 @@
                 "cms",
                 "typo3"
             ],
-            "time": "2017-05-11T00:00:00+00:00"
+            "time": "2018-07-09T00:00:00+00:00"
         },
         {
             "name": "doctrine/annotations",
-            "version": "v1.4.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "54cacc9b81758b14e3ce750f205a393d52339e97"
+                "reference": "c7f2050c68a9ab0bdb0f98567ec08d80ea7d24d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/54cacc9b81758b14e3ce750f205a393d52339e97",
-                "reference": "54cacc9b81758b14e3ce750f205a393d52339e97",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/c7f2050c68a9ab0bdb0f98567ec08d80ea7d24d5",
+                "reference": "c7f2050c68a9ab0bdb0f98567ec08d80ea7d24d5",
                 "shasum": ""
             },
             "require": {
                 "doctrine/lexer": "1.*",
-                "php": "^5.6 || ^7.0"
+                "php": "^7.1"
             },
             "require-dev": {
                 "doctrine/cache": "1.*",
-                "phpunit/phpunit": "^5.7"
+                "phpunit/phpunit": "^6.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4.x-dev"
+                    "dev-master": "1.6.x-dev"
                 }
             },
             "autoload": {
@@ -245,37 +246,42 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2017-02-24T16:22:25+00:00"
+            "time": "2017-12-06T07:11:42+00:00"
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.6.2",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "eb152c5100571c7a45470ff2a35095ab3f3b900b"
+                "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/eb152c5100571c7a45470ff2a35095ab3f3b900b",
-                "reference": "eb152c5100571c7a45470ff2a35095ab3f3b900b",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/d768d58baee9a4862ca783840eca1b9add7a7f57",
+                "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57",
                 "shasum": ""
             },
             "require": {
-                "php": "~5.5|~7.0"
+                "php": "~7.1"
             },
             "conflict": {
                 "doctrine/common": ">2.2,<2.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8|~5.0",
-                "predis/predis": "~1.0",
-                "satooshi/php-coveralls": "~0.6"
+                "alcaeus/mongo-php-adapter": "^1.1",
+                "doctrine/coding-standard": "^4.0",
+                "mongodb/mongodb": "^1.1",
+                "phpunit/phpunit": "^7.0",
+                "predis/predis": "~1.0"
+            },
+            "suggest": {
+                "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6.x-dev"
+                    "dev-master": "1.8.x-dev"
                 }
             },
             "autoload": {
@@ -310,29 +316,29 @@
                 }
             ],
             "description": "Caching library offering an object-oriented API for many cache backends",
-            "homepage": "http://www.doctrine-project.org",
+            "homepage": "https://www.doctrine-project.org",
             "keywords": [
                 "cache",
                 "caching"
             ],
-            "time": "2017-07-22T12:49:21+00:00"
+            "time": "2018-08-21T18:01:43+00:00"
         },
         {
             "name": "doctrine/collections",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba"
+                "reference": "a01ee38fcd999f34d9bfbcee59dbda5105449cbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/1a4fb7e902202c33cce8c55989b945612943c2ba",
-                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/a01ee38fcd999f34d9bfbcee59dbda5105449cbf",
+                "reference": "a01ee38fcd999f34d9bfbcee59dbda5105449cbf",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0"
+                "php": "^7.1"
             },
             "require-dev": {
                 "doctrine/coding-standard": "~0.1@dev",
@@ -382,7 +388,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2017-01-03T10:49:41+00:00"
+            "time": "2017-07-22T10:37:32+00:00"
         },
         {
             "name": "doctrine/common",
@@ -458,34 +464,105 @@
             "time": "2017-07-22T08:35:12+00:00"
         },
         {
-            "name": "doctrine/inflector",
-            "version": "v1.1.0",
+            "name": "doctrine/dbal",
+            "version": "v2.5.13",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/inflector.git",
-                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "729340d8d1eec8f01bff708e12e449a3415af873"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
-                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/729340d8d1eec8f01bff708e12e449a3415af873",
+                "reference": "729340d8d1eec8f01bff708e12e449a3415af873",
                 "shasum": ""
             },
             "require": {
+                "doctrine/common": ">=2.4,<2.8-dev",
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*"
+                "phpunit/phpunit": "4.*",
+                "symfony/console": "2.*||^3.0"
             },
+            "suggest": {
+                "symfony/console": "For helpful console commands such as SQL execution and import of files."
+            },
+            "bin": [
+                "bin/doctrine-dbal"
+            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "2.5.x-dev"
                 }
             },
             "autoload": {
                 "psr-0": {
-                    "Doctrine\\Common\\Inflector\\": "lib/"
+                    "Doctrine\\DBAL\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Database Abstraction Layer",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "dbal",
+                "persistence",
+                "queryobject"
+            ],
+            "time": "2017-07-22T20:44:48+00:00"
+        },
+        {
+            "name": "doctrine/inflector",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/inflector.git",
+                "reference": "5527a48b7313d15261292c149e55e26eae771b0a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/5527a48b7313d15261292c149e55e26eae771b0a",
+                "reference": "5527a48b7313d15261292c149e55e26eae771b0a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -522,7 +599,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-11-06T14:35:42+00:00"
+            "time": "2018-01-09T20:05:19+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -633,34 +710,92 @@
             "time": "2014-09-09T13:34:57+00:00"
         },
         {
-            "name": "doctrine/orientdb-odm",
-            "version": "dev-master",
+            "name": "gridelementsteam/gridelements",
+            "version": "8.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/orientdb-odm.git",
-                "reference": "f1f9ff49a020fb2bed60f86c379a07bf68dd162c"
+                "url": "https://gitlab.com/coderscare/gridelements.git",
+                "reference": "fc4447267d09d141728737919aa4645945339bde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orientdb-odm/zipball/f1f9ff49a020fb2bed60f86c379a07bf68dd162c",
-                "reference": "f1f9ff49a020fb2bed60f86c379a07bf68dd162c",
+                "url": "https://gitlab.com/api/v4/projects/coderscare%2Fgridelements/repository/archive.zip?sha=fc4447267d09d141728737919aa4645945339bde",
+                "reference": "fc4447267d09d141728737919aa4645945339bde",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": "~2.2",
-                "guzzle/guzzle": "*",
-                "php": ">=5.3.3",
-                "symfony/class-loader": "~2.3|~3.0",
-                "symfony/finder": "~2.3|~3.0"
+                "typo3/cms-backend": "^8.7",
+                "typo3/cms-core": "^8.7",
+                "typo3/cms-frontend": "^8.7",
+                "typo3/cms-lang": "^8.7",
+                "typo3/cms-recordlist": "^8.7"
+            },
+            "conflict": {
+                "jfmulticontent": "*",
+                "templavoila": "*"
+            },
+            "replace": {
+                "gridelements": "self.version",
+                "typo3-ter/gridelements": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "GridElementsTeam\\Gridelements\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "This extension integrates the grid layout concept also to regular content elements - the grid elements. It offers a lot of new features like advanced drag & drop or real references, that improve the usability of the page and list module to speed up the daily work with the backend.",
+            "homepage": "https://forge.typo3.org/projects/extension-gridelements2",
+            "keywords": [
+                "Gridelements",
+                "TYPO3 CMS",
+                "grids"
+            ],
+            "time": "2018-12-10T13:55:31+00:00"
+        },
+        {
+            "name": "guzzlehttp/guzzle",
+            "version": "6.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/promises": "^1.0",
+                "guzzlehttp/psr7": "^1.4",
+                "php": ">=5.5"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.1.*"
+                "ext-curl": "*",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
+                "psr/log": "^1.0"
+            },
+            "suggest": {
+                "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.3-dev"
+                }
+            },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\OrientDB": "src/",
-                    "Doctrine\\ODM\\OrientDB": "src/"
+                "files": [
+                    "src/functions_include.php"
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -669,100 +804,113 @@
             ],
             "authors": [
                 {
-                    "name": "Daniele Alessandri",
-                    "email": "suppakilla@gmail.com",
-                    "homepage": "http://clorophilla.net"
-                },
-                {
-                    "name": "Alessandro Nadalin",
-                    "email": "alessandro.nadalin@gmail.com",
-                    "homepage": "http://www.odino.org"
-                },
-                {
-                    "name": "David Funaro",
-                    "email": "ing.davidino@gmail.com",
-                    "homepage": "http://davidfunaro.com"
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
                 }
             ],
-            "description": "PHP OrientDB Object Document Mapper (ODM) provides transparent persistence for PHP objects to OrientDB.",
+            "description": "Guzzle is a PHP HTTP client library",
+            "homepage": "http://guzzlephp.org/",
             "keywords": [
-                "GraphDB",
-                "data",
-                "mapper",
-                "mapping",
-                "object",
-                "odm",
-                "orientdb",
-                "php"
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
             ],
-            "time": "2018-08-31T22:59:03+00:00"
+            "time": "2018-04-22T15:46:56+00:00"
         },
         {
-            "name": "guzzle/guzzle",
-            "version": "v3.9.3",
+            "name": "guzzlehttp/promises",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/guzzle/guzzle3.git",
-                "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9"
+                "url": "https://github.com/guzzle/promises.git",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/0645b70d953bc1c067bbc8d5bc53194706b628d9",
-                "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
                 "shasum": ""
             },
             "require": {
-                "ext-curl": "*",
-                "php": ">=5.3.3",
-                "symfony/event-dispatcher": "~2.1"
-            },
-            "replace": {
-                "guzzle/batch": "self.version",
-                "guzzle/cache": "self.version",
-                "guzzle/common": "self.version",
-                "guzzle/http": "self.version",
-                "guzzle/inflection": "self.version",
-                "guzzle/iterator": "self.version",
-                "guzzle/log": "self.version",
-                "guzzle/parser": "self.version",
-                "guzzle/plugin": "self.version",
-                "guzzle/plugin-async": "self.version",
-                "guzzle/plugin-backoff": "self.version",
-                "guzzle/plugin-cache": "self.version",
-                "guzzle/plugin-cookie": "self.version",
-                "guzzle/plugin-curlauth": "self.version",
-                "guzzle/plugin-error-response": "self.version",
-                "guzzle/plugin-history": "self.version",
-                "guzzle/plugin-log": "self.version",
-                "guzzle/plugin-md5": "self.version",
-                "guzzle/plugin-mock": "self.version",
-                "guzzle/plugin-oauth": "self.version",
-                "guzzle/service": "self.version",
-                "guzzle/stream": "self.version"
+                "php": ">=5.5.0"
             },
             "require-dev": {
-                "doctrine/cache": "~1.3",
-                "monolog/monolog": "~1.0",
-                "phpunit/phpunit": "3.7.*",
-                "psr/log": "~1.0",
-                "symfony/class-loader": "~2.1",
-                "zendframework/zend-cache": "2.*,<2.3",
-                "zendframework/zend-log": "2.*,<2.3"
-            },
-            "suggest": {
-                "guzzlehttp/guzzle": "Guzzle 5 has moved to a new package name. The package you have installed, Guzzle 3, is deprecated."
+                "phpunit/phpunit": "^4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.9-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Guzzle": "src/",
-                    "Guzzle\\Tests": "tests/"
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
                 }
+            ],
+            "description": "Guzzle promises library",
+            "keywords": [
+                "promise"
+            ],
+            "time": "2016-12-20T10:07:11+00:00"
+        },
+        {
+            "name": "guzzlehttp/psr7",
+            "version": "1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "9f83dded91781a01c63574e387eaa769be769115"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
+                "reference": "9f83dded91781a01c63574e387eaa769be769115",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0",
+                "ralouphie/getallheaders": "^2.0.5"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -775,23 +923,22 @@
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
-                    "name": "Guzzle Community",
-                    "homepage": "https://github.com/guzzle/guzzle/contributors"
+                    "name": "Tobias Schultze",
+                    "homepage": "https://github.com/Tobion"
                 }
             ],
-            "description": "PHP HTTP client. This library is deprecated in favor of https://packagist.org/packages/guzzlehttp/guzzle",
-            "homepage": "http://guzzlephp.org/",
+            "description": "PSR-7 message implementation that also provides common utility methods",
             "keywords": [
-                "client",
-                "curl",
-                "framework",
                 "http",
-                "http client",
-                "rest",
-                "web service"
+                "message",
+                "psr-7",
+                "request",
+                "response",
+                "stream",
+                "uri",
+                "url"
             ],
-            "abandoned": "guzzlehttp/guzzle",
-            "time": "2015-03-18T18:23:50+00:00"
+            "time": "2018-12-04T20:46:45+00:00"
         },
         {
             "name": "helhum/dotenv-connector",
@@ -937,22 +1084,22 @@
         },
         {
             "name": "helhum/typo3-console-plugin",
-            "version": "1.7.5",
+            "version": "v2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Console/typo3-console-plugin.git",
-                "reference": "7bb9122dd784b6c40bc681a593a5f3f36162c60f"
+                "reference": "4a80b494adb97306bb19a14c72c214be79b5b079"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Console/typo3-console-plugin/zipball/7bb9122dd784b6c40bc681a593a5f3f36162c60f",
-                "reference": "7bb9122dd784b6c40bc681a593a5f3f36162c60f",
+                "url": "https://api.github.com/repos/TYPO3-Console/typo3-console-plugin/zipball/4a80b494adb97306bb19a14c72c214be79b5b079",
+                "reference": "4a80b494adb97306bb19a14c72c214be79b5b079",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0",
-                "php": ">=5.5.0",
-                "typo3/cms-composer-installers": "^1.3.1"
+                "php": "^7.0",
+                "typo3/cms-composer-installers": "^1.4 || ^2.0"
             },
             "require-dev": {
                 "composer/composer": "^1.0"
@@ -961,16 +1108,13 @@
             "extra": {
                 "class": "Helhum\\Typo3ConsolePlugin\\Plugin",
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Helhum\\Typo3ConsolePlugin\\": "src/"
-                },
-                "files": [
-                    "res/php/autoload-include.php"
-                ]
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -989,108 +1133,7 @@
                 "plugin",
                 "typo3 console"
             ],
-            "time": "2017-08-13T11:41:48+00:00"
-        },
-        {
-            "name": "ircmaxell/random-lib",
-            "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ircmaxell/RandomLib.git",
-                "reference": "e9e0204f40e49fa4419946c677eccd3fa25b8cf4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ircmaxell/RandomLib/zipball/e9e0204f40e49fa4419946c677eccd3fa25b8cf4",
-                "reference": "e9e0204f40e49fa4419946c677eccd3fa25b8cf4",
-                "shasum": ""
-            },
-            "require": {
-                "ircmaxell/security-lib": "^1.1",
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^1.11",
-                "mikey179/vfsstream": "^1.6",
-                "phpunit/phpunit": "^4.8|^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "RandomLib": "lib"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anthony Ferrara",
-                    "email": "ircmaxell@ircmaxell.com",
-                    "homepage": "http://blog.ircmaxell.com"
-                }
-            ],
-            "description": "A Library For Generating Secure Random Numbers",
-            "homepage": "https://github.com/ircmaxell/RandomLib",
-            "keywords": [
-                "cryptography",
-                "random",
-                "random-numbers",
-                "random-strings"
-            ],
-            "time": "2016-09-07T15:52:06+00:00"
-        },
-        {
-            "name": "ircmaxell/security-lib",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ircmaxell/SecurityLib.git",
-                "reference": "f3db6de12c20c9bcd1aa3db4353a1bbe0e44e1b5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ircmaxell/SecurityLib/zipball/f3db6de12c20c9bcd1aa3db4353a1bbe0e44e1b5",
-                "reference": "f3db6de12c20c9bcd1aa3db4353a1bbe0e44e1b5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "mikey179/vfsstream": "1.1.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "SecurityLib": "lib"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anthony Ferrara",
-                    "email": "ircmaxell@ircmaxell.com",
-                    "homepage": "http://blog.ircmaxell.com"
-                }
-            ],
-            "description": "A Base Security Library",
-            "homepage": "https://github.com/ircmaxell/SecurityLib",
-            "time": "2015-03-20T14:31:23+00:00"
+            "time": "2018-12-09T12:06:13+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1172,33 +1215,32 @@
         },
         {
             "name": "mso/idna-convert",
-            "version": "v0.9.1",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/phlylabs/idna-convert.git",
-                "reference": "0a0a09e460e63739d82c3f0c3f0e5555567a6be3"
+                "url": "https://github.com/algo26-matthias/idna-convert.git",
+                "reference": "a6dfb6f87611e3a89d2eec4924a0f51db755c573"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phlylabs/idna-convert/zipball/0a0a09e460e63739d82c3f0c3f0e5555567a6be3",
-                "reference": "0a0a09e460e63739d82c3f0c3f0e5555567a6be3",
+                "url": "https://api.github.com/repos/algo26-matthias/idna-convert/zipball/a6dfb6f87611e3a89d2eec4924a0f51db755c573",
+                "reference": "a6dfb6f87611e3a89d2eec4924a0f51db755c573",
                 "shasum": ""
             },
             "require": {
                 "ext-pcre": "*",
-                "php": ">=5.0.0"
+                "php": ">=5.6.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.9.x-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
-                "classmap": [
-                    "idna_convert.class.php",
-                    "uctc.php"
-                ]
+                "psr-4": {
+                    "Mso\\IdnaConvert\\": "src"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1218,7 +1260,8 @@
                 "idna",
                 "php"
             ],
-            "time": "2016-01-06T21:05:46+00:00"
+            "abandoned": "algo26-matthias/idna-convert",
+            "time": "2016-06-19T18:08:43+00:00"
         },
         {
             "name": "neos/utility-files",
@@ -1259,47 +1302,6 @@
             "description": "Flow Files Utilities",
             "homepage": "http://flow.typo3.org",
             "time": "2017-04-12T12:44:29+00:00"
-        },
-        {
-            "name": "orientdb-php/orientdb-php",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/AntonTerekhov/OrientDB-PHP.git",
-                "reference": "c5196fe05bf249e2658a39be0866444997287cf0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/AntonTerekhov/OrientDB-PHP/zipball/c5196fe05bf249e2658a39be0866444997287cf0",
-                "reference": "c5196fe05bf249e2658a39be0866444997287cf0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "OrientDB/OrientDB.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Anton Terekhov",
-                    "email": "anton.a.terekhov@gmail.com"
-                }
-            ],
-            "description": "A plain PHP driver to OrientDB graph database using its binary protocol.",
-            "homepage": "https://github.com/AntonTerekhov/OrientDB-PHP",
-            "keywords": [
-                "GraphDB",
-                "orientdb"
-            ],
-            "time": "2014-10-04T17:57:57+00:00"
         },
         {
             "name": "padraic/humbug_get_contents",
@@ -1423,182 +1425,53 @@
             "time": "2018-03-30T12:52:15+00:00"
         },
         {
-            "name": "pear/http_request2",
-            "version": "v2.3.0",
+            "name": "paragonie/random_compat",
+            "version": "v2.0.18",
             "source": {
                 "type": "git",
-                "url": "https://github.com/pear/HTTP_Request2.git",
-                "reference": "3599cf0fe455a4e281da464f6510bfc5c2ce54c4"
+                "url": "https://github.com/paragonie/random_compat.git",
+                "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/HTTP_Request2/zipball/3599cf0fe455a4e281da464f6510bfc5c2ce54c4",
-                "reference": "3599cf0fe455a4e281da464f6510bfc5c2ce54c4",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
+                "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
                 "shasum": ""
             },
             "require": {
-                "pear/net_url2": "^2.2.0",
-                "pear/pear_exception": "^1.0.0",
                 "php": ">=5.2.0"
             },
-            "suggest": {
-                "ext-fileinfo": "Adds support for looking up mime-types using finfo.",
-                "ext-zlib": "Allows handling gzip compressed responses.",
-                "lib-curl": "Allows using cURL as a request backend.",
-                "lib-openssl": "Allows handling SSL requests when not using cURL."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-trunk": "2.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "HTTP_Request2": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "include-path": [
-                "./"
-            ],
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Alexey Borzov",
-                    "email": "avb@php.net"
-                }
-            ],
-            "description": "Provides an easy way to perform HTTP requests.",
-            "homepage": "http://pear.php.net/package/HTTP_Request2",
-            "keywords": [
-                "PEAR",
-                "curl",
-                "http",
-                "request"
-            ],
-            "time": "2016-02-13T20:20:39+00:00"
-        },
-        {
-            "name": "pear/net_url2",
-            "version": "v2.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pear/Net_URL2.git",
-                "reference": "07fd055820dbf466ee3990abe96d0e40a8791f9d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pear/Net_URL2/zipball/07fd055820dbf466ee3990abe96d0e40a8791f9d",
-                "reference": "07fd055820dbf466ee3990abe96d0e40a8791f9d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.1.4"
-            },
             "require-dev": {
-                "phpunit/phpunit": ">=3.3.0"
+                "phpunit/phpunit": "4.*|5.*"
+            },
+            "suggest": {
+                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2.x-dev"
-                }
-            },
             "autoload": {
-                "classmap": [
-                    "Net/URL2.php"
+                "files": [
+                    "lib/random.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
-            "include-path": [
-                "./"
-            ],
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "David Coallier",
-                    "email": "davidc@php.net"
-                },
-                {
-                    "name": "Tom Klingenberg",
-                    "email": "tkli@php.net"
-                },
-                {
-                    "name": "Christian Schmidt",
-                    "email": "chmidt@php.net"
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com"
                 }
             ],
-            "description": "Class for parsing and handling URL. Provides parsing of URLs into their constituent parts (scheme, host, path etc.), URL generation, and resolving of relative URLs.",
-            "homepage": "https://github.com/pear/Net_URL2",
+            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
             "keywords": [
-                "PEAR",
-                "net",
-                "networking",
-                "rfc3986",
-                "uri",
-                "url"
+                "csprng",
+                "polyfill",
+                "pseudorandom",
+                "random"
             ],
-            "time": "2017-08-25T06:16:11+00:00"
-        },
-        {
-            "name": "pear/pear_exception",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pear/PEAR_Exception.git",
-                "reference": "8c18719fdae000b690e3912be401c76e406dd13b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pear/PEAR_Exception/zipball/8c18719fdae000b690e3912be401c76e406dd13b",
-                "reference": "8c18719fdae000b690e3912be401c76e406dd13b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=4.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "*"
-            },
-            "type": "class",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "PEAR": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "include-path": [
-                "."
-            ],
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Helgi Thormar",
-                    "email": "dufuz@php.net"
-                },
-                {
-                    "name": "Greg Beaver",
-                    "email": "cellog@php.net"
-                }
-            ],
-            "description": "The PEAR Exception base class.",
-            "homepage": "https://github.com/pear/PEAR_Exception",
-            "keywords": [
-                "exception"
-            ],
-            "time": "2015-02-10T20:07:52+00:00"
+            "time": "2019-01-03T20:59:08+00:00"
         },
         {
             "name": "psr/http-message",
@@ -1698,132 +1571,61 @@
             "time": "2016-10-10T12:19:37+00:00"
         },
         {
-            "name": "rkw/rkw-alerts",
-            "version": "v7.6.6-stable",
+            "name": "ralouphie/getallheaders",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwAlerts.git",
-                "reference": "6380e46bb76a5e52485586bb4a903aa128780f89"
+                "url": "https://github.com/ralouphie/getallheaders.git",
+                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwAlerts/zipball/6380e46bb76a5e52485586bb4a903aa128780f89",
-                "reference": "6380e46bb76a5e52485586bb4a903aa128780f89",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": ">=7.6.10 <=8.7.99",
-                "rkw/rkw-mailer": ">=7.6.10 <=8.7.99",
-                "rkw/rkw-projects": ">=7.6.10 <=8.7.99",
-                "rkw/rkw-registration": ">=7.6.10 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
+                "php": ">=5.3"
             },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_alerts"
-                }
+            "require-dev": {
+                "phpunit/phpunit": "~3.7.0",
+                "satooshi/php-coveralls": ">=1.0"
             },
+            "type": "library",
             "autoload": {
-                "psr-4": {
-                    "RKW\\RkwAlerts\\": "Classes/"
-                }
+                "files": [
+                    "src/getallheaders.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
+                    "name": "Ralph Khattar",
+                    "email": "ralph.khattar@gmail.com"
                 }
             ],
-            "description": "Sends e-mail-alerts for news in projects",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "TYPO3 CMS",
-                "alerts"
-            ],
-            "time": "2019-02-08T08:05:39+00:00"
-        },
-        {
-            "name": "rkw/rkw-authors",
-            "version": "v7.6.13-stable",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwAuthors.git",
-                "reference": "57048d62ba32483621b5dad6b2be63aed4ed85aa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwAuthors/zipball/57048d62ba32483621b5dad6b2be63aed4ed85aa",
-                "reference": "57048d62ba32483621b5dad6b2be63aed4ed85aa",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_authors"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwAuthors\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://faesslerweb.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "List and details for authors and employees",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "Authors List",
-                "Employee List",
-                "RKW",
-                "TYPO3 CMS"
-            ],
-            "time": "2019-02-05T14:06:54+00:00"
+            "description": "A polyfill for getallheaders.",
+            "time": "2016-02-11T07:05:27+00:00"
         },
         {
             "name": "rkw/rkw-basics",
-            "version": "v8.7.3-stable",
+            "version": "v8.7.4-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwBasics.git",
-                "reference": "f7e4be6588487602876ebc8ad7bef8a2c479561e"
+                "reference": "505278713111577f5f4c99868f7012c94c155d46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/f7e4be6588487602876ebc8ad7bef8a2c479561e",
-                "reference": "f7e4be6588487602876ebc8ad7bef8a2c479561e",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/505278713111577f5f4c99868f7012c94c155d46",
+                "reference": "505278713111577f5f4c99868f7012c94c155d46",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
                 "php": ">=5.6",
                 "typo3/cms-core": "^7.6.0 || ^8.7.0"
             },
@@ -1862,193 +1664,20 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2019-02-08T10:22:34+00:00"
-        },
-        {
-            "name": "rkw/rkw-consultant",
-            "version": "v7.6.4-stable",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RKWConsultant.git",
-                "reference": "19936b57f8c5ce709284f68f800c298fbdcaf0ad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RKWConsultant/zipball/19936b57f8c5ce709284f68f800c298fbdcaf0ad",
-                "reference": "19936b57f8c5ce709284f68f800c298fbdcaf0ad",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
-                "rkw/rkw-geolocation": ">=7.6.10 <=8.7.99",
-                "rkw/rkw-mailer": ">=7.6.0 <=8.7.99",
-                "rkw/rkw-registration": ">=7.6.10 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_consultant"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwConsultant\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://faesslerweb.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "List and details for authors and employees",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "Consultant List",
-                "Consultant Location Search",
-                "RKW",
-                "TYPO3 CMS"
-            ],
-            "time": "2019-02-05T14:06:09+00:00"
-        },
-        {
-            "name": "rkw/rkw-ecosystem",
-            "version": "v7.6.5-beta",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwEcosystem.git",
-                "reference": "d0be59fb0f933db8bf0c9fc9783dfe82380bc524"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEcosystem/zipball/d0be59fb0f933db8bf0c9fc9783dfe82380bc524",
-                "reference": "d0be59fb0f933db8bf0c9fc9783dfe82380bc524",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
-                "rkw/rkw-mailer": ">=7.6.10 <=8.7.99",
-                "rkw/rkw-registration": ">=7.6.10 <=8.7.99",
-                "spipu/html2pdf": "^5.0",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_ecosystem"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwEcosystem\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://faesslerweb.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for exploring entrepreneurship ecosystems",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "Entrepreneurship Ecosystem",
-                "RKW",
-                "TYPO3 CMS"
-            ],
-            "time": "2019-02-06T14:37:27+00:00"
-        },
-        {
-            "name": "rkw/rkw-etracker",
-            "version": "v8.7.0-beta",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwEtracker.git",
-                "reference": "29e1060c4b51200aa846d57300df897d28c4844d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEtracker/zipball/29e1060c4b51200aa846d57300df897d28c4844d",
-                "reference": "29e1060c4b51200aa846d57300df897d28c4844d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": ">=8.7.0",
-                "rkw/rkw-mailer": ">=8.7.0",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_etracker"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwEtracker\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for integration of eTracker analytics",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "E-Tracker",
-                "RKW",
-                "TYPO3 CMS"
-            ],
-            "time": "2019-02-05T12:59:38+00:00"
+            "time": "2019-03-05T06:45:16+00:00"
         },
         {
             "name": "rkw/rkw-events",
-            "version": "v8.7.8-beta",
+            "version": "v8.7.11-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwEvents.git",
-                "reference": "c92689151365db3a215beebdfd480d6d9e11912f"
+                "reference": "57f83ef434c105c586692f861d94680e24f1d961"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/c92689151365db3a215beebdfd480d6d9e11912f",
-                "reference": "c92689151365db3a215beebdfd480d6d9e11912f",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/57f83ef434c105c586692f861d94680e24f1d961",
+                "reference": "57f83ef434c105c586692f861d94680e24f1d961",
                 "shasum": ""
             },
             "require": {
@@ -2100,7 +1729,7 @@
                 "TYPO3 CMS",
                 "events"
             ],
-            "time": "2019-02-08T10:36:40+00:00"
+            "time": "2019-03-04T06:55:01+00:00"
         },
         {
             "name": "rkw/rkw-geolocation",
@@ -2159,125 +1788,17 @@
             "time": "2019-01-23T14:47:48+00:00"
         },
         {
-            "name": "rkw/rkw-graphics",
-            "version": "v7.6.0-alpha",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwGraphics.git",
-                "reference": "c52725353c1e2b02447e3487c54c2fd4b945c303"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwGraphics/zipball/c52725353c1e2b02447e3487c54c2fd4b945c303",
-                "reference": "c52725353c1e2b02447e3487c54c2fd4b945c303",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_graphics"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwGraphics\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for displaying charts with ApexCharts",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "E-Mails",
-                "RKW",
-                "TYPO3 CMS",
-                "newsletter"
-            ],
-            "time": "2019-02-08T15:09:29+00:00"
-        },
-        {
-            "name": "rkw/rkw-info-layer",
-            "version": "v7.6.3-stable",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwInfoLayer.git",
-                "reference": "adeb239e04b3914cff200aa33a94eb4df3a657dd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwInfoLayer/zipball/adeb239e04b3914cff200aa33a94eb4df3a657dd",
-                "reference": "adeb239e04b3914cff200aa33a94eb4df3a657dd",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_info_layer"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwInfoLayer\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Jeffrey Nellissen",
-                    "email": "nellissen@bergisch-media.de",
-                    "homepage": "https://www.bergisch-media.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for info layers and cookie hint",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "Cookie Hint",
-                "Infolayer",
-                "RKW",
-                "TYPO3 CMS",
-                "overlay"
-            ],
-            "time": "2019-01-23T14:46:25+00:00"
-        },
-        {
             "name": "rkw/rkw-mailer",
-            "version": "v8.7.2-alpha",
+            "version": "v8.7.2-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwMailer.git",
-                "reference": "182c20bdb71baad0d121fbb1d25511e73b7213b8"
+                "reference": "a03681cf13ae1af0b5a45bb921ec5f085ef545ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/182c20bdb71baad0d121fbb1d25511e73b7213b8",
-                "reference": "182c20bdb71baad0d121fbb1d25511e73b7213b8",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/a03681cf13ae1af0b5a45bb921ec5f085ef545ec",
+                "reference": "a03681cf13ae1af0b5a45bb921ec5f085ef545ec",
                 "shasum": ""
             },
             "require": {
@@ -2322,250 +1843,20 @@
                 "TYPO3 CMS",
                 "newsletter"
             ],
-            "time": "2019-02-06T13:20:03+00:00"
-        },
-        {
-            "name": "rkw/rkw-newsletter",
-            "version": "v7.6.8-beta",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwNewsletter.git",
-                "reference": "1a016ac0002b1f7a69970d8f63d21c5b06cf0287"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwNewsletter/zipball/1a016ac0002b1f7a69970d8f63d21c5b06cf0287",
-                "reference": "1a016ac0002b1f7a69970d8f63d21c5b06cf0287",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
-                "rkw/rkw-mailer": ">=7.6.13 <=8.7.99",
-                "rkw/rkw-registration": ">=7.6.10 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_newsletter"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwNewsletter\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for editing and sending newsletters",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "TYPO3 CMS",
-                "newsletter"
-            ],
-            "time": "2019-02-08T08:15:32+00:00"
-        },
-        {
-            "name": "rkw/rkw-order",
-            "version": "v8.7.1-alpha",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwOrder.git",
-                "reference": "33edfbf2b2a450f5acd7db2363f8609f260af3ee"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwOrder/zipball/33edfbf2b2a450f5acd7db2363f8609f260af3ee",
-                "reference": "33edfbf2b2a450f5acd7db2363f8609f260af3ee",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": ">=8.7.2",
-                "rkw/rkw-mailer": ">=8.7.1",
-                "rkw/rkw-registration": ">=8.7.0",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_order"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwOrder\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for ordering publications",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "Bookstore",
-                "RKW",
-                "TYPO3 CMS"
-            ],
-            "time": "2019-02-06T13:24:50+00:00"
-        },
-        {
-            "name": "rkw/rkw-projects",
-            "version": "v7.6.11-stable",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwProjects.git",
-                "reference": "6ca96c66071d6e97a948911a3c1e6219fef5e232"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/6ca96c66071d6e97a948911a3c1e6219fef5e232",
-                "reference": "6ca96c66071d6e97a948911a3c1e6219fef5e232",
-                "shasum": ""
-            },
-            "require": {
-                "rkw/rkw-authors": ">=7.6.10 <=8.7.99",
-                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_projects"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwProjects\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for project-details",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "TYPO3 CMS",
-                "projects"
-            ],
-            "time": "2019-02-05T13:30:26+00:00"
-        },
-        {
-            "name": "rkw/rkw-quickcheck",
-            "version": "v7.6.3-stable",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwQuickcheck.git",
-                "reference": "0637ca48025d40d42a5c575e0cd97ca21b8b0c44"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwQuickcheck/zipball/0637ca48025d40d42a5c575e0cd97ca21b8b0c44",
-                "reference": "0637ca48025d40d42a5c575e0cd97ca21b8b0c44",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_quickcheck"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwQuickcheck\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for simple online-checks",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "Online-Check",
-                "RKW",
-                "TYPO3 CMS"
-            ],
-            "time": "2019-01-23T15:16:38+00:00"
+            "time": "2019-02-27T15:43:10+00:00"
         },
         {
             "name": "rkw/rkw-registration",
-            "version": "v8.7.1-alpha",
+            "version": "v8.7.0-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwRegistration.git",
-                "reference": "ef2ad0dc04bbc7e681192d7f4587cff62b91e4aa"
+                "reference": "afd37f3eaaf794d84e2d7f92e6b7bd99d5eb90ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/ef2ad0dc04bbc7e681192d7f4587cff62b91e4aa",
-                "reference": "ef2ad0dc04bbc7e681192d7f4587cff62b91e4aa",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/afd37f3eaaf794d84e2d7f92e6b7bd99d5eb90ea",
+                "reference": "afd37f3eaaf794d84e2d7f92e6b7bd99d5eb90ea",
                 "shasum": ""
             },
             "require": {
@@ -2614,350 +1905,20 @@
                 "register",
                 "registration"
             ],
-            "time": "2019-02-06T13:22:58+00:00"
-        },
-        {
-            "name": "rkw/rkw-related",
-            "version": "v7.6.4-stable",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwRelated.git",
-                "reference": "aefcb8c0e610a1191cc7eb8a7510d4d3aa7107e0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRelated/zipball/aefcb8c0e610a1191cc7eb8a7510d4d3aa7107e0",
-                "reference": "aefcb8c0e610a1191cc7eb8a7510d4d3aa7107e0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
-                "rkw/rkw-projects": ">=7.6.10 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_related"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwRelated\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for related content",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "Related Content",
-                "TYPO3 CMS"
-            ],
-            "time": "2019-02-05T13:38:45+00:00"
-        },
-        {
-            "name": "rkw/rkw-resourcespace",
-            "version": "v7.6.3-beta",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwResourcespace.git",
-                "reference": "383b5407c7edbc794c160da49f2fc3d8dfaec09d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwResourcespace/zipball/383b5407c7edbc794c160da49f2fc3d8dfaec09d",
-                "reference": "383b5407c7edbc794c160da49f2fc3d8dfaec09d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_resourcespace"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwResourcespace\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for connection to Resourcespace",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "Resourcespace",
-                "TYPO3 CMS"
-            ],
-            "time": "2019-02-05T13:40:21+00:00"
-        },
-        {
-            "name": "rkw/rkw-rss",
-            "version": "v7.6.3-beta",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwRss.git",
-                "reference": "da5ec0aef24347d6e2fc1ea9befb24173711a88d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRss/zipball/da5ec0aef24347d6e2fc1ea9befb24173711a88d",
-                "reference": "da5ec0aef24347d6e2fc1ea9befb24173711a88d",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_rss"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwRss\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for related content",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "Related Content",
-                "TYPO3 CMS"
-            ],
-            "time": "2019-01-23T14:37:38+00:00"
-        },
-        {
-            "name": "rkw/rkw-search",
-            "version": "v7.6.8-beta",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwSearch.git",
-                "reference": "876a4756538b62fb58ad62bcd00731b621cc8d9a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwSearch/zipball/876a4756538b62fb58ad62bcd00731b621cc8d9a",
-                "reference": "876a4756538b62fb58ad62bcd00731b621cc8d9a",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/orientdb-odm": "dev-master@dev",
-                "orientdb-php/orientdb-php": "dev-master@dev",
-                "php": ">=5.6",
-                "rkw/rkw-authors": ">=7.6.10 <=8.7.99",
-                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
-                "rkw/rkw-geolocation": ">=7.6.10 <=8.7.99",
-                "rkw/rkw-projects": ">=7.6.10 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_search"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwSearch\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for a semantic search based on OrientDb",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "Semantic Search",
-                "TYPO3 CMS",
-                "orientdb"
-            ],
-            "time": "2019-02-08T07:07:07+00:00"
-        },
-        {
-            "name": "rkw/rkw-soap",
-            "version": "v8.7.2-alpha",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwSoap.git",
-                "reference": "e0977904f200bb8fbb487a4a029442503275ade5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwSoap/zipball/e0977904f200bb8fbb487a4a029442503275ade5",
-                "reference": "e0977904f200bb8fbb487a4a029442503275ade5",
-                "shasum": ""
-            },
-            "require": {
-                "ext-soap": "*",
-                "php": ">=5.6",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "conflict": {
-                "rkw/rkw-basics": "<8.7.2",
-                "rkw/rkw-mailer": "<8.7.1",
-                "rkw/rkw-order": "<8.7",
-                "rkw/rkw-registration": "<8.7"
-            },
-            "suggest": {
-                "rkw/rkw-basics": "~8.7.2",
-                "rkw/rkw-mailer": "~8.7.1",
-                "rkw/rkw-order": "~8.7.0",
-                "rkw/rkw-registration": "~8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_soap"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwSoap\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for a connecting to TYPO3 via SOAP",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "TYPO3 CMS",
-                "soap"
-            ],
-            "time": "2019-02-06T10:38:13+00:00"
-        },
-        {
-            "name": "rkw/rkw-survey",
-            "version": "v7.6.3-beta",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwSurvey.git",
-                "reference": "320a3ad289d059873737dffca24568e8c68bb8dd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwSurvey/zipball/320a3ad289d059873737dffca24568e8c68bb8dd",
-                "reference": "320a3ad289d059873737dffca24568e8c68bb8dd",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-mailer": ">=7.6.10 <=8.7.99",
-                "rkw/rkw-registration": ">=7.6.10 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_survey"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwSurvey\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for surveys via TYPO3",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "Related Content",
-                "TYPO3 CMS"
-            ],
-            "time": "2019-02-05T13:50:02+00:00"
+            "time": "2019-02-27T11:29:22+00:00"
         },
         {
             "name": "rkw/rkw-template",
-            "version": "v7.6.7-beta",
+            "version": "v7.6.8-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwTemplate.git",
-                "reference": "2b236c6ec326e3affcf804c6f758a62bcc824304"
+                "reference": "31763dc0d42ecf2f514f17f3dd017cdeee4ba7c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwTemplate/zipball/2b236c6ec326e3affcf804c6f758a62bcc824304",
-                "reference": "2b236c6ec326e3affcf804c6f758a62bcc824304",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwTemplate/zipball/31763dc0d42ecf2f514f17f3dd017cdeee4ba7c1",
+                "reference": "31763dc0d42ecf2f514f17f3dd017cdeee4ba7c1",
                 "shasum": ""
             },
             "require": {
@@ -2995,197 +1956,22 @@
                 "TYPO3 CMS",
                 "templates"
             ],
-            "time": "2019-02-08T08:41:35+00:00"
-        },
-        {
-            "name": "rkw/rkw-tools",
-            "version": "v7.6.6-beta",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwTools.git",
-                "reference": "4eaeae4a45b63eb44ac56757f3522c1b885130ba"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwTools/zipball/4eaeae4a45b63eb44ac56757f3522c1b885130ba",
-                "reference": "4eaeae4a45b63eb44ac56757f3522c1b885130ba",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
-                "rkw/rkw-projects": ">=7.6.10 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_tools"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwTools\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for listing tools (PDFs, WebApps etc.) with metadata and filters",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "TYPO3 CMS",
-                "tools"
-            ],
-            "time": "2019-02-05T14:57:00+00:00"
-        },
-        {
-            "name": "rkw/rkw-webcheck",
-            "version": "v7.6.9-stable",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwWebcheck.git",
-                "reference": "f19c98cce20b24227204bf817ea0ab5d286feb66"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwWebcheck/zipball/f19c98cce20b24227204bf817ea0ab5d286feb66",
-                "reference": "f19c98cce20b24227204bf817ea0ab5d286feb66",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
-                "rkw/rkw-mailer": ">=7.6.10 <=8.7.99",
-                "rkw/rkw-registration": ">=7.6.10 <=8.7.99",
-                "spipu/html2pdf": "^5.0",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_webcheck"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwWebcheck\\": "Classes"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Philipp Grigoleit",
-                    "email": "p.grigoleit@agentur-fahrenheit.de",
-                    "homepage": "https://www.agentur-fahrenheit.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Salih Özdemirr",
-                    "email": "s.oezdemir@agentur-fahrenheit.de",
-                    "homepage": "https://www.agentur-fahrenheit.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for Online-Checks with benchmarks and serveral categories",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "Online-Check",
-                "RKW",
-                "TYPO3 CMS",
-                "benchmarks"
-            ],
-            "time": "2019-02-05T14:01:38+00:00"
-        },
-        {
-            "name": "rkw/rkw-wepstra",
-            "version": "v7.6.8-stable",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwWepstra.git",
-                "reference": "10c8f3aceae89509035a736e3dc6f2eba70fcc7b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwWepstra/zipball/10c8f3aceae89509035a736e3dc6f2eba70fcc7b",
-                "reference": "10c8f3aceae89509035a736e3dc6f2eba70fcc7b",
-                "shasum": ""
-            },
-            "require": {
-                "rkw/rkw-mailer": ">=7.6.10 <=8.7.99",
-                "rkw/rkw-registration": ">=7.6.10 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_wepstra"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwWepstra\\": "Classes"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for WePstra-Project",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "TYPO3 CMS"
-            ],
-            "time": "2019-02-05T14:03:13+00:00"
+            "time": "2019-02-26T13:51:26+00:00"
         },
         {
             "name": "sjbr/static-info-tables",
-            "version": "6.3.10",
+            "version": "6.7.4",
             "source": {
                 "type": "git",
                 "url": "https://git.typo3.org/TYPO3CMS/Extensions/static_info_tables.git",
-                "reference": "b425d70ffc072a7a7976a1c1247f5670caaf8f6e"
+                "reference": "a509e63b2e752fb943086dfe95f5ec5b335f7cf3"
             },
             "require": {
-                "typo3/cms-core": ">=6.2,<8.0"
+                "php": ">= 7.0, <7.3",
+                "typo3/cms-core": ">=8.7, <10.0"
             },
             "replace": {
-                "sjbr/static_info_tables": "*",
-                "static_info_tables": "*",
+                "static_info_tables": "self.version",
                 "typo3-ter/static-info-tables": "self.version"
             },
             "type": "typo3-cms-extension",
@@ -3201,66 +1987,20 @@
             "authors": [
                 {
                     "name": "Stanislas Rolland",
+                    "homepage": "https://www.sjbr.ca",
                     "role": "Developer"
-                }
-            ],
-            "description": "Data and API for countries, languages and currencies.",
-            "homepage": "https://forge.typo3.org/projects/extension-static_info_tables",
-            "time": "2016-07-14T22:24:44+00:00"
-        },
-        {
-            "name": "spipu/html2pdf",
-            "version": "v5.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spipu/html2pdf.git",
-                "reference": "7dca57b61fdb2d6920635ff2332dbc82d4be19f3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spipu/html2pdf/zipball/7dca57b61fdb2d6920635ff2332dbc82d4be19f3",
-                "reference": "7dca57b61fdb2d6920635ff2332dbc82d4be19f3",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": "^5.4 || ^7.0",
-                "tecnickcom/tcpdf": "^6.2"
-            },
-            "require-dev": {
-                "phake/phake": "^2.0",
-                "phpunit/phpunit": "^4.0 || ^5.0",
-                "squizlabs/php_codesniffer": "^3.0"
-            },
-            "suggest": {
-                "ext-gd": "Allows to embed images into the PDF",
-                "fagundes/zff-html2pdf": "if you need to integrate Html2Pdf with Zend Framework 2 (zf2)"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spipu\\Html2Pdf\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
+                },
                 {
-                    "name": "Spipu",
-                    "homepage": "https://github.com/spipu",
+                    "name": "René Fritz",
                     "role": "Developer"
                 }
             ],
-            "description": "Html2Pdf is a HTML to PDF converter written in PHP5 (it uses TCPDF). OFFICIAL PACKAGE",
-            "homepage": "http://html2pdf.fr/",
+            "description": "Data and API for countries, languages and currencies for use in TYPO3 CMS.",
+            "homepage": "https://forge.typo3.org/projects/extension-static_info_tables",
             "keywords": [
-                "html",
-                "html2pdf",
-                "pdf"
+                "typo3"
             ],
-            "time": "2018-10-26T13:33:18+00:00"
+            "time": "2019-01-04T17:20:29+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3317,94 +2057,49 @@
             "time": "2018-07-31T09:26:32+00:00"
         },
         {
-            "name": "symfony/class-loader",
-            "version": "v3.4.22",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/class-loader.git",
-                "reference": "4459eef5298dedfb69f771186a580062b8516497"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/class-loader/zipball/4459eef5298dedfb69f771186a580062b8516497",
-                "reference": "4459eef5298dedfb69f771186a580062b8516497",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5.9|>=7.0.8"
-            },
-            "require-dev": {
-                "symfony/finder": "~2.8|~3.0|~4.0",
-                "symfony/polyfill-apcu": "~1.1"
-            },
-            "suggest": {
-                "symfony/polyfill-apcu": "For using ApcClassLoader on HHVM"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\ClassLoader\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony ClassLoader Component",
-            "homepage": "https://symfony.com",
-            "time": "2019-01-16T09:39:14+00:00"
-        },
-        {
             "name": "symfony/console",
-            "version": "v2.8.49",
+            "version": "v3.4.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "cbcf4b5e233af15cd2bbd50dee1ccc9b7927dc12"
+                "reference": "71ce77f37af0c5ffb9590e43cc4f70e426945c5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/cbcf4b5e233af15cd2bbd50dee1ccc9b7927dc12",
-                "reference": "cbcf4b5e233af15cd2bbd50dee1ccc9b7927dc12",
+                "url": "https://api.github.com/repos/symfony/console/zipball/71ce77f37af0c5ffb9590e43cc4f70e426945c5e",
+                "reference": "71ce77f37af0c5ffb9590e43cc4f70e426945c5e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9",
-                "symfony/debug": "^2.7.2|~3.0.0",
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/debug": "~2.8|~3.0|~4.0",
                 "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "symfony/dependency-injection": "<3.4",
+                "symfony/process": "<3.3"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0"
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/event-dispatcher": "~2.1|~3.0.0",
-                "symfony/process": "~2.1|~3.0.0"
+                "symfony/config": "~3.3|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/event-dispatcher": "~2.8|~3.0|~4.0",
+                "symfony/lock": "~3.4|~4.0",
+                "symfony/process": "~3.3|~4.0"
             },
             "suggest": {
-                "psr/log-implementation": "For using the console logger",
+                "psr/log": "For using the console logger",
                 "symfony/event-dispatcher": "",
+                "symfony/lock": "",
                 "symfony/process": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -3431,37 +2126,36 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-11-20T15:55:20+00:00"
+            "time": "2019-02-23T15:06:07+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v2.8.49",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "74251c8d50dd3be7c4ce0c7b862497cdc641a5d0"
+                "reference": "de73f48977b8eaf7ce22814d66e43a1662cc864f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/74251c8d50dd3be7c4ce0c7b862497cdc641a5d0",
-                "reference": "74251c8d50dd3be7c4ce0c7b862497cdc641a5d0",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/de73f48977b8eaf7ce22814d66e43a1662cc864f",
+                "reference": "de73f48977b8eaf7ce22814d66e43a1662cc864f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9",
+                "php": "^7.1.3",
                 "psr/log": "~1.0"
             },
             "conflict": {
-                "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
+                "symfony/http-kernel": "<3.4"
             },
             "require-dev": {
-                "symfony/class-loader": "~2.2|~3.0.0",
-                "symfony/http-kernel": "~2.3.24|~2.5.9|^2.6.2|~3.0.0"
+                "symfony/http-kernel": "~3.4|~4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -3488,89 +2182,29 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-11-11T11:18:13+00:00"
-        },
-        {
-            "name": "symfony/event-dispatcher",
-            "version": "v2.8.49",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "a77e974a5fecb4398833b0709210e3d5e334ffb0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a77e974a5fecb4398833b0709210e3d5e334ffb0",
-                "reference": "a77e974a5fecb4398833b0709210e3d5e334ffb0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/config": "^2.0.5|~3.0.0",
-                "symfony/dependency-injection": "~2.6|~3.0.0",
-                "symfony/expression-language": "~2.6|~3.0.0",
-                "symfony/stopwatch": "~2.3|~3.0.0"
-            },
-            "suggest": {
-                "symfony/dependency-injection": "",
-                "symfony/http-kernel": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\EventDispatcher\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony EventDispatcher Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-11-21T14:20:20+00:00"
+            "time": "2019-03-03T18:11:24+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v2.8.49",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "1444eac52273e345d9b95129bf914639305a9ba4"
+                "reference": "267b7002c1b70ea80db0833c3afe05f0fbde580a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/1444eac52273e345d9b95129bf914639305a9ba4",
-                "reference": "1444eac52273e345d9b95129bf914639305a9ba4",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/267b7002c1b70ea80db0833c3afe05f0fbde580a",
+                "reference": "267b7002c1b70ea80db0833c3afe05f0fbde580a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9"
+                "php": "^7.1.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -3597,7 +2231,61 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-11-11T11:18:13+00:00"
+            "time": "2019-02-23T15:42:05+00:00"
+        },
+        {
+            "name": "symfony/options-resolver",
+            "version": "v4.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/options-resolver.git",
+                "reference": "3896e5a7d06fd15fa4947694c8dcdd371ff147d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/3896e5a7d06fd15fa4947694c8dcdd371ff147d1",
+                "reference": "3896e5a7d06fd15fa4947694c8dcdd371ff147d1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\OptionsResolver\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony OptionsResolver Component",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "config",
+                "configuration",
+                "options"
+            ],
+            "time": "2019-02-23T15:17:42+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -3718,7 +2406,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.22",
+            "version": "v3.4.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -3766,66 +2454,63 @@
             "time": "2019-01-16T13:27:11+00:00"
         },
         {
-            "name": "tecnickcom/tcpdf",
-            "version": "6.2.26",
+            "name": "symfony/yaml",
+            "version": "v3.4.23",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tecnickcom/TCPDF.git",
-                "reference": "367241059ca166e3a76490f4448c284e0a161f15"
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "57f1ce82c997f5a8701b89ef970e36bb657fd09c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/367241059ca166e3a76490f4448c284e0a161f15",
-                "reference": "367241059ca166e3a76490f4448c284e0a161f15",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/57f1ce82c997f5a8701b89ef970e36bb657fd09c",
+                "reference": "57f1ce82c997f5a8701b89ef970e36bb657fd09c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "conflict": {
+                "symfony/console": "<3.4"
+            },
+            "require-dev": {
+                "symfony/console": "~3.4|~4.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
             "autoload": {
-                "classmap": [
-                    "config",
-                    "include",
-                    "tcpdf.php",
-                    "tcpdf_parser.php",
-                    "tcpdf_import.php",
-                    "tcpdf_barcodes_1d.php",
-                    "tcpdf_barcodes_2d.php",
-                    "include/tcpdf_colors.php",
-                    "include/tcpdf_filters.php",
-                    "include/tcpdf_font_data.php",
-                    "include/tcpdf_fonts.php",
-                    "include/tcpdf_images.php",
-                    "include/tcpdf_static.php",
-                    "include/barcodes/datamatrix.php",
-                    "include/barcodes/pdf417.php",
-                    "include/barcodes/qrcode.php"
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL-3.0"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Nicola Asuni",
-                    "email": "info@tecnick.com",
-                    "role": "lead"
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "TCPDF is a PHP class for generating PDF documents and barcodes.",
-            "homepage": "http://www.tcpdf.org/",
-            "keywords": [
-                "PDFD32000-2008",
-                "TCPDF",
-                "barcodes",
-                "datamatrix",
-                "pdf",
-                "pdf417",
-                "qrcode"
-            ],
-            "time": "2018-10-16T17:24:05+00:00"
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-02-23T15:06:07+00:00"
         },
         {
             "name": "typo3/class-alias-loader",
@@ -3887,49 +2572,49 @@
         },
         {
             "name": "typo3/cms",
-            "version": "v7.6.32",
+            "version": "v8.7.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/TYPO3.CMS.git",
-                "reference": "1ce6676d49ca38fe1ca742ea98844747447a1c24"
+                "reference": "f4a2203ba866cadfa2ee3de044cb8add7c52c6ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/TYPO3.CMS/zipball/1ce6676d49ca38fe1ca742ea98844747447a1c24",
-                "reference": "1ce6676d49ca38fe1ca742ea98844747447a1c24",
+                "url": "https://api.github.com/repos/TYPO3/TYPO3.CMS/zipball/f4a2203ba866cadfa2ee3de044cb8add7c52c6ab",
+                "reference": "f4a2203ba866cadfa2ee3de044cb8add7c52c6ab",
                 "shasum": ""
             },
             "require": {
                 "cogpowered/finediff": "~0.3.1",
+                "doctrine/dbal": "~2.5.4",
                 "doctrine/instantiator": "~1.0.4",
+                "doctrine/lexer": "^1.0",
                 "ext-json": "*",
                 "ext-pcre": "*",
                 "ext-session": "*",
                 "ext-xml": "*",
-                "mso/idna-convert": "^0.9.1",
-                "pear/http_request2": "~2.3.0",
-                "php": ">=5.5.0",
+                "guzzlehttp/guzzle": "^6.3.0",
+                "mso/idna-convert": "^1.1.0",
+                "php": "^7.0 <7.4",
                 "psr/http-message": "~1.0",
                 "psr/log": "~1.0.0",
                 "swiftmailer/swiftmailer": "~5.4.5",
-                "symfony/console": "^2.7",
-                "symfony/debug": "^2.7",
-                "symfony/finder": "^2.7",
+                "symfony/console": "^2.7 || ^3.0 || ^4.0",
+                "symfony/finder": "^2.7 || ^3.0 || ^4.0",
+                "symfony/polyfill-mbstring": "^1.2",
+                "symfony/yaml": "^2.7 || ^3.0 || ^4.0",
                 "typo3/class-alias-loader": "^1.0",
+                "typo3/cms-cli": "^1.0.2",
                 "typo3/cms-composer-installers": "^1.2.8",
-                "typo3/phar-stream-wrapper": "^2.0.1"
+                "typo3/phar-stream-wrapper": "^3.0.1",
+                "typo3fluid/fluid": "^2.3"
             },
             "conflict": {
-                "symfony/finder": "2.7.44 || 2.8.37"
+                "symfony/finder": "2.7.44 || 2.8.37 || 3.4.7 || 4.0.7"
             },
             "replace": {
-                "typo3-ter/adodb": "*",
-                "typo3-ter/dbal": "*",
                 "typo3-ter/func": "*",
-                "typo3-ter/rtehtmlarea": "*",
                 "typo3/cms-about": "self.version",
-                "typo3/cms-aboutmodules": "self.version",
-                "typo3/cms-adodb": "self.version",
                 "typo3/cms-backend": "self.version",
                 "typo3/cms-belog": "self.version",
                 "typo3/cms-beuser": "self.version",
@@ -3937,7 +2622,6 @@
                 "typo3/cms-core": "self.version",
                 "typo3/cms-cshmanual": "self.version",
                 "typo3/cms-css-styled-content": "self.version",
-                "typo3/cms-dbal": "self.version",
                 "typo3/cms-documentation": "self.version",
                 "typo3/cms-extbase": "self.version",
                 "typo3/cms-extensionmanager": "self.version",
@@ -3953,7 +2637,6 @@
                 "typo3/cms-func-wizards": "self.version",
                 "typo3/cms-impexp": "self.version",
                 "typo3/cms-indexed-search": "self.version",
-                "typo3/cms-indexed-search-mysql": "self.version",
                 "typo3/cms-info": "self.version",
                 "typo3/cms-info-pagetsconfig": "self.version",
                 "typo3/cms-install": "self.version",
@@ -3965,7 +2648,7 @@
                 "typo3/cms-recycler": "self.version",
                 "typo3/cms-reports": "self.version",
                 "typo3/cms-rsaauth": "self.version",
-                "typo3/cms-rtehtmlarea": "self.version",
+                "typo3/cms-rte-ckeditor": "self.version",
                 "typo3/cms-saltedpasswords": "self.version",
                 "typo3/cms-scheduler": "self.version",
                 "typo3/cms-setup": "self.version",
@@ -3973,7 +2656,6 @@
                 "typo3/cms-sys-action": "self.version",
                 "typo3/cms-sys-note": "self.version",
                 "typo3/cms-t3editor": "self.version",
-                "typo3/cms-t3skin": "self.version",
                 "typo3/cms-taskcenter": "self.version",
                 "typo3/cms-tstemplate": "self.version",
                 "typo3/cms-version": "self.version",
@@ -3983,39 +2665,37 @@
                 "typo3/cms-workspaces": "self.version"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.2",
-                "mikey179/vfsstream": "1.6.0",
-                "phpunit/phpunit": "~4.8.0",
-                "symfony/event-dispatcher": "^2.8",
-                "symfony/filesystem": "^2.8",
-                "symfony/options-resolver": "^2.8",
-                "symfony/polyfill-mbstring": "~1.0",
-                "symfony/process": "^2.8",
-                "symfony/stopwatch": "^2.8",
-                "symfony/yaml": "^2.8"
+                "codeception/codeception": "^2.3",
+                "fiunchinho/phpunit-randomizer": "~3.0.0",
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "typo3/cms-styleguide": "~8.0.15",
+                "typo3/testing-framework": "~1.3.0"
             },
             "suggest": {
                 "ext-fileinfo": "Used for proper file type detection in the file abstraction layer",
                 "ext-gd": "GDlib/Freetype is required for building images with text (GIFBUILDER) and can also be used to scale images",
                 "ext-mysqli": "",
                 "ext-openssl": "",
-                "ext-soap": "",
                 "ext-zip": "",
                 "ext-zlib": "TYPO3 uses zlib for amongst others output compression and un/packing t3x extension files"
             },
             "type": "typo3-cms-core",
             "extra": {
                 "typo3/class-alias-loader": {
-                    "always-add-alias-loader": true
+                    "always-add-alias-loader": true,
+                    "class-alias-maps": [
+                        "typo3/sysext/extbase/Migrations/Code/ClassAliasMap.php",
+                        "typo3/sysext/fluid/Migrations/Code/ClassAliasMap.php",
+                        "typo3/sysext/version/Migrations/Code/ClassAliasMap.php"
+                    ]
                 },
                 "branch-alias": {
-                    "dev-TYPO3_7-6": "7.x-dev"
+                    "dev-TYPO3_8-7": "8.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "TYPO3\\CMS\\About\\": "typo3/sysext/about/Classes/",
-                    "TYPO3\\CMS\\Aboutmodules\\": "typo3/sysext/aboutmodules/Classes/",
                     "TYPO3\\CMS\\Backend\\": "typo3/sysext/backend/Classes/",
                     "TYPO3\\CMS\\Belog\\": "typo3/sysext/belog/Classes/",
                     "TYPO3\\CMS\\Beuser\\": "typo3/sysext/beuser/Classes/",
@@ -4023,7 +2703,6 @@
                     "TYPO3\\CMS\\Core\\": "typo3/sysext/core/Classes/",
                     "TYPO3\\CMS\\Cshmanual\\": "typo3/sysext/cshmanual/Classes/",
                     "TYPO3\\CMS\\CssStyledContent\\": "typo3/sysext/css_styled_content/Classes/",
-                    "TYPO3\\CMS\\Dbal\\": "typo3/sysext/dbal/Classes/",
                     "TYPO3\\CMS\\Documentation\\": "typo3/sysext/documentation/Classes/",
                     "TYPO3\\CMS\\Extbase\\": "typo3/sysext/extbase/Classes/",
                     "TYPO3\\CMS\\Extensionmanager\\": "typo3/sysext/extensionmanager/Classes/",
@@ -4037,7 +2716,6 @@
                     "TYPO3\\CMS\\Func\\": "typo3/sysext/func/Classes/",
                     "TYPO3\\CMS\\Impexp\\": "typo3/sysext/impexp/Classes/",
                     "TYPO3\\CMS\\IndexedSearch\\": "typo3/sysext/indexed_search/Classes/",
-                    "TYPO3\\CMS\\IndexedSearchMysql\\": "typo3/sysext/indexed_search_mysql/Classes/",
                     "TYPO3\\CMS\\Info\\": "typo3/sysext/info/Classes/",
                     "TYPO3\\CMS\\InfoPagetsconfig\\": "typo3/sysext/info_pagetsconfig/Classes/",
                     "TYPO3\\CMS\\Install\\": "typo3/sysext/install/Classes/",
@@ -4049,7 +2727,7 @@
                     "TYPO3\\CMS\\Recycler\\": "typo3/sysext/recycler/Classes/",
                     "TYPO3\\CMS\\Reports\\": "typo3/sysext/reports/Classes/",
                     "TYPO3\\CMS\\Rsaauth\\": "typo3/sysext/rsaauth/Classes/",
-                    "TYPO3\\CMS\\Rtehtmlarea\\": "typo3/sysext/rtehtmlarea/Classes/",
+                    "TYPO3\\CMS\\RteCKEditor\\": "typo3/sysext/rte_ckeditor/Classes/",
                     "TYPO3\\CMS\\Saltedpasswords\\": "typo3/sysext/saltedpasswords/Classes/",
                     "TYPO3\\CMS\\Scheduler\\": "typo3/sysext/scheduler/Classes/",
                     "TYPO3\\CMS\\Setup\\": "typo3/sysext/setup/Classes/",
@@ -4066,8 +2744,7 @@
                     "TYPO3\\CMS\\Workspaces\\": "typo3/sysext/workspaces/Classes/"
                 },
                 "classmap": [
-                    "typo3/sysext/core/Resources/PHP/",
-                    "typo3/sysext/fluid/Resources/PHP/"
+                    "typo3/sysext/core/Resources/PHP/"
                 ],
                 "files": [
                     "typo3/sysext/core/Resources/PHP/GlobalDebugFunctions.php"
@@ -4097,25 +2774,59 @@
                 "extbase",
                 "typo3"
             ],
-            "time": "2018-12-11T12:38:13+00:00"
+            "time": "2019-01-22T15:25:55+00:00"
         },
         {
-            "name": "typo3/cms-composer-installers",
-            "version": "1.3.2",
+            "name": "typo3/cms-cli",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/TYPO3/CmsComposerInstallers.git",
-                "reference": "98fec6f650016c437b29e56487dd349ed062af93"
+                "url": "https://github.com/TYPO3/cms-cli.git",
+                "reference": "c27c3580b384353414d0b4ff61137127798f8189"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/CmsComposerInstallers/zipball/98fec6f650016c437b29e56487dd349ed062af93",
-                "reference": "98fec6f650016c437b29e56487dd349ed062af93",
+                "url": "https://api.github.com/repos/TYPO3/cms-cli/zipball/c27c3580b384353414d0b4ff61137127798f8189",
+                "reference": "c27c3580b384353414d0b4ff61137127798f8189",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "bin": [
+                "typo3"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Cli\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "TYPO3 command line binary",
+            "homepage": "https://typo3.org",
+            "time": "2017-09-06T12:09:47+00:00"
+        },
+        {
+            "name": "typo3/cms-composer-installers",
+            "version": "v1.5.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3/CmsComposerInstallers.git",
+                "reference": "85bb09767d2c39050383f64117373e55ea800611"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3/CmsComposerInstallers/zipball/85bb09767d2c39050383f64117373e55ea800611",
+                "reference": "85bb09767d2c39050383f64117373e55ea800611",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0.0",
-                "php": ">=5.5 <7.3"
+                "php": ">=7.0.0 <7.4"
             },
             "conflict": {
                 "composer/installers": "<1.0.24 || >1.0.24"
@@ -4125,13 +2836,13 @@
                 "netresearch/composer-installers": "*"
             },
             "require-dev": {
-                "composer/composer": "1.*"
+                "composer/composer": "^1.2"
             },
             "type": "composer-plugin",
             "extra": {
                 "class": "TYPO3\\CMS\\Composer\\Installer\\Plugin",
                 "branch-alias": {
-                    "dev-master": "1.3.x-dev"
+                    "dev-master": "1.4.x-dev"
                 }
             },
             "autoload": {
@@ -4141,7 +2852,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -4166,27 +2877,29 @@
                 "installer",
                 "typo3"
             ],
-            "time": "2017-12-04T15:30:33+00:00"
+            "time": "2019-03-04T12:25:01+00:00"
         },
         {
             "name": "typo3/phar-stream-wrapper",
-            "version": "v2.0.1",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/phar-stream-wrapper.git",
-                "reference": "0469d9fefa0146ea4299d3b11cfbb76faa7045bf"
+                "reference": "19edc4e0ca5174764e3c946431b8b00326304944"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/phar-stream-wrapper/zipball/0469d9fefa0146ea4299d3b11cfbb76faa7045bf",
-                "reference": "0469d9fefa0146ea4299d3b11cfbb76faa7045bf",
+                "url": "https://api.github.com/repos/TYPO3/phar-stream-wrapper/zipball/19edc4e0ca5174764e3c946431b8b00326304944",
+                "reference": "19edc4e0ca5174764e3c946431b8b00326304944",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3|^7.0"
+                "ext-fileinfo": "*",
+                "ext-json": "*",
+                "php": "^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.36"
+                "phpunit/phpunit": "^6.5"
             },
             "type": "library",
             "autoload": {
@@ -4206,34 +2919,38 @@
                 "security",
                 "stream-wrapper"
             ],
-            "time": "2018-10-18T08:46:28+00:00"
+            "time": "2019-03-01T23:18:27+00:00"
         },
         {
             "name": "typo3/surf",
-            "version": "2.0.0-beta7",
+            "version": "2.0.0-beta11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/Surf.git",
-                "reference": "17488fc177dc887f1511b5a7cb24e9a8f34fa55e"
+                "reference": "74d6d4f2bf767fba99247f0f92ecb39443f4947f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/Surf/zipball/17488fc177dc887f1511b5a7cb24e9a8f34fa55e",
-                "reference": "17488fc177dc887f1511b5a7cb24e9a8f34fa55e",
+                "url": "https://api.github.com/repos/TYPO3/Surf/zipball/74d6d4f2bf767fba99247f0f92ecb39443f4947f",
+                "reference": "74d6d4f2bf767fba99247f0f92ecb39443f4947f",
                 "shasum": ""
             },
             "require": {
-                "ircmaxell/random-lib": "^1.1",
+                "guzzlehttp/guzzle": "^6.0",
                 "monolog/monolog": "^1.17",
                 "neos/utility-files": "^3.0",
                 "padraic/phar-updater": "^1.0",
-                "psr/log": "^1.0",
-                "symfony/console": "^2.8|^3.0",
-                "symfony/process": "^2.8|^3.0"
+                "paragonie/random_compat": "^2.0",
+                "php": "^5.6 || >=7.0 <7.3",
+                "symfony/console": "^3.0 || ^4.0",
+                "symfony/options-resolver": "^3.0 || ^4.0",
+                "symfony/process": "^3.0 || ^4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8",
-                "symfony/finder": "^2.8|^3.0"
+                "friendsofphp/php-cs-fixer": "^2.13",
+                "phpunit/phpunit": "^5.7 || ^6.5",
+                "sphpdox/sphpdox": "dev-master",
+                "symfony/finder": "^3.0 || ^4.0"
             },
             "bin": [
                 "surf"
@@ -4247,14 +2964,56 @@
             "autoload": {
                 "psr-4": {
                     "TYPO3\\Surf\\": "src"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "TYPO3 Surf is a deployment tool, suited for a wide variety of applications",
+            "time": "2018-12-20T19:17:58+00:00"
+        },
+        {
+            "name": "typo3fluid/fluid",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3/Fluid.git",
+                "reference": "e3533d0b80e4020cf0de7a546efaae25866f898b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3/Fluid/zipball/e3533d0b80e4020cf0de7a546efaae25866f898b",
+                "reference": "e3533d0b80e4020cf0de7a546efaae25866f898b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^4.8",
+                "squizlabs/php_codesniffer": "^2.7"
+            },
+            "bin": [
+                "bin/fluid"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TYPO3Fluid\\Fluid\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-3.0+"
+                "LGPL-3.0-or-later"
             ],
-            "description": "TYPO3 Surf is a deployment tool, suited for a wide variety of applications",
-            "time": "2016-12-12T14:09:33+00:00"
+            "description": "The TYPO3 Fluid template rendering engine",
+            "time": "2018-12-07T14:46:13+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -4311,28 +3070,24 @@
     "packages-dev": [
         {
             "name": "friendsoftypo3/extension-builder",
-            "version": "7.6.0",
+            "version": "v8.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfTYPO3/extension_builder.git",
-                "reference": "2283168217fd239f7e0f636378c02c1a26a2db61"
+                "reference": "20d4d5a2028a928695eaad4a3a0584c33d3eb5a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfTYPO3/extension_builder/zipball/2283168217fd239f7e0f636378c02c1a26a2db61",
-                "reference": "2283168217fd239f7e0f636378c02c1a26a2db61",
+                "url": "https://api.github.com/repos/FriendsOfTYPO3/extension_builder/zipball/20d4d5a2028a928695eaad4a3a0584c33d3eb5a2",
+                "reference": "20d4d5a2028a928695eaad4a3a0584c33d3eb5a2",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": "~7.6"
+                "typo3/cms-core": "~8.7"
             },
             "replace": {
                 "extension_builder": "self.version",
                 "typo3-ter/extension-builder": "self.version"
-            },
-            "require-dev": {
-                "mikey179/vfsstream": "1.6.0",
-                "phpunit/phpunit": "~4.8.0"
             },
             "type": "typo3-cms-extension",
             "extra": {
@@ -4349,7 +3104,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -4368,7 +3123,7 @@
                 "extension_builder",
                 "typo3"
             ],
-            "time": "2017-05-05T19:33:17+00:00"
+            "time": "2019-01-20T11:06:12+00:00"
         },
         {
             "name": "mikey179/vfsStream",
@@ -4464,29 +3219,35 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "3.3.2",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "bf329f6c1aadea3299f08ee804682b7c45b326a2"
+                "reference": "94fd0001232e47129dd3504189fa1c7225010d08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/bf329f6c1aadea3299f08ee804682b7c45b326a2",
-                "reference": "bf329f6c1aadea3299f08ee804682b7c45b326a2",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/94fd0001232e47129dd3504189fa1c7225010d08",
+                "reference": "94fd0001232e47129dd3504189fa1c7225010d08",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0",
+                "php": "^7.0",
                 "phpdocumentor/reflection-common": "^1.0.0",
                 "phpdocumentor/type-resolver": "^0.4.0",
                 "webmozart/assert": "^1.0"
             },
             "require-dev": {
-                "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.4"
+                "doctrine/instantiator": "~1.0.5",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^6.4"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "phpDocumentor\\Reflection\\": [
@@ -4505,7 +3266,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2017-11-10T14:09:06+00:00"
+            "time": "2017-11-30T07:14:17+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -4769,28 +3530,28 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "1.0.9",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "3dcf38ca72b158baf0bc245e9184d3fdffa9c46f"
+                "reference": "8b389aebe1b8b0578430bda0c7c95a829608e059"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/3dcf38ca72b158baf0bc245e9184d3fdffa9c46f",
-                "reference": "3dcf38ca72b158baf0bc245e9184d3fdffa9c46f",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/8b389aebe1b8b0578430bda0c7c95a829608e059",
+                "reference": "8b389aebe1b8b0578430bda0c7c95a829608e059",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3 || ^7.0"
+                "php": "^7.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
+                "phpunit/phpunit": "^7.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "2.1-dev"
                 }
             },
             "autoload": {
@@ -4805,7 +3566,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sb@sebastian-bergmann.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -4814,7 +3575,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2017-02-26T11:10:40+00:00"
+            "time": "2019-02-20T10:12:59+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -5366,61 +4127,6 @@
             "time": "2015-06-21T13:59:46+00:00"
         },
         {
-            "name": "symfony/yaml",
-            "version": "v3.3.18",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "af615970e265543a26ee712c958404eb9b7ac93d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/af615970e265543a26ee712c958404eb9b7ac93d",
-                "reference": "af615970e265543a26ee712c958404eb9b7ac93d",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5.9|>=7.0.8"
-            },
-            "require-dev": {
-                "symfony/console": "~2.8|~3.0"
-            },
-            "suggest": {
-                "symfony/console": "For validating YAML files using the lint command"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Yaml\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Yaml Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-01-20T15:04:53+00:00"
-        },
-        {
             "name": "webmozart/assert",
             "version": "1.4.0",
             "source": {
@@ -5480,10 +4186,10 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "~5.6.0"
+        "php": "~7.2.0"
     },
     "platform-dev": [],
     "platform-overrides": {
-        "php": "5.6"
+        "php": "7.2"
     }
 }

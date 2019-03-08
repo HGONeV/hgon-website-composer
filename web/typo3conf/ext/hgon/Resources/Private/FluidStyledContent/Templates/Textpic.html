@@ -1,0 +1,126 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Header">
+    <f:switch expression="{data.layout}">
+
+        <f:case value="14">
+
+        </f:case>
+
+        <f:case value="20">
+
+        </f:case>
+
+        <f:defaultCase>
+            <f:if condition="{gallery.position.noWrap} != 1">
+                <f:render partial="Header/All" arguments="{_all}" />
+            </f:if>
+        </f:defaultCase>
+    </f:switch>
+
+</f:section>
+<f:section name="Main">
+    <f:switch expression="{data.layout}">
+
+        <f:case value="13">
+            <cite class="quote__cite">
+
+                <f:for each="{gallery.rows}" as="row">
+                    <f:for each="{row.columns}" as="column">
+                        <f:if condition="{column.media}">
+                            <f:render partial="Media/Rendering/Image" arguments="{file: column.media, dimensions: column.dimensions, settings: settings}" />
+                        </f:if>
+                    </f:for>
+                </f:for>
+                <span>
+                    <f:format.stripTags><f:format.html>{data.bodytext}</f:format.html></f:format.stripTags>
+                </span>
+            </cite>
+        </f:case>
+
+        <f:case value="14">
+            <picture class="card__image">
+                <f:render partial="Media/Gallery" arguments="{_all}" />
+            </picture>
+            <div class="card__inner">
+                <header class="card__header">
+                    <f:render partial="Header/All" arguments="{_all}" />
+                </header>
+                <div class="card__content">
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </div>
+                <f:if condition="{data.header_link}">
+                    <footer class="card__footer">
+                        <f:link.typolink class="btn btn--rounded btn--tertiary" parameter="{data.header_link}">Mehr erfahren</f:link.typolink>
+                    </footer>
+                </f:if>
+            </div>
+        </f:case>
+
+        <f:case value="20">
+            <f:for each="{gallery.rows}" as="row">
+                <f:for each="{row.columns}" as="column">
+                    <f:if condition="{column.media}">
+
+
+
+                        <article class="slider__item slider__bg-image / js-slider-item active" style="background-image: url('{f:uri.image(src:column.media.uid, treatIdAsReference:1, width:200px)}');">
+                            <div class="slider__item__inner">
+                                <header class="mb-1">
+                                    <span class="tagline color-font-secondary">
+                                         {data.subheader}
+                                    </span>
+                                    <h3 class="headline">
+                                        {data.header}
+                                    </h3>
+                                </header>
+                                <div>
+                                    <f:format.html>{data.bodytext}</f:format.html>
+                                </div>
+                                <footer class="mt-1">
+                                    <a href="#" class="btn btn--rounded btn--primary">Mehr lesen</a>
+                                </footer>
+                            </div>
+                        </article>
+
+
+                    </f:if>
+                </f:for>
+            </f:for>
+
+        </f:case>
+
+        <f:defaultCase>
+            <div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
+                <f:if condition="{gallery.position.vertical} != 'below'">
+                    <f:render partial="Media/Gallery" arguments="{_all}" />
+                </f:if>
+
+                <f:if condition="{data.bodytext}">
+                    <f:then>
+                        <div class="ce-bodytext">
+                            <f:if condition="{gallery.position.noWrap}">
+                                <f:render partial="Header/All" arguments="{_all}" />
+                            </f:if>
+                            <f:format.html>{data.bodytext}</f:format.html>
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{gallery.position.noWrap}">
+                            <f:if condition="{data.header}">
+                                <div class="ce-bodytext">
+                                    <f:render partial="Header/All" arguments="{_all}" />
+                                </div>
+                            </f:if>
+                        </f:if>
+                    </f:else>
+                </f:if>
+
+                <f:if condition="{gallery.position.vertical} == 'below'">
+                    <f:render partial="Media/Gallery" arguments="{_all}" />
+                </f:if>
+            </div>
+        </f:defaultCase>
+    </f:switch>
+</f:section>
+</html>

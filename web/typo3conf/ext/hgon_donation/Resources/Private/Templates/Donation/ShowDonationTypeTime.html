@@ -1,0 +1,44 @@
+{namespace hgonBasic=HGON\HgonBasic\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+	Private:
+	  Templates:
+		Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="main">
+
+		<f:flashMessages />
+
+		<h1>DonationType title: {donationType.title}</h1>
+		<f:format.raw>
+			DonationType description: {donationType.description}
+		</f:format.raw>
+
+		<h3>{donationTypeTime.title}</h3>
+		<f:format.raw>
+			{donationTypeTime.shortDescription}
+		</f:format.raw>
+		<f:format.raw>
+			{donationTypeTime.description}
+		</f:format.raw>
+
+		<f:for each="{donationTypeTime.contactPerson}" as="contactPerson">
+			<f:format.raw>
+				<hgonBasic:associationOperator associationOperator='{contactPerson}' />
+			</f:format.raw>
+		</f:for>
+
+		<f:render partial="DonationTypeTime/FormFields" arguments="{_all}" />
+
+		<f:link.action action="showDonationType" arguments="{donationType:donationType}">Back to list</f:link.action><br />
+
+	</f:section>
+</html>
