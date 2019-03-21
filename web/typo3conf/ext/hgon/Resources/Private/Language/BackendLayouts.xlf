@@ -18,6 +18,12 @@
 			<trans-unit id="content.content">
 				<source>Content</source>
 			</trans-unit>
+			<trans-unit id="content.sidebar">
+                <source>Sidebar</source>
+            </trans-unit>
+            <trans-unit id="content.sidebarInherit">
+                <source>Sidebar (inherited)</source>
+            </trans-unit>
 			<trans-unit id="content.footer">
 				<source>Footer (is inherited)</source>
 			</trans-unit>

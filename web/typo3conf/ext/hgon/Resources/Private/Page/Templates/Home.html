@@ -3,32 +3,34 @@
     <f:layout name="HgonDefault" />
 
     <f:section name="Header">
-        <f:render partial="Layout/Header" arguments="{_all}" />
+        <f:render partial="Layout/HeaderHome" arguments="{_all}" />
     </f:section>
 
     <f:section name="Main">
 
+
         <header class="hero">
-            <picture class="hero__image">
-                <f:image src="EXT:hgon/Resources/Public/Images/img-hero.jpg" class="logo" alt="HGON Hintergrundbild"  width="1440" height="800" />
-            </picture>
-            <div class="hero__inner">
-                <div class="wrap">
-                    <div class="hero__text">
-                        <span class="tagline">Worauf es ankommt</span>
-                        <h1 class="headline">Schutz der Artenvielfalt und ihrer Lebensräume in Hessen</h1>
-                        <a href="#content" class="btn btn--white btn--rounded" data-target="#content">Mehr erfahren</a>
+            <f:comment>
+                <picture class="hero__image">
+                    <f:image src="EXT:hgon/Resources/Public/Images/img-hero.jpg" class="logo" alt="HGON Hintergrundbild"  width="1440" height="800" />
+                </picture>
+                <div class="hero__inner">
+                    <div class="wrap">
+                        <div class="hero__text">
+                            <span class="tagline">Worauf es ankommt</span>
+                            <h1 class="headline">Schutz der Artenvielfalt und ihrer Lebensräume in Hessen</h1>
+                            <a href="#content" class="btn btn--white btn--rounded" data-target="#content">Mehr erfahren</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </f:comment>
+
+            <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:30}" />
+
         </header>
 
 
-        <f:format.html parseFuncTSPath="">{content}</f:format.html>
-
-        <f:comment>
-            <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:0}" />
-        </f:comment>
+        <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:0}" />
 
         <f:render partial="Layout/MainFooter" arguments="{_all}" />
 

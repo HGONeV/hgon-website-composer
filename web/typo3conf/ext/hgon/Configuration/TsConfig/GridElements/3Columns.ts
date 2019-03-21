@@ -2,13 +2,8 @@
 tx_gridelements.setup.3Columns {
     title          = 3 Columns
     description    = Drei Spalten Layout
-
+   # flexformDS     = FILE:EXT:hgon/Configuration/FlexForms/GridElements/3Columns.xml
     frame = 10
-
-    tt_content_defValues {
-        header = DefValues header titel
-        header_layout = 100
-    }
 
     config {
         rowCount = 1

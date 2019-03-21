@@ -25,6 +25,13 @@ globalWebsiteConfig {
             partials = EXT:hgon/Resources/Private/FluidStyledContent/Partials/
             templates = EXT:hgon/Resources/Private/FluidStyledContent/Templates/
         }
+
+        gridelements {
+            layouts = EXT:hgon/Resources/Private/Gridelements/Layouts/
+            partials = EXT:hgon/Resources/Private/Gridelements/Partials/
+            templates = EXT:hgon/Resources/Private/Gridelements/Templates/
+        }
+
 		/*
 		extensions {
 			templates = fileadmin/templates/kompetenzzentrum/html/Extensions

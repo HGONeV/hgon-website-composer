@@ -4,6 +4,9 @@
         <f:if condition="{data.header} || {data.subheader} || {data.date}">
             <f:switch expression="{data.header_layout}">
 
+                <f:case value="14">
+                </f:case>
+
                 <f:case value="20">
                     <h2>
                         <f:render section="HeaderBody" arguments="{_all}"/>
@@ -36,17 +39,36 @@
 <f:section name="HeaderBody">
     <f:render partial="Header/Header" arguments="{
                         header: data.header,
+                        superiorLayout: data.layout,
                         layout: data.header_layout,
                         positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
                         link: data.header_link,
                         default: settings.defaultHeaderType}" />
     <f:render partial="Header/SubHeader" arguments="{
                         subheader: data.subheader,
+                        superiorLayout: data.layout,
                         layout: data.header_layout,
                         positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
                         default: settings.defaultHeaderType}" />
     <f:render partial="Header/Date" arguments="{
                         date: data.date,
                         positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}'}" />
+</f:section>
+
+<f:section name="HeaderBodyReverse">
+
+    <f:render partial="Header/SubHeader" arguments="{
+                        subheader: data.subheader,
+                        superiorLayout: data.layout,
+                        layout: data.header_layout,
+                        positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
+                        default: settings.defaultHeaderType}" />
+    <f:render partial="Header/Header" arguments="{
+                        header: data.header,
+                        superiorLayout: data.layout,
+                        layout: data.header_layout,
+                        positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
+                        link: data.header_link,
+                        default: settings.defaultHeaderType}" />
 </f:section>
 

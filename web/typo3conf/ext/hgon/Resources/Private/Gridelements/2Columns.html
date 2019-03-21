@@ -1,0 +1,64 @@
+<f:switch expression="{data.flexform_containerType}">
+
+    <f:case value="1">
+        <article class="box box--floated box--floated-right / mb-8">
+            <div class="box__inner">
+                <div class="flex-container space-between no-padding">
+                    <div class="flex-item c-8">
+                        <f:format.raw>{data.tx_gridelements_view_columns.10}</f:format.raw>
+                    </div>
+                    <div class="flex-item c-4 pl-2">
+                        <footer class="box__footer mt-2">
+                            <f:format.raw>{data.tx_gridelements_view_columns.20}</f:format.raw>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </f:case>
+
+    <f:case value="2">
+        <article class="box box--floated box--floated-left / mb-5">
+            <div class="box__inner pr-5">
+                <f:format.raw>{data.tx_gridelements_view_columns.10}</f:format.raw>
+                <footer class="box__footer mt-2">
+                    <f:format.raw>{data.tx_gridelements_view_columns.20}</f:format.raw>
+                </footer>
+            </div>
+        </article>
+    </f:case>
+
+    <f:case value="3">
+        <section class="breaker / no-margin">
+            <div class="flex-container space-between gutter valign-center">
+                <div class="flex-item c-6">
+                    <f:format.raw>{data.tx_gridelements_view_columns.10}</f:format.raw>
+                </div>
+                <div class="flex-item c-6">
+                    <f:format.raw>{data.tx_gridelements_view_columns.20}</f:format.raw>
+                </div>
+            </div>
+        </section>
+    </f:case>
+
+    <f:case value="4">
+        <aside class="breaker">
+            <div class="flex-container">
+                <div class="flex-item c-6">
+                    <f:format.raw>{data.tx_gridelements_view_columns.10}</f:format.raw>
+                </div>
+                <div class="flex-item c-6 / align-center">
+                    <f:format.raw>{data.tx_gridelements_view_columns.20}</f:format.raw>
+                </div>
+            </div>
+        </aside>
+    </f:case>
+
+    <f:defaultCase>
+        <div class="content">
+            <f:format.raw>{data.tx_gridelements_view_columns.10}</f:format.raw>
+            <f:format.raw>{data.tx_gridelements_view_columns.20}</f:format.raw>
+        </div>
+    </f:defaultCase>
+
+</f:switch>

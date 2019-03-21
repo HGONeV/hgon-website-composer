@@ -33,6 +33,15 @@ page.10 {
             as = menuFooter
         }
 
+        35 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        35 {
+            special = directory
+            special.value = 33
+            levels = 1
+            includeSpacer = 1
+            as = menuFooterLegal
+        }
+
         40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
         40 {
             special = list
@@ -41,5 +50,15 @@ page.10 {
             levels = 0
             as = menuFooterAdditional
         }
+
+        50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        50 {
+            special = list
+            special.value.data = leveluid : -2
+            levels = 2
+            as = menuSubPage
+        }
+
+
 	}
 }

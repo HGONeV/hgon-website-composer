@@ -2,7 +2,7 @@
 tx_gridelements.setup.2Columns {
     title          = 2 Columns
     description    = Zwei Spalten Layout
-  //  flexformDS     = FILE:EXT:hgon/Configuration/FlexForm/Gridelements/2Columns.xml
+    flexformDS     = FILE:EXT:hgon/Configuration/FlexForms/GridElements/2Columns.xml
    // iconIdentifier = icon
 
     frame = 10

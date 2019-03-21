@@ -15,14 +15,7 @@
 <f:section name="submenu">
 	<ul class="dropdown">
 		<f:for each="{submenu}" as="subItem">
-			<f:render partial="Navigation/Elements/Item" arguments="{item: subItem}"/>
-
-            <f:comment>
-                <f:if condition="{subItem.children}">
-                    <f:render section="submenu" arguments="{submenu: subItem.children}"/>
-                </f:if>
-            </f:comment>
-			</li>
+            <f:render partial="Navigation/Elements/Item" arguments="{item: subItem}"/>
 		</f:for>
 	</ul>
 </f:section>

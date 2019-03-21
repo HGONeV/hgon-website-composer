@@ -1,11 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:spaceless>
-    <!-- old stuff -->
-	<footer class="footer">
-        <f:comment>
-		<f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:90}" />
-        </f:comment>
-	</footer>
 
     <!-- new stuff -->
     <footer class="footer">
@@ -47,13 +41,9 @@
                         <f:image src="EXT:hgon/Resources/Public/Images/logo-hgon.svg" class="logo" alt="Logo HGON" title="Hessische Gesellschaft für Ornithologie und Naturschutz e.V." width="80" height="80"/>
                     </a>
                 </div>
-                <div class="flex-item flex-basis4 flex-item--smalldesk-full / align-right">
-                    <ul class="menu menu--meta">
-                        <li><a href="tp-contact">Kontakt</a></li>
-                        <li><a href="tp-page">Datenschutz</a></li>
-                        <li><a href="tp-page">Impressum</a></li>
-                    </ul>
-                </div>
+
+                <f:render partial="Navigation/FooterLegal" arguments="{_all}"  />
+
             </div>
         </div>
     </footer>

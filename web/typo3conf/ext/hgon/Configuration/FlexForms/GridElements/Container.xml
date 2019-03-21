@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta type="array">
+        <langDisable>1</langDisable>
+    </meta>
+    <ROOT type="array">
+        <type>array</type>
+        <el type="array">
+            <isMainContent type="array">
+                <TCEforms type="array">
+                    <label>Ist zentraler Inhaltsbereich</label>
+                    <config>
+                        <type>check</type>
+                        <default>0</default>
+                    </config>
+                </TCEforms>
+            </isMainContent>
+        </el>
+    </ROOT>
+</T3DataStructure>

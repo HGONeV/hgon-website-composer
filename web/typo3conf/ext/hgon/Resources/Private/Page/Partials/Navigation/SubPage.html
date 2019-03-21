@@ -1,0 +1,11 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:if condition="{menuSubPage}">
+        <ul class="menu menu-sub">
+            <f:for each="{menuSubPage}" as="mainItem">
+                <f:for each="{mainItem.children}" as="children">
+                    <f:render partial="Navigation/Elements/Item" arguments="{item: children}" section="sub"/>
+                </f:for>
+            </f:for>
+        </ul>
+    </f:if>
+</html>

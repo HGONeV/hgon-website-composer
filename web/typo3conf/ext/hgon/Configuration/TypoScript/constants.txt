@@ -1,5 +1,5 @@
 # Extensions
-
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/constants.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:rkw_basics/Configuration/TypoScript/constants.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:rkw_events/Configuration/TypoScript/constants.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:rkw_geolocation/Configuration/TypoScript/constants.txt">

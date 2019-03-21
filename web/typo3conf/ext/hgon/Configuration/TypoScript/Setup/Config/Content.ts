@@ -2,6 +2,7 @@ tt_content.stdWrap.innerWrap.cObject = CASE
 tt_content.stdWrap.innerWrap.cObject {
     key.field = layout
 
+    /*
     # Highlight - nur Abstand oben
     11 = TEXT
     11.value = <header class="section__header"><div class="wrap wrap--text / align-center">|</div></header>
@@ -9,24 +10,27 @@ tt_content.stdWrap.innerWrap.cObject {
     # Highlight - plus Abstand unten
     12 = TEXT
     12.value = <header class="section__header / pb-2"><div class="wrap wrap--text / align-center">|</div></header>
+    */
 
+    # Zitat
     13 = TEXT
     13.value = <blockquote class="quote / align-center mt-4 mb-4">|</blockquote>
 
-    14 = TEXT
-    14.value = <div class="flex-item c-4"><article class="card card--shadow">|</article></div>
+    # Sidebar
+    40 = TEXT
+    40.value = <aside class="aside color-bg-cta has-shadow">|</aside>
+    41 = TEXT
+    41.value = <aside class="aside color-bg-tertiary">|</aside>
+    42 = TEXT
+    42.value = <aside class="aside color-bg-secondary color-font-white">|</aside>
 
-    20 = TEXT
-    20.value = |
-
-    #############
-    # Gridlements
-    #############
+    # Sitemap
     50 = TEXT
-    50.value = <div class="section__content"><div class="flex-container space-between gutter valign-stretch">|</div></div>
+    50.value = <ul class="menu menu--list">|</ul>
+    51 = TEXT
+    51.value = <ul class="menu menu--inline">|</ul>
 
-    60 = TEXT
-    60.value = <div class="section__content"><div class="slider js-slider">|</div></div>
+
 }
 
 /*

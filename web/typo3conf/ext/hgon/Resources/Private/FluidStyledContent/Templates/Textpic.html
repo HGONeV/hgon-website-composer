@@ -1,30 +1,55 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
-<f:section name="Header">
-    <f:switch expression="{data.layout}">
 
-        <f:case value="14">
+    <f:section name="Header">
+        <f:switch expression="{data.layout}">
 
-        </f:case>
+            <f:case value="13">
 
-        <f:case value="20">
+            </f:case>
 
-        </f:case>
+            <f:case value="14">
 
-        <f:defaultCase>
-            <f:if condition="{gallery.position.noWrap} != 1">
-                <f:render partial="Header/All" arguments="{_all}" />
-            </f:if>
-        </f:defaultCase>
-    </f:switch>
+            </f:case>
 
-</f:section>
+            <f:case value="20">
+
+            </f:case>
+
+            <f:case value="25">
+
+            </f:case>
+
+            <f:case value="26">
+
+            </f:case>
+
+            <f:case value="30">
+
+            </f:case>
+
+            <f:case value="31">
+
+            </f:case>
+
+
+            <f:defaultCase>
+                <f:if condition="{gallery.position.noWrap} != 1">
+                    <f:render partial="Header/All" arguments="{_all}" />
+                </f:if>
+            </f:defaultCase>
+        </f:switch>
+
+    </f:section>
+
 <f:section name="Main">
     <f:switch expression="{data.layout}">
 
         <f:case value="13">
+            <header>
+                <q>{data.header}</q>
+            </header>
             <cite class="quote__cite">
-
                 <f:for each="{gallery.rows}" as="row">
                     <f:for each="{row.columns}" as="column">
                         <f:if condition="{column.media}">
@@ -33,7 +58,7 @@
                     </f:for>
                 </f:for>
                 <span>
-                    <f:format.stripTags><f:format.html>{data.bodytext}</f:format.html></f:format.stripTags>
+                    <f:format.stripTags><f:format.html>{data.subheader}</f:format.html></f:format.stripTags>
                 </span>
             </cite>
         </f:case>
@@ -58,36 +83,112 @@
         </f:case>
 
         <f:case value="20">
-            <f:for each="{gallery.rows}" as="row">
-                <f:for each="{row.columns}" as="column">
-                    <f:if condition="{column.media}">
+            <article class="card card--shadow">
+                <f:for each="{gallery.rows}" as="row">
+                    <f:for each="{row.columns}" as="column">
+                        <f:if condition="{column.media}">
 
-
-
-                        <article class="slider__item slider__bg-image / js-slider-item active" style="background-image: url('{f:uri.image(src:column.media.uid, treatIdAsReference:1, width:200px)}');">
-                            <div class="slider__item__inner">
-                                <header class="mb-1">
-                                    <span class="tagline color-font-secondary">
-                                         {data.subheader}
-                                    </span>
-                                    <h3 class="headline">
-                                        {data.header}
-                                    </h3>
-                                </header>
-                                <div>
-                                    <f:format.html>{data.bodytext}</f:format.html>
+                            <article class="slider__item slider__bg-image / js-slider-item active" style="background-image: url('{f:uri.image(src:column.media.uid, treatIdAsReference:1, width:200px)}');  transform: matrix(1, 0, 0, 1, 0, 0);">
+                                <div class="slider__item__inner">
+                                    <header class="mb-1">
+                                        <span class="tagline color-font-secondary">
+                                             {data.subheader}
+                                        </span>
+                                        <h3 class="headline">
+                                            {data.header}
+                                        </h3>
+                                    </header>
+                                    <div>
+                                        <f:format.html>{data.bodytext}</f:format.html>
+                                    </div>
+                                    <footer class="mt-1">
+                                        <a href="#" class="btn btn--rounded btn--primary">Mehr lesen</a>
+                                    </footer>
                                 </div>
-                                <footer class="mt-1">
-                                    <a href="#" class="btn btn--rounded btn--primary">Mehr lesen</a>
-                                </footer>
-                            </div>
-                        </article>
+                            </article>
 
 
-                    </f:if>
+                        </f:if>
+                    </f:for>
                 </f:for>
-            </f:for>
+            </article>
+        </f:case>
 
+        <f:case value="25">
+            <picture class="box__image">
+                <f:render partial="Media/Gallery" arguments="{_all}" />
+            </picture>
+            <header class="box__header">
+                <h2>
+                    <span class="badge badge--secondary">{data.subheader}<span class="is-hidden">: </span></span>
+                    <span class="h2 headline">{data.header}</span>
+                </h2>
+            </header>
+            <div class="box__content">
+                <p>
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </p>
+                <p>
+                    <f:link.typolink class="btn btn--primary btn--rounded" parameter="{data.header_link}" >
+                        Mehr erfahren
+                    </f:link.typolink>
+                </p>
+            </div>
+        </f:case>
+
+        <f:case value="26">
+            <picture class="box__image">
+                <f:render partial="Media/Gallery" arguments="{_all}" />
+            </picture>
+            <header class="box__header">
+                <h2>
+                    <span class="badge badge--secondary">{data.subheader}<span class="is-hidden">: </span></span>
+                    <span class="h2 headline">{data.header}</span>
+                </h2>
+            </header>
+            <div class="box__content">
+                <p>
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </p>
+                <p>
+                    <a href="#" class="btn btn--primary btn--rounded">Mehr lesen</a>
+                </p>
+            </div>
+        </f:case>
+
+        <f:case value="30">
+            <picture class="hero__image">
+                <f:render partial="Media/Gallery" arguments="{_all}" />
+            </picture>
+            <div class="hero__inner">
+                <div class="wrap">
+                    <div class="hero__text">
+                        <span class="tagline">{data.subheader}</span>
+                        <h1 class="headline">{data.header}</h1>
+                        <f:link.typolink class="btn btn--white btn--rounded" parameter="{data.header_link}" >
+                            Mehr erfahren
+                        </f:link.typolink>
+                    </div>
+                </div>
+            </div>
+        </f:case>
+
+        <f:case value="31">
+            <picture class="picture">
+                <f:render partial="Media/Gallery" arguments="{_all}" />
+            </picture>
+            <div class="wrap wrap--text / align-center">
+                <h1>
+                    <f:render partial="Header/All" arguments="{_all}" section="HeaderBodyReverse" />
+                </h1>
+            </div>
+        </f:case>
+
+        <f:case value="41">
+            <div class="aside__content">
+                <f:render partial="Media/Gallery" arguments="{_all}" />
+                <f:format.html>{data.bodytext}</f:format.html>
+            </div>
         </f:case>
 
         <f:defaultCase>

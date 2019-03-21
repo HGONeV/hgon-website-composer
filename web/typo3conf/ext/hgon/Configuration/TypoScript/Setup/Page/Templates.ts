@@ -22,7 +22,7 @@ page {
             cObject {
                 data = pagelayout
                 required = 1
-                case = uppercamelcase
+               // case = uppercamelcase
                 split {
                     token = pagets__
                     cObjNum = 1
@@ -41,6 +41,42 @@ page {
 			websiteName.value = {$globalWebsiteConfig.websiteName}
 			#pageTitle = TEXT
 			#pageTitle.data = page:title
+
+            header = CONTENT
+            header.table = tt_content
+            header.slide = -1
+            header.select {
+                where = colPos = 30
+                orderBy = sorting
+                languageField = sys_language_uid
+            }
+
+            sidebar = CONTENT
+            sidebar.table = tt_content
+            sidebar.slide = -1
+            sidebar.select {
+                where = colPos = 140
+                orderBy = sorting
+                languageField = sys_language_uid
+            }
+
+            sidebarInherit = CONTENT
+            sidebarInherit.table = tt_content
+            sidebarInherit.slide = -1
+            sidebarInherit.select {
+                where = colPos = 150
+                orderBy = sorting
+                languageField = sys_language_uid
+            }
+
+            footer = CONTENT
+            footer.table = tt_content
+            footer.slide = -1
+            footer.select {
+                where = colPos = 90
+                orderBy = sorting
+                languageField = sys_language_uid
+            }
 		}
 	}
 }
