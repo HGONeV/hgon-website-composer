@@ -22,6 +22,7 @@ TCEFORM {
                 12 = Highlight - plus Abstand unten
                 13 = Zitat
                 14 = Flex Container Element: Bild + Text
+                15 = Flex Container Element: Bild + Text (Vertikal)
                 20 = Slider Element: Bild + Text
                 25 = Seiten Teaser mit Bild links + Verweise rechts
                 26 = Seiten Teaser mit Bild rechts + Verweise im Fußbereich
@@ -34,7 +35,8 @@ TCEFORM {
                 51 = Sitemap: Menü horizontal
 
             #    50 = Layout: 3 Spalten
-            #    60 = Layout: Slider
+                60 = Slider
+                61 = Fotoshow
             }
             removeItems = 1,2,3,4,5,6,7,8,9,10
         }

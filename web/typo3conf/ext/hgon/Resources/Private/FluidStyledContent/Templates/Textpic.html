@@ -1,4 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+{namespace hgon=HGON\Hgon\ViewHelpers}
 <f:layout name="Default" />
 
     <f:section name="Header">
@@ -9,6 +10,10 @@
             </f:case>
 
             <f:case value="14">
+
+            </f:case>
+
+            <f:case value="15">
 
             </f:case>
 
@@ -64,54 +69,77 @@
         </f:case>
 
         <f:case value="14">
-            <picture class="card__image">
-                <f:render partial="Media/Gallery" arguments="{_all}" />
-            </picture>
-            <div class="card__inner">
-                <header class="card__header">
-                    <f:render partial="Header/All" arguments="{_all}" />
-                </header>
-                <div class="card__content">
-                    <f:format.html>{data.bodytext}</f:format.html>
+            <article class="card card--shadow">
+                <picture class="card__image">
+                    <f:render partial="Media/Gallery" arguments="{_all}" />
+                </picture>
+                <div class="card__inner">
+                    <header class="card__header">
+                        <f:render partial="Header/All" arguments="{_all}" section="HeaderBodyReverse" />
+                    </header>
+                    <div class="card__content">
+                        <f:format.html>{data.bodytext}</f:format.html>
+                    </div>
+                    <f:if condition="{data.header_link}">
+                        <footer class="card__footer">
+                            <f:link.typolink class="btn btn--rounded btn--tertiary" parameter="{data.header_link}">Mehr erfahren</f:link.typolink>
+                        </footer>
+                    </f:if>
                 </div>
-                <f:if condition="{data.header_link}">
-                    <footer class="card__footer">
-                        <f:link.typolink class="btn btn--rounded btn--tertiary" parameter="{data.header_link}">Mehr erfahren</f:link.typolink>
-                    </footer>
-                </f:if>
+            </article>
+        </f:case>
+
+        <f:case value="15">
+            <div class="flex-item c-4 flex-item--medium-half is-image-container">
+                <div class="card__bgimage">
+                    <f:render partial="Media/Gallery" arguments="{_all}" />
+                </div>
+            </div>
+            <div class="flex-item c-8 flex-item--medium-half">
+                <div class="card__inner">
+                    <header class="card__header">
+                        <f:render partial="Header/All" arguments="{_all}" section="HeaderBodyReverse" />
+                    </header>
+                    <div class="card__content">
+                        <f:format.html>{data.bodytext}</f:format.html>
+                    </div>
+                    <f:if condition="{data.header_link}">
+                        <footer class="card__footer">
+                            <f:link.typolink class="btn btn--rounded btn--tertiary" parameter="{data.header_link}">Mehr erfahren</f:link.typolink>
+                        </footer>
+                    </f:if>
+                </div>
             </div>
         </f:case>
 
         <f:case value="20">
-            <article class="card card--shadow">
-                <f:for each="{gallery.rows}" as="row">
-                    <f:for each="{row.columns}" as="column">
-                        <f:if condition="{column.media}">
+            <f:for each="{gallery.rows}" as="row">
+                <f:for each="{row.columns}" as="column">
+                    <f:if condition="{column.media}">
 
-                            <article class="slider__item slider__bg-image / js-slider-item active" style="background-image: url('{f:uri.image(src:column.media.uid, treatIdAsReference:1, width:200px)}');  transform: matrix(1, 0, 0, 1, 0, 0);">
-                                <div class="slider__item__inner">
-                                    <header class="mb-1">
-                                        <span class="tagline color-font-secondary">
-                                             {data.subheader}
-                                        </span>
-                                        <h3 class="headline">
-                                            {data.header}
-                                        </h3>
-                                    </header>
-                                    <div>
-                                        <f:format.html>{data.bodytext}</f:format.html>
-                                    </div>
-                                    <footer class="mt-1">
-                                        <a href="#" class="btn btn--rounded btn--primary">Mehr lesen</a>
-                                    </footer>
+                        <article class="slider__item slider__bg-image / js-slider-item active" style="background-image: url('{f:uri.image(src:column.media.uid, treatIdAsReference:1, width:200px)}');  transform: matrix(1, 0, 0, 1, 0, 0);">
+                            <div class="slider__item__inner">
+                                <header class="mb-1">
+                                    <span class="tagline color-font-secondary">
+                                         {data.subheader}
+                                    </span>
+                                    <h3 class="headline">
+                                        {data.header}
+                                    </h3>
+                                </header>
+                                <div>
+                                    <f:format.html>{data.bodytext}</f:format.html>
                                 </div>
-                            </article>
+                                <footer class="mt-1">
+                                    <a href="#" class="btn btn--rounded btn--primary">Mehr lesen</a>
+                                </footer>
+                            </div>
+                        </article>
 
 
-                        </f:if>
-                    </f:for>
+                    </f:if>
                 </f:for>
-            </article>
+            </f:for>
         </f:case>
 
         <f:case value="25">
@@ -185,10 +213,107 @@
         </f:case>
 
         <f:case value="41">
-            <div class="aside__content">
-                <f:render partial="Media/Gallery" arguments="{_all}" />
-                <f:format.html>{data.bodytext}</f:format.html>
+            <aside class="aside color-bg-tertiary">
+                <header class="aside__header">
+                    <h6>{data.header}</h6>
+                </header>
+                <div class="aside__content">
+                    <f:render partial="Media/Gallery" arguments="{_all}" />
+                    <strong>{data.subheader}</strong>
+                    <f:format.html>{data.bodytext}</f:format.html>
+                    <p>
+                        <a href="tel:<hgon:php.pregReplace pattern='[^+0-9]' replacement='' subject='{data.tx_rkwbasics_bodytext_mobile}' />">
+                            <svg class="icon icon--btn-left color-font-primary" width="16" height="16"><use xlink:href="#ui-phone"></use></svg>
+                            <f:format.stripTags>{data.tx_rkwbasics_bodytext_mobile}</f:format.stripTags>
+                        </a>
+
+                        <f:format.html>{data.header_link}</f:format.html>
+                        <svg class="icon icon--btn-left color-font-primary" width="16" height="16"><use xlink:href="#ui-mail"></use></svg>
+                    </p>
+                </div>
+            </aside>
+        </f:case>
+
+        <!-- Slider -->
+        <f:case value="60">
+            <div class="section__content">
+                <div class="slider js-slider" data-slide="0">
+                    <a class="slide__next js-slide-next" href=""></a>
+                    <a class="slide__prev js-slide-prev is-disabled" href=""></a>
+
+                    <f:if condition="{gallery.rows}">
+                        <f:for each="{gallery.rows}" as="row">
+                            <f:for each="{row.columns}" as="column">
+                                <f:if condition="{column.media}">
+
+                                    <article class="slider__item slider__bg-image / js-slider-item" style="background-image: url(<f:uri.image image='{column.media}' absolute='true' />);"></article>
+
+                                        <f:if condition="
+                                            {column.media.alternative}
+                                            || {column.media.alternative}
+                                            || {column.media.description}
+                                            || {column.media.link}">
+                                            <div class="slider__item__inner">
+                                                <f:if condition="{column.media.alternative}">
+                                                    <header class="mb-1">
+                                                        <span class="tagline color-font-secondary">{column.media.alternative}</span>
+                                                        <h3 class="headline">{column.media.title}</h3>
+                                                    </header>
+                                                </f:if>
+                                                <f:if condition="{column.media.description}">
+                                                    <div>
+                                                        <p>
+                                                            {column.media.description}
+                                                        </p>
+                                                    </div>
+                                                </f:if>
+                                                <f:if condition="{column.media.link}">
+                                                    <footer class="mt-1">
+                                                        <f:link.typolink class="btn btn--rounded btn--primary" parameter="{column.media.link}" />
+                                                    </footer>
+                                                </f:if>
+                                            </div>
+                                        </f:if>
+
+
+                                    </article>
+                                </f:if>
+                            </f:for>
+                        </f:for>
+                    </f:if>
+                    <ul class="slider__pills js-slider-pills">
+                    </ul>
+                </div>
             </div>
+        </f:case>
+
+        <!-- Slider Small "Fotoshow"-->
+        <f:case value="61">
+            <div class="slider slider--small js-slider" data-slide="0">
+                <f:if condition="{gallery.rows}">
+                    <f:for each="{gallery.rows}" as="row">
+                        <f:for each="{row.columns}" as="column">
+                            <f:if condition="{column.media}">
+                                <article class="slider__item js-slider-item" style="background-image: url(<f:uri.image image='{column.media}' absolute='true' />);" ></article>
+                            </f:if>
+                        </f:for>
+                    </f:for>
+                    <div class="bar bar--bottom bar--border">
+                        <div class="bar__icons bar__icons--right">
+                            <a class="bar__icon js-slide-prev is-disabled" href=""><svg class="icon"><use xlink:href="#ui-prev"></use></svg></a>
+                            <a class="bar__icon js-slide-next" href=""><svg class="icon"><use xlink:href="#ui-next"></use></svg></a>
+                        </div>
+                        <div class="bar__icons bar__icons--left">
+                            <div class="bar__text align-center">
+                                  <span class="js-slider-counter">
+                                    <span class="current__slide">1</span> / <span class="max__slides">3</span>
+                                  </span>
+                            </div>
+                        </div>
+                    </div>
+                </f:if>
+            </div>
+
         </f:case>
 
         <f:defaultCase>

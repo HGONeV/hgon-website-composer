@@ -9,7 +9,7 @@
                 <f:render partial="Navigation/Footer" arguments="{_all}" />
 
                 <div class="flex-item c-3 / pt-1 pb-1">
-                    <h6>Unterstützen Sie uns jetzt</h6>
+                    <h6>PLUGIN BAUEN: Unterstützen Sie uns jetzt</h6>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
@@ -33,12 +33,12 @@
             <div class="flex-container space-between">
                 <div class="flex-item flex-basis4 flex-item--smalldesk-full">
                     <p>
-                        Hessische Gesellschaft für Ornithologie und Naturschutz e.V.
+                        {settings.websiteDescription}
                     </p>
                 </div>
                 <div class="flex-item flex-basis4 flex-item--smalldesk-full / align-center">
                     <a class="footer__logo" href="/">
-                        <f:image src="EXT:hgon/Resources/Public/Images/logo-hgon.svg" class="logo" alt="Logo HGON" title="Hessische Gesellschaft für Ornithologie und Naturschutz e.V." width="80" height="80"/>
+                        <img src="{settings.websiteLogoFile}" alt="{settings.websiteName}" class="content-page__logo" title="{settings.websiteDescription}" width="80" height="80">
                     </a>
                 </div>
 

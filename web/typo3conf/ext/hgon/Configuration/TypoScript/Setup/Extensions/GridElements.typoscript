@@ -34,11 +34,25 @@ tt_content {
                             file = EXT:hgon/Resources/Private/Gridelements/2Columns.html
                         }
                     }
+                    2ColumnsVertical < lib.gridelements.defaultGridSetup
+                    2ColumnsVertical {
+                        cObject = FLUIDTEMPLATE
+                        cObject {
+                            file = EXT:hgon/Resources/Private/Gridelements/2ColumnsVertical.html
+                        }
+                    }
                     3Columns < lib.gridelements.defaultGridSetup
                     3Columns {
                         cObject = FLUIDTEMPLATE
                         cObject {
                             file = EXT:hgon/Resources/Private/Gridelements/3Columns.html
+                        }
+                    }
+                    4Columns < lib.gridelements.defaultGridSetup
+                    4Columns {
+                        cObject = FLUIDTEMPLATE
+                        cObject {
+                            file = EXT:hgon/Resources/Private/Gridelements/4Columns.html
                         }
                     }
                 }

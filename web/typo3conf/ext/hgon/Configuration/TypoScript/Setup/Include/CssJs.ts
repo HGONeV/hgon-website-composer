@@ -6,9 +6,12 @@ page {
 	// CSS
 	//===============================================================
 	includeCSS {
-		#file10 = {$globalWebsiteConfig.templatePaths.default.styles}/Main.css
+
         file10 = {$globalWebsiteConfig.templatePaths.default.styles}/styles.css
 		file10.media = screen,print
+
+        file15 = {$globalWebsiteConfig.templatePaths.default.styles}/Main.css
+        file15.media = screen,print
 
 		#file20 = {$globalWebsiteConfig.templatePaths.default.styles}/ie9.css
 		#file20.media = screen,print
@@ -61,9 +64,9 @@ page {
 		file10 = {$globalWebsiteConfig.templatePaths.default.scripts}/scripts.js
 		//file10.forceOnTop = 1
 
+        file15 = {$globalWebsiteConfig.templatePaths.default.scripts}/main.js
 
-
-        //file30 = {$globalWebsiteConfig.templatePaths.default.scripts}/loadcss.js
+       // file30 = {$globalWebsiteConfig.templatePaths.default.scripts}/loadcss.js
 
 		//file5 = {$globalWebsiteConfig.templatePaths.default.scripts}/libs/polyfills.js
 		//file5.forceOnTop = 1

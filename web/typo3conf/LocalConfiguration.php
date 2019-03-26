@@ -69,7 +69,7 @@ return [
             'rkw_watchlist' => 'a:0:{}',
             'rkw_webcheck' => 'a:0:{}',
             'rkw_wepstra' => 'a:0:{}',
-            'rte_ckeditor' => 'a:1:{s:15:"ckeditorVersion";s:1:"1";}',
+            'rte_ckeditor' => 'a:1:{s:15:"ckeditorVersion";s:6:"latest";}',
             'saltedpasswords' => 'a:6:{s:20:"checkConfigurationFE";s:1:"0";s:20:"checkConfigurationBE";s:1:"0";s:3:"FE.";a:5:{s:7:"enabled";s:1:"1";s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\PhpassSalt";s:11:"forceSalted";s:1:"0";s:15:"onlyAuthService";s:1:"0";s:12:"updatePasswd";s:1:"1";}s:3:"BE.";a:4:{s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\PhpassSalt";s:11:"forceSalted";s:1:"0";s:15:"onlyAuthService";s:1:"0";s:12:"updatePasswd";s:1:"1";}s:21:"checkConfigurationFE2";s:1:"0";s:21:"checkConfigurationBE2";s:1:"0";}',
             'scheduler' => 'a:5:{s:11:"maxLifetime";s:4:"1440";s:11:"enableBELog";s:1:"1";s:15:"showSampleTasks";s:1:"1";s:11:"useAtdaemon";s:1:"0";s:30:"listShowTaskDescriptionAsHover";s:1:"1";}',
             'varnish' => 'a:4:{s:17:"instanceHostnames";s:14:"127.0.0.1:9081";s:12:"enableDevLog";s:1:"0";s:22:"alwaysSendTypo3Headers";s:1:"0";s:16:"banRequestMethod";s:3:"BAN";}',

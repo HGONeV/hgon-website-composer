@@ -13,4 +13,5 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:hgon/Configuration/TypoScript/Setup/Extensions" extensions="typoscript">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:hgon/Configuration/TypoScript/Setup/Include" extensions="ts">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:hgon/Configuration/TypoScript/Setup/Lib" extensions="ts">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:hgon/Configuration/TypoScript/Setup/Marker" extensions="typoscript">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:hgon/Configuration/TypoScript/Setup/Page" extensions="ts">

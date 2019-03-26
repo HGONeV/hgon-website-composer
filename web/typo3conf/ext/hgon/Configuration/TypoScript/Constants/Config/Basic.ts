@@ -32,38 +32,29 @@ globalWebsiteConfig {
             templates = EXT:hgon/Resources/Private/Gridelements/Templates/
         }
 
-		/*
-		extensions {
-			templates = fileadmin/templates/kompetenzzentrum/html/Extensions
-			partials = fileadmin/templates/kompetenzzentrum/html/Extensions
-			layouts = fileadmin/templates/kompetenzzentrum/html/Extensions
-		}
-
-		micrositeMainWebsite {
-			images = fileadmin/templates/kompetenzzentrum/images
-			logos = fileadmin/templates/kompetenzzentrum/images/logos
-		}
-		*/
 	}
 
-	#breakpoints {
-	#	mobile = 320
-	#	tablet = 768
-	#	desktop = 1024
-	#}
+	breakpoints {
+		mobile = 320
+		tablet = 768
+		desktop = 1024
+	}
 
 	// IMPORTANT: With / at the end for ClickEnlarge
 	baseUrl = https://www.hgon.de/
 
-	websiteName = HGON
+    website {
+        name = HGON
+        description = Hessische Gesellschaft für Ornithologie und Naturschutz e.V.
 
-	websiteLogoFile = {$globalWebsiteConfig.templatePaths.default.logos}/hgon_logo.png
-	#websiteLogoTabletFile =
-	#websiteLogoOffcanvasFile = {$globalWebsiteConfig.templatePaths.default.logos}/logo-offcanvas.png
-	#websiteLogoOffcanvasIconOnlyFile = {$globalWebsiteConfig.templatePaths.default.logos}/logo-offcanvas-icon.png
-	#websiteLogoBrokenLinkFile = {$globalWebsiteConfig.templatePaths.default.logos}/broken-link.png
+        logoFile = {$globalWebsiteConfig.templatePaths.default.logos}/logo-hgon.svg
+        logoFileSmall = {$globalWebsiteConfig.templatePaths.default.logos}/logo-hgon-small.svg
+        #logoOffcanvasFile = {$globalWebsiteConfig.templatePaths.default.logos}/logo-offcanvas.png
+        #logoOffcanvasIconOnlyFile = {$globalWebsiteConfig.templatePaths.default.logos}/logo-offcanvas-icon.png
+        #logoBrokenLinkFile = {$globalWebsiteConfig.templatePaths.default.logos}/broken-link.png
 
-	#socialMedia = 1
-	#isMicrosite = 0
+        #socialMedia = 1
+    }
+
 
 }

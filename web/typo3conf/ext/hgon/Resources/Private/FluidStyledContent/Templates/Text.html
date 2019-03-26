@@ -12,11 +12,13 @@
 
         </f:case>
 
-        <f:defaultCase>
-            <f:if condition="{gallery.position.noWrap} != 1">
-                <f:render partial="Header/All" arguments="{_all}" />
-            </f:if>
-        </f:defaultCase>
+        <f:comment>
+            <f:defaultCase>
+                <f:if condition="{gallery.position.noWrap} != 1">
+                    <f:render partial="Header/All" arguments="{_all}" />
+                </f:if>
+            </f:defaultCase>
+        </f:comment>
     </f:switch>
 
 </f:section>
@@ -28,9 +30,11 @@
             <header class="section__header">
                 <div class="wrap wrap--text / align-center">
                     <f:render partial="Header/All" arguments="{_all}" section="HeaderBodyReverse" />
-                    <p>
-                        <f:format.stripTags><f:format.html>{data.bodytext}</f:format.html></f:format.stripTags>
-                    </p>
+                    <f:if condition="{data.bodytext}">
+                        <p>
+                            <f:format.stripTags><f:format.html>{data.bodytext}</f:format.html></f:format.stripTags>
+                        </p>
+                    </f:if>
                 </div>
             </header>
         </f:case>
@@ -39,33 +43,45 @@
             <header class="section__header / pb-2">
                 <div class="wrap wrap--text / align-center">
                     <f:render partial="Header/All" arguments="{_all}" section="HeaderBodyReverse" />
-                    <p>
-                        <f:format.stripTags><f:format.html>{data.bodytext}</f:format.html></f:format.stripTags>
-                    </p>
+                    <f:if condition="{data.bodytext}">
+                        <p>
+                            <f:format.stripTags><f:format.html>{data.bodytext}</f:format.html></f:format.stripTags>
+                        </p>
+                    </f:if>
                 </div>
             </header>
         </f:case>
 
         <f:case value="40">
-            <div class="aside__content">
-                <f:format.html>{data.bodytext}</f:format.html>
-            </div>
+            <aside class="aside color-bg-cta has-shadow">
+                <header class="aside__header">
+                    <h6>{data.header}</h6>
+                </header>
+                <div class="aside__content">
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </div>
+            </aside>
         </f:case>
 
-        <f:case value="41">
-            <div class="aside__content">
-                <f:format.html>{data.bodytext}</f:format.html>
-            </div>
-        </f:case>
 
         <f:case value="42">
-            <div class="aside__content">
-                <f:format.html>{data.bodytext}</f:format.html>
-            </div>
+            <aside class="aside color-bg-secondary color-font-white">
+                <header class="aside__header">
+                    <h6>{data.header}</h6>
+                </header>
+                <div class="aside__content">
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </div>
+            </aside>
         </f:case>
 
         <f:defaultCase>
-            <f:format.html>{data.bodytext}</f:format.html>
+            <header class="section__header section__header--small">
+                <div class="wrap wrap--inner-text">
+                    <f:render partial="Header/All" arguments="{_all}" />
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </div>
+            </header>
         </f:defaultCase>
 
     </f:switch>

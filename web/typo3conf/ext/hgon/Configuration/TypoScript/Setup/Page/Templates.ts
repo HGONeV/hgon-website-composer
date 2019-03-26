@@ -37,8 +37,10 @@ page {
 			# further data
 			rootPid = TEXT
 			rootPid.data = leveluid:0
-			websiteName = TEXT
-			websiteName.value = {$globalWebsiteConfig.websiteName}
+
+            # following is part of settings
+			#websiteName = TEXT
+			#websiteName.value = {$globalWebsiteConfig.websiteName}
 			#pageTitle = TEXT
 			#pageTitle.data = page:title
 

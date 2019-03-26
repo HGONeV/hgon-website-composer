@@ -1,12 +1,10 @@
-####
-# Example of what CKEditor can all bring
-###
-
 # Load default processing options
 imports:
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+    - { resource: 'EXT:hgon/Configuration/Yaml/RTE/StyleSet.yaml' }
+    - { resource: 'EXT:hgon/Configuration/Yaml/RTE/ButtonClasses.yaml' }
 
 # Add configuration for the editor
 # For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
@@ -16,18 +14,15 @@ editor:
     format_tags: "p;h1;h2;h3;h4;h5;pre"
 
     toolbarGroups:
-      - { name: clipboard, groups: [removeformat, clipboard, undo] }
-      - { name: editing,   groups: [find, selection, spellchecker] }
-      - { name: links }
-      - { name: insert }
-      - { name: tools }
-      - { name: table }
-      - { name: tabletools }
-      - { name: document,  groups: [ mode, document, doctools ] }
-      - { name: others }
-      - { name: basicstyles, groups: [ basicstyles, align, cleanup ] }
-      - { name: paragraph,   groups: [ list, indent, blocks, align, bidi ] }
-      - { name: styles }
+      - { name: styles, groups: [ styles, format ] }
+      - { name: basicstyles, groups: [ basicstyles ] }
+      - { name: paragraph, groups: [ list, indent, blocks, align ] }
+      - { name: links, groups: [ links ] }
+      - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+      - { name: editing, groups: [ spellchecker ] }
+      - { name: insert, groups: [ insert ] }
+      - { name: tools, groups: [ table, specialchar ] }
+      - { name: document, groups: [ mode ] }
 
     justifyClasses:
       - text-left
@@ -37,22 +32,13 @@ editor:
 
     extraPlugins:
       - justify
-      - font
-      - find
-      - bidi
 
     removePlugins:
       - image
 
     removeButtons:
-      - Strike
       - Anchor
-      - Outdent
-      - Indent
-      - Blockquote
+      - Underline
+      - Strike
 
-# Allow s and u tag
-processing:
-  allowTags:
-    - s
-    - u
+    contentsCss: "EXT:hgon/Resources/Public/Styles/Main.css"

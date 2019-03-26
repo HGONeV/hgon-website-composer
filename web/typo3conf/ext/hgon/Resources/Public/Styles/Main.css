@@ -1,3 +1,5 @@
-html {
-	background-color: lawngreen;
+aside.color-bg-tertiary img {
+    float: left;
+    margin-right: .75em;
+    margin-bottom: .75em;
 }

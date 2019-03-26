@@ -15,7 +15,6 @@
 	   "helhum/dotenv-connector": "^1.0",
        "typo3/surf": "^2.0.0",
        "sjbr/static-info-tables" : "^6.5",
-	   "dmitryd/typo3-realurl": "~2.5.0",
        "gridelementsteam/gridelements": "~8.3.0",
        "rkw/rkw-basics": "~7.6.12 || ~8.7.2",
        "rkw/rkw-events": "~7.6.7 || ~8.7.0",

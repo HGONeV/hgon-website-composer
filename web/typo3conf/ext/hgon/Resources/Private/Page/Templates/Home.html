@@ -3,14 +3,14 @@
     <f:layout name="HgonDefault" />
 
     <f:section name="Header">
-        <f:render partial="Layout/HeaderHome" arguments="{_all}" />
+        <f:render partial="Layout/Header" arguments="{_all}" />
     </f:section>
 
     <f:section name="Main">
 
 
         <header class="hero">
-            <f:comment>
+
                 <picture class="hero__image">
                     <f:image src="EXT:hgon/Resources/Public/Images/img-hero.jpg" class="logo" alt="HGON Hintergrundbild"  width="1440" height="800" />
                 </picture>
@@ -23,10 +23,10 @@
                         </div>
                     </div>
                 </div>
-            </f:comment>
 
+            <f:comment>
             <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:30}" />
-
+            </f:comment>
         </header>
 
 

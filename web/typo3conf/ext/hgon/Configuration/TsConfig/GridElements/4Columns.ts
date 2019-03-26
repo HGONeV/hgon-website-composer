@@ -2,12 +2,12 @@
 tx_gridelements.setup.4Columns {
     title          = 4 Columns
     description    = Zwei Spalten, zwei Reihen
-   # flexformDS     = FILE:EXT:hgon/Configuration/FlexForms/GridElements/3Columns.xml
+    flexformDS     = FILE:EXT:hgon/Configuration/FlexForms/GridElements/4Columns.xml
     frame = 10
 
     config {
-        rowCount = 1
-        colCount = 3
+        rowCount = 2
+        colCount = 2
 
         rows {
             1.columns {
