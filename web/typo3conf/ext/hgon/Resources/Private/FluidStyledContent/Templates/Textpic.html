@@ -51,21 +51,23 @@
     <f:switch expression="{data.layout}">
 
         <f:case value="13">
-            <header>
-                <q>{data.header}</q>
-            </header>
-            <cite class="quote__cite">
-                <f:for each="{gallery.rows}" as="row">
-                    <f:for each="{row.columns}" as="column">
-                        <f:if condition="{column.media}">
-                            <f:render partial="Media/Rendering/Image" arguments="{file: column.media, dimensions: column.dimensions, settings: settings}" />
-                        </f:if>
+            <blockquote class="quote / align-center mt-4 mb-4">
+                <header>
+                    <q>{data.header}</q>
+                </header>
+                <cite class="quote__cite">
+                    <f:for each="{gallery.rows}" as="row">
+                        <f:for each="{row.columns}" as="column">
+                            <f:if condition="{column.media}">
+                                <f:render partial="Media/Rendering/Image" arguments="{file: column.media, dimensions: column.dimensions, settings: settings}" />
+                            </f:if>
+                        </f:for>
                     </f:for>
-                </f:for>
-                <span>
-                    <f:format.stripTags><f:format.html>{data.subheader}</f:format.html></f:format.stripTags>
-                </span>
-            </cite>
+                    <span>
+                        <f:format.stripTags><f:format.html>{data.subheader}</f:format.html></f:format.stripTags>
+                    </span>
+                </cite>
+            </blockquote>
         </f:case>
 
         <f:case value="14">
@@ -226,9 +228,11 @@
                             <svg class="icon icon--btn-left color-font-primary" width="16" height="16"><use xlink:href="#ui-phone"></use></svg>
                             <f:format.stripTags>{data.tx_rkwbasics_bodytext_mobile}</f:format.stripTags>
                         </a>
-
-                        <f:format.html>{data.header_link}</f:format.html>
-                        <svg class="icon icon--btn-left color-font-primary" width="16" height="16"><use xlink:href="#ui-mail"></use></svg>
+                        <br>
+                        <a href="mailto:<f:format.stripTags><f:format.html>{data.header_link}</f:format.html></f:format.stripTags>">
+                            <svg class="icon icon--btn-left color-font-primary" width="16" height="16"><use xlink:href="#ui-mail"></use></svg>
+                            <f:format.stripTags><f:format.html>{data.header_link}</f:format.html></f:format.stripTags>
+                        </a>
                     </p>
                 </div>
             </aside>
