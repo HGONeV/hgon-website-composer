@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T03:13:20Z" product-name="info_pagetsconfig">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T03:09:38Z" product-name="info_pagetsconfig">
 		<header/>
 		<body>
 			<trans-unit id="editThisColumn" approved="yes">
@@ -38,6 +38,10 @@
 			<trans-unit id="tsconf_configFields" approved="yes">
 				<source>View TSconfig fields content</source>
 				<target state="translated">Inhalt des TSconfig-Felds anzeigen</target>
+			</trans-unit>
+			<trans-unit id="tsconf_noPageTSconfig" approved="yes">
+				<source>There are no pages containing custom Page TSconfig settings in the page configuration.</source>
+				<target state="translated">Es gibt keine Seiten mit eigenen Seiten-TSconfig-Einstellungen in der Seiten-Konfiguration.</target>
 			</trans-unit>
 			<trans-unit id="tsconf_parts_0" approved="yes">
 				<source>All</source>

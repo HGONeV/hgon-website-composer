@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T00:17:52Z" product-name="belog">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T00:20:50Z" product-name="belog">
 		<header/>
 		<body>
 			<trans-unit id="100" approved="yes">
@@ -135,6 +135,26 @@
 			<trans-unit id="actionLogin" approved="yes">
 				<source>Login</source>
 				<target state="translated">Anmeldung</target>
+			</trans-unit>
+			<trans-unit id="actions" approved="yes">
+				<source>Actions</source>
+				<target state="translated">Aktionen</target>
+			</trans-unit>
+			<trans-unit id="actions.delete" approved="yes">
+				<source>Delete similar errors</source>
+				<target state="translated">Ähnliche Fehler löschen</target>
+			</trans-unit>
+			<trans-unit id="actions.delete.message" approved="yes">
+				<source>Total entries deleted: %1$d</source>
+				<target state="translated">Gesamtzahl gelöschter Einträge: %1$d</target>
+			</trans-unit>
+			<trans-unit id="actions.delete.noRowFound" approved="yes">
+				<source>Log entry could not be found.</source>
+				<target state="translated">Der Eintrag wurde nicht gefunden.</target>
+			</trans-unit>
+			<trans-unit id="actions.deleteWarnings" approved="yes">
+				<source>Delete similar warnings</source>
+				<target state="translated">Gleichartige Warnungen löschen</target>
 			</trans-unit>
 			<trans-unit id="actionSettings" approved="yes">
 				<source>Settings</source>

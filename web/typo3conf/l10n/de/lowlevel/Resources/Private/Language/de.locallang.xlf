@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T05:05:56Z" product-name="lowlevel">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T04:56:22Z" product-name="lowlevel">
 		<header/>
 		<body>
 			<trans-unit id="advancedQuery" approved="yes">
@@ -27,27 +27,9 @@
 				<source>To check the reference index use</source>
 				<target state="translated">Um den Referenz-Index zu prüfen, führen Sie folgenden Befehl aus:</target>
 			</trans-unit>
-			<trans-unit id="checkScript_check_example" approved="yes">
-				<source>php /path/to/your/typo3/cli_dispatch.phpsh lowlevel_refindex -c</source>
-				<target state="translated">php /pfad/zu/ihrem/typo3/typo3/cli_dispatch.phpsh lowlevel_refindex -c</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
 			<trans-unit id="checkScript_headline" approved="yes">
 				<source>Using the command line interface</source>
 				<target state="translated">Verwendung der Kommandozeile</target>
-			</trans-unit>
-			<trans-unit id="checkScript_information" approved="yes">
-				<source>If you run these commands from the command line, make sure that a BE user with the name _cli_lowlevel exists.</source>
-				<target state="translated">Falls Sie diese Befehle von einer Kommandozeile aus ausführen, achten Sie darauf, dass ein BE-Benutzer mit dem Namen _cli_lowlevel vorhanden ist.</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="checkScript_more" approved="yes">
-				<source>Make sure that a BE user with the name _cli_lowlevel exists. For more details see: /path/to/your/typo3/sysext/lowlevel/HOWTO_clean_up_TYPO3_installations.txt or /path/to/your/typo3/sysext/lowlevel/README.rst (since TYPO3 7 LTS).</source>
-				<target state="translated">Stellen Sie sicher, dass ein Backend-Benutzer mit dem Namen _cli_lowlevel vorhanden ist. Weitere Informationen finden Sie hier: /pfad/zu/ihrem/typo3/typo3/sysext/lowlevel/HOWTO_clean_up_TYPO3_installations.txt oder /pfad/zu/ihrem/typo3/typo3/sysext/lowlevel/README.rst (seit TYPO3 7 LTS).</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
 			</trans-unit>
 			<trans-unit id="checkScript_moreDetails" approved="yes">
 				<source>For more details see</source>
@@ -56,12 +38,6 @@
 			<trans-unit id="checkScript_update_description" approved="yes">
 				<source>To update the reference index use</source>
 				<target state="translated">Um den Referenz-Index zu aktualisieren, führen Sie folgenden Befehl aus:</target>
-			</trans-unit>
-			<trans-unit id="checkScript_update_example" approved="yes">
-				<source>php /path/to/your/typo3/cli_dispatch.phpsh lowlevel_refindex -e</source>
-				<target state="translated">php /pfad/zu/ihrem/typo3/typo3/cli_dispatch.phpsh lowlevel_refindex -e</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
 			</trans-unit>
 			<trans-unit id="clickToTestRefIndex" approved="yes">
 				<source>Click here to test reference index</source>
@@ -216,6 +192,10 @@
 			<trans-unit id="pages" approved="yes">
 				<source>Pages</source>
 				<target state="translated">Seiten:</target>
+			</trans-unit>
+			<trans-unit id="pagesTypes" approved="yes">
+				<source>$GLOBALS['PAGES_TYPES'] (Table permissions by page type)</source>
+				<target state="translated">$GLOBALS['PAGES_TYPES'] (Tabellenberechtigungen nach Seitentyp)</target>
 			</trans-unit>
 			<trans-unit id="pattern" approved="yes">
 				<source>Pattern</source>

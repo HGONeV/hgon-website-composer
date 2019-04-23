@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T02:30:21Z" product-name="frontend">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T02:40:44Z" product-name="frontend">
 		<header/>
 		<body>
 			<trans-unit id="func_0.alttitle" approved="yes">
@@ -185,37 +185,6 @@ EXT:frontend/Resources/Public/Images/cshimages/localizationoverview1.png</target
 The "Localization settings" that affect availability of pages in the various languages.</source>
 			<target state="translated">Übersetzungsübersicht innerhalb des Moduls Web&gt;Info. Benutzen Sie die Schaltflächen, um Übersetzungen von Seitenüberschriften anzuzeigen, zu bearbeiten oder neu zu erstellen. Verwenden Sie das normale Seitenmodul, um Inhalte zu übersetzen.
 Die "Lokalisierungseinstellungen" beeinflussen die Verfügbarkeit der Seiten in den verschiedenen Sprachen.</target></trans-unit>
-			<trans-unit id="pagetree_overview.alttitle" approved="yes">
-				<source>Pagetree Overview</source>
-				<target state="translated">Seitenbaumübersicht</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="pagetree_overview.description" approved="yes">
-				<source>The Pagetree Overview shows information related to pages for a branch of the page tree. This includes start- and stop-times, cache settings etc.</source>
-				<target state="translated">Die Seitenbaumübersicht liefert Informationen zu Seiten eines Bereiches des Seitenbaums. Darin enthalten sind Start- und Stoppzeiten für die Darstellung, Cache-Einstellungen usw.</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="_pagetree_overview.image" approved="yes">
-				<source>EXT:frontend/Resources/Public/Images/cshimages/pagetree_overview_1.png</source>
-				<target state="translated">EXT:frontend/Resources/Public/Images/cshimages/pagetree_overview_1.png</target>
-				<note from="developer">This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
-				<note>This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
-			</trans-unit>
-			<trans-unit id="pagetree_overview.image_descr" approved="yes">
-				<source>One of the features of the Pagetree Overview module is that you can see what types of records are found on pages in a branch. Here record counts are shown for a page tree branch 2 levels down.</source>
-				<target state="translated">Ein Beispiel für eine Funktion der Seitenbaumübersicht ist die Möglichkeit, die Typen der Datensätze anzuzeigen, die auf bestimmten Seiten enthalten sind. In diesem Fall wird die Anzahl der Datensätze für den Teilbereich des Seitenbaumes in der 2. Ebene und tiefer angezeigt.</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="_pagetree_overview.seeAlso" xml:space="preserve" approved="yes">
-				<source>_MOD_web_info:func_0,
-_MOD_web_info:func_1,
-_MOD_web_info:func_2,
-_MOD_web_info:stat</source>
-				<target state="translated">_MOD_web_info:func_0, _MOD_web_info:func_1, _MOD_web_info:func_2, _MOD_web_info:stat</target><note from="developer">This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
-			<note>This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note></trans-unit>
 			<trans-unit id="stat.alttitle" approved="yes">
 				<source>Page Hit statistics</source>
 				<target state="translated">Statistik der Seitenzugriffe</target>

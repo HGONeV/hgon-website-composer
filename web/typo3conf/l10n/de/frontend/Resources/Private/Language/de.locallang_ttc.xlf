@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T02:30:19Z" product-name="frontend">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T02:40:43Z" product-name="frontend">
 		<header/>
 		<body>
 			<trans-unit id="accessibility_bypass" approved="yes">
@@ -75,17 +75,21 @@
 				<source>Forms wizard</source>
 				<target state="translated">Formularassistent</target>
 			</trans-unit>
-			<trans-unit id="bodytext.W.RTE" approved="yes">
-				<source>Fullscreen Rich Text Editing</source>
-				<target state="translated">Rich-Text-Eingabe im Vollbild</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
+			<trans-unit id="bullets_type" approved="yes">
+				<source>Type of bullets</source>
+				<target state="translated">Typ der Aufzählungszeichen</target>
 			</trans-unit>
-			<trans-unit id="bodytext.W.table" approved="yes">
-				<source>Table Wizard</source>
-				<target state="translated">Tabellenassistent</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
+			<trans-unit id="bullets_type.0" approved="yes">
+				<source>Unordered list (bullets)</source>
+				<target state="translated">Unsortierte Liste (Aufzählungspunkte)</target>
+			</trans-unit>
+			<trans-unit id="bullets_type.1" approved="yes">
+				<source>Ordered list (numbers)</source>
+				<target state="translated">Sortierte Liste (Zahlen)</target>
+			</trans-unit>
+			<trans-unit id="bullets_type.2" approved="yes">
+				<source>Definition list</source>
+				<target state="translated">Definitionsliste</target>
 			</trans-unit>
 			<trans-unit id="category_field" approved="yes">
 				<source>Category field</source>
@@ -130,6 +134,10 @@
 			<trans-unit id="CType.div.lists" approved="yes">
 				<source>Lists</source>
 				<target state="translated">Listen</target>
+			</trans-unit>
+			<trans-unit id="CType.div.menu" approved="yes">
+				<source>Menu</source>
+				<target state="translated">Menü</target>
 			</trans-unit>
 			<trans-unit id="CType.div.special" approved="yes">
 				<source>Special</source>
@@ -211,6 +219,54 @@
 				<source>Search</source>
 				<target state="translated">Suchen</target>
 			</trans-unit>
+			<trans-unit id="CType.menu_abstract" approved="yes">
+				<source>Abstracts</source>
+				<target state="translated">Zusammenfassungen</target>
+			</trans-unit>
+			<trans-unit id="CType.menu_categorized_content" approved="yes">
+				<source>Categorized content</source>
+				<target state="translated">Kategorisierter Inhalt</target>
+			</trans-unit>
+			<trans-unit id="CType.menu_categorized_pages" approved="yes">
+				<source>Categorized pages</source>
+				<target state="translated">Kategorisierte Seiten</target>
+			</trans-unit>
+			<trans-unit id="CType.menu_pages" approved="yes">
+				<source>Pages</source>
+				<target state="translated">Seiten</target>
+			</trans-unit>
+			<trans-unit id="CType.menu_recently_updated" approved="yes">
+				<source>Recently updated pages</source>
+				<target state="translated">Kürzlich aktualisierte Seiten</target>
+			</trans-unit>
+			<trans-unit id="CType.menu_related_pages" approved="yes">
+				<source>Related pages</source>
+				<target state="translated">Verwandte Seiten</target>
+			</trans-unit>
+			<trans-unit id="CType.menu_section">
+				<source>Section index</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="CType.menu_section_pages">
+				<source>Section index of subpages from selected pages</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="CType.menu_sitemap" approved="yes">
+				<source>Sitemap</source>
+				<target state="translated">Sitemap</target>
+			</trans-unit>
+			<trans-unit id="CType.menu_sitemap_pages" approved="yes">
+				<source>Sitemaps of selected pages</source>
+				<target state="translated">Sitemap der ausgewählten Seiten.</target>
+			</trans-unit>
+			<trans-unit id="CType.menu_subpages" approved="yes">
+				<source>Subpages</source>
+				<target state="translated">Unterseiten</target>
+			</trans-unit>
+			<trans-unit id="CType.textmedia" approved="yes">
+				<source>Text &amp; Media</source>
+				<target state="translated">Text &amp; Medien</target>
+			</trans-unit>
 			<trans-unit id="date" approved="yes">
 				<source>Date</source>
 				<target state="translated">Datum</target>
@@ -274,6 +330,42 @@
 			<trans-unit id="filelink_sorting.type" approved="yes">
 				<source>by file type</source>
 				<target state="translated">nach Dateityp</target>
+			</trans-unit>
+			<trans-unit id="frame_class" approved="yes">
+				<source>Frame</source>
+				<target state="translated">Rahmen</target>
+			</trans-unit>
+			<trans-unit id="frame_class.default" approved="yes">
+				<source>Default</source>
+				<target state="translated">Standard</target>
+			</trans-unit>
+			<trans-unit id="frame_class_formlabel" approved="yes">
+				<source>Frame</source>
+				<target state="translated">Rahmen</target>
+			</trans-unit>
+			<trans-unit id="frame_class.indent" approved="yes">
+				<source>Indent</source>
+				<target state="translated">Einrücken</target>
+			</trans-unit>
+			<trans-unit id="frame_class.indent_left" approved="yes">
+				<source>Indent, 33/66%</source>
+				<target state="translated">Einrücken, 33/66%</target>
+			</trans-unit>
+			<trans-unit id="frame_class.indent_right" approved="yes">
+				<source>Indent, 66/33%</source>
+				<target state="translated">Einrücken, 66/33%</target>
+			</trans-unit>
+			<trans-unit id="frame_class.none" approved="yes">
+				<source>No Frame</source>
+				<target state="translated">Kein Rahmen</target>
+			</trans-unit>
+			<trans-unit id="frame_class.ruler_after" approved="yes">
+				<source>Ruler After</source>
+				<target state="translated">Linie danach</target>
+			</trans-unit>
+			<trans-unit id="frame_class.ruler_before" approved="yes">
+				<source>Ruler Before</source>
+				<target state="translated">Linie davor</target>
 			</trans-unit>
 			<trans-unit id="header" approved="yes">
 				<source>Header</source>
@@ -399,36 +491,6 @@
 				<source>Captions (one per line)</source>
 				<target state="translated">Beschriftungen (eine pro Zeile)</target>
 			</trans-unit>
-			<trans-unit id="imagecaption_position" approved="yes">
-				<source>Align:</source>
-				<target state="translated">Ausrichtung:</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="imagecaption_position_formlabel" approved="yes">
-				<source>Caption Alignment</source>
-				<target state="translated">Ausrichtung der Beschriftung</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="imagecaption_position.I.1" approved="yes">
-				<source>Center</source>
-				<target state="translated">Mitte</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="imagecaption_position.I.2" approved="yes">
-				<source>Right</source>
-				<target state="translated">Rechts</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="imagecaption_position.I.3" approved="yes">
-				<source>Left</source>
-				<target state="translated">Links</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
 			<trans-unit id="imagecols" approved="yes">
 				<source>Columns</source>
 				<target state="translated">Spalten</target>
@@ -436,126 +498,6 @@
 			<trans-unit id="imagecols_formlabel" approved="yes">
 				<source>Number of Columns</source>
 				<target state="translated">Anzahl an Spalten</target>
-			</trans-unit>
-			<trans-unit id="image_compression" approved="yes">
-				<source>Image Quality/Processing:</source>
-				<target state="translated">Bildqualität/-bearbeitung</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_compression_formlabel" approved="yes">
-				<source>Quality and Type</source>
-				<target state="translated">Qualität und Typ</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_compression.I.1" approved="yes">
-				<source>None (ignores all other options)</source>
-				<target state="translated">Keine (ignoriert alle anderen Optionen)</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_compression.I.15" approved="yes">
-				<source>JPG/Very High</source>
-				<target state="translated">JPG/sehr hoch</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_compression.I.16" approved="yes">
-				<source>JPG/High</source>
-				<target state="translated">JPG/hoch</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_compression.I.17" approved="yes">
-				<source>JPG/Medium</source>
-				<target state="translated">JPG/mittel</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_compression.I.18" approved="yes">
-				<source>JPG/Low</source>
-				<target state="translated">JPG/niedrig</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_compression.I.19" approved="yes">
-				<source>JPG/Very Low</source>
-				<target state="translated">JPG/sehr niedrig</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_effects" approved="yes">
-				<source>Effects:</source>
-				<target state="translated">Effekte:</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_effects_formlabel" approved="yes">
-				<source>Effect</source>
-				<target state="translated">Effekte</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_effects.I.0" approved="yes">
-				<source>None</source>
-				<target state="translated">keiner</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_effects.I.1" approved="yes">
-				<source>Rotate 90 CW</source>
-				<target state="translated">90° im Uhrzeigersinn drehen</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_effects.I.2" approved="yes">
-				<source>Rotate -90 CCW</source>
-				<target state="translated">90° gegen den Uhrzeigersinn drehen</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_effects.I.3" approved="yes">
-				<source>Rotate 180</source>
-				<target state="translated">Drehen 180</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_effects.I.4" approved="yes">
-				<source>Grayscale</source>
-				<target state="translated">Graustufen</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_effects.I.5" approved="yes">
-				<source>Sharpen</source>
-				<target state="translated">Schärfen</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_effects.I.6" approved="yes">
-				<source>Normalize</source>
-				<target state="translated">Normalisieren</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_effects.I.7" approved="yes">
-				<source>Contrast</source>
-				<target state="translated">Kontrast</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_effects.I.8" approved="yes">
-				<source>Brighter</source>
-				<target state="translated">Heller</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_effects.I.9" approved="yes">
-				<source>Darker</source>
-				<target state="translated">Dunkler</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
 			</trans-unit>
 			<trans-unit id="image_formlabel" approved="yes">
 				<source>Images</source>
@@ -624,24 +566,6 @@
 			<trans-unit id="image_longdescURL" approved="yes">
 				<source>Long Description URL</source>
 				<target state="translated">Langbeschreibung URL</target>
-			</trans-unit>
-			<trans-unit id="image_noRows" approved="yes">
-				<source>No Rows:</source>
-				<target state="translated">Keine Reihen:</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_noRows_formlabel" approved="yes">
-				<source>Display as Rows</source>
-				<target state="translated">Horizontale Reihen</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="image_noRows.I.0" approved="yes">
-				<source>Deactivate</source>
-				<target state="translated">Deaktivieren</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
 			</trans-unit>
 			<trans-unit id="imageorient" approved="yes">
 				<source>Position</source>
@@ -1019,66 +943,6 @@
 				<source>Disable</source>
 				<target state="translated">Deaktivieren</target>
 			</trans-unit>
-			<trans-unit id="section_frame" approved="yes">
-				<source>Frame:</source>
-				<target state="translated">Rahmen:</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="section_frame_formlabel" approved="yes">
-				<source>Indentation and Frames</source>
-				<target state="translated">Einrückung und Rahmen</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="section_frame.I.1" approved="yes">
-				<source>Invisible</source>
-				<target state="translated">Unsichtbar</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="section_frame.I.2" approved="yes">
-				<source>Ruler Before</source>
-				<target state="translated">Linie davor</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="section_frame.I.3" approved="yes">
-				<source>Ruler After</source>
-				<target state="translated">Linie danach</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="section_frame.I.4" approved="yes">
-				<source>Indent</source>
-				<target state="translated">Einrücken</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="section_frame.I.5" approved="yes">
-				<source>Indent, 33/66%</source>
-				<target state="translated">Einrücken, 33/66%</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="section_frame.I.6" approved="yes">
-				<source>Indent, 66/33%</source>
-				<target state="translated">Einrücken, 66/33%</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="section_frame.I.7" approved="yes">
-				<source>Frame 1</source>
-				<target state="translated">Rahmen 1</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="section_frame.I.8" approved="yes">
-				<source>Frame 2</source>
-				<target state="translated">Rahmen 2</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
 			<trans-unit id="sectionIndex" approved="yes">
 				<source>Index</source>
 				<target state="translated">Index</target>
@@ -1111,6 +975,14 @@
 				<source>After</source>
 				<target state="translated">Abstand danach</target>
 			</trans-unit>
+			<trans-unit id="space_after_class" approved="yes">
+				<source>Space After</source>
+				<target state="translated">Abstand danach</target>
+			</trans-unit>
+			<trans-unit id="space_after_class_formlabel" approved="yes">
+				<source>Space After</source>
+				<target state="translated">Abstand danach</target>
+			</trans-unit>
 			<trans-unit id="spaceAfter_formlabel" approved="yes">
 				<source>Bottom Margin</source>
 				<target state="translated">Unterer Abstand</target>
@@ -1119,9 +991,41 @@
 				<source>Before</source>
 				<target state="translated">Abstand davor</target>
 			</trans-unit>
+			<trans-unit id="space_before_class" approved="yes">
+				<source>Space Before</source>
+				<target state="translated">Abstand davor</target>
+			</trans-unit>
+			<trans-unit id="space_before_class_formlabel" approved="yes">
+				<source>Space Before</source>
+				<target state="translated">Abstand davor</target>
+			</trans-unit>
 			<trans-unit id="spaceBefore_formlabel" approved="yes">
 				<source>Top Margin</source>
 				<target state="translated">Oberer Abstand</target>
+			</trans-unit>
+			<trans-unit id="space_class_extra_large" approved="yes">
+				<source>Extra Large</source>
+				<target state="translated">Extragroß</target>
+			</trans-unit>
+			<trans-unit id="space_class_extra_small" approved="yes">
+				<source>Extra Small</source>
+				<target state="translated">Extraklein</target>
+			</trans-unit>
+			<trans-unit id="space_class_large" approved="yes">
+				<source>Large</source>
+				<target state="translated">Groß</target>
+			</trans-unit>
+			<trans-unit id="space_class_medium" approved="yes">
+				<source>Medium</source>
+				<target state="translated">Mittel</target>
+			</trans-unit>
+			<trans-unit id="space_class_none" approved="yes">
+				<source>None</source>
+				<target state="translated">keiner</target>
+			</trans-unit>
+			<trans-unit id="space_class_small" approved="yes">
+				<source>Small</source>
+				<target state="translated">Klein</target>
 			</trans-unit>
 			<trans-unit id="splash_layout" approved="yes">
 				<source>Textbox Type</source>
@@ -1170,102 +1074,6 @@
 			<trans-unit id="sys_language_uid_formlabel" approved="yes">
 				<source>Language</source>
 				<target state="translated">Sprache</target>
-			</trans-unit>
-			<trans-unit id="table_bgColor" approved="yes">
-				<source>Backgr. Color:</source>
-				<target state="translated">Hintergrundfarbe:</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_bgColor_formlabel" approved="yes">
-				<source>Background color</source>
-				<target state="translated">Hintergrundfarbe</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_bgColor.I.1" approved="yes">
-				<source>Color 1</source>
-				<target state="translated">Farbe 1</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_bgColor.I.2" approved="yes">
-				<source>Color 2</source>
-				<target state="translated">Farbe 2</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_bgColor.I.3" approved="yes">
-				<source>None</source>
-				<target state="translated">Keine</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_bgColor.I.5" approved="yes">
-				<source>Black</source>
-				<target state="translated">Schwarz</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_bgColor.I.6" approved="yes">
-				<source>White</source>
-				<target state="translated">Weiß</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_bgColor.I.7" approved="yes">
-				<source>Dark Gray</source>
-				<target state="translated">Dunkelgrau</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_bgColor.I.8" approved="yes">
-				<source>Gray</source>
-				<target state="translated">Grau</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_bgColor.I.9" approved="yes">
-				<source>Silver</source>
-				<target state="translated">Silber</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_border" approved="yes">
-				<source>Border:</source>
-				<target state="translated">Rahmen:</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_border_formlabel" approved="yes">
-				<source>Border Size (px)</source>
-				<target state="translated">Rahmendicke (Pixel)</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_cellpadding" approved="yes">
-				<source>Cellpadding:</source>
-				<target state="translated">Zellenfüllung:</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_cellpadding_formlabel" approved="yes">
-				<source>Cellpadding (px)</source>
-				<target state="translated">Zellenfüllung (Pixel)</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_cellspacing" approved="yes">
-				<source>Cellspacing:</source>
-				<target state="translated">Zellenabstand:</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="table_cellspacing_formlabel" approved="yes">
-				<source>Cellspacing (px)</source>
-				<target state="translated">Zellenabstand (Pixel)</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
 			</trans-unit>
 			<trans-unit id="tabs.access" approved="yes">
 				<source>Access</source>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T01:51:31Z" product-name="felogin">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T01:52:30Z" product-name="felogin">
 		<header/>
 		<body>
 			<trans-unit id="change_password" approved="yes">
@@ -190,12 +190,6 @@ Aus Sicherheitsgründen ist dieser Link nur bis %s aktiv. Falls Sie den Link nic
 			<trans-unit id="username" approved="yes">
 				<source>Username</source>
 				<target state="translated">Benutzername</target>
-			</trans-unit>
-			<trans-unit id="xssAttackDetected" approved="yes">
-				<source>Url "%s" contained an XSS attack and was cleaned!</source>
-				<target state="translated">Die URL "%s" enthielt einen XSS-Angriff und wurde bereinigt!</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
 			</trans-unit>
 			<trans-unit id="your_email" approved="yes">
 				<source>Your email</source>

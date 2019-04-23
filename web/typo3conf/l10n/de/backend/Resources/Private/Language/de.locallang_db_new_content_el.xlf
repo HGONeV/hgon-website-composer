@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T00:09:01Z" product-name="backend">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T00:13:39Z" product-name="backend">
 		<header/>
 		<body>
 			<trans-unit id="common" approved="yes">
@@ -82,6 +82,98 @@
 			<trans-unit id="forms_mail_title" approved="yes">
 				<source>Mail Form</source>
 				<target state="translated">Mail-Formular</target>
+			</trans-unit>
+			<trans-unit id="menu" approved="yes">
+				<source>Menu</source>
+				<target state="translated">Menü</target>
+			</trans-unit>
+			<trans-unit id="menu_abstract.description" approved="yes">
+				<source>Menu of subpages of selected pages including abstracts</source>
+				<target state="translated">Menü der Unterseiten der ausgewählten Seite inklusive Zusammenfassungen</target>
+			</trans-unit>
+			<trans-unit id="menu_abstract.title" approved="yes">
+				<source>Abstracts</source>
+				<target state="translated">Zusammenfassungen</target>
+			</trans-unit>
+			<trans-unit id="menu_categorized_content.description" approved="yes">
+				<source>Content elements for selected categories</source>
+				<target state="translated">Inhaltselemente der ausgewählten Kategorien</target>
+			</trans-unit>
+			<trans-unit id="menu_categorized_content.title" approved="yes">
+				<source>Categorized content</source>
+				<target state="translated">Kategorisierter Inhalt</target>
+			</trans-unit>
+			<trans-unit id="menu_categorized_pages.description" approved="yes">
+				<source>Pages for selected categories</source>
+				<target state="translated">Seiten für ausgewählte Kategorien</target>
+			</trans-unit>
+			<trans-unit id="menu_categorized_pages.title" approved="yes">
+				<source>Categorized pages</source>
+				<target state="translated">Kategorisierte Seiten</target>
+			</trans-unit>
+			<trans-unit id="menu_pages.description" approved="yes">
+				<source>Menu of selected pages</source>
+				<target state="translated">Menü der ausgewählten Seiten</target>
+			</trans-unit>
+			<trans-unit id="menu_pages.title" approved="yes">
+				<source>Pages</source>
+				<target state="translated">Seiten</target>
+			</trans-unit>
+			<trans-unit id="menu_recently_updated.description" approved="yes">
+				<source>Menu of recently updated pages</source>
+				<target state="translated">Menü der neulich-aktualisierten Seiten</target>
+			</trans-unit>
+			<trans-unit id="menu_recently_updated.title" approved="yes">
+				<source>Recently updated pages</source>
+				<target state="translated">Neulich aktualisierte Seiten</target>
+			</trans-unit>
+			<trans-unit id="menu_related_pages.description" approved="yes">
+				<source>Menu of related pages based on keywords</source>
+				<target state="translated">Menü der verwandten Seiten basierend auf Stichworten</target>
+			</trans-unit>
+			<trans-unit id="menu_related_pages.title" approved="yes">
+				<source>Related pages</source>
+				<target state="translated">Verwandte Seiten</target>
+			</trans-unit>
+			<trans-unit id="menu_section.description" approved="no">
+				<source>Page content marked for section menus</source>
+				<target state="needs-translation">Seiteninhalt, der für Abschnittsmenüs markiert ist</target>
+			</trans-unit>
+			<trans-unit id="menu_section_pages.description" approved="no">
+				<source>Menu of subpages of selected pages including sections</source>
+				<target state="needs-translation">Menü der Unterseiten der ausgewählten Seite inklusive Zusammenfassungen</target>
+			</trans-unit>
+			<trans-unit id="menu_section_pages.title">
+				<source>Section index of subpages from selected pages</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="menu_section.title">
+				<source>Section index</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="menu_sitemap.description" approved="no">
+				<source>Expanded menu of all subpages of the current site</source>
+				<target state="needs-translation">Menü aller Seiten und Unterseiten der ausgewählten Seiten ausklappen</target>
+			</trans-unit>
+			<trans-unit id="menu_sitemap_pages.description" approved="yes">
+				<source>Expanded menu of all subpages for selected pages</source>
+				<target state="translated">Menü aller Seiten und Unterseiten der ausgewählten Seiten ausklappen</target>
+			</trans-unit>
+			<trans-unit id="menu_sitemap_pages.title" approved="yes">
+				<source>Sitemaps of selected pages</source>
+				<target state="translated">Sitemaps der ausgewählten Seiten</target>
+			</trans-unit>
+			<trans-unit id="menu_sitemap.title" approved="yes">
+				<source>Sitemap</source>
+				<target state="translated">Sitemap</target>
+			</trans-unit>
+			<trans-unit id="menu_subpages.description" approved="yes">
+				<source>Menu of subpages of selected pages</source>
+				<target state="translated">Menü der Unterseiten der ausgewählten Seiten</target>
+			</trans-unit>
+			<trans-unit id="menu_subpages.title" approved="yes">
+				<source>Subpages</source>
+				<target state="translated">Unterseiten</target>
 			</trans-unit>
 			<trans-unit id="plugins" approved="yes">
 				<source>Plugins</source>

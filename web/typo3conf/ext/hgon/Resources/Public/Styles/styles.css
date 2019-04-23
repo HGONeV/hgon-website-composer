@@ -2579,7 +2579,7 @@ code {
   line-height: 1.5;
   font-size: 12px;
   font-size: 0.75rem;
-  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  : 'Source Sans Pro', Helvetica, Arial, sans-serif;
   font-weight: 600;
   text-align: center;
   letter-spacing: 1px;
@@ -3096,7 +3096,7 @@ textarea {
   color: #666666;
   line-height: 1.5em;
   padding: 0.5em;
-  font-family: inherit;
+  : inherit;
   -moz-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
   -webkit-appearance: none;
@@ -3141,7 +3141,7 @@ select {
   color: #666666;
   line-height: 1.5em;
   padding: 0.5em;
-  font-family: inherit;
+  : inherit;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

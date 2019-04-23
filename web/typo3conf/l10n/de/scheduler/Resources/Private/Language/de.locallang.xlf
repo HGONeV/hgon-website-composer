@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T06:27:39Z" product-name="scheduler">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T06:20:01Z" product-name="scheduler">
 		<header/>
 		<body>
 			<trans-unit id="action.add" approved="yes">
@@ -14,6 +14,10 @@
 			<trans-unit id="action.run_task" approved="yes">
 				<source>Run task</source>
 				<target state="translated">Task ausführen</target>
+			</trans-unit>
+			<trans-unit id="action.run_task_cron" approved="yes">
+				<source>Run task on next cron job</source>
+				<target state="translated">Task mit nächstem Cron-Job ausführen</target>
 			</trans-unit>
 			<trans-unit id="button.cancel" approved="yes">
 				<source>Cancel</source>
@@ -71,12 +75,6 @@
 				<source>Last run</source>
 				<target state="translated">Letzte Ausführung</target>
 			</trans-unit>
-			<trans-unit id="hdg.schedulerUser" approved="yes">
-				<source>TYPO3 Scheduler backend user</source>
-				<target state="translated">Backend-Benutzer für den TYPO3-Planer</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
 			<trans-unit id="ipAnonymization.description" approved="yes">
 				<source>This task anonymizes the IP addresses to enforce the privacy of the persisted data.</source>
 				<target state="translated">Dieser Task anonymisiert IP-Adressen um den Datenschutz für bestehende Daten zu gewährleisten.</target>
@@ -104,6 +102,10 @@
 			<trans-unit id="label.cron" approved="yes">
 				<source>Cron</source>
 				<target state="translated">Cron</target>
+			</trans-unit>
+			<trans-unit id="label.cronjobSelected" approved="yes">
+				<source>Execute selected tasks on next cron job</source>
+				<target state="translated">Ausgewählte Tasks mit nächstem Cron-Job ausführen</target>
 			</trans-unit>
 			<trans-unit id="label.defType" approved="yes">
 				<source>Definition type</source>
@@ -224,6 +226,10 @@
 			<trans-unit id="label.nextExecution" approved="yes">
 				<source>Next Execution</source>
 				<target state="translated">Nächste Ausführung</target>
+			</trans-unit>
+			<trans-unit id="label.noGroup" approved="yes">
+				<source>(no task group defined)</source>
+				<target state="translated">(keine Taskgruppe festgelegt)</target>
 			</trans-unit>
 			<trans-unit id="label.optimizeDatabaseTables.selectTables" approved="yes">
 				<source>Database tables</source>
@@ -441,30 +447,6 @@
 				<source>This screen checks if the requisites for running the Scheduler as a cron job are fulfilled. It also displays information about the last run of the Scheduler.</source>
 				<target state="translated">Diese Seite zeigt Ihnen, ob die Voraussetzungen, um den Planer mit einem Cron-Job auszuführen, erfüllt sind. Zudem zeigt sie Informationen zur letzten Ausführung des Planers.</target>
 			</trans-unit>
-			<trans-unit id="msg.schedulerUser" approved="yes">
-				<source>The backend user "_cli_scheduler" is used by the CLI-script to log into TYPO3. This user may not have administrator privileges. The user's password is not important but should be set to a secure value for security reasons.</source>
-				<target state="translated">Der Backend-Benutzer "_cli_scheduler" wird vom CLI-Skript benutzt, um sich bei TYPO3 anzumelden. Dieser Benutzer darf keine Administratorrechte haben. Das Passwort dieses Benutzers ist nicht wichtig, sollte aber auf einen sicheren Wert gesetzt werden.</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="msg.schedulerUserFound" approved="yes">
-				<source>The backend user "_cli_scheduler" was found.</source>
-				<target state="translated">Der Backend-Benutzer "_cli_scheduler" wurde gefunden.</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="msg.schedulerUserFoundButDisabled" approved="yes">
-				<source>The backend user "_cli_scheduler" exists but is currently disabled.</source>
-				<target state="translated">Der Backend-Benutzer "_cli_scheduler" existiert, ist aber derzeit deaktiviert.</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="msg.schedulerUserMissing" approved="yes">
-				<source>The backend user "_cli_scheduler" was not found.&lt;br/&gt;&lt;br/&gt; &lt;a href="%s" class="btn btn-danger" title="Click to create the missing user"&gt;Create the user now&lt;/a&gt;</source>
-				<target state="translated">Der Backend-Benutzer "_cli_scheduler" wurde nicht gefunden.&lt;br/&gt;&lt;br/&gt; &lt;a href="%s" class="btn btn-danger" title="Klicken Sie, um den fehlenden Benutzer zu erstellen."&gt;Den Benutzer jetzt erstellen.&lt;/a&gt;</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
 			<trans-unit id="msg.selectionOfNonExistingCacheBackends" approved="yes">
 				<source>Some of the selected cache backends do not exist. Please select valid backends only.</source>
 				<target state="translated">Einige der ausgewählten Cache-Backends existieren nicht. Bitte wählen Sie nur valide Backends aus.</target>
@@ -504,24 +486,6 @@
 			<trans-unit id="msg.updateSuccess" approved="yes">
 				<source>The task was updated successfully.</source>
 				<target state="translated">Der Task wurde erfolgreich aktualisiert.</target>
-			</trans-unit>
-			<trans-unit id="msg.userCreated" approved="yes">
-				<source>The "_cli_scheduler" user was created successfully.</source>
-				<target state="translated">Der Benutzer "_cli_scheduler" wurde erfolgreich erstellt.</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="msg.userExists" approved="yes">
-				<source>The "_cli_scheduler" user already exists. It was not created.</source>
-				<target state="translated">Der Benutzer "_cli_scheduler" existiert bereits. Er wurde daher nicht erstellt.</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="msg.userNotCreated" approved="yes">
-				<source>The creation of the "_cli_scheduler" user failed.</source>
-				<target state="translated">Der Benutzer "_cli_scheduler" konnte nicht erstellt werden.</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
 			</trans-unit>
 			<trans-unit id="none" approved="yes">
 				<source>None</source>

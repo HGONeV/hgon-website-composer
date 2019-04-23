@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T03:41:42Z" product-name="lang">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T04:17:26Z" product-name="lang">
 		<header/>
 		<body>
 			<trans-unit id="button.activate" approved="yes">
@@ -54,6 +54,10 @@
 			<trans-unit id="flashmessage.languageDeactivated" approved="yes">
 				<source>Language was successfully deactivated.</source>
 				<target state="translated">Die Sprache wurde erfolgreich deaktiviert.</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.languageRemoved" approved="yes">
+				<source>Language was successfully deactivated and removed.</source>
+				<target state="translated">Die Sprache wurde erfolgreich deaktiviert und entfernt.</target>
 			</trans-unit>
 			<trans-unit id="flashmessage.multipleErrors" approved="yes">
 				<source>Several requests have been failed. Please check your internet connection!</source>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T03:13:20Z" product-name="info_pagetsconfig">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T03:09:38Z" product-name="info_pagetsconfig">
 		<header/>
 		<body>
 			<trans-unit id="tsconfig_edit.alttitle" approved="yes">

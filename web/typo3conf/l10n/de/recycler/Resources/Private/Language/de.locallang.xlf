@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T05:24:15Z" product-name="recycler">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T05:12:07Z" product-name="recycler">
 		<header/>
 		<body>
 			<trans-unit id="button.cancel" approved="yes">
@@ -110,6 +110,10 @@
 			<trans-unit id="modal.undopage.text" approved="yes">
 				<source>Do you really want to recover the page "{0}" {1}, its contents and optionally all of its subpages?</source>
 				<target state="translated">Seite "{0}" {1} mit all ihrem Inhalt und optional alle ihre Unterseiten tatsächlich wiederherstellen?</target>
+			</trans-unit>
+			<trans-unit id="modal.undo.parentpages" approved="yes">
+				<source>All parent pages have been restored to ensure a valid rootline!</source>
+				<target state="translated">Alle Elternseiten wurden wiederhergestellt, um eine gültige Verbindung zur Websitewurzel sicherzustellen!</target>
 			</trans-unit>
 			<trans-unit id="modal.undo.recursive" approved="yes">
 				<source>Recover content and subpages recursively</source>

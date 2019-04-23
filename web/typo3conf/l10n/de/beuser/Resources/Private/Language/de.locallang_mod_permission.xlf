@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T00:23:49Z" product-name="beuser">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T00:26:21Z" product-name="beuser">
 		<header/>
 		<body>
 			<trans-unit id="1" approved="yes">
@@ -99,6 +99,10 @@
 				<source>Legend</source>
 				<target state="translated">Legende</target>
 			</trans-unit>
+			<trans-unit id="level" approved="yes">
+				<source>level</source>
+				<target state="translated">Ebene</target>
+			</trans-unit>
 			<trans-unit id="levels" approved="yes">
 				<source>levels</source>
 				<target state="translated">Ebenen</target>
@@ -130,6 +134,10 @@
 			<trans-unit id="Owner" approved="yes">
 				<source>Owner</source>
 				<target state="translated">Besitzer</target>
+			</trans-unit>
+			<trans-unit id="page_affected" approved="yes">
+				<source>page affected</source>
+				<target state="translated">betroffene Seite</target>
 			</trans-unit>
 			<trans-unit id="pages_affected" approved="yes">
 				<source>pages affected</source>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T00:09:01Z" product-name="backend">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T00:13:39Z" product-name="backend">
 		<header/>
 		<body>
 			<trans-unit id="advancedFunctions" approved="yes">
@@ -31,6 +31,10 @@
 				<source>Page uses content from this page: %s</source>
 				<target state="translated">Die Seite benutzt Inhalt von dieser Seite: %s</target>
 			</trans-unit>
+			<trans-unit id="content_on_pid_title" approved="yes">
+				<source>This content is also shown on: %s</source>
+				<target state="translated">Dieser Inhalt wird auch angezeigt auf: %s</target>
+			</trans-unit>
 			<trans-unit id="defaultLanguage" approved="yes">
 				<source>Default</source>
 				<target state="translated">Standard</target>
@@ -42,6 +46,10 @@
 			<trans-unit id="deleteWarning" approved="yes">
 				<source>Are you sure you want to delete this record?</source>
 				<target state="translated">Diesen Datensatz tatsächlich löschen?</target>
+			</trans-unit>
+			<trans-unit id="dragdrop.copy.message" approved="yes">
+				<source>Press CTRL to copy</source>
+				<target state="translated">Drücken Sie Strg zum Kopieren</target>
 			</trans-unit>
 			<trans-unit id="edit" approved="yes">
 				<source>Edit</source>
@@ -102,6 +110,18 @@
 			<trans-unit id="internalNotes" approved="yes">
 				<source>Internal notes</source>
 				<target state="translated">Interne Notizen</target>
+			</trans-unit>
+			<trans-unit id="languageModeConnected" approved="yes">
+				<source>Connected Mode</source>
+				<target state="translated">Verbundener Modus</target>
+			</trans-unit>
+			<trans-unit id="languageModeFree" approved="yes">
+				<source>Free Mode</source>
+				<target state="translated">Freier Modus</target>
+			</trans-unit>
+			<trans-unit id="languageModeMixed" approved="yes">
+				<source>Mixed Mode</source>
+				<target state="translated">Gemischter Modus</target>
 			</trans-unit>
 			<trans-unit id="localize.chooseLanguage" approved="yes">
 				<source>Choose your language</source>
@@ -341,9 +361,57 @@
 				<source>Page information</source>
 				<target state="translated">Seiteninformationen</target>
 			</trans-unit>
+			<trans-unit id="pageIsExternalLinkMessage" approved="yes">
+				<source>Page is a link to the following external URL: %s</source>
+				<target state="translated">Die Seite ist ein Link zu der folgenden externen URL: %s</target>
+			</trans-unit>
+			<trans-unit id="pageIsInternalLinkMessage" approved="yes">
+				<source>Page is a link to the following page: %s</source>
+				<target state="translated">Die Seite ist ein Link zu der folgenden Seite: %s</target>
+			</trans-unit>
+			<trans-unit id="pageIsMisconfiguredExternalLinkMessage" approved="yes">
+				<source>Page is configured to be an external link but there is actually no URL defined.</source>
+				<target state="translated">Die Seite ist als externer Link konfiguriert, aber es ist keine URL definiert.</target>
+			</trans-unit>
+			<trans-unit id="pageIsMisconfiguredInternalLinkMessage" approved="yes">
+				<source>Page is configured to be a link but there is actually no target defined.</source>
+				<target state="translated">Die Seite ist als Link konfiguriert, aber es ist kein Ziel definiert.</target>
+			</trans-unit>
+			<trans-unit id="pageIsRandomInternalLinkMessage" approved="yes">
+				<source>Page is a link to a random page.</source>
+				<target state="translated">Die Seite ist ein Link zu einer zufälligen Seite.</target>
+			</trans-unit>
+			<trans-unit id="pasteAfterRecord" approved="yes">
+				<source>Paste after this record</source>
+				<target state="translated">Nach diesem Datensatz einfügen</target>
+			</trans-unit>
 			<trans-unit id="pasteIntoColumn" approved="yes">
 				<source>Paste into this column</source>
 				<target state="translated">In diese Spalte einfügen</target>
+			</trans-unit>
+			<trans-unit id="paste.modal.button.cancel" approved="yes">
+				<source>Cancel</source>
+				<target state="translated">Abbrechen</target>
+			</trans-unit>
+			<trans-unit id="paste.modal.button.paste" approved="yes">
+				<source>Move</source>
+				<target state="translated">Verschieben</target>
+			</trans-unit>
+			<trans-unit id="paste.modal.button.pastecopy" approved="yes">
+				<source>Copy</source>
+				<target state="translated">Kopieren</target>
+			</trans-unit>
+			<trans-unit id="paste.modal.paste" approved="yes">
+				<source>Do you want to move the record to this position?</source>
+				<target state="translated">Den Datensatz tatsächlich an diese Position verschieben?</target>
+			</trans-unit>
+			<trans-unit id="paste.modal.pastecopy" approved="yes">
+				<source>Do you want to copy the record to this position?</source>
+				<target state="translated">Den Datensatz tatsächlich an diese Position kopieren?</target>
+			</trans-unit>
+			<trans-unit id="paste.modal.title.paste" approved="yes">
+				<source>Paste record</source>
+				<target state="translated">Datensatz einfügen</target>
 			</trans-unit>
 			<trans-unit id="pI_crDate" approved="yes">
 				<source>Created date</source>
@@ -396,6 +464,14 @@
 			<trans-unit id="staleTranslationWarningTitle" approved="yes">
 				<source>Inconsistent content detected in language "%s"</source>
 				<target state="translated">Inkonsistenter Inhalt in Sprache "%s" gefunden</target>
+			</trans-unit>
+			<trans-unit id="staleUnusedElementsWarning" approved="yes">
+				<source>These elements don't belong to any of the available columns of this page. You should either delete them or move them to existing columns. We highlighted the problematic records for you.</source>
+				<target state="translated">Diese Elemente gehören zu keiner der verfügbaren Spalten dieser Seite. Sie sollten sie entweder löschen oder sie in bestehende Spalten verschieben. Die problematischen Datensätze wurden hervorgehoben.</target>
+			</trans-unit>
+			<trans-unit id="staleUnusedElementsWarningTitle" approved="yes">
+				<source>Unused elements detected on this page</source>
+				<target state="translated">Unbenutzte Elemente auf dieser Seite</target>
 			</trans-unit>
 			<trans-unit id="title" approved="yes">
 				<source>Page content</source>

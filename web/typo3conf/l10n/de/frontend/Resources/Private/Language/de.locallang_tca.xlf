@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T02:30:18Z" product-name="frontend">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T02:40:42Z" product-name="frontend">
 		<header/>
 		<body>
 			<trans-unit id="backend_layout" approved="yes">
@@ -18,6 +18,14 @@
 			<trans-unit id="backend_layout.icon" approved="yes">
 				<source>Icon</source>
 				<target state="translated">Symbol</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.tabs.access" approved="yes">
+				<source>Access</source>
+				<target state="translated">Zugriff</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.tabs.extended" approved="yes">
+				<source>Extended</source>
+				<target state="translated">Erweitert</target>
 			</trans-unit>
 			<trans-unit id="backend_layout.title" approved="yes">
 				<source>Title</source>
@@ -679,30 +687,6 @@
 				<source>URL</source>
 				<target state="translated">URL</target>
 			</trans-unit>
-			<trans-unit id="pages.url_scheme" approved="yes">
-				<source>Enforce Protocol:</source>
-				<target state="translated">Protokoll erzwingen:</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="pages.url_scheme_formlabel" approved="yes">
-				<source>Use Protocol</source>
-				<target state="translated">Benutze Protokoll</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="pages.url_scheme.http" approved="yes">
-				<source>http://</source>
-				<target state="translated">http://</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
-			<trans-unit id="pages.url_scheme.https" approved="yes">
-				<source>https://</source>
-				<target state="translated">https://</target>
-				<note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note>
-				<note>This label is deprecated (not used anymore) since TYPO3v8</note>
-			</trans-unit>
 			<trans-unit id="pages.urltype_formlabel" approved="yes">
 				<source>Protocol</source>
 				<target state="translated">Protokoll</target>
@@ -780,6 +764,10 @@
 			<trans-unit id="sys_template.basedOn_add" approved="yes">
 				<source>Add New Basis Template</source>
 				<target state="translated">Neues Basis-Template hinzufügen</target>
+			</trans-unit>
+			<trans-unit id="sys_template.basedOn_edit" approved="yes">
+				<source>Edit template</source>
+				<target state="translated">Template bearbeiten</target>
 			</trans-unit>
 			<trans-unit id="sys_template.clear" approved="yes">
 				<source>Clear</source>

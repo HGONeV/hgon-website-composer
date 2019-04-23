@@ -4,26 +4,28 @@
         <f:if condition="{data.header} || {data.subheader} || {data.date}">
             <f:switch expression="{data.header_layout}">
 
-                <f:case value="14">
-                </f:case>
+                <f:comment>
+                    <f:case value="14">
+                    </f:case>
 
-                <f:case value="20">
-                    <h2>
-                        <f:render section="HeaderBody" arguments="{_all}"/>
-                    </h2>
-                </f:case>
+                    <f:case value="20">
+                        <h2>
+                            <f:render section="HeaderBody" arguments="{_all}"/>
+                        </h2>
+                    </f:case>
 
-                <f:case value="21">
-                    <h3 class="headline">
-                        <f:render section="HeaderBody" arguments="{_all}"/>
-                    </h3>
-                </f:case>
+                    <f:case value="21">
+                        <h3 class="headline">
+                            <f:render section="HeaderBody" arguments="{_all}"/>
+                        </h3>
+                    </f:case>
 
-                <f:case value="30">
-                    <q>
-                        <f:render section="HeaderBody" arguments="{_all}"/>
-                    </q>
-                </f:case>
+                    <f:case value="30">
+                        <q>
+                            <f:render section="HeaderBody" arguments="{_all}"/>
+                        </q>
+                    </f:case>
+                </f:comment>
 
                 <f:defaultCase>
                     <header>

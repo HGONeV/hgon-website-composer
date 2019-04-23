@@ -1,0 +1,48 @@
+{namespace rkw=RKW\RkwEvents\ViewHelpers}
+
+    <f:if condition="<f:count>{sortedEventList}</f:count>">
+        <f:then>
+            <f:for each="{sortedEventList}" as="eventsInYear" iteration="year">
+                <f:for each="{eventsInYear}" as="eventsInMonth" iteration="month">
+                    <f:if condition="{noGrouping}">
+                        <f:then>
+
+                            <!-- further boxes with events -->
+                            <f:for each="{eventsInMonth}" as="event">
+                                <f:render partial="Event/List/Box" arguments="{_all}" section="list" />
+                            </f:for>
+
+                        </f:then>
+
+                        <f:else>
+                            <div class="mb-1">
+                                <h5><f:translate key="tx_rkwevents_fluid.partials_event_list.month<rkw:printArrayKey array='{eventsInYear}' index='{month.index}' />" extensionName="RkwEvents" /> <rkw:printArrayKey array="{sortedEventList}" index="{year.index}" /></h5>
+                            </div>
+
+                            <div id="tx-rkwevents-results-<rkw:printArrayKey array='{sortedEventList}' index='{year.index}' />-<rkw:printArrayKey array='{eventsInYear}' index='{month.index}' />">
+                                <!-- further boxes with events -->
+                                <f:for each="{eventsInMonth}" as="event">
+                                    <f:render partial="Event/List/Box" arguments="{_all}" section="list" />
+                                </f:for>
+                            </div>
+
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </f:for>
+        </f:then>
+        <f:else>
+
+            <f:if condition="{noGrouping}">
+                <f:else>
+                    <div><!-- empty DIV to hide more link via AJAX --></div>
+                </f:else>
+            </f:if>
+
+        </f:else>
+
+    </f:if>
+
+
+<!-- lazy loading / load more box -->
+<f:render partial="Event/List/MoreLink" arguments="{_all}" />

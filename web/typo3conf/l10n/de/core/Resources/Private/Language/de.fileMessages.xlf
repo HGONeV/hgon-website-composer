@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T01:12:13Z" product-name="core">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T01:24:00Z" product-name="core">
 		<header/>
 		<body>
 			<trans-unit id="FileUtility.CannotCopyFolderIntoTargetFolderBecauseTheTargetFolderIsAlreadyWithinTheFolderToBeCopied" approved="yes">
@@ -91,6 +91,13 @@
 				<target state="translated">Verzeichnis wurde von "%s" nach "%s" umbenannt.</target>
 				<alt-trans xml:space="preserve" origin="None">
 					<target>Verzeichnis wurde von „%s“ nach „%s“ umbenannt.</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="FileUtility.DirectoryRenamedSameName" approved="yes">
+				<source>Directory "%s" was not renamed. (Same name as before)</source>
+				<target state="translated">Verzeichnis "%s" wurde nicht umbenannt. (Selber Name wie zuvor.)</target>
+				<alt-trans xml:space="preserve" origin="None">
+					<target>Verzeichnis „%s“ wurde nicht umbenannt. (Selber Name wie zuvor.)</target>
 				</alt-trans>
 			</trans-unit>
 			<trans-unit id="FileUtility.DirectoryWasNotCopiedTo" approved="yes">
@@ -184,6 +191,10 @@
 					<target>Datei „%s“ wurde nach „%s“ verschoben.</target>
 				</alt-trans>
 			</trans-unit>
+			<trans-unit id="FileUtility.FileNameSanitized" approved="yes">
+				<source>The file name "%s" is invalid, the file was automatically renamed to "%s".</source>
+				<target state="translated">Der Dateiname "%s" ist ungültig; die Datei wurde automatisch umbenannt zu "%s".</target>
+			</trans-unit>
 			<trans-unit id="FileUtility.FileNameWasNotAllowed" approved="yes">
 				<source>File name "%s" was not allowed!</source>
 				<target state="translated">Dateiname "%s" ist nicht erlaubt!</target>
@@ -210,6 +221,13 @@
 				<target state="translated">Datei wurde von "%s" nach "%s" umbenannt.</target>
 				<alt-trans xml:space="preserve" origin="None">
 					<target>Datei wurde von „%s“ nach „%s“ umbenannt.</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="FileUtility.FileRenamedSameName" approved="yes">
+				<source>File "%s" was not renamed. (Same name as before)</source>
+				<target state="translated">Datei "%s" wurde nicht umbenannt. (Selber Name wie zuvor.)</target>
+				<alt-trans xml:space="preserve" origin="None">
+					<target>Datei „%s“ wurde nicht umbenannt. (Selber Name wie zuvor.) </target>
 				</alt-trans>
 			</trans-unit>
 			<trans-unit id="FileUtility.FileSavedToBytesMd5" approved="yes">

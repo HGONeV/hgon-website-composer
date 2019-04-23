@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-02-08T06:21:52Z" product-name="saltedpasswords">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T06:10:28Z" product-name="saltedpasswords">
 		<header/>
 		<body>
 			<trans-unit id="ext.saltedpasswords.configuration.header.additionalInformation" approved="yes">
@@ -229,6 +229,10 @@ Benutzen Sie das Install-Tool, um das Sicherheitslevel für das Backend ($TYPO3_
 				<source>MD5 salted hashing (secure)</source>
 				<target state="translated">MD5-salted Hashing (sicher)</target>
 				<note>100%</note>
+			</trans-unit>
+			<trans-unit id="ext.saltedpasswords.title.pbkdf2salt" approved="yes">
+				<source>PBKDF2 key derivation (advanced)</source>
+				<target state="translated">PBKDF2-Schlüsselableitung (fortgeschritten)</target>
 			</trans-unit>
 			<trans-unit id="ext.saltedpasswords.title.phpasssalt" approved="yes">
 				<source>Portable PHP password hashing (phpass)</source>
