@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" target-language="de" datatype="plaintext" original="messages" date="2019-04-25T13:49:26Z" product-name="hgon_template">
+		<header/>
+		<body>
+
+            <!-- FLEXFORM -->
+            <trans-unit id="flexform.journalHighlight.sheetTitle">
+                <source>Journal Highlight</source>
+                <target>Journal Highlight</target>
+            </trans-unit>
+            <trans-unit id="flexform.journalHighlight.pid">
+                <source>Page ID</source>
+                <target>Seite auswählen</target>
+            </trans-unit>
+
+        </body>
+	</file>
+</xliff>

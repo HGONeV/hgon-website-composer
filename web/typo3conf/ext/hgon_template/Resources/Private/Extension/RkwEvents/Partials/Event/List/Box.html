@@ -1,0 +1,47 @@
+{namespace rkw=RKW\RkwEvents\ViewHelpers}
+
+<article class="item item-event">
+
+    <header class="item__header">
+        <svg width="48" height="48"><use xlink:href="#ui-event"></use></svg>
+        <time datetime="{event.start -> f:format.date(format:'d.m.Y')}">{event.start -> f:format.date(format:"d.m.Y")}</time>
+        <span class="">{event.place.city}</span>
+    </header>
+
+    <div class="item__content">
+        <h3>
+            {event.title}
+        </h3>
+    </div>
+
+    <footer class="item__footer">
+        <f:link.action action="show" controller="Event" pluginName="Pi1" extensionName="RkwEvents" pageUid="{showPid}" arguments="{event : event}" class="link link--goto" title="{event.title}">
+            Details
+        </f:link.action>
+    </footer>
+
+</article>
+
+<f:section name="list">
+    <div class="textbox textbox--toggle / p-1 mb-1 / color-bg-tertiary">
+        <button class="btn textbox__toggle-btn btn--transparent btn--circle js-toggle-btn">
+            <svg class="icon is-centered"><use xlink:href="#ui-down"></use></svg>
+        </button>
+        <div class="grid">
+            <div class="grid__col c-2">
+                <img class="img-left img-rounded" src="https://dummyimage.com/80x80/000000/fff.png" alt="" width="80" height="80">
+            </div>
+            <div class="grid__col c-10">
+                <header class="textbox__header">
+                    <h5 class="textbox__headline">{event.title}</h5>
+                </header>
+                <div class="textbox__content">
+                    <p>{event.subtitle}</p>
+                    <span class="textbox__toggle-text js-toggle-text" style="display: none;">
+                        <f:format.raw>{event.description}</f:format.raw>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:section>

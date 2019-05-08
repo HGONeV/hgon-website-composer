@@ -60,6 +60,6 @@ bower_components
 !/web/typo3conf/ext/bm_pdf2content
 !/web/typo3conf/ext/dd_googlesitemap
 !/web/typo3conf/ext/varnish
-!/web/typo3conf/ext/hgon
+!/web/typo3conf/ext/hgon_template
 !/web/typo3conf/ext/hgon_basic
 !/web/typo3conf/ext/hgon_donation

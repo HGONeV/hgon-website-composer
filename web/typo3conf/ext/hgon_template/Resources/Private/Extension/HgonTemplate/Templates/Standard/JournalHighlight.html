@@ -1,0 +1,62 @@
+<article class="box box--floated box--floated-right / mb-8">
+    <div class="box__inner">
+        <div class="flex-container space-between no-padding">
+            <div class="flex-item c-8">
+                <picture class="box__image">
+                    <f:if condition="{pages.txRkwbasicsTeaserImage}" >
+                        <source media="(min-width: 37.563em) and (max-width: 48em)" srcset="<f:uri.image src='{pages.txRkwbasicsTeaserImage.uid}' treatIdAsReference='1' absolute='true' />">
+                        <source media="(max-width: 37.5em)" srcset="<f:uri.image src='{pages.txRkwbasicsTeaserImage.uid}' treatIdAsReference='1' absolute='true' />">
+                        <f:image src="{pages.txRkwbasicsTeaserImage.uid}" treatIdAsReference="1" title="{pages.txRkwbasicsTeaserImage.title}" alt="{pages.txRkwbasicsTeaserImage.alternative}" width="300" height="400" />
+                    </f:if>
+                </picture>
+                <header class="box__header">
+                    <h2>
+                        <span class="badge badge--secondary">
+                            <f:for each="{pages.categories}" as="category" iteration="iterator">
+                                <f:if condition="{iterator.isFirst}">
+                                    {category.title}
+                                </f:if>
+                            </f:for>
+                            <span class="is-hidden">: </span>
+                        </span>
+                        <span class="h2 headline">{pages.title}</span>
+                    </h2>
+                </header>
+                <div class="box__content">
+                    <p>{pages.txRkwbasicsTeaserText}</p>
+                    <p>
+                        <f:link.page pageUid="{pages.uid}" class="btn btn--primary btn--rounded">Mehr lesen</f:link.page>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="flex-item c-4 pl-2">
+                <footer class="box__footer mt-2">
+                    <ul class="menu menu--list">
+                        <div id="c30" class="frame frame-default frame-type-menu_sitemap_pages frame-layout-50">
+                            <header>
+                                <h6 class="headline ">Weitere Inhalte</h6>
+                            </header>
+                            <li>
+                                <a class="link link--goto" href="index.php?id=24 " title="Übersicht"><span>Übersicht</span></a>
+                            </li>
+                            <li>
+                                <a class="link link--goto" href="index.php?id=27 " title="Artenschutz"><span>Artenschutz</span></a>
+                            </li>
+                            <li>
+                                <a class="link link--goto" href="index.php?id=32 " title="Greifvogelschutz"><span>Greifvogelschutz</span></a>
+                            </li>
+                            <li>
+                                <a class="link link--goto" href="index.php?id=26 " title="Lebensräume"><span>Lebensräume</span></a>
+                            </li>
+                            <li>
+                                <a class="link link--goto" href="index.php?id=25 " title="Vögel"><span>Vögel</span></a>
+                            </li>
+                        </div>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </div>
+</article>

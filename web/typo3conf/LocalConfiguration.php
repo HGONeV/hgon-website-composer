@@ -56,6 +56,7 @@ return [
             'recycler' => 'a:0:{}',
             'reports' => 'a:0:{}',
             'rkw_alerts' => 'a:0:{}',
+            'rkw_authors' => 'a:0:{}',
             'rkw_basics' => 'a:0:{}',
             'rkw_consultant' => 'a:0:{}',
             'rkw_consultants' => 'a:0:{}',

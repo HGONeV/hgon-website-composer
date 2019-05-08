@@ -1,0 +1,87 @@
+
+// #########################################################
+// Extbase Configuration
+// #########################################################
+
+config.tx_extbase.persistence {
+
+    classes {
+
+        HGON\HgonTemplate\Domain\Model\Pages {
+            mapping {
+                tableName = pages
+
+                # on pages tables it's the doktype
+                # if we set an value, we filter by it
+                # if we do not set anything, all pages are found
+                recordType =
+
+                # mapping to properties of class
+                columns {
+                    uid.mapOnProperty = uid
+                    pid.mapOnProperty = pid
+                    sorting.mapOnProperty = sorting
+                    title.mapOnProperty = title
+                    subtitle.mapOnProperty = subtitle
+                    no_search.mapOnProperty = noSearch
+                    crdate.mapOnProperty = crdate
+                    tstamp.mapOnProperty = tstamp
+                    hidden.mapOnProperty = hidden
+                    deleted.mapOnProperty = deleted
+
+                }
+            }
+        }
+
+        HGON\HgonTemplate\Domain\Model\SysCategory {
+            mapping {
+                tableName = sys_category
+                recordType =
+
+                # mapping to properties of class
+                columns {
+                    title.mapOnProperty = title
+                }
+            }
+        }
+
+        HGON\HgonTemplate\Domain\Model\Authors {
+            mapping {
+                tableName = tx_rkwauthors_domain_model_authors
+                recordType =
+            }
+        }
+
+    }
+}
+
+// #########################################################
+// Plugin Configuration
+// #########################################################
+
+plugin.tx_hgontemplate {
+
+    view {
+        layoutRootPaths {
+            0 = EXT:hgon_template/Resources/Private/Extension/HgonTemplate/Layouts/
+            1 = {$plugin.tx_hgontemplate.view.layoutRootPath}
+        }
+        templateRootPaths {
+            0 = EXT:hgon_template/Resources/Private/Extension/HgonTemplate/Templates/
+            1 = {$plugin.tx_hgontemplate.view.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:hgon_template/Resources/Private/Extension/HgonTemplate/Partials/
+            1 = {$plugin.tx_hgontemplate.view.partialRootPath}
+        }
+
+    }
+    persistence {
+        storagePid = {$plugin.tx_hgontemplate.persistence.storagePid}
+    }
+    settings {
+
+
+    }
+}
+

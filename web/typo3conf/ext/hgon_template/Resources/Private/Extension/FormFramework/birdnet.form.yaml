@@ -1,0 +1,84 @@
+
+renderingOptions:
+  submitButtonLabel: 'Beobachtung absenden'
+type: Form
+identifier: birdnet
+label: Birdnet
+prototypeName: standard
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Neue Seite'
+    type: Page
+    identifier: page-1
+    label: ''
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-3
+        label: Name
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: 'Vor- und Nachname'
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-2
+        label: Email
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: E-Mail-Adresse
+            required: required
+          elementDescription: ''
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: Kommentar
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Betreff
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: Textarea
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        properties:
+          saveToFileMount: '1:/user_upload/'
+          allowedMimeTypes:
+            - image/jpeg
+        type: ImageUpload
+        identifier: imageupload-1
+        label: Bildupload
+      -
+        properties:
+          options:
+            Bild: Bild
+            Ort: Ort
+            Tier: Tier
+        type: RadioButton
+        identifier: radiobutton-1
+        label: 'Auswahl (Bild; Ort; Tier)'
+        defaultValue: Bild
