@@ -1,0 +1,19 @@
+<header class="main__header">
+
+    <div class="wrap wrap--text / align-center">
+        <h1>
+            <f:if condition="{parentPageTitle}">
+                <span class="badge badge--secondary">{parentPageTitle}<span class="is-hidden">: </span></span>
+            </f:if>
+            <f:if condition="{parentPageSubtitle}">
+                <span class="h1 headline">{parentPageSubtitle}</span>
+            </f:if>
+        </h1>
+        <f:if condition="{parentPageTeaserText}">
+            <p>
+                {parentPageTeaserText}
+            </p>
+        </f:if>
+    </div>
+
+</header>

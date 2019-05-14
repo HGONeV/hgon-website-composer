@@ -43,6 +43,22 @@ call_user_func(
             ]
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'ProjectTeaser',
+            [
+                'Standard' => 'projectTeaser'
+            ],
+            // non-cacheable actions
+            [
+                'Standard' => 'projectTeaser'
+            ]
+        );
+
+
+        // for content slide
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',subtitle,tx_rkwbasics_article_image,';
+
     },
     $_EXTKEY
 );

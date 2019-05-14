@@ -1,0 +1,9 @@
+plugin.tx_hgonworkgroup {
+    persistence {
+        storagePid = 42
+    }
+    settings {
+        listPid = 8
+        showPid = 43
+    }
+}

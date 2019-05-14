@@ -4,6 +4,9 @@
 <f:section name="Header">
     <f:switch expression="{data.layout}">
 
+        <f:case value="0">
+        </f:case>
+
         <f:case value="11">
 
         </f:case>
@@ -25,6 +28,15 @@
 
 <f:section name="Main">
     <f:switch expression="{data.layout}">
+
+        <f:case value="0">
+            <f:render partial="Header/All" arguments="{_all}" section="HeaderBodyReverse" />
+            <f:if condition="{data.bodytext}">
+                <p>
+                    <f:format.stripTags><f:format.html>{data.bodytext}</f:format.html></f:format.stripTags>
+                </p>
+            </f:if>
+        </f:case>
 
         <f:case value="11">
             <header class="section__header">

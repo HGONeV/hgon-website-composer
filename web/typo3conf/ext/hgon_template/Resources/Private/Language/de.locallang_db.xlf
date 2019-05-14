@@ -14,6 +14,40 @@
                 <target>Seite auswählen</target>
             </trans-unit>
 
+            <trans-unit id="flexform.pageHighlight.sheetTitle">
+                <source>Page Highlight</source>
+                <target>Page Highlight</target>
+            </trans-unit>
+            <trans-unit id="flexform.pageHighlight.pid">
+                <source>Page ID</source>
+                <target>Seite auswählen</target>
+            </trans-unit>
+
+            <trans-unit id="flexform.projectTeaser.sheetTitle">
+                <source>Project Teaser</source>
+                <target>Projektauswahl</target>
+            </trans-unit>
+           <trans-unit id="flexform.projectTeaser.preHeader">
+               <source>Pre header</source>
+               <target>Pre-Headline (blaue Schrift; falls nicht gesetzt, wird der Inhalt linksbündig dargestellt)</target>
+           </trans-unit>
+           <trans-unit id="flexform.projectTeaser.header">
+               <source>Header</source>
+               <target>Headline</target>
+           </trans-unit>
+           <trans-unit id="flexform.projectTeaser.text">
+               <source>Text</source>
+               <target>Text</target>
+           </trans-unit>
+            <trans-unit id="flexform.projectTeaser.random">
+                <source>Random</source>
+                <target>Zufallsauswahl (deaktiviert die direkte Projektauswahl; zeigt drei Projekte an)</target>
+            </trans-unit>
+            <trans-unit id="flexform.projectTeaser.projectUidList">
+                <source>Select three projects</source>
+                <target>Projektauswahl (drei oder vier Elemente müssen ausgewählt werden)</target>
+            </trans-unit>
+
         </body>
 	</file>
 </xliff>

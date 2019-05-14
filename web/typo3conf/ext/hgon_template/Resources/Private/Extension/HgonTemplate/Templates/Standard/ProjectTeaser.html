@@ -1,0 +1,136 @@
+<section class="section">
+
+    <f:comment><!-- header area --></f:comment>
+
+    <f:if condition="{settings.projectTeaser.preHeader}">
+        <f:then>
+            <f:render section="centeredHeader" arguments="{_all}"/>
+        </f:then>
+        <f:else>
+            <f:render section="leftJustifiedHeader" arguments="{_all}"/>
+        </f:else>
+    </f:if>
+
+
+    <f:comment><!-- content area --></f:comment>
+
+    <div class="section__content">
+        <div class="flex-container space-between gutter valign-stretch">
+
+            <f:if condition="<f:count>{projectList}</f:count> == 3">
+                <f:then>
+                    <f:render section="threeElements" arguments="{_all}"/>
+                </f:then>
+                <f:else>
+                    <f:render section="fourElements" arguments="{_all}"/>
+                </f:else>
+            </f:if>
+
+
+        </div>
+    </div>
+
+    <footer class="section__footer / align-center">
+        <a class="btn btn--primary btn--rounded" href="about">
+            Link Wohin?
+        </a>
+    </footer>
+</section>
+
+
+
+<f:comment>
+    <!-- SECTIONS -->
+</f:comment>
+
+<f:section name="centeredHeader">
+    <div id="c6" class="frame frame-default frame-type-text frame-layout-12">
+        <header class="section__header / pb-2">
+            <div class="wrap wrap--text / align-center">
+                <span class="badge badge--secondary">
+                    {settings.projectTeaser.preHeader}
+                    <span class="is-hidden">: </span>
+                </span>
+                <span class="h1 headline">
+                    {settings.projectTeaser.header}
+                </span>
+                <p>
+                    {settings.projectTeaser.text}
+                </p>
+            </div>
+        </header>
+    </div>
+</f:section>
+
+<f:section name="leftJustifiedHeader">
+    <header class="section__header section__header--small">
+        <div class="wrap wrap--inner-text">
+            <h2>
+                {settings.projectTeaser.header}
+            </h2>
+            <p>
+                {settings.projectTeaser.text}
+            </p>
+        </div>
+    </header>
+</f:section>
+
+<f:section name="threeElements">
+    <f:for each="{projectList}" as="project">
+        <div class="flex-item c-4">
+            <div id="c54" class="frame frame-default frame-type-textpic frame-layout-14">
+                <article class="card card--shadow">
+                    <picture class="card__image">
+                        <figure class="image">
+                            <img class="image-embed-item" src="fileadmin/user_upload/fff.png" alt="" width="395" height="300">
+                        </figure>
+                    </picture>
+                    <div class="card__inner">
+                        <header class="card__header">
+                            <h3 class="headline">{project.name}</h3>
+                        </header>
+                        <div class="card__content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </p>
+                        </div>
+                        <footer class="card__footer">
+                            <a href="tp-single" class="btn btn--rounded btn--tertiary">
+                                Link Wohin?
+                            </a>
+                        </footer>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </f:for>
+</f:section>
+
+
+<f:section name="fourElements">
+    <f:for each="{projectList}" as="project">
+        <div class="flex-item c-6">
+            <article class="card card--shadow">
+                <picture class="card__image">
+                    <img src="https://dummyimage.com/595x300/000000/fff.png" alt="" width="595" height="300">
+                </picture>
+                <div class="card__inner">
+                    <header class="card__header">
+                        <span class="tagline">Tagline</span>
+                        <h3 class="headline">{project.name}</h3>
+                    </header>
+                    <div class="card__content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                        </p>
+                    </div>
+                    <footer class="card__footer">
+                        <a href="tp-single" class="btn btn--rounded btn--tertiary">
+                            Link Wohin?
+                        </a>
+                    </footer>
+                </div>
+            </article>
+        </div>
+    </f:for>
+</f:section>

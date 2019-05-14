@@ -34,7 +34,13 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     protected $authorsRepository = null;
 
-
+    /**
+     * projectsRepository
+     *
+     * @var \HGON\HgonTemplate\Domain\Repository\ProjectsRepository
+     * @inject
+     */
+    protected $projectsRepository = null;
 
 	/**
 	 * action journalHighlight
@@ -80,6 +86,27 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     {
         $authorsList = $this->authorsRepository->findAll();
         $this->view->assign('author', $authorsList[rand(0, count($authorsList) - 1)]);
+    }
+
+
+
+    /**
+     * action projectTeaser
+     *
+     * @return void
+     */
+    public function projectTeaserAction()
+    {
+        // if shuffle, just select three entries
+        if ($this->settings['projectTeaser']['random']) {
+            $projectList = $this->projectsRepository->findAll()->toArray();
+            shuffle($projectList);
+            $projectList = array_slice($projectList, 0, 3, true);
+        } else {
+            $projectList = $this->projectsRepository->findByUidList($this->settings['projectTeaser']['projectUidList']);
+        }
+
+        $this->view->assign('projectList', $projectList);
     }
 
 }

@@ -55,6 +55,11 @@
 <f:section name="individualHeader">
 
     <f:switch expression="{layout}">
+        <f:case value="0">
+            <h2 class="headline {positionClass}">
+                {header}
+            </h2>
+        </f:case>
         <f:case value="10">
             <h1 class="headline {positionClass}">
                 <f:link.typolink parameter="{link}">{header}</f:link.typolink>

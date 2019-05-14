@@ -8,11 +8,7 @@
         <f:render partial="Layout/Header" arguments="{_all}" />
     </f:section>
 
-    <header class="main__header">
-        <f:format.html parseFuncTSPath="">
-            {header}
-        </f:format.html>
-    </header>
+    <f:render partial="Layout/ContentHeaderText" arguments="{_all}" />
 
     <nav class="main__nav">
         <f:render partial="Navigation/SubPage" arguments="{_all}" />

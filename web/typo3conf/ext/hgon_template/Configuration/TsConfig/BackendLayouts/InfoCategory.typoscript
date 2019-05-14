@@ -5,31 +5,15 @@
 mod {
 	web_layout {
 		BackendLayouts {
-			articleImageHeader {
+			infoCategory {
 				title = Bild-Header, Zwischenmenü, Einspaltig (tp-info-category)
 				#icon = EXT:hgon_template/Resources/Public/Icons/BackendLayouts/default.svg
 				config {
 					backend_layout {
 						colCount = 1
-						rowCount = 4
+						rowCount = 3
 						rows {
 							1 {
-								columns {
-									1 {
-										name = LLL:EXT:hgon_template/Resources/Private/Language/BackendLayouts.xlf:content.header
-										colPos = 20
-									}
-								}
-							}
-							2 {
-								columns {
-									1 {
-										name = LLL:EXT:hgon_template/Resources/Private/Language/BackendLayouts.xlf:content.teaser
-										colPos = 30
-									}
-								}
-							}
-							3 {
 								columns {
 									1 {
 										name = LLL:EXT:hgon_template/Resources/Private/Language/BackendLayouts.xlf:content.content
@@ -37,7 +21,15 @@ mod {
 									}
 								}
 							}
-							4 {
+                            2 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:hgon_template/Resources/Private/Language/BackendLayouts.xlf:content.contentPlugin2
+                                        colPos = 2
+                                    }
+                                }
+                            }
+							3 {
 								columns {
 									1 {
 										name = LLL:EXT:hgon_template/Resources/Private/Language/BackendLayouts.xlf:content.footer

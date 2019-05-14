@@ -3,7 +3,39 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2019-04-25T13:49:26Z" product-name="hgon_template">
 		<header/>
 		<body>
+            <!-- FLEXFORM -->
+            <trans-unit id="flexform.journalHighlight.sheetTitle">
+                <source>Journal Highlight</source>
+            </trans-unit>
+            <trans-unit id="flexform.journalHighlight.pid">
+                <source>Page ID</source>
+            </trans-unit>
 
+            <trans-unit id="flexform.pageHighlight.sheetTitle">
+                <source>Page Highlight</source>
+            </trans-unit>
+            <trans-unit id="flexform.pageHighlight.pid">
+                <source>Page ID</source>
+            </trans-unit>
+
+            <trans-unit id="flexform.projectTeaser.sheetTitle">
+                <source>Project Teaser</source>
+            </trans-unit>
+           <trans-unit id="flexform.projectTeaser.preHeader">
+               <source>Pre header</source>
+           </trans-unit>
+           <trans-unit id="flexform.projectTeaser.header">
+               <source>Header</source>
+           </trans-unit>
+           <trans-unit id="flexform.projectTeaser.text">
+               <source>Text</source>
+           </trans-unit>
+            <trans-unit id="flexform.projectTeaser.random">
+                <source>Random</source>
+            </trans-unit>
+            <trans-unit id="flexform.projectTeaser.projectUidList">
+                <source>Select three projects</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

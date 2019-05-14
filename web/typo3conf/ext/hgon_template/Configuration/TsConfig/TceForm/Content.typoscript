@@ -25,8 +25,8 @@ TCEFORM {
                 4 = Eindeutiger Name 4
 
                 */
-                11 = Highlight - nur Abstand oben
-                12 = Highlight - plus Abstand unten
+            #    11 = Highlight - nur Abstand oben
+            #    12 = Highlight - plus Abstand unten
                 //13 = Zitat
                 14 = Flex Container Element: Bild + Text
                 15 = Flex Container Element: Bild + Text (Vertikal)
@@ -34,7 +34,7 @@ TCEFORM {
                 //25 = Seiten Teaser mit Bild links + Verweise rechts
                 //26 = Seiten Teaser mit Bild rechts + Verweise im Fußbereich
                 30 = Header: Bilder (Zufallsauswahl) + Text (Home)
-                31 = Header: Bild + Text
+            #    31 = Header: Bild + Text
                 40 = Sidebar: Gelber Hintergrund
                 41 = Sidebar: Gelb-grüner Hintergrund + Bild
                 42 = Sidebar: Blauer Hintergrund

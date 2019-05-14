@@ -90,6 +90,9 @@
             ],
             "HGON\\HgonDonation\\": [
                 "web/typo3conf/ext/hgon_donation/Classes"
+            ],
+            "HGON\\HgonWorkgroup\\": [
+                "web/typo3conf/ext/hgon_workgroup/Classes"
             ]
         }
     }

@@ -47,6 +47,7 @@ return [
             'hgon_basic' => 'a:0:{}',
             'hgon_donation' => 'a:0:{}',
             'hgon_template' => 'a:0:{}',
+            'hgon_workgroup' => 'a:0:{}',
             'impexp' => 'a:0:{}',
             'info' => 'a:0:{}',
             'info_pagetsconfig' => 'a:0:{}',

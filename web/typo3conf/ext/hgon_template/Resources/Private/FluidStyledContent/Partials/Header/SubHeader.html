@@ -49,6 +49,11 @@
 <f:section name="individualSubHeader">
     <f:switch expression="{layout}">
 
+        <f:case value="0">
+            <span class="tagline color-font-secondary {positionClass}">
+                {subheader}
+            </span>
+        </f:case>
         <f:case value="1">
             <h2 class="tagline {positionClass}">
                 {subheader}

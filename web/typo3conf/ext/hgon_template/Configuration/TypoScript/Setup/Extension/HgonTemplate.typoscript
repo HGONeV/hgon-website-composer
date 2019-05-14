@@ -52,6 +52,13 @@ config.tx_extbase.persistence {
             }
         }
 
+        HGON\HgonTemplate\Domain\Model\Projects {
+            mapping {
+                tableName = tx_rkwprojects_domain_model_projects
+                recordType =
+            }
+        }
+
     }
 }
 
