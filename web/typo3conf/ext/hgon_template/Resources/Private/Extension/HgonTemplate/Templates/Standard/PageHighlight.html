@@ -23,11 +23,15 @@
         <div class="box__content">
             <p>{pages.txRkwbasicsTeaserText}</p>
             <p>
-                <f:link.page pageUid="{pages.uid}" class="btn btn--primary btn--rounded">Mehr lesen</f:link.page>
+                <f:link.page pageUid="{pages.uid}" class="btn btn--primary btn--rounded">
+                    <f:translate key="tx_hgontemplate_templates_standard_journalHighlight.readMore" />
+                </f:link.page>
             </p>
         </div>
         <footer class="box__footer mt-2">
-            <h6>Weitere Inhalte</h6>
+            <h6>
+                <f:translate key="tx_hgontemplate_templates_standard_journalHighlight.furtherContent" />
+            </h6>
             <ul class="menu menu--inline">
                 <f:for each="{subPagesList}" as="subPages">
                     <li>

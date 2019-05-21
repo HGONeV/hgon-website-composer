@@ -5,7 +5,7 @@
 mod {
 	web_layout {
 		BackendLayouts {
-			articleSidebar {
+			pageTxtHeader {
 				title = Text-Header, Zwischenmenü, Zweispaltig (tp-page)
 				#icon = EXT:hgon_template/Resources/Public/Icons/BackendLayouts/default.svg
 				config {

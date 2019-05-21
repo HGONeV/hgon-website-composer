@@ -2,6 +2,7 @@
 
 namespace HGON\HgonTemplate\Domain\Repository;
 
+use \TYPO3\CMS\Core\Utility\GeneralUtility;
 /*
  * This file is part of the TYPO3 CMS project.
  *
@@ -25,6 +26,21 @@ namespace HGON\HgonTemplate\Domain\Repository;
  */
 class AuthorsRepository extends \RKW\RkwAuthors\Domain\Repository\AuthorsRepository
 {
+    /**
+     * Find by multiple uids
+     *
+     * @param string $uidList
+     * @return array
+     */
+    public function findByUidList($uidList)
+    {
+        $query = $this->createQuery();
+        $query->matching(
+            $query->in('uid', GeneralUtility::trimExplode(',', $uidList))
+        );
 
+        return $query->execute()->toArray();
+        //===
+    }
 
 }

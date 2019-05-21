@@ -6,6 +6,12 @@
         <f:then>
             <f:switch expression="{superiorLayout}">
 
+                <f:case value="0">
+                    <h2 class="{positionClass}">
+                        <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+                    </h2>
+                </f:case>
+
                 <f:case value="11">
                     <span class="h1 headline">{header}</span>
                 </f:case>
@@ -67,7 +73,9 @@
         </f:case>
         <f:case value="20">
             <h2 class="headline {positionClass}">
-                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+                <f:link.typolink parameter="{link}">
+                    {header}
+                </f:link.typolink>
             </h2>
         </f:case>
         <f:case value="30">

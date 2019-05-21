@@ -62,11 +62,42 @@ page {
                     import.data = levelfield:-1, tx_rkwbasics_article_image, slide
                     treatIdAsReference = 1
                     // Either: Use first image
-                    #import.listNum = 0
+                    import.listNum = 0
                     // Or: Random image
-                    import.listNum = rand
+                    #import.listNum = rand
                 }
             }
+
+            /*
+
+            file {
+            import.data = levelfield:-1, tx_rkwbasics_article_image, slide
+            treatIdAsReference = 1
+            // Either: Use first image
+            import.listNum = 0
+            import.listNum.override = REGISTER:currentImage
+            // Or: Random image
+            #import.listNum = rand
+            }
+
+            currentImageVar = COA
+            currentImageVar {
+            10 = LOAD_REGISTER
+            #10.initialVariable = 0
+            10.currentImage {
+            cObject = TEXT
+            cObject {
+            data = register:currentImage
+            # To avoid SQL injections we use intval - so the parameter will always be an integer.
+            intval = 1
+            # only iterate, if there are more than one image. Reset, if all are shown
+            wrap = |+1
+            }
+            }
+
+            }
+
+            */
 
 
             # following is part of settings

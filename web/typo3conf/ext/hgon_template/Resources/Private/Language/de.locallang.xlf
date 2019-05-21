@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" target-language="de" datatype="plaintext" original="messages" date="2019-04-25T13:49:26Z" product-name="hgon_template">
+		<header/>
+		<body>
+
+            <trans-unit id="tx_hgontemplate_templates_standard_journalHighlight.furtherContent">
+                <source>Further content</source>
+                <target>Weitere Inhalte</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_templates_standard_journalHighlight.readMore">
+                <source>Read more</source>
+                <target>Mehr lesen</target>
+            </trans-unit>
+
+            <trans-unit id="tx_hgontemplate_templates_standard_projectTeaser.readMore">
+                <source>Read more</source>
+                <target>Mehr erfahren</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_templates_standard_projectTeaser.moreInformation">
+                <source>More information</source>
+                <target>Mehr Informationen</target>
+            </trans-unit>
+
+        </body>
+	</file>
+</xliff>

@@ -18,6 +18,13 @@
                 <source>Page ID</source>
             </trans-unit>
 
+            <trans-unit id="flexform.pageHighlight.sheetTitle">
+                <source>Page Highlight</source>
+            </trans-unit>
+            <trans-unit id="flexform.pageHighlight.pid">
+                <source>Page ID</source>
+            </trans-unit>
+
             <trans-unit id="flexform.projectTeaser.sheetTitle">
                 <source>Project Teaser</source>
             </trans-unit>
@@ -35,6 +42,9 @@
             </trans-unit>
             <trans-unit id="flexform.projectTeaser.projectUidList">
                 <source>Select three projects</source>
+            </trans-unit>
+            <trans-unit id="flexform.projectTeaser.pidOverview">
+                <source>PID overview</source>
             </trans-unit>
 		</body>
 	</file>

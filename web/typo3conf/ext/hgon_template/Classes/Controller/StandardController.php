@@ -84,7 +84,8 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     public function randomAuthorAction()
     {
-        $authorsList = $this->authorsRepository->findAll();
+        //$authorsList = $this->authorsRepository->findAll();
+        $authorsList = $this->authorsRepository->findByUidList($this->settings['randomAuthor']['authorUidList']);
         $this->view->assign('author', $authorsList[rand(0, count($authorsList) - 1)]);
     }
 
@@ -104,6 +105,15 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
             $projectList = array_slice($projectList, 0, 3, true);
         } else {
             $projectList = $this->projectsRepository->findByUidList($this->settings['projectTeaser']['projectUidList']);
+        }
+
+        // ugly function, because we don't have pages objects (we got typolinks)
+        /** @var \HGON\HgonTemplate\Domain\Model\Projects $project */
+        foreach ($projectList as $project) {
+            if ($project->getProjectPid()) {
+                $explodedLink = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode('=', $project->getProjectPid());
+                $project->setPages($this->pagesRepository->findByIdentifier(intval(end($explodedLink))));
+            }
         }
 
         $this->view->assign('projectList', $projectList);

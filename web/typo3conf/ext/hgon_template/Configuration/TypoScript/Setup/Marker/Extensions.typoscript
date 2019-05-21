@@ -1,0 +1,34 @@
+//############################################################################
+// Extensions
+//############################################################################
+page {
+    10 {
+        variables {
+
+            //=================================================================
+            // Gets the alerts box below the pages
+            //=================================================================
+            breakerWorkgroupSearch = USER
+            breakerWorkgroupSearch {
+                userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                extensionName = HgonWorkgroup
+                pluginName = Search
+                vendorName = HGON
+                controller = WorkGroup
+                switchableControllerActions {
+                    // Again: Controller-Name and Action
+                    WorkGroup {
+                        1 = search
+                    }
+                }
+
+                view =< plugin.tx_hgonworkgroup.view
+                persistence =< plugin.tx_hgonworkgroup.persistence
+                settings =< plugin.tx_hgonworkgroup.settings
+            }
+
+
+
+        }
+    }
+}

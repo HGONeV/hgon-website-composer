@@ -25,15 +25,13 @@
                     <f:render section="fourElements" arguments="{_all}"/>
                 </f:else>
             </f:if>
-
-
         </div>
     </div>
 
     <footer class="section__footer / align-center">
-        <a class="btn btn--primary btn--rounded" href="about">
-            Link Wohin?
-        </a>
+        <f:link.typolink parameter="{settings.projectTeaser.pidOverview}" class="btn btn--primary btn--rounded">
+            <f:translate key="tx_hgontemplate_templates_standard_projectTeaser.moreInformation" />
+        </f:link.typolink>
     </footer>
 </section>
 
@@ -80,24 +78,26 @@
         <div class="flex-item c-4">
             <div id="c54" class="frame frame-default frame-type-textpic frame-layout-14">
                 <article class="card card--shadow">
-                    <picture class="card__image">
-                        <figure class="image">
-                            <img class="image-embed-item" src="fileadmin/user_upload/fff.png" alt="" width="395" height="300">
-                        </figure>
-                    </picture>
+                    <f:if condition="{project.pages.txRkwbasicsTeaserImage}">
+                        <picture class="card__image">
+                            <figure class="image">
+                                <f:image class="image-embed-item" image="{project.pages.txRkwbasicsTeaserImage}" alt="{project.pages.txRkwbasicsTeaserImage.title}" width="395" height="300" />
+                            </figure>
+                        </picture>
+                    </f:if>
                     <div class="card__inner">
                         <header class="card__header">
                             <h3 class="headline">{project.name}</h3>
                         </header>
                         <div class="card__content">
                             <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                {project.pages.txRkwbasicsTeaserText}
                             </p>
                         </div>
                         <footer class="card__footer">
-                            <a href="tp-single" class="btn btn--rounded btn--tertiary">
-                                Link Wohin?
-                            </a>
+                            <f:link.typolink parameter="{project.projectPid}" class="btn btn--rounded btn--tertiary">
+                                <f:translate key="tx_hgontemplate_templates_standard_projectTeaser.readMore" />
+                            </f:link.typolink>
                         </footer>
                     </div>
                 </article>
@@ -111,9 +111,13 @@
     <f:for each="{projectList}" as="project">
         <div class="flex-item c-6">
             <article class="card card--shadow">
-                <picture class="card__image">
-                    <img src="https://dummyimage.com/595x300/000000/fff.png" alt="" width="595" height="300">
-                </picture>
+                <f:if condition="{project.pages.txRkwbasicsTeaserImage}">
+                    <picture class="card__image">
+                        <figure class="image">
+                            <f:image class="image-embed-item" image="{project.pages.txRkwbasicsTeaserImage}" alt="{project.pages.txRkwbasicsTeaserImage.title}" width="595" height="300" />
+                        </figure>
+                    </picture>
+                </f:if>
                 <div class="card__inner">
                     <header class="card__header">
                         <span class="tagline">Tagline</span>
@@ -121,13 +125,13 @@
                     </header>
                     <div class="card__content">
                         <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            {project.pages.txRkwbasicsTeaserText}
                         </p>
                     </div>
                     <footer class="card__footer">
-                        <a href="tp-single" class="btn btn--rounded btn--tertiary">
-                            Link Wohin?
-                        </a>
+                        <f:link.typolink parameter="{project.projectPid}" class="btn btn--rounded btn--tertiary">
+                            <f:translate key="tx_hgontemplate_templates_standard_projectTeaser.readMore" />
+                        </f:link.typolink>
                     </footer>
                 </div>
             </article>

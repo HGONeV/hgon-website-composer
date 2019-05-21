@@ -23,6 +23,15 @@
                 <target>Seite auswählen</target>
             </trans-unit>
 
+             <trans-unit id="flexform.randomAuthor.sheetTitle">
+                <source>Random Author</source>
+                <target>Zufallsautor</target>
+            </trans-unit>
+            <trans-unit id="flexform.randomAuthor.authorUidList">
+                <source>Author list</source>
+                <target>Autoren auswählen</target>
+            </trans-unit>
+
             <trans-unit id="flexform.projectTeaser.sheetTitle">
                 <source>Project Teaser</source>
                 <target>Projektauswahl</target>
@@ -46,6 +55,10 @@
             <trans-unit id="flexform.projectTeaser.projectUidList">
                 <source>Select three projects</source>
                 <target>Projektauswahl (drei oder vier Elemente müssen ausgewählt werden)</target>
+            </trans-unit>
+            <trans-unit id="flexform.projectTeaser.pidOverview">
+                <source>PID overview</source>
+                <target>Übersichtsseite auswählen</target>
             </trans-unit>
 
         </body>
