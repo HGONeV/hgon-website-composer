@@ -25,11 +25,70 @@ namespace HGON\HgonTemplate\Domain\Model;
 class Pages extends \RKW\RkwBasics\Domain\Model\Pages
 {
     /**
+     * txRkwprojectsProject
+     *
+     * @var \HGON\HgonTemplate\Domain\Model\Projects
+     */
+    protected $txRkwprojectsProject = null;
+
+    /**
      * SysCategory
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonTemplate\Domain\Model\SysCategory>
      */
     protected $categories;
+
+    /**
+     * subPages
+     *
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonTemplate\Domain\Model\Pages>
+     */
+    protected $subPages;
+
+
+    /**
+     * __construct
+     */
+    public function __construct()
+    {
+        //Do not remove the next line: It would break the functionality
+        $this->initStorageObjects();
+    }
+
+
+    /**
+     * Initializes all ObjectStorage properties
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     *
+     * @return void
+     */
+    protected function initStorageObjects()
+    {
+        $this->subPages = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
+
+    /**
+     * Returns the txRkwProjectsProject
+     *
+     * @return \HGON\HgonTemplate\Domain\Model\Projects $txRkwprojectsProject
+     */
+    public function getTxRkwprojectsProject()
+    {
+        return $this->txRkwprojectsProject;
+    }
+
+    /**
+     * Sets the txRkwProjectsProject
+     *
+     * @param \HGON\HgonTemplate\Domain\Model\Projects $txRkwprojectsProject
+     * @return void
+     */
+    public function setTxRkwprojectsProject(\HGON\HgonTemplate\Domain\Model\Projects $txRkwprojectsProject)
+    {
+        $this->txRkwprojectsProject = $txRkwprojectsProject;
+    }
 
     /**
      * Adds a Category
@@ -72,6 +131,59 @@ class Pages extends \RKW\RkwBasics\Domain\Model\Pages
     public function setCategories(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $categories)
     {
         $this->categories = $categories;
+    }
+
+    /**
+     * Adds a SubPages
+     *
+     * @param \HGON\HgonTemplate\Domain\Model\Pages $subPages
+     * @return void
+     */
+    public function addSubPages(\HGON\HgonTemplate\Domain\Model\Pages $subPages)
+    {
+        // dirty hack: Constructor isn't called by any reason
+        if (!$this->subPages instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage) {
+            $this->initStorageObjects();
+        }
+
+        $this->subPages->attach($subPages);
+    }
+
+    /**
+     * Removes a subPages
+     *
+     * @param \HGON\HgonTemplate\Domain\Model\Pages $subPagesToRemove The Pages to be removed
+     * @return void
+     */
+    public function removeSubPages(\HGON\HgonTemplate\Domain\Model\Pages $subPagesToRemove)
+    {
+        $this->subPages->detach($subPagesToRemove);
+    }
+
+    /**
+     * Returns the subPages
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonTemplate\Domain\Model\Pages> $subPages
+     */
+    public function getSubPages()
+    {
+        // dirty hack: Constructor isn't called by any reason
+        if (!$this->subPages instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage) {
+            $this->initStorageObjects();
+        }
+
+        return $this->subPages;
+    }
+
+    /**
+     * Sets the subPages
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonTemplate\Domain\Model\Pages> $subPages
+     * @return void
+     */
+    public function setSubPages(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $subPages)
+    {
+        $this->subPages = $subPages;
     }
 }
 

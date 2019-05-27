@@ -28,6 +28,24 @@ call_user_func(
             'HGON: Projektauswahl anzeigen'
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'HGON.HgonTemplate',
+            'SidebarContactPerson',
+            'HGON: Sidebar Kontaktperson'
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'HGON.HgonTemplate',
+            'SiblingPagesOverview',
+            'HGON: Generiert Vorschau für Geschwisterseiten'
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'HGON.HgonTemplate',
+            'JournalOverview',
+            'HGON: Journal Übersicht'
+        );
+
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($extKey, 'Configuration/TypoScript', 'HGON Template');
 
     },

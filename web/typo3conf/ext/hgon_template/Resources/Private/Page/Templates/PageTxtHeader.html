@@ -8,7 +8,7 @@
         <f:render partial="Layout/Header" arguments="{_all}" />
     </f:section>
 
-    <f:render partial="Layout/ContentHeaderText" arguments="{_all}" />
+    <f:render partial="Layout/ContentHeaderText" arguments="{_all}" section="parentPageContent" />
 
     <nav class="main__nav">
         <f:render partial="Navigation/SubPage" arguments="{_all}" />
@@ -23,6 +23,7 @@
             </article>
             <div class="sidebar">
                 <f:format.html parseFuncTSPath="">
+                    {sidebarContactPerson}
                     {sidebar}
                     {sidebarInherit}
                 </f:format.html>

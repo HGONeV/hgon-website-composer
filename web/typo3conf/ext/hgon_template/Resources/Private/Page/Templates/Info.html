@@ -16,7 +16,17 @@
     </nav>
 
     <div class="main__content">
-        <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:0}" />
+
+        <f:comment><!-- just auto generated content here --></f:comment>
+
+        <f:format.html parseFuncTSPath="">
+            {siblingPagesOverview}
+        </f:format.html>
+
+        <f:comment>
+            <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:0}" />
+        </f:comment>
+
     </div>
 
     <f:render partial="Layout/MainFooter" arguments="{_all}" />

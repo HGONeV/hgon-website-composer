@@ -1,0 +1,23 @@
+#############
+# Default
+#############
+
+mod {
+	web_layout {
+		BackendLayouts {
+			journal {
+				title = Journal: Text-Header, Kategorien, Einspaltig (tp-explore)
+				#icon = EXT:hgon_template/Resources/Public/Icons/BackendLayouts/default.svg
+				config {
+					backend_layout {
+						colCount = 0
+						rowCount = 0
+						rows {
+
+						}
+					}
+				}
+			}
+		}
+	}
+}

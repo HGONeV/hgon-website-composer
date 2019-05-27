@@ -1,19 +1,40 @@
-<header class="main__header">
 
-    <div class="wrap wrap--text / align-center">
-        <h1>
-            <f:if condition="{parentPageTitle}">
-                <span class="badge badge--secondary">{parentPageTitle}<span class="is-hidden">: </span></span>
+<f:section name="parentPageContent">
+    <header class="main__header">
+        <div class="wrap wrap--text / align-center">
+            <h1>
+                <f:if condition="{parentPageTitle}">
+                    <span class="badge badge--secondary">{parentPageTitle}<span class="is-hidden">: </span></span>
+                </f:if>
+                <f:if condition="{parentPageSubtitle}">
+                    <span class="h1 headline">{parentPageSubtitle}</span>
+                </f:if>
+            </h1>
+            <f:if condition="{parentPageTeaserText}">
+                <p>
+                    {parentPageTeaserText}
+                </p>
             </f:if>
-            <f:if condition="{parentPageSubtitle}">
-                <span class="h1 headline">{parentPageSubtitle}</span>
-            </f:if>
-        </h1>
-        <f:if condition="{parentPageTeaserText}">
-            <p>
-                {parentPageTeaserText}
-            </p>
-        </f:if>
-    </div>
+        </div>
+    </header>
+</f:section>
 
-</header>
+<f:section name="currentPageContent">
+    <header class="main__header">
+        <div class="wrap wrap--text / align-center">
+            <h1>
+                <f:if condition="{pageTitle}">
+                    <span class="badge badge--secondary">{pageTitle}<span class="is-hidden">: </span></span>
+                </f:if>
+                <f:if condition="{pageSubtitle}">
+                    <span class="h1 headline">{pageSubtitle}</span>
+                </f:if>
+            </h1>
+            <f:if condition="{pageTeaserText}">
+                <p>
+                    {pageTeaserText}
+                </p>
+            </f:if>
+        </div>
+    </header>
+</f:section>

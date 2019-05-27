@@ -16,6 +16,9 @@
         <section id="content" class="section / pt-2 pb-5">
             <div class="wrap">
                 <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:1}" />
+
+                <f:comment><!-- Upcoming events --></f:comment>
+                <f:format.html parseFuncTSPath="">{rkwEventsUpcomingEvents}</f:format.html>
             </div>
         </section>
 

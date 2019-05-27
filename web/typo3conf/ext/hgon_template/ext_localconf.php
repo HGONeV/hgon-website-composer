@@ -55,6 +55,42 @@ call_user_func(
             ]
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'SidebarContactPerson',
+            [
+                'Standard' => 'sidebarContactPerson'
+            ],
+            // non-cacheable actions
+            [
+                'Standard' => 'sidebarContactPerson'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'SiblingPagesOverview',
+            [
+                'Standard' => 'siblingPagesOverview'
+            ],
+            // non-cacheable actions
+            [
+                'Standard' => 'siblingPagesOverview'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'JournalOverview',
+            [
+                'Standard' => 'journalOverview'
+            ],
+            // non-cacheable actions
+            [
+                'Standard' => 'journalOverview'
+            ]
+        );
+
 
         // for content slide
         $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',subtitle,tx_rkwbasics_article_image,';

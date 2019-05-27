@@ -11,7 +11,7 @@ mod {
 				config {
 					backend_layout {
 						colCount = 2
-						rowCount = 4
+						rowCount = 5
 						rows {
 							1 {
 								columns {

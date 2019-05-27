@@ -8,12 +8,12 @@
         <f:render partial="Layout/Header" arguments="{_all}" />
     </f:section>
 
-    <f:render partial="Layout/ContentHeaderImage" arguments="{_all}"  />
+    <f:render partial="Layout/ContentHeaderText" arguments="{_all}" section="currentPageContent" />
 
     <div class="main__content">
-        <div class="content content--boxed">
-            <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:0}" />
-        </div>
+        <f:format.html parseFuncTSPath="">
+            {journalOverview}
+        </f:format.html>
     </div>
 
     <f:render partial="Layout/MainFooter" arguments="{_all}" />

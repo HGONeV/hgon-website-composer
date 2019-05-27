@@ -1,0 +1,23 @@
+<div class="flex-item c-4">
+    <article class="card card--border {f:if(condition: '{pages.txRkwbasicsTeaserImage}', else: 'card-plain')}">
+        <f:if condition="{pages.txRkwbasicsTeaserImage}">
+            <picture class="card__image">
+                <f:image src="{pages.txRkwbasicsTeaserImage.uid}" treatIdAsReference="1" title="{pages.txRkwbasicsTeaserImage.title}" alt="{pages.txRkwbasicsTeaserImage.alternative}" width="395" height="300" />
+            </picture>
+        </f:if>
+        <div class="card__inner">
+            <header class="card__header">
+                <time class="tagline" datetime="{f:format.date(format: 'Y.m.d', date: pages.crdate)} "><f:format.date format="d.m.Y">{pages.crdate}</f:format.date></time>
+                <h3 class="headline">{pages.title}</h3>
+            </header>
+            <div class="card__content">
+                {pages.txRkwbasicsTeaserText}
+            </div>
+            <footer class="card__footer">
+                <f:link.page pageUid="{pages.uid}" class="btn btn--rounded btn--tertiary">
+                    <f:translate key="tx_hgontemplate_templates_standard_projectTeaser.readMore" />
+                </f:link.page>
+            </footer>
+        </div>
+    </article>
+</div>

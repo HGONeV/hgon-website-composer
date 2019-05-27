@@ -38,14 +38,20 @@ class Projects extends \RKW\RkwProjects\Domain\Model\Projects
     protected $projectPid = null;
 
     /**
-     * projectPid
-     *
-     * Overwrite:   One the one hand, the original ObjectStorage doesn't works
-     *              On the other hand it even doesn't makes sense
+     * pages
      *
      * @var \HGON\HgonTemplate\Domain\Model\Pages
      */
     protected $pages = null;
+
+    /**
+     * projectManager
+     *
+     * Overwrite: The ObjectStorage doesn't makes sense.
+     *
+     * @var \HGON\HgonTemplate\Domain\Model\Authors
+     */
+    protected $projectManager = null;
 
     /**
      * Returns the projectPid
@@ -87,6 +93,27 @@ class Projects extends \RKW\RkwProjects\Domain\Model\Projects
     public function setPages(\HGON\HgonTemplate\Domain\Model\Pages $pages)
     {
         $this->pages = $pages;
+    }
+
+    /**
+     * Returns the projectManager
+     *
+     * @return \HGON\HgonTemplate\Domain\Model\Authors $projectManager
+     */
+    public function getProjectManager()
+    {
+        return $this->projectManager;
+    }
+
+    /**
+     * Sets the projectManager
+     *
+     * @param \HGON\HgonTemplate\Domain\Model\Authors $projectManager
+     * @return void
+     */
+    public function setProjectManager(\HGON\HgonTemplate\Domain\Model\Authors $projectManager)
+    {
+        $this->projectManager = $projectManager;
     }
 
 }

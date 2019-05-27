@@ -30,13 +30,13 @@ TCEFORM {
                 //13 = Zitat
                 14 = Flex Container Element: Bild + Text
                 15 = Flex Container Element: Bild + Text (Vertikal)
-                20 = Slider Element: Bild + Text
+            #    20 = Slider Element: Bild + Text
                 //25 = Seiten Teaser mit Bild links + Verweise rechts
                 //26 = Seiten Teaser mit Bild rechts + Verweise im Fußbereich
                 30 = Header: Bilder (Zufallsauswahl) + Text (Home)
             #    31 = Header: Bild + Text
                 40 = Sidebar: Gelber Hintergrund
-                41 = Sidebar: Gelb-grüner Hintergrund + Bild
+            #    41 = Sidebar: Gelb-grüner Hintergrund + Bild
                 42 = Sidebar: Blauer Hintergrund
                 #50 = Sitemap: Menü vertikal
                 #51 = Sitemap: Menü horizontal

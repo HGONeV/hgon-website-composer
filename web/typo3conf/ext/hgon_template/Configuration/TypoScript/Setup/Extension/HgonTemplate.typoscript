@@ -28,7 +28,8 @@ config.tx_extbase.persistence {
                     tstamp.mapOnProperty = tstamp
                     hidden.mapOnProperty = hidden
                     deleted.mapOnProperty = deleted
-
+                    lastUpdated.mapOnProperty = lastUpdated
+                    tx_rkwprojects_project_uid.mapOnProperty = txRkwprojectsProject
                 }
             }
         }
@@ -87,8 +88,51 @@ plugin.tx_hgontemplate {
         storagePid = {$plugin.tx_hgontemplate.persistence.storagePid}
     }
     settings {
-
+        journal {
+            parentCategoryUid = {$plugin.tx_hgontemplate.settings.journal.parentCategoryUid}
+            excludePidList = {$plugin.tx_hgontemplate.settings.journal.excludePidList}
+            ajaxTypeNum = {$plugin.tx_hgontemplate.settings.journal.ajaxTypeNum}
+        }
 
     }
 }
+
+
+#===============================================================
+# Ajax
+#===============================================================
+txHgontemplateJournalAjax = PAGE
+txHgontemplateJournalAjax {
+
+    # also written in partial Listing.html
+    typeNum = {$plugin.tx_hgontemplate.settings.journal.ajaxTypeNum}
+
+    config {
+        disableAllHeaderCode = 1
+        xhtml_cleaning = 0
+        admPanel = 0
+        additionalHeaders = Content-type: text/plain
+        no_cache = 0
+    }
+
+    10 = USER_INT
+    10 {
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+        extensionName = HgonTemplate
+        pluginName = JournalOverview
+        vendorName = HGON
+        switchableControllerActions {
+
+            # Again: Controller-Name and Action
+            Standard {
+                10 = journalOverview
+            }
+        }
+
+        view < plugin.tx_hgontemplate.view
+        persistence < plugin.tx_hgontemplate.persistence
+        settings < plugin.tx_hgontemplate.settings
+    }
+}
+
 
