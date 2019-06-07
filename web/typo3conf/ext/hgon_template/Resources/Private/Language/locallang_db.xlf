@@ -3,6 +3,21 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2019-04-25T13:49:26Z" product-name="hgon_template">
 		<header/>
 		<body>
+		    <!-- MODEL -->
+            <trans-unit id="tx_hgontemplate_domain_model_didyouknow">
+                <source>Did you know?</source>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_didyouknow.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_didyouknow.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_didyouknow.sys_category">
+                <source>SysCategory</source>
+            </trans-unit>
+
+
             <!-- FLEXFORM -->
             <trans-unit id="flexform.journalHighlight.sheetTitle">
                 <source>Journal Highlight</source>
@@ -45,6 +60,12 @@
             </trans-unit>
             <trans-unit id="flexform.projectTeaser.pidOverview">
                 <source>PID overview</source>
+            </trans-unit>
+            <trans-unit id="flexform.pageSlider.sheetTitle">
+                <source>Page Slider</source>
+            </trans-unit>
+            <trans-unit id="flexform.pageSlider.pidList">
+                <source>Page IDs</source>
             </trans-unit>
 		</body>
 	</file>

@@ -12,6 +12,7 @@ namespace HGON\HgonTemplate\Controller;
  *
  ***/
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * StandardController
@@ -50,6 +51,41 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     protected $sysCategoryRepository = null;
 
+    /**
+     * eventRepository
+     *
+     * @var \HGON\HgonTemplate\Domain\Repository\EventRepository
+     * @inject
+     */
+    protected $eventRepository = null;
+
+    /**
+     * didYouKnowRepository
+     *
+     * @var \HGON\HgonTemplate\Domain\Repository\DidYouKnowRepository
+     * @inject
+     */
+    protected $didYouKnowRepository = null;
+
+    /**
+     * cacheManager
+     *
+     * @var \TYPO3\CMS\Core\Cache\Frontend\VariableFrontend
+     */
+    protected $cacheManager;
+
+    /**
+     * @var \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer
+     */
+    protected $cObj;
+
+
+    public function initializeAction()
+    {
+      //  $this->cacheManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Cache\\CacheManager')->getCache("hgon_template");
+      //  $this->cObj = $this->configurationManager->getContentObject();
+    }
+
 	/**
 	 * action journalHighlight
 	 *
@@ -57,16 +93,19 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 */
 	public function journalHighlightAction()
 	{
+        // if set: Show manual choosen page first
+        $this->view->assign('pagesManualSelect', $this->pagesRepository->findByIdentifier(intval($this->settings['journalHighlight']['pid'])));
 
-        // @toDo: if no pid is set, use the newest with a category
+        // add further journal entries
+        /** @var \RKW\RkwRegistration\Domain\Repository\FrontendUserRepository $frontendUserRepository */
+        $objectManager = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
+        /** @var \HGON\HgonTemplate\Helper\Journal $journalHelper */
+        $journalHelper = $objectManager->get('HGON\\HgonTemplate\\Helper\\Journal');
 
-        // @toDo: Handle multi-categories
+        $helperRequest = $journalHelper->getPagesList($this->settings, 1);
+        /** @var \TYPO3\CMS\Extbase\Persistence\QueryResultInterface $pagesWithCategoryList */
+        $this->view->assign('journalPagesList', $helperRequest['journalRowList']);
 
-        // @toDo: Im idealfall nichts spezielles schreiben. Für das Journal wird ggf die RkwRelated verwendet
-
-     //   DebuggerUtility::var_dump($this->pagesRepository->findByIdentifier(intval($this->settings['journalHighlight']['pid']))); exit;
-
-        $this->view->assign('pages', $this->pagesRepository->findByIdentifier(intval($this->settings['journalHighlight']['pid'])));
 	}
 
 
@@ -119,7 +158,7 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         /** @var \HGON\HgonTemplate\Domain\Model\Projects $project */
         foreach ($projectList as $project) {
             if ($project->getProjectPid()) {
-                $explodedLink = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode('=', $project->getProjectPid());
+                $explodedLink = GeneralUtility::trimExplode('=', $project->getProjectPid());
                 $project->setPages($this->pagesRepository->findByIdentifier(intval(end($explodedLink))));
             }
         }
@@ -137,7 +176,7 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     public function sidebarContactPersonAction()
     {
         // get PageRepository and rootline
-        $repository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Frontend\\Page\\PageRepository');
+        $repository = GeneralUtility::makeInstance('TYPO3\\CMS\\Frontend\\Page\\PageRepository');
         $rootlinePages = $repository->getRootLine(intval($GLOBALS['TSFE']->id));
 
         // fo through all pages and take the one that has a match in the corresponsing field
@@ -157,7 +196,9 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         $result = $this->pagesRepository->findByUid($pid);
 
         if ($result instanceof \HGON\HgonTemplate\Domain\Model\Pages) {
-            $this->view->assign('author', $result->getTxRkwprojectsProject()->getProjectManager());
+            if ($result->getTxRkwprojectsProject()){
+                $this->view->assign('author', $result->getTxRkwprojectsProject()->getProjectManager());
+            }
         }
     }
 
@@ -203,12 +244,22 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         $pageNumber++;
         $templateDataArray = [];
 
-        // @toDo: Was könnte bei ExcludePages noch eingetragen werden?
-        $excludePages = [];
-        if ($this->settings['journal']['excludePidList']) {
-            $excludePages = array_merge($excludePages, \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $this->settings['excludePidList']));
-        }
+        /** @var \RKW\RkwRegistration\Domain\Repository\FrontendUserRepository $frontendUserRepository */
+        $objectManager = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
+        /** @var \HGON\HgonTemplate\Helper\Journal $journalHelper */
+        $journalHelper = $objectManager->get('HGON\\HgonTemplate\\Helper\\Journal');
 
+        // a) Entweder: Völlig dynamisch
+        //    $templateDataArray['journalRowList'] = $journalHelper->createResultSet($this->settings, $pageNumber, $sysCategory);
+
+        // b) Oder: Einfach
+        $helperRequest = $journalHelper->getPagesList($this->settings, $pageNumber, $sysCategory);
+        /** @var \TYPO3\CMS\Extbase\Persistence\QueryResultInterface $pagesWithCategoryList */
+        $pagesWithCategoryList = $helperRequest['sysCategoryList'];
+        $templateDataArray['journalRowList'] = $helperRequest['journalRowList'];
+
+        // sysCategory is set, if user is filtering
+        /*
         if ($sysCategory) {
             $journalParentCategory = $sysCategory;
         } else {
@@ -221,41 +272,60 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         // pages list
         $pagesWithCategoryList = $this->pagesRepository->findBySysCategory($sysCategoryList);
         if ($pagesWithCategoryList->count()) {
-            $pagesList = $this->pagesRepository->findTreeByParentPages($pagesWithCategoryList, true, $pageNumber, 9999);
-            // $this->view->assign('pagesList', $pagesList);
-
-            // split in four parts (2 x 3/3 width; 1 x 2/3; 1x 1/2)
-            $pagesListArray = $pagesList->toArray();
-            $templateDataArray['pagesList1'] = array_slice($pagesListArray, 0, 3);
-            $templateDataArray['pagesList2'] = array_slice($pagesListArray, 3, 1);
-            $templateDataArray['pagesList3'] = array_slice($pagesListArray, 4, 1);
-            $templateDataArray['pagesList4'] = array_slice($pagesListArray, 5, 3);
+            $templateDataArray['journalRowList'] = $this->pagesRepository->findTreeByParentPages($pagesWithCategoryList, true, $pageNumber, intval($this->settings['journal']['itemsPerPage']));
         }
+        */
 
         // get general category list for filter function
-        $journalParentCategory = $this->sysCategoryRepository->findByIdentifier($this->settings['journal']['parentCategoryUid']);
+        $journalParentCategory = $this->sysCategoryRepository->findByIdentifier(intval($this->settings['journal']['parentCategoryUid']));
         $sysCategoryListFilter = $this->sysCategoryRepository->findOneWithAllRecursiveChildren($journalParentCategory, null, true);
         $templateDataArray['sysCategoryList'] = $sysCategoryListFilter;
-        $templateDataArray['pageTypeAjax'] = $this->settings['journal']['ajaxTypeNum'];
         $templateDataArray['selectedSysCategory'] = $sysCategory;
+        $templateDataArray['pageTypeAjax'] = $this->settings['journal']['ajaxTypeNum'];
+        $templateDataArray['pageNumber'] = $pageNumber;
+        if (count($pagesWithCategoryList)) {
+            $templateDataArray['showMoreLink'] = $this->pagesRepository->findTreeByParentPages($pagesWithCategoryList, true, $pageNumber, 9999)->count() > $pageNumber * intval($this->settings['journal']['itemsPerPage']) ? true : false;
+        } else {
+            $templateDataArray['showMoreLink'] = false;
+        }
+
+        // add "didYouKnow" random (check for category-entry. Else take something)
+        // @toDo: Maybe also search for parent-category?
+        $didYouKnowListByCategory = $this->didYouKnowRepository->findBySysCategory($sysCategory);
+        if ($didYouKnowListByCategory->count()) {
+            $didYouKnowList = $didYouKnowListByCategory;
+        } else {
+            $didYouKnowList = $this->didYouKnowRepository->findAll();
+        }
+        $templateDataArray['didYouKnow'] = $didYouKnowList[rand(0, count($didYouKnowList) - 1)];
+
 
         // check for ajax context
-        // WICHTIG: Aktuell findet nur bei der Paginierung ein Ajax-Request statt. Nicht bei der Kategorieauswahl
+        // WICHTIG: Aktuell findet nur bei der Paginierung ein Ajax-Request statt. NICHT bei der Kategorieauswahl!
         // -> Weil die Kategorie Teil der URL sein soll
-        if (\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('type') == intval($this->settings['journal']['ajaxTypeNum'])) {
+        if (GeneralUtility::_GP('type') == intval($this->settings['journal']['ajaxTypeNum'])) {
 
             // get JSON helper
             /** @var \RKW\RkwBasics\Helper\Json $jsonHelper */
-            $jsonHelper = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('RKW\\RkwBasics\\Helper\\Json');
+            $jsonHelper = GeneralUtility::makeInstance('RKW\\RkwBasics\\Helper\\Json');
 
             // if sysCategory and page 1 - reload whole content. Else: Append
             $kindOfRequest = $pageNumber == 1 ? 'replace' : 'append';
 
+            // Content
             $jsonHelper->setHtml(
                 'journal-flex-container',
                 $templateDataArray,
                 $kindOfRequest,
                 'Ajax/Journal/' . ucfirst($kindOfRequest) . '.html'
+            );
+
+            // More link replace
+            $jsonHelper->setHtml(
+                'journal-more-link-container',
+                $templateDataArray,
+                'replace',
+                'Ajax/Journal/MoreLink.html'
             );
 
             print (string)$jsonHelper;
@@ -266,6 +336,30 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
             $this->view->assignMultiple($templateDataArray);
         }
 
+    }
+
+
+
+    /**
+     * action pageSlider
+     *
+     * @return void
+     */
+    public function pageSliderAction()
+    {
+        $this->view->assign('pagesList', $this->pagesRepository->findByUidList($this->settings['pageSlider']['pidList']));
+    }
+
+
+
+    /**
+     * action donationForm
+     *
+     * @return void
+     */
+    public function donationFormAction()
+    {
+        // do nothing else: Show JS in Template
     }
 
 }

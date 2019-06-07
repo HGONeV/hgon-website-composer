@@ -1,4 +1,4 @@
-<f:if condition="<f:count>{pagesList1}</f:count>">
+<f:if condition="<f:count>{journalRowList}</f:count>">
     <f:else>
         <div class="flex-item c-12">
             <article class="card card-plainfull">
@@ -23,26 +23,74 @@
     </f:else>
 </f:if>
 
-<f:for each="{pagesList1}" as="pages1">
-    <f:render partial="flexItemC4" arguments="{pages: pages1}" />
-</f:for>
+<f:comment>
+    <f:for each="{journalRowList}" as="journalRow">
+        <f:comment><!-- key can be "FlexItemC4", "FlexItemC6", "FlexItemc8" or "FlexItemC12" --></f:comment>
+        <f:for each="{journalRow}" as="journalElementList" key="key">
+            <f:for each="{journalElementList}" as="journalElement">
+                <f:render partial="{key}" arguments="{item: journalElement}" />
+            </f:for>
+        </f:for>
+    </f:for>
+</f:comment>
 
-<f:for each="{pagesList2}" as="pages2">
-    <f:render partial="flexItemC8" arguments="{pages: pages2}" />
-</f:for>
+<f:if condition="{journalRowList}">
+    <f:then>
+        <f:for each="{journalRowList}" as="pages" iteration="iter">
+            <f:if condition="{iter.cycle} < 4">
+                <f:render partial="FlexItemC4" arguments="{item: pages}" />
+            </f:if>
 
-<f:render partial="Journal/FurtherElements" arguments="{pages: pages2}" />
+            <f:if condition="{iter.cycle} == 4">
+                <f:then>
+                    <f:render partial="flexItemC8" arguments="{item: pages}" />
+                    <f:render partial="Journal/FurtherElements" arguments="{_all}" />
+                </f:then>
+                <f:else>
+                    <f:if condition="{iter.isLast} && <f:count>{journalRowList}</f:count> < 5">
+                        <f:render partial="Journal/FurtherElements" arguments="{_all}" />
+                    </f:if>
+                </f:else>
+            </f:if>
 
-<f:for each="{pagesList3}" as="pages3">
-    <f:render partial="flexItemC6" arguments="{pages: pages3}" />
-</f:for>
+            <f:comment>
+            <f:if condition="{iter.cycle} == 5">
+                <f:then>
+                    <f:render partial="flexItemC6" arguments="{item: pages}" />
+                    <f:comment><!-- Upcoming events --></f:comment>
+                    <div class="flex-item c-12">
+                        <f:cObject typoscriptObjectPath="page.10.variables.rkwEventsUpcomingEvents" />
+                    </div>
+                </f:then>
+                <f:else>
+                    <f:if condition="{iter.isLast} && <f:count>{journalRowList}</f:count> < 6">
+                        <div class="flex-item c-12">
+                            <f:cObject typoscriptObjectPath="page.10.variables.rkwEventsUpcomingEvents" />
+                        </div>
+                    </f:if>
+                </f:else>
+            </f:if>
+            </f:comment>
 
-<f:comment><!-- Upcoming events --></f:comment>
-<div class="flex-item c-12">
-    <f:cObject typoscriptObjectPath="page.10.variables.rkwEventsUpcomingEvents" />
-</div>
+            <f:if condition="{iter.cycle} == 4">
+                <div class="flex-item c-12">
+                    <f:cObject typoscriptObjectPath="page.10.variables.rkwEventsUpcomingEvents" />
+                </div>
+            </f:if>
 
-<f:for each="{pagesList4}" as="pages4">
-    <f:render partial="flexItemC4" arguments="{pages: pages4}" />
-</f:for>
+
+            <f:if condition="{iter.cycle} > 4">
+                <f:render partial="flexItemC4" arguments="{item: pages}" />
+            </f:if>
+        </f:for>
+    </f:then>
+    <f:else>
+        <f:render partial="Journal/FurtherElements" arguments="{_all}" />
+        <f:comment><!-- Upcoming events --></f:comment>
+        <div class="flex-item c-12">
+            <f:cObject typoscriptObjectPath="page.10.variables.rkwEventsUpcomingEvents" />
+        </div>
+    </f:else>
+</f:if>
+
 

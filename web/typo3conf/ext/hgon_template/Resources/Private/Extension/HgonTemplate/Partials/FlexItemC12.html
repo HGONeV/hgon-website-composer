@@ -1,0 +1,64 @@
+{namespace hgon=HGON\HgonTemplate\ViewHelpers}
+
+<div class="flex-item c-12">
+    <f:if condition="<hgon:objectType object='{item}' /> == 'array'">
+        <f:then>
+            <f:comment><!-- If we got an array: Iterate and call this partial again --></f:comment>
+            <section class="box box--bordered pb-1">
+                <header class="box__header">
+                    <div class="wrap">
+                        <h2 class="tagline">Anstehende Termine</h2>
+                    </div>
+                </header>
+                <div class="box__content">
+                    <div class="flex-container space-between gutter">
+                        <f:for each="{item}" as="singleItem">
+                            <f:render section="Allocation" arguments="{item: singleItem}" />
+                        </f:for>
+                    </div>
+                </div>
+            </section>
+        </f:then>
+        <f:else>
+            <f:render section="Allocation" arguments="{item: item}" />
+        </f:else>
+    </f:if>
+
+</div>
+
+
+<f:comment>
+    <!-- SECTIONS -->
+</f:comment>
+
+<f:section name="Allocation">
+    <f:switch expression="<hgon:objectType object='{item}' />">
+        <f:case value="Pages">
+            <f:render section="<hgon:objectType object='{item}' />" arguments="{pages: item}" />
+        </f:case>
+        <f:case value="Event">
+            <f:render partial="FlexItemC4" arguments="{item: item, bordered: 'false'}" />
+        </f:case>
+    </f:switch>
+</f:section>
+
+<f:section name="Pages">
+    <article class="card card-image" style="background-image: url('https://dummyimage.com/800x450/6AA4C3/fff.png?text=IMG');">
+        <div class="card__inner">
+            <header class="card__header">
+                <time class="tagline" datetime="{f:format.date(format: 'Y.m.d', date: pages.crdate)} "><f:format.date format="d.m.Y">{pages.crdate}</f:format.date></time>
+                <h3 class="headline">{pages.title}</h3>
+            </header>
+            <div class="card__content">
+                <p>
+                    {pages.txRkwbasicsTeaserText}
+                </p>
+            </div>
+            <footer class="card__footer">
+                <f:link.page pageUid="{pages.uid}" class="btn btn--rounded btn--white">
+                    <f:translate key="tx_hgontemplate_templates_standard_projectTeaser.readMore" />
+                </f:link.page>
+            </footer>
+        </div>
+    </article>
+</f:section>

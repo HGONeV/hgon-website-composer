@@ -40,8 +40,10 @@
             </div>
         </div>
         <footer class="section__footer">
-            <div class="wrap wrap--text / align-center">
-                <a href="#" class="btn btn--rounded btn--primary">Mehr laden</a>
+            <div class="wrap wrap--text / align-center" id="journal-more-link-container">
+                <f:if condition="{showMoreLink}">
+                    <f:render partial="Journal/MoreLink" arguments="{_all}" />
+                </f:if>
             </div>
         </footer>
     </section>

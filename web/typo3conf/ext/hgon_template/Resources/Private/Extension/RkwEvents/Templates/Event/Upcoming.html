@@ -10,7 +10,7 @@
                 <f:then>
                     <!-- further boxes with events -->
                     <f:for each="{sortedEventList}" as="event">
-                        <div class="flex-item c-4">
+                        <div class="flex-item c-<f:cObject typoscriptObjectPath='lib.math' data='12/<f:count>{sortedEventList}</f:count>' /> ">
                             <f:render partial="Event/List/Box" arguments="{_all}" />
                         </div>
                     </f:for>

@@ -24,8 +24,15 @@
     </aside>
 </div>
 
-
-<div class="flex-item c-12">
+<f:comment><!-- If there is no article for row2, make box smaller --></f:comment>
+<f:if condition="{iter.isLast} && <f:count>{journalRowList}</f:count> < 5">
+    <f:then>
+        <div class="flex-item c-8">
+    </f:then>
+    <f:else>
+        <div class="flex-item c-12">
+    </f:else>
+</f:if>
     <article class="card card-plainfull">
         <div class="card__inner">
             <div class="flex-container">
@@ -37,7 +44,7 @@
                 <div class="flex-item c-7">
                     <div class="card__content">
                         <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            <f:format.raw>{didYouKnow.description}</f:format.raw>
                         </p>
                     </div>
                 </div>
@@ -46,7 +53,7 @@
     </article>
 </div>
 
-
+<f:comment>
 <div class="flex-item c-6">
     <article class="card card-plain card--border">
         <div class="card__inner">
@@ -68,3 +75,4 @@
         </div>
     </article>
 </div>
+</f:comment>

@@ -2,13 +2,14 @@ plugin.tx_hgontemplate {
 
     persistence {
         # cat=plugin.tx_rkwauthors//a; type=string; label=Default storage PID
-        storagePid = 41
+        storagePid = 37,41,57
     }
     settings {
         journal {
             parentCategoryUid = 5
             excludePidList = 1
             ajaxTypeNum = 1558958414
+            itemsPerPage = 7
         }
 
     }

@@ -91,9 +91,48 @@ call_user_func(
             ]
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'PageSlider',
+            [
+                'Standard' => 'pageSlider'
+            ],
+            // non-cacheable actions
+            [
+                'Standard' => 'pageSlider'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'DonationForm',
+            [
+                'Standard' => 'donationForm'
+            ],
+            // non-cacheable actions
+            [
+                'Standard' => 'donationForm'
+            ]
+        );
+
 
         // for content slide
         $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',subtitle,tx_rkwbasics_article_image,';
+
+        /*
+        // caching
+        if( !is_array($GLOBALS['TYPO3_CONF_VARS'] ['SYS']['caching']['cacheConfigurations'][$extKey] ) ) {
+            $GLOBALS['TYPO3_CONF_VARS'] ['SYS']['caching']['cacheConfigurations'][$extKey] = array();
+        }
+        // Hier ist der entscheidende Punkt! Es ist der Cache von Variablen gesetzt!
+        if( !isset($GLOBALS['TYPO3_CONF_VARS'] ['SYS']['caching']['cacheConfigurations'][$extKey]['frontend'] ) ) {
+            $GLOBALS['TYPO3_CONF_VARS'] ['SYS']['caching']['cacheConfigurations'][$extKey]['frontend'] = 'TYPO3\\CMS\\Core\\Cache\\Frontend\\VariableFrontend';
+        }
+
+        if( !isset($GLOBALS['TYPO3_CONF_VARS'] ['SYS']['caching']['cacheConfigurations'][$extKey]['groups'] ) ) {
+            $GLOBALS['TYPO3_CONF_VARS'] ['SYS']['caching']['cacheConfigurations'][$extKey]['groups'] = array('pages');
+        }
+        */
 
     },
     $_EXTKEY

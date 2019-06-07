@@ -1,6 +1,7 @@
 <?php
 namespace HGON\HgonTemplate\Domain\Repository;
 
+use \TYPO3\CMS\Core\Utility\GeneralUtility;
 use RKW\RkwBasics\Helper\QueryTypo3;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
@@ -115,7 +116,7 @@ class PagesRepository extends \RKW\RkwBasics\Domain\Repository\PagesRepository
     /**
      * Get pages of certain parent pages (used for "journal")
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage|array $parentPagesList
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface|array $parentPagesList
      * @param boolean $excludeParentPages
      * @param integer $pageNumber
      * @param integer $limit
@@ -126,7 +127,7 @@ class PagesRepository extends \RKW\RkwBasics\Domain\Repository\PagesRepository
         // 1. get string with all pageUids
         $pagesListArray = [];
         $depth = 999999;
-        $queryGenerator = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance( 'TYPO3\\CMS\\Core\\Database\\QueryGenerator' );
+        $queryGenerator = GeneralUtility::makeInstance( 'TYPO3\\CMS\\Core\\Database\\QueryGenerator' );
         foreach ($parentPagesList as $parentPages) {
             $pagesListArray[] = $queryGenerator->getTreeList($parentPages->getUid(), $depth, 0, 1);
         }
@@ -144,13 +145,15 @@ class PagesRepository extends \RKW\RkwBasics\Domain\Repository\PagesRepository
 
         // 4. Query parts
         $constraints = [];
-
         $constraints[] = $query->logicalAnd(
             $query->in('uid', explode(',', $pagesTreeList)),
             $query->equals('doktype', 1)
         );
 
         if ($excludeParentPages) {
+            if ($parentPagesList instanceof \HGON\HgonTemplate\Domain\Model\SysCategory) {
+                $parentPagesList = [$parentPagesList];
+            }
             $constraints[] = $query->logicalNot(
                 $query->in('uid', $parentPagesList)
             );
@@ -171,6 +174,33 @@ class PagesRepository extends \RKW\RkwBasics\Domain\Repository\PagesRepository
         $query->setOffset($offset);
 
         return $query->execute();
+        //===
+    }
+
+
+
+    /**
+     * Find by multiple uids
+     *
+     * @param string $uidList
+     * @return array
+     */
+    public function findByUidList($uidList)
+    {
+        $uidArray = GeneralUtility::trimExplode(',', $uidList);
+
+        $resultList = [];
+
+        // to get the flexforms sorting, we'll search for every entry
+        foreach ($uidArray as $uid){
+            $query = $this->createQuery();
+            $query->matching(
+                $query->equals('uid', $uid)
+            );
+            $resultList[] = $query->execute()->getFirst();
+        }
+
+        return $resultList;
         //===
     }
 

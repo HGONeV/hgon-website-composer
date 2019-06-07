@@ -1,1 +1,9 @@
-Neuer Content :)
+{namespace hgon=HGON\HgonTemplate\ViewHelpers}
+<f:for each="{journalRowList}" as="pages" >
+   <f:for each="<hgon:createRows list='{journalRowList}' />" as="row">
+       <f:for each="{row}" as="item">
+           <f:render partial="FlexItemC<f:cObject typoscriptObjectPath='lib.math' data='12/<f:count>{row}</f:count>' />" arguments="{item: pages}" />
+       </f:for>
+   </f:for>
+
+</f:for>

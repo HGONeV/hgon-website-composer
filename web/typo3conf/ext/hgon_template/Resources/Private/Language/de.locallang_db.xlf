@@ -3,6 +3,25 @@
 	<file source-language="de" target-language="de" datatype="plaintext" original="messages" date="2019-04-25T13:49:26Z" product-name="hgon_template">
 		<header/>
 		<body>
+		    <!-- MODEL -->
+		    <trans-unit id="tx_hgontemplate_domain_model_didyouknow">
+                <source>Did you know?</source>
+                <target>Wussen Sie schon?</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_didyouknow.title">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_didyouknow.description">
+                <source>Description</source>
+                <target>Beschreibung (Wussten Sie schon?)</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_didyouknow.sys_category">
+                <source>SysCategory</source>
+                <target>Kategorie</target>
+            </trans-unit>
+
+
 
             <!-- FLEXFORM -->
             <trans-unit id="flexform.journalHighlight.sheetTitle">
@@ -59,6 +78,14 @@
             <trans-unit id="flexform.projectTeaser.pidOverview">
                 <source>PID overview</source>
                 <target>Übersichtsseite auswählen</target>
+            </trans-unit>
+            <trans-unit id="flexform.pageSlider.sheetTitle">
+                <source>Page Slider</source>
+                <target>Page Slider</target>
+            </trans-unit>
+            <trans-unit id="flexform.pageSlider.pidList">
+                <source>Page IDs</source>
+                <target>Seiten auswählen</target>
             </trans-unit>
 
         </body>

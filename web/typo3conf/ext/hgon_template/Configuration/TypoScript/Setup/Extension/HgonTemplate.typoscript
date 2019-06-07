@@ -60,6 +60,13 @@ config.tx_extbase.persistence {
             }
         }
 
+        HGON\HgonTemplate\Domain\Model\Event {
+            mapping {
+                tableName = tx_rkwevents_domain_model_event
+                recordType =
+            }
+        }
+
     }
 }
 
@@ -92,6 +99,7 @@ plugin.tx_hgontemplate {
             parentCategoryUid = {$plugin.tx_hgontemplate.settings.journal.parentCategoryUid}
             excludePidList = {$plugin.tx_hgontemplate.settings.journal.excludePidList}
             ajaxTypeNum = {$plugin.tx_hgontemplate.settings.journal.ajaxTypeNum}
+            itemsPerPage = {$plugin.tx_hgontemplate.settings.journal.itemsPerPage}
         }
 
     }
