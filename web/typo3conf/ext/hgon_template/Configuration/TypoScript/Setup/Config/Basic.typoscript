@@ -63,5 +63,15 @@ config {
     }
 [global]
 
+[hostname = hgon.faesslerweb.de] || [globalString = IENV:HTTP_HOST = hgon.faesslerweb.de]
+    plugin.tx_rkwtemplate_config {
+        baseURL = http://hgon.faesslerweb.de/
+    }
+
+    config {
+        baseURL = http://hgon.faesslerweb.de/
+    }
+[global]
+
 
 

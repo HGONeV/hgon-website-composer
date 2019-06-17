@@ -197,8 +197,8 @@ return [
         ],
     ],
     'MAIL' => [
-        'defaultMailFromAddress' => 'service@mein.rkw.de',
-        'defaultMailFromName' => 'RKW',
+        'defaultMailFromAddress' => 'maximilian@faesslerweb.de',
+        'defaultMailFromName' => 'HGON',
         'transport' => 'mail',
         'transport_sendmail_command' => '',
         'transport_smtp_encrypt' => '',

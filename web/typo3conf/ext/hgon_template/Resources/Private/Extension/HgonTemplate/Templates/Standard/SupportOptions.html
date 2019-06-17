@@ -1,0 +1,115 @@
+{namespace hgon=HGON\HgonTemplate\ViewHelpers}
+{namespace formvh=TYPO3\CMS\Form\ViewHelpers}
+
+<section class="section">
+    <header class="section__header / pb-2">
+        <div class="wrap wrap--text / align-center">
+                    <span class="badge badge--secondary">
+                        {settings.supportOptions.preHeader}
+                        <span class="is-hidden">: </span>
+                    </span>
+            <span class="h1 headline">
+                        {settings.supportOptions.header}
+                    </span>
+            <p>
+                {settings.supportOptions.text}
+            </p>
+        </div>
+    </header>
+
+    <div class="section__content">
+        <div class="flex-container space-between gutter valign-stretch">
+
+            <f:if condition="{settings.supportOptions.showBecomeMember}">
+                <f:render section="threeElements" arguments="{itemType: 'becomeMember'}"/>
+            </f:if>
+            <f:if condition="{settings.supportOptions.donateMoney}">
+                <f:render section="threeElements" arguments="{itemType: 'donateMoney'}"/>
+            </f:if>
+            <f:if condition="{settings.supportOptions.donateTime}">
+                <f:render section="threeElements" arguments="{itemType: 'donateTime'}"/>
+            </f:if>
+        </div>
+    </div>
+
+    <div class="mdl js-mdl-layer">
+        <formvh:render persistenceIdentifier="EXT:hgon_template/Resources/Private/Extension/FormFramework/mitgliedsformular.form.yaml"/>
+    </div>
+
+    <f:comment>
+    <script src="https://www.paypalobjects.com/webstatic/ppplusdcc/ppplusdcc.min.js" type="text/javascript">
+    </script>
+
+    <div id="ppplus">
+    </div>
+
+    <script type="application/javascript">
+        var ppp = PAYPAL.apps.PPP({
+                                      "approvalUrl": "'.$approval_url.'",
+                                      "placeholder": "ppplus",
+                                      "mode": "sandbox",});
+    </script>
+    </f:comment>
+</section>
+
+<f:section name="threeElements">
+    <div class="flex-item c-4">
+        <article class="card card--shadow">
+            <f:if condition="{settings.supportOptions.{itemType}.image}">
+                <picture class="card__image">
+                    <figure class="image">
+                        <f:image class="image-embed-item" treatIdAsReference="1" src="{settings.supportOptions.{itemType}.image}" alt="Test" width="395" height="300" />
+                    </figure>
+                </picture>
+            </f:if>
+            <div class="card__inner">
+                <header class="card__header">
+                    <h3 class="headline">{settings.supportOptions.{itemType}.header}</h3>
+                </header>
+                <div class="card__content">
+                    <p>
+                        {settings.supportOptions.{itemType}.text}
+                    </p>
+                </div>
+                <footer class="card__footer">
+                    <a href="#" class="btn btn--rounded btn--tertiary js-open-mdl ">
+                        <f:translate key="tx_hgontemplate_templates_standard_supportOptions_button.{itemType}" />
+                    </a>
+                </footer>
+            </div>
+        </article>
+    </div>
+
+</f:section>
+
+
+<f:comment>
+    <f:section name="becomeMember">
+        <div class="flex-item c-4">
+            <article class="card card--shadow">
+                <f:if condition="{settings.supportOptions.becomeMember.image}">
+                    <picture class="card__image">
+                        <figure class="image">
+                            <f:image class="image-embed-item" treatIdAsReference="1" src="{settings.supportOptions.becomeMember.image}" alt="Test" width="395" height="300" />
+                        </figure>
+                    </picture>
+                </f:if>
+                <div class="card__inner">
+                    <header class="card__header">
+                        <h3 class="headline">{settings.supportOptions.becomeMember.header}</h3>
+                    </header>
+                    <div class="card__content">
+                        <p>
+                            {settings.supportOptions.becomeMember.text}
+                        </p>
+                    </div>
+                    <footer class="card__footer">
+                        <f:link.typolink parameter="{project.projectPid}" class="btn btn--rounded btn--tertiary">
+                            <f:translate key="tx_hgontemplate_templates_standard_projectTeaser.readMore" />
+                        </f:link.typolink>
+                    </footer>
+                </div>
+            </article>
+        </div>
+    </f:section>
+</f:comment>

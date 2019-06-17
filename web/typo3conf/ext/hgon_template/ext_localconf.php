@@ -115,6 +115,17 @@ call_user_func(
             ]
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'SupportOptions',
+            [
+                'Standard' => 'supportOptions'
+            ],
+            // non-cacheable actions
+            [
+                'Standard' => 'supportOptions'
+            ]
+        );
 
         // for content slide
         $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',subtitle,tx_rkwbasics_article_image,';

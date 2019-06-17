@@ -22,6 +22,19 @@
                 <target>Mehr Informationen</target>
             </trans-unit>
 
+            <trans-unit id="tx_hgontemplate_templates_standard_supportOptions_button.becomeMember">
+                <source>Become member</source>
+                <target>Mitglied werden</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_templates_standard_supportOptions_button.donateMoney">
+                <source>Donate money</source>
+                <target>Spenden</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_templates_standard_supportOptions_button.donateTime">
+                <source>Donate time</source>
+                <target>Zeit spenden</target>
+            </trans-unit>
+
         </body>
 	</file>
 </xliff>

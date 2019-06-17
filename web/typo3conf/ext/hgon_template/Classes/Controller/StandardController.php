@@ -354,12 +354,30 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
     /**
      * action donationForm
+     * -> TESTING: Shows a "Fundraising form"
      *
      * @return void
      */
     public function donationFormAction()
     {
+        // @TESTING: Shows a "Fundraising form"
         // do nothing else: Show JS in Template
+    }
+
+
+
+    /**
+     * action supportOptions
+     * - become a member form
+     * - donate money
+     * - donate time
+     * -> Options are defined via flexForm
+     *
+     * @return void
+     */
+    public function supportOptionsAction()
+    {
+        // do nothing else
     }
 
 }
