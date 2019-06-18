@@ -23,7 +23,10 @@
        "rkw/rkw-registration": "~7.6.11 || ~8.7.0",
        "rkw/rkw-template": "~7.6.4",
        "rkw/rkw-authors": "~7.6.13",
-       "rkw/rkw-projects": "~7.6.11"
+       "rkw/rkw-projects": "~7.6.11",
+        "in2code/powermail": "^7.3",
+        "helhum/typoscript-rendering": "2.1.0",
+        "fluidtypo3/vhs": "^5.2"
     },
     "require-dev": {
          "mikey179/vfsstream": "1.4.*@dev",

@@ -144,3 +144,56 @@ txHgontemplateJournalAjax {
 }
 
 
+/* FormExtension TS: Does not work. Problems with contentUid and pageUid.
+
+Possible with two additional extensions: https://www.comuno.net/blog/detail/formular-mit-typoscript-rendering-per-ajax-verschicken/
+I tried something like this: https://stackoverflow.com/questions/55276483/typo3-9-5-forms-framework-ajax
+(Problem: Fixed ID's and it's not working yet)
+
+
+txHgontemplateFormExtension = PAGE
+txHgontemplateFormExtension {
+
+    # also written in partial Listing.html
+    typeNum = {$plugin.tx_hgontemplate.settings.formFramework.ajaxTypeNum}
+
+    config {
+        disableAllHeaderCode = 1
+        xhtml_cleaning = 0
+        admPanel = 0
+        #additionalHeaders = Content-type: text/plain
+        no_cache = 0
+    }
+
+    10 = CONTENT
+    10 {
+        table = tt_content
+        select {
+            pidInList = 34
+            uidInList = 92
+        }
+    }
+
+    10 = USER_INT
+    10 {
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+        extensionName = Form
+        pluginName = Formframework
+        vendorName = TYPO3\CMS
+        switchableControllerActions {
+
+            # Again: Controller-Name and Action
+            FormFrontend {
+                10 = perform
+                20 = render
+            }
+        }
+
+        view < plugin.tx_form.view
+        persistence < plugin.tx_form.persistence
+        settings < plugin.tx_form.settings
+    }
+}
+*/
+
+

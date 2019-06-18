@@ -11,6 +11,9 @@ plugin.tx_hgontemplate {
             ajaxTypeNum = 1558958414
             itemsPerPage = 7
         }
+        formFramework {
+            ajaxTypeNum = 1560849023
+        }
 
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce255af8bf02f56d3d5493f917cfa221",
+    "content-hash": "aa764c7ebcefa522b9e699a81b70f9c6",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -695,6 +695,66 @@
             "time": "2014-09-09T13:34:57+00:00"
         },
         {
+            "name": "fluidtypo3/vhs",
+            "version": "5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FluidTYPO3/vhs.git",
+                "reference": "93bd3ba44406f69e297c4ea6193f0bfae4585e3d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FluidTYPO3/vhs/zipball/93bd3ba44406f69e297c4ea6193f0bfae4585e3d",
+                "reference": "93bd3ba44406f69e297c4ea6193f0bfae4585e3d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "typo3/cms-backend": "^8.7 || ^9 || dev-master",
+                "typo3/cms-core": "^8.7 || ^9 || dev-master",
+                "typo3/cms-extbase": "^8.7 || ^9 || dev-master",
+                "typo3/cms-fluid": "^8.7 || ^9 || dev-master",
+                "typo3/cms-frontend": "^8.7 || ^9 || dev-master"
+            },
+            "replace": {
+                "typo3-ter/vhs": "self.version",
+                "vhs": "self.version"
+            },
+            "require-dev": {
+                "fluidtypo3/development": "^4.0"
+            },
+            "suggest": {
+                "ext-tidy": "Allows to make use of the tidy ViewHelper"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": "build/web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FluidTYPO3\\Vhs\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "The vhs package from FluidTYPO3",
+            "homepage": "https://fluidtypo3.org",
+            "keywords": [
+                "TYPO3 CMS",
+                "fedext",
+                "fluid",
+                "templating",
+                "utility",
+                "viewhelper"
+            ],
+            "time": "2019-04-01T12:17:09+00:00"
+        },
+        {
             "name": "gridelementsteam/gridelements",
             "version": "8.3.0",
             "source": {
@@ -1119,6 +1179,136 @@
                 "typo3 console"
             ],
             "time": "2018-12-09T12:06:13+00:00"
+        },
+        {
+            "name": "helhum/typoscript-rendering",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/helhum/typoscript_rendering.git",
+                "reference": "18d6971605e4351c271d0d4c27059bc48c317477"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/helhum/typoscript_rendering/zipball/18d6971605e4351c271d0d4c27059bc48c317477",
+                "reference": "18d6971605e4351c271d0d4c27059bc48c317477",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "typo3/cms-core": "^6.2 || ^7.6 || ^8.7"
+            },
+            "replace": {
+                "typo3-ter/typoscript-rendering": "self.version",
+                "typoscript_rendering": "self.version"
+            },
+            "require-dev": {
+                "nimut/testing-framework": "^2.0 || ^3.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                },
+                "typo3/cms": {
+                    "extension-key": "typoscript_rendering",
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Helhum\\TyposcriptRendering\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Helmut Hummel",
+                    "email": "info@helhum.io",
+                    "homepage": "http://helhum.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Can render a TypoScript path by URL, especially useful for Ajax dispatching",
+            "homepage": "http://insight.helhum.io/post/104880845705/dont-use-eid-ajax-dispatchers-for-your-extbase",
+            "keywords": [
+                "Rendering",
+                "frontend",
+                "typo3"
+            ],
+            "time": "2018-08-12T22:18:40+00:00"
+        },
+        {
+            "name": "in2code/powermail",
+            "version": "7.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/einpraegsam/powermail.git",
+                "reference": "efe574f3fbd79b822abe69d29501f9b4460da758"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/einpraegsam/powermail/zipball/efe574f3fbd79b822abe69d29501f9b4460da758",
+                "reference": "efe574f3fbd79b822abe69d29501f9b4460da758",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "ext-json": "*",
+                "typo3/cms-core": ">=8.7.0 <10.0.0"
+            },
+            "replace": {
+                "powermail": "self.version",
+                "typo3-ter/powermail": "self.version"
+            },
+            "require-dev": {
+                "behat/behat": "^3.4",
+                "behat/mink-extension": "^2.1",
+                "behat/mink-goutte-driver": "^1.2",
+                "behat/mink-selenium2-driver": "^1.3",
+                "mikey179/vfsstream": "^1.4",
+                "nimut/testing-framework": "^4.0",
+                "phpmd/phpmd": "@stable",
+                "phpunit/phpunit": "^6.0",
+                "se/selenium-server-standalone": "^2.0",
+                "squizlabs/php_codesniffer": "^3.3",
+                "typo3/cms-core": ">=8.7.0 <=8.7.99"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "In2code\\Powermail\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Kellner",
+                    "email": "alexander.kellner@in2code.de"
+                }
+            ],
+            "description": "Powermail is a well-known, editor-friendly, powerful and easy to use mailform extension with a lots of features",
+            "homepage": "https://github.com/einpraegsam/powermail",
+            "keywords": [
+                "form",
+                "mailform",
+                "spamprevention",
+                "typo3"
+            ],
+            "time": "2019-05-21T14:52:41+00:00"
         },
         {
             "name": "monolog/monolog",

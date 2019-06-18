@@ -64,6 +64,12 @@ call_user_func(
             'HGON: Zeige Spenden-Otionen'
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'HGON.HgonTemplate',
+            'ContactForm',
+            'HGON: Kontaktformular'
+        );
+
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($extKey, 'Configuration/TypoScript', 'HGON Template');
 
     },

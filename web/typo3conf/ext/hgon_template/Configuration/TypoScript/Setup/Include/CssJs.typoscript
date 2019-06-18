@@ -10,8 +10,14 @@ page {
         file10 = {$globalWebsiteConfig.templatePaths.default.styles}/styles.css
 		file10.media = screen,print
 
-        file15 = {$globalWebsiteConfig.templatePaths.default.styles}/Main.css
-        file15.media = screen,print
+        file20 = {$globalWebsiteConfig.templatePaths.default.styles}/Main.css
+        file20.media = screen,print
+
+        file30 = https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css
+        file30.media = screen,print
+
+        file40 = https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
+        file40.media = screen,print
 
 		#file20 = {$globalWebsiteConfig.templatePaths.default.styles}/ie9.css
 		#file20.media = screen,print
@@ -55,6 +61,11 @@ page {
 		//file10.forceOnTop = 1
 
         file15 = {$globalWebsiteConfig.templatePaths.default.scripts}/main.js
+
+        file25 = https://cdn.rawgit.com/noelboss/featherlight/1.3.4/release/featherlight.min.js
+        file26 = https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js
+
+        file30 = https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js
 
        // file30 = {$globalWebsiteConfig.templatePaths.default.scripts}/loadcss.js
 
