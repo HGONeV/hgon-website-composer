@@ -37,14 +37,10 @@ renderables:
             Ordentliches: '...ordentliches Mitglied (Schnuppermitgliedschaft erster Jahresbeitrag 40 EUR, dann: 65 EUR)'
             Familie: '...Familie (Jahresbeitrag 80 EUR)'
             Ermäßigt: '...Mitglied zum ermäßigten Beitrag (Schüler, Studenten, Azubis etc. gegen Nachweis, Jahresbeitrag 20 EUR)'
-          fluidAdditionalAttributes:
-            required: required
+          fluidAdditionalAttributes: {  }
         type: RadioButton
         identifier: radiobutton-1
         label: 'Ja, ich will mehr Natur für Hessen und trete der HGON bei als...'
-        validators:
-          -
-            identifier: NotEmpty
       -
         properties:
           options:
@@ -52,14 +48,10 @@ renderables:
             T-Shirt: 'Ein HGON-T-Shirt, Größe:'
             Kappe: 'Eine HGON-Kappe'
             Spende: 'Ich spende mein Begrüßungsgeschenk'
-          fluidAdditionalAttributes:
-            required: required
+          fluidAdditionalAttributes: {  }
         type: RadioButton
         identifier: radiobutton-2
         label: 'Mein Begrüßungsgeschenk:'
-        validators:
-          -
-            identifier: NotEmpty
       -
         properties:
           options:

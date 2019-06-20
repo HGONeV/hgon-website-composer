@@ -99,6 +99,9 @@
 			<trans-unit id="tx_hgondonation_domain_model_donationtypetime.max_num_frontend_user">
 				<source>Maximum number of FrontendUser</source>
 			</trans-unit>
+			<trans-unit id="tx_hgondonation_domain_model_donationtypetime.pages">
+                <source>Project page</source>
+            </trans-unit>
 			<trans-unit id="tx_hgondonation_domain_model_donationtypemoney">
 				<source>Donation Money</source>
 			</trans-unit>

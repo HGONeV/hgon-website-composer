@@ -11,6 +11,8 @@ namespace HGON\HgonDonation\Controller;
  *  (c) 2018 Maximilian Fäßler <maximilian@faesslerweb.de>, Fäßler Web UG
  *
  ***/
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * DonationController
@@ -18,64 +20,103 @@ namespace HGON\HgonDonation\Controller;
 class DonationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 	/**
-	 * donationTypeRepository
+	 * donationTypeTimeRepository
 	 *
-	 * @var \HGON\HgonDonation\Domain\Repository\DonationTypeRepository
+	 * @var \HGON\HgonDonation\Domain\Repository\DonationTypeTimeRepository
 	 * @inject
 	 */
-	protected $donationTypeRepository = null;
+	protected $donationTypeTimeRepository = null;
+
+    /**
+     * pagesRepository
+     *
+     * @var \HGON\HgonTemplate\Domain\Repository\PagesRepository
+     * @inject
+     */
+    protected $pagesRepository = null;
+
+    /**
+     * action new
+     * initial action. If no donationTypeTime is set, forward to list for choosing one
+     *
+     * @param \HGON\HgonDonation\Domain\Model\DonationTypeTime $donationTypeTime
+     * @return void
+     */
+    public function newDonationTimeAction(\HGON\HgonDonation\Domain\Model\DonationTypeTime $donationTypeTime)
+    {
+        $templateDataArray = [];
+        $templateDataArray['donationTypeTime'] = $donationTypeTime;
+
+        // ugly function, because we don't have pages objects (we got a typolink)
+        /** @var \HGON\HgonTemplate\Domain\Model\Projects $project */
+        if ($donationTypeTime->getPages()) {
+            $explodedLink = GeneralUtility::trimExplode('=', $donationTypeTime->getPages());
+            $templateDataArray['pages'] = $this->pagesRepository->findByIdentifier(intval(end($explodedLink)));
+        }
+
+
+          if (GeneralUtility::_GP('type') == intval($this->settings['ajaxTypeNum'])) {
+
+              // get JSON helper
+              /** @var \RKW\RkwBasics\Helper\Json $jsonHelper */
+              $jsonHelper = GeneralUtility::makeInstance('RKW\\RkwBasics\\Helper\\Json');
+
+              // Content
+              $jsonHelper->setHtml(
+                  'donation-container',
+                  $templateDataArray,
+                  'replace',
+                  'Ajax/DonationTime.html'
+              );
+
+              print (string)$jsonHelper;
+              exit();
+              //===
+
+          } else {
+              $this->view->assignMultiple($templateDataArray);
+          }
+    }
+
+
+
+    /**
+     * action list
+     *
+     * @return void
+     */
+    public function listDonationTimeAction()
+    {
+        $this->view->assign('donationTypeTimeList', $this->donationTypeTimeRepository->findAll());
+        $this->view->assign('ajaxTypeNum', $this->settings['ajaxTypeNum']);
+    }
 
 
 
 	/**
-	 * action list
-	 *
-	 * @return void
-	 */
-	public function listAction()
-	{
-		$this->view->assign('donationTypeList', $this->donationTypeRepository->findAll());
-	}
-
-
-
-	/**
-	 * action show
-	 *
-	 * @param \HGON\HgonDonation\Domain\Model\DonationType $donationType
-	 * @return void
-	 */
-	public function showDonationTypeAction(\HGON\HgonDonation\Domain\Model\DonationType $donationType)
-	{
-		$this->view->assign('donationType', $donationType);
-	}
-
-
-
-	/**
-	 * action showDonationTypeTime
-	 *
-	 * @param \HGON\HgonDonation\Domain\Model\DonationType $donationType
-	 * @param \HGON\HgonDonation\Domain\Model\DonationTypeTime $donationTypeTime
-	 * @return void
-	 */
-	public function showDonationTypeTimeAction(\HGON\HgonDonation\Domain\Model\DonationType $donationType, \HGON\HgonDonation\Domain\Model\DonationTypeTime $donationTypeTime)
-	{
-	//	\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($donationTypeTime); exit;
-		$this->view->assign('donationType', $donationType);
-		$this->view->assign('donationTypeTime', $donationTypeTime);
-	}
-
-
-
-	/**
-	 * action createDonationTypeTime
+	 * action createDonationTime
 	 *
 	 * @param array $formFields
 	 * @return void
 	 */
-	public function createDonationTypeTimeAction($formFields)
+	public function createDonationTimeAction($formFields)
 	{
+        // get JSON helper
+        /** @var \RKW\RkwBasics\Helper\Json $jsonHelper */
+        $jsonHelper = GeneralUtility::makeInstance('RKW\\RkwBasics\\Helper\\Json');
+
+        // Content
+        $jsonHelper->setHtml(
+            'donation-time-form',
+            [],
+            'replace',
+            'Ajax/RegisterForm.html'
+        );
+
+        print (string)$jsonHelper;
+        exit();
+        //===
+
 		// via Ajax?
 
 		// just send a mail?
@@ -84,74 +125,5 @@ class DonationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 		// akzeptiert die Anmeldung und nimmt kontakt auf, oder lehnt ab)
 
 		//$this->redirect('list');
-	}
-
-
-
-	/**
-	 * action new
-	 *
-	 * @return void
-	 */
-	public function newAction()
-	{
-
-	}
-
-
-
-	/**
-	 * action create
-	 *
-	 * @param \HGON\HgonDonation\Domain\Model\Donation $newDonation
-	 * @return void
-	 */
-	public function createAction(\HGON\HgonDonation\Domain\Model\Donation $newDonation)
-	{
-		$this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-		$this->donationRepository->add($newDonation);
-		$this->redirect('list');
-	}
-
-
-
-	/**
-	 * action edit
-	 *
-	 * @param \HGON\HgonDonation\Domain\Model\Donation $donation
-	 * @ignorevalidation $donation
-	 * @return void
-	 */
-	public function editAction(\HGON\HgonDonation\Domain\Model\Donation $donation)
-	{
-		$this->view->assign('donation', $donation);
-	}
-
-	/**
-	 * action update
-	 *
-	 * @param \HGON\HgonDonation\Domain\Model\Donation $donation
-	 * @return void
-	 */
-	public function updateAction(\HGON\HgonDonation\Domain\Model\Donation $donation)
-	{
-		$this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-		$this->donationRepository->update($donation);
-		$this->redirect('list');
-	}
-
-
-
-	/**
-	 * action delete
-	 *
-	 * @param \HGON\HgonDonation\Domain\Model\Donation $donation
-	 * @return void
-	 */
-	public function deleteAction(\HGON\HgonDonation\Domain\Model\Donation $donation)
-	{
-		$this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-		$this->donationRepository->remove($donation);
-		$this->redirect('list');
 	}
 }

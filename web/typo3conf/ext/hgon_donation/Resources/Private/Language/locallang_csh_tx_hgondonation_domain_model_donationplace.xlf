@@ -3,10 +3,10 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-13T10:28:28Z" product-name="hgon_donation">
 		<header/>
 		<body>
-			<trans-unit id="tx_hgon_donation_domain_model_donate">
+			<trans-unit id="tx_hgondonation_domain_model_donate">
 				<source>donate</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donate.description">
+			<trans-unit id="tx_hgondonation_domain_model_donate.description">
 				<source>Donation extension of HGON</source>
 			</trans-unit>
 			<trans-unit id="title.description">

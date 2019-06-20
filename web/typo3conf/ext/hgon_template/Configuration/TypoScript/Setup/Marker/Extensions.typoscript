@@ -122,6 +122,30 @@ page {
                 settings =< plugin.tx_rkwevents.settings
             }
 
+
+
+            //=================================================================
+            // Donate time form
+            //=================================================================
+            hgonDonateTime = USER
+            hgonDonateTime {
+                userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                extensionName = HgonDonation
+                pluginName = Donate
+                vendorName = HGON
+                switchableControllerActions {
+                    // Again: Controller-Name and Action
+                    Donation {
+                        #10 = newDonationTime
+                        20 = listDonationTime
+                        30 = createDonationTime
+                    }
+                }
+
+                view =< plugin.tx_hgondonation_donate.view
+                persistence =< plugin.tx_hgondonation_donate.persistence
+                settings =< plugin.tx_hgondonation_donate.settings
+            }
         }
     }
 }

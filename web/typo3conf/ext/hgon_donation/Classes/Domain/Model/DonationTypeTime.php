@@ -97,7 +97,7 @@ class DonationTypeTime extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * contactPerson
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonBasic\Domain\Model\AssociationOperator>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\RKW\RkwAuthors\Domain\Model\Authors>
 	 */
 	protected $contactPerson = null;
 
@@ -119,7 +119,7 @@ class DonationTypeTime extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * frontendUser
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonBasic\Domain\Model\FrontendUser>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\RKW\RkwRegistration\Domain\Model\FrontendUser>
 	 */
 	protected $frontendUser = null;
 
@@ -129,6 +129,14 @@ class DonationTypeTime extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 * @var int
 	 */
 	protected $maxNumFrontendUser = 1;
+
+    /**
+     * pages
+     * -> because we got a typolink, just use string instead a pages-Model
+     *
+     * @var string
+     */
+    protected $pages = null;
 
 	/**
 	 * __construct
@@ -397,10 +405,10 @@ class DonationTypeTime extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Adds a contactPerson
 	 *
-	 * @param \HGON\HgonBasic\Domain\Model\AssociationOperator $contactPerson
+	 * @param \RKW\RkwAuthors\Domain\Model\Authors $contactPerson
 	 * @return void
 	 */
-	public function addContactPerson(\HGON\HgonBasic\Domain\Model\AssociationOperator $contactPerson)
+	public function addContactPerson(\RKW\RkwAuthors\Domain\Model\Authors $contactPerson)
 	{
 		$this->contactPerson->attach($contactPerson);
 	}
@@ -408,10 +416,10 @@ class DonationTypeTime extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Removes a contactPerson
 	 *
-	 * @param \HGON\HgonBasic\Domain\Model\AssociationOperator $contactPersonToRemove
+	 * @param \RKW\RkwAuthors\Domain\Model\Authors $contactPersonToRemove
 	 * @return void
 	 */
-	public function removeQuestion(\HGON\HgonBasic\Domain\Model\AssociationOperator $contactPersonToRemove)
+	public function removeQuestion(\RKW\RkwAuthors\Domain\Model\Authors $contactPersonToRemove)
 	{
 		$this->contactPerson->detach($contactPersonToRemove);
 	}
@@ -419,7 +427,7 @@ class DonationTypeTime extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Returns the contactPerson
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonBasic\Domain\Model\AssociationOperator> $contactPerson
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\RKW\RkwAuthors\Domain\Model\Authors> $contactPerson
 	 */
 	public function getContactPerson()
 	{
@@ -429,7 +437,7 @@ class DonationTypeTime extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Sets the contactPerson
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonBasic\Domain\Model\AssociationOperator> $contactPerson
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\RKW\RkwAuthors\Domain\Model\Authors> $contactPerson
 	 * @return void
 	 */
 	public function setQuestion(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $contactPerson)
@@ -513,7 +521,7 @@ class DonationTypeTime extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Returns the frontendUser
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonBasic\Domain\Model\FrontendUser> $frontendUser
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\RKW\RkwRegistration\Domain\Model\FrontendUser> $frontendUser
 	 */
 	public function getFrontendUser()
 	{
@@ -523,7 +531,7 @@ class DonationTypeTime extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Sets the frontendUser
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonBasic\Domain\Model\FrontendUser> $frontendUser
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\RKW\RkwRegistration\Domain\Model\FrontendUser> $frontendUser
 	 * @return void
 	 */
 	public function setFrontendUser(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $frontendUser)
@@ -534,20 +542,20 @@ class DonationTypeTime extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Adds a frontendUser
 	 *
-	 * @param \HGON\HgonBasic\Domain\Model\FrontendUser $frontendUser
+	 * @param \RKW\RkwRegistration\Domain\Model\FrontendUser $frontendUser
 	 * @return void
 	 */
-	public function addFrontendUser(\HGON\HgonBasic\Domain\Model\FrontendUser $frontendUser) {
+	public function addFrontendUser(\RKW\RkwRegistration\Domain\Model\FrontendUser $frontendUser) {
 		$this->frontendUser->attach($frontendUser);
 	}
 
 	/**
 	 * Removes a frontendUser
 	 *
-	 * @param \HGON\HgonBasic\Domain\Model\FrontendUser $frontendUserToRemove The frontendUser to be removed
+	 * @param \RKW\RkwRegistration\Domain\Model\FrontendUser $frontendUserToRemove The frontendUser to be removed
 	 * @return void
 	 */
-	public function removeFrontendUser(\HGON\HgonBasic\Domain\Model\FrontendUser $frontendUserToRemove) {
+	public function removeFrontendUser(\RKW\RkwRegistration\Domain\Model\FrontendUser $frontendUserToRemove) {
 		$this->frontendUser->detach($frontendUserToRemove);
 	}
 
@@ -571,4 +579,25 @@ class DonationTypeTime extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	{
 		$this->maxNumFrontendUser = $maxNumFrontendUser;
 	}
+
+    /**
+     * Returns the pages
+     *
+     * @return string $pages
+     */
+    public function getPages()
+    {
+        return $this->pages;
+    }
+
+    /**
+     * Sets the pages
+     *
+     * @param string $pages
+     * @return void
+     */
+    public function setPages($pages)
+    {
+        $this->pages = $pages;
+    }
 }

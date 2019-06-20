@@ -1,7 +1,6 @@
 <?php
 return [
 	'ctrl' => [
-		'hideTable' => 1,
 		'title'	=> 'LLL:EXT:hgon_donation/Resources/Private/Language/locallang_db.xlf:tx_hgondonation_domain_model_donationtypetime',
 		'label' => 'title',
 		'tstamp' => 'tstamp',
@@ -24,7 +23,8 @@ return [
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, short_description, description, type, time_requirement, time_range_start, time_range_end, recurring, image, contact_person, finished, helpers_feedback, helpers_image, donation_place, frontend_user, max_num_frontend_user',
 	],
 	'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, short_description, description, type, time_requirement, time_range_start, time_range_end, recurring, image, contact_person, finished, helpers_feedback, helpers_image, donation_place, frontend_user, max_num_frontend_user, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+	//	'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, short_description, description, type, time_requirement, time_range_start, time_range_end, recurring, image, contact_person, finished, helpers_feedback, helpers_image, donation_place, frontend_user, max_num_frontend_user, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, short_description, description, time_requirement, time_range_start, time_range_end, donation_place, pages, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
 	],
 	'columns' => [
 		'sys_language_uid' => [
@@ -123,7 +123,7 @@ return [
 			'config' => [
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 5,
 				'eval' => 'trim'
 			]
 		],
@@ -133,7 +133,7 @@ return [
 			'config' => [
 				'type' => 'text',
 				'cols' => 40,
-				'rows' => 15,
+				'rows' => 10,
 				'eval' => 'trim'
 			]
 		],
@@ -247,7 +247,7 @@ return [
 				'type' => 'select',
 				'renderType' => 'selectMultipleSideBySide',
 				'size' => 8,
-				'foreign_table' => 'tx_hgonbasic_domain_model_associationoperator',
+				'foreign_table' => 'tx_rkwauthors_domain_model_authors',
 				'foreign_sortby' => 'last_name',
 				'minitems' => 1,
 				'maxitems' => 9999,
@@ -383,6 +383,14 @@ return [
 				],
 			]
 		],
+        'pages' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:hgon_donation/Resources/Private/Language/locallang_db.xlf:tx_hgondonation_domain_model_donationtypetime.pages',
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputLink',
+            ],
+        ],
 
 		'donation_type' => [
 			'config' => [

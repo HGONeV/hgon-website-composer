@@ -25,7 +25,7 @@ $EM_CONF[$_EXTKEY] = [
     'constraints' => [
         'depends' => [
             'typo3' => '7.6.0-8.7.99',
-			'hgon_basic' => '8.7.0-8.7.99'
+            'hgon_template' => '8.7.0-8.7.99'
         ],
         'conflicts' => [],
         'suggests' => [],

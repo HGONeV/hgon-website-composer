@@ -101,7 +101,9 @@ plugin.tx_hgontemplate {
             ajaxTypeNum = {$plugin.tx_hgontemplate.settings.journal.ajaxTypeNum}
             itemsPerPage = {$plugin.tx_hgontemplate.settings.journal.itemsPerPage}
         }
-
+        formFramework {
+            ajaxTypeNum = {$plugin.tx_hgontemplate.settings.formFramework.ajaxTypeNum}
+        }
     }
 }
 

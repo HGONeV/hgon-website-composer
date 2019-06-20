@@ -48,8 +48,12 @@
     </f:comment>
 </section>
 
-<div class="featherlight-form-container" style="display: none;">
+<div class="featherlight-form-container mitgliedsformular" style="display: none;">
     <f:render partial="FormFramework/BecomeMember" />
+</div>
+
+<div class="featherlight-form-container hgon-donate-time-plugin" style="display: none;">
+    <f:cObject typoscriptObjectPath="page.10.variables.hgonDonateTime" />
 </div>
 
 <f:section name="threeElements">
@@ -72,9 +76,19 @@
                     </p>
                 </div>
                 <footer class="card__footer">
-                    <a data-featherlight="#mitgliedsformular" href="#" class="btn btn--rounded btn--tertiary">
+
+                    <f:if condition="{itemType} == 'becomeMember'">
+                        <a data-featherlight="#mitgliedsformular" href="#" class="btn btn--rounded btn--tertiary">
+                    </f:if>
+                    <f:if condition="{itemType} == 'donateMoney'">
+                        <a data-featherlight="#" href="#" class="btn btn--rounded btn--tertiary">
+                    </f:if>
+                    <f:if condition="{itemType} == 'donateTime'">
+                        <a data-featherlight="#hgon-donate-time-plugin" href="#" class="btn btn--rounded btn--tertiary">
+                    </f:if>
                         <f:translate key="tx_hgontemplate_templates_standard_supportOptions_button.{itemType}" />
                     </a>
+
                 </footer>
             </div>
         </article>

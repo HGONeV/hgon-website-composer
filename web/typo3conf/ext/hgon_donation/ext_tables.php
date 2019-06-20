@@ -8,7 +8,7 @@ call_user_func(
 		\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
 			'HGON.HgonDonation',
 			'Donate',
-			'donate'
+			'HGON: Zeitspende'
 		);
 
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($extKey, 'Configuration/TypoScript', 'HGON Donation');

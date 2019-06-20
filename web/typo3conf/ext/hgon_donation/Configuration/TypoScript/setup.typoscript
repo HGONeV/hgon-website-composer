@@ -1,3 +1,7 @@
+# we need this following line for AJAX, while we've set [FE][pageNotFoundOnCHashError] = true
+# (we need this for the FormFramework-Ajax-Purpose (with EXT:typoscript_rendering)
+plugin.tx_hgondonation_donate.features.requireCHashArgumentForActionArguments = 0
+
 plugin.tx_hgondonation_donate {
 	view {
 		templateRootPaths.0 = EXT:hgon_donation/Resources/Private/Templates/
@@ -17,4 +21,49 @@ plugin.tx_hgondonation_donate {
 	mvc {
 		#callDefaultActionIfActionCantBeResolved = 1
 	}
+    settings {
+        ajaxTypeNum = {$plugin.tx_hgondonation_donate.settings.ajaxTypeNum}
+    }
+}
+
+
+page.includeJSFooter.txRkwEventsBasic  = EXT:hgon_donation/Resources/Public/Scripts/hgondonation.js
+
+
+#===============================================================
+# Ajax
+#===============================================================
+txHgondonationAjax = PAGE
+txHgondonationAjax {
+
+    typeNum = {$plugin.tx_hgondonation_donate.settings.ajaxTypeNum}
+
+    config {
+        disableAllHeaderCode = 1
+        xhtml_cleaning = 0
+        admPanel = 0
+        additionalHeaders = Content-type: text/plain
+        no_cache = 0
+    }
+
+    10 = USER_INT
+    10 {
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+        extensionName = HgonDonation
+        pluginName = Donate
+        vendorName = HGON
+        switchableControllerActions {
+
+            # Again: Controller-Name and Action
+            Donation {
+                10 = newDonationTime
+                20 = listDonationTime
+                30 = createDonationTime
+            }
+        }
+
+        view < plugin.tx_hgondonation_donate.view
+        persistence < plugin.tx_hgondonation_donate.persistence
+        settings < plugin.tx_hgondonation_donate.settings
+    }
 }

@@ -127,18 +127,6 @@ call_user_func(
             ]
         );
 
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'HGON.HgonTemplate',
-            'ContactForm',
-            [
-                'Form' => 'contactForm'
-            ],
-            // non-cacheable actions
-            [
-                'Form' => 'contactForm'
-            ]
-        );
-
         // for content slide
         $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',subtitle,tx_rkwbasics_article_image,';
 

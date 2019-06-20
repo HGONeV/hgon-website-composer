@@ -70,7 +70,7 @@ class DonationTypeMoney extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * frontendUserToInform
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonBasic\Domain\Model\FrontendUser>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\RKW\RkwRegistration\Domain\Model\FrontendUser>
 	 */
 	protected $frontendUserToInform = null;
 
@@ -244,7 +244,7 @@ class DonationTypeMoney extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Returns the frontendUserToInform
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonBasic\Domain\Model\FrontendUser> $frontendUserToInform
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\RKW\RkwRegistration\Domain\Model\FrontendUser> $frontendUserToInform
 	 */
 	public function getFrontendUserToInform()
 	{
@@ -254,7 +254,7 @@ class DonationTypeMoney extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Sets the frontendUserToInform
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonBasic\Domain\Model\FrontendUser> $frontendUserToInform
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\RKW\RkwRegistration\Domain\Model\FrontendUser> $frontendUserToInform
 	 * @return void
 	 */
 	public function setFrontendUserToInform(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $frontendUserToInform)
@@ -265,20 +265,20 @@ class DonationTypeMoney extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Adds a frontendUserToInform
 	 *
-	 * @param \HGON\HgonBasic\Domain\Model\FrontendUser $frontendUserToInform
+	 * @param \RKW\RkwRegistration\Domain\Model\FrontendUser $frontendUserToInform
 	 * @return void
 	 */
-	public function addFrontendUserToInform(\HGON\HgonBasic\Domain\Model\FrontendUser $frontendUserToInform) {
+	public function addFrontendUserToInform(\RKW\RkwRegistration\Domain\Model\FrontendUser $frontendUserToInform) {
 		$this->frontendUserToInform->attach($frontendUserToInform);
 	}
 
 	/**
 	 * Removes a frontendUserToInform
 	 *
-	 * @param \HGON\HgonBasic\Domain\Model\FrontendUser $frontendUserToInformToRemove The frontendUserToInform to be removed
+	 * @param \RKW\RkwRegistration\Domain\Model\FrontendUser $frontendUserToInformToRemove The frontendUserToInform to be removed
 	 * @return void
 	 */
-	public function removeFrontendUserToInform(\HGON\HgonBasic\Domain\Model\FrontendUser $frontendUserToInformToRemove) {
+	public function removeFrontendUserToInform(\RKW\RkwRegistration\Domain\Model\FrontendUser $frontendUserToInformToRemove) {
 		$this->frontendUserToInform->detach($frontendUserToInformToRemove);
 	}
 }

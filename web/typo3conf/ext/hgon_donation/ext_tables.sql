@@ -69,6 +69,7 @@ CREATE TABLE tx_hgondonation_domain_model_donationtypetime (
 	donation_place varchar(255) DEFAULT '' NOT NULL,
     frontend_user varchar(255) DEFAULT '' NOT NULL,
     max_num_frontend_user int(11) DEFAULT '0' NOT NULL,
+    pages varchar(255) DEFAULT '' NOT NULL,
 
 	donation_type int(11) unsigned DEFAULT '0' NOT NULL,
 
