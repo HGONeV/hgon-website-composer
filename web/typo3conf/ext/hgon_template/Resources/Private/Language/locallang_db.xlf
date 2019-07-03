@@ -67,6 +67,15 @@
             <trans-unit id="flexform.pageSlider.pidList">
                 <source>Page IDs</source>
             </trans-unit>
+            <trans-unit id="flexform.pageSlider.preHeader">
+                <source>Pre header</source>
+            </trans-unit>
+            <trans-unit id="flexform.pageSlider.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="flexform.pageSlider.text">
+                <source>Text</source>
+            </trans-unit>
             <trans-unit id="flexform.supportOptions.sheetTitle">
                 <source>Support Options</source>
             </trans-unit>

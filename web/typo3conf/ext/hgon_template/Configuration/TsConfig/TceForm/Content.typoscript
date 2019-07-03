@@ -10,6 +10,12 @@ TCEFORM.pages {
     tx_rkwbasics_document_type.disabled = 1
 }
 
+# adjustments for change to FCS (use "textmedia" instead of "text", "textpic", "image" etc)
+TCEFORM.tt_content.CType {
+    removeItems = header, text, textpic, image, bullets, table, uploads, multimedia, media, mailform, search, login, menu, shortcut, html, script, splash, div
+    #removeItems = text, textpic, image, media
+}
+
 TCEFORM {
     tt_content {
 
@@ -28,16 +34,16 @@ TCEFORM {
             #    11 = Highlight - nur Abstand oben
             #    12 = Highlight - plus Abstand unten
                 //13 = Zitat
-                14 = Flex Container Element: Bild + Text
-                15 = Flex Container Element: Bild + Text (Vertikal)
+            #    14 = Flex Container Element: Bild + Text
+            #    15 = Flex Container Element: Bild + Text (Vertikal)
             #    20 = Slider Element: Bild + Text
                 //25 = Seiten Teaser mit Bild links + Verweise rechts
                 //26 = Seiten Teaser mit Bild rechts + Verweise im Fußbereich
-                30 = Header: Bilder (Zufallsauswahl) + Text (Home)
+                30 = Startseite Header: Bilder (Zufallsauswahl) + Text (Home)
             #    31 = Header: Bild + Text
-                40 = Sidebar: Gelber Hintergrund
+            #    40 = Sidebar: Gelber Hintergrund
             #    41 = Sidebar: Gelb-grüner Hintergrund + Bild
-                42 = Sidebar: Blauer Hintergrund
+            #    42 = Sidebar: Blauer Hintergrund
                 #50 = Sitemap: Menü vertikal
                 #51 = Sitemap: Menü horizontal
 

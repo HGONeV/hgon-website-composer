@@ -60,6 +60,14 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     protected $eventRepository = null;
 
     /**
+     * newsRepository
+     *
+     * @var \HGON\HgonTemplate\Domain\Repository\NewsRepository
+     * @inject
+     */
+    protected $newsRepository = null;
+
+    /**
      * didYouKnowRepository
      *
      * @var \HGON\HgonTemplate\Domain\Repository\DidYouKnowRepository
@@ -257,6 +265,8 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         /** @var \TYPO3\CMS\Extbase\Persistence\QueryResultInterface $pagesWithCategoryList */
         $pagesWithCategoryList = $helperRequest['sysCategoryList'];
         $templateDataArray['journalRowList'] = $helperRequest['journalRowList'];
+        // @toDo: If $templateDataArray['journalRowList'] delivers only a few results: Try to fill with news
+        $templateDataArray['news'] = $this->newsRepository->findByFilter($sysCategory, [], [], $pageNumber, 1)->getFirst();
 
         // sysCategory is set, if user is filtering
         /*

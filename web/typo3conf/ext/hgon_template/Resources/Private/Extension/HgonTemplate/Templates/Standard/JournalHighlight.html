@@ -2,23 +2,21 @@
     <div class="box__inner">
         <div class="flex-container space-between no-padding">
 
-
-
-                <f:comment><!-- If a pages element is selected via flexform, use it as main item --></f:comment>
-                <f:if condition="{pagesManualSelect}">
+            <f:comment><!-- If a pages element is selected via flexform, use it as main item --></f:comment>
+            <f:if condition="{pagesManualSelect}">
+                <f:then>
+                    <f:render section="mainArticle" arguments="{pages: pagesManualSelect}" />
+                </f:then>
+                <f:else>
                     <f:then>
-                        <f:render section="mainArticle" arguments="{pages: pagesManualSelect}" />
+                        <f:for each="{journalPagesList}" as="pages" iteration="iter">
+                            <f:if condition="{iter.isFirst}">
+                                <f:render section="mainArticle" arguments="{pages: pages}" />
+                            </f:if>
+                        </f:for>
                     </f:then>
-                    <f:else>
-                        <f:then>
-                            <f:for each="{journalPagesList}" as="pages" iteration="iter">
-                                <f:if condition="{iter.isFirst}">
-                                    <f:render section="mainArticle" arguments="{pages: pages}" />
-                                </f:if>
-                            </f:for>
-                        </f:then>
-                    </f:else>
-                </f:if>
+                </f:else>
+            </f:if>
 
 
             <div class="flex-item c-4 pl-2">

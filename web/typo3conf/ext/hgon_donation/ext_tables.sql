@@ -197,3 +197,4 @@ CREATE TABLE tx_hgondonation_domain_model_donationplace (
 	KEY language (l10n_parent,sys_language_uid)
 
 );
+

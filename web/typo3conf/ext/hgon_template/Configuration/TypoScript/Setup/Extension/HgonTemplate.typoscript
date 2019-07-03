@@ -67,6 +67,20 @@ config.tx_extbase.persistence {
             }
         }
 
+        GeorgRinger\News\Domain\Model\News {
+            subclasses {
+                # hier wichtig: index 0 überschreiben für die
+                # normale News-Ansicht
+                # 0 == Typ-Auswahl an News-Datensatz
+                0 = HGON\HgonTemplate\Domain\Model\News
+            }
+        }
+        HGON\HgonTemplate\Domain\Model\News {
+            mapping {
+                recordType = 0
+                tableName = tx_news_domain_model_news
+            }
+        }
     }
 }
 
@@ -103,6 +117,9 @@ plugin.tx_hgontemplate {
         }
         formFramework {
             ajaxTypeNum = {$plugin.tx_hgontemplate.settings.formFramework.ajaxTypeNum}
+        }
+        news {
+            detailPid = {$plugin.tx_hgontemplate.settings.news.detailPid}
         }
     }
 }

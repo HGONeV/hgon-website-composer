@@ -87,6 +87,18 @@
                 <source>Page IDs</source>
                 <target>Seiten auswählen</target>
             </trans-unit>
+            <trans-unit id="flexform.pageSlider.preHeader">
+                <source>Pre header</source>
+                <target>Pre-Headline</target>
+            </trans-unit>
+            <trans-unit id="flexform.pageSlider.header">
+                <source>Header</source>
+                <target>Headline</target>
+            </trans-unit>
+            <trans-unit id="flexform.pageSlider.text">
+                <source>Text</source>
+                <target>Text</target>
+            </trans-unit>
             <trans-unit id="flexform.supportOptions.sheetTitle">
                 <source>Support Options</source>
                 <target>Unterstützungsoptionen</target>

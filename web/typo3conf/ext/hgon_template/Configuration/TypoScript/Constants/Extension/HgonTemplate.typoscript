@@ -9,11 +9,13 @@ plugin.tx_hgontemplate {
             parentCategoryUid = 5
             excludePidList = 1
             ajaxTypeNum = 1558958414
-            itemsPerPage = 7
+            itemsPerPage = 8
         }
         formFramework {
             ajaxTypeNum = 1560849023
         }
-
+        news {
+            detailPid = 62
+        }
     }
 }

@@ -35,6 +35,7 @@ page {
 		# Variables
 		variables {
 
+            /*
             header = CONTENT
             header.table = tt_content
             header.slide = -1
@@ -43,6 +44,8 @@ page {
                 orderBy = sorting
                 languageField = sys_language_uid
             }
+
+            */
 
             sidebar = CONTENT
             sidebar.table = tt_content
@@ -70,6 +73,8 @@ page {
                 orderBy = sorting
                 languageField = sys_language_uid
             }
+
+
 		}
 	}
 }

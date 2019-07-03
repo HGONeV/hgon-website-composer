@@ -35,21 +35,31 @@ class CreateRowsViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
      */
     public function render($list, $itemsPerRow = 3)
     {
-        if ($list instanceof \TYPO3\CMS\Extbase\Persistence\Generic\QueryResult) {
-            $list = $list->toArray();
+        // merge possible list-arrays
+        $mergedList = [];
+        foreach ($list as $singleList) {
+            if ($singleList instanceof \TYPO3\CMS\Extbase\Persistence\Generic\QueryResult) {
+                $singleList = $singleList->toArray();
+            }
+            if (!is_array($singleList)) {
+                $singleList = [$singleList];
+            }
+            $mergedList = array_merge($mergedList, $singleList);
+            shuffle($mergedList);
         }
+
         $newList = [];
 
         $i = 0;
         do {
-            if (count($list) > $itemsPerRow) {
-                $newList[$i] = array_splice($list, 0, $itemsPerRow);
+            if (count($mergedList) > $itemsPerRow) {
+                $newList[$i] = array_splice($mergedList, 0, $itemsPerRow);
             } else {
                 // put last elements into array
-                $newList[$i] = array_splice($list, 0, count($list));
+                $newList[$i] = array_splice($mergedList, 0, count($mergedList));
             }
             $i++;
-        } while (count($list));
+        } while (count($mergedList));
 
         return $newList;
         //===
