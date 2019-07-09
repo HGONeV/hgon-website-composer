@@ -66,5 +66,7 @@ page.10 {
             levels = 0
             as = menuGoToOverview
         }
+
+        // 100 is used by tx_news special: /hgon_template/Configuration/TypoScript/Setup/Lib/Content.typoscript
 	}
 }

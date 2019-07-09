@@ -1,0 +1,5 @@
+// remove RkwBasics fields
+TCEFORM.pages {
+    tx_rkwbasics_department.disabled = 1
+    tx_rkwbasics_document_type.disabled = 1
+}

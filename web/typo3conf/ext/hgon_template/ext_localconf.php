@@ -130,6 +130,31 @@ call_user_func(
         // for content slide
         $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',subtitle,tx_rkwbasics_article_image,';
 
+        // add to InstallTool options (otherwise the RkwEvents ajax calls will not work)
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[action]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[controller]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[event]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[filter]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[filter][time]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[filter][documentType]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[filter][workGroup]';
+
+        // @toDo: Notwendig weil [FE][pageNotFoundOnCHashError] = true
+        // -> ABER: Das muss doch auch anders gehen. Man kann doch unmöglich immer jedes Formularfeld hier ein- bzw nachtragen...
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[newEventReservation]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[newEventReservation][event]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[newEventReservation][salutation]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[newEventReservation][firstName]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[newEventReservation][lastName]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[newEventReservation][email]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[newEventReservation][company]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[newEventReservation][address]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[newEventReservation][zip]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[newEventReservation][city]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[newEventReservation][remark]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[terms]';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[privacy]';
+
         /*
         // caching
         if( !is_array($GLOBALS['TYPO3_CONF_VARS'] ['SYS']['caching']['cacheConfigurations'][$extKey] ) ) {
@@ -144,6 +169,8 @@ call_user_func(
             $GLOBALS['TYPO3_CONF_VARS'] ['SYS']['caching']['cacheConfigurations'][$extKey]['groups'] = array('pages');
         }
         */
+
+
 
     },
     $_EXTKEY

@@ -4,7 +4,7 @@
 		<header/>
 		<body>
 			<trans-unit id="layout.home">
-				<source>Home</source>
+				<source>Home (tp-home)</source>
 			</trans-unit>
 			<trans-unit id="layout.single">
                 <source>Single view</source>

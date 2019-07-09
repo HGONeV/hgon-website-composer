@@ -168,7 +168,7 @@ return [
     ],
     'FE' => [
         'addRootLineFields' => '',
-        'cHashExcludedParameters' => 'L, v, type, pk_campaign, pk_kwd, utm_source, utm_medium, utm_campaign, utm_term, utm_content,tx_rkwauthors_rkwauthorsdetail[author],tx_rkwevents_pi1[event]',
+        'cHashExcludedParameters' => 'L, v, type, pk_campaign, pk_kwd, utm_source, utm_medium, utm_campaign, utm_term, utm_content',
         'cookieDomain' => '',
         'debug' => '',
         'disableNoCacheParameter' => '1',

@@ -23,9 +23,20 @@
     <header class="main__header">
         <div class="wrap wrap--text / align-center">
             <h1>
-                <f:if condition="{pageTitle}">
-                    <span class="badge badge--secondary">{pageTitle}<span class="is-hidden">: </span></span>
+                <f:comment><!-- Special thing for news detail page (if type is 0, 1 or 2)  --></f:comment>
+                <f:if condition="{pageTitleNews} >= 0">
+                    <f:then>
+                        <span class="badge badge--secondary">
+                            <f:translate key="tx_hgontemplate_page_partials_layout.newstype.{pageTitleNews}" extensionName="HgonTemplate" />
+                        </span>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{pageTitle}">
+                            <span class="badge badge--secondary">{pageTitle}<span class="is-hidden">: </span></span>
+                        </f:if>
+                    </f:else>
                 </f:if>
+
                 <f:if condition="{pageSubtitle}">
                     <span class="h1 headline">{pageSubtitle}</span>
                 </f:if>

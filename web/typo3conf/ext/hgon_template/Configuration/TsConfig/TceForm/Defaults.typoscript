@@ -1,0 +1,10 @@
+TCAdefaults {
+    tt_content {
+        frame_class = none
+    }
+    # @todo: Problem: Does not work
+    tx_rkwbasics_domain_model_documenttype {
+        sys_language_uid = 0
+    }
+}
+

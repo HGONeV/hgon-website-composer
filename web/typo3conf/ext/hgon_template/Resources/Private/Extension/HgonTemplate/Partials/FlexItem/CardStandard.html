@@ -33,9 +33,9 @@
     <f:if condition="<f:count>{news.falMedia}</f:count>">
         <f:then>
             <f:comment><!-- iterate and set first image of news --></f:comment>
-            <f:for each="{item.falMedia}" as="newsImage" iteration="iter">
+            <f:for each="{news.falMedia}" as="newsImage" iteration="iter">
                 <f:if condition="{iter.isFirst}">
-                    <f:render section="inner" arguments="{type: type, newsImage, date: news.datetime, title: news.title, text: news.bodytext}" />
+                    <f:render section="inner" arguments="{type: type, image: newsImage, date: news.datetime, title: news.title, text: news.bodytext}" />
                 </f:if>
             </f:for>
         </f:then>

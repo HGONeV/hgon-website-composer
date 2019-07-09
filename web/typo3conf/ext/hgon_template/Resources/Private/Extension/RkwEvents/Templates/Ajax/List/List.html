@@ -1,0 +1,10 @@
+<div>
+    <f:if condition="<f:count>{workGroupEventList}</f:count>">
+        <f:render partial="Event/List/WorkGroup" arguments="{_all}" />
+    </f:if>
+
+    <f:if condition="<f:count>{sortedEventList}</f:count>">
+        <f:render partial="Event/List/Events" arguments="{_all}" />
+    </f:if>
+</div>
+

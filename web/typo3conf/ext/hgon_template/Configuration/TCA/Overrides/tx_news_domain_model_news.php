@@ -11,7 +11,7 @@ $GLOBALS['TCA']['tx_news_domain_model_news']['columns']['type']['config']['items
 // set available fields (also overwrite standard news with type 0)
 //$showFields = ['showitem' => 'type, title, teaser, datetime, bodytext, fal_media, categories, tags, tx_hgon_workgroup'];
 $showFields = ['showitem' => '
-                    --palette--;;paletteCore,title,--palette--;;paletteSlug,teaser,
+                    --palette--;;paletteCore,type,title,--palette--;;paletteSlug,teaser,
                     --palette--;;paletteDate,
                     bodytext,
                 --div--;' . $ll . 'tx_news_domain_model_news.content_elements,

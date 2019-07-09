@@ -2,22 +2,22 @@
 
 <f:layout name="HgonDefault" />
 
-<f:section name="Main">
+    <f:section name="Main">
 
-    <f:section name="Header">
-        <f:render partial="Layout/Header" arguments="{_all}" />
+        <f:section name="Header">
+            <f:render partial="Layout/Header" arguments="{_all}" />
+        </f:section>
+
+        <f:render partial="Layout/ContentHeaderText" arguments="{_all}" section="currentPageContent" />
+
+        <div class="main__content">
+            <f:format.html parseFuncTSPath="">
+                {journalOverview}
+            </f:format.html>
+        </div>
+
+        <f:render partial="Layout/MainFooter" arguments="{_all}" />
+
     </f:section>
-
-    <f:render partial="Layout/ContentHeaderText" arguments="{_all}" section="currentPageContent" />
-
-    <div class="main__content">
-        <f:format.html parseFuncTSPath="">
-            {journalOverview}
-        </f:format.html>
-    </div>
-
-    <f:render partial="Layout/MainFooter" arguments="{_all}" />
-
-</f:section>
 
 </html>

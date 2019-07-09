@@ -4,9 +4,9 @@
 
     <f:section name="Header">
         <f:switch expression="{data.layout}">
-            <f:case value="30">
-
-            </f:case>
+            <f:case value="30"></f:case>
+            <f:case value="40"></f:case>
+            <f:case value="42"></f:case>
             <f:defaultCase>
                 <f:if condition="{gallery.position.noWrap} != 1">
                     <f:render partial="Header/All" arguments="{_all}" />
@@ -100,7 +100,31 @@
             </div>
         </f:case>
 
-        <!-- Slider Small "Fotoshow"-->
+        <f:comment><!-- Sidebar content yellow --></f:comment>
+        <f:case value="40">
+            <aside class="aside color-bg-cta has-shadow">
+                <header class="aside__header">
+                    <h6>{data.header}</h6>
+                </header>
+                <div class="aside__content">
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </div>
+            </aside>
+        </f:case>
+
+        <f:comment><!-- Sidebar content blue --></f:comment>
+        <f:case value="42">
+            <aside class="aside color-bg-secondary color-font-white">
+                <header class="aside__header">
+                    <h6>{data.header}</h6>
+                </header>
+                <div class="aside__content">
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </div>
+            </aside>
+        </f:case>
+
+        <f:comment><!-- Slider Small "Fotoshow"--></f:comment>
         <f:case value="61">
             <div class="slider slider--small js-slider" data-slide="0">
                 <f:if condition="{gallery.rows}">

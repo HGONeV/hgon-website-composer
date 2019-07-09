@@ -22,11 +22,7 @@
                 </div>
             </article>
             <div class="sidebar">
-                <f:format.html parseFuncTSPath="">
-                    {sidebarContactPerson}
-                    {sidebar}
-                    {sidebarInherit}
-                </f:format.html>
+                <f:render partial="Layout/Sidebar" arguments="{_all}" />
             </div>
         </div>
     </div>

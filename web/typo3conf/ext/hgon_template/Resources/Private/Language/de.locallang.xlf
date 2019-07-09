@@ -4,6 +4,11 @@
 		<header/>
 		<body>
 
+
+            <!-- ############################## -->
+            <!-- TEMPLATES -->
+            <!-- ############################## -->
+
             <trans-unit id="tx_hgontemplate_templates_standard_journalHighlight.furtherContent">
                 <source>Further content</source>
                 <target>Weitere Inhalte</target>
@@ -33,6 +38,29 @@
             <trans-unit id="tx_hgontemplate_templates_standard_supportOptions_button.donateTime">
                 <source>Donate time</source>
                 <target>Zeit spenden</target>
+            </trans-unit>
+
+
+
+            <!-- ############################## -->
+            <!-- PARTIALS -->
+            <!-- ############################## -->
+            <trans-unit id="tx_hgontemplate_page_partials_layout.newstype.0">
+                <source>News</source>
+                <target>Newsmeldung</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_page_partials_layout.newstype.1">
+                <source>Press</source>
+                <target>Pressemitteilung</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_page_partials_layout.newstype.2">
+                <source>Project</source>
+                <target>Projektvorstellung</target>
+            </trans-unit>
+
+            <trans-unit id="tx_hgontemplate_extension_rkwevents_partials_filter.pleaseChoose">
+                <source>--- Please choose ---</source>
+                <target>--- Auswählen ---</target>
             </trans-unit>
 
         </body>

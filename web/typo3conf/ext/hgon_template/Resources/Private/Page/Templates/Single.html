@@ -22,10 +22,8 @@
             <div class="sidebar">
                 <f:format.html parseFuncTSPath="">
                     <f:render partial="Navigation/GoToOverview" arguments="{_all}" />
-                    {sidebarContactPerson}
-                    {sidebar}
-                    {sidebarInherit}
                 </f:format.html>
+                <f:render partial="Layout/Sidebar" arguments="{_all}" />
             </div>
         </div>
         <f:comment><!-- read more nav --></f:comment>

@@ -29,7 +29,7 @@ plugin.tx_rkwevents {
         loginPid =
 
         # cat=plugin.tx_rkwevents; type=integer; label=PID for create new reservation
-        reservationPid =
+        reservationPid = 64
 
         # cat=plugin.tx_rkwevents; type=integer; label=PID for create new FeUser
         storagePidFeUser =
@@ -56,7 +56,7 @@ plugin.tx_rkwevents {
         surveyPid =
 
         # cat=plugin.tx_rkwevents; type=integer; label=Number of items in list view (default 10)
-        itemsPerPage = 2
+        itemsPerPage = 1
 
         # cat=plugin.tx_rkwevents; type=integer; label=PageNum for AJAX-requests
         ajaxTypeNum = 1472648979
