@@ -390,4 +390,29 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         // do nothing else
     }
 
+
+
+    /**
+     * action supportOptionsLight
+     * -> Gives no real forms. Only anchros for opening forms of "supportOptions" plugin, which is used as standard footer element
+     *
+     * @return void
+     */
+    public function supportOptionsLightAction()
+    {
+        // do nothing else
+    }
+
+
+
+    /**
+     * action sixReasons
+     *
+     * @return void
+     */
+    public function sixReasonsAction()
+    {
+        // do nothing else (output of flexform content)
+    }
+
 }

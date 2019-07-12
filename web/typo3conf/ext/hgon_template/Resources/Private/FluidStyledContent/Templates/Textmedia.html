@@ -13,7 +13,6 @@
                 </f:if>
             </f:defaultCase>
         </f:switch>
-
     </f:section>
 
 <f:section name="Main">
@@ -23,14 +22,12 @@
             <picture class="hero__image">
                 <f:if condition="{gallery.rows}">
                     <f:for each="{gallery.rows}" as="row">
-
                         <f:comment><!-- Random image --></f:comment>
                         <f:for each="<hgon:arrayReadByKey array='{row.columns}' key='<hgon:iterateKeyWithSession total=\'<f:count>{row.columns}</f:count>\' uniqueName=\'headerImageIteration\' />'  />" as="column">
                             <f:if condition="{column.media}">
                                 <f:image image="{column.media}" alt="{column.media.name}" width="1440" height="800" />
                             </f:if>
                         </f:for>
-
                     </f:for>
                 </f:if>
             </picture>
@@ -151,6 +148,55 @@
                 </f:if>
             </div>
 
+        </f:case>
+
+        <!-- Slider: Supporters Opinion -->
+        <f:case value="70">
+            <aside class="breaker">
+                <div class="slider-caroussel js-caroussel" data-interval="4000">
+                    <header class="slider-caroussel__header">
+                        <h2 class="tagline color-font-secondary">Das sagen unsere Unterstützer</h2>
+                    </header>
+                    <div class="slider-caroussel__slides js-caroussel-slides" style="width: 2192px;">
+
+                        <f:if condition="{gallery.rows}">
+                            <f:for each="{gallery.rows}" as="row">
+                                <f:for each="{row.columns}" as="column">
+                                    <f:if condition="{column.media}">
+                                        <f:if condition="
+                                            {column.media.alternative}
+                                            || {column.media.alternative}
+                                            || {column.media.description}
+                                            || {column.media.link}">
+                                            <div class="slider-caroussel__item js-caroussel-item">
+                                                <article class="card card--shadow">
+                                                    <div class="card__inner">
+                                                        <div class="card__content clearfix">
+                                                            <div class="slider-caroussel__image">
+                                                                <picture class="card__image-aside">
+                                                                    <f:image image="{column.media}" alt="{column.media.name}" width="70" height="70" />
+                                                                </picture>
+                                                            </div>
+                                                            <div class="slider-caroussel__text">
+                                                                <blockquote>
+                                                                    <p>
+                                                                        {column.media.description}
+                                                                        <cite>– {column.media.title}</cite>
+                                                                    </p>
+                                                                </blockquote>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </f:if>
+                                    </f:if>
+                                </f:for>
+                            </f:for>
+                        </f:if>
+                    </div>
+                </div>
+            </aside>
         </f:case>
 
         <f:defaultCase>

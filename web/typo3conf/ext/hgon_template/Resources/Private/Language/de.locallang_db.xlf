@@ -143,6 +143,51 @@
                 <source>Options: Donate time</source>
                 <target>Gestaltungsoptionen: Zeit spenden</target>
             </trans-unit>
+
+            <trans-unit id="flexform.sixReasons.sheetTitle">
+                <source>Six reasons</source>
+                <target>Einleitender Text</target>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.sheetTitle2">
+                <source>Six reasons</source>
+                <target>6 gute Gründe</target>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.preHeader">
+                <source>Pre header</source>
+                <target>Pre-Headline</target>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.header">
+                <source>Header</source>
+                <target>Headline</target>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.text">
+                <source>Text</source>
+                <target>Text</target>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.reason1">
+                <source>Good reason 1</source>
+                <target>Guter Grund 1</target>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.reason2">
+                <source>Good reason 1</source>
+                <target>Guter Grund 2</target>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.reason3">
+               <source>Good reason 3</source>
+               <target>Guter Grund 3</target>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.reason4">
+               <source>Good reason 4</source>
+               <target>Guter Grund 4 (Optional)</target>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.reason5">
+               <source>Good reason 5</source>
+               <target>Guter Grund 5 (Optional)</target>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.reason6">
+               <source>Good reason 6</source>
+               <target>Guter Grund 6 (Optional)</target>
+            </trans-unit>
         </body>
 	</file>
 </xliff>

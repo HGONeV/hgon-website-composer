@@ -26,4 +26,3 @@ CREATE TABLE tx_hgontemplate_domain_model_didyouknow (
 	KEY language (l10n_parent,sys_language_uid)
 
 );
-

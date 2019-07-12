@@ -109,6 +109,40 @@
             <trans-unit id="flexform.supportOptions.sheetTitle.donateTime">
                 <source>Options: Donate time</source>
             </trans-unit>
+
+            <trans-unit id="flexform.sixReasons.sheetTitle">
+                <source>Six reasons</source>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.sheetTitle2">
+                <source>Six reasons</source>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.preHeader">
+                <source>Pre header</source>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.reason1">
+                <source>Good reason 1</source>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.reason2">
+                <source>Good reason 2</source>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.reason3">
+               <source>Good reason 3</source>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.reason4">
+               <source>Good reason 4</source>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.reason5">
+               <source>Good reason 5</source>
+            </trans-unit>
+            <trans-unit id="flexform.sixReasons.reason6">
+               <source>Good reason 6</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

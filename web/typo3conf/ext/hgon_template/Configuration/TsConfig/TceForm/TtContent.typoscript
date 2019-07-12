@@ -37,8 +37,9 @@ TCEFORM {
                 #51 = Sitemap: Menü horizontal
 
             #    50 = Layout: 3 Spalten
-                60 = Slider
-                61 = Fotoshow
+                60 = Slider: Große Bilder & Text
+                61 = Slider: Fotoshow
+                70 = Slider: Kleine Bilder & Text
             }
 
         }

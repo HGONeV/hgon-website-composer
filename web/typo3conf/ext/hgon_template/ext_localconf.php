@@ -127,6 +127,30 @@ call_user_func(
             ]
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'SupportOptionsLight',
+            [
+                'Standard' => 'supportOptionsLight'
+            ],
+            // non-cacheable actions
+            [
+                'Standard' => 'supportOptionsLight'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'SixReasons',
+            [
+                'Standard' => 'sixReasons'
+            ],
+            // non-cacheable actions
+            [
+                'Standard' => 'sixReasons'
+            ]
+        );
+
         // for content slide
         $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',subtitle,tx_rkwbasics_article_image,';
 

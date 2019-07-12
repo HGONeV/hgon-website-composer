@@ -53,20 +53,18 @@
 <f:section name="threeElements">
     <div class="flex-item c-4">
         <article class="card card--shadow">
-            <f:if condition="{settings.supportOptions.{itemType}.image}">
+            <f:if condition="{settings.supportOptions.donateMoney.image}">
                 <picture class="card__image">
-                    <figure class="image">
-                        <f:image class="image-embed-item" treatIdAsReference="1" src="{settings.supportOptions.{itemType}.image}" alt="Test" width="395" height="300" />
-                    </figure>
+                        <f:image class="image-embed-item" treatIdAsReference="1" src="{settings.supportOptions.donateMoney.image}" alt="Test" width="395" height="300" />
                 </picture>
             </f:if>
             <div class="card__inner">
                 <header class="card__header">
-                    <h3 class="headline">{settings.supportOptions.{itemType}.header}</h3>
+                    <h3 class="headline">{settings.supportOptions.donateMoney.header}</h3>
                 </header>
                 <div class="card__content">
                     <p>
-                        {settings.supportOptions.{itemType}.text}
+                        {settings.supportOptions.donateMoney.text}
                     </p>
                 </div>
                 <footer class="card__footer">
