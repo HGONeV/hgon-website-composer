@@ -90,20 +90,21 @@ class EventAjaxController extends \RKW\RkwEvents\Controller\AjaxController
      *
      * @param array $filter
      * @param integer $page
-     *
+     * @param bool $archive
+     * @param boolean $isWorkGroupEvent sets the event type (uses in more-button)
      * @return void
     */
-    public function filterAction($filter = array(), $page = 0)
+    public function filterAction($filter = array(), $page = 0, $archive = false, $isWorkGroupEvent = false)
     {
-
-
-
         // @toDo: The parent::filterAction above have to be set to the end.
         // -> But problem: The "print (string)$jsonHelper;" line throws an error, without an "exit;"
         // -> But on the one hand we want to renew the WorkGroup-Events.
         $workGroupEventList = [];
         // only on filtering
-        if ($filter) {
+        if (
+            $filter
+            || ($isWorkGroupEvent && $page > 0)
+        ) {
             // workgroups (without pagination)
             $hgonWorkgroupSettings = self::getSettings('HgonWorkgroup', ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
 
@@ -111,27 +112,34 @@ class EventAjaxController extends \RKW\RkwEvents\Controller\AjaxController
             $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\QuerySettingsInterface');
             $querySettings->setStoragePageIds([$hgonWorkgroupSettings['persistence']['storagePid']]);
             $this->eventRepository->setDefaultQuerySettings($querySettings);
-            $workGroupEventList = $this->eventRepository->findByFilterOptions($filter, 9999, 0, false);
+            $listItemsPerView = intval($this->settings['itemsPerPage']) ? intval($this->settings['itemsPerPage']) : 10;
+            $workGroupEventList = $this->eventRepository->findByFilterOptions($filter, $listItemsPerView, intval($page), false, true);
 
-            // @toDo: Set query result
-            // get JSON helper
-            /** @var \RKW\RkwBasics\Helper\Json $jsonHelper */
-            /*
-            $jsonHelper = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('RKW\\RkwBasics\\Helper\\Json');
-            $replacements['workGroupList'] = $workGroupList;
-            $jsonHelper->setHtml(
-                'tx-rkwevents-result-section-workgroup',
-                $replacements,
-                'replace',
-                'Ajax/List/MoreWorkGroup.html'
-            );
-            print (string)$jsonHelper;
-            */
+            // if $isWorkGroupEvent is set: This is the "show more"-Button for workGroupEvents. Just replace workgroupEvent and go out
+            // (otherwise, if filter request: The script also uses the part below and sets the workGroupEventList to the view)
+            if (
+                $isWorkGroupEvent
+                && $page > 0
+            ) {
+                // get JSON helper
+                /** @var \RKW\RkwBasics\Helper\Json $jsonHelper */
+                $jsonHelper = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('RKW\\RkwBasics\\Helper\\Json');
+                $replacements['workGroupEventList'] = $workGroupEventList;
+                $jsonHelper->setHtml(
+                    'tx-rkwevents-grid-section-workgroup',
+                    $replacements,
+                    'replace',
+                    'Ajax/List/More.html'
+                );
+                print (string)$jsonHelper;
+                exit;
+            }
+
 
             // reset original storagePid (for following parent call which handles standard events)
-            $rkwEventsSettings = self::getSettings('RkwEvents', ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
-            $querySettings->setStoragePageIds([$rkwEventsSettings['persistence']['storagePid']]);
-            $this->eventRepository->setDefaultQuerySettings($querySettings);
+            //$rkwEventsSettings = self::getSettings('RkwEvents', ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
+            //$querySettings->setStoragePageIds([$rkwEventsSettings['persistence']['storagePid']]);
+            //$this->eventRepository->setDefaultQuerySettings($querySettings);
         }
 
 
@@ -141,7 +149,7 @@ class EventAjaxController extends \RKW\RkwEvents\Controller\AjaxController
 
 
         //#####################################################################################
-        // code of RkwEvents->AjaxController->listAction (with small adjustments
+        // code of RkwEvents->AjaxController->listAction (with small adjustments)
         //#####################################################################################
 
         // 1. filter the filterArray ;-)

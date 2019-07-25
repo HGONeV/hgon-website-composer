@@ -1,4 +1,6 @@
 {namespace rkw=RKW\RkwEvents\ViewHelpers}
+<section class="article article--fullwidth">
+    <h2>Veranstaltungen</h2>
 
     <f:if condition="<f:count>{sortedEventList}</f:count>">
         <f:then>
@@ -6,12 +8,12 @@
                 <f:for each="{eventsInYear}" as="eventsInMonth" iteration="month">
                     <f:if condition="{noGrouping}">
                         <f:then>
-
-                            <!-- further boxes with events -->
-                            <f:for each="{eventsInMonth}" as="event">
-                                <f:render partial="Event/List/Box" arguments="{_all}" section="list" />
-                            </f:for>
-
+                            <div id="tx-rkwevents-grid-section-workgroup">
+                                <!-- further boxes with events -->
+                                <f:for each="{eventsInMonth}" as="event">
+                                    <f:render partial="Event/List/Box" arguments="{_all}" section="list" />
+                                </f:for>
+                            </div>
                         </f:then>
 
                         <f:else>
@@ -33,6 +35,12 @@
         </f:then>
         <f:else>
 
+            <div class="no-search-results first-letter-normal content content-box">
+                <div class="csc-default csc-element-n1">
+                    <h3><strong><f:translate key="tx_rkwevents_fluid.templates_event_list.noEvent" extensionName="RkwEvents" /></strong></h3>
+                </div>
+            </div>
+
             <f:if condition="{noGrouping}">
                 <f:else>
                     <div><!-- empty DIV to hide more link via AJAX --></div>
@@ -42,7 +50,7 @@
         </f:else>
 
     </f:if>
-
+</section>
 
 <!-- lazy loading / load more box -->
 <f:render partial="Event/List/MoreLink" arguments="{_all}" />

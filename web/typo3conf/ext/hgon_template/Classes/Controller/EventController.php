@@ -56,64 +56,28 @@ class EventController extends \RKW\RkwEvents\Controller\EventController
     {
         $listItemsPerView = intval($this->settings['itemsPerPage']) ? intval($this->settings['itemsPerPage']) : 10;
 
+        // first: Show standard evens
         parent::listAction();
 
-        // the parent listAction pre-fills the filter with a "project" entry. This disturbed the ajax call
+        // Fix: The parent listAction pre-fills the filter with a "project" entry. This is disturbing the ajax call
         $this->view->assign('filter', []);
 
         // Additional to standard events: Get workgroup list
         $hgonWorkGroupSettings = self::getSettings('HgonWorkgroup', ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK);
-        $workGroupEventList = $this->eventRepository->findWorkgroupEventsNotFinishedOrderAsc($listItemsPerView + 1, $hgonWorkGroupSettings);
+        // get event list with one additional counter (check for further elements)
+        $workGroupEventList = $this->eventRepository->findNotFinishedOrderAsc($listItemsPerView + 1, $hgonWorkGroupSettings, true)->toArray();
+        $showMoreLink = false;
+        if ($listItemsPerView < count($workGroupEventList)) {
+            $showMoreLink = true;
+            // kill additional counter-item
+            array_pop($workGroupEventList);
+        }
         $this->view->assign('workGroupEventList', $workGroupEventList);
         // filter options
         $this->view->assign('documentTypeList', $this->documentTypeRepository->findAllByTypeAndVisibility('events', false));
         $this->view->assign('workGroupList', $this->workGroupRepository->findAll());
         $this->view->assign('timeArrayList', EventHelper::createMonthListArray());
-
-        /*
-        // standard link
-        <a data-page-type="1472648979"
-        class="btn btn--primary btn--rounded ajax next-page autoload"
-        href="index.php?id=3
-        &amp;tx_rkwevents_pi1%5Bpage%5D=1
-        &amp;tx_rkwevents_pi1%5Barchive%5D=
-        &amp;tx_rkwevents_pi1%5Baction%5D=filter
-        &amp;tx_rkwevents_pi1%5Bcontroller%5D=Ajax
-        &amp;type=1472648979
-        &amp;cHash=5e315764bd6c54eb1228d860edd0ea2b">
-            Jetzt mehr anzeigen
-        </a>
-
-        // after using filter option
-        <a data-page-type="1472648979"
-        class="btn btn--primary btn--rounded ajax next-page autoload"
-        href="index.php?id=3
-        &amp;tx_rkwevents_pi1%5Bfilter%5D%5Btime%5D=1561932000
-        &amp;tx_rkwevents_pi1%5Bfilter%5D%5BdocumentType%5D=0
-        &amp;tx_rkwevents_pi1%5Bfilter%5D%5BworkGroup%5D=0
-        &amp;tx_rkwevents_pi1%5Bpage%5D=1
-        &amp;tx_rkwevents_pi1%5Barchive%5D=
-        &amp;tx_rkwevents_pi1%5Baction%5D=filter
-        &amp;tx_rkwevents_pi1%5Bcontroller%5D=Ajax
-        &amp;type=1472648979
-        &amp;cHash=5e315764bd6c54eb1228d860edd0ea2b">
-         Jetzt mehr anzeigen
-        </a>
-
-        // after show more
-        <a data-page-type="1472648979"
-        class="btn btn--primary btn--rounded ajax next-page autoload"
-        href="index.php?id=3
-        &amp;tx_rkwevents_pi1%5Bpage%5D=2
-        &amp;tx_rkwevents_pi1%5Barchive%5D=
-        &amp;tx_rkwevents_pi1%5Baction%5D=filter
-        &amp;tx_rkwevents_pi1%5Bcontroller%5D=Ajax
-        &amp;type=1472648979
-        &amp;cHash=51ab1347a8a981ff64a27c72f8209b97">
-        Jetzt mehr anzeigen
-        </a>
-
-         */
+        $this->view->assign('showMoreLink', $showMoreLink);
     }
 
 

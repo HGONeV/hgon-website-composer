@@ -1,7 +1,7 @@
 
 <f:if condition="{settings.noFilters}">
     <f:else>
-        <div class="article article--fullwidth / form">
+        <section class="article article--fullwidth / form">
             <f:form action="filter" controller="Ajax" extensionName="RkwEvents" pluginName="Pi1" class="ajax" name="filter" additionalAttributes="{data-page-type: '{ajaxTypeNum}'}">
                 <div class="flex-container space-between center-cross gutter">
                     <div class="flex-item c-3">
@@ -37,6 +37,6 @@
                 <input type="hidden" name="type" value="{ajaxTypeNum}">
 
             </f:form>
-        </div>
+        </section>
     </f:else>
 </f:if>

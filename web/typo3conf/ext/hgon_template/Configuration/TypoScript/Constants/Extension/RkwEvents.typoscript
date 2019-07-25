@@ -9,13 +9,13 @@ plugin.tx_rkwevents {
     }
     persistence {
         # cat=plugin.tx_rkwevents; type=integer; label=Default storage PID (read/write)
-        storagePid = 37
+        storagePid = 42
 
         # cat=plugin.tx_rkwevents; type=integer; label=Default storage PID for eventReservation (write only). PID set here has to be included in storagePid-List
-        eventReservation.newRecordStoragePid = 37
+        eventReservation.newRecordStoragePid = 42
 
         # cat=plugin.tx_rkwevents; type=integer; label=Default storage PID for eventReservationAddPerson (write only). PID set here has to be included in storagePid-List
-        eventReservationAddPerson.newRecordStoragePid = 37
+        eventReservationAddPerson.newRecordStoragePid = 42
     }
     settings {
 
@@ -56,7 +56,7 @@ plugin.tx_rkwevents {
         surveyPid =
 
         # cat=plugin.tx_rkwevents; type=integer; label=Number of items in list view (default 10)
-        itemsPerPage = 1
+        itemsPerPage = 6
 
         # cat=plugin.tx_rkwevents; type=integer; label=PageNum for AJAX-requests
         ajaxTypeNum = 1472648979

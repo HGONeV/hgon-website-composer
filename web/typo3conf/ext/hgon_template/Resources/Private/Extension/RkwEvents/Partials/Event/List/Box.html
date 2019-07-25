@@ -21,46 +21,50 @@
 </article>
 
 <f:section name="list">
-    <f:link.action action="show" controller="Event" pluginName="Pi1" extensionName="RkwEvents" pageUid="{showPid}" arguments="{event : event}" class="box {event.department.cssClass} event big" title="{event.title}">
+
         <f:if condition="{event.txHgonWorkgroup}">
             <f:then>
                 <f:comment><!-- Workgroup events --></f:comment>
                 <article class="textbox / flex-item c-6 no-padding">
-                    <div class="flex-container gutter">
-                        <div class="flex-item align-center align-item-center c-2">
-                            <svg width="48" height="48"><use xlink:href="#ui-event"></use></svg>
-                        </div>
-                        <div class="flex-item c-10">
-                            <header class="textbox__header">
-                                <span><time datetime='<f:format.date format="d-m-d H:i">{event.start}</f:format.date>'><f:format.date format="d.m.Y H:i">{event.start}</f:format.date></time></span> · Frankfurt am Main</span>
-                                <h5 class="textbox__headline">{event.title}</h5>
-                            </header>
-                            <div class="textbox__content">
-                                <f:format.raw>{event.subtitle}</f:format.raw>
+                    <f:link.action action="show" controller="Event" pluginName="Pi1" extensionName="RkwEvents" pageUid="{showPid}" arguments="{event : event}" class="box {event.department.cssClass} event big" title="{event.title}">
+                        <div class="flex-container gutter">
+                            <div class="flex-item align-center align-item-center c-2">
+                                <svg width="48" height="48"><use xlink:href="#ui-event"></use></svg>
+                            </div>
+                            <div class="flex-item c-10">
+                                <header class="textbox__header">
+                                    <span><time datetime='<f:format.date format="d-m-d H:i">{event.start}</f:format.date>'><f:format.date format="d.m.Y H:i">{event.start}</f:format.date></time></span> · Frankfurt am Main</span>
+                                    <h5 class="textbox__headline">{event.title}</h5>
+                                </header>
+                                <div class="textbox__content">
+                                    <f:format.raw>{event.subtitle}</f:format.raw>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </f:link.action>
                 </article>
             </f:then>
             <f:else>
                 <f:comment><!-- Standard events --></f:comment>
                 <article class="textbox textbox--toggle / mb-1 / color-bg-light">
-                    <div class="flex-container gutter">
-                        <div class="flex-item align-center align-item-center c-2">
-                            <svg width="48" height="48"><use xlink:href="#ui-event"></use></svg>
-                        </div>
-                        <div class="flex-item c-10">
-                            <header class="textbox__header">
-                                <span><time datetime='<f:format.date format="d-m-d H:i">{event.start}</f:format.date>'><f:format.date format="d.m.Y H:i">{event.start}</f:format.date></time></span>
-                                <h5 class="textbox__headline">{event.title}</h5>
-                            </header>
-                            <div class="textbox__content">
-                                <f:format.raw>{event.subtitle}</f:format.raw>
+                    <f:link.action action="show" controller="Event" pluginName="Pi1" extensionName="RkwEvents" pageUid="{showPid}" arguments="{event : event}" class="box {event.department.cssClass} event big" title="{event.title}">
+                        <div class="flex-container gutter">
+                            <div class="flex-item align-center align-item-center c-2">
+                                <svg width="48" height="48"><use xlink:href="#ui-event"></use></svg>
+                            </div>
+                            <div class="flex-item c-10">
+                                <header class="textbox__header">
+                                    <span><time datetime='<f:format.date format="d-m-d H:i">{event.start}</f:format.date>'><f:format.date format="d.m.Y H:i">{event.start}</f:format.date></time></span>
+                                    <h5 class="textbox__headline">{event.title}</h5>
+                                </header>
+                                <div class="textbox__content">
+                                    <f:format.raw>{event.subtitle}</f:format.raw>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </f:link.action>
                 </article>
             </f:else>
         </f:if>
-    </f:link.action>
+
 </f:section>

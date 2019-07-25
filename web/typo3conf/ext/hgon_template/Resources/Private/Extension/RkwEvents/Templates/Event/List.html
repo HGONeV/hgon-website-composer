@@ -33,9 +33,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
     <f:render partial="Event/Filter" arguments="{_all}" />
 
     <div id="tx-rkwevents-result-section" style="width: 100%;">
-        <f:render partial="Event/List/WorkGroup" arguments="{_all}" />
 
-        <f:render partial="Event/List/Events" arguments="{_all}" />
+        <f:render partial="Event/ListWorkGroup" arguments="{_all}" />
+
+        <f:render partial="Event/List" arguments="{_all}" />
     </div>
 
 </f:section>

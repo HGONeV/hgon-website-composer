@@ -31,23 +31,19 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 class EventRepository extends \RKW\RkwEvents\Domain\Repository\EventRepository
 {
 
+
     /**
-     * Return not finished events of workgroups (tx_hgonworkgroup)
+     * Return not finished events
      * For the FIRST result page (just with simple limit)
      *
      * @param int $limit
      * @param array $settings
+     * @param boolean $isWorkGroupEvent sets the event type (standard or workgroup)
      * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
-    public function findWorkgroupEventsNotFinishedOrderAsc($limit, $settings = array())
+    public function findNotFinishedOrderAsc($limit, $settings = array(), $isWorkGroupEvent = false)
     {
-        // First: Set workgroup pid (is the pid where workgroup events are saved)
-        if ($settings['persistence']['storagePid']) {
-            $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\QuerySettingsInterface');
-            $querySettings->setStoragePageIds([$settings['persistence']['storagePid']]);
-            $this->setDefaultQuerySettings($querySettings);
-        }
 
         $query = $this->createQuery();
 
@@ -56,12 +52,70 @@ class EventRepository extends \RKW\RkwEvents\Domain\Repository\EventRepository
             $query->logicalNot($query->equals('title', '')),
         );
 
+        if (
+            (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('rkw_projects'))
+            && ($settings['projectUids'])
+            && ($projectUids = GeneralUtility::trimExplode(',', $settings['projectUids'], true))
+        ) {
+            $constraints[] = $query->in('project', $projectUids);
+        }
+
+        if ($isWorkGroupEvent) {
+            // is workgroup-meeting-event
+            $constraints[] = $query->greaterThan('txHgonWorkgroupWgevent', 0);
+        } else {
+            // is standard-event
+            $constraints[] = $query->greaterThan('txHgonWorkgroupStdevent', 0);
+        }
+
         return $query->matching(
             $query->logicalAnd($constraints)
         )
             ->setOrderings(
                 array(
                     'start' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+                )
+            )
+            ->setLimit($limit)
+            ->execute();
+    }
+
+
+    /**
+     * Return finished events
+     * For the FIRST result page (just with simple limit)
+     *
+     * @param int $limit
+     * @param array $settings
+     * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     */
+    public function findFinishedOrderAsc($limit, $settings = array())
+    {
+
+        $query = $this->createQuery();
+        $constraints = array(
+            $query->lessThan('start', time()),
+            $query->logicalNot($query->equals('title', '')),
+        );
+
+        if (
+            (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('rkw_projects'))
+            && ($settings['projectUids'])
+            && ($projectUids = GeneralUtility::trimExplode(',', $settings['projectUids'], true))
+        ) {
+            $constraints[] = $query->in('project', $projectUids);
+        }
+
+        // is standard-event
+        $constraints[] = $query->greaterThan('txHgonWorkgroupStdevent', 0);
+
+        return $query->matching(
+            $query->logicalAnd($constraints)
+        )
+            ->setOrderings(
+                array(
+                    'start' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
                 )
             )
             ->setLimit($limit)
@@ -77,10 +131,11 @@ class EventRepository extends \RKW\RkwEvents\Domain\Repository\EventRepository
      * @param int $limit
      * @param int $page
      * @param boolean $archive
+     * @param boolean $isWorkGroupEvent sets the event type (standard or workgroup)
      * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
-    public function findByFilterOptions($filter, $limit, $page, $archive = false)
+    public function findByFilterOptions($filter, $limit, $page, $archive = false, $isWorkGroupEvent = false)
     {
         // results between 'from' and 'till' (with additional proof item to check, if there are more results -> +1)
         $offset = $page * $limit;
@@ -106,8 +161,20 @@ class EventRepository extends \RKW\RkwEvents\Domain\Repository\EventRepository
         if ($filter['documentType']) {
             $constraints[] = $query->equals('documentType', intval($filter['documentType']));
         }
-        if ($filter['workGroup']) {
-            $constraints[] = $query->contains('txHgonWorkgroup', intval($filter['workGroup']));
+
+
+        if ($isWorkGroupEvent) {
+            // is workgroup-meeting-event
+            $constraints[] = $query->greaterThan('txHgonWorkgroupWgevent', 0);
+            if ($filter['workGroup']) {
+                $constraints[] = $query->contains('txHgonWorkgroupWgevent', intval($filter['workGroup']));
+            }
+        } else {
+            // is standard-event
+            $constraints[] = $query->greaterThan('txHgonWorkgroupStdevent', 0);
+            if ($filter['workGroup']) {
+                $constraints[] = $query->contains('txHgonWorkgroupStdevent', intval($filter['workGroup']));
+            }
         }
 
         // NOW: construct final query!
