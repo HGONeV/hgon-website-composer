@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" target-language="de" datatype="plaintext" original="messages" date="2019-04-25T13:49:26Z" product-name="hgon_donation">
+		<header/>
+		<body>
+
+
+            <!-- ############################## -->
+            <!-- TEMPLATES -->
+            <!-- ############################## -->
+
+            <trans-unit id="tx_hgondonation_templates_donation_supportOptions_button.becomeMember">
+                <source>Become member</source>
+                <target>Mitglied werden</target>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_templates_donation_supportOptions_button.donateMoney">
+                <source>Donate money</source>
+                <target>Spenden</target>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_templates_donation_supportOptions_button.donateTime">
+                <source>Donate time</source>
+                <target>Zeit spenden</target>
+            </trans-unit>
+
+            <trans-unit id="tx_hgondonation_templates_donation_button.readMore">
+                <source>Read more</source>
+                <target>Mehr erfahren</target>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_templates_donation_button.moreInformation">
+                <source>More information</source>
+                <target>Mehr Informationen</target>
+            </trans-unit>
+
+
+
+
+        </body>
+	</file>
+</xliff>

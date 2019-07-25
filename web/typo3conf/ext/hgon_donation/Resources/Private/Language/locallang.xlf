@@ -9,28 +9,28 @@
 			<trans-unit id="tx_hgondonation_domain_model_donate.description">
 				<source>Donation extension of HGON</source>
 			</trans-unit>
-			<trans-unit id="tx_hgondonation_domain_model_donationtype">
+			<trans-unit id="tx_hgondonation_domain_model_donation">
 				<source>Donation Type</source>
 			</trans-unit>
-			<trans-unit id="tx_hgondonation_domain_model_donationtype.title">
+			<trans-unit id="tx_hgondonation_domain_model_donation.title">
 				<source>Title</source>
 			</trans-unit>
-			<trans-unit id="tx_hgondonation_domain_model_donationtype.short_description">
+			<trans-unit id="tx_hgondonation_domain_model_donation.short_description">
 				<source>Short Description</source>
 			</trans-unit>
-			<trans-unit id="tx_hgondonation_domain_model_donationtype.description">
+			<trans-unit id="tx_hgondonation_domain_model_donation.description">
 				<source>Description</source>
 			</trans-unit>
-			<trans-unit id="tx_hgondonation_domain_model_donationtype.image">
+			<trans-unit id="tx_hgondonation_domain_model_donation.image">
 				<source>Image</source>
 			</trans-unit>
-			<trans-unit id="tx_hgondonation_domain_model_donationtype.link">
+			<trans-unit id="tx_hgondonation_domain_model_donation.link">
 				<source>Link</source>
 			</trans-unit>
-			<trans-unit id="tx_hgondonation_domain_model_donationtype.donation_type_time">
+			<trans-unit id="tx_hgondonation_domain_model_donation.donation_type_time">
 				<source>Donation Type Time</source>
 			</trans-unit>
-			<trans-unit id="tx_hgondonation_domain_model_donationtype.donation_type_money">
+			<trans-unit id="tx_hgondonation_domain_model_donation.donation_type_money">
 				<source>Donation Type Money</source>
 			</trans-unit>
 			<trans-unit id="tx_hgondonation_domain_model_donationtypetime">
@@ -136,6 +136,39 @@
 			<trans-unit id="tx_hgondonation_domain_model_donationplace.country">
 				<source>Country</source>
 			</trans-unit>
+
+
+			<!-- ############################## -->
+            <!-- TEMPLATES -->
+            <!-- ############################## -->
+
+            <trans-unit id="tx_hgondonation_templates_standard_supportOptions_button.becomeMember">
+                <source>Become member</source>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_templates_standard_supportOptions_button.donateMoney">
+                <source>Donate money</source>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_templates_standard_supportOptions_button.donateTime">
+                <source>Donate time</source>
+            </trans-unit>
+
+
+            <trans-unit id="tx_hgondonation_templates_donation_supportOptions_button.becomeMember">
+                <source>Become member</source>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_templates_donation_supportOptions_button.donateMoney">
+                <source>Donate money</source>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_templates_donation_supportOptions_button.donateTime">
+                <source>Donate time</source>
+            </trans-unit>
+
+            <trans-unit id="tx_hgondonation_templates_donation_button.readMore">
+                <source>Read more</source>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_templates_donation_button.moreInformation">
+                <source>More information</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

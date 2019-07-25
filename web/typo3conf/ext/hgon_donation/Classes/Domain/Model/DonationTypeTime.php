@@ -52,20 +52,6 @@ class DonationTypeTime extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected $timeRequirement = '';
 
 	/**
-	 * timeRangeStart
-	 *
-	 * @var int
-	 */
-	protected $timeRangeStart = 0;
-
-	/**
-	 * timeRangeEnd
-	 *
-	 * @var int
-	 */
-	protected $timeRangeEnd = 0;
-
-	/**
 	 * recurring
 	 *
 	 * @var bool
@@ -265,48 +251,6 @@ class DonationTypeTime extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	public function setTimeRequirement($timeRequirement)
 	{
 		$this->timeRequirement = $timeRequirement;
-	}
-
-	/**
-	 * Returns the timeRangeStart
-	 *
-	 * @return int $timeRangeStart
-	 */
-	public function getTimeRangeStart()
-	{
-		return $this->timeRangeStart;
-	}
-
-	/**
-	 * Sets the timeRangeStart
-	 *
-	 * @param int $timeRangeStart
-	 * @return void
-	 */
-	public function setTimeRangeStart($timeRangeStart)
-	{
-		$this->timeRangeStart = $timeRangeStart;
-	}
-
-	/**
-	 * Returns the timeRangeEnd
-	 *
-	 * @return int $timeRangeEnd
-	 */
-	public function getTimeRangeEnd()
-	{
-		return $this->timeRangeEnd;
-	}
-
-	/**
-	 * Sets the timeRangeEnd
-	 *
-	 * @param int $timeRangeEnd
-	 * @return void
-	 */
-	public function setTimeRangeEnd($timeRangeEnd)
-	{
-		$this->timeRangeEnd = $timeRangeEnd;
 	}
 
 	/**

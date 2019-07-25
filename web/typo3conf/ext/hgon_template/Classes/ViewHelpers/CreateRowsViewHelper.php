@@ -12,6 +12,7 @@ namespace HGON\HgonTemplate\ViewHelpers;
  *
  * The TYPO3 project - inspiring people to share!
  */
+use Doctrine\Common\Util\Debug;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 /**
@@ -37,7 +38,7 @@ class CreateRowsViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
     {
         // merge possible list-arrays
         $mergedList = [];
-        foreach ($list as $singleList) {
+        foreach (array_filter($list) as $singleList) {
             if ($singleList instanceof \TYPO3\CMS\Extbase\Persistence\Generic\QueryResult) {
                 $singleList = $singleList->toArray();
             }

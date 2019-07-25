@@ -6,7 +6,7 @@ return [
         'disable_exec_function' => 0,
         'installToolPassword' => '$P$C8.8X90tS2Djh1XOCTFehnh6Xu5uAp1',
         'lockSSL' => '0',
-        'loginSecurityLevel' => 'rsa',
+        'loginSecurityLevel' => 'normal',
         'sessionTimeout' => '36000',
         'versionNumberInFilename' => '0',
     ],

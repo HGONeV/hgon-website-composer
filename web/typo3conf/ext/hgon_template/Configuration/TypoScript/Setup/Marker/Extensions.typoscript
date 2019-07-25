@@ -135,7 +135,7 @@ page {
                 vendorName = HGON
                 switchableControllerActions {
                     // Again: Controller-Name and Action
-                    Donation {
+                    Standard {
                         #10 = newDonationTime
                         20 = listDonationTime
                         30 = createDonationTime

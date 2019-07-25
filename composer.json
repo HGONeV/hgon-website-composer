@@ -22,11 +22,10 @@
        "rkw/rkw-registration": "~7.6.11 || ~8.7.0",
        "rkw/rkw-template": "~7.6.4",
        "rkw/rkw-authors": "~7.6.13",
-       "rkw/rkw-projects": "~7.6.11",
        "in2code/powermail": "^7.3",
        "helhum/typoscript-rendering": "2.1.0",
        "fluidtypo3/vhs": "^5.2",
-        "georgringer/news": "^7.2"
+       "georgringer/news": "^7.2"
     },
     "require-dev": {
          "mikey179/vfsstream": "1.4.*@dev",
@@ -84,12 +83,8 @@
         "psr-4": {
             "BM\\BmPdf2content\\": "web/typo3conf/ext/bm_pdf2content/Classes",
             "DmitryDulepov\\DdGooglesitemap\\": "web/typo3conf/ext/dd_googlesitemap/Classes",
-            "Snowflake\\Varnish\\": "web/typo3conf/ext/varnish/Classes",
             "HGON\\HgonTemplate\\": [
                 "web/typo3conf/ext/hgon_template/Classes"
-            ],
-            "HGON\\HgonBasic\\": [
-                "web/typo3conf/ext/hgon_basic/Classes"
             ],
             "HGON\\HgonDonation\\": [
                 "web/typo3conf/ext/hgon_donation/Classes"

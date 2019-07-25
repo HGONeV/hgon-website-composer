@@ -11,6 +11,7 @@ namespace HGON\HgonDonation\Controller;
  *  (c) 2018 Maximilian Fäßler <maximilian@faesslerweb.de>, Fäßler Web UG
  *
  ***/
+use HGON\HgonDonation\Helper\Donation as DonationHelper;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -20,12 +21,12 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 class DonationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 	/**
-	 * donationTypeTimeRepository
+	 * donationRepository
 	 *
-	 * @var \HGON\HgonDonation\Domain\Repository\DonationTypeTimeRepository
+	 * @var \HGON\HgonDonation\Domain\Repository\DonationRepository
 	 * @inject
 	 */
-	protected $donationTypeTimeRepository = null;
+	protected $donationRepository = null;
 
     /**
      * pagesRepository
@@ -35,6 +36,104 @@ class DonationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     protected $pagesRepository = null;
 
+
+
+    /**
+     * action list
+     * (alternative list for donation time popup in footer)
+     *
+     * @param array $filter
+     * @param integer $page
+     * @return void
+     */
+    public function listAction($filter = array(), $page = 0)
+    {
+        // initial page increase
+        $page++;
+
+        // if it's a filter request for new content (filter is also set in case of "more" functionality)
+        $isFilterRequest = false;
+        if ($filter && $page <= 1) {
+            $isFilterRequest = true;
+        }
+
+        // filter the filterArray ;-)
+        foreach ($filter as $key => $value) {
+            $filter[$key] = filter_var($value, FILTER_SANITIZE_STRING);
+        }
+
+        $donationListTotal = $this->donationRepository->findByFilter($filter, 1, PHP_INT_MAX)->count();
+        $maximumReached = ($page * $this->settings['itemsPerPage']) < intval($this->settings['maximumShownResults']) ? false : true;
+        if (
+            ($page * $this->settings['itemsPerPage']) < $donationListTotal
+            && !$maximumReached
+        ) {
+            $replacements['showMoreLink'] = true;
+        }
+
+        $replacements['donationList'] = $this->donationRepository->findByFilter($filter, $page, intval($this->settings['itemsPerPage']));
+        $replacements['page'] = $page;
+        $replacements['settingsArray'] = $this->settings;
+        $replacements['filterDateTimeArray'] = DonationHelper::createDateTimeArray();
+
+        if (!\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('type') == intval($this->settings['ajaxTypeNum'])) {
+
+            // standard view (non-ajax)
+            $this->view->assignMultiple($replacements);
+
+        } else {
+            // get JSON helper
+            /** @var \RKW\RkwBasics\Helper\Json $jsonHelper */
+            $jsonHelper = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('RKW\\RkwBasics\\Helper\\Json');
+
+            // get new list
+            $kindOfRequest = $isFilterRequest ? 'replace' : 'append';
+            $replacements['requestType'] = $kindOfRequest;
+            $jsonHelper->setHtml(
+                'donation-listing',
+                $replacements,
+                $kindOfRequest,
+                'Ajax/Donation/More.html'
+            );
+
+            // More link replace
+            $jsonHelper->setHtml(
+                'donation-more-link-container',
+                $replacements,
+                'replace',
+                'Ajax/Donation/MoreLink.html'
+            );
+
+            print (string)$jsonHelper;
+            exit();
+            //===
+        }
+
+    }
+
+
+
+    /**
+     * action show
+     *
+     * @param \HGON\HgonDonation\Domain\Model\Donation $donation
+     * @return void
+     */
+    public function showAction(\HGON\HgonDonation\Domain\Model\Donation $donation)
+    {
+        // not used yet
+        // ugly function, because we don't have pages objects (we got a typolink)
+        /*
+        if ($donation->getTypolink()) {
+            $explodedLink = GeneralUtility::trimExplode('=', $donation->getTypolink());
+            $this->view->assign('pages', $this->pagesRepository->findByIdentifier(intval(end($explodedLink))));
+        }
+        */
+        $this->view->assign('donation', $donation);
+    }
+
+
+
     /**
      * action new
      * initial action. If no donationTypeTime is set, forward to list for choosing one
@@ -42,88 +141,22 @@ class DonationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * @param \HGON\HgonDonation\Domain\Model\DonationTypeTime $donationTypeTime
      * @return void
      */
-    public function newDonationTimeAction(\HGON\HgonDonation\Domain\Model\DonationTypeTime $donationTypeTime)
+    public function newAction(\HGON\HgonDonation\Domain\Model\DonationTypeTime $donationTypeTime)
     {
-        $templateDataArray = [];
-        $templateDataArray['donationTypeTime'] = $donationTypeTime;
 
-        // ugly function, because we don't have pages objects (we got a typolink)
-        /** @var \HGON\HgonTemplate\Domain\Model\Projects $project */
-        if ($donationTypeTime->getPages()) {
-            $explodedLink = GeneralUtility::trimExplode('=', $donationTypeTime->getPages());
-            $templateDataArray['pages'] = $this->pagesRepository->findByIdentifier(intval(end($explodedLink)));
-        }
-
-
-          if (GeneralUtility::_GP('type') == intval($this->settings['ajaxTypeNum'])) {
-
-              // get JSON helper
-              /** @var \RKW\RkwBasics\Helper\Json $jsonHelper */
-              $jsonHelper = GeneralUtility::makeInstance('RKW\\RkwBasics\\Helper\\Json');
-
-              // Content
-              $jsonHelper->setHtml(
-                  'donation-container',
-                  $templateDataArray,
-                  'replace',
-                  'Ajax/DonationTime.html'
-              );
-
-              print (string)$jsonHelper;
-              exit();
-              //===
-
-          } else {
-              $this->view->assignMultiple($templateDataArray);
-          }
-    }
-
-
-
-    /**
-     * action list
-     *
-     * @return void
-     */
-    public function listDonationTimeAction()
-    {
-        $this->view->assign('donationTypeTimeList', $this->donationTypeTimeRepository->findAll());
-        $this->view->assign('ajaxTypeNum', $this->settings['ajaxTypeNum']);
     }
 
 
 
 	/**
-	 * action createDonationTime
+	 * action create
 	 *
 	 * @param array $formFields
 	 * @return void
 	 */
-	public function createDonationTimeAction($formFields)
+	public function createAction($formFields)
 	{
-        // get JSON helper
-        /** @var \RKW\RkwBasics\Helper\Json $jsonHelper */
-        $jsonHelper = GeneralUtility::makeInstance('RKW\\RkwBasics\\Helper\\Json');
 
-        // Content
-        $jsonHelper->setHtml(
-            'donation-time-form',
-            [],
-            'replace',
-            'Ajax/RegisterForm.html'
-        );
-
-        print (string)$jsonHelper;
-        exit();
-        //===
-
-		// via Ajax?
-
-		// just send a mail?
-		// -> "Darunter gibt es die Möglichkeit, sich direkt per E-Mail auf den Job zu bewerben, wenn der Job noch aktiv ist"
-		// ... an sich wäre ein eigenes Model und eine automatische Zuteilung auch nicht schlecht (und ein Redakteur
-		// akzeptiert die Anmeldung und nimmt kontakt auf, oder lehnt ab)
-
-		//$this->redirect('list');
 	}
+
 }

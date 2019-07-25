@@ -24,7 +24,10 @@ return [
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, short_description, description, image, donation_goal, donation_amount_current, donator_count, frontend_user_to_inform',
 	],
 	'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, short_description, description, image, donation_goal, donation_amount_current, donator_count, frontend_user_to_inform, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => [
+		    //'showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, short_description, description, image, donation_goal, donation_amount_current, donator_count, frontend_user_to_inform, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'
+            'showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, image, donation_goal, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'
+        ],
 	],
 	'columns' => [
 		'sys_language_uid' => [

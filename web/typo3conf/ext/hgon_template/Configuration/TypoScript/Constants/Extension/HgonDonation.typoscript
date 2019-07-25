@@ -1,6 +1,12 @@
-plugin.tx_hgondonation_donate {
+plugin.tx_hgondonation {
+    view {
+        # this ist for using the CardStandard-Partial
+        partialRootPath = EXT:hgon_template/Resources/Private/Extension/HgonTemplate/Partials/
+    }
 	persistence {
-		# cat=plugin.tx_hgondonation_donate//a; type=string; label=Default storage PID
 		storagePid = 59
 	}
+    settings {
+        showPid = 65
+    }
 }

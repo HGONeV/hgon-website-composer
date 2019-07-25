@@ -43,7 +43,7 @@ class DidYouKnow extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * sysCategory
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\RKW\RkwProjects\Domain\Model\SysCategory>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonTemplate\Domain\Model\SysCategory>
      */
     protected $sysCategory = null;
 

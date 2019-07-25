@@ -69,7 +69,7 @@ class DonationPlace extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * country
 	 *
-	 * @var
+	 * @var \SJBR\StaticInfoTables\Domain\Model\Country
 	 */
 	protected $country = null;
 
@@ -220,24 +220,24 @@ class DonationPlace extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 		$this->latitude = $latitude;
 	}
 
-	/**
-	 * Returns the country
-	 *
-	 * @return $country
-	 */
-	public function getCountry()
-	{
-		return $this->country;
-	}
+    /**
+     * Returns the country
+     *
+     * @return \SJBR\StaticInfoTables\Domain\Model\Country $country
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
 
-	/**
-	 * Sets the country
-	 *
-	 * @param string $country
-	 * @return void
-	 */
-	public function setCountry($country)
-	{
-		$this->country = $country;
-	}
+    /**
+     * Sets the country
+     *
+     * @param \SJBR\StaticInfoTables\Domain\Model\Country $country
+     * @return void
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+    }
 }

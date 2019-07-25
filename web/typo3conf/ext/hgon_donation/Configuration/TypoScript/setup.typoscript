@@ -1,18 +1,47 @@
-# we need this following line for AJAX, while we've set [FE][pageNotFoundOnCHashError] = true
-# (we need this for the FormFramework-Ajax-Purpose (with EXT:typoscript_rendering)
-plugin.tx_hgondonation_donate.features.requireCHashArgumentForActionArguments = 0
+config.tx_extbase{
+    persistence{
+        classes{
+            HGON\HgonDonation\Domain\Model\Pages {
+                mapping {
+                    tableName = pages
 
-plugin.tx_hgondonation_donate {
+                    # on pages tables it's the doktype
+                    # if we set an value, we filter by it
+                    # if we do not set anything, all pages are found
+                    recordType =
+
+                    # mapping to properties of class
+                    columns {
+                        uid.mapOnProperty = uid
+                        pid.mapOnProperty = pid
+                        sorting.mapOnProperty = sorting
+                        title.mapOnProperty = title
+                        subtitle.mapOnProperty = subtitle
+                        no_search.mapOnProperty = noSearch
+                        crdate.mapOnProperty = crdate
+                        tstamp.mapOnProperty = tstamp
+                        hidden.mapOnProperty = hidden
+                        deleted.mapOnProperty = deleted
+                        lastUpdated.mapOnProperty = lastUpdated
+                        //tx_rkwprojects_project_uid.mapOnProperty = txRkwprojectsProject
+                    }
+                }
+            }
+        }
+    }
+}
+
+plugin.tx_hgondonation {
 	view {
 		templateRootPaths.0 = EXT:hgon_donation/Resources/Private/Templates/
-		templateRootPaths.1 = {$plugin.tx_hgondonation_donate.view.templateRootPath}
+		templateRootPaths.1 = {$plugin.tx_hgondonation.view.templateRootPath}
 		partialRootPaths.0 = EXT:hgon_donation/Resources/Private/Partials/
-		partialRootPaths.1 = {$plugin.tx_hgondonation_donate.view.partialRootPath}
+		partialRootPaths.1 = {$plugin.tx_hgondonation.view.partialRootPath}
 		layoutRootPaths.0 = EXT:hgon_donation/Resources/Private/Layouts/
-		layoutRootPaths.1 = {$plugin.tx_hgondonation_donate.view.layoutRootPath}
+		layoutRootPaths.1 = {$plugin.tx_hgondonation.view.layoutRootPath}
 	}
 	persistence {
-		storagePid = {$plugin.tx_hgondonation_donate.persistence.storagePid}
+		storagePid = {$plugin.tx_hgondonation.persistence.storagePid}
 		#recursive = 1
 	}
 	features {
@@ -22,12 +51,19 @@ plugin.tx_hgondonation_donate {
 		#callDefaultActionIfActionCantBeResolved = 1
 	}
     settings {
-        ajaxTypeNum = {$plugin.tx_hgondonation_donate.settings.ajaxTypeNum}
+        ajaxTypeNum = {$plugin.tx_hgondonation.settings.ajaxTypeNum}
+        showPid = {$plugin.tx_hgondonation.settings.showPid}
+        itemsPerPage = {$plugin.tx_hgondonation.settings.itemsPerPage}
+        maximumShownResults = {$plugin.tx_hgondonation.settings.maximumShownResults}
     }
 }
 
 
-page.includeJSFooter.txRkwEventsBasic  = EXT:hgon_donation/Resources/Public/Scripts/hgondonation.js
+plugin.tx_hgondonation_listing < plugin.tx_hgondonation
+plugin.tx_hgondonation_donate < plugin.tx_hgondonation
+
+
+page.includeJSFooter.txHgonDonation  = EXT:hgon_donation/Resources/Public/Scripts/hgondonation.js
 
 
 #===============================================================
@@ -36,7 +72,7 @@ page.includeJSFooter.txRkwEventsBasic  = EXT:hgon_donation/Resources/Public/Scri
 txHgondonationAjax = PAGE
 txHgondonationAjax {
 
-    typeNum = {$plugin.tx_hgondonation_donate.settings.ajaxTypeNum}
+    typeNum = {$plugin.tx_hgondonation.settings.ajaxTypeNum}
 
     config {
         disableAllHeaderCode = 1
@@ -50,20 +86,26 @@ txHgondonationAjax {
     10 {
         userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
         extensionName = HgonDonation
-        pluginName = Donate
+        pluginName = Listing
         vendorName = HGON
         switchableControllerActions {
 
             # Again: Controller-Name and Action
             Donation {
+                10 = list
+            }
+
+            /*
+            Standard {
                 10 = newDonationTime
                 20 = listDonationTime
                 30 = createDonationTime
             }
+            */
         }
 
-        view < plugin.tx_hgondonation_donate.view
-        persistence < plugin.tx_hgondonation_donate.persistence
-        settings < plugin.tx_hgondonation_donate.settings
+        view < plugin.tx_hgondonation.view
+        persistence < plugin.tx_hgondonation.persistence
+        settings < plugin.tx_hgondonation.settings
     }
 }

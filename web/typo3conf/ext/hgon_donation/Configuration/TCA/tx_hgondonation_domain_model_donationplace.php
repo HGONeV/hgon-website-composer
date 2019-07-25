@@ -159,7 +159,8 @@ return [
 			'config' => [
 				'type' => 'input',
 				'size' => 30,
-				'eval' => 'double2'
+				'eval' => 'double2',
+                'readOnly' => true
 			]
 		],
 		'latitude' => [
@@ -168,17 +169,21 @@ return [
 			'config' => [
 				'type' => 'input',
 				'size' => 30,
-				'eval' => 'double2'
+				'eval' => 'double2',
+                'readOnly' => true
 			]
 		],
 		'country' => [
 			'exclude' => true,
 			'label' => 'LLL:EXT:hgon_donation/Resources/Private/Language/locallang_db.xlf:tx_hgondonation_domain_model_donationplace.country',
 			'config' => [
-				'type' => 'inline',
-				'foreign_table' => '',
+				'type' => 'select',
+                'renderType' => 'selectSingle',
+				'foreign_table' => 'static_countries',
 				'minitems' => 0,
 				'maxitems' => 1,
+                'default' => 54,
+                //'readOnly' => true,
 				'appearance' => [
 					'collapseAll' => 0,
 					'levelLinksPosition' => 'top',

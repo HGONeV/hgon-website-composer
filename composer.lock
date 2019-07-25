@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e68d9a6e4da55397a54a98aee34f473",
+    "content-hash": "111fdd57c582792c289c9967a1c14db0",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -2056,63 +2056,6 @@
                 "newsletter"
             ],
             "time": "2019-05-18T20:53:44+00:00"
-        },
-        {
-            "name": "rkw/rkw-projects",
-            "version": "v7.6.11-stable",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwProjects.git",
-                "reference": "6ca96c66071d6e97a948911a3c1e6219fef5e232"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/6ca96c66071d6e97a948911a3c1e6219fef5e232",
-                "reference": "6ca96c66071d6e97a948911a3c1e6219fef5e232",
-                "shasum": ""
-            },
-            "require": {
-                "rkw/rkw-authors": ">=7.6.10 <=8.7.99",
-                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_projects"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwProjects\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for project-details",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "TYPO3 CMS",
-                "projects"
-            ],
-            "time": "2019-02-05T13:30:26+00:00"
         },
         {
             "name": "rkw/rkw-registration",

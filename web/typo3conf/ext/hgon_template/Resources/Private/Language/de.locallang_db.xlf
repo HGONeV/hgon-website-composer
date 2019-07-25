@@ -99,51 +99,6 @@
                 <source>Text</source>
                 <target>Text</target>
             </trans-unit>
-            <trans-unit id="flexform.supportOptions.sheetTitle">
-                <source>Support Options</source>
-                <target>Unterstützungsoptionen</target>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.preHeader">
-                <source>Pre header</source>
-                <target>Pre-Headline</target>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.header">
-                <source>Header</source>
-                <target>Headline</target>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.text">
-                <source>Text</source>
-                <target>Text</target>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.showBecomeMember">
-                <source>Show: Become Member</source>
-                <target>Zeige: Mitglied werden</target>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.showDonateMoney">
-                <source>Show: Donate money</source>
-                <target>Zeige: Geld spenden</target>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.showDonateTime">
-                <source>Show: Donate time</source>
-                <target>Zeige: Zeit spenden / ehrenamtlich helfen</target>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.image">
-                <source>Image</source>
-                <target>Bild</target>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.sheetTitle.becomeMember">
-                <source>Options: Become member</source>
-                <target>Gestaltungsoptionen: Mitglied werden</target>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.sheetTitle.donateMoney">
-                <source>Options: Donate money</source>
-                <target>Gestaltungsoptionen: Geld spenden</target>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.sheetTitle.donateTime">
-                <source>Options: Donate time</source>
-                <target>Gestaltungsoptionen: Zeit spenden</target>
-            </trans-unit>
-
             <trans-unit id="flexform.sixReasons.sheetTitle">
                 <source>Six reasons</source>
                 <target>Einleitender Text</target>

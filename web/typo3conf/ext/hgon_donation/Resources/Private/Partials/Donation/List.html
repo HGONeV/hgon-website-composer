@@ -1,0 +1,73 @@
+{namespace hgon=HGON\HgonTemplate\ViewHelpers}
+<f:if condition="<f:count>{donationList}</f:count>">
+    <f:then>
+        <f:for each="<hgon:createRows list='{0: donationList}' />" as="row">
+            <f:for each="{row}" as="donation">
+                <f:switch expression="<f:cObject typoscriptObjectPath='lib.math' data='12/<f:count>{row}</f:count>' />">
+                    <f:case value="4">
+                        <f:render section="inner" arguments="{type: 'c-4', donation: donation, settingsArray: settingsArray}" />
+                    </f:case>
+                    <f:case value="6">
+                        <f:render section="inner" arguments="{type: 'c-6', donation: donation, settingsArray: settingsArray}" />
+                    </f:case>
+                    <f:case value="8">
+                        <f:render section="inner" arguments="{type: 'c-8', donation: donation, settingsArray: settingsArray}" />
+                    </f:case>
+                    <f:case value="12">
+                        <f:render section="inner" arguments="{type: 'c-12', donation: donation, settingsArray: settingsArray}" />
+                    </f:case>
+                    <f:defaultCase>
+                        <f:render section="inner" arguments="{type: 'c-12', donation: donation, settingsArray: settingsArray}" />
+                    </f:defaultCase>
+                </f:switch>
+            </f:for>
+        </f:for>
+    </f:then>
+    <f:else>
+        <div class="flex-item c-12">
+
+            <article class="card card-plainfull">
+                <div class="card__inner">
+                    <div class="flex-container">
+                        <div class="flex-item c-4">
+                            <header class="card__header">
+                                <h3 class="headline">Uuups!</h3>
+                            </header>
+                        </div>
+                        <div class="flex-item c-7">
+                            <div class="card__content">
+                                Aktuell bieten wir keine Zeitspenden an, die diesen Kriterien entspricht. Aber das wird sich sicherlich bald wieder ändern :)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </f:else>
+</f:if>
+
+<f:section name="inner">
+    <div class="flex-item {type}">
+        <f:comment><!-- use project (optional selected page) image as fallback --></f:comment>
+        <f:if condition="{donation.image}">
+            <f:then>
+                <f:render partial="FlexItem/01-HeaderArea" arguments="{type: type, image: donation.image}" />
+            </f:then>
+            <f:else>
+                <f:render partial="FlexItem/01-HeaderArea" arguments="{type: type, image: donation.pages.txRkwbasicsTeaserImage}" />
+            </f:else>
+        </f:if>
+
+        <div class="card__inner">
+            <f:render partial="FlexItem/02-BodyArea" arguments="{title: donation.title, text: donation.shortDescription}" />
+
+            <footer class="card__footer">
+                <f:link.action class="btn btn--rounded btn--tertiary" action="show" controller="Donation" pluginName="Detail" extensionName="HgonDonation" pageUid="{settingsArray.showPid}" arguments="{donation : donation}">
+                    Mehr erfahren
+                </f:link.action>
+            </footer>
+        </div>
+
+        <f:render partial="FlexItem/03-ClosingTag" />
+    </div>
+</f:section>

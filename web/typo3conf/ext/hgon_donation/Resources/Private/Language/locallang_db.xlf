@@ -3,51 +3,63 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-13T10:28:28Z" product-name="hgon_donation">
 		<header/>
 		<body>
-			<trans-unit id="tx_hgon_donation_domain_model_donate">
+			<trans-unit id="tx_hgondonation_domain_model_donate">
 				<source>donate</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donate.description">
+			<trans-unit id="tx_hgondonation_domain_model_donate.description">
 				<source>Donation extension of HGON</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donationtype">
+			<trans-unit id="tx_hgondonation_domain_model_donation">
 				<source>Donation</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donationtype.type">
+			<trans-unit id="tx_hgondonation_domain_model_donation.type">
 				<source>Type</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donationtype.type.select">
+			<trans-unit id="tx_hgondonation_domain_model_donation.type.select">
 				<source>Choose</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donationtype.type.time">
+			<trans-unit id="tx_hgondonation_domain_model_donation.type.time">
 				<source>Time</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donationtype.type.money">
+			<trans-unit id="tx_hgondonation_domain_model_donation.type.money">
 				<source>Money</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donationtype.type.link">
+			<trans-unit id="tx_hgondonation_domain_model_donation.type.link">
 				<source>Link to page (e.g. for membership)</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donationtype.title">
+			<trans-unit id="tx_hgondonation_domain_model_donation.title">
 				<source>Title</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donationtype.short_description">
+			<trans-unit id="tx_hgondonation_domain_model_donation.short_description">
 				<source>Short Description</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donationtype.description">
+			<trans-unit id="tx_hgondonation_domain_model_donation.description">
 				<source>Description</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donationtype.image">
+			<trans-unit id="tx_hgondonation_domain_model_donation.image">
 				<source>Image</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donationtype.link">
+			<trans-unit id="tx_hgondonation_domain_model_donation.link">
 				<source>Link</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donationtype.donation_type_time">
+			<trans-unit id="tx_hgondonation_domain_model_donation.donation_type_time">
 				<source>Donation Type Time</source>
 			</trans-unit>
-			<trans-unit id="tx_hgon_donation_domain_model_donationtype.donation_type_money">
+			<trans-unit id="tx_hgondonation_domain_model_donation.donation_type_money">
 				<source>Donation Type Money</source>
 			</trans-unit>
+			<trans-unit id="tx_hgondonation_domain_model_donation.typolink">
+                <source>Typolink (Project)</source>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_domain_model_donation.pages">
+                <source>Pages (Project)</source>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_domain_model_donation.time_range_start">
+                <source>Time Range Start</source>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_domain_model_donation.time_range_end">
+                <source>Time Range End</source>
+            </trans-unit>
 			<trans-unit id="tx_hgondonation_domain_model_donationtypetime">
 				<source>Donation Time</source>
 			</trans-unit>
@@ -65,12 +77,6 @@
 			</trans-unit>
 			<trans-unit id="tx_hgondonation_domain_model_donationtypetime.time_requirement">
 				<source>Time Requirement</source>
-			</trans-unit>
-			<trans-unit id="tx_hgondonation_domain_model_donationtypetime.time_range_start">
-				<source>Time Range Start</source>
-			</trans-unit>
-			<trans-unit id="tx_hgondonation_domain_model_donationtypetime.time_range_end">
-				<source>Time Range End</source>
 			</trans-unit>
 			<trans-unit id="tx_hgondonation_domain_model_donationtypetime.recurring">
 				<source>Recurring</source>
@@ -157,6 +163,42 @@
 			<trans-unit id="tx_hgondonation_domain_model_donationplace.country">
 				<source>Country</source>
 			</trans-unit>
+
+
+			<!-- FLEXFORM -->
+            <trans-unit id="flexform.supportOptions.sheetTitle">
+                <source>Support Options</source>
+            </trans-unit>
+            <trans-unit id="flexform.supportOptions.preHeader">
+                <source>Pre header</source>
+            </trans-unit>
+            <trans-unit id="flexform.supportOptions.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="flexform.supportOptions.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="flexform.supportOptions.showBecomeMember">
+                <source>Show: Become Member</source>
+            </trans-unit>
+            <trans-unit id="flexform.supportOptions.showDonateMoney">
+                <source>Show: Donate money</source>
+            </trans-unit>
+            <trans-unit id="flexform.supportOptions.showDonateTime">
+                <source>Show: Donate time</source>
+            </trans-unit>
+            <trans-unit id="flexform.supportOptions.image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="flexform.supportOptions.sheetTitle.becomeMember">
+                <source>Options: Become member</source>
+            </trans-unit>
+            <trans-unit id="flexform.supportOptions.sheetTitle.donateMoney">
+                <source>Options: Donate money</source>
+            </trans-unit>
+            <trans-unit id="flexform.supportOptions.sheetTitle.donateTime">
+                <source>Options: Donate time</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

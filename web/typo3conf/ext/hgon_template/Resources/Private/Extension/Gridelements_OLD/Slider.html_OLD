@@ -1,7 +1,0 @@
-<div class="section__content">
-    <div class="slider js-slider">
-        <f:format.raw>{data.tx_gridelements_view_columns.10}</f:format.raw>
-    </div>
-</div>
-
-

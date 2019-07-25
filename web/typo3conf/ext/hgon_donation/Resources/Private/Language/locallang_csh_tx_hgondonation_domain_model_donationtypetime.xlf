@@ -24,12 +24,6 @@
 			<trans-unit id="time_requirement.description">
 				<source>timeRequirement</source>
 			</trans-unit>
-			<trans-unit id="time_range_start.description">
-				<source>timeRangeStart</source>
-			</trans-unit>
-			<trans-unit id="time_range_end.description">
-				<source>timeRangeEnd</source>
-			</trans-unit>
 			<trans-unit id="recurring.description">
 				<source>recurring</source>
 			</trans-unit>

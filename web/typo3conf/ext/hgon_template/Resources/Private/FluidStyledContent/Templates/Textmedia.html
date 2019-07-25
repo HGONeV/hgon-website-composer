@@ -7,6 +7,7 @@
             <f:case value="30"></f:case>
             <f:case value="40"></f:case>
             <f:case value="42"></f:case>
+            <f:case value="70"></f:case>
             <f:defaultCase>
                 <f:if condition="{gallery.position.noWrap} != 1">
                     <f:render partial="Header/All" arguments="{_all}" />
@@ -155,7 +156,7 @@
             <aside class="breaker">
                 <div class="slider-caroussel js-caroussel" data-interval="4000">
                     <header class="slider-caroussel__header">
-                        <h2 class="tagline color-font-secondary">Das sagen unsere Unterstützer</h2>
+                        <h2 class="tagline color-font-secondary">{data.header}</h2>
                     </header>
                     <div class="slider-caroussel__slides js-caroussel-slides" style="width: 2192px;">
 

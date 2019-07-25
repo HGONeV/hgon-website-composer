@@ -39,7 +39,7 @@ config.tx_extbase {
                         hidden.mapOnProperty = hidden
                         deleted.mapOnProperty = deleted
                         lastUpdated.mapOnProperty = lastUpdated
-                        tx_rkwprojects_project_uid.mapOnProperty = txRkwprojectsProject
+                        //tx_rkwprojects_project_uid.mapOnProperty = txRkwprojectsProject
                     }
                 }
             }

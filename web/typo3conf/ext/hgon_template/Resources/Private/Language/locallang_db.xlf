@@ -76,40 +76,6 @@
             <trans-unit id="flexform.pageSlider.text">
                 <source>Text</source>
             </trans-unit>
-            <trans-unit id="flexform.supportOptions.sheetTitle">
-                <source>Support Options</source>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.preHeader">
-                <source>Pre header</source>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.header">
-                <source>Header</source>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.text">
-                <source>Text</source>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.showBecomeMember">
-                <source>Show: Become Member</source>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.showDonateMoney">
-                <source>Show: Donate money</source>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.showDonateTime">
-                <source>Show: Donate time</source>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.image">
-                <source>Image</source>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.sheetTitle.becomeMember">
-                <source>Options: Become member</source>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.sheetTitle.donateMoney">
-                <source>Options: Donate money</source>
-            </trans-unit>
-            <trans-unit id="flexform.supportOptions.sheetTitle.donateTime">
-                <source>Options: Donate time</source>
-            </trans-unit>
-
             <trans-unit id="flexform.sixReasons.sheetTitle">
                 <source>Six reasons</source>
             </trans-unit>

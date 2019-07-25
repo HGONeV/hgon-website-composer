@@ -1,6 +1,6 @@
 <f:comment><!-- Prepare several elements. For content html show below area "inner" --></f:comment>
 <f:section name="Pages">
-    <f:render section="inner" arguments="{type: type, image: pages.txRkwbasicsTeaserImage, date: pages.crdate, title: pages.title, text: pages.txRkwbasicsTeaserText}" />
+    <f:render partial="FlexItem/CardInner" arguments="{type: type, image: pages.txRkwbasicsTeaserImage, date: pages.crdate, title: pages.title, text: pages.txRkwbasicsTeaserText}" />
     <footer class="card__footer">
         <f:if condition="{type} == 'c-4'">
             <f:then>
@@ -35,12 +35,12 @@
             <f:comment><!-- iterate and set first image of news --></f:comment>
             <f:for each="{news.falMedia}" as="newsImage" iteration="iter">
                 <f:if condition="{iter.isFirst}">
-                    <f:render section="inner" arguments="{type: type, image: newsImage, date: news.datetime, title: news.title, text: news.bodytext}" />
+                    <f:render partial="FlexItem/CardInner" arguments="{type: type, image: newsImage, date: news.datetime, title: news.title, text: news.bodytext}" />
                 </f:if>
             </f:for>
         </f:then>
         <f:else>
-            <f:render section="inner" arguments="{type: type, date: news.datetime, title: news.title, text: news.bodytext}" />
+            <f:render partial="FlexItem/CardInner" arguments="{type: type, date: news.datetime, title: news.title, text: news.bodytext}" />
         </f:else>
     </f:if>
     <footer class="card__footer">

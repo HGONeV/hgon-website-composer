@@ -58,6 +58,8 @@ call_user_func(
             'HGON: Spendenformular'
         );
 
+        /*
+         * Moved to HGON Donation
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'HGON.HgonTemplate',
             'SupportOptions',
@@ -69,6 +71,7 @@ call_user_func(
             'SupportOptionsLight',
             'HGON: Zeige Spenden-Otionen (Mitglied & Geld)'
         );
+        */
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'HGON.HgonTemplate',
@@ -123,6 +126,8 @@ $TCA['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 
 $TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY . '/Configuration/FlexForms/PageSlider.xml');
 
+/*
+ * Moved to HGON Donation
 $pluginName = strtolower('SupportOptions');
 $pluginSignature = $extensionName.'_'.$pluginName;
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,select_key,pages';
@@ -134,6 +139,7 @@ $pluginSignature = $extensionName.'_'.$pluginName;
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,select_key,pages';
 $TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY . '/Configuration/FlexForms/SupportOptionsLight.xml');
+*/
 
 $pluginName = strtolower('SixReasons');
 $pluginSignature = $extensionName.'_'.$pluginName;

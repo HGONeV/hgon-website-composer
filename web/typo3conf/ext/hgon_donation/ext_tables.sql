@@ -1,7 +1,7 @@
 #
-# Table structure for table 'tx_hgondonation_domain_model_donationtype'
+# Table structure for table 'tx_hgondonation_domain_model_donation'
 #
-CREATE TABLE tx_hgondonation_domain_model_donationtype (
+CREATE TABLE tx_hgondonation_domain_model_donation (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -14,6 +14,10 @@ CREATE TABLE tx_hgondonation_domain_model_donationtype (
 	link varchar(255) DEFAULT '' NOT NULL,
 	donation_type_time int(11) unsigned DEFAULT '0',
 	donation_type_money int(11) unsigned DEFAULT '0',
+	typolink varchar(255) DEFAULT '' NOT NULL,
+	pages int(11) unsigned DEFAULT '0',
+	time_range_start int(11) DEFAULT '0' NOT NULL,
+	time_range_end int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -58,8 +62,6 @@ CREATE TABLE tx_hgondonation_domain_model_donationtypetime (
 	description text NOT NULL,
 	type int(11) DEFAULT '0' NOT NULL,
 	time_requirement varchar(255) DEFAULT '' NOT NULL,
-	time_range_start int(11) DEFAULT '0' NOT NULL,
-	time_range_end int(11) DEFAULT '0' NOT NULL,
 	recurring tinyint(1) unsigned DEFAULT '0' NOT NULL,
 	image int(11) unsigned NOT NULL default '0',
 	contact_person varchar(255) DEFAULT '' NOT NULL,

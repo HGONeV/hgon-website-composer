@@ -40,8 +40,9 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      *
      * @var \HGON\HgonTemplate\Domain\Repository\ProjectsRepository
      * @inject
-     */
+
     protected $projectsRepository = null;
+     */
 
     /**
      * sysCategoryRepository
@@ -153,6 +154,7 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     public function projectTeaserAction()
     {
+        /*
         // if shuffle, just select three entries
         if ($this->settings['projectTeaser']['random']) {
             $projectList = $this->projectsRepository->findAll()->toArray();
@@ -163,7 +165,7 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         }
 
         // ugly function, because we don't have pages objects (we got typolinks)
-        /** @var \HGON\HgonTemplate\Domain\Model\Projects $project */
+        /** @var \HGON\HgonTemplate\Domain\Model\Projects $project
         foreach ($projectList as $project) {
             if ($project->getProjectPid()) {
                 $explodedLink = GeneralUtility::trimExplode('=', $project->getProjectPid());
@@ -172,6 +174,7 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         }
 
         $this->view->assign('projectList', $projectList);
+        */
     }
 
 
@@ -366,6 +369,7 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * action donationForm
      * -> TESTING: Shows a "Fundraising form"
      *
+     * @deprecated Not used.
      * @return void
      */
     public function donationFormAction()
@@ -383,6 +387,7 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * - donate time
      * -> Options are defined via flexForm
      *
+     * @deprecated Moved to HGON DONATION
      * @return void
      */
     public function supportOptionsAction()
@@ -396,6 +401,7 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * action supportOptionsLight
      * -> Gives no real forms. Only anchros for opening forms of "supportOptions" plugin, which is used as standard footer element
      *
+     * @deprecated Moved to HGON DONATION
      * @return void
      */
     public function supportOptionsLightAction()

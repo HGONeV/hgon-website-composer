@@ -115,6 +115,8 @@ call_user_func(
             ]
         );
 
+        /*
+         * -> Moved to HGON Donation
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'HGON.HgonTemplate',
             'SupportOptions',
@@ -138,6 +140,7 @@ call_user_func(
                 'Standard' => 'supportOptionsLight'
             ]
         );
+        */
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'HGON.HgonTemplate',

@@ -46,8 +46,8 @@ class Journal implements \TYPO3\CMS\Core\SingletonInterface
      *
      * @var \HGON\HgonTemplate\Domain\Repository\ProjectsRepository
      * @inject
-     */
-    protected $projectsRepository = null;
+
+    protected $projectsRepository = null;*/
 
     /**
      * sysCategoryRepository
