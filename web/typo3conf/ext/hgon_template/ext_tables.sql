@@ -26,3 +26,21 @@ CREATE TABLE tx_hgontemplate_domain_model_didyouknow (
 	KEY language (l10n_parent,sys_language_uid)
 
 );
+
+#
+# Table structure for table 'pages'
+#
+CREATE TABLE pages (
+
+	tx_hgontemplate_contactperson int(11) unsigned DEFAULT '0' NOT NULL,
+
+);
+
+#
+# Table structure for table 'tx_news_domain_model_news'
+#
+CREATE TABLE tx_news_domain_model_news (
+
+	tx_hgontemplate_type int(11) unsigned DEFAULT '0' NOT NULL,
+
+);

@@ -79,17 +79,18 @@ page {
             //=================================================================
             // Journal Overview
             //=================================================================
-            journalOverview = USER
-            journalOverview {
+            /*
+            journal = USER
+            journal {
                 userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
                 extensionName = HgonTemplate
-                pluginName = JournalOverview
+                pluginName = Journal
                 vendorName = HGON
-                controller = Standard
+                controller = News
                 switchableControllerActions {
                     // Again: Controller-Name and Action
-                    Standard {
-                        1 = journalOverview
+                    News {
+                        1 = journal
                     }
                 }
 
@@ -97,6 +98,7 @@ page {
                 persistence =< plugin.tx_hgontemplate.persistence
                 settings =< plugin.tx_hgontemplate.settings
             }
+            */
 
 
 
@@ -145,6 +147,30 @@ page {
                 view =< plugin.tx_hgondonation_donate.view
                 persistence =< plugin.tx_hgondonation_donate.persistence
                 settings =< plugin.tx_hgondonation_donate.settings
+            }
+
+
+
+            //=================================================================
+            // Journal Overview
+            //=================================================================
+            relatedNews = USER
+            relatedNews {
+                userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                extensionName = HgonTemplate
+                pluginName = ShowRelatedSidebar
+                vendorName = HGON
+                controller = News
+                switchableControllerActions {
+                    // Again: Controller-Name and Action
+                    News {
+                        1 = showRelatedSidebar
+                    }
+                }
+
+                view =< plugin.tx_hgontemplate.view
+                persistence =< plugin.tx_hgontemplate.persistence
+                settings =< plugin.tx_hgontemplate.settings
             }
         }
     }

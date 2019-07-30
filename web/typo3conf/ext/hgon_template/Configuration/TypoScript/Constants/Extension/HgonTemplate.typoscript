@@ -6,10 +6,11 @@ plugin.tx_hgontemplate {
     }
     settings {
         journal {
+            pageUid = 10
             parentCategoryUid = 5
             excludePidList = 1
             ajaxTypeNum = 1558958414
-            itemsPerPage = 8
+            itemsPerPage = 9
         }
         formFramework {
             ajaxTypeNum = 1560849023

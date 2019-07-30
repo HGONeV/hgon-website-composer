@@ -21,6 +21,37 @@
                 <target>Kategorie</target>
             </trans-unit>
 
+            <trans-unit id="tx_hgontemplate_domain_model_pages.tabs.hgon">
+                <source>HGON</source>
+                <target>HGON</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_pages.palettes.extended">
+                <source>Extended</source>
+                <target>Erweitert</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_pages.tx_hgontemplate_contactperson">
+                <source>Contact person (sidebar)</source>
+                <target>Kontaktperson (wird auf alle Unterseiten weitervererbt)</target>
+            </trans-unit>
+
+
+            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type">
+                <source>Type</source>
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type.0">
+                <source>News</source>
+                <target>Newsmeldung</target>
+            </trans-unit>
+            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type.1">
+                <source>Press</source>
+                <target>Pressemitteilungyp</target>
+            </trans-unit>
+            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type.2">
+                <source>Project</source>
+                <target>Projektvorstellung</target>
+            </trans-unit>
+
 
 
             <!-- FLEXFORM -->

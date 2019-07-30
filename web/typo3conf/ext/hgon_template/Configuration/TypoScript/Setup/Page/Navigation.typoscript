@@ -22,7 +22,6 @@ page.10 {
 			as = menuMeta
 		}
 
-
         // @toDo: Erster Menüpunkt ist "Über uns" und nicht "HGON"
         30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
         30 {

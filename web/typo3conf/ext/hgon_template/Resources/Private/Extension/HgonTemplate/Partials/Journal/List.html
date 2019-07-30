@@ -23,27 +23,24 @@
     </f:else>
 </f:if>
 
-<f:comment>
-    <f:for each="{journalRowList}" as="journalRow">
-        <f:comment><!-- key can be "FlexItemC4", "FlexItemC6", "FlexItemc8" or "FlexItemC12" --></f:comment>
-        <f:for each="{journalRow}" as="journalElementList" key="key">
-            <f:for each="{journalElementList}" as="journalElement">
-                <f:render partial="{key}" arguments="{item: journalElement}" />
-            </f:for>
-        </f:for>
-    </f:for>
-</f:comment>
-
 <f:if condition="{journalRowList}">
     <f:then>
-        <f:for each="{journalRowList}" as="pages" iteration="iter">
+        <f:for each="{journalRowList}" as="news" iteration="iter">
             <f:if condition="{iter.cycle} < 4">
-                <f:render partial="FlexItem/CardStandard" section="Pages" arguments="{pages: pages, type: 'c-4'}" />
+                <f:if condition="<f:count>{journalRowList}</f:count> == 1">
+                    <f:then>
+                        <f:render partial="FlexItem/CardStandard" section="News" arguments="{news: news, type: 'c-8'}" />
+                    </f:then>
+                    <f:else>
+                        <f:render partial="FlexItem/CardStandard" section="News" arguments="{news: news, type: 'c-4'}" />
+                    </f:else>
+                </f:if>
+
             </f:if>
 
             <f:if condition="{iter.cycle} == 4">
                 <f:then>
-                    <f:render partial="FlexItem/CardStandard" section="Pages" arguments="{pages: pages, type: 'c-8'}" />
+                    <f:render partial="FlexItem/CardStandard" section="News" arguments="{news: news, type: 'c-8'}" />
                     <f:render partial="Journal/FurtherElements" arguments="{_all}" />
                 </f:then>
                 <f:else>
@@ -53,27 +50,36 @@
                 </f:else>
             </f:if>
 
-            <f:if condition="{iter.cycle} == 5">
-                <f:if condition="{news}">
+            <f:if condition="{iter.cycle} == 5 || {iter.cycle} == 6">
+                <f:if condition="{iter.isLast} && <f:count>{journalRowList}</f:count> == 5">
                     <f:then>
-                        <f:render partial="FlexItem/CardStandard" section="News" arguments="{news: news, type: 'c-6'}" />
-                        <f:render partial="FlexItem/CardStandard" section="Pages" arguments="{pages: pages, type: 'c-6'}" />
+                        <f:render partial="FlexItem/CardStandard" section="News" arguments="{news: news, type: 'c-12'}" />
                     </f:then>
                     <f:else>
-                        <f:render partial="FlexItem/CardStandard" section="Pages" arguments="{pages: pages, type: 'c-12'}" />
+                        <f:render partial="FlexItem/CardStandard" section="News" arguments="{news: news, type: 'c-6'}" />
                     </f:else>
                 </f:if>
             </f:if>
 
-            <f:if condition="{iter.cycle} == 5">
-                <div class="flex-item c-12">
-                    <f:comment><!-- Upcoming events --></f:comment>
-                    <f:cObject typoscriptObjectPath="page.10.variables.rkwEventsUpcomingEvents" />
-                </div>
+            <f:if condition="{iter.cycle} == 6">
+                <f:then>
+                    <div class="flex-item c-12">
+                        <f:comment><!-- Upcoming events --></f:comment>
+                        <f:cObject typoscriptObjectPath="page.10.variables.rkwEventsUpcomingEvents" />
+                    </div>
+                </f:then>
+                <f:else>
+                    <f:if condition="{iter.isLast} && <f:count>{journalRowList}</f:count> < 6">
+                        <div class="flex-item c-12">
+                            <f:comment><!-- Upcoming events --></f:comment>
+                            <f:cObject typoscriptObjectPath="page.10.variables.rkwEventsUpcomingEvents" />
+                        </div>
+                    </f:if>
+                </f:else>
             </f:if>
 
-            <f:if condition="{iter.cycle} > 5">
-                <f:render partial="FlexItem/CardStandard" section="Pages" arguments="{pages: pages, type: 'c-4'}" />
+            <f:if condition="{iter.cycle} > 6">
+                <f:render partial="FlexItem/CardStandard" section="News" arguments="{news: news, type: 'c-4'}" />
             </f:if>
         </f:for>
     </f:then>

@@ -4,6 +4,17 @@
 		<header/>
 		<body>
 
+
+		    <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type.0">
+                <source>News</source>
+            </trans-unit>
+            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type.1">
+                <source>Press</source>
+            </trans-unit>
+            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type.2">
+                <source>Project</source>
+            </trans-unit>
+
 		    <!-- ############################## -->
             <!-- TEMPLATES -->
             <!-- ############################## -->

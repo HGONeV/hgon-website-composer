@@ -67,7 +67,7 @@ class Journal implements \TYPO3\CMS\Core\SingletonInterface
 
     /**
      * getPagesList
-     * Duplicates a part of the journalOverviewAction
+     * Duplicates a part of the journalAction
      *
      * @param array $settings
      * @param int $pageNumber

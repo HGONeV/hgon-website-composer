@@ -24,12 +24,6 @@ namespace HGON\HgonTemplate\Domain\Model;
  */
 class Pages extends \RKW\RkwBasics\Domain\Model\Pages
 {
-    /**
-     * txRkwprojectsProject
-     *
-     * @var \HGON\HgonTemplate\Domain\Model\Projects
-     */
-    protected $txRkwprojectsProject = null;
 
     /**
      * SysCategory
@@ -44,6 +38,13 @@ class Pages extends \RKW\RkwBasics\Domain\Model\Pages
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonTemplate\Domain\Model\Pages>
      */
     protected $subPages;
+
+    /**
+     * txHgontemplateContactperson
+     *
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\RKW\RkwAuthors\Domain\Model\Authors>
+     */
+    protected $txHgontemplateContactperson = null;
 
 
     /**
@@ -67,28 +68,10 @@ class Pages extends \RKW\RkwBasics\Domain\Model\Pages
     protected function initStorageObjects()
     {
         $this->subPages = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->txHgontemplateContactperson = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
-    /**
-     * Returns the txRkwProjectsProject
-     *
-     * @return \HGON\HgonTemplate\Domain\Model\Projects $txRkwprojectsProject
-     */
-    public function getTxRkwprojectsProject()
-    {
-        return $this->txRkwprojectsProject;
-    }
 
-    /**
-     * Sets the txRkwProjectsProject
-     *
-     * @param \HGON\HgonTemplate\Domain\Model\Projects $txRkwprojectsProject
-     * @return void
-     */
-    public function setTxRkwprojectsProject(\HGON\HgonTemplate\Domain\Model\Projects $txRkwprojectsProject)
-    {
-        $this->txRkwprojectsProject = $txRkwprojectsProject;
-    }
 
     /**
      * Adds a Category
@@ -184,6 +167,49 @@ class Pages extends \RKW\RkwBasics\Domain\Model\Pages
     public function setSubPages(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $subPages)
     {
         $this->subPages = $subPages;
+    }
+
+    /**
+     * Adds a Authors
+     *
+     * @param \RKW\RkwAuthors\Domain\Model\Authors $txHgontemplateContactperson
+     * @return void
+     */
+    public function addTxHgontemplateContactperson(\RKW\RkwAuthors\Domain\Model\Authors $txHgontemplateContactperson)
+    {
+        $this->txHgontemplateContactperson->attach($txHgontemplateContactperson);
+    }
+
+    /**
+     * Removes a Authors
+     *
+     * @param \RKW\RkwAuthors\Domain\Model\Authors $txHgontemplateContactpersonToRemove The Authors to be removed
+     * @return void
+     */
+    public function removeTxHgontemplateContactperson(\RKW\RkwAuthors\Domain\Model\Authors $txHgontemplateContactperson)
+    {
+        $this->txHgontemplateContactperson->detach($txHgontemplateContactperson);
+    }
+
+    /**
+     * Returns the txHgontemplateContactperson
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\RKW\RkwAuthors\Domain\Model\Authors> $txHgontemplateContactperson
+     */
+    public function getTxHgontemplateContactperson()
+    {
+        return $this->txHgontemplateContactperson;
+    }
+
+    /**
+     * Sets the txHgontemplateContactperson
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\RKW\RkwAuthors\Domain\Model\Authors> $txHgontemplateContactperson
+     * @return void
+     */
+    public function setTxHgontemplateContactperson(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $txHgontemplateContactperson)
+    {
+        $this->txHgontemplateContactperson = $txHgontemplateContactperson;
     }
 }
 

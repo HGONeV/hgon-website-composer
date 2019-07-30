@@ -6,7 +6,7 @@ mod {
 	web_layout {
 		BackendLayouts {
 			pageTxtHeaderSingleCol {
-				title = Text-Header, Einspaltig (tp-support)
+				title = Text-Header, Einspaltig (tp-support / tp-explore)
                 #title = LLL:EXT:hgon_template/Resources/Private/Language/BackendLayouts.xlf:layout.single
 				#icon = EXT:hgon_template/Resources/Public/Icons/BackendLayouts/default.svg
 				config {

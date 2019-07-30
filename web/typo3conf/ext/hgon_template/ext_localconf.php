@@ -6,19 +6,6 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['hgon_default'] = 'EXT:hgon_templa
 call_user_func(
     function($extKey)
     {
-
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'HGON.HgonTemplate',
-            'JournalHighlight',
-            [
-                'Standard' => 'journalHighlight'
-            ],
-            // non-cacheable actions
-            [
-                'Standard' => 'journalHighlight'
-            ]
-        );
-
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'HGON.HgonTemplate',
             'PageHighlight',
@@ -43,6 +30,7 @@ call_user_func(
             ]
         );
 
+        /*
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'HGON.HgonTemplate',
             'ProjectTeaser',
@@ -54,6 +42,7 @@ call_user_func(
                 'Standard' => 'projectTeaser'
             ]
         );
+        */
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'HGON.HgonTemplate',
@@ -76,18 +65,6 @@ call_user_func(
             // non-cacheable actions
             [
                 'Standard' => 'siblingPagesOverview'
-            ]
-        );
-
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'HGON.HgonTemplate',
-            'JournalOverview',
-            [
-                'Standard' => 'journalOverview'
-            ],
-            // non-cacheable actions
-            [
-                'Standard' => 'journalOverview'
             ]
         );
 
@@ -154,8 +131,49 @@ call_user_func(
             ]
         );
 
+        // ***************
+        // NEWS
+        // ***************
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'ShowRelatedSidebar',
+            [
+                'News' => 'showRelatedSidebar'
+            ],
+            // non-cacheable actions
+            [
+                'News' => 'showRelatedSidebar'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'JournalHighlight',
+            [
+                'News' => 'journalHighlight'
+            ],
+            // non-cacheable actions
+            [
+                'News' => 'journalHighlight'
+            ]
+        );
+
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'Journal',
+            [
+                'News' => 'journal'
+            ],
+            // non-cacheable actions
+            [
+                'News' => 'journal'
+            ]
+        );
+
         // for content slide
-        $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',subtitle,tx_rkwbasics_article_image,';
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',subtitle,tx_rkwbasics_article_image,tx_hgontemplate_contactperson,';
 
         // add to InstallTool options (otherwise the RkwEvents ajax calls will not work)
         $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_rkwevents_pi1[action]';

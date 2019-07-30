@@ -12,7 +12,7 @@
 
         <div class="main__content">
             <f:format.html parseFuncTSPath="">
-                {journalOverview}
+                {journal}
             </f:format.html>
         </div>
 

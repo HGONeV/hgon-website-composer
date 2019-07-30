@@ -6,12 +6,6 @@ call_user_func(
     {
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'HGON.HgonTemplate',
-            'JournalHighlight',
-            'HGON: Journal Highlights'
-        );
-
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'HGON.HgonTemplate',
             'PageHighlight',
             'HGON: Seiten-Highlight'
         );
@@ -22,28 +16,26 @@ call_user_func(
             'HGON: Zufälliger HGON-Autor mit Zitat'
         );
 
+        /*
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'HGON.HgonTemplate',
             'ProjectTeaser',
             'HGON: Projektauswahl anzeigen'
         );
+        */
 
+        /*
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'HGON.HgonTemplate',
             'SidebarContactPerson',
             'HGON: Sidebar Kontaktperson'
         );
+        */
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'HGON.HgonTemplate',
             'SiblingPagesOverview',
             'HGON: Generiert Vorschau für Geschwisterseiten'
-        );
-
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'HGON.HgonTemplate',
-            'JournalOverview',
-            'HGON: Journal Übersicht'
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
@@ -83,6 +75,23 @@ call_user_func(
             'HGON.HgonTemplate',
             'SixReasons',
             'HGON: Sechs Gründe'
+        );
+
+
+        // ***************
+        // NEWS
+        // ***************
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'HGON.HgonTemplate',
+            'JournalHighlight',
+            'HGON: Journal Highlights'
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'HGON.HgonTemplate',
+            'Journal',
+            'HGON: Journal'
         );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($extKey, 'Configuration/TypoScript', 'HGON Template');

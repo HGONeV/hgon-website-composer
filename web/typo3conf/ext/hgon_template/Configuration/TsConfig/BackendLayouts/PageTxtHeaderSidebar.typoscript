@@ -6,7 +6,7 @@ mod {
 	web_layout {
 		BackendLayouts {
             SingleTextHeader {
-				title = SingleTextHeader (ohne Vorlage / tp-single Alternative)
+				title = Text-Header, Zweispaltig (ohne Vorlage / tp-single Alternative)
                 #title = LLL:EXT:hgon_template/Resources/Private/Language/BackendLayouts.xlf:layout.single
 				#icon = EXT:hgon_template/Resources/Public/Icons/BackendLayouts/default.svg
 				config {

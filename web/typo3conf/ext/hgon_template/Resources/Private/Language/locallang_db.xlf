@@ -17,6 +17,29 @@
                 <source>SysCategory</source>
             </trans-unit>
 
+             <trans-unit id="tx_hgontemplate_domain_model_pages.tabs.hgon">
+                <source>HGON</source>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_pages.palettes.extended">
+                <source>Extended</source>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_pages.tx_hgontemplate_contactperson">
+                <source>Contact person (sidarbar)</source>
+            </trans-unit>
+
+            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type">
+                <source>Type</source>
+            </trans-unit>
+            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type.0">
+                <source>News</source>
+            </trans-unit>
+            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type.1">
+                <source>Press</source>
+            </trans-unit>
+            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type.2">
+                <source>Project</source>
+            </trans-unit>
+
 
             <!-- FLEXFORM -->
             <trans-unit id="flexform.journalHighlight.sheetTitle">

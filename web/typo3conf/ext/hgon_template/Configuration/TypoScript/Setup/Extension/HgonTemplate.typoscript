@@ -1,4 +1,3 @@
-
 // #########################################################
 // Extbase Configuration
 // #########################################################
@@ -11,6 +10,9 @@ config.tx_extbase {
         }
         RKW\RkwEvents\Controller\AjaxController {
             className = HGON\HgonTemplate\Controller\EventAjaxController
+        }
+        GeorgRinger\News\Controller\NewsController {
+            className = HGON\HgonTemplate\Controller\NewsController
         }
     }
 
@@ -136,6 +138,7 @@ plugin.tx_hgontemplate {
     }
     settings {
         journal {
+            pageUid = {$plugin.tx_hgontemplate.settings.journal.pageUid}
             parentCategoryUid = {$plugin.tx_hgontemplate.settings.journal.parentCategoryUid}
             excludePidList = {$plugin.tx_hgontemplate.settings.journal.excludePidList}
             ajaxTypeNum = {$plugin.tx_hgontemplate.settings.journal.ajaxTypeNum}
@@ -172,13 +175,13 @@ txHgontemplateJournalAjax {
     10 {
         userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
         extensionName = HgonTemplate
-        pluginName = JournalOverview
+        pluginName = Journal
         vendorName = HGON
         switchableControllerActions {
 
             # Again: Controller-Name and Action
-            Standard {
-                10 = journalOverview
+            News {
+                10 = journal
             }
         }
 
