@@ -35,19 +35,19 @@
             </trans-unit>
 
 
-            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type">
+            <trans-unit id="tx_hgontemplate_domain_model_news.tx_hgontemplate_type">
                 <source>Type</source>
                 <target>Typ</target>
             </trans-unit>
-            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type.0">
+            <trans-unit id="tx_hgontemplate_domain_model_news.tx_hgontemplate_type.0">
                 <source>News</source>
                 <target>Newsmeldung</target>
             </trans-unit>
-            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type.1">
+            <trans-unit id="tx_hgontemplate_domain_model_news.tx_hgontemplate_type.1">
                 <source>Press</source>
                 <target>Pressemitteilungyp</target>
             </trans-unit>
-            <trans-unit id="LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_news.tx_hgontemplate_type.2">
+            <trans-unit id="tx_hgontemplate_domain_model_news.tx_hgontemplate_type.2">
                 <source>Project</source>
                 <target>Projektvorstellung</target>
             </trans-unit>

@@ -8,7 +8,7 @@
         <f:render partial="Layout/Header" arguments="{_all}" />
     </f:section>
 
-    <f:render partial="Layout/ContentHeaderText" arguments="{_all}" section="parentPageContent" />
+    <f:render partial="Layout/ContentHeaderText" arguments="{_all}" section="currentPageContent" />
 
     <nav class="main__nav">
         <f:render partial="Navigation/SubPage" arguments="{_all}" />
@@ -25,6 +25,10 @@
                 <f:render partial="Layout/Sidebar" arguments="{_all}" />
             </div>
         </div>
+
+        <f:comment><!-- if contactPage: Show google maps --></f:comment>
+        <f:format.html parseFuncTSPath="">{maps}</f:format.html>
+
     </div>
 
     <f:render partial="Layout/MainFooter" arguments="{_all}" />

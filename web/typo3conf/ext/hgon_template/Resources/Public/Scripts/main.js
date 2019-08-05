@@ -3,6 +3,25 @@ $('.js-slider').helllslider();
 $('.js-lightbox').helllbox();
 $('.js-open-mdl').helllmodal();
 
+function copyToClipboard() {
+    /* Get the text field */
+    var copyText = document.getElementById("hgon-url");
+
+    /* Select the text field */
+    copyText.select();
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+
+    /* Alert the copied text */
+    jQuery(".clipboard-container").show().delay(5000).fadeOut(400);
+
+    jQuery('.cb-close').bind('click', function(){
+        jQuery('.clipboard-container').hide();
+    });
+}
+
+
 
 // https://www.comuno.net/blog/detail/formular-mit-typoscript-rendering-per-ajax-verschicken/
 function initAjaxForms() {

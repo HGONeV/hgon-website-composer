@@ -8,5 +8,11 @@ plugin.tx_hgondonation {
 	}
     settings {
         showPid = 65
+
+        bankAccount {
+            iban = DE07 5185 0079 0085 0026 94
+            bic = HELADEF1FRI
+            bank = Sparkasse Oberhessen
+        }
     }
 }

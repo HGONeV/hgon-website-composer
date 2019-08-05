@@ -131,6 +131,30 @@ call_user_func(
             ]
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'DidYouKnow',
+            [
+                'Standard' => 'didYouKnow'
+            ],
+            // non-cacheable actions
+            [
+                'Standard' => 'didYouKnow'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'Maps',
+            [
+                'Standard' => 'maps'
+            ],
+            // non-cacheable actions
+            [
+                'Standard' => 'maps'
+            ]
+        );
+
         // ***************
         // NEWS
         // ***************
@@ -215,8 +239,22 @@ call_user_func(
         }
         */
 
-
+        $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['encodeSpURL_postProc'][] =
+            'EXT:extkey/Classes/Hooks/RealurlEncoding.php:In2code\Extkey\Hooks\RealurlEncoding->convert';
+        $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['decodeSpURL_preProc'][] =
+            'EXT:extkey/Classes/Hooks/RealurlDecoding.php:In2code\Extkey\Hooks\RealurlDecoding->convert';
 
     },
     $_EXTKEY
 );
+
+/**
+ * Page TSconfig
+ */
+$pageTSconfig = \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl(
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY)
+    . 'Configuration/TsConfig/TsConfig.typoscript'
+);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig($pageTSconfig);
+
+// <INCLUDE_TYPOSCRIPT: source="FILE:EXT:hgon_template/Configuration/TsConfig/TsConfig.typoscript">

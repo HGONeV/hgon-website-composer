@@ -148,6 +148,19 @@ class DonationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
 
 
+    /**
+     * action bankAccountSidebar
+     * shows bank data in a simple yellow box
+     *
+     * @return void
+     */
+    public function bankAccountSidebarAction()
+    {
+        // do nothing else. Just show template
+    }
+
+
+
 	/**
 	 * action create
 	 *

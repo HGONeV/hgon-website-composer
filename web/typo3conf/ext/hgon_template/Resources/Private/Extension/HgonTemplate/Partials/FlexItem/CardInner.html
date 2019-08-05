@@ -31,5 +31,14 @@
             <h3 class="headline">{title}</h3>
         </header>
         <div class="card__content">
-            <f:format.html>{text}</f:format.html>
+            <f:format.crop maxCharacters="{f:if(condition: '{type} == \'c-4\' && {image}', then: '250', else: '500')}">
+                <f:if condition="{teaserText}">
+                    <f:then>
+                        <f:format.html>{teaserText}</f:format.html>
+                    </f:then>
+                    <f:else>
+                        <f:format.html>{text}</f:format.html>
+                    </f:else>
+                </f:if>
+            </f:format.crop>
         </div>

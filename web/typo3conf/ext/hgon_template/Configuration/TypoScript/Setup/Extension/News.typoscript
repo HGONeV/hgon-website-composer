@@ -1,5 +1,6 @@
 # Add types "Pressemitteilung" and "Projektvorstellung" to tx_news
 # (and overwrite types "internal link" and "external link"
+/*
 config.tx_extbase.persistence.classes {
     GeorgRinger\News\Domain\Model\News {
         subclasses {
@@ -22,7 +23,7 @@ config.tx_extbase.persistence.classes {
         }
     }
 }
-
+*/
 plugin.tx_news {
     view {
         templateRootPaths >

@@ -152,7 +152,7 @@ page {
 
 
             //=================================================================
-            // Journal Overview
+            // Show related sidebar (news)
             //=================================================================
             relatedNews = USER
             relatedNews {
@@ -172,6 +172,103 @@ page {
                 persistence =< plugin.tx_hgontemplate.persistence
                 settings =< plugin.tx_hgontemplate.settings
             }
+
+
+
+            //=================================================================
+            // didYouKnow
+            //=================================================================
+            didYouKnow = USER
+            didYouKnow {
+                userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                extensionName = HgonTemplate
+                pluginName = DidYouKnow
+                vendorName = HGON
+                controller = Standard
+                switchableControllerActions {
+                    // Again: Controller-Name and Action
+                    Standard {
+                        1 = didYouKnow
+                    }
+                }
+
+                view =< plugin.tx_hgontemplate.view
+                persistence =< plugin.tx_hgontemplate.persistence
+                settings =< plugin.tx_hgontemplate.settings
+            }
+
+
+
+            //=================================================================
+            // maps
+            //=================================================================
+            maps = USER
+            maps {
+                userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                extensionName = HgonTemplate
+                pluginName = Maps
+                vendorName = HGON
+                controller = Standard
+                switchableControllerActions {
+                    // Again: Controller-Name and Action
+                    Standard {
+                        1 = maps
+                    }
+                }
+
+                view =< plugin.tx_hgontemplate.view
+                persistence =< plugin.tx_hgontemplate.persistence
+                settings =< plugin.tx_hgontemplate.settings
+            }
+
+
+
+            //=================================================================
+            // Bank account sidebar plugin
+            //=================================================================
+            bankAccountSidebar = USER
+            bankAccountSidebar {
+                userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                extensionName = HgonDonation
+                pluginName = BankAccountSidebar
+                vendorName = HGON
+                controller = Donation
+                switchableControllerActions {
+                    // Again: Controller-Name and Action
+                    Donation {
+                        1 = bankAccountSidebar
+                    }
+                }
+
+                view =< plugin.tx_hgondonation.view
+                persistence =< plugin.tx_hgondonation.persistence
+                settings =< plugin.tx_hgondonation.settings
+            }
+
+
+
+            //=================================================================
+            // PbSocialTwitter
+            //=================================================================
+            pbSocialTwitter = USER
+            pbSocialTwitter {
+                userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                extensionName = PbSocial
+                pluginName = Socialfeed
+                vendorName = PlusB
+                controller = Item
+                switchableControllerActions {
+                    // Again: Controller-Name and Action
+                    Item {
+                        1 = showSocialFeed
+                    }
+                }
+
+                view =< plugin.tx_pbsocial.view
+                persistence =< plugin.tx_pbsocial.persistence
+                settings =< plugin.tx_pbsocial.settings
+            }
+
         }
     }
 }

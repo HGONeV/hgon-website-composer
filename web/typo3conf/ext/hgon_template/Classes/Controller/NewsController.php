@@ -46,14 +46,6 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController
     protected $sysCategoryRepository = null;
 
     /**
-     * didYouKnowRepository
-     *
-     * @var \HGON\HgonTemplate\Domain\Repository\DidYouKnowRepository
-     * @inject
-     */
-    protected $didYouKnowRepository = null;
-
-    /**
      * showRelatedSidebarAction
      */
     public function showRelatedSidebarAction()
@@ -158,18 +150,6 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController
         } else {
             $templateDataArray['showMoreLink'] = false;
         }
-
-
-        // add "didYouKnow" random (check for category-entry. Else take something)
-        // @toDo: Maybe also search for parent-category?
-        $didYouKnowListByCategory = $this->didYouKnowRepository->findBySysCategory($sysCategory);
-        if ($didYouKnowListByCategory->count()) {
-            $didYouKnowList = $didYouKnowListByCategory;
-        } else {
-            $didYouKnowList = $this->didYouKnowRepository->findAll();
-        }
-        $templateDataArray['didYouKnow'] = $didYouKnowList[rand(0, count($didYouKnowList) - 1)];
-
 
         // check for ajax context
         // WICHTIG: Aktuell findet nur bei der Paginierung ein Ajax-Request statt. NICHT bei der Kategorieauswahl!

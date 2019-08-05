@@ -52,6 +52,22 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     protected $newsRepository = null;
 
     /**
+     * sysCategoryRepository
+     *
+     * @var \HGON\HgonTemplate\Domain\Repository\SysCategoryRepository
+     * @inject
+     */
+    protected $sysCategoryRepository = null;
+
+    /**
+     * didYouKnowRepository
+     *
+     * @var \HGON\HgonTemplate\Domain\Repository\DidYouKnowRepository
+     * @inject
+     */
+    protected $didYouKnowRepository = null;
+
+    /**
      * cacheManager
      *
      * @var \TYPO3\CMS\Core\Cache\Frontend\VariableFrontend
@@ -265,4 +281,44 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         // do nothing else (output of flexform content)
     }
 
+
+
+    /**
+     * action didYouKnow
+     *
+     *
+     * @param \HGON\HgonTemplate\Domain\Model\SysCategory $sysCategory
+     * @return void
+     */
+    public function didYouKnowAction(\HGON\HgonTemplate\Domain\Model\SysCategory $sysCategory = null)
+    {
+        if (!$sysCategory) {
+            $getParams = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('tx_hgontemplate_journal');
+            $sysCategoryUid = preg_replace('/[^0-9]/', '', $getParams['sysCategory']);
+            $sysCategory = $this->sysCategoryRepository->findByIdentifier($sysCategoryUid);
+        }
+
+        // add "didYouKnow" random (check for category-entry. Else take something)
+        $didYouKnowListByCategory = $this->didYouKnowRepository->findBySysCategory($sysCategory);
+        if ($didYouKnowListByCategory->count()) {
+            $didYouKnowList = $didYouKnowListByCategory;
+        } else {
+            // fallback: FindAll (if no category is given)
+            $didYouKnowList = $this->didYouKnowRepository->findAll();
+        }
+        $this->view->assign('didYouKnow', $didYouKnowList[rand(0, count($didYouKnowList) - 1)]);
+    }
+
+
+
+    /**
+     * action maps
+     *
+     * @return void
+     */
+    public function mapsAction()
+    {
+        // showMapsPidList (if current PID is registered in $this->settings['showMapsPidList'])
+        $this->view->assign('showMaps', in_array(intval($GLOBALS['TSFE']->id), GeneralUtility::trimExplode(',', $this->settings['showMapsPidList'])));
+    }
 }

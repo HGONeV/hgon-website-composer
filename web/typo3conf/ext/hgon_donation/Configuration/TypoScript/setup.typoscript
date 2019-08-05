@@ -55,6 +55,11 @@ plugin.tx_hgondonation {
         showPid = {$plugin.tx_hgondonation.settings.showPid}
         itemsPerPage = {$plugin.tx_hgondonation.settings.itemsPerPage}
         maximumShownResults = {$plugin.tx_hgondonation.settings.maximumShownResults}
+        bankAccount {
+            iban = {$plugin.tx_hgondonation.settings.bankAccount.iban}
+            bic = {$plugin.tx_hgondonation.settings.bankAccount.bic}
+            bank = {$plugin.tx_hgondonation.settings.bankAccount.bank}
+        }
     }
 }
 

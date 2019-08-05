@@ -39,11 +39,8 @@ page {
                 }
             }
 
-            sidebarContactPerson = COA
-            sidebarContactPerson {
-
-
-            }
+            currentUrl= TEXT
+            currentUrl.data = getIndpEnv:TYPO3_REQUEST_URL
         }
     }
 }

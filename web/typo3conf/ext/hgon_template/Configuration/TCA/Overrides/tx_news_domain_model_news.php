@@ -8,7 +8,7 @@ $condFce = 'FIELD:type:!=:0';
 $GLOBALS['TCA']['tx_news_domain_model_news']['columns']['type']['displayCond'] = $condFce;
 
 // the tx_news-type is working like a doktype and has much influence on queries. Create own type!
-$tempPagesColumns = array(
+$tempPagesColumns = [
 
     'tx_hgontemplate_type' => [
         'exclude' => false,
@@ -31,7 +31,7 @@ $tempPagesColumns = array(
         ]
     ],
 
-);
+];
 // Add TCA
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
     'tx_news_domain_model_news',
@@ -44,10 +44,28 @@ $tempPagesColumns = array(
     'before:title'
 );
 
+$GLOBALS['TCA']['tx_news_domain_model_news']['types']['0'] = [
+    'showitem' => '
+    --palette--;;paletteCore,tx_hgontemplate_type,title,--palette--;;paletteSlug,teaser,
+    datetime,
+    bodytext,
+    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,
+    fal_media,fal_related_files,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+    categories,
+    --div--;' . $ll . 'tx_news_domain_model_news.tabs.relations,
+    related_links,
+    tx_hgon_workgroup,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+    --palette--;;paletteHidden,
+    --palette--;;paletteAccess,
+    '
+];
 
 
 // set available fields (also overwrite standard news with type 0)
 //$showFields = ['showitem' => 'type, title, teaser, datetime, bodytext, fal_media, categories, tags, tx_hgon_workgroup'];
+/*
 $showFields = ['showitem' => '
                 --palette--;;paletteCore,title,--palette--;;paletteSlug,teaser,
                 --palette--;;paletteDate,
@@ -75,3 +93,4 @@ $showFields = ['showitem' => '
                     notes,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.extended,'
         ];
+*/

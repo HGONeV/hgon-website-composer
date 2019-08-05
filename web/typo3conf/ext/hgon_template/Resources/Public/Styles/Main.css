@@ -1,4 +1,37 @@
-/* Pseudo-fix for header-images: Maybe the css is not the real problem */
+/* Clipboard add on (comes not from helllicht) */
+.clipboard-container {
+    background-color: #EDEFE0;
+    color: #6F7163;
+    display: none;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 100;
+    width: 50%;
+    top: 20px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    border: 1px solid;
+}
+.clipboard-container .cb-success {
+    font-size: 1.2em;
+}
+.clipboard-container .cb-success .cb-header {
+    font-weight: bolder;
+
+}
+.clipboard-container .cb-close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    z-index: 101;
+    border: none;
+    background-color: #EDEFE0;
+    font-weight: bolder;
+}
+
+
+    /* Pseudo-fix for header-images: Maybe the css is not the real problem */
 .main .main__header--image .picture img {
     width: 100%;
 }

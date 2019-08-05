@@ -17,9 +17,9 @@
                         </time>
                     </span>
                     <p>
-                        <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+                        <f:link.page pageUid="{settings.news.detailPid}" additionalParams="{tx_news_pi1:{news: newsItem, controller: 'News', action: 'detail'}}">
                             {newsItem.title}
-                        </n:link>
+                        </f:link.page>
                     </p>
                 </div>
             </f:for>

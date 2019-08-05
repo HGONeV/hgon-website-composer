@@ -21,5 +21,14 @@ plugin.tx_hgondonation {
         itemsPerPage = 3
         # cat=plugin.tx_hgondonation//a; type=int; label=maximum shown results
         maximumShownResults = 9999
+
+        bankAccount {
+            # cat=plugin.tx_hgondonation//a; type=string; label=IBAN
+            iban =
+            # cat=plugin.tx_hgondonation//a; type=string; label=BIC
+            bic =
+            # cat=plugin.tx_hgondonation//a; type=string; label=bank name
+            bank =
+        }
     }
 }

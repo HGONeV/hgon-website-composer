@@ -30,7 +30,17 @@ call_user_func(
             ]
         );
 
-
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonDonation',
+            'BankAccountSidebar',
+            [
+                'Donation' => 'bankAccountSidebar'
+            ],
+            // non-cacheable actions
+            [
+                'Donation' => ''
+            ]
+        );
 
 		\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
 			'HGON.HgonDonation',

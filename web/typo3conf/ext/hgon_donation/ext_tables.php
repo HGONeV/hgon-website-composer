@@ -16,6 +16,12 @@ call_user_func(
             'HGON Donation: Detailansicht'
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'HGON.HgonDonation',
+            'BankAccountSidebar',
+            'HGON Donation: Bankdaten (Sidebar)'
+        );
+
         /*
         // Reines Template-Plugin. Nicht im Backend anbieten.
 		\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
@@ -34,7 +40,7 @@ call_user_func(
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'HGON.HgonDonation',
             'SupportOptionsLight',
-            'HGON Donation: Zeige Spenden-Otionen (Mitglied & Geld)'
+            'HGON Donation: Zeige Spenden-Optionen (Mitglied & Geld)'
         );
 
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($extKey, 'Configuration/TypoScript', 'HGON Donation');

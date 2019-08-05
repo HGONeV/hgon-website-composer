@@ -77,6 +77,18 @@ call_user_func(
             'HGON: Sechs Gründe'
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'HGON.HgonTemplate',
+            'DidYouKnow',
+            'HGON: Wussten Sie schon?'
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'HGON.HgonTemplate',
+            'Maps',
+            'HGON: Zeigt HGON auf GoogleMaps'
+        );
+
 
         // ***************
         // NEWS

@@ -1,5 +1,7 @@
 # Extensions
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TypoScript/constants.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pb_social/Configuration/TypoScript/constants.txt">
+
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:rkw_basics/Configuration/TypoScript/constants.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:rkw_authors/Configuration/TypoScript/constants.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:rkw_events/Configuration/TypoScript/constants.txt">

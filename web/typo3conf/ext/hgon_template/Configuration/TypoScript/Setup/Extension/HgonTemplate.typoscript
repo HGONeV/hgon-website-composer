@@ -108,6 +108,8 @@ config.tx_extbase {
                     tableName = tx_news_domain_model_news
                 }
             }
+
+            HGON\HgonTemplate\Domain\Model\News.newRecordStoragePid = {$plugin.tx_news.persistence.storagePid}
         }
     }
 }
@@ -150,6 +152,7 @@ plugin.tx_hgontemplate {
         news {
             detailPid = {$plugin.tx_hgontemplate.settings.news.detailPid}
         }
+        showMapsPidList = {$plugin.tx_hgontemplate.settings.showMapsPidList}
     }
 }
 
