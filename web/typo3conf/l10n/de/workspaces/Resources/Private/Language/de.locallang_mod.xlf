@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-18T07:22:10Z" product-name="workspaces">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T07:14:15Z" product-name="workspaces">
 		<header/>
 		<body>
 			<trans-unit id="autopublishTask.description" approved="yes">
@@ -38,10 +38,6 @@
 			<trans-unit id="mlang_tabs_tab" approved="yes">
 				<source>Workspaces</source>
 				<target state="translated">Arbeitsumgebungen</target>
-			</trans-unit>
-			<trans-unit id="previewText" approved="yes">
-				<source>Preview of workspace %s (%s)</source>
-				<target state="translated">Vorschau von Arbeitsumgebung %s (%s)</target>
 			</trans-unit>
 			<trans-unit id="stage_ready_to_publish" approved="yes">
 				<source>Ready to publish</source>

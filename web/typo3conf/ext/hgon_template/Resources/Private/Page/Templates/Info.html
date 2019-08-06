@@ -9,7 +9,7 @@
     </f:section>
 
     <f:comment><!-- Don't show parentPageTeaserText --> </f:comment>
-    <f:render partial="Layout/ContentHeaderText" arguments="{parentPageTitle: parentPageTitle, parentPageSubtitle: parentPageSubtitle}" />
+    <f:render partial="Layout/ContentHeaderText" arguments="{_all}" section="currentPageContent" />
 
     <nav class="main__nav">
         <f:render partial="Navigation/SubPage" arguments="{_all}" />
@@ -17,15 +17,14 @@
 
     <div class="main__content">
 
-        <f:comment><!-- just auto generated content here --></f:comment>
+        <f:comment><!-- just auto generated content here -->
 
         <f:format.html parseFuncTSPath="">
             {siblingPagesOverview}
         </f:format.html>
-
-        <f:comment>
-            <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:0}" />
         </f:comment>
+
+            <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:0}" />
 
     </div>
 

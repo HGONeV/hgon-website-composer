@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T04:17:29Z" product-name="lang">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T04:18:53Z" product-name="lang">
 		<header/>
 		<body>
 			<trans-unit id="alttext.suggestSearching" approved="yes">
@@ -38,6 +38,10 @@
 			<trans-unit id="cm.allowedFileExtensions" approved="yes">
 				<source>Allowed file extensions:</source>
 				<target state="translated">Erlaubte Dateierweiterungen:</target>
+			</trans-unit>
+			<trans-unit id="cm.allowedRelations">
+				<source>Allowed relations</source>
+				<target/>
 			</trans-unit>
 			<trans-unit id="cm.allowEmbedSources" approved="yes">
 				<source>Allowed media sources:</source>

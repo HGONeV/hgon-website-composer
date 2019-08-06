@@ -108,16 +108,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.2.1",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "33810d865dd06a674130fceb729b2f279dc79e8c"
+                "reference": "f26a67e397be0e5c00d7c52ec7b5010098e15ce5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/33810d865dd06a674130fceb729b2f279dc79e8c",
-                "reference": "33810d865dd06a674130fceb729b2f279dc79e8c",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/f26a67e397be0e5c00d7c52ec7b5010098e15ce5",
+                "reference": "f26a67e397be0e5c00d7c52ec7b5010098e15ce5",
                 "shasum": ""
             },
             "require": {
@@ -160,7 +160,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2019-07-31T08:13:16+00:00"
+            "time": "2019-08-02T09:05:43+00:00"
         },
         {
             "name": "dmitryd/typo3-realurl",
@@ -831,16 +831,16 @@
         },
         {
             "name": "georgringer/news",
-            "version": "7.2.0",
+            "version": "7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/georgringer/news.git",
-                "reference": "2ed8306bf28465126c298d01fec67b696b4cde9f"
+                "reference": "475c0f0e0e7705895890e67cf0bef82298e99126"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/georgringer/news/zipball/2ed8306bf28465126c298d01fec67b696b4cde9f",
-                "reference": "2ed8306bf28465126c298d01fec67b696b4cde9f",
+                "url": "https://api.github.com/repos/georgringer/news/zipball/475c0f0e0e7705895890e67cf0bef82298e99126",
+                "reference": "475c0f0e0e7705895890e67cf0bef82298e99126",
                 "shasum": ""
             },
             "require": {
@@ -882,8 +882,8 @@
             "authors": [
                 {
                     "name": "Georg Ringer",
-                    "homepage": "http://montagmorgen.at",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "homepage": "http://montagmorgen.at"
                 }
             ],
             "description": "Versatile news extension, based on extbase & fluid for TYPO3 CMS",
@@ -894,7 +894,7 @@
                 "news",
                 "typo3"
             ],
-            "time": "2019-04-15T10:54:23+00:00"
+            "time": "2019-08-05T09:28:25+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

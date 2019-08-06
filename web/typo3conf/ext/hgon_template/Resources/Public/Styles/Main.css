@@ -31,7 +31,22 @@
 }
 
 
-    /* Pseudo-fix for header-images: Maybe the css is not the real problem */
+/* make helllicht form error styles compatible with typo3 */
+input.f3-form-error,
+select.f3-form-error,
+textarea.f3-form-error,
+.checkbox__input label.f3-form-error,
+.radio__input label.f3-form-error {
+    border-color: #FF5252;
+}
+input.f3-form-error,
+textarea.f3-form-error {
+    border-right: 3px solid #FF5252;
+}
+
+
+
+/* Pseudo-fix for header-images: Maybe the css is not the real problem */
 .main .main__header--image .picture img {
     width: 100%;
 }

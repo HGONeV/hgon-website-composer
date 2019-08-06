@@ -11,6 +11,9 @@ config.tx_extbase {
         RKW\RkwEvents\Controller\AjaxController {
             className = HGON\HgonTemplate\Controller\EventAjaxController
         }
+        RKW\RkwEvents\Controller\EventReservationController {
+            className = HGON\HgonTemplate\Controller\EventReservationController
+        }
         GeorgRinger\News\Controller\NewsController {
             className = HGON\HgonTemplate\Controller\NewsController
         }
@@ -133,7 +136,6 @@ plugin.tx_hgontemplate {
             0 = EXT:hgon_template/Resources/Private/Extension/HgonTemplate/Partials/
             1 = {$plugin.tx_hgontemplate.view.partialRootPath}
         }
-
     }
     persistence {
         storagePid = {$plugin.tx_hgontemplate.persistence.storagePid}

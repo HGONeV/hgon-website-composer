@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T02:18:34Z" product-name="form">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T02:10:11Z" product-name="form">
 		<header/>
 		<body>
 			<trans-unit id="element.form-element-identifier.properties.label" xml:space="preserve">
@@ -14,7 +14,7 @@
             <target/></trans-unit>
 			<trans-unit id="element.Page.renderingOptions.nextButtonLabel" xml:space="preserve">
                 <source>TEXT EN</source>
-            <target/></trans-unit>
+            <target/><alt-trans xml:space="preserve" origin="cicom"><target>TEXT DE</target></alt-trans></trans-unit>
 			<trans-unit id="element.Text.properties.label" xml:space="preserve">
                 <source>form-element-identifier LABEL EN 2</source>
             <target/></trans-unit>

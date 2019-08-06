@@ -15,9 +15,7 @@
             <nav class="main__nav">
                 <f:render partial="Navigation/SubPage" arguments="{_all}" />
             </nav>
-            <div class="article article--fullwidth">
-                <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:0}" />
-            </div>
+            <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:0}" />
         </div>
         <section class="section">
             <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:2}" />

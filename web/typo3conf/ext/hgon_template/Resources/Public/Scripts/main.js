@@ -3,25 +3,6 @@ $('.js-slider').helllslider();
 $('.js-lightbox').helllbox();
 $('.js-open-mdl').helllmodal();
 
-function copyToClipboard() {
-    /* Get the text field */
-    var copyText = document.getElementById("hgon-url");
-
-    /* Select the text field */
-    copyText.select();
-
-    /* Copy the text inside the text field */
-    document.execCommand("copy");
-
-    /* Alert the copied text */
-    jQuery(".clipboard-container").show().delay(5000).fadeOut(400);
-
-    jQuery('.cb-close').bind('click', function(){
-        jQuery('.clipboard-container').hide();
-    });
-}
-
-
 
 // https://www.comuno.net/blog/detail/formular-mit-typoscript-rendering-per-ajax-verschicken/
 function initAjaxForms() {
@@ -65,59 +46,42 @@ $(window).on('load', function() {
 });
 
 
+/* copy to clipboard function for tp-single share function */
+function copyToClipboard() {
+    /* Get the text field */
+    var copyText = document.getElementById("hgon-url");
+
+    /* Select the text field */
+    copyText.select();
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+
+    /* Alert the copied text */
+    jQuery(".clipboard-container").show().delay(5000).fadeOut(400);
+
+    jQuery('.cb-close').bind('click', function(){
+        jQuery('.clipboard-container').hide();
+    });
+}
+
+
 jQuery(document).ready(function(){
 
-    /*
-    jQuery(document).on('submit', 'form.form-framework', function (event) {
-        // console.log(jQuery(this).attr('action'));
-        var form = $(this);
-        var form_id = '#' + form.attr('id');
-        var ajaxuri = form.attr("data-ajaxuri");
-        jQuery.ajax
-        ({
-             url: form.attr("data-ajaxuri"),
-             type: 'post',
-             success: function (result) {
-                 var input = jQuery(result).find('.ext_form');
-                 console.log(input[0]['innerHTML']);
-                 jQuery('form').replaceWith(input[0]['innerHTML']);
-             }
-         });
-        event.preventDefault();
-    });
-    */
-
-    /*
-    $( document ).ajaxComplete(function() {
-       console.log("hihi");
-    });
-    */
-
-    /*
-    $(document).on('change', '#mitgliedsformular', function() {
-        console.log("huhu :)");
-        var elementId = jQuery(this).attr('id');
-        jQuery(elementId).replaceWith(this);
-    });
-    */
-
-    /*
-    jQuery(document).on('submit', 'form.form-framework', function (event) {
-       // console.log(jQuery(this).attr('action'));
+    // We don't use the ajax api while we're in lightbox content (does not work, because featherlight creates a copy)
+    jQuery(document).on('submit', '#rkwevents-reservation-form', function (event) {
         jQuery.ajax
         ({
              url: jQuery(this).attr('action'),
              data: jQuery(this).serialize(),
              type: 'post',
              success: function (result) {
-                console.log(result);
+                 jQuery('.featherlight-content #rkwevents-reservation-form').html(result);
+                 jQuery(".featherlight-content").scrollTop(0);
              }
          });
         event.preventDefault();
     });
-    */
-
-
 
 });
 

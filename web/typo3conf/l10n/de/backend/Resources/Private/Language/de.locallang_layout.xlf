@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T00:13:39Z" product-name="backend">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T00:13:41Z" product-name="backend">
 		<header/>
 		<body>
 			<trans-unit id="advancedFunctions" approved="yes">

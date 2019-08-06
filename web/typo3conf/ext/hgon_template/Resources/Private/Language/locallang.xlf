@@ -62,6 +62,15 @@
                 <source>--- Please choose ---</source>
             </trans-unit>
 
+
+             <trans-unit id="templates_registration_privacy_default.firstPart">
+                <source>Yes, I agree that HGON will use my personal data for the above purpose and to create a free user account.  Furthermore, I have read and agree to the extended notes in the</source>
+            </trans-unit>
+
+            <trans-unit id="tx_rkwevents_fluid.partials_eventReservation_formFieldsMaster.terms3">
+                <source>In particular, I agree that HGON may publish photographs and videos taken during the event in various media for the purposes of event reporting and general public relations work.</source>
+            </trans-unit>
+
         </body>
 	</file>
 </xliff>

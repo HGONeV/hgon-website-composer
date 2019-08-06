@@ -1,14 +1,12 @@
 
 <section class="article article--fullwidth">
     <h2>Arbeitskreistreffen</h2>
-    <div class="flex-container space-between gutter / mt-1">
+    <div class="flex-container space-between gutter / mt-1" id="tx-rkwevents-grid-section-workgroup">
         <f:if condition="<f:count>{workGroupEventList}</f:count>">
             <f:then>
-                <div id="tx-rkwevents-grid-section-workgroup">
-                    <f:for each="{workGroupEventList}" as="event">
-                        <f:render partial="Event/List/Box" arguments="{_all}" section="list" />
-                    </f:for>
-                </div>
+                <f:for each="{workGroupEventList}" as="event">
+                    <f:render partial="Event/List/Box" arguments="{_all}" section="list" />
+                </f:for>
             </f:then>
             <f:else>
                 <div class="no-search-results first-letter-normal content content-box">

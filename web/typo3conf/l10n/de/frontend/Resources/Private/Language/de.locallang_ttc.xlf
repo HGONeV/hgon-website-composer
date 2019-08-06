@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T02:40:43Z" product-name="frontend">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T02:33:32Z" product-name="frontend">
 		<header/>
 		<body>
 			<trans-unit id="accessibility_bypass" approved="yes">
@@ -971,9 +971,11 @@
 				<source>Plugin Mode</source>
 				<target state="translated">Plug-In-Modus</target>
 			</trans-unit>
-			<trans-unit id="spaceAfter" approved="yes">
-				<source>After</source>
-				<target state="translated">Abstand danach</target>
+			<trans-unit id="spaceAfter" approved="no">
+				<source>After:</source>
+				<target state="needs-translation">Abstand danach</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v9</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v9</note>
 			</trans-unit>
 			<trans-unit id="space_after_class" approved="yes">
 				<source>Space After</source>
@@ -986,10 +988,14 @@
 			<trans-unit id="spaceAfter_formlabel" approved="yes">
 				<source>Bottom Margin</source>
 				<target state="translated">Unterer Abstand</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v9</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v9</note>
 			</trans-unit>
-			<trans-unit id="spaceBefore" approved="yes">
-				<source>Before</source>
-				<target state="translated">Abstand davor</target>
+			<trans-unit id="spaceBefore" approved="no">
+				<source>Before:</source>
+				<target state="needs-translation">Abstand davor</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v9</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v9</note>
 			</trans-unit>
 			<trans-unit id="space_before_class" approved="yes">
 				<source>Space Before</source>
@@ -1002,6 +1008,8 @@
 			<trans-unit id="spaceBefore_formlabel" approved="yes">
 				<source>Top Margin</source>
 				<target state="translated">Oberer Abstand</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v9</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v9</note>
 			</trans-unit>
 			<trans-unit id="space_class_extra_large" approved="yes">
 				<source>Extra Large</source>

@@ -103,7 +103,7 @@ page {
 
 
             //=================================================================
-            // Journal Overview
+            // Show upcoming events
             //=================================================================
             rkwEventsUpcomingEvents = USER
             rkwEventsUpcomingEvents {
@@ -116,6 +116,38 @@ page {
                     // Again: Controller-Name and Action
                     Event {
                         1 = upcoming
+                    }
+                }
+
+                view =< plugin.tx_rkwevents.view
+                persistence =< plugin.tx_rkwevents.persistence
+                settings =< plugin.tx_rkwevents.settings
+            }
+
+
+
+            //=================================================================
+            // Event reservation form
+            // We can't use RkwEvents for it (multiple plugin on one page problems)
+            //=================================================================
+            rkwEventsReservation = USER
+            rkwEventsReservation {
+                userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                extensionName = RkwEvents
+                pluginName = RkwEventsReservation
+                vendorName = RKW
+                controller = EventReservation
+                switchableControllerActions {
+                    // Again: Controller-Name and Action
+                    EventReservation {
+                        1 = new
+                        2 = create
+                        3 = update
+                        4 = delete
+                        5 = remove
+                        6 = optIn
+                        7 = edit
+                        8 = end
                     }
                 }
 
@@ -200,7 +232,7 @@ page {
 
 
             //=================================================================
-            // maps
+            // maps (shows hgon headquarter place on googleMaps - nothing else)
             //=================================================================
             maps = USER
             maps {
@@ -267,6 +299,33 @@ page {
                 view =< plugin.tx_pbsocial.view
                 persistence =< plugin.tx_pbsocial.persistence
                 settings =< plugin.tx_pbsocial.settings
+            }
+
+
+
+            //=================================================================
+            // add googleMaps to event view
+            //=================================================================
+            eventMaps = USER
+            eventMaps {
+                userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                extensionName = RkwEvents
+                pluginName = Eventmaps
+                vendorName = RKW
+                controller = Event
+                switchableControllerActions {
+                    // Again: Controller-Name and Action
+                    Event {
+                        1 = maps
+                    }
+                }
+
+                view =< plugin.tx_rkwevents.view
+                persistence =< plugin.tx_rkwevents.persistence
+                settings =< plugin.tx_rkwevents.settings
+
+                stdWrap.wrap = <picture class="article-picture">|</picture>
+
             }
 
         }

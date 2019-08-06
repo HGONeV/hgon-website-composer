@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-18T07:22:10Z" product-name="workspaces">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T07:14:15Z" product-name="workspaces">
 		<header/>
 		<body>
 			<trans-unit id="actionSendToStage" approved="yes">
@@ -19,10 +19,6 @@
 				<source>Choose mass action</source>
 				<target state="translated">Stapelverarbeitung auswählen</target>
 			</trans-unit>
-			<trans-unit id="chooseSelectionAction" approved="yes">
-				<source>Choose selection action</source>
-				<target state="translated">Auswahlaktion auswählen</target>
-			</trans-unit>
 			<trans-unit id="close" approved="yes">
 				<source>Close</source>
 				<target state="translated">Schließen</target>
@@ -38,10 +34,6 @@
 			<trans-unit id="column.difference" approved="yes">
 				<source>Difference</source>
 				<target state="translated">Unterschied</target>
-			</trans-unit>
-			<trans-unit id="column.integrity" approved="yes">
-				<source>Integrity</source>
-				<target state="translated">Integrität</target>
 			</trans-unit>
 			<trans-unit id="column.livePath" approved="yes">
 				<source>Live path</source>
@@ -324,10 +316,6 @@
 				<source>Edit element</source>
 				<target state="translated">Element bearbeiten</target>
 			</trans-unit>
-			<trans-unit id="tooltip.expand" approved="yes">
-				<source>Expand element and show relations</source>
-				<target state="translated">Element ausklappen und Relationen anzeigen</target>
-			</trans-unit>
 			<trans-unit id="tooltip.generatePagePreview" approved="yes">
 				<source>Generate page preview links</source>
 				<target state="translated">Seitenvorschaulinks erstellen</target>
@@ -352,10 +340,6 @@
 				<source>Send record to previous Stage</source>
 				<target state="translated">Datensatz an vorherige Stufe senden</target>
 			</trans-unit>
-			<trans-unit id="tooltip.showChanges" approved="yes">
-				<source>Show changes</source>
-				<target state="translated">Änderungen anzeigen</target>
-			</trans-unit>
 			<trans-unit id="tooltip.showHistory" approved="yes">
 				<source>Show history of workspace version</source>
 				<target state="translated">Zeige Verlauf der Version in der Arbeitsumgebung</target>
@@ -376,6 +360,15 @@
 				<source>Preview element</source>
 				<target state="translated">Elementvorschau</target>
 			</trans-unit>
+			<trans-unit id="warning.oldStyleWorkspaceInUser" xml:space="preserve" approved="yes">
+				<source>It seems that you're still using old-style workspace. Please use the update scripts in the TYPO3
+					Install Tool to run the necessary updates. If you continue using this module without migrating your
+					workspace you might loose data.
+				</source>
+			<target state="translated">Scheinbar verwenden Sie eine veraltete Version der Arbeitsumgebungen. Bitte nutzen Sie den Update-Assistenten
+					im Install Tool um dieses Problem zu beheben. Wenn Sie mit der veralteten Version fortfahren zu arbeiten
+					könnte dies zu Datenverlust führen.
+				</target><note from="developer">This label is deprecated (not used anymore) since TYPO3v8</note><note>This label is deprecated (not used anymore) since TYPO3v8</note></trans-unit>
 			<trans-unit id="window.discardAll.message" approved="yes">
 				<source>Do you really want to discard all versions from page?</source>
 				<target state="translated">Tatsächlich alle Versionen von dieser Seite verwerfen?</target>
@@ -396,30 +389,6 @@
 				<source>Prepare to start mass action</source>
 				<target state="translated">Stapelverarbeitung ausführen</target>
 			</trans-unit>
-			<trans-unit id="window.recordChanges" approved="yes">
-				<source>Record changes</source>
-				<target state="translated">Datensatzänderungen</target>
-			</trans-unit>
-			<trans-unit id="window.recordChanges.tabs.changeSummary" approved="yes">
-				<source>Summary of changes</source>
-				<target state="translated">Zusammenfassung der Änderungen</target>
-			</trans-unit>
-			<trans-unit id="window.recordChanges.tabs.comments" approved="yes">
-				<source>Comments</source>
-				<target state="translated">Kommentare</target>
-			</trans-unit>
-			<trans-unit id="window.recordChanges.tabs.history" approved="yes">
-				<source>History</source>
-				<target state="translated">Verlauf</target>
-			</trans-unit>
-			<trans-unit id="window.recordHistory" approved="yes">
-				<source>History of record "{0}"</source>
-				<target state="translated">Verlauf von Datensatz "{0}"</target>
-			</trans-unit>
-			<trans-unit id="window.recordInformation" approved="yes">
-				<source>Information for "{0}"</source>
-				<target state="translated">Informationen für "{0}"</target>
-			</trans-unit>
 			<trans-unit id="window.selectionAction.title" approved="yes">
 				<source>Prepare to execute actions on selection</source>
 				<target state="translated">Stapelverarbeitung für Auswahl ausführen</target>
@@ -427,10 +396,6 @@
 			<trans-unit id="window.sendToNextStageWindow.additionalRecipients" approved="yes">
 				<source>Additional recipients</source>
 				<target state="translated">Weitere Empfänger</target>
-			</trans-unit>
-			<trans-unit id="window.sendToNextStageWindow.additionalRecipients.hint" approved="yes">
-				<source>One recipient per line</source>
-				<target state="translated">Ein Empfänger pro Zeile</target>
 			</trans-unit>
 			<trans-unit id="window.sendToNextStageWindow.comments" approved="yes">
 				<source>Comments</source>

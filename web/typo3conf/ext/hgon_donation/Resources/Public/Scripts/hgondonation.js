@@ -4,8 +4,6 @@ jQuery(document).ready(function(){
         IMPORTANT: We do not use RkwBasics AjaxApi here. The form existing two times (lightbox featherlight creates a copy)
         -> So we manage it this way
      */
-
-
     jQuery(document).on('change', '#hgon-donation-project-search-form', function (event) {
 
         jQuery.ajax

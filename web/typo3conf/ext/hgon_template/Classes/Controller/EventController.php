@@ -50,7 +50,9 @@ class EventController extends \RKW\RkwEvents\Controller\EventController
 
 
     /**
+     * action list
      *
+     * @return void
      */
     public function listAction()
     {
@@ -78,6 +80,29 @@ class EventController extends \RKW\RkwEvents\Controller\EventController
         $this->view->assign('workGroupList', $this->workGroupRepository->findAll());
         $this->view->assign('timeArrayList', EventHelper::createMonthListArray());
         $this->view->assign('showMoreLink', $showMoreLink);
+    }
+
+
+
+    /**
+     * action show
+     *
+     * @param \RKW\RkwEvents\Domain\Model\Event $event
+     * @return void
+     * @ignorevalidation $event
+     */
+    public function showAction(\RKW\RkwEvents\Domain\Model\Event $event)
+    {
+        // for list view within show
+        $this->settings['itemsPerPage'] = 5;
+        self::listAction();
+
+        // prevent grouping
+        $this->view->assign('noGrouping', true);
+        $this->view->assign('eventToExclude', $event);
+
+        // get standard show action
+        parent::showAction($event);
     }
 
 

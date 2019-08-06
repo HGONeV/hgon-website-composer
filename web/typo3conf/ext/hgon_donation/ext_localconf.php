@@ -82,7 +82,7 @@ call_user_func(
         // Hook for Geodata and reservation cleanup on copy
         $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass'][$extKey] = 'HGON\\HgonDonation\\Hooks\\TceMainHooks';
 
-        // add to InstallTool options (otherwise the RkwEvents ajax calls will not work)
+        // add to InstallTool options (otherwise the ajax calls will not work)
         $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_hgondonation_donate[action]';
         $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_hgondonation_donate[controller]';
         $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'][] = 'tx_hgondonation_donate[donationTypeTime]';

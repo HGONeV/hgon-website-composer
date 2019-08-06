@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T06:20:00Z" product-name="scheduler">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T06:27:51Z" product-name="scheduler">
 		<header/>
 		<body>
 			<trans-unit id="tx_scheduler_task_group" approved="yes">

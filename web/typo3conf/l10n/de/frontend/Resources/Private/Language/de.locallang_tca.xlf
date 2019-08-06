@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-19T02:40:42Z" product-name="frontend">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T02:33:31Z" product-name="frontend">
 		<header/>
 		<body>
 			<trans-unit id="backend_layout" approved="yes">
@@ -671,13 +671,13 @@
 				<source>Page Title</source>
 				<target state="translated">Seitentitel</target>
 			</trans-unit>
-			<trans-unit id="pages.TSconfig_formlabel" approved="yes">
-				<source>Page TSConfig</source>
-				<target state="translated">Seiten-TSconfig</target>
+			<trans-unit id="pages.TSconfig_formlabel" approved="no">
+				<source>Page TSconfig</source>
+				<target state="needs-translation">Seiten-TSconfig</target>
 			</trans-unit>
-			<trans-unit id="pages.tsconfig_includes" approved="yes">
-				<source>Include Page TSConfig (from extensions)</source>
-				<target state="translated">Seiten-TSconfig einbinden (aus Erweiterungen)</target>
+			<trans-unit id="pages.tsconfig_includes" approved="no">
+				<source>Include Page TSconfig (from extensions)</source>
+				<target state="needs-translation">Seiten-TSconfig einbinden (aus Erweiterungen)</target>
 			</trans-unit>
 			<trans-unit id="pages.url" approved="yes">
 				<source>URL</source>
@@ -797,9 +797,11 @@
 				<source>Include static (from extensions)</source>
 				<target state="translated">Statische Templates einschließen (aus Erweiterungen)</target>
 			</trans-unit>
-			<trans-unit id="sys_template.nextLevel" approved="yes">
-				<source>Template on Next Level</source>
-				<target state="translated">Template auf nächster Ebene</target>
+			<trans-unit id="sys_template.nextLevel" approved="no">
+				<source>Template on Next Level:</source>
+				<target state="needs-translation">Template auf nächster Ebene</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v9</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v9</note>
 			</trans-unit>
 			<trans-unit id="sys_template.resources" approved="yes">
 				<source>Resources</source>

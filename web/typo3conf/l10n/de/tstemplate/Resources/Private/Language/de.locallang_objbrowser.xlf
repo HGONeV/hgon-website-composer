@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-04-18T07:02:12Z" product-name="tstemplate">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T06:56:32Z" product-name="tstemplate">
 		<header/>
 		<body>
 			<trans-unit id="addButton" approved="yes">
@@ -83,10 +83,6 @@
 				<source>Edit object/property value</source>
 				<target state="translated">Objekt-/Eigenschaftswert bearbeiten</target>
 			</trans-unit>
-			<trans-unit id="error.1446559458" approved="yes">
-				<source>Error evaluating regular expression "%s".</source>
-				<target state="translated">Fehler beim Auswerten des regulären Ausdrucks "%s".</target>
-			</trans-unit>
 			<trans-unit id="errorShowDetails" approved="yes">
 				<source>Show details</source>
 				<target state="translated">Details anzeigen</target>
@@ -146,18 +142,6 @@
 			<trans-unit id="setupRoot" approved="yes">
 				<source>setup root</source>
 				<target state="translated">Setup-Wurzel</target>
-			</trans-unit>
-			<trans-unit id="severity.1" approved="yes">
-				<source>Info</source>
-				<target state="translated">Info</target>
-			</trans-unit>
-			<trans-unit id="severity.2" approved="yes">
-				<source>Warning</source>
-				<target state="translated">Warnung</target>
-			</trans-unit>
-			<trans-unit id="severity.3" approved="yes">
-				<source>Error</source>
-				<target state="translated">Fehler</target>
 			</trans-unit>
 			<trans-unit id="sortAlphabetically" approved="yes">
 				<source>Sort alphabetically</source>
