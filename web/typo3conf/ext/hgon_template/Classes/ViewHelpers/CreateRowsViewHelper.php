@@ -31,26 +31,34 @@ class CreateRowsViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
      *
      * @param mixed $list
      * @param int $itemsPerRow
+     * @param bool $shuffle
      *
      * @return array
      */
-    public function render($list, $itemsPerRow = 3)
+    public function render($list, $itemsPerRow = 3, $shuffle = false)
     {
         // merge possible list-arrays
         $mergedList = [];
         foreach (array_filter($list) as $singleList) {
-            if ($singleList instanceof \TYPO3\CMS\Extbase\Persistence\Generic\QueryResult) {
+            if (
+                $singleList instanceof \TYPO3\CMS\Extbase\Persistence\Generic\QueryResult
+                || $singleList instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+            ) {
                 $singleList = $singleList->toArray();
             }
             if (!is_array($singleList)) {
                 $singleList = [$singleList];
             }
             $mergedList = array_merge($mergedList, $singleList);
-            shuffle($mergedList);
+
+            // shuffle results if wanted
+            if ($shuffle) {
+                shuffle($mergedList);
+            }
         }
 
+        // create new list with rows in wished length (default: 3 items per row)
         $newList = [];
-
         $i = 0;
         do {
             if (count($mergedList) > $itemsPerRow) {

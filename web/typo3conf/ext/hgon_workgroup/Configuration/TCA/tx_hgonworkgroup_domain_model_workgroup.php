@@ -172,7 +172,7 @@ return [
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_rkwauthors_domain_model_authors',
                 'foreign_table_where' => 'AND tx_rkwauthors_domain_model_authors.deleted = 0 AND tx_rkwauthors_domain_model_authors.hidden = 0 ORDER BY tx_rkwauthors_domain_model_authors.last_name ASC',
-                'maxitems'      => 9999,
+                'maxitems'      => 3,
                 'minitems' 		=> 0,
                 'size'          => 5,
             ],

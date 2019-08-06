@@ -26,7 +26,13 @@ class WorkGroupController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     protected $workGroupRepository = null;
 
-
+    /**
+     * eventRepository
+     *
+     * @var \HGON\HgonWorkgroup\Domain\Repository\EventRepository
+     * @inject
+     */
+    protected $eventRepository = null;
 
     /**
      * action list

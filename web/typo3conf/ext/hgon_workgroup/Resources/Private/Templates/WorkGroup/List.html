@@ -37,8 +37,10 @@
                         <span class="h5 headline">
                             <f:translate key="tx_hgonworkgroup_template_workgroup_list.noResult" />
                         </span>
-                        <br>
-                        <br>
+                        <f:comment><!-- section="workgroup-list-anchor" --></f:comment>
+                        <f:link.action action="list" class="btn btn--tertiary btn--rounded">
+                            <f:translate key="tx_hgonworkgroup_general.showAll" />
+                        </f:link.action>
                     </div>
                 </f:else>
             </div>
