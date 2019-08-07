@@ -10,6 +10,7 @@ TCEFORM {
 
         # Layout
         layout {
+            removeItems = 1,2,3
             //altLabels {
             addItems {
                 //0 = Normale Box
@@ -37,9 +38,12 @@ TCEFORM {
                 #51 = Sitemap: Menü horizontal
 
             #    50 = Layout: 3 Spalten
+                55 = Slider: Kleine Bilder & Text (Meinungen-Plugin)
                 60 = Slider: Große Bilder & Text
                 61 = Slider: Fotoshow
-                70 = Slider: Kleine Bilder & Text
+                65 = Fotoshow (Lightbox Gallerie)
+                70 = Zitat (ohne Bild)
+
             }
 
         }

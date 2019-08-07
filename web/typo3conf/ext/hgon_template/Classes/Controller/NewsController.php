@@ -50,10 +50,34 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController
      */
     public function showRelatedSidebarAction()
     {
+        $categories = [];
+        $newsToExclude = [];
+
+        // Get category of news, if news detail
+        $request = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('tx_news_pi1');
+        if (array_key_exists('news', $request)) {
+            $newsUid = intval($request['news']);
+            $news = $this->newsRepository->findByIdentifier($newsUid);
+            if (count($news->getCategories())) {
+                $categories = $news->getCategories();
+            }
+            // except current news
+            $newsToExclude[] = $news;
+        }
+
+        // Else: Get categories of pages
         /** @var \HGON\HgonTemplate\Domain\Model\Pages $pages */
         $pages = $this->pagesRepository->findByIdentifier(intval($GLOBALS['TSFE']->id));
         if (count($pages->getCategories())) {
-            $this->view->assign('newsList', $this->newsRepository->findByCategories($pages->getCategories()));
+            $categories = $pages->getCategories();
+        }
+
+
+        if ($categories) {
+            $this->view->assign('newsList', $this->newsRepository->findByCategories($categories, $newsToExclude));
+        } else {
+            // fallback - get five current news
+            $this->view->assign('newsList', $this->newsRepository->findAll()->getQuery()->setLimit(5)->execute());
         }
         $this->view->assign('settingsHgonTemplate', self::getSettings('HgonTemplate'));
     }
