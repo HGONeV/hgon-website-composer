@@ -1,7 +1,11 @@
+// we have to call the helllicht functions from /hgon-html/site/snippets/foot.php
 $('.js-navbar').helllnav();
 $('.js-slider').helllslider();
 $('.js-lightbox').helllbox();
 $('.js-open-mdl').helllmodal();
+$('.js-tabs-container').hellltabs({
+  tabIndex: 0
+});
 
 
 // https://www.comuno.net/blog/detail/formular-mit-typoscript-rendering-per-ajax-verschicken/

@@ -26,6 +26,13 @@ class Pages extends \RKW\RkwBasics\Domain\Model\Pages
 {
 
     /**
+     * txRkwprojectsProjectUid
+     *
+     * @var \RKW\RkwProjects\Domain\Model\Projects
+     */
+    protected $txRkwprojectsProjectUid = null;
+
+    /**
      * SysCategory
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\HGON\HgonTemplate\Domain\Model\SysCategory>
@@ -71,6 +78,26 @@ class Pages extends \RKW\RkwBasics\Domain\Model\Pages
         $this->txHgontemplateContactperson = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
+    /**
+     * Returns the txRkwprojectsProjectUid
+     *
+     * @return \RKW\RkwProjects\Domain\Model\Projects $txRkwprojectsProjectUid
+     */
+    public function getTxRkwprojectsProjectUid()
+    {
+        return $this->txRkwprojectsProjectUid;
+    }
+
+    /**
+     * Sets the txRkwprojectsProjectUid
+     *
+     * @param \RKW\RkwProjects\Domain\Model\Projects $txRkwprojectsProjectUid
+     * @return void
+     */
+    public function setTxRkwprojectsProjectUid(\RKW\RkwProjects\Domain\Model\Projects $txRkwprojectsProjectUid)
+    {
+        $this->txRkwprojectsProjectUid = $txRkwprojectsProjectUid;
+    }
 
 
     /**

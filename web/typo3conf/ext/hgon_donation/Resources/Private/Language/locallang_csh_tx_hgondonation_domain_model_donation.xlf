@@ -45,6 +45,9 @@
             <trans-unit id="time_range_end.description">
                 <source>timeRangeEnd</source>
             </trans-unit>
+            <trans-unit id="tx_rkwproject_project.description">
+                <source>Project</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -48,6 +48,7 @@ class DonationRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $constraints = [];
 
         if ($filter['type']) {
+            /*
             // type 1: time
             if ($filter['type'] == 1) {
                 $constraints[] = $query->greaterThan('donationTypeTime', 0);
@@ -56,15 +57,19 @@ class DonationRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
             if ($filter['type'] == 2) {
                 $constraints[] = $query->greaterThan('donationTypeMoney', 0);
             }
+            */
+            $constraints[] = $query->equals('type', $filter['type']);
         }
 
+        /*
         if ($filter['time']) {
             $constraints[] =
-                $query->logicalAnd(
-                    $query->lessThanOrEqual('timeRangeStart', intval($filter['time'])),
-                    $query->greaterThan('timeRangeStart', 0)
-                );
+            $query->logicalAnd(
+                $query->lessThanOrEqual('timeRangeStart', intval($filter['time'])),
+                $query->greaterThan('timeRangeStart', 0)
+            );
         }
+        */
 
         // always
         $constraints[] =

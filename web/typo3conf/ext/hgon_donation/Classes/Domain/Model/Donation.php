@@ -106,6 +106,13 @@ class Donation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $timeRangeEnd = 0;
 
+    /**
+     * txRkwprojectProject
+     *
+     * @var \RKW\RkwProjects\Domain\Model\Projects
+     */
+    protected $txRkwprojectProject = null;
+
 	/**
 	 * __construct
 	 */
@@ -418,5 +425,26 @@ class Donation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setTimeRangeEnd($timeRangeEnd)
     {
         $this->timeRangeEnd = $timeRangeEnd;
+    }
+
+    /**
+     * Returns the txRkwprojectProject
+     *
+     * @return \RKW\RkwProjects\Domain\Model\Projects
+     */
+    public function getTxRkwprojectProject()
+    {
+        return $this->txRkwprojectProject;
+    }
+
+    /**
+     * Sets the txRkwprojectProject
+     *
+     * @param \RKW\RkwProjects\Domain\Model\Projects $txRkwprojectProject
+     * @return void
+     */
+    public function setTxRkwprojectProject($txRkwprojectProject)
+    {
+        $this->txRkwprojectProject = $txRkwprojectProject;
     }
 }

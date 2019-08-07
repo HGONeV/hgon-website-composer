@@ -20,14 +20,14 @@ return [
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		],
-		'searchFields' => 'type,title,short_description,description,image,link,donation_type_time,donation_type_money, typolink, pages, time_range_start, time_range_end',
+		'searchFields' => 'type,title,short_description,description,image,link,donation_type_time,donation_type_money, time_range_start, time_range_end, tx_rkwproject_project',
 		'iconfile' => 'EXT:hgon_donation/Resources/Public/Icons/tx_hgondonation_domain_model_donation.gif'
 	],
 	'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, title, short_description, description, image, link, donation_type_time, donation_type_money, typolink, time_range_start, time_range_end',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, title, short_description, description, image, link, donation_type_time, donation_type_money, time_range_start, time_range_end, tx_rkwproject_project',
 	],
 	'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, time_range_start, time_range_end, title, short_description, description, image, typolink, pages, link, donation_type_time, donation_type_money, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, time_range_start, time_range_end, title, short_description, description, image, link, donation_type_time, donation_type_money, tx_rkwproject_project, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
 	],
 	'columns' => [
 		'sys_language_uid' => [
@@ -317,6 +317,19 @@ return [
                 'range' => [
                     'upper' => mktime(0, 0, 0, 1, 1, 2038)
                 ]
+            ],
+        ],
+        'tx_rkwproject_project' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:rkw_events/Resources/Private/Language/locallang_db.xlf:tx_rkwevents_domain_model_event.project',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'foreign_table' => 'tx_rkwprojects_domain_model_projects',
+                'foreign_table_where' => 'AND ((\'###PAGE_TSCONFIG_IDLIST###\' <> \'0\' AND FIND_IN_SET(tx_rkwprojects_domain_model_projects.pid,\'###PAGE_TSCONFIG_IDLIST###\')) OR (\'###PAGE_TSCONFIG_IDLIST###\' = \'0\')) AND tx_rkwprojects_domain_model_projects.sys_language_uid = ###REC_FIELD_sys_language_uid### ORDER BY tx_rkwprojects_domain_model_projects.short_name ASC',
+                'maxitems'      => 1,
+                'minitems'      => 1,
+                'size'          => 5,
             ],
         ],
 	],

@@ -18,6 +18,7 @@ CREATE TABLE tx_hgondonation_domain_model_donation (
 	pages int(11) unsigned DEFAULT '0',
 	time_range_start int(11) DEFAULT '0' NOT NULL,
 	time_range_end int(11) DEFAULT '0' NOT NULL,
+	tx_rkwproject_project int(11) unsigned DEFAULT '0',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

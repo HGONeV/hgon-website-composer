@@ -60,6 +60,10 @@
             <trans-unit id="tx_hgondonation_domain_model_donation.time_range_end">
                 <source>Time Range End</source>
             </trans-unit>
+            <trans-unit id="tx_hgondonation_domain_model_donation.tx_rkwproject_project">
+                <source>Project</source>
+            </trans-unit>
+
 			<trans-unit id="tx_hgondonation_domain_model_donationtypetime">
 				<source>Donation Time</source>
 			</trans-unit>

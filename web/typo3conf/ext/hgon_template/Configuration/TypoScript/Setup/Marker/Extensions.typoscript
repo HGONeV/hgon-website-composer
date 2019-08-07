@@ -280,6 +280,30 @@ page {
 
 
             //=================================================================
+            // Project donation options
+            //=================================================================
+            donationProject = USER
+            donationProject {
+                userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                extensionName = HgonDonation
+                pluginName = DonationProject
+                vendorName = HGON
+                controller = Donation
+                switchableControllerActions {
+                    // Again: Controller-Name and Action
+                    Donation {
+                        1 = donationProject
+                    }
+                }
+
+                view =< plugin.tx_hgondonation.view
+                persistence =< plugin.tx_hgondonation.persistence
+                settings =< plugin.tx_hgondonation.settings
+            }
+
+
+
+            //=================================================================
             // PbSocialTwitter
             //=================================================================
             pbSocialTwitter = USER

@@ -42,6 +42,18 @@ call_user_func(
             ]
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonDonation',
+            'DonationProject',
+            [
+                'Donation' => 'donationProject'
+            ],
+            // non-cacheable actions
+            [
+                'Donation' => 'donationProject'
+            ]
+        );
+
 		\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
 			'HGON.HgonDonation',
 			'Donate',
@@ -78,6 +90,8 @@ call_user_func(
                 'Standard' => 'supportOptionsLight'
             ]
         );
+
+
 
         // Hook for Geodata and reservation cleanup on copy
         $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass'][$extKey] = 'HGON\\HgonDonation\\Hooks\\TceMainHooks';

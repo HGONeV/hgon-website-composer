@@ -33,6 +33,22 @@
 			<trans-unit id="tx_hgondonation_domain_model_donation.donation_type_money">
 				<source>Donation Type Money</source>
 			</trans-unit>
+			<trans-unit id="tx_hgondonation_domain_model_donation.typolink">
+                <source>Typolink (Project)</source>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_domain_model_donation.pages">
+                <source>Pages (Project)</source>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_domain_model_donation.time_range_start">
+                <source>Time Range Start</source>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_domain_model_donation.time_range_end">
+                <source>Time Range End</source>
+            </trans-unit>
+            <trans-unit id="tx_hgondonation_domain_model_donation.tx_rkwproject_project">
+                <source>Project</source>
+            </trans-unit>
+
 			<trans-unit id="tx_hgondonation_domain_model_donationtypetime">
 				<source>Donation Type Time</source>
 			</trans-unit>
@@ -57,6 +73,7 @@
 			<trans-unit id="tx_hgondonation_domain_model_donationtypetime.time_range_end">
 				<source>Time Range End</source>
 			</trans-unit>
+
 			<trans-unit id="tx_hgondonation_domain_model_donationtypetime.recurring">
 				<source>Recurring</source>
 			</trans-unit>

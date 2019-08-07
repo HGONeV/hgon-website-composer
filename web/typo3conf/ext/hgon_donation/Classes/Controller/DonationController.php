@@ -36,17 +36,16 @@ class DonationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     protected $pagesRepository = null;
 
-
-
     /**
      * action list
      * (alternative list for donation time popup in footer)
      *
      * @param array $filter
      * @param integer $page
+     * @param integer $itemType for pager (which type is meant)
      * @return void
      */
-    public function listAction($filter = array(), $page = 0)
+    public function listAction($filter = array(), $page = 0, $itemType = 0)
     {
         // initial page increase
         $page++;
@@ -62,19 +61,58 @@ class DonationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
             $filter[$key] = filter_var($value, FILTER_SANITIZE_STRING);
         }
 
-        $donationListTotal = $this->donationRepository->findByFilter($filter, 1, PHP_INT_MAX)->count();
-        $maximumReached = ($page * $this->settings['itemsPerPage']) < intval($this->settings['maximumShownResults']) ? false : true;
+        $this->settings['itemsPerPage'] = 1;
+
+        // for pagination - we set the type manually in the more-link
+        if ($itemType) {
+            $filter['type'] = intval($itemType);
+        }
+        $originalType = $filter['type'];
+        // donation time
         if (
-            ($page * $this->settings['itemsPerPage']) < $donationListTotal
-            && !$maximumReached
+            !$filter['type']
+            || $filter['type'] == 1
         ) {
-            $replacements['showMoreLink'] = true;
+            // set filter, if not set (to get only donation time data sets)
+            $filter['type'] = 1;
+            $donationListTotal = $this->donationRepository->findByFilter($filter, 1, PHP_INT_MAX)->count();
+            $maximumReached = ($page * $this->settings['itemsPerPage']) < intval($this->settings['maximumShownResults']) ? false : true;
+            if (
+                ($page * $this->settings['itemsPerPage']) < $donationListTotal
+                && !$maximumReached
+            ) {
+                $replacements['showMoreLinkDonationTime'] = true;
+            }
+            $replacements['donationTypeTimeList'] = $this->donationRepository->findByFilter($filter, $page, intval($this->settings['itemsPerPage']));
+
+            // reset type to not disturbed code below
+            $filter['type'] = $originalType;
         }
 
-        $replacements['donationList'] = $this->donationRepository->findByFilter($filter, $page, intval($this->settings['itemsPerPage']));
+
+        // donation time
+        if (
+            !$filter['type']
+            || $filter['type'] == 2
+        ) {
+            // set filter, if not set (to get only donation time data sets)
+            $filter['type'] = 2;
+            $donationListTotal = $this->donationRepository->findByFilter($filter, 1, PHP_INT_MAX)->count();
+            $maximumReached = ($page * $this->settings['itemsPerPage']) < intval($this->settings['maximumShownResults']) ? false : true;
+            if (
+                ($page * $this->settings['itemsPerPage']) < $donationListTotal
+                && !$maximumReached
+            ) {
+                $replacements['showMoreLinkDonationMoney'] = true;
+            }
+            $replacements['donationTypeMoneyList'] = $this->donationRepository->findByFilter($filter, $page, intval($this->settings['itemsPerPage']));
+        }
+
         $replacements['page'] = $page;
         $replacements['settingsArray'] = $this->settings;
-        $replacements['filterDateTimeArray'] = DonationHelper::createDateTimeArray();
+
+        // deprecated
+        //$replacements['filterDateTimeArray'] = DonationHelper::createDateTimeArray();
 
         if (!\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('type') == intval($this->settings['ajaxTypeNum'])) {
 
@@ -82,15 +120,17 @@ class DonationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
             $this->view->assignMultiple($replacements);
 
         } else {
+
             // get JSON helper
             /** @var \RKW\RkwBasics\Helper\Json $jsonHelper */
             $jsonHelper = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('RKW\\RkwBasics\\Helper\\Json');
 
             // get new list
             $kindOfRequest = $isFilterRequest ? 'replace' : 'append';
+            $containerIdAdd = $filter['type'] == 1 ? '-time' : '-money';
             $replacements['requestType'] = $kindOfRequest;
             $jsonHelper->setHtml(
-                'donation-listing',
+                'donation-listing' . $containerIdAdd,
                 $replacements,
                 $kindOfRequest,
                 'Ajax/Donation/More.html'
@@ -98,7 +138,7 @@ class DonationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
             // More link replace
             $jsonHelper->setHtml(
-                'donation-more-link-container',
+                'donation-more-link-container' . $containerIdAdd,
                 $replacements,
                 'replace',
                 'Ajax/Donation/MoreLink.html'
@@ -171,5 +211,22 @@ class DonationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	{
 
 	}
+
+
+
+    /**
+     * action donationProject
+     *
+     * @return void
+     */
+    public function donationProjectAction()
+    {
+        /** @var \HGON\HgonTemplate\Domain\Model\Pages $pages */
+        $pages = $this->pagesRepository->findByIdentifier(intval($GLOBALS['TSFE']->id));
+        if ($pages->getTxRkwprojectsProjectUid()) {
+            $donationList = $this->donationRepository->findByTxRkwprojectProject($pages->getTxRkwprojectsProjectUid());
+            $this->view->assign('donationList', $donationList);
+        }
+    }
 
 }
