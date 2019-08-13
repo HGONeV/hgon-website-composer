@@ -8,17 +8,19 @@
         <f:render partial="Layout/Header" arguments="{_all}" />
     </f:section>
 
-    <f:render partial="Layout/ContentHeaderImageCategory" arguments="{_all}" />
+    <f:render partial="Layout/ContentHeaderText" arguments="{_all}" section="infoCategory" />
 
     <div class="main__content">
         <div class="content content--boxed">
             <nav class="main__nav">
                 <f:render partial="Navigation/SubPage" arguments="{_all}" />
             </nav>
-            <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:0}" />
+            <section class="article article--fullwidth">
+                <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:0}" />
+            </section>
         </div>
         <section class="section">
-            <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:2}" />
+            <f:render partial="Layout/Journal" arguments="{_all}" />
         </section>
     </div>
 

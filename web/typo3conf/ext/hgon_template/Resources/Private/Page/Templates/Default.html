@@ -8,24 +8,10 @@
         <f:render partial="Layout/Header" arguments="{_all}" />
     </f:section>
 
-    <f:comment><!-- Don't show parentPageTeaserText --> </f:comment>
     <f:render partial="Layout/ContentHeaderText" arguments="{_all}" section="currentPageContent" />
 
-    <nav class="main__nav">
-        <f:render partial="Navigation/SubPage" arguments="{_all}" />
-    </nav>
-
     <div class="main__content">
-
-        <f:comment><!-- just auto generated content here -->
-
-            <f:format.html parseFuncTSPath="">
-                {siblingPagesOverview}
-            </f:format.html>
-        </f:comment>
-
         <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:0}" />
-
     </div>
 
     <f:render partial="Layout/MainFooter" arguments="{_all}" />

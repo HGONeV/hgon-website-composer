@@ -40,6 +40,12 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'HGON.HgonTemplate',
+            'ChildrenPagesOverview',
+            'HGON: Generiert Vorschau für Unterseiten'
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'HGON.HgonTemplate',
             'PageSlider',
             'HGON: Slider Projekte (Seiten)'
         );

@@ -54,15 +54,23 @@
 
                     <f:if condition="{itemType} == 'becomeMember'">
                         <a data-featherlight="#mitgliedsformular" href="#" class="btn btn--rounded btn--tertiary">
+                            <f:translate key="tx_hgondonation_templates_donation_supportOptions_button.{itemType}" />
+                        </a>
                     </f:if>
                     <f:if condition="{itemType} == 'donateMoney'">
                         <a data-featherlight="#hgon-paypal" href="#" class="btn btn--rounded btn--tertiary">
+                            <f:translate key="tx_hgondonation_templates_donation_supportOptions_button.{itemType}" />
+                        </a>
                     </f:if>
                     <f:if condition="{itemType} == 'donateTime'">
+                        <!--
                         <a data-featherlight="#hgon-donate-time-plugin" href="#" class="btn btn--rounded btn--tertiary">
+                        -->
+                        <f:link.page pageUid="11" section="zeitspenden" class="btn btn--rounded btn--tertiary">
+                            <f:translate key="tx_hgondonation_templates_donation_supportOptions_button.{itemType}" />
+                        </f:link.page>
                     </f:if>
-                        <f:translate key="tx_hgondonation_templates_donation_supportOptions_button.{itemType}" />
-                    </a>
+
 
                 </footer>
             </div>

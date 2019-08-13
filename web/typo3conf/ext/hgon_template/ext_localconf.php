@@ -70,6 +70,18 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'HGON.HgonTemplate',
+            'ChildrenPagesOverview',
+            [
+                'Standard' => 'childrenPagesOverview'
+            ],
+            // non-cacheable actions
+            [
+                'Standard' => 'childrenPagesOverview'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
             'PageSlider',
             [
                 'Standard' => 'pageSlider'

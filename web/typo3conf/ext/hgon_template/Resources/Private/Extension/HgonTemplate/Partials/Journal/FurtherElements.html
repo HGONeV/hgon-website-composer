@@ -6,14 +6,16 @@
     <f:cObject typoscriptObjectPath="page.10.variables.bankAccountSidebar" />
 </div>
 
-<f:comment><!-- If there is no article for row2, make box smaller --></f:comment>
-<f:if condition="{iter.isLast} && <f:count>{journalRowList}</f:count> == 3">
-    <f:then>
-        <div class="flex-item c-8">
-    </f:then>
-    <f:else>
-        <div class="flex-item c-12">
-    </f:else>
-</f:if>
+<f:if condition="{isJournalPage}">
+    <f:comment><!-- If there is no article for row2, make box smaller --></f:comment>
+    <f:if condition="{iter.isLast} && <f:count>{journalRowList}</f:count> == 3">
+        <f:then>
+            <div class="flex-item c-8">
+        </f:then>
+        <f:else>
+            <div class="flex-item c-12">
+        </f:else>
+    </f:if>
     <f:cObject typoscriptObjectPath="page.10.variables.didYouKnow" />
-</div>
+    </div>
+</f:if>

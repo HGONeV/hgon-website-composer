@@ -1,4 +1,8 @@
 
+<f:comment><!-- Standard --></f:comment>
+<f:render section="currentPageContent" />
+
+
 <f:section name="parentPageContent">
     <header class="main__header">
         <div class="wrap wrap--text / align-center">
@@ -6,13 +10,13 @@
                 <f:if condition="{parentPageTitle}">
                     <span class="badge badge--secondary">{parentPageTitle}<span class="is-hidden">: </span></span>
                 </f:if>
-                <f:if condition="{parentPageSubtitle}">
-                    <span class="h1 headline">{parentPageSubtitle}</span>
+                <f:if condition="{pageTitle}">
+                    <span class="h1 headline">{pageTitle}</span>
                 </f:if>
             </h1>
-            <f:if condition="{parentPageTeaserText}">
+            <f:if condition="{pageTeaserText}">
                 <p>
-                    {parentPageTeaserText}
+                    {pageTeaserText}
                 </p>
             </f:if>
         </div>
@@ -39,6 +43,27 @@
 
                 <f:if condition="{pageSubtitle}">
                     <span class="h1 headline">{pageSubtitle}</span>
+                </f:if>
+            </h1>
+            <f:if condition="{pageTeaserText}">
+                <p>
+                    {pageTeaserText}
+                </p>
+            </f:if>
+        </div>
+    </header>
+</f:section>
+
+
+<f:section name="infoCategory">
+    <header class="main__header">
+        <div class="wrap wrap--text / align-center">
+            <h1>
+                <f:if condition="{parentPageTitle}">
+                    <span class="badge badge--dark">{parentPageTitle}<span class="is-hidden">: </span></span>
+                </f:if>
+                <f:if condition="{pageTitle}">
+                    <span class="h1 headline">{pageTitle}</span>
                 </f:if>
             </h1>
             <f:if condition="{pageTeaserText}">

@@ -67,7 +67,7 @@ class NewsRepository extends \GeorgRinger\News\Domain\Repository\NewsRepository
         $query->getQuerySettings()->setRespectStoragePage(false);
 
         // Offset
-        $offset = ((intval($pageNumber) - 1) * $limit) + 1;
+        $offset = ((intval($pageNumber) - 1) * $limit);
         if ($pageNumber <= 1) {
             $offset = 0;
         }

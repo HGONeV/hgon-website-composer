@@ -79,7 +79,6 @@ page {
             //=================================================================
             // Journal Overview
             //=================================================================
-            /*
             journal = USER
             journal {
                 userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
@@ -98,7 +97,6 @@ page {
                 persistence =< plugin.tx_hgontemplate.persistence
                 settings =< plugin.tx_hgontemplate.settings
             }
-            */
 
 
 

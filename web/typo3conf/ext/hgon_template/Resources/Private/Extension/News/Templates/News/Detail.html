@@ -177,19 +177,37 @@
                 </div>
             </div>
 
+            <f:comment><!-- SIDEBAR --></f:comment>
             <div class="sidebar color-bg-light">
 
-                <aside class="aside">
-                    <f:if condition="{newsItem.relatedLinks}">
+                <f:if condition="{newsItem.txRkwprojectProject.projectPid}">
+                    <aside class="aside">
                         <div class="aside__content">
                             <!-- Related links -->
-                            <f:for each="{newsItem.relatedLinks}" as="relatedLink">
-                                <f:link.typolink class="btn btn--cta btn--rounded" parameter="{relatedLink.uri}" title="{relatedLink.title}" target="{n:targetLink(link:relatedLink.uri)}">Zum Projekt</f:link.typolink>
-                                <f:if condition="{relatedLink.description}"><span>{relatedLink.description}</span></f:if>
-                            </f:for>
+                            <f:link.typolink class="btn btn--cta btn--rounded" parameter="{newsItem.txRkwprojectProject.projectPid}">Zum Projekt</f:link.typolink>
                         </div>
-                    </f:if>
-                </aside>
+                    </aside>
+                </f:if>
+
+                <f:if condition="{newsItem.relatedLinks}">
+                    <aside class="aside aside--border aside-helpactivities color-bg-white">
+                        <header class="aside__header">
+                            <h6>Weiterführende Links</h6>
+                        </header>
+                        <div class="aside__content">
+                            <ul>
+                                <f:for each="{newsItem.relatedLinks}" as="relatedLink">
+                                    <li>
+                                        <span class="news-related-files-link">
+                                            <f:link.typolink parameter="{relatedLink.uri}" title="{relatedLink.title}" target="{n:targetLink(link:relatedLink.uri)}" />
+                                            <f:if condition="{relatedLink.description}"><span>{relatedLink.description}</span></f:if>
+                                        </span>
+                                    </li>
+                                </f:for>
+                            </ul>
+                        </div>
+                    </aside>
+                </f:if>
 
                 <f:if condition="{newsItem.relatedFiles}">
                     <aside class="aside aside--border aside-helpactivities color-bg-white">

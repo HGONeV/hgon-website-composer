@@ -24,5 +24,31 @@ namespace HGON\HgonTemplate\Domain\Model;
  */
 class News extends \GeorgRinger\News\Domain\Model\News
 {
+    /**
+     * txRkwprojectProject
+     *
+     * @var \HGON\HgonTemplate\Domain\Model\Projects
+     */
+    protected $txRkwprojectProject = null;
 
+    /**
+     * Returns the txRkwprojectProject
+     *
+     * @return \HGON\HgonTemplate\Domain\Model\Projects
+     */
+    public function getTxRkwprojectProject()
+    {
+        return $this->txRkwprojectProject;
+    }
+
+    /**
+     * Sets the txRkwprojectProject
+     *
+     * @param \HGON\HgonTemplate\Domain\Model\Projects $txRkwprojectProject
+     * @return void
+     */
+    public function setTxRkwprojectProject(\HGON\HgonTemplate\Domain\Model\Projects $txRkwprojectProject)
+    {
+        $this->txRkwprojectProject = $txRkwprojectProject;
+    }
 }

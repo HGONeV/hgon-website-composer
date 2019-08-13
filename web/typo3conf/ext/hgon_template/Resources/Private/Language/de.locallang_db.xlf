@@ -52,6 +52,11 @@
                 <target>Projektvorstellung</target>
             </trans-unit>
 
+            <trans-unit id="tx_hgontemplate_domain_model_news.tx_rkwproject_project">
+                <source>Project</source>
+                <target>Projekt</target>
+            </trans-unit>
+
 
 
             <!-- FLEXFORM -->

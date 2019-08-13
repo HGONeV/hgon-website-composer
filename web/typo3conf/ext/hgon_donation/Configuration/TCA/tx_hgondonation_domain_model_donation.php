@@ -321,7 +321,7 @@ return [
         ],
         'tx_rkwproject_project' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:rkw_events/Resources/Private/Language/locallang_db.xlf:tx_rkwevents_domain_model_event.project',
+            'label' => 'LLL:EXT:hgon_donation/Resources/Private/Language/locallang_db.xlf:tx_hgondonation_domain_model_donation.tx_rkwproject_project',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',

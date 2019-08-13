@@ -214,6 +214,29 @@ class StandardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
 
     /**
+     * Shows a project overview of children pages
+     *
+     * @return void
+     */
+    public function childrenPagesOverviewAction()
+    {
+        /** @var \HGON\HgonTemplate\Domain\Model\Pages $currentPages */
+        $currentPages = $this->pagesRepository->findByIdentifier(intval($GLOBALS['TSFE']->id));
+
+        $childrenPagesList = [];
+
+        $subPagesList = $this->pagesRepository->findByPid($currentPages->getUid());
+        foreach ($subPagesList as $subPages) {
+            $childrenPagesList[] = $subPages;
+        }
+
+        // Return Sibling-Pages with subPages to view
+        $this->view->assign('pagesList', $childrenPagesList);
+    }
+
+
+
+    /**
      * action pageSlider
      *
      * @return void

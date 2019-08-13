@@ -110,6 +110,27 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController
      */
     public function journalAction(\HGON\HgonTemplate\Domain\Model\SysCategory $sysCategory = null, $pageNumber = 0)
     {
+        // workaround for easy use on some further pages:
+        // If it's not the journal page, try to grab the pages categories und show related news
+        // Except a sysCategory is already set (pagination)
+        $isJournalPage = true;
+        if (
+            (intval($this->settings['journal']['pageUid']) != intval($GLOBALS['TSFE']->id))
+            && !$sysCategory
+        ) {
+            $isJournalPage = false;
+            /** @var \HGON\HgonTemplate\Domain\Model\Pages $pages */
+            $pages = $this->pagesRepository->findByIdentifier(intval($GLOBALS['TSFE']->id));
+            if (count($pages->getCategories())) {
+                foreach ($pages->getCategories() as $category) {
+                    $sysCategory = $category;
+                    // currently we work with just one category at once
+                    break;
+                }
+            }
+        }
+        $templateDataArray['isJournalPage'] = $isJournalPage;
+
         $pageNumber++;
         $templateDataArray = [];
 
@@ -127,7 +148,9 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController
       //  $pagesWithCategoryList = $helperRequest['sysCategoryList'];
       //  $templateDataArray['journalRowList'] = $helperRequest['journalRowList'];
         // @toDo: If $templateDataArray['journalRowList'] delivers only a few results: Try to fill with news
+
         $templateDataArray['journalRowList'] = $this->newsRepository->findByFilter($sysCategory, [], [], $pageNumber, intval($this->settings['journal']['itemsPerPage']));
+
         // sysCategory is set, if user is filtering
         /*
         if ($sysCategory) {
@@ -147,27 +170,22 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController
         */
 
         // get categories of news
-        $newsList = $this->newsRepository->findAll();
-        $categoryList = [];
-        /** @var \HGON\HgonTemplate\Domain\Model\News $news */
-        foreach ($newsList as $news) {
-            /** @var \HGON\HgonTemplate\Domain\Model\SysCategory $category */
-            foreach ($news->getCategories() as $category) {
-                $categoryList[$category->getUid()] = $category;
+        if ($isJournalPage) {
+            $newsList = $this->newsRepository->findAll();
+            $categoryList = [];
+            /** @var \HGON\HgonTemplate\Domain\Model\News $news */
+            foreach ($newsList as $news) {
+                /** @var \HGON\HgonTemplate\Domain\Model\SysCategory $category */
+                foreach ($news->getCategories() as $category) {
+                    $categoryList[$category->getUid()] = $category;
+                }
             }
+            $templateDataArray['sysCategoryList'] = $categoryList;
         }
 
-        // get general category list for filter function
-    //    $journalParentCategory = $this->sysCategoryRepository->findByIdentifier(intval($this->settings['journal']['parentCategoryUid']));
-        // @toDo: Nur Kategorien anzeigen, zu denen es auch news gibt?
-    //    $sysCategoryListFilter = $this->sysCategoryRepository->findOneWithAllRecursiveChildren($journalParentCategory, null, true);
-    //    $templateDataArray['sysCategoryList'] = $sysCategoryListFilter;
-        $templateDataArray['sysCategoryList'] = $categoryList;
         $templateDataArray['selectedSysCategory'] = $sysCategory;
         $templateDataArray['pageTypeAjax'] = $this->settings['journal']['ajaxTypeNum'];
         $templateDataArray['pageNumber'] = $pageNumber;
-
-
 
         if (count($templateDataArray['journalRowList'])) {
             $templateDataArray['showMoreLink'] = $this->newsRepository->findByFilter($sysCategory, [], [], $pageNumber, 9999)->count() > $pageNumber * intval($this->settings['journal']['itemsPerPage']) ? true : false;

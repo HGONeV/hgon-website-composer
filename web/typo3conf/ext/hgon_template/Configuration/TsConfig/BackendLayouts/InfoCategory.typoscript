@@ -11,7 +11,7 @@ mod {
 				config {
 					backend_layout {
 						colCount = 1
-						rowCount = 3
+						rowCount = 2
 						rows {
 							1 {
 								columns {
@@ -21,14 +21,6 @@ mod {
 									}
 								}
 							}
-                            2 {
-                                columns {
-                                    1 {
-                                        name = LLL:EXT:hgon_template/Resources/Private/Language/BackendLayouts.xlf:content.contentPlugin2
-                                        colPos = 2
-                                    }
-                                }
-                            }
 							3 {
 								columns {
 									1 {

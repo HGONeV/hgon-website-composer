@@ -28,7 +28,23 @@ $tempPagesColumns = [
             ],
             'size' => 1,
             'maxitems' => 1,
-        ]
+        ],
+        'onChange' => 'reload',
+    ],
+
+    'tx_rkwproject_project' => [
+        'exclude' => true,
+        'label' => 'LLL:EXT:rkw_events/Resources/Private/Language/locallang_db.xlf:tx_rkwevents_domain_model_event.project',
+        'config' => [
+            'type' => 'select',
+            'renderType' => 'selectMultipleSideBySide',
+            'foreign_table' => 'tx_rkwprojects_domain_model_projects',
+            'foreign_table_where' => 'AND ((\'###PAGE_TSCONFIG_IDLIST###\' <> \'0\' AND FIND_IN_SET(tx_rkwprojects_domain_model_projects.pid,\'###PAGE_TSCONFIG_IDLIST###\')) OR (\'###PAGE_TSCONFIG_IDLIST###\' = \'0\')) AND tx_rkwprojects_domain_model_projects.sys_language_uid = ###REC_FIELD_sys_language_uid### ORDER BY tx_rkwprojects_domain_model_projects.short_name ASC',
+            'maxitems'      => 1,
+            'minitems'      => 1,
+            'size'          => 5,
+        ],
+        'displayCond' => 'FIELD:tx_hgontemplate_type:=:2',
     ],
 
 ];
@@ -39,14 +55,14 @@ $tempPagesColumns = [
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'tx_news_domain_model_news',
-    'tx_hgontemplate_type',
+    'tx_hgontemplate_type,tx_rkwproject_project',
     '',
     'before:title'
 );
 
 $GLOBALS['TCA']['tx_news_domain_model_news']['types']['0'] = [
     'showitem' => '
-    --palette--;;paletteCore,tx_hgontemplate_type,title,--palette--;;paletteSlug,teaser,
+    --palette--;;paletteCore,tx_hgontemplate_type,tx_rkwproject_project,title,--palette--;;paletteSlug,teaser,
     datetime,
     bodytext,
     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,

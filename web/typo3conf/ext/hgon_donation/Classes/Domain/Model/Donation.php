@@ -109,7 +109,7 @@ class Donation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * txRkwprojectProject
      *
-     * @var \RKW\RkwProjects\Domain\Model\Projects
+     * @var \HGON\HgonTemplate\Domain\Model\Projects
      */
     protected $txRkwprojectProject = null;
 
@@ -430,7 +430,7 @@ class Donation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the txRkwprojectProject
      *
-     * @return \RKW\RkwProjects\Domain\Model\Projects
+     * @return \HGON\HgonTemplate\Domain\Model\Projects
      */
     public function getTxRkwprojectProject()
     {
@@ -440,10 +440,10 @@ class Donation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the txRkwprojectProject
      *
-     * @param \RKW\RkwProjects\Domain\Model\Projects $txRkwprojectProject
+     * @param \HGON\HgonTemplate\Domain\Model\Projects $txRkwprojectProject
      * @return void
      */
-    public function setTxRkwprojectProject($txRkwprojectProject)
+    public function setTxRkwprojectProject(\HGON\HgonTemplate\Domain\Model\Projects $txRkwprojectProject)
     {
         $this->txRkwprojectProject = $txRkwprojectProject;
     }

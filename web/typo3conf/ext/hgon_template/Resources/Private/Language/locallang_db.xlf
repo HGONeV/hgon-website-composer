@@ -40,6 +40,10 @@
                 <source>Project</source>
             </trans-unit>
 
+            <trans-unit id="tx_hgontemplate_domain_model_news.tx_rkwproject_project">
+                <source>Project</source>
+            </trans-unit>
+
 
             <!-- FLEXFORM -->
             <trans-unit id="flexform.journalHighlight.sheetTitle">

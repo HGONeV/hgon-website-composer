@@ -159,17 +159,6 @@
             <!-- TEMPLATES -->
             <!-- ############################## -->
 
-            <trans-unit id="tx_hgondonation_templates_standard_supportOptions_button.becomeMember">
-                <source>Become member</source>
-            </trans-unit>
-            <trans-unit id="tx_hgondonation_templates_standard_supportOptions_button.donateMoney">
-                <source>Donate money</source>
-            </trans-unit>
-            <trans-unit id="tx_hgondonation_templates_standard_supportOptions_button.donateTime">
-                <source>Donate time</source>
-            </trans-unit>
-
-
             <trans-unit id="tx_hgondonation_templates_donation_supportOptions_button.becomeMember">
                 <source>Become member</source>
             </trans-unit>
