@@ -56,7 +56,18 @@
 
 
 <f:section name="infoCategory">
-    <header class="main__header">
+    <header class="main__header main__header--image">
+        <picture class="picture">
+
+            <source media="(min-width: 64.063em)" srcset="{pageArticleImageDesktop}">
+            <source media="(min-width: 48.063em) and (max-width: 64em)" srcset="{pageArticleImageTablet}">
+            <source media="(min-width: 37.563em) and (max-width: 48em)" srcset="{pageArticleImageMobile}">
+            <source media="(max-width: 37.5em)" srcset="{pageArticleImageSmall}">
+            <f:format.raw>
+                {pageArticleImage}
+            </f:format.raw>
+
+        </picture>
         <div class="wrap wrap--text / align-center">
             <h1>
                 <f:if condition="{parentPageTitle}">
@@ -66,11 +77,13 @@
                     <span class="h1 headline">{pageTitle}</span>
                 </f:if>
             </h1>
-            <f:if condition="{pageTeaserText}">
-                <p>
-                    {pageTeaserText}
-                </p>
-            </f:if>
+            <f:comment>
+                <f:if condition="{pageTeaserText}">
+                    <p>
+                        {pageTeaserText}
+                    </p>
+                </f:if>
+            </f:comment>
         </div>
     </header>
 </f:section>

@@ -17,7 +17,30 @@
                 <source>SysCategory</source>
             </trans-unit>
 
-             <trans-unit id="tx_hgontemplate_domain_model_pages.tabs.hgon">
+            <trans-unit id="tx_hgontemplate_domain_model_article">
+                <source>Article</source>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_article.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_article.subtitle">
+                <source>Subtitle</source>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_article.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_article.price">
+                <source>Price</source>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_article.image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_article.link">
+                <source>Link</source>
+            </trans-unit>
+
+
+            <trans-unit id="tx_hgontemplate_domain_model_pages.tabs.hgon">
                 <source>HGON</source>
             </trans-unit>
             <trans-unit id="tx_hgontemplate_domain_model_pages.palettes.extended">
@@ -25,6 +48,12 @@
             </trans-unit>
             <trans-unit id="tx_hgontemplate_domain_model_pages.tx_hgontemplate_contactperson">
                 <source>Contact person (sidarbar)</source>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_pages.tx_hgontemplate_article">
+                <source>Shown shop article</source>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_pages.pleaseChoose">
+                <source>--- Please choose ---</source>
             </trans-unit>
 
             <trans-unit id="tx_hgontemplate_domain_model_news.tx_hgontemplate_type">

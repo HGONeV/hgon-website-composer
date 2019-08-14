@@ -53,6 +53,13 @@ class Pages extends \RKW\RkwBasics\Domain\Model\Pages
      */
     protected $txHgontemplateContactperson = null;
 
+    /**
+     * txHgontemplateArticle
+     *
+     * @var \HGON\HgonTemplate\Domain\Model\Article
+     */
+    protected $txHgontemplateArticle = null;
+
 
     /**
      * __construct
@@ -237,6 +244,27 @@ class Pages extends \RKW\RkwBasics\Domain\Model\Pages
     public function setTxHgontemplateContactperson(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $txHgontemplateContactperson)
     {
         $this->txHgontemplateContactperson = $txHgontemplateContactperson;
+    }
+
+    /**
+     * Returns the txHgontemplateArticle
+     *
+     * @return \HGON\HgonTemplate\Domain\Model\Article $txHgontemplateArticle
+     */
+    public function getTxHgontemplateArticle()
+    {
+        return $this->txHgontemplateArticle;
+    }
+
+    /**
+     * Sets the txHgontemplateArticle
+     *
+     * @param \HGON\HgonTemplate\Domain\Model\Projects $txHgontemplateArticle
+     * @return void
+     */
+    public function setTxHgontemplateArticle(\HGON\HgonTemplate\Domain\Model\Projects $txHgontemplateArticle)
+    {
+        $this->txHgontemplateArticle = $txHgontemplateArticle;
     }
 }
 

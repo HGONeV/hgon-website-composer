@@ -68,12 +68,12 @@
 <f:section name="mainArticle">
     <div class="flex-item c-8">
         <picture class="box__image">
-           <f:for each="{news.falRelatedFiles}" as="mediaElement" iteration="iterator">
+           <f:for each="{news.falMedia}" as="mediaElement" iteration="iterator">
                <f:if condition="{iterator.isFirst}">
                    <f:if condition="{mediaElement.originalResource.type} == 2">
-                       <source media="(min-width: 37.563em) and (max-width: 48em)" srcset="<f:uri.image src='{mediaElement.uid}' treatIdAsReference='1' absolute='true' />">
-                       <source media="(max-width: 37.5em)" srcset="<f:uri.image src='{mediaElement.uid}' treatIdAsReference='1' absolute='true' />">
-                       <f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.title}" alt="{mediaElement.alternative}" width="300" height="400" />
+                       <source media="(min-width: 37.563em) and (max-width: 48em)" srcset="<f:uri.image src='{mediaElement.uid}' treatIdAsReference='1' absolute='true' cropVariant='3to4' width='300' />">
+                       <source media="(max-width: 37.5em)" srcset="<f:uri.image src='{mediaElement.uid}' treatIdAsReference='1' absolute='true' cropVariant='3to4' width='300' />">
+                       <f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.title}" alt="{mediaElement.alternative}" cropVariant='3to4' width="300" height="400" />
                    </f:if>
                </f:if>
            </f:for>
@@ -82,13 +82,24 @@
         <header class="box__header">
             <h2>
                 <span class="badge badge--secondary">
-                    <f:for each="{news.categories}" as="category" iteration="iterator">
-                        <f:if condition="{iterator.isFirst}">
-                            {category.title}
-                        </f:if>
-                    </f:for>
+                    <f:translate key="tx_hgontemplate_page_partials_layout.newstype.{news.type}" />
+                    <f:comment>
+                        <f:for each="{news.categories}" as="category" iteration="iterator">
+                            <f:if condition="{iterator.isFirst}">
+                                {category.title}
+                            </f:if>
+                        </f:for>
+                    </f:comment>
                     <span class="is-hidden">: </span>
                 </span>
+
+                <f:for each="{news.categories}" as="category" iteration="iterator">
+                     <span class="badge badge--secondary">
+                        {category.title}
+                        <span class="is-hidden">: </span>
+                    </span>
+                </f:for>
+
                 <span class="h2 headline">{news.title}</span>
             </h2>
         </header>

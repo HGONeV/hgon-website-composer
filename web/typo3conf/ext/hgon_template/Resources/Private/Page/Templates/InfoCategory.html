@@ -8,7 +8,12 @@
         <f:render partial="Layout/Header" arguments="{_all}" />
     </f:section>
 
-    <f:render partial="Layout/ContentHeaderText" arguments="{_all}" section="infoCategory" />
+
+        <f:render partial="Layout/ContentHeaderText" arguments="{_all}" section="infoCategory" />
+
+    <f:comment>
+        <f:render partial="Layout/ContentHeaderImageCategory" arguments="{_all}" />
+    </f:comment>
 
     <div class="main__content">
         <div class="content content--boxed">
@@ -19,9 +24,19 @@
                 <f:cObject typoscriptObjectPath="lib.content.render" data="{colPos:0}" />
             </section>
         </div>
-        <section class="section">
-            <f:render partial="Layout/Journal" arguments="{_all}" />
-        </section>
+
+        <f:comment>
+            <!--
+                do not show this option for page "Arbeitskreise"
+                (@toDo: this solution is crappy. Make it better!)
+             -->
+        </f:comment>
+        <f:if condition="{data.uid} != 8">
+            <section class="section">
+                <f:render partial="Layout/Journal" arguments="{_all}" />
+            </section>
+        </f:if>
+
     </div>
 
     <f:render partial="Layout/MainFooter" arguments="{_all}" />

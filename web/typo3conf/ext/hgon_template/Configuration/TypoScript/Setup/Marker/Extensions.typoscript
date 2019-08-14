@@ -350,6 +350,30 @@ page {
 
             }
 
+
+
+            //=================================================================
+            // Show Article (tp-info feature)
+            //=================================================================
+            showArticleFromPages = USER
+            showArticleFromPages {
+                userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+                extensionName = HgonTemplate
+                pluginName = ShowArticleFromPages
+                vendorName = HGON
+                controller = Article
+                switchableControllerActions {
+                    // Again: Controller-Name and Action
+                    Article {
+                        1 = showArticleFromPages
+                    }
+                }
+
+                view =< plugin.tx_hgontemplate.view
+                persistence =< plugin.tx_hgontemplate.persistence
+                settings =< plugin.tx_hgontemplate.settings
+            }
+
         }
     }
 }

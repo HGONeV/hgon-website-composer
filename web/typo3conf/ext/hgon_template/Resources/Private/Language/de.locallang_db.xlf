@@ -21,6 +21,37 @@
                 <target>Kategorie</target>
             </trans-unit>
 
+
+            <trans-unit id="tx_hgontemplate_domain_model_article">
+                <source>Article</source>
+                <target>Artikel</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_article.title">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_article.subtitle">
+                <source>Subtitle</source>
+                <target>Untertitel</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_article.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_article.price">
+                <source>Price</source>
+                <target>Preis (ohne Versandkosten)</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_article.image">
+                <source>Image</source>
+                <target>Bild</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_article.link">
+                <source>Link</source>
+                <target>Verweis (z.B. Leseprobe)</target>
+            </trans-unit>
+
+
             <trans-unit id="tx_hgontemplate_domain_model_pages.tabs.hgon">
                 <source>HGON</source>
                 <target>HGON</target>
@@ -32,6 +63,14 @@
             <trans-unit id="tx_hgontemplate_domain_model_pages.tx_hgontemplate_contactperson">
                 <source>Contact person (sidebar)</source>
                 <target>Kontaktperson (wird auf alle Unterseiten weitervererbt)</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_pages.tx_hgontemplate_article">
+                <source>Shown shop article</source>
+                <target>Angezeigter Shop-Artikel</target>
+            </trans-unit>
+            <trans-unit id="tx_hgontemplate_domain_model_pages.pleaseChoose">
+                <source>--- Please choose ---</source>
+                <target>--- Bitte wählen ---</target>
             </trans-unit>
 
 

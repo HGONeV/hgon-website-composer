@@ -209,6 +209,24 @@ call_user_func(
         );
 
 
+
+        // ***************
+        // Article
+        // ***************
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'HGON.HgonTemplate',
+            'ShowArticleFromPages',
+            [
+                'Article' => 'showArticleFromPages'
+            ],
+            // non-cacheable actions
+            [
+                'Article' => 'showArticleFromPages'
+            ]
+        );
+
+
         // for content slide
         $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',subtitle,tx_rkwbasics_article_image,tx_hgontemplate_contactperson,';
 

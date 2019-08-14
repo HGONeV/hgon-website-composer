@@ -20,6 +20,19 @@ $tempPagesColumns = array(
             'multiple' => 0,
         ),
     ),
+    'tx_hgontemplate_article' => array(
+        'exclude' => 0,
+        'label' => 'LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_pages.tx_hgontemplate_article',
+        'config' => array(
+            'items' => array(
+                array('--- Bitte wählen ---', 0),
+            ),
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'foreign_table' => 'tx_hgontemplate_domain_model_article',
+            'foreign_table_where' => 'ANd tx_hgontemplate_domain_model_article.hidden = 0 AND tx_hgontemplate_domain_model_article.deleted = 0 ORDER BY tx_hgontemplate_domain_model_article.title ASC',
+        ),
+    ),
 );
 // Add TCA
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
@@ -28,7 +41,7 @@ $tempPagesColumns = array(
 );
 
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('pages', 'tx_hgontemplate_palette', 'tx_hgontemplate_contactperson');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('pages', 'tx_hgontemplate_palette', 'tx_hgontemplate_contactperson, tx_hgontemplate_article');
 
 // Add palette to new tab
 $tempConfig = '--div--;LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_pages.tabs.hgon,--palette--;LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_pages.palettes.common;tx_hgontemplate_palette,';
