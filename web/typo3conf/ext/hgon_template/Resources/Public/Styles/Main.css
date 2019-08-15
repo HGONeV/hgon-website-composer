@@ -30,6 +30,10 @@
     font-weight: bolder;
 }
 
+/* additional FCE styles */
+figure.video {
+    margin: 20px 0;
+}
 
 /* make helllicht form error styles compatible with typo3 */
 input.f3-form-error,

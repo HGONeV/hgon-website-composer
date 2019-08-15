@@ -25,7 +25,7 @@ $tempPagesColumns = array(
         'label' => 'LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_pages.tx_hgontemplate_article',
         'config' => array(
             'items' => array(
-                array('--- Bitte wählen ---', 0),
+                array('LLL:EXT:hgon_template/Resources/Private/Language/locallang_db.xlf:tx_hgontemplate_domain_model_pages.pleaseChoose', 0),
             ),
             'type' => 'select',
             'renderType' => 'selectSingle',

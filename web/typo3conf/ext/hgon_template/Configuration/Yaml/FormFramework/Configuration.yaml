@@ -30,12 +30,6 @@ TYPO3:
             Textarea:
               properties:
                 elementClassAttribute: 'textarea'
-            SingleSelectWithArticle:
-              __inheritances:
-                10: 'TYPO3.CMS.Form.prototypes.standard.formElementsDefinition.SingleSelect'
-              implementationClassName: 'HGON\HgonTemplate\Domain\Model\FormElements\ArticleOptions'
-              renderingOptions:
-                templateName: 'SingleSelect'
           finishersDefinition:
             Confirmation:
               options:
