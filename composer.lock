@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "afc74023d9642783d07be4fc26a12ea2",
+    "content-hash": "2099e1084331f6b76413b1de027971ab",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -2201,6 +2201,65 @@
                 "newsletter"
             ],
             "time": "2019-08-09T14:41:43+00:00"
+        },
+        {
+            "name": "rkw/rkw-newsletter",
+            "version": "v7.6.34-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RKWKomZe/RkwNewsletter.git",
+                "reference": "da1ae43a3e4059a3cea96b00c19fbc4b76e07ae2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwNewsletter/zipball/da1ae43a3e4059a3cea96b00c19fbc4b76e07ae2",
+                "reference": "da1ae43a3e4059a3cea96b00c19fbc4b76e07ae2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "rkw/rkw-basics": ">=8.7.3 <=8.7.99",
+                "rkw/rkw-mailer": ">=8.7.12 <=8.7.99",
+                "rkw/rkw-registration": ">=8.7.0 <=8.7.99",
+                "typo3/cms-core": "^7.6.0 || ^8.7.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "rkw_newsletter"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "RKW\\RkwNewsletter\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Steffen Kroggel",
+                    "email": "developer@steffenkroggel.de",
+                    "homepage": "http://www.steffenkroggel.de",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Maximilian Fäßler",
+                    "email": "maximilian@faesslerweb.de",
+                    "homepage": "https://www.faesslerweb.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Extension for editing and sending newsletters",
+            "homepage": "https://www.rkw-kompetenzzentrum.de",
+            "keywords": [
+                "RKW",
+                "TYPO3 CMS",
+                "newsletter"
+            ],
+            "time": "2019-06-17T13:25:07+00:00"
         },
         {
             "name": "rkw/rkw-projects",

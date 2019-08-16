@@ -34,6 +34,7 @@
        "rkw/rkw-template": "~7.6.4",
        "rkw/rkw-authors": "~7.6.13",
        "rkw/rkw-projects": "~7.6.1",
+       "rkw/rkw-newsletter": "~7.6.30",
        "helhum/typoscript-rendering": "2.1.0",
        "fluidtypo3/vhs": "^5.2",
        "georgringer/news": "^7.2",
