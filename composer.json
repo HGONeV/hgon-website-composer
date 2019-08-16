@@ -38,13 +38,13 @@
        "fluidtypo3/vhs": "^5.2",
        "georgringer/news": "^7.2",
        "plusb/pb_social": "^1.4",
-       "dmitryd/typo3-realurl": "~2.5.0"
+       "dmitryd/typo3-realurl": "~2.5.0",
+       "hgon/hgon-template": "~8.7.0"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.4.*@dev",
         "phpunit/phpunit": "~4.7.0",
 	    "friendsoftypo3/extension-builder": "~8.10.0",
-        "hgon/hgon-template": "~8.7.0",
         "hgon/hgon-donation": "dev-master",
         "hgon/hgon-workgroup": "dev-master",
         "rkw/rkw-events": "dev-feature/showUpcomingPlugin"
