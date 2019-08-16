@@ -4,7 +4,7 @@ TCAdefaults {
         //frame_class = none
 
         // default: Show images with lightbox function
-        layout = 65
+        //layout = 65
     }
 
     # @todo: Problem: Does not work
