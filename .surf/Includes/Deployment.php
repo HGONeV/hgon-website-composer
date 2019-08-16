@@ -196,7 +196,7 @@ $deployment->onInitialize(function () use ($workflow, $application, $gitBranch, 
     // Step 6: finalize - This stage is meant for tasks, that should be done short before going live, like cache warm ups and so on.
     $workflow->beforeStage('finalize', 'RKW\\Task\\Remote\\FixRights');
     $workflow->afterStage('finalize', 'RKW\\Task\\Remote\\TYPO3\\FixFolderStructure');
-    $workflow->afterStage('finalize', 'RKW\\Task\\Remote\\FixRightsRkwSearch');
+    //  $workflow->afterStage('finalize', 'RKW\\Task\\Remote\\FixRightsRkwSearch');
     if ($gitBranch != 'production') {
         $workflow->afterStage('finalize', 'RKW\\Task\\Remote\\CopyDummyFiles');
     }
