@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbd18a4f173f4b1934b0093dbbcb890b",
+    "content-hash": "1c4c990afc01e70bc6e44396aec0f6f0",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1392,139 +1392,6 @@
             "time": "2018-08-12T22:18:40+00:00"
         },
         {
-            "name": "hgon/hgon-donation",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HGONeV/hgon_donation.git",
-                "reference": "4e84a95aed0490d9fdfceb16b93c2485a7e737d1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/4e84a95aed0490d9fdfceb16b93c2485a7e737d1",
-                "reference": "4e84a95aed0490d9fdfceb16b93c2485a7e737d1",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "^8.7.1"
-            },
-            "replace": {
-                "hgon_donation": "self.version",
-                "typo3-ter/hgon-donation": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "psr-4": {
-                    "HGON\\HgonDonation\\": "Classes"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "HGON\\HgonDonation\\Tests\\": "Tests"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Maximilian Fäßler",
-                    "role": "Developer"
-                }
-            ],
-            "support": {
-                "source": "https://github.com/HGONeV/hgon_donation/tree/master",
-                "issues": "https://github.com/HGONeV/hgon_donation/issues"
-            },
-            "time": "2019-08-15T13:54:50+00:00"
-        },
-        {
-            "name": "hgon/hgon-template",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "6bf88626b434263b2901b56a43c6a0a3a99c8d63"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/6bf88626b434263b2901b56a43c6a0a3a99c8d63",
-                "reference": "6bf88626b434263b2901b56a43c6a0a3a99c8d63",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "^8.7.1"
-            },
-            "replace": {
-                "hgon_template": "self.version",
-                "typo3-ter/hgon-template": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "psr-4": {
-                    "HGON\\HgonTemplate\\": "Classes"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "HGON\\HgonTemplate\\Tests\\": "Tests"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Maximilian Fäßler",
-                    "role": "Developer"
-                }
-            ],
-            "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/master",
-                "issues": "https://github.com/HGONeV/hgon_template/issues"
-            },
-            "time": "2019-08-15T13:53:14+00:00"
-        },
-        {
-            "name": "hgon/hgon-workgroup",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HGONeV/hgon_workgroup.git",
-                "reference": "ec3e815aa218b127d2a66abcc0cfdc8dbbffdb08"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/ec3e815aa218b127d2a66abcc0cfdc8dbbffdb08",
-                "reference": "ec3e815aa218b127d2a66abcc0cfdc8dbbffdb08",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "^8.7.1"
-            },
-            "replace": {
-                "hgon_workgroup": "self.version",
-                "typo3-ter/hgon-workgroup": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "psr-4": {
-                    "HGON\\HgonWorkgroup\\": "Classes"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "HGON\\HgonWorkgroup\\Tests\\": "Tests"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Maximilian Fäßler",
-                    "role": "Developer"
-                }
-            ],
-            "description": "For managing working groups",
-            "support": {
-                "source": "https://github.com/HGONeV/hgon_workgroup/tree/master",
-                "issues": "https://github.com/HGONeV/hgon_workgroup/issues"
-            },
-            "time": "2019-08-15T13:42:27+00:00"
-        },
-        {
             "name": "monolog/monolog",
             "version": "1.24.0",
             "source": {
@@ -2174,71 +2041,6 @@
                 "TYPO3 CMS"
             ],
             "time": "2019-08-09T14:16:18+00:00"
-        },
-        {
-            "name": "rkw/rkw-events",
-            "version": "dev-feature/showUpcomingPlugin",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwEvents.git",
-                "reference": "bde9fbae1c43d490a6882e691d2f80b22303d51d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/bde9fbae1c43d490a6882e691d2f80b22303d51d",
-                "reference": "bde9fbae1c43d490a6882e691d2f80b22303d51d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": "~8.7.0",
-                "rkw/rkw-mailer": "~8.7.0",
-                "sjbr/static-info-tables": "^6.3.7@dev",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_events"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwEvents\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "role": "Developer",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de"
-                },
-                {
-                    "name": "Maximilian Fäßler",
-                    "role": "Developer",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de"
-                },
-                {
-                    "name": "Carlos Meyer",
-                    "role": "Developer",
-                    "email": "cm@davitec.de",
-                    "homepage": "https://www.davitec.de"
-                }
-            ],
-            "description": "Extension for events and registation",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "TYPO3 CMS",
-                "events"
-            ],
-            "time": "2019-08-01T13:28:00+00:00"
         },
         {
             "name": "rkw/rkw-geolocation",
@@ -3763,6 +3565,139 @@
             "time": "2019-01-20T11:06:12+00:00"
         },
         {
+            "name": "hgon/hgon-donation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HGONeV/hgon_donation.git",
+                "reference": "4e84a95aed0490d9fdfceb16b93c2485a7e737d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/4e84a95aed0490d9fdfceb16b93c2485a7e737d1",
+                "reference": "4e84a95aed0490d9fdfceb16b93c2485a7e737d1",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^8.7.1"
+            },
+            "replace": {
+                "hgon_donation": "self.version",
+                "typo3-ter/hgon-donation": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "HGON\\HgonDonation\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "HGON\\HgonDonation\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Maximilian Fäßler",
+                    "role": "Developer"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/HGONeV/hgon_donation/tree/master",
+                "issues": "https://github.com/HGONeV/hgon_donation/issues"
+            },
+            "time": "2019-08-15T13:54:50+00:00"
+        },
+        {
+            "name": "hgon/hgon-template",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HGONeV/hgon_template.git",
+                "reference": "6bf88626b434263b2901b56a43c6a0a3a99c8d63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/6bf88626b434263b2901b56a43c6a0a3a99c8d63",
+                "reference": "6bf88626b434263b2901b56a43c6a0a3a99c8d63",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^8.7.1"
+            },
+            "replace": {
+                "hgon_template": "self.version",
+                "typo3-ter/hgon-template": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "HGON\\HgonTemplate\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "HGON\\HgonTemplate\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Maximilian Fäßler",
+                    "role": "Developer"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/HGONeV/hgon_template/tree/master",
+                "issues": "https://github.com/HGONeV/hgon_template/issues"
+            },
+            "time": "2019-08-15T13:53:14+00:00"
+        },
+        {
+            "name": "hgon/hgon-workgroup",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HGONeV/hgon_workgroup.git",
+                "reference": "ec3e815aa218b127d2a66abcc0cfdc8dbbffdb08"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/ec3e815aa218b127d2a66abcc0cfdc8dbbffdb08",
+                "reference": "ec3e815aa218b127d2a66abcc0cfdc8dbbffdb08",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^8.7.1"
+            },
+            "replace": {
+                "hgon_workgroup": "self.version",
+                "typo3-ter/hgon-workgroup": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "HGON\\HgonWorkgroup\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "HGON\\HgonWorkgroup\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Maximilian Fäßler",
+                    "role": "Developer"
+                }
+            ],
+            "description": "For managing working groups",
+            "support": {
+                "source": "https://github.com/HGONeV/hgon_workgroup/tree/master",
+                "issues": "https://github.com/HGONeV/hgon_workgroup/issues"
+            },
+            "time": "2019-08-15T13:42:27+00:00"
+        },
+        {
             "name": "mikey179/vfsStream",
             "version": "v1.4.0",
             "source": {
@@ -4393,6 +4328,71 @@
             "time": "2015-10-02T06:51:40+00:00"
         },
         {
+            "name": "rkw/rkw-events",
+            "version": "dev-feature/showUpcomingPlugin",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RKWKomZe/RkwEvents.git",
+                "reference": "bde9fbae1c43d490a6882e691d2f80b22303d51d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/bde9fbae1c43d490a6882e691d2f80b22303d51d",
+                "reference": "bde9fbae1c43d490a6882e691d2f80b22303d51d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "rkw/rkw-basics": "~8.7.0",
+                "rkw/rkw-mailer": "~8.7.0",
+                "sjbr/static-info-tables": "^6.3.7@dev",
+                "typo3/cms-core": "^7.6.0 || ^8.7.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "rkw_events"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "RKW\\RkwEvents\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Steffen Kroggel",
+                    "role": "Developer",
+                    "email": "developer@steffenkroggel.de",
+                    "homepage": "http://www.steffenkroggel.de"
+                },
+                {
+                    "name": "Maximilian Fäßler",
+                    "role": "Developer",
+                    "email": "maximilian@faesslerweb.de",
+                    "homepage": "https://www.faesslerweb.de"
+                },
+                {
+                    "name": "Carlos Meyer",
+                    "role": "Developer",
+                    "email": "cm@davitec.de",
+                    "homepage": "https://www.davitec.de"
+                }
+            ],
+            "description": "Extension for events and registation",
+            "homepage": "https://www.rkw-kompetenzzentrum.de",
+            "keywords": [
+                "RKW",
+                "TYPO3 CMS",
+                "events"
+            ],
+            "time": "2019-08-01T13:28:00+00:00"
+        },
+        {
             "name": "sebastian/comparator",
             "version": "1.2.4",
             "source": {
@@ -4819,11 +4819,11 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "mikey179/vfsstream": 20,
         "hgon/hgon-template": 20,
         "hgon/hgon-donation": 20,
         "hgon/hgon-workgroup": 20,
-        "rkw/rkw-events": 20,
-        "mikey179/vfsstream": 20
+        "rkw/rkw-events": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
