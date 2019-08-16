@@ -44,7 +44,7 @@
         "mikey179/vfsstream": "1.4.*@dev",
         "phpunit/phpunit": "~4.7.0",
 	    "friendsoftypo3/extension-builder": "~8.10.0",
-        "hgon/hgon-template": "dev-master",
+        "hgon/hgon-template": "~8.7.0",
         "hgon/hgon-donation": "dev-master",
         "hgon/hgon-workgroup": "dev-master",
         "rkw/rkw-events": "dev-feature/showUpcomingPlugin"
