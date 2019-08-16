@@ -231,13 +231,13 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array(
 
 
 function user_decodeSpURL_preProc(&$params, &$ref) {
-    $params['URL'] = str_replace('event/', 'detail/tx-rkw-events/event/show/', $params['URL']);
+    $params['URL'] = str_replace('event/', 'veranstaltung/tx-rkw-events/event/show/', $params['URL']);
     $params['URL'] = str_replace('standort/', 'arbeitskreise/tx-hgon-workgroup/', $params['URL']);
     $params['URL'] = str_replace('aktuelles/', 'detail/tx-news/detail/News/', $params['URL']);
 }
 
 function user_encodeSpURL_postProc(&$params, &$ref) {
-    $params['URL'] = str_replace('detail/tx-rkw-events/event/show/', 'event/', $params['URL']);
+    $params['URL'] = str_replace('veranstaltung/tx-rkw-events/event/show/', 'event/', $params['URL']);
     $params['URL'] = str_replace('arbeitskreise/tx-hgon-workgroup/', 'standort/', $params['URL']);
     $params['URL'] = str_replace('detail/tx-news/detail/News/', 'aktuelles/', $params['URL']);
 }
