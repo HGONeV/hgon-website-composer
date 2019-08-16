@@ -29,8 +29,8 @@ $application->setOption('typo3.surf:gitCheckout[branch]', $gitBranch);
 $application->setOption('applicationRootDirectory', 'src');
 $application->setDeploymentPath($absolutePath);
 $application->setSymlinks(array(
-    './web/uploads' => '../../../surf/shared/Data/uploads',
-    './web/fileadmin' => '../../../surf/shared/Data/fileadmin',
+    './web/uploads' => '../../../shared/Data/uploads',
+    './web/fileadmin' => '../../../shared/Data/fileadmin',
     './web/typo3temp/logs' => '../../../../shared/Data/logs',
     './web/typo3temp/var/logs' => '../../../../../shared/Data/logs',
     './web/typo3conf/LocalConfiguration.php' => '../../../../shared/LocalConfiguration.php',

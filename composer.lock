@@ -3570,12 +3570,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_donation.git",
-                "reference": "4e84a95aed0490d9fdfceb16b93c2485a7e737d1"
+                "reference": "d7abf6b93b519d7c9e87e74e8668e15a525a9dd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/4e84a95aed0490d9fdfceb16b93c2485a7e737d1",
-                "reference": "4e84a95aed0490d9fdfceb16b93c2485a7e737d1",
+                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/d7abf6b93b519d7c9e87e74e8668e15a525a9dd5",
+                "reference": "d7abf6b93b519d7c9e87e74e8668e15a525a9dd5",
                 "shasum": ""
             },
             "require": {
@@ -3606,7 +3606,7 @@
                 "source": "https://github.com/HGONeV/hgon_donation/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_donation/issues"
             },
-            "time": "2019-08-15T13:54:50+00:00"
+            "time": "2019-08-16T09:33:16+00:00"
         },
         {
             "name": "hgon/hgon-template",
@@ -3614,12 +3614,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "6bf88626b434263b2901b56a43c6a0a3a99c8d63"
+                "reference": "d826b33366126f45c389040ba5d616d0008a9199"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/6bf88626b434263b2901b56a43c6a0a3a99c8d63",
-                "reference": "6bf88626b434263b2901b56a43c6a0a3a99c8d63",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/d826b33366126f45c389040ba5d616d0008a9199",
+                "reference": "d826b33366126f45c389040ba5d616d0008a9199",
                 "shasum": ""
             },
             "require": {
@@ -3650,7 +3650,7 @@
                 "source": "https://github.com/HGONeV/hgon_template/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2019-08-15T13:53:14+00:00"
+            "time": "2019-08-16T09:34:19+00:00"
         },
         {
             "name": "hgon/hgon-workgroup",
@@ -3658,12 +3658,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_workgroup.git",
-                "reference": "ec3e815aa218b127d2a66abcc0cfdc8dbbffdb08"
+                "reference": "7bc6410a6194b58547e8bc2a73053cb1638f47b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/ec3e815aa218b127d2a66abcc0cfdc8dbbffdb08",
-                "reference": "ec3e815aa218b127d2a66abcc0cfdc8dbbffdb08",
+                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/7bc6410a6194b58547e8bc2a73053cb1638f47b9",
+                "reference": "7bc6410a6194b58547e8bc2a73053cb1638f47b9",
                 "shasum": ""
             },
             "require": {
@@ -3695,7 +3695,7 @@
                 "source": "https://github.com/HGONeV/hgon_workgroup/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_workgroup/issues"
             },
-            "time": "2019-08-15T13:42:27+00:00"
+            "time": "2019-08-16T09:58:02+00:00"
         },
         {
             "name": "mikey179/vfsStream",
