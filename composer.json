@@ -27,11 +27,7 @@
        "helhum/dotenv-connector": "^1.0",
        "typo3/surf": "^2.0.0",
        "sjbr/static-info-tables" : "^6.5",
-       "hgon/hgon-template": "dev-master",
-       "hgon/hgon-donation": "dev-master",
-       "hgon/hgon-workgroup": "dev-master",
        "rkw/rkw-basics": "~7.6.12 || ~8.7.2",
-       "rkw/rkw-events": "dev-feature/showUpcomingPlugin",
        "rkw/rkw-geolocation": "~7.6.11",
        "rkw/rkw-mailer": "~7.6.13 || ~8.7.1",
        "rkw/rkw-registration": "~7.6.11 || ~8.7.0",
@@ -45,9 +41,13 @@
        "dmitryd/typo3-realurl": "~2.5.0"
     },
     "require-dev": {
-         "mikey179/vfsstream": "1.4.*@dev",
-         "phpunit/phpunit": "~4.7.0",
-	     "friendsoftypo3/extension-builder": "~8.10.0"
+        "mikey179/vfsstream": "1.4.*@dev",
+        "phpunit/phpunit": "~4.7.0",
+	    "friendsoftypo3/extension-builder": "~8.10.0",
+        "hgon/hgon-template": "dev-master",
+        "hgon/hgon-donation": "dev-master",
+        "hgon/hgon-workgroup": "dev-master",
+        "rkw/rkw-events": "dev-feature/showUpcomingPlugin"
     },
     "scripts": {
         "git-set-filemode" : [
