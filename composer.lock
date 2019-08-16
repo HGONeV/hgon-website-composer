@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c426237d48c54ca9409a164b01df4aad",
+    "content-hash": "cbd18a4f173f4b1934b0093dbbcb890b",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -231,16 +231,16 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "v1.6.1",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "53120e0eb10355388d6ccbe462f1fea34ddadb24"
+                "reference": "fa4c4e861e809d6a1103bd620cce63ed91aedfeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/53120e0eb10355388d6ccbe462f1fea34ddadb24",
-                "reference": "53120e0eb10355388d6ccbe462f1fea34ddadb24",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/fa4c4e861e809d6a1103bd620cce63ed91aedfeb",
+                "reference": "fa4c4e861e809d6a1103bd620cce63ed91aedfeb",
                 "shasum": ""
             },
             "require": {
@@ -249,12 +249,12 @@
             },
             "require-dev": {
                 "doctrine/cache": "1.*",
-                "phpunit/phpunit": "^6.4"
+                "phpunit/phpunit": "^7.5@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6.x-dev"
+                    "dev-master": "1.7.x-dev"
                 }
             },
             "autoload": {
@@ -268,16 +268,16 @@
             ],
             "authors": [
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Jonathan Wage",
@@ -295,7 +295,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2019-03-25T19:12:02+00:00"
+            "time": "2019-08-08T18:11:40+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -1084,6 +1084,50 @@
             "time": "2019-07-01T23:21:34+00:00"
         },
         {
+            "name": "helhum/config-loader",
+            "version": "v0.12.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/helhum/config-loader.git",
+                "reference": "1faf12146c505f3b929b10f09aabb8b675d7842d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/helhum/config-loader/zipball/1faf12146c505f3b929b10f09aabb8b675d7842d",
+                "reference": "1faf12146c505f3b929b10f09aabb8b675d7842d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": "^5.0",
+                "symfony/yaml": "^2.8 || ^3.3 || ^4.0"
+            },
+            "suggest": {
+                "ext-yaml": "For improved performance when parsing yaml files you should use the PECL YAML Parser php extension",
+                "symfony/yaml": "To be able to parse yaml files, you will need symfony/yaml"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Helhum\\ConfigLoader\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Generic config loader with context and environment support.",
+            "time": "2019-05-30T14:58:15+00:00"
+        },
+        {
             "name": "helhum/dotenv-connector",
             "version": "1.1.0",
             "source": {
@@ -1141,64 +1185,71 @@
         },
         {
             "name": "helhum/typo3-console",
-            "version": "4.9.6",
+            "version": "v5.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Console/TYPO3-Console.git",
-                "reference": "5913e161a5c7e53df9d8e655e4946a10874b5140"
+                "reference": "f450c9cd144672463deb4aa4209c195374b9f079"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/5913e161a5c7e53df9d8e655e4946a10874b5140",
-                "reference": "5913e161a5c7e53df9d8e655e4946a10874b5140",
+                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/f450c9cd144672463deb4aa4209c195374b9f079",
+                "reference": "f450c9cd144672463deb4aa4209c195374b9f079",
                 "shasum": ""
             },
             "require": {
-                "ext-phar": "*",
-                "helhum/typo3-console-plugin": "^1.7.5 || ^2.0.2",
-                "php": ">=5.5.0 <7.3",
-                "symfony/console": "^2.7 || ^3.0",
-                "symfony/process": "^2.7 || ^3.0",
-                "typo3/cms-backend": "^7.6 || ^8.7",
-                "typo3/cms-core": "^7.6 || ^8.7",
-                "typo3/cms-extbase": "^7.6 || ^8.7",
-                "typo3/cms-extensionmanager": "^7.6 || ^8.7",
-                "typo3/cms-fluid": "^7.6 || ^8.7",
-                "typo3/cms-install": "^7.6 || ^8.7",
-                "typo3/cms-scheduler": "^7.6 || ^8.7"
+                "doctrine/annotations": "^1.4",
+                "helhum/config-loader": ">=0.9 <0.13",
+                "helhum/typo3-console-plugin": "^2.0.2",
+                "php": "^7",
+                "symfony/console": "^3.4.4 || ^4.0",
+                "symfony/process": "^3.4.4 || ^4.0",
+                "typo3/cms-backend": "~8.7.22 || ~9.5.8",
+                "typo3/cms-core": "~8.7.22 || ~9.5.8",
+                "typo3/cms-extbase": "~8.7.22 || ~9.5.8",
+                "typo3/cms-extensionmanager": "~8.7.22 || ~9.5.8",
+                "typo3/cms-fluid": "~8.7.22 || ~9.5.8",
+                "typo3/cms-frontend": "~8.7.22 || ~9.5.8",
+                "typo3/cms-install": "~8.7.22 || ~9.5.8",
+                "typo3/cms-saltedpasswords": "*",
+                "typo3/cms-scheduler": "~8.7.22 || ~9.5.8"
+            },
+            "conflict": {
+                "friendsoftypo3/dbal": "*",
+                "typo3-ter/dbal": "*"
             },
             "replace": {
-                "typo3-ter/typo3-console": "self.version",
-                "typo3_console": "self.version"
+                "typo3-ter/typo3-console": "self.version"
             },
             "require-dev": {
-                "mikey179/vfsstream": "~1.6.0",
-                "nimut/testing-framework": "^2.0 || ^3.0",
+                "cweagans/composer-patches": "^1.6",
+                "jakub-onderka/php-parallel-lint": "^1.0",
+                "nimut/testing-framework": "dev-allow-php73",
                 "symfony/filesystem": "^3.2",
-                "typo3-console/create-reference-command": "^1.0",
-                "typo3/cms": "^8.7"
+                "typo3-console/convert-command-controller-command": "@dev",
+                "typo3-console/create-reference-command": "@dev",
+                "typo3-console/php-server-command": "^0.2",
+                "typo3/cms-filemetadata": "~8.7.22 || ~9.5.8 || dev-master",
+                "typo3/cms-reports": "~8.7.22 || ~9.5.8 || dev-master"
             },
             "bin": [
-                "Scripts/typo3cms"
+                "typo3cms"
             ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.x-dev"
+                    "dev-master": "5.x-dev"
                 },
                 "typo3/cms": {
-                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
-                    "web-dir": ".Build/Web",
-                    "Package": {
-                        "partOfMinimalUsableSystem": true
-                    }
+                    "app-dir": ".Build",
+                    "web-dir": ".Build/public"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Helhum\\Typo3Console\\": [
-                        "Classes/",
-                        "Resources/Private/ExtensionArtifacts/src/"
+                        "Classes/Console/",
+                        "Classes/Compatibility/"
                     ]
                 }
             },
@@ -1209,9 +1260,9 @@
             "authors": [
                 {
                     "name": "Helmut Hummel",
+                    "role": "Developer",
                     "email": "info@helhum.io",
-                    "homepage": "http://helhum.io",
-                    "role": "Developer"
+                    "homepage": "http://helhum.io"
                 }
             ],
             "description": "A reliable and powerful command line interface for TYPO3 CMS",
@@ -1223,7 +1274,7 @@
                 "console",
                 "typo3"
             ],
-            "time": "2018-07-03T16:58:45+00:00"
+            "time": "2019-08-07T12:46:56+00:00"
         },
         {
             "name": "helhum/typo3-console-plugin",
@@ -1339,6 +1390,139 @@
                 "typo3"
             ],
             "time": "2018-08-12T22:18:40+00:00"
+        },
+        {
+            "name": "hgon/hgon-donation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HGONeV/hgon_donation.git",
+                "reference": "4e84a95aed0490d9fdfceb16b93c2485a7e737d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/4e84a95aed0490d9fdfceb16b93c2485a7e737d1",
+                "reference": "4e84a95aed0490d9fdfceb16b93c2485a7e737d1",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^8.7.1"
+            },
+            "replace": {
+                "hgon_donation": "self.version",
+                "typo3-ter/hgon-donation": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "HGON\\HgonDonation\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "HGON\\HgonDonation\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Maximilian Fäßler",
+                    "role": "Developer"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/HGONeV/hgon_donation/tree/master",
+                "issues": "https://github.com/HGONeV/hgon_donation/issues"
+            },
+            "time": "2019-08-15T13:54:50+00:00"
+        },
+        {
+            "name": "hgon/hgon-template",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HGONeV/hgon_template.git",
+                "reference": "6bf88626b434263b2901b56a43c6a0a3a99c8d63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/6bf88626b434263b2901b56a43c6a0a3a99c8d63",
+                "reference": "6bf88626b434263b2901b56a43c6a0a3a99c8d63",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^8.7.1"
+            },
+            "replace": {
+                "hgon_template": "self.version",
+                "typo3-ter/hgon-template": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "HGON\\HgonTemplate\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "HGON\\HgonTemplate\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Maximilian Fäßler",
+                    "role": "Developer"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/HGONeV/hgon_template/tree/master",
+                "issues": "https://github.com/HGONeV/hgon_template/issues"
+            },
+            "time": "2019-08-15T13:53:14+00:00"
+        },
+        {
+            "name": "hgon/hgon-workgroup",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HGONeV/hgon_workgroup.git",
+                "reference": "ec3e815aa218b127d2a66abcc0cfdc8dbbffdb08"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/ec3e815aa218b127d2a66abcc0cfdc8dbbffdb08",
+                "reference": "ec3e815aa218b127d2a66abcc0cfdc8dbbffdb08",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^8.7.1"
+            },
+            "replace": {
+                "hgon_workgroup": "self.version",
+                "typo3-ter/hgon-workgroup": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "HGON\\HgonWorkgroup\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "HGON\\HgonWorkgroup\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Maximilian Fäßler",
+                    "role": "Developer"
+                }
+            ],
+            "description": "For managing working groups",
+            "support": {
+                "source": "https://github.com/HGONeV/hgon_workgroup/tree/master",
+                "issues": "https://github.com/HGONeV/hgon_workgroup/issues"
+            },
+            "time": "2019-08-15T13:42:27+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1692,6 +1876,55 @@
             "time": "2019-05-29T07:39:12+00:00"
         },
         {
+            "name": "psr/container",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common Container Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/container",
+            "keywords": [
+                "PSR-11",
+                "container",
+                "container-interface",
+                "container-interop",
+                "psr"
+            ],
+            "time": "2017-02-14T16:28:37+00:00"
+        },
+        {
             "name": "psr/http-message",
             "version": "1.0.1",
             "source": {
@@ -1888,16 +2121,16 @@
         },
         {
             "name": "rkw/rkw-basics",
-            "version": "v8.7.6-stable",
+            "version": "v8.7.7-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwBasics.git",
-                "reference": "38f5169f7178ae027167310c972ae866306e970f"
+                "reference": "0ee9e49b2db2c426d3ba80b9685af50c82f0b09c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/38f5169f7178ae027167310c972ae866306e970f",
-                "reference": "38f5169f7178ae027167310c972ae866306e970f",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/0ee9e49b2db2c426d3ba80b9685af50c82f0b09c",
+                "reference": "0ee9e49b2db2c426d3ba80b9685af50c82f0b09c",
                 "shasum": ""
             },
             "require": {
@@ -1923,15 +2156,15 @@
             "authors": [
                 {
                     "name": "Steffen Kroggel",
+                    "role": "Developer",
                     "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
+                    "homepage": "http://www.steffenkroggel.de"
                 },
                 {
                     "name": "Maximilian Fäßler",
+                    "role": "Developer",
                     "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://faesslerweb.de",
-                    "role": "Developer"
+                    "homepage": "https://faesslerweb.de"
                 }
             ],
             "description": "Basic functions",
@@ -1940,20 +2173,20 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2019-03-08T08:20:27+00:00"
+            "time": "2019-08-09T14:16:18+00:00"
         },
         {
             "name": "rkw/rkw-events",
-            "version": "v8.7.12-beta",
+            "version": "dev-feature/showUpcomingPlugin",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwEvents.git",
-                "reference": "2e09e1a252637e9a980b5d1809463348465f17e7"
+                "reference": "bde9fbae1c43d490a6882e691d2f80b22303d51d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/2e09e1a252637e9a980b5d1809463348465f17e7",
-                "reference": "2e09e1a252637e9a980b5d1809463348465f17e7",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/bde9fbae1c43d490a6882e691d2f80b22303d51d",
+                "reference": "bde9fbae1c43d490a6882e691d2f80b22303d51d",
                 "shasum": ""
             },
             "require": {
@@ -1981,21 +2214,21 @@
             "authors": [
                 {
                     "name": "Steffen Kroggel",
+                    "role": "Developer",
                     "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
+                    "homepage": "http://www.steffenkroggel.de"
                 },
                 {
                     "name": "Maximilian Fäßler",
+                    "role": "Developer",
                     "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
+                    "homepage": "https://www.faesslerweb.de"
                 },
                 {
                     "name": "Carlos Meyer",
+                    "role": "Developer",
                     "email": "cm@davitec.de",
-                    "homepage": "https://www.davitec.de",
-                    "role": "Developer"
+                    "homepage": "https://www.davitec.de"
                 }
             ],
             "description": "Extension for events and registation",
@@ -2005,7 +2238,7 @@
                 "TYPO3 CMS",
                 "events"
             ],
-            "time": "2019-03-08T08:38:51+00:00"
+            "time": "2019-08-01T13:28:00+00:00"
         },
         {
             "name": "rkw/rkw-geolocation",
@@ -2242,16 +2475,16 @@
         },
         {
             "name": "rkw/rkw-template",
-            "version": "v7.6.16-beta",
+            "version": "v7.6.17-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwTemplate.git",
-                "reference": "67384897dd96357dfd96567ef7286ab55c176243"
+                "reference": "0f6493dcf9572f977f5b05d810a050b6b359d7b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwTemplate/zipball/67384897dd96357dfd96567ef7286ab55c176243",
-                "reference": "67384897dd96357dfd96567ef7286ab55c176243",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwTemplate/zipball/0f6493dcf9572f977f5b05d810a050b6b359d7b3",
+                "reference": "0f6493dcf9572f977f5b05d810a050b6b359d7b3",
                 "shasum": ""
             },
             "require": {
@@ -2289,7 +2522,7 @@
                 "TYPO3 CMS",
                 "templates"
             ],
-            "time": "2019-07-18T13:20:30+00:00"
+            "time": "2019-08-09T14:21:40+00:00"
         },
         {
             "name": "sjbr/static-info-tables",
@@ -2391,25 +2624,27 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.4.30",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "12940f20a816c978860fa4925b3f1bbb27e9ac46"
+                "reference": "8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/12940f20a816c978860fa4925b3f1bbb27e9ac46",
-                "reference": "12940f20a816c978860fa4925b3f1bbb27e9ac46",
+                "url": "https://api.github.com/repos/symfony/console/zipball/8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9",
+                "reference": "8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8",
-                "symfony/debug": "~2.8|~3.0|~4.0",
-                "symfony/polyfill-mbstring": "~1.0"
+                "php": "^7.1.3",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php73": "^1.8",
+                "symfony/service-contracts": "^1.1"
             },
             "conflict": {
                 "symfony/dependency-injection": "<3.4",
+                "symfony/event-dispatcher": "<4.3",
                 "symfony/process": "<3.3"
             },
             "provide": {
@@ -2417,11 +2652,12 @@
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~3.3|~4.0",
+                "symfony/config": "~3.4|~4.0",
                 "symfony/dependency-injection": "~3.4|~4.0",
-                "symfony/event-dispatcher": "~2.8|~3.0|~4.0",
+                "symfony/event-dispatcher": "^4.3",
                 "symfony/lock": "~3.4|~4.0",
-                "symfony/process": "~3.3|~4.0"
+                "symfony/process": "~3.4|~4.0",
+                "symfony/var-dumper": "^4.3"
             },
             "suggest": {
                 "psr/log": "For using the console logger",
@@ -2432,7 +2668,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -2459,63 +2695,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-07-24T14:46:41+00:00"
-        },
-        {
-            "name": "symfony/debug",
-            "version": "v4.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/debug.git",
-                "reference": "527887c3858a2462b0137662c74837288b998ee3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/527887c3858a2462b0137662c74837288b998ee3",
-                "reference": "527887c3858a2462b0137662c74837288b998ee3",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "psr/log": "~1.0"
-            },
-            "conflict": {
-                "symfony/http-kernel": "<3.4"
-            },
-            "require-dev": {
-                "symfony/http-kernel": "~3.4|~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Debug\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Debug Component",
-            "homepage": "https://symfony.com",
-            "time": "2019-07-23T11:21:36+00:00"
+            "time": "2019-07-24T17:13:59+00:00"
         },
         {
             "name": "symfony/finder",
@@ -2738,26 +2918,84 @@
             "time": "2019-08-06T08:03:45+00:00"
         },
         {
-            "name": "symfony/process",
-            "version": "v3.4.30",
+            "name": "symfony/polyfill-php73",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/process.git",
-                "reference": "d129c017e8602507688ef2c3007951a16c1a8407"
+                "url": "https://github.com/symfony/polyfill-php73.git",
+                "reference": "2ceb49eaccb9352bff54d22570276bb75ba4a188"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/d129c017e8602507688ef2c3007951a16c1a8407",
-                "reference": "d129c017e8602507688ef2c3007951a16c1a8407",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/2ceb49eaccb9352bff54d22570276bb75ba4a188",
+                "reference": "2ceb49eaccb9352bff54d22570276bb75ba4a188",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8"
+                "php": ">=5.3.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "1.12-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php73\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2019-08-06T08:03:45+00:00"
+        },
+        {
+            "name": "symfony/process",
+            "version": "v4.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "856d35814cf287480465bb7a6c413bb7f5f5e69c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/856d35814cf287480465bb7a6c413bb7f5f5e69c",
+                "reference": "856d35814cf287480465bb7a6c413bb7f5f5e69c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -2784,7 +3022,65 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2019-05-30T15:47:52+00:00"
+            "time": "2019-05-30T16:10:05+00:00"
+        },
+        {
+            "name": "symfony/service-contracts",
+            "version": "v1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/service-contracts.git",
+                "reference": "f391a00de78ec7ec8cf5cdcdae59ec7b883edb8d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/f391a00de78ec7ec8cf5cdcdae59ec7b883edb8d",
+                "reference": "f391a00de78ec7ec8cf5cdcdae59ec7b883edb8d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "psr/container": "^1.0"
+            },
+            "suggest": {
+                "symfony/service-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\Service\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to writing services",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "time": "2019-06-13T11:15:36+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -4523,6 +4819,10 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "hgon/hgon-template": 20,
+        "hgon/hgon-donation": 20,
+        "hgon/hgon-workgroup": 20,
+        "rkw/rkw-events": 20,
         "mikey179/vfsstream": 20
     },
     "prefer-stable": true,

@@ -3,7 +3,19 @@
          {
              "type": "composer",
              "url": "https://composer.typo3.org/"
-         }
+         },
+        {
+            "type": "vcs",
+            "url": "https://github.com/HGONeV/hgon_template.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/HGONeV/hgon_donation.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/HGONeV/hgon_workgroup.git"
+        }
     ],
     "name": "rkw/typo3-distribution",
     "description": "TYPO3 CMS Distribution with console support - ",
@@ -11,12 +23,15 @@
     "require": {
        "php": "~7.2.0",
        "typo3/cms": "^8.7.0",
-       "helhum/typo3-console": "^4.9",
+       "helhum/typo3-console": "^5.7",
        "helhum/dotenv-connector": "^1.0",
        "typo3/surf": "^2.0.0",
        "sjbr/static-info-tables" : "^6.5",
+       "hgon/hgon-template": "dev-master",
+       "hgon/hgon-donation": "dev-master",
+       "hgon/hgon-workgroup": "dev-master",
        "rkw/rkw-basics": "~7.6.12 || ~8.7.2",
-       "rkw/rkw-events": "~7.6.7 || ~8.7.0",
+       "rkw/rkw-events": "dev-feature/showUpcomingPlugin",
        "rkw/rkw-geolocation": "~7.6.11",
        "rkw/rkw-mailer": "~7.6.13 || ~8.7.1",
        "rkw/rkw-registration": "~7.6.11 || ~8.7.0",
@@ -36,13 +51,13 @@
     },
     "scripts": {
         "git-set-filemode" : [
-            "if [ $COMPOSER_DEV_MODE -eq 1 ]; then ./scripts/git-filemode-recursive.sh; fi"
+            "if [ \"$TYPO3_DEPLOYMENT_RUN\" != \"1\" ]; then ./scripts/git-filemode-recursive.sh; fi"
         ],
         "typo3-cleanup" : [
-            "if [ $COMPOSER_DEV_MODE -eq 1 ]; then ./scripts/typo3-cleanup.sh; fi"
+            "if [ \"$TYPO3_DEPLOYMENT_RUN\" != \"1\" ]; then ./scripts/typo3-cleanup.sh; fi"
         ],
         "typo3-generate-packagestates" : [
-            "if [ $COMPOSER_DEV_MODE -eq 1 ]; then ./scripts/typo3-generate-packagestates.sh; fi"
+            "if [ \"$TYPO3_DEPLOYMENT_RUN\" != \"1\" ]; then ./scripts/typo3-generate-packagestates.sh; fi"
         ],
         "post-install-cmd": [
             "@git-set-filemode",
@@ -78,22 +93,14 @@
         },
         "preferred-install": {
             "rkw/*": "source",
+            "hgon/*": "source",
             "*": "dist"
         }
     },
     "autoload": {
         "psr-4": {
             "BM\\BmPdf2content\\": "web/typo3conf/ext/bm_pdf2content/Classes",
-            "DmitryDulepov\\DdGooglesitemap\\": "web/typo3conf/ext/dd_googlesitemap/Classes",
-            "HGON\\HgonTemplate\\": [
-                "web/typo3conf/ext/hgon_template/Classes"
-            ],
-            "HGON\\HgonDonation\\": [
-                "web/typo3conf/ext/hgon_donation/Classes"
-            ],
-            "HGON\\HgonWorkgroup\\": [
-                "web/typo3conf/ext/hgon_workgroup/Classes"
-            ]
+            "DmitryDulepov\\DdGooglesitemap\\": "web/typo3conf/ext/dd_googlesitemap/Classes"
         }
     }
 }

@@ -6,7 +6,7 @@
  * @copyright Rkw Kompetenzzentrum
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  * @var \TYPO3\Surf\Domain\Model\Deployment $deployment
- * @version 1.0.2
+ * @version 1.0.6
  */
 
 
@@ -29,8 +29,10 @@ $application->setOption('typo3.surf:gitCheckout[branch]', $gitBranch);
 $application->setOption('applicationRootDirectory', 'src');
 $application->setDeploymentPath($absolutePath);
 $application->setSymlinks(array(
-    './web/uploads' => '../../../surf/shared/uploads',
-    './web/fileadmin' => '../../../surf/shared/fileadmin',
+    './web/uploads' => '../../../surf/shared/Data/uploads',
+    './web/fileadmin' => '../../../surf/shared/Data/fileadmin',
+    './web/typo3temp/logs' => '../../../../shared/Data/typo3temp/logs',
+    './web/typo3temp/var/logs' => '../../../../../shared/Data/typo3temp/logs',
     './web/typo3conf/LocalConfiguration.php' => '../../../../shared/LocalConfiguration.php',
 ));
 $deployment->addApplication($application);
@@ -87,11 +89,19 @@ $workflow->defineTask(
     \TYPO3\Surf\Task\LocalShellTask::class,
     array('command' => 'cd {workspacePath} && rm ./composer.lock && echo "Removed composer.lock in {workspacePath}"')
 );
-// own task because we need --no-scripts and --prefer-dist
+// own task because we need --prefer-dist
+// we do NOT set no-scripts, because when using no-scripts the TYPO3 console won't work
 $workflow->defineTask(
-    'RKW\\Task\\Local\\ComposerInstall',
+    'RKW\\Task\\Local\\ComposerInstallProduction',
     \TYPO3\Surf\Task\LocalShellTask::class,
-    array('command' => 'cd {workspacePath} && composer install --no-ansi --no-interaction --no-dev --no-progress --classmap-authoritative --prefer-dist 2>&1')
+    array('command' => 'cd {workspacePath} && export TYPO3_DEPLOYMENT_RUN="1" && composer install --no-ansi --no-interaction --no-dev --no-progress --classmap-authoritative --prefer-dist 2>&1 && export TYPO3_DEPLOYMENT_RUN="0"')
+);
+
+// without --no-dev here. This way we can deploy development stuff to the staging environment without having to take care for production environment.
+$workflow->defineTask(
+    'RKW\\Task\\Local\\ComposerInstallStaging',
+    \TYPO3\Surf\Task\LocalShellTask::class,
+    array('command' => 'cd {workspacePath} && export TYPO3_DEPLOYMENT_RUN="1" && composer install --no-ansi --no-interaction --no-progress --classmap-authoritative --prefer-dist 2>&1 && export TYPO3_DEPLOYMENT_RUN="0"')
 );
 
 //---------------------------------------
@@ -103,14 +113,19 @@ $workflow->defineTask(
     array('command' => 'cd {releasePath} && if [ -d "./dummy" ] && [ -d "./web/fileadmin/" ]; then if [ ! -d "./web/fileadmin/media" ]; then mkdir ./web/fileadmin/media; fi && cp ./dummy/* ./web/fileadmin/media/ && echo "Copied dummy files in {releasePath}."; fi')
 );
 $workflow->defineTask(
+    'RKW\\Task\\Remote\\CreateTypo3Temp',
+    \TYPO3\Surf\Task\ShellTask::class,
+    array('command' => 'cd {releasePath} && if [ ! -d "./web/typo3temp/" ]; then mkdir ./web/typo3temp; fi && if [ ! -d "./web/typo3temp/var" ]; then mkdir ./web/typo3temp/var; fi')
+);
+$workflow->defineTask(
     'RKW\\Task\\Remote\\FixRights',
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && find ./web -type f -exec chmod 640 {} \; && find ./web -type d -exec chmod 750 {} \; && echo "Fixed rights in {releasePath}"')
 );
 $workflow->defineTask(
-    'RKW\\Task\\Remote\\Apc\\ClearCache',
+    'RKW\\Task\\Remote\\ClearOpcCache',
     \TYPO3\Surf\Task\ShellTask::class,
-    array('command' => 'cd {releasePath} && ' . $phpPath . ' -r \'apc_clear_cache("' . $user . '");\'')
+    array('command' => 'cd {releasePath} && ' . $phpPath . ' ./clear-opc-cache.php')
 );
 $workflow->defineTask(
     'RKW\\Task\\Remote\\TYPO3\\FixFolderStructure',
@@ -122,7 +137,11 @@ $workflow->defineTask(
     \TYPO3\Surf\Task\ShellTask::class,
     array('command' => 'cd {releasePath} && if [ -f "./web/typo3conf/LocalConfiguration.php" ]; then ./vendor/bin/typo3cms database:updateschema "*.add,*.change"; fi')
 );
-
+$workflow->defineTask(
+    'RKW\\Task\\Remote\\FixRightsRkwSearch',
+    \TYPO3\Surf\Task\ShellTask::class,
+    array('command' => 'cd {releasePath} && chmod 755 ./web/typo3conf/ext/rkw_search/Classes/Libs/TreeTagger/bin/* && chmod 755 ./web/typo3conf/ext/rkw_search/Classes/Libs/TreeTagger/cmd/* && echo "Fixed rights for rkw_search"')
+);
 
 // Set options for varnish ban
 if ($varnishAdmPath) {
@@ -134,8 +153,6 @@ if ($varnishAdmPath) {
         ]
     );
 }
-
-
 
 $deployment->setWorkflow($workflow);
 
@@ -154,8 +171,8 @@ $deployment->onInitialize(function () use ($workflow, $application, $gitBranch, 
 
     // -----------------------------------------------
     // Step 2: package - This stage is where you normally package all files and assets, which will be transferred to the next stage.
-    $workflow->addTask('RKW\\Task\\Local\\ComposerInstall', 'package');
-    $workflow->beforeTask('RKW\\Task\\Local\\ComposerInstall', 'TYPO3\\Surf\\Task\\Package\\GitTask');
+    $workflow->addTask('RKW\\Task\\Local\\ComposerInstall' . ucfirst($gitBranch), 'package');
+    $workflow->beforeTask('RKW\\Task\\Local\\ComposerInstall' . ucfirst($gitBranch), 'TYPO3\\Surf\\Task\\Package\\GitTask');
 
     $workflow->afterTask('TYPO3\\Surf\\Task\\Package\\GitTask', 'RKW\\Task\\Local\\CopyEnv');
     $workflow->afterTask('TYPO3\\Surf\\Task\\Package\\GitTask', 'RKW\\Task\\Local\\CopyHtaccess');
@@ -166,6 +183,7 @@ $deployment->onInitialize(function () use ($workflow, $application, $gitBranch, 
 
     // -----------------------------------------------
     // Step 3: transfer - Here all tasks are located which serve to transfer the assets from your local computer to the node, where the application runs.
+    $workflow->beforeTask('TYPO3\\Surf\\Task\\Generic\\CreateSymlinksTask', 'RKW\\Task\\Remote\\CreateTypo3Temp');
 
     // -----------------------------------------------
     // Step 4: update - If necessary, the transferred assets can be updated at this stage on the foreign instance.
@@ -178,6 +196,7 @@ $deployment->onInitialize(function () use ($workflow, $application, $gitBranch, 
     // Step 6: finalize - This stage is meant for tasks, that should be done short before going live, like cache warm ups and so on.
     $workflow->beforeStage('finalize', 'RKW\\Task\\Remote\\FixRights');
     $workflow->afterStage('finalize', 'RKW\\Task\\Remote\\TYPO3\\FixFolderStructure');
+    $workflow->afterStage('finalize', 'RKW\\Task\\Remote\\FixRightsRkwSearch');
     if ($gitBranch != 'production') {
         $workflow->afterStage('finalize', 'RKW\\Task\\Remote\\CopyDummyFiles');
     }
@@ -187,13 +206,13 @@ $deployment->onInitialize(function () use ($workflow, $application, $gitBranch, 
 
     // -----------------------------------------------
     // Step 8: switch - This is the crucial stage. Here the old live instance is switched with the new prepared instance. Normally the new instance is symlinked.
-    $workflow->beforeStage('switch', 'RKW\\Task\\Remote\\Apc\\ClearCache');
-    $workflow->afterTask('RKW\\Task\\Remote\\Apc\\ClearCache', 'TYPO3\\Surf\\Task\\TYPO3\\CMS\\FlushCachesTask');
+    $workflow->beforeStage('switch', 'RKW\\Task\\Remote\\ClearOpcCache');
+    $workflow->afterTask('RKW\\Task\\Remote\\ClearOpcCache', 'TYPO3\\Surf\\Task\\TYPO3\\CMS\\FlushCachesTask');
 
     // -----------------------------------------------
     // Step 9: cleanup - At this stage you would cleanup old releases or remove other unused stuff.
-    $workflow->beforeStage('cleanup', 'RKW\\Task\\Remote\\Apc\\ClearCache');
-    $workflow->afterTask(' TYPO3\\Surf\\Task\\TYPO3\\CMS\\FlushCachesTask', 'RKW\\Task\\Remote\\Apc\\ClearCache');
+    $workflow->beforeStage('cleanup', 'RKW\\Task\\Remote\\ClearOpcCache');
+
     // @toDo: Make it work :)
     /*if ($varnishAdmPath) {
         $workflow->addTask('TYPO3\\Surf\\Task\\VarnishBanTask', 'cleanup');
