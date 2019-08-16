@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c4c990afc01e70bc6e44396aec0f6f0",
+    "content-hash": "afc74023d9642783d07be4fc26a12ea2",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1392,6 +1392,50 @@
             "time": "2018-08-12T22:18:40+00:00"
         },
         {
+            "name": "hgon/hgon-template",
+            "version": "v8.7.1-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HGONeV/hgon_template.git",
+                "reference": "4090e0bd30843f5bb91dd512f7480eeccc21eec1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/4090e0bd30843f5bb91dd512f7480eeccc21eec1",
+                "reference": "4090e0bd30843f5bb91dd512f7480eeccc21eec1",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^8.7.1"
+            },
+            "replace": {
+                "hgon_template": "self.version",
+                "typo3-ter/hgon-template": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "HGON\\HgonTemplate\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "HGON\\HgonTemplate\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Maximilian Fäßler",
+                    "role": "Developer"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.1-beta",
+                "issues": "https://github.com/HGONeV/hgon_template/issues"
+            },
+            "time": "2019-08-16T15:10:12+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.24.0",
             "source": {
@@ -2100,22 +2144,24 @@
         },
         {
             "name": "rkw/rkw-mailer",
-            "version": "v8.7.13-beta",
+            "version": "v8.7.20-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwMailer.git",
-                "reference": "57ce48ef9f4ef67b1ed5c2c0b2b63c2a7d99434b"
+                "reference": "b05d9284d5f0a652c89c651b8026b8382766805a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/57ce48ef9f4ef67b1ed5c2c0b2b63c2a7d99434b",
-                "reference": "57ce48ef9f4ef67b1ed5c2c0b2b63c2a7d99434b",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/b05d9284d5f0a652c89c651b8026b8382766805a",
+                "reference": "b05d9284d5f0a652c89c651b8026b8382766805a",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
                 "php": ">=5.6",
                 "rkw/rkw-basics": "~8.7.2",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
+                "typo3/cms-core": "^7.6.0 || ^8.7.0",
+                "voku/bounce-mail-handler": "^5.5"
             },
             "type": "typo3-cms-extension",
             "extra": {
@@ -2135,15 +2181,15 @@
             "authors": [
                 {
                     "name": "Steffen Kroggel",
+                    "role": "Developer",
                     "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
+                    "homepage": "http://www.steffenkroggel.de"
                 },
                 {
                     "name": "Maximilian Fäßler",
+                    "role": "Developer",
                     "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
+                    "homepage": "https://www.faesslerweb.de"
                 }
             ],
             "description": "Extension sending e-mails and bulk-mailings",
@@ -2154,7 +2200,7 @@
                 "TYPO3 CMS",
                 "newsletter"
             ],
-            "time": "2019-05-18T20:53:44+00:00"
+            "time": "2019-08-09T14:41:43+00:00"
         },
         {
             "name": "rkw/rkw-projects",
@@ -3504,6 +3550,66 @@
                 "environment"
             ],
             "time": "2019-01-29T11:11:52+00:00"
+        },
+        {
+            "name": "voku/bounce-mail-handler",
+            "version": "v5.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/voku/PHPMailer-BMH.git",
+                "reference": "48a79e9688e2cd647b9371acd9162251cb60f8d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/voku/PHPMailer-BMH/zipball/48a79e9688e2cd647b9371acd9162251cb60f8d1",
+                "reference": "48a79e9688e2cd647b9371acd9162251cb60f8d1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-imap": "*",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0|~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "BounceMailHandler": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Andy Prevost",
+                    "email": "andy.prevost@worxteam.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anthon Pang",
+                    "email": "apang@softwaredevelopment.ca",
+                    "role": "Other Fork Maintainer"
+                },
+                {
+                    "name": "Lars Moelleken",
+                    "email": "lars@moelleken.org",
+                    "role": "Fork Maintainer"
+                }
+            ],
+            "description": "Bounce Mail Handler",
+            "keywords": [
+                "bounce",
+                "bounce-mail",
+                "email",
+                "hard-bounce",
+                "mail",
+                "mailer",
+                "soft-bounce"
+            ],
+            "time": "2017-03-31T14:58:21+00:00"
         }
     ],
     "packages-dev": [
@@ -3607,50 +3713,6 @@
                 "issues": "https://github.com/HGONeV/hgon_donation/issues"
             },
             "time": "2019-08-16T09:33:16+00:00"
-        },
-        {
-            "name": "hgon/hgon-template",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "d826b33366126f45c389040ba5d616d0008a9199"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/d826b33366126f45c389040ba5d616d0008a9199",
-                "reference": "d826b33366126f45c389040ba5d616d0008a9199",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "^8.7.1"
-            },
-            "replace": {
-                "hgon_template": "self.version",
-                "typo3-ter/hgon-template": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "psr-4": {
-                    "HGON\\HgonTemplate\\": "Classes"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "HGON\\HgonTemplate\\Tests\\": "Tests"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Maximilian Fäßler",
-                    "role": "Developer"
-                }
-            ],
-            "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/master",
-                "issues": "https://github.com/HGONeV/hgon_template/issues"
-            },
-            "time": "2019-08-16T09:34:19+00:00"
         },
         {
             "name": "hgon/hgon-workgroup",
@@ -4820,7 +4882,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "mikey179/vfsstream": 20,
-        "hgon/hgon-template": 20,
         "hgon/hgon-donation": 20,
         "hgon/hgon-workgroup": 20,
         "rkw/rkw-events": 20
