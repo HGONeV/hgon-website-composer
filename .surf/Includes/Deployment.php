@@ -31,8 +31,8 @@ $application->setDeploymentPath($absolutePath);
 $application->setSymlinks(array(
     './web/uploads' => '../../../surf/shared/Data/uploads',
     './web/fileadmin' => '../../../surf/shared/Data/fileadmin',
-    './web/typo3temp/logs' => '../../../../shared/Data/typo3temp/logs',
-    './web/typo3temp/var/logs' => '../../../../../shared/Data/typo3temp/logs',
+    './web/typo3temp/logs' => '../../../../shared/Data/logs',
+    './web/typo3temp/var/logs' => '../../../../../shared/Data/logs',
     './web/typo3conf/LocalConfiguration.php' => '../../../../shared/LocalConfiguration.php',
 ));
 $deployment->addApplication($application);
