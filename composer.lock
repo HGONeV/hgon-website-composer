@@ -1393,16 +1393,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.1-beta",
+            "version": "v8.7.2-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "4090e0bd30843f5bb91dd512f7480eeccc21eec1"
+                "reference": "ac29993b351a791dedeaa58018cabbba5c342819"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/4090e0bd30843f5bb91dd512f7480eeccc21eec1",
-                "reference": "4090e0bd30843f5bb91dd512f7480eeccc21eec1",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/ac29993b351a791dedeaa58018cabbba5c342819",
+                "reference": "ac29993b351a791dedeaa58018cabbba5c342819",
                 "shasum": ""
             },
             "require": {
@@ -1430,10 +1430,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.1-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.2-beta",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2019-08-16T15:10:12+00:00"
+            "time": "2019-08-16T16:41:23+00:00"
         },
         {
             "name": "monolog/monolog",
