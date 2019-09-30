@@ -50,23 +50,6 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array(
 
                     // types from extensions
                     // have to be set here, because otherwise they get ignored in linkBuilder!
-                    'pagetype-alerts-ajax'           => 1446640418,
-                    'pagetype-consultant-ajax'       => 1449742214,
-                    'pagetype-infolayer-ajax'        => 1417609477,
-                    'pagetype-registration-ajax'     => 1449722003,
-                    'pagetype-search-ajax'           => 1433770902,
-                    'pagetype-search-not-found'      => 1444893030,
-                    'pagetype-socialcomments-ajax'   => 1417692531,
-                    'pagetype-basics-google-sitemap' => 1453279478,
-                    'pagetype-wepstra-ajax'          => 1470640639,
-                    'pagetype-wepstra-print'         => 1470640673,
-                    'pagetype-rss'                   => 1449588488,
-                    'pagetype-instantarticles'       => 1449588489,
-                    'pagetype-order-ajax'            => 1510210402,
-                    'pagetype-tools-ajax'            => 1512989710,
-                    'pagetype-ecosystem-ajax'        => 1513597215,
-                    'pagetype-ecosystem-print'       => 1513597216,
-                    'pagetype-newletter'             => 1536732477,
                 ),
                 'noMatch' => 'bypass',
             ),
@@ -198,6 +181,36 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array(
                 ),
 
                 //===============================================
+                // Donation
+                //===============================================
+                'tx-hgon-donation' => array (
+                    array(
+                        'GETvar' => 'tx_hgondonation_detail[controller]',
+                        'noMatch' => 'bypass',
+                    ),
+                    array(
+                        'GETvar' => 'tx_hgondonation_detail[action]' ,
+                        'noMatch' => 'bypass',
+                    ),
+
+                    // look-up table - param has to be set in cHash-ignore in Install-Tool!
+                    array(
+                        'GETvar' => 'tx_hgondonation_detail[donation]' ,
+                        'lookUpTable' => array(
+                            'table' => 'tx_hgondonation_domain_model_donation',
+                            'id_field' => 'uid',
+                            'alias_field' => 'CONCAT(title, "-", uid)',
+                            'addWhereClause' => ' AND NOT deleted AND NOT hidden',
+                            'useUniqueCache' => 1,
+                            'useUniqueCache_conf' => array(
+                                'strtolower' => 1,
+                                'spaceCharacter' => '-',
+                            ),
+                        ),
+                    ),
+                ),
+
+                //===============================================
                 // News
                 //===============================================
                 'tx-news' => [
@@ -234,10 +247,12 @@ function user_decodeSpURL_preProc(&$params, &$ref) {
     $params['URL'] = str_replace('event/', 'veranstaltung/tx-rkw-events/event/show/', $params['URL']);
     $params['URL'] = str_replace('standort/', 'arbeitskreise/tx-hgon-workgroup/', $params['URL']);
     $params['URL'] = str_replace('aktuelles/', 'detail/tx-news/detail/News/', $params['URL']);
+    $params['URL'] = str_replace('mit-freude-spenden/', 'mit-freude-spenden/tx-hgon-donation/', $params['URL']);
 }
 
 function user_encodeSpURL_postProc(&$params, &$ref) {
     $params['URL'] = str_replace('veranstaltung/tx-rkw-events/event/show/', 'event/', $params['URL']);
     $params['URL'] = str_replace('arbeitskreise/tx-hgon-workgroup/', 'standort/', $params['URL']);
     $params['URL'] = str_replace('detail/tx-news/detail/News/', 'aktuelles/', $params['URL']);
+    $params['URL'] = str_replace('mit-freude-spenden/tx-hgon-donation/', 'mit-freude-spenden/', $params['URL']);
 }
