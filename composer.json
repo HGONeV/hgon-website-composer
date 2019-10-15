@@ -22,7 +22,7 @@
     "license": "GPL-2.0+",
     "require": {
        "php": "~7.2.0",
-       "typo3/cms": "^8.7.0",
+       "typo3/cms": "8.7.26",
        "helhum/typo3-console": "^5.7",
        "helhum/dotenv-connector": "^1.0",
        "typo3/surf": "^2.0.0",
