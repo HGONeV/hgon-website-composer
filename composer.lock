@@ -1331,16 +1331,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.3-beta",
+            "version": "v8.7.4-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "9ecd79a556c3a980dc39c4679643b8d12c809c46"
+                "reference": "812fa671e0797cb7cb170249c33a616a9dd34d66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/9ecd79a556c3a980dc39c4679643b8d12c809c46",
-                "reference": "9ecd79a556c3a980dc39c4679643b8d12c809c46",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/812fa671e0797cb7cb170249c33a616a9dd34d66",
+                "reference": "812fa671e0797cb7cb170249c33a616a9dd34d66",
                 "shasum": ""
             },
             "require": {
@@ -1368,10 +1368,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.3-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2019-10-14T10:39:30+00:00"
+            "time": "2019-10-15T11:30:48+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3680,12 +3680,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_donation.git",
-                "reference": "a44026be64acb24184ad5a7e866a57b513f3360a"
+                "reference": "c20c30297210390f1fdc82ebff6ceedeac1d274a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/a44026be64acb24184ad5a7e866a57b513f3360a",
-                "reference": "a44026be64acb24184ad5a7e866a57b513f3360a",
+                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/c20c30297210390f1fdc82ebff6ceedeac1d274a",
+                "reference": "c20c30297210390f1fdc82ebff6ceedeac1d274a",
                 "shasum": ""
             },
             "require": {
@@ -3716,7 +3716,7 @@
                 "source": "https://github.com/HGONeV/hgon_donation/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_donation/issues"
             },
-            "time": "2019-10-15T11:28:04+00:00"
+            "time": "2019-10-15T12:20:18+00:00"
         },
         {
             "name": "hgon/hgon-payment",
