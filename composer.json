@@ -15,6 +15,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/HGONeV/hgon_payment.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/rkw-kompetenzzentrum/Deployment-TYPO3.git"
         }
     ],
     "name": "rkw/typo3-distribution",
@@ -48,7 +52,8 @@
         "hgon/hgon-donation": "dev-master",
         "hgon/hgon-workgroup": "dev-master",
         "hgon/hgon-payment": "dev-master",
-        "rkw/rkw-events": "dev-feature/showUpcomingPlugin"
+        "rkw/rkw-events": "dev-feature/showUpcomingPlugin",
+        "rkw/deployment-typo3" : "*"
     },
     "scripts": {
         "git-set-filemode" : [
