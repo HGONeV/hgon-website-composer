@@ -3724,12 +3724,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_payment.git",
-                "reference": "619e9b2996f12a2084ad96229c86905327c8be69"
+                "reference": "7c5afc505b595498e1f85decbd88524a6a619aa5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_payment/zipball/619e9b2996f12a2084ad96229c86905327c8be69",
-                "reference": "619e9b2996f12a2084ad96229c86905327c8be69",
+                "url": "https://api.github.com/repos/HGONeV/hgon_payment/zipball/7c5afc505b595498e1f85decbd88524a6a619aa5",
+                "reference": "7c5afc505b595498e1f85decbd88524a6a619aa5",
                 "shasum": ""
             },
             "require": {
@@ -3761,7 +3761,7 @@
                 "source": "https://github.com/HGONeV/hgon_payment/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_payment/issues"
             },
-            "time": "2019-10-16T07:44:58+00:00"
+            "time": "2019-10-16T08:32:58+00:00"
         },
         {
             "name": "hgon/hgon-workgroup",
