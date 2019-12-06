@@ -3680,12 +3680,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_donation.git",
-                "reference": "c20c30297210390f1fdc82ebff6ceedeac1d274a"
+                "reference": "5a9f93e06735e8ea68c11778370bb114a2ee6ea2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/c20c30297210390f1fdc82ebff6ceedeac1d274a",
-                "reference": "c20c30297210390f1fdc82ebff6ceedeac1d274a",
+                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/5a9f93e06735e8ea68c11778370bb114a2ee6ea2",
+                "reference": "5a9f93e06735e8ea68c11778370bb114a2ee6ea2",
                 "shasum": ""
             },
             "require": {
@@ -3716,7 +3716,7 @@
                 "source": "https://github.com/HGONeV/hgon_donation/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_donation/issues"
             },
-            "time": "2019-10-15T12:20:18+00:00"
+            "time": "2019-10-16T09:53:51+00:00"
         },
         {
             "name": "hgon/hgon-payment",
