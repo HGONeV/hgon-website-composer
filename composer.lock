@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc6012c6d0933e8fe1ea7461cc6d3bdb",
+    "content-hash": "d04803cb2c3d8dc717c22121691d5a41",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -905,16 +905,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.4.1",
+            "version": "6.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "0895c932405407fd3a7368b6910c09a24d26db11"
+                "reference": "dbc2bc3a293ed6b1ae08a3651e2bfd213d19b6a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0895c932405407fd3a7368b6910c09a24d26db11",
-                "reference": "0895c932405407fd3a7368b6910c09a24d26db11",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/dbc2bc3a293ed6b1ae08a3651e2bfd213d19b6a5",
+                "reference": "dbc2bc3a293ed6b1ae08a3651e2bfd213d19b6a5",
                 "shasum": ""
             },
             "require": {
@@ -929,12 +929,13 @@
                 "psr/log": "^1.1"
             },
             "suggest": {
+                "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.3-dev"
+                    "dev-master": "6.5-dev"
                 }
             },
             "autoload": {
@@ -967,7 +968,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2019-10-23T15:58:00+00:00"
+            "time": "2019-12-07T18:20:45+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -2273,16 +2274,16 @@
         },
         {
             "name": "rkw/rkw-registration",
-            "version": "v8.7.6-beta",
+            "version": "v8.7.7-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwRegistration.git",
-                "reference": "933af9ed9eb357c131854d21e1d4ed6aafe89565"
+                "reference": "9bccaf63a5cb626f991430db20b359d71ec160e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/933af9ed9eb357c131854d21e1d4ed6aafe89565",
-                "reference": "933af9ed9eb357c131854d21e1d4ed6aafe89565",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/9bccaf63a5cb626f991430db20b359d71ec160e6",
+                "reference": "9bccaf63a5cb626f991430db20b359d71ec160e6",
                 "shasum": ""
             },
             "require": {
@@ -2331,7 +2332,7 @@
                 "register",
                 "registration"
             ],
-            "time": "2019-11-12T09:00:12+00:00"
+            "time": "2019-12-09T09:14:58+00:00"
         },
         {
             "name": "rkw/rkw-template",
@@ -3773,51 +3774,6 @@
             "time": "2019-12-06T14:03:32+00:00"
         },
         {
-            "name": "hgon/hgon-workgroup",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HGONeV/hgon_workgroup.git",
-                "reference": "7bc6410a6194b58547e8bc2a73053cb1638f47b9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/7bc6410a6194b58547e8bc2a73053cb1638f47b9",
-                "reference": "7bc6410a6194b58547e8bc2a73053cb1638f47b9",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "^8.7.1"
-            },
-            "replace": {
-                "hgon_workgroup": "self.version",
-                "typo3-ter/hgon-workgroup": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "psr-4": {
-                    "HGON\\HgonWorkgroup\\": "Classes"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "HGON\\HgonWorkgroup\\Tests\\": "Tests"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Maximilian Fäßler",
-                    "role": "Developer"
-                }
-            ],
-            "description": "For managing working groups",
-            "support": {
-                "source": "https://github.com/HGONeV/hgon_workgroup/tree/master",
-                "issues": "https://github.com/HGONeV/hgon_workgroup/issues"
-            },
-            "time": "2019-08-16T09:58:02+00:00"
-        },
-        {
             "name": "mikey179/vfsStream",
             "version": "v1.4.0",
             "source": {
@@ -4972,7 +4928,6 @@
     "stability-flags": {
         "mikey179/vfsstream": 20,
         "hgon/hgon-donation": 20,
-        "hgon/hgon-workgroup": 20,
         "hgon/hgon-payment": 20,
         "rkw/rkw-events": 20
     },
