@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d04803cb2c3d8dc717c22121691d5a41",
+    "content-hash": "e5364b971153ae14f62529c30f665ca9",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -2336,16 +2336,16 @@
         },
         {
             "name": "rkw/rkw-template",
-            "version": "v7.6.27-beta",
+            "version": "v7.6.28-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwTemplate.git",
-                "reference": "0ee3d93ca757c8f369a5cd281256afa67db9e395"
+                "reference": "b4a9ab135345a765f878387365660137a2487dbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwTemplate/zipball/0ee3d93ca757c8f369a5cd281256afa67db9e395",
-                "reference": "0ee3d93ca757c8f369a5cd281256afa67db9e395",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwTemplate/zipball/b4a9ab135345a765f878387365660137a2487dbc",
+                "reference": "b4a9ab135345a765f878387365660137a2487dbc",
                 "shasum": ""
             },
             "require": {
@@ -2383,7 +2383,7 @@
                 "TYPO3 CMS",
                 "templates"
             ],
-            "time": "2019-11-15T07:10:57+00:00"
+            "time": "2019-12-09T09:52:16+00:00"
         },
         {
             "name": "sjbr/static-info-tables",
@@ -3774,6 +3774,51 @@
             "time": "2019-12-06T14:03:32+00:00"
         },
         {
+            "name": "hgon/hgon-workgroup",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HGONeV/hgon_workgroup.git",
+                "reference": "6ac84f4736625f208393f50b3d5c27004bfcda27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/6ac84f4736625f208393f50b3d5c27004bfcda27",
+                "reference": "6ac84f4736625f208393f50b3d5c27004bfcda27",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^8.7.1"
+            },
+            "replace": {
+                "hgon_workgroup": "self.version",
+                "typo3-ter/hgon-workgroup": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "HGON\\HgonWorkgroup\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "HGON\\HgonWorkgroup\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Maximilian Fäßler",
+                    "role": "Developer"
+                }
+            ],
+            "description": "For managing working groups",
+            "support": {
+                "source": "https://github.com/HGONeV/hgon_workgroup/tree/master",
+                "issues": "https://github.com/HGONeV/hgon_workgroup/issues"
+            },
+            "time": "2019-12-09T09:46:04+00:00"
+        },
+        {
             "name": "mikey179/vfsStream",
             "version": "v1.4.0",
             "source": {
@@ -4928,6 +4973,7 @@
     "stability-flags": {
         "mikey179/vfsstream": 20,
         "hgon/hgon-donation": 20,
+        "hgon/hgon-workgroup": 20,
         "hgon/hgon-payment": 20,
         "rkw/rkw-events": 20
     },

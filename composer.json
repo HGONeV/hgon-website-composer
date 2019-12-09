@@ -18,6 +18,10 @@
         },
         {
             "type": "vcs",
+            "url": "https://github.com/HGONeV/hgon_workgroup.git"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/rkw-kompetenzzentrum/Deployment-TYPO3.git"
         }
     ],
@@ -50,6 +54,7 @@
         "phpunit/phpunit": "~4.7.0",
 	    "friendsoftypo3/extension-builder": "~8.10.0",
         "hgon/hgon-donation": "dev-master",
+        "hgon/hgon-workgroup": "dev-master",
         "hgon/hgon-payment": "dev-master",
         "rkw/rkw-events": "dev-feature/showUpcomingPlugin",
         "rkw/deployment-typo3" : "*"
