@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5364b971153ae14f62529c30f665ca9",
+    "content-hash": "aa599e021d44d11afe1fa778bba981ee",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1340,16 +1340,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.8-beta",
+            "version": "v8.7.9-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "2a855f2abdc158c69c7bc62fd33803c8d3e782a2"
+                "reference": "d4a7567239be403aa0f19cf228cffa22368a5a9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/2a855f2abdc158c69c7bc62fd33803c8d3e782a2",
-                "reference": "2a855f2abdc158c69c7bc62fd33803c8d3e782a2",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/d4a7567239be403aa0f19cf228cffa22368a5a9a",
+                "reference": "d4a7567239be403aa0f19cf228cffa22368a5a9a",
                 "shasum": ""
             },
             "require": {
@@ -1377,10 +1377,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.8-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.9-beta",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2019-12-06T14:06:06+00:00"
+            "time": "2019-12-09T13:44:51+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2333,57 +2333,6 @@
                 "registration"
             ],
             "time": "2019-12-09T09:14:58+00:00"
-        },
-        {
-            "name": "rkw/rkw-template",
-            "version": "v7.6.28-beta",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwTemplate.git",
-                "reference": "b4a9ab135345a765f878387365660137a2487dbc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwTemplate/zipball/b4a9ab135345a765f878387365660137a2487dbc",
-                "reference": "b4a9ab135345a765f878387365660137a2487dbc",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": "~8.7.0",
-                "typo3/cms-core": "~7.6.0 || ~8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_template"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwTemplate\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Templates and TypoScript for TYPO3",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "TYPO3 CMS",
-                "templates"
-            ],
-            "time": "2019-12-09T09:52:16+00:00"
         },
         {
             "name": "sjbr/static-info-tables",
@@ -3734,12 +3683,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_payment.git",
-                "reference": "8cf0bcd34cfa4e833c40fb4a85fa02b173c34fba"
+                "reference": "96f8291d8fd1b565c71bed265237da7d04e68e25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_payment/zipball/8cf0bcd34cfa4e833c40fb4a85fa02b173c34fba",
-                "reference": "8cf0bcd34cfa4e833c40fb4a85fa02b173c34fba",
+                "url": "https://api.github.com/repos/HGONeV/hgon_payment/zipball/96f8291d8fd1b565c71bed265237da7d04e68e25",
+                "reference": "96f8291d8fd1b565c71bed265237da7d04e68e25",
                 "shasum": ""
             },
             "require": {
@@ -3771,7 +3720,7 @@
                 "source": "https://github.com/HGONeV/hgon_payment/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_payment/issues"
             },
-            "time": "2019-12-06T14:03:32+00:00"
+            "time": "2019-12-09T13:39:18+00:00"
         },
         {
             "name": "hgon/hgon-workgroup",
