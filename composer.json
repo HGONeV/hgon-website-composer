@@ -46,7 +46,8 @@
        "georgringer/news": "^7.2",
        "plusb/pb_social": "^1.4",
        "dmitryd/typo3-realurl": "~2.5.0",
-       "hgon/hgon-template": "~8.7.0"
+       "hgon/hgon-template": "~8.7.0",
+        "reelworx/rx-shariff": "^12.3"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.4.*@dev",

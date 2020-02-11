@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa599e021d44d11afe1fa778bba981ee",
+    "content-hash": "fc2c5ac83415f6cb277ef7da2a28309a",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1340,16 +1340,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.10-beta",
+            "version": "v8.7.12-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "cf3eee6486f818e3f55c6c5a2c8e2aca16a454cc"
+                "reference": "4bec1fd96a29e98b93becc7bd85fc514cf22af63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/cf3eee6486f818e3f55c6c5a2c8e2aca16a454cc",
-                "reference": "cf3eee6486f818e3f55c6c5a2c8e2aca16a454cc",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/4bec1fd96a29e98b93becc7bd85fc514cf22af63",
+                "reference": "4bec1fd96a29e98b93becc7bd85fc514cf22af63",
                 "shasum": ""
             },
             "require": {
@@ -1377,10 +1377,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.10-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.12-beta",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2020-02-07T15:34:01+00:00"
+            "time": "2020-02-11T11:10:49+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1918,6 +1918,49 @@
             ],
             "description": "A polyfill for getallheaders.",
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "reelworx/rx-shariff",
+            "version": "v12.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/reelworx/rx_shariff.git",
+                "reference": "260f749aacac8ca8bc3a119620ccab5351566c6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/reelworx/rx_shariff/get/260f749aacac8ca8bc3a119620ccab5351566c6b.zip",
+                "reference": "260f749aacac8ca8bc3a119620ccab5351566c6b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "7.1.0 - 7.3.99",
+                "typo3/cms-core": "7.6.0 - 9.5.99"
+            },
+            "replace": {
+                "typo3-ter/rx-shariff": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "Reelworx\\RxShariff\\": "Classes/",
+                    "Heise\\Shariff\\": "Resources/Private/Shariff/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Reelworx GmbH",
+                    "homepage": "https://reelworx.at/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Shariff implementation for TYPO3 CMS including the backend module, a viewhelper and a plugin.",
+            "homepage": "https://bitbucket.org/reelworx/rx_shariff",
+            "time": "2020-01-13T20:06:42+00:00"
         },
         {
             "name": "rkw/rkw-authors",
@@ -3640,12 +3683,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_donation.git",
-                "reference": "ea798f36c87c7f2faeea58ff0247f82ca9c30aa2"
+                "reference": "9335ba3edf4ee5d5e207c645acc7878408195a8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/ea798f36c87c7f2faeea58ff0247f82ca9c30aa2",
-                "reference": "ea798f36c87c7f2faeea58ff0247f82ca9c30aa2",
+                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/9335ba3edf4ee5d5e207c645acc7878408195a8f",
+                "reference": "9335ba3edf4ee5d5e207c645acc7878408195a8f",
                 "shasum": ""
             },
             "require": {
@@ -3673,10 +3716,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_donation/tree/v8.7.7-beta",
+                "source": "https://github.com/HGONeV/hgon_donation/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_donation/issues"
             },
-            "time": "2020-02-07T15:30:10+00:00"
+            "time": "2020-02-10T15:31:12+00:00"
         },
         {
             "name": "hgon/hgon-payment",
@@ -3860,41 +3903,38 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "4.3.4",
+            "version": "5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "da3fd972d6bafd628114f7e7e036f45944b62e9c"
+                "reference": "a48807183a4b819072f26e347bbd0b5199a9d15f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/da3fd972d6bafd628114f7e7e036f45944b62e9c",
-                "reference": "da3fd972d6bafd628114f7e7e036f45944b62e9c",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/a48807183a4b819072f26e347bbd0b5199a9d15f",
+                "reference": "a48807183a4b819072f26e347bbd0b5199a9d15f",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0",
-                "phpdocumentor/reflection-common": "^1.0.0 || ^2.0.0",
-                "phpdocumentor/type-resolver": "~0.4 || ^1.0.0",
-                "webmozart/assert": "^1.0"
+                "ext-filter": "^7.1",
+                "php": "^7.2",
+                "phpdocumentor/reflection-common": "^2.0",
+                "phpdocumentor/type-resolver": "^1.0",
+                "webmozart/assert": "^1"
             },
             "require-dev": {
-                "doctrine/instantiator": "^1.0.5",
-                "mockery/mockery": "^1.0",
-                "phpdocumentor/type-resolver": "0.4.*",
-                "phpunit/phpunit": "^6.4"
+                "doctrine/instantiator": "^1",
+                "mockery/mockery": "^1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.x-dev"
+                    "dev-master": "5.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "phpDocumentor\\Reflection\\": [
-                        "src/"
-                    ]
+                    "phpDocumentor\\Reflection\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3905,10 +3945,14 @@
                 {
                     "name": "Mike van Riel",
                     "email": "me@mikevanriel.com"
+                },
+                {
+                    "name": "Jaap van Otterdijk",
+                    "email": "account@ijaap.nl"
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2019-12-28T18:55:12+00:00"
+            "time": "2020-02-09T09:16:15+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
