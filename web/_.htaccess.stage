@@ -2,7 +2,7 @@ SetEnv TYPO3_CONTEXT Production/Staging
 
 AuthName "Staging"
 AuthType Basic
-AuthUserFile /var/www/staging.hgon.de/public_html/.htpasswd
+AuthUserFile /usr/home/hgonde/public_html/staging/web/.htpasswd
 require valid-user
 
 #####
