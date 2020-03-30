@@ -1194,16 +1194,16 @@
         },
         {
             "name": "helhum/typo3-console",
-            "version": "v5.8.2",
+            "version": "v5.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Console/TYPO3-Console.git",
-                "reference": "f6a43797fbcdec5ae5e3a2576948ab50c8623082"
+                "reference": "5539d8a42884982eff19c14458040d34b6abcef5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/f6a43797fbcdec5ae5e3a2576948ab50c8623082",
-                "reference": "f6a43797fbcdec5ae5e3a2576948ab50c8623082",
+                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/5539d8a42884982eff19c14458040d34b6abcef5",
+                "reference": "5539d8a42884982eff19c14458040d34b6abcef5",
                 "shasum": ""
             },
             "require": {
@@ -1233,7 +1233,8 @@
             "require-dev": {
                 "cweagans/composer-patches": "^1.6",
                 "jakub-onderka/php-parallel-lint": "^1.0",
-                "nimut/testing-framework": "dev-allow-php73",
+                "nimut/testing-framework": "^4.1",
+                "phpunit/phpunit": "^6",
                 "symfony/filesystem": "^3.2",
                 "typo3-console/convert-command-controller-command": "@dev",
                 "typo3-console/create-reference-command": "@dev",
@@ -1283,29 +1284,30 @@
                 "console",
                 "typo3"
             ],
-            "time": "2019-12-16T14:05:44+00:00"
+            "time": "2020-03-28T11:01:23+00:00"
         },
         {
             "name": "helhum/typo3-console-plugin",
-            "version": "v2.0.5",
+            "version": "v2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Console/typo3-console-plugin.git",
-                "reference": "4a80b494adb97306bb19a14c72c214be79b5b079"
+                "reference": "a1294743007316e382c854b683c190277f5a1cd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Console/typo3-console-plugin/zipball/4a80b494adb97306bb19a14c72c214be79b5b079",
-                "reference": "4a80b494adb97306bb19a14c72c214be79b5b079",
+                "url": "https://api.github.com/repos/TYPO3-Console/typo3-console-plugin/zipball/a1294743007316e382c854b683c190277f5a1cd7",
+                "reference": "a1294743007316e382c854b683c190277f5a1cd7",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0",
+                "composer-plugin-api": "^1.0 || ^2.0",
                 "php": "^7.0",
-                "typo3/cms-composer-installers": "^1.4 || ^2.0"
+                "typo3/cms-composer-installers": "^1.4 || ^2.0 || ^3.0@dev"
             },
             "require-dev": {
-                "composer/composer": "^1.0"
+                "composer/composer": "^1.0@dev || ^2.0@dev",
+                "composer/semver": "^1.0@dev || ^2.0@dev"
             },
             "type": "composer-plugin",
             "extra": {
@@ -1336,20 +1338,20 @@
                 "plugin",
                 "typo3 console"
             ],
-            "time": "2018-12-09T12:06:13+00:00"
+            "time": "2020-03-29T17:41:09+00:00"
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.14-beta",
+            "version": "v8.7.16-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "44fdd9a44e92fffef34530cf04aa98b5b47e3756"
+                "reference": "c9987f4716c4eb02dc5efc6a13002614bc9026f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/44fdd9a44e92fffef34530cf04aa98b5b47e3756",
-                "reference": "44fdd9a44e92fffef34530cf04aa98b5b47e3756",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/c9987f4716c4eb02dc5efc6a13002614bc9026f0",
+                "reference": "c9987f4716c4eb02dc5efc6a13002614bc9026f0",
                 "shasum": ""
             },
             "require": {
@@ -1377,10 +1379,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.14-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.16-beta",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2020-03-13T09:42:20+00:00"
+            "time": "2020-03-30T08:42:50+00:00"
         },
         {
             "name": "mollie/mollie-api-php",
@@ -2223,16 +2225,16 @@
         },
         {
             "name": "rkw/rkw-mailer",
-            "version": "v8.7.27-beta",
+            "version": "v8.7.28-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwMailer.git",
-                "reference": "321d7bdc0b0ba57a18577c5b6e41f356d1cd51ec"
+                "reference": "8d9223a63c4baa814809c7bff14c1df1eed5d255"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/321d7bdc0b0ba57a18577c5b6e41f356d1cd51ec",
-                "reference": "321d7bdc0b0ba57a18577c5b6e41f356d1cd51ec",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/8d9223a63c4baa814809c7bff14c1df1eed5d255",
+                "reference": "8d9223a63c4baa814809c7bff14c1df1eed5d255",
                 "shasum": ""
             },
             "require": {
@@ -2279,7 +2281,7 @@
                 "TYPO3 CMS",
                 "newsletter"
             ],
-            "time": "2020-02-21T10:49:55+00:00"
+            "time": "2020-03-20T09:00:04+00:00"
         },
         {
             "name": "rkw/rkw-newsletter",
@@ -2560,16 +2562,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.4.5",
+            "version": "v4.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "4fa15ae7be74e53f6ec8c83ed403b97e23b665e9"
+                "reference": "20bc0c1068565103075359f5ce9e0639b36f92d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/4fa15ae7be74e53f6ec8c83ed403b97e23b665e9",
-                "reference": "4fa15ae7be74e53f6ec8c83ed403b97e23b665e9",
+                "url": "https://api.github.com/repos/symfony/console/zipball/20bc0c1068565103075359f5ce9e0639b36f92d1",
+                "reference": "20bc0c1068565103075359f5ce9e0639b36f92d1",
                 "shasum": ""
             },
             "require": {
@@ -2632,11 +2634,11 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-24T13:10:00+00:00"
+            "time": "2020-03-16T08:56:54+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v4.4.5",
+            "version": "v4.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -2685,7 +2687,7 @@
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v4.4.5",
+            "version": "v4.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -2739,16 +2741,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.14.0",
+            "version": "v1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "fbdeaec0df06cf3d51c93de80c7eb76e271f5a38"
+                "reference": "4719fa9c18b0464d399f1a63bf624b42b6fa8d14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/fbdeaec0df06cf3d51c93de80c7eb76e271f5a38",
-                "reference": "fbdeaec0df06cf3d51c93de80c7eb76e271f5a38",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/4719fa9c18b0464d399f1a63bf624b42b6fa8d14",
+                "reference": "4719fa9c18b0464d399f1a63bf624b42b6fa8d14",
                 "shasum": ""
             },
             "require": {
@@ -2760,7 +2762,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.14-dev"
+                    "dev-master": "1.15-dev"
                 }
             },
             "autoload": {
@@ -2793,20 +2795,20 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2020-01-13T11:15:53+00:00"
+            "time": "2020-02-27T09:26:54+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.14.0",
+            "version": "v1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "34094cfa9abe1f0f14f48f490772db7a775559f2"
+                "reference": "81ffd3a9c6d707be22e3012b827de1c9775fc5ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/34094cfa9abe1f0f14f48f490772db7a775559f2",
-                "reference": "34094cfa9abe1f0f14f48f490772db7a775559f2",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/81ffd3a9c6d707be22e3012b827de1c9775fc5ac",
+                "reference": "81ffd3a9c6d707be22e3012b827de1c9775fc5ac",
                 "shasum": ""
             },
             "require": {
@@ -2818,7 +2820,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.14-dev"
+                    "dev-master": "1.15-dev"
                 }
             },
             "autoload": {
@@ -2852,20 +2854,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-01-13T11:15:53+00:00"
+            "time": "2020-03-09T19:04:49+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.14.0",
+            "version": "v1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
-                "reference": "5e66a0fa1070bf46bec4bea7962d285108edd675"
+                "reference": "0f27e9f464ea3da33cbe7ca3bdf4eb66def9d0f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/5e66a0fa1070bf46bec4bea7962d285108edd675",
-                "reference": "5e66a0fa1070bf46bec4bea7962d285108edd675",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/0f27e9f464ea3da33cbe7ca3bdf4eb66def9d0f7",
+                "reference": "0f27e9f464ea3da33cbe7ca3bdf4eb66def9d0f7",
                 "shasum": ""
             },
             "require": {
@@ -2874,7 +2876,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.14-dev"
+                    "dev-master": "1.15-dev"
                 }
             },
             "autoload": {
@@ -2910,20 +2912,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-01-13T11:15:53+00:00"
+            "time": "2020-02-27T09:26:54+00:00"
         },
         {
             "name": "symfony/process",
-            "version": "v4.4.5",
+            "version": "v4.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "bf9166bac906c9e69fb7a11d94875e7ced97bcd7"
+                "reference": "b9863d0f7b684d7c4c13e665325b5ff047de0aee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/bf9166bac906c9e69fb7a11d94875e7ced97bcd7",
-                "reference": "bf9166bac906c9e69fb7a11d94875e7ced97bcd7",
+                "url": "https://api.github.com/repos/symfony/process/zipball/b9863d0f7b684d7c4c13e665325b5ff047de0aee",
+                "reference": "b9863d0f7b684d7c4c13e665325b5ff047de0aee",
                 "shasum": ""
             },
             "require": {
@@ -2959,7 +2961,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-07T20:06:44+00:00"
+            "time": "2020-03-23T12:37:11+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -3021,16 +3023,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.38",
+            "version": "v3.4.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "bc63e15160866e8730a1f738541b194c401f72bf"
+                "reference": "e701b47e11749970f63803879c4febb520f07b6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/bc63e15160866e8730a1f738541b194c401f72bf",
-                "reference": "bc63e15160866e8730a1f738541b194c401f72bf",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/e701b47e11749970f63803879c4febb520f07b6c",
+                "reference": "e701b47e11749970f63803879c4febb520f07b6c",
                 "shasum": ""
             },
             "require": {
@@ -3076,39 +3078,39 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2020-01-16T19:04:26+00:00"
+            "time": "2020-03-25T12:02:26+00:00"
         },
         {
             "name": "typo3/class-alias-loader",
-            "version": "1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/class-alias-loader.git",
-                "reference": "4972f9f6c2bad07ab1620b5c9717fa626e9b03b0"
+                "reference": "994ee9bebe847da862d0edc6f075df4693dfa8e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/class-alias-loader/zipball/4972f9f6c2bad07ab1620b5c9717fa626e9b03b0",
-                "reference": "4972f9f6c2bad07ab1620b5c9717fa626e9b03b0",
+                "url": "https://api.github.com/repos/TYPO3/class-alias-loader/zipball/994ee9bebe847da862d0edc6f075df4693dfa8e2",
+                "reference": "994ee9bebe847da862d0edc6f075df4693dfa8e2",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0",
+                "composer-plugin-api": "^1.0 || ^2.0",
                 "php": ">=5.3.7"
             },
             "replace": {
                 "helhum/class-alias-loader": "*"
             },
             "require-dev": {
-                "composer/composer": "dev-master",
-                "mikey179/vfsstream": "1.4.*@dev",
+                "composer/composer": "^1.1@dev || ^2.0@dev",
+                "mikey179/vfsstream": "~1.4.0@dev",
                 "phpunit/phpunit": "^4.8"
             },
             "type": "composer-plugin",
             "extra": {
                 "class": "TYPO3\\ClassAliasLoader\\Plugin",
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -3134,7 +3136,7 @@
                 "classloader",
                 "composer"
             ],
-            "time": "2018-10-03T12:49:56+00:00"
+            "time": "2020-03-29T16:12:26+00:00"
         },
         {
             "name": "typo3/cms",
@@ -3587,16 +3589,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v2.6.1",
+            "version": "v2.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "2a7dcf7e3e02dc5e701004e51a6f304b713107d5"
+                "reference": "c4a653ed3f1ff900baa15b4130c8770b57285b62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/2a7dcf7e3e02dc5e701004e51a6f304b713107d5",
-                "reference": "2a7dcf7e3e02dc5e701004e51a6f304b713107d5",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/c4a653ed3f1ff900baa15b4130c8770b57285b62",
+                "reference": "c4a653ed3f1ff900baa15b4130c8770b57285b62",
                 "shasum": ""
             },
             "require": {
@@ -3604,7 +3606,13 @@
                 "symfony/polyfill-ctype": "^1.9"
             },
             "require-dev": {
+                "ext-filter": "*",
+                "ext-pcre": "*",
                 "phpunit/phpunit": "^4.8.35 || ^5.0"
+            },
+            "suggest": {
+                "ext-filter": "Required to use the boolean validator.",
+                "ext-pcre": "Required to use most of the library."
             },
             "type": "library",
             "extra": {
@@ -3634,7 +3642,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2019-01-29T11:11:52+00:00"
+            "time": "2020-03-27T23:16:19+00:00"
         },
         {
             "name": "voku/bounce-mail-handler",
@@ -3809,12 +3817,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_donation.git",
-                "reference": "eec6e8f457da2e2dbb3261df285e33561df8a9e2"
+                "reference": "2eece09e864e9d62c916fb9c11485d244495580f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/eec6e8f457da2e2dbb3261df285e33561df8a9e2",
-                "reference": "eec6e8f457da2e2dbb3261df285e33561df8a9e2",
+                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/2eece09e864e9d62c916fb9c11485d244495580f",
+                "reference": "2eece09e864e9d62c916fb9c11485d244495580f",
                 "shasum": ""
             },
             "require": {
@@ -3842,10 +3850,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_donation/tree/v8.7.9-beta",
+                "source": "https://github.com/HGONeV/hgon_donation/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_donation/issues"
             },
-            "time": "2020-03-12T14:58:02+00:00"
+            "time": "2020-03-30T08:36:03+00:00"
         },
         {
             "name": "hgon/hgon-payment",
@@ -3853,12 +3861,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_payment.git",
-                "reference": "12f5d3dce574b09d6dd25609cca77ecf139e6231"
+                "reference": "ec1d3c9b1fe227c0e49841c8d4ad258ac5605bcc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_payment/zipball/12f5d3dce574b09d6dd25609cca77ecf139e6231",
-                "reference": "12f5d3dce574b09d6dd25609cca77ecf139e6231",
+                "url": "https://api.github.com/repos/HGONeV/hgon_payment/zipball/ec1d3c9b1fe227c0e49841c8d4ad258ac5605bcc",
+                "reference": "ec1d3c9b1fe227c0e49841c8d4ad258ac5605bcc",
                 "shasum": ""
             },
             "require": {
@@ -3888,10 +3896,10 @@
             ],
             "description": "Extension for payment services",
             "support": {
-                "source": "https://github.com/HGONeV/hgon_payment/tree/v8.7.11-beta",
+                "source": "https://github.com/HGONeV/hgon_payment/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_payment/issues"
             },
-            "time": "2020-03-12T14:58:51+00:00"
+            "time": "2020-03-30T08:38:27+00:00"
         },
         {
             "name": "hgon/hgon-workgroup",
@@ -3899,12 +3907,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_workgroup.git",
-                "reference": "6ac84f4736625f208393f50b3d5c27004bfcda27"
+                "reference": "b4a13abd4f57605f757634368bc97e8b0081fce8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/6ac84f4736625f208393f50b3d5c27004bfcda27",
-                "reference": "6ac84f4736625f208393f50b3d5c27004bfcda27",
+                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/b4a13abd4f57605f757634368bc97e8b0081fce8",
+                "reference": "b4a13abd4f57605f757634368bc97e8b0081fce8",
                 "shasum": ""
             },
             "require": {
@@ -3936,7 +3944,7 @@
                 "source": "https://github.com/HGONeV/hgon_workgroup/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_workgroup/issues"
             },
-            "time": "2019-12-09T09:46:04+00:00"
+            "time": "2020-03-25T14:08:45+00:00"
         },
         {
             "name": "mikey179/vfsStream",
