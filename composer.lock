@@ -1343,16 +1343,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.19-beta",
+            "version": "v8.7.21-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "30e19102029cd7c1be0cd46fc0d6ed0bd77e24ea"
+                "reference": "554bc01703501317afe4cdb226dc733fc1af8474"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/30e19102029cd7c1be0cd46fc0d6ed0bd77e24ea",
-                "reference": "30e19102029cd7c1be0cd46fc0d6ed0bd77e24ea",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/554bc01703501317afe4cdb226dc733fc1af8474",
+                "reference": "554bc01703501317afe4cdb226dc733fc1af8474",
                 "shasum": ""
             },
             "require": {
@@ -1380,10 +1380,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.18-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.21-beta",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2020-04-03T12:47:06+00:00"
+            "time": "2020-04-06T12:44:56+00:00"
         },
         {
             "name": "mollie/mollie-api-php",
