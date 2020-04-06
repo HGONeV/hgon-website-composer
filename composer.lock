@@ -231,20 +231,21 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "v1.8.0",
+            "version": "1.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "904dca4eb10715b92569fbcd79e201d5c349b6bc"
+                "reference": "5eb79f3dbdffed6544e1fc287572c0f462bd29bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/904dca4eb10715b92569fbcd79e201d5c349b6bc",
-                "reference": "904dca4eb10715b92569fbcd79e201d5c349b6bc",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/5eb79f3dbdffed6544e1fc287572c0f462bd29bb",
+                "reference": "5eb79f3dbdffed6544e1fc287572c0f462bd29bb",
                 "shasum": ""
             },
             "require": {
                 "doctrine/lexer": "1.*",
+                "ext-tokenizer": "*",
                 "php": "^7.1"
             },
             "require-dev": {
@@ -254,7 +255,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7.x-dev"
+                    "dev-master": "1.9.x-dev"
                 }
             },
             "autoload": {
@@ -295,7 +296,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2019-10-01T18:55:10+00:00"
+            "time": "2020-04-02T12:33:25+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -1342,16 +1343,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.16-beta",
+            "version": "v8.7.19-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "c9987f4716c4eb02dc5efc6a13002614bc9026f0"
+                "reference": "30e19102029cd7c1be0cd46fc0d6ed0bd77e24ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/c9987f4716c4eb02dc5efc6a13002614bc9026f0",
-                "reference": "c9987f4716c4eb02dc5efc6a13002614bc9026f0",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/30e19102029cd7c1be0cd46fc0d6ed0bd77e24ea",
+                "reference": "30e19102029cd7c1be0cd46fc0d6ed0bd77e24ea",
                 "shasum": ""
             },
             "require": {
@@ -1379,10 +1380,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.16-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.18-beta",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2020-03-30T08:42:50+00:00"
+            "time": "2020-04-03T12:47:06+00:00"
         },
         {
             "name": "mollie/mollie-api-php",
@@ -2562,16 +2563,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.4.6",
+            "version": "v4.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "20bc0c1068565103075359f5ce9e0639b36f92d1"
+                "reference": "10bb3ee3c97308869d53b3e3d03f6ac23ff985f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/20bc0c1068565103075359f5ce9e0639b36f92d1",
-                "reference": "20bc0c1068565103075359f5ce9e0639b36f92d1",
+                "url": "https://api.github.com/repos/symfony/console/zipball/10bb3ee3c97308869d53b3e3d03f6ac23ff985f7",
+                "reference": "10bb3ee3c97308869d53b3e3d03f6ac23ff985f7",
                 "shasum": ""
             },
             "require": {
@@ -2634,20 +2635,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-16T08:56:54+00:00"
+            "time": "2020-03-30T11:41:10+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v4.4.6",
+            "version": "v4.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "ea69c129aed9fdeca781d4b77eb20b62cf5d5357"
+                "reference": "5729f943f9854c5781984ed4907bbb817735776b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/ea69c129aed9fdeca781d4b77eb20b62cf5d5357",
-                "reference": "ea69c129aed9fdeca781d4b77eb20b62cf5d5357",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/5729f943f9854c5781984ed4907bbb817735776b",
+                "reference": "5729f943f9854c5781984ed4907bbb817735776b",
                 "shasum": ""
             },
             "require": {
@@ -2683,20 +2684,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-14T07:42:58+00:00"
+            "time": "2020-03-27T16:54:36+00:00"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v4.4.6",
+            "version": "v4.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "9a02d6662660fe7bfadad63b5f0b0718d4c8b6b0"
+                "reference": "9072131b5e6e21203db3249c7db26b52897bc73e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/9a02d6662660fe7bfadad63b5f0b0718d4c8b6b0",
-                "reference": "9a02d6662660fe7bfadad63b5f0b0718d4c8b6b0",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/9072131b5e6e21203db3249c7db26b52897bc73e",
+                "reference": "9072131b5e6e21203db3249c7db26b52897bc73e",
                 "shasum": ""
             },
             "require": {
@@ -2737,7 +2738,7 @@
                 "configuration",
                 "options"
             ],
-            "time": "2020-01-04T13:00:46+00:00"
+            "time": "2020-03-27T16:54:36+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2916,16 +2917,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.4.6",
+            "version": "v4.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "b9863d0f7b684d7c4c13e665325b5ff047de0aee"
+                "reference": "3e40e87a20eaf83a1db825e1fa5097ae89042db3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/b9863d0f7b684d7c4c13e665325b5ff047de0aee",
-                "reference": "b9863d0f7b684d7c4c13e665325b5ff047de0aee",
+                "url": "https://api.github.com/repos/symfony/process/zipball/3e40e87a20eaf83a1db825e1fa5097ae89042db3",
+                "reference": "3e40e87a20eaf83a1db825e1fa5097ae89042db3",
                 "shasum": ""
             },
             "require": {
@@ -2961,7 +2962,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-23T12:37:11+00:00"
+            "time": "2020-03-27T16:54:36+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -3817,12 +3818,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_donation.git",
-                "reference": "2eece09e864e9d62c916fb9c11485d244495580f"
+                "reference": "f78046b0dc7c771af7c6caaa6fa7536c82e0c74e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/2eece09e864e9d62c916fb9c11485d244495580f",
-                "reference": "2eece09e864e9d62c916fb9c11485d244495580f",
+                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/f78046b0dc7c771af7c6caaa6fa7536c82e0c74e",
+                "reference": "f78046b0dc7c771af7c6caaa6fa7536c82e0c74e",
                 "shasum": ""
             },
             "require": {
@@ -3850,10 +3851,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_donation/tree/master",
+                "source": "https://github.com/HGONeV/hgon_donation/tree/v8.7.13-beta",
                 "issues": "https://github.com/HGONeV/hgon_donation/issues"
             },
-            "time": "2020-03-30T08:36:03+00:00"
+            "time": "2020-04-06T09:35:24+00:00"
         },
         {
             "name": "hgon/hgon-payment",
@@ -3907,12 +3908,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_workgroup.git",
-                "reference": "b4a13abd4f57605f757634368bc97e8b0081fce8"
+                "reference": "87320670fdfeb4e32c37336f9b936005480da03e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/b4a13abd4f57605f757634368bc97e8b0081fce8",
-                "reference": "b4a13abd4f57605f757634368bc97e8b0081fce8",
+                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/87320670fdfeb4e32c37336f9b936005480da03e",
+                "reference": "87320670fdfeb4e32c37336f9b936005480da03e",
                 "shasum": ""
             },
             "require": {
@@ -3941,10 +3942,10 @@
             ],
             "description": "For managing working groups",
             "support": {
-                "source": "https://github.com/HGONeV/hgon_workgroup/tree/master",
+                "source": "https://github.com/HGONeV/hgon_workgroup/tree/v8.7.8-beta",
                 "issues": "https://github.com/HGONeV/hgon_workgroup/issues"
             },
-            "time": "2020-03-25T14:08:45+00:00"
+            "time": "2020-04-02T12:59:34+00:00"
         },
         {
             "name": "mikey179/vfsStream",
