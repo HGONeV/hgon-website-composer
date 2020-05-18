@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3009e4d36ba7e628b914b04df865fdc3",
+    "content-hash": "cdf689326a9591b6c9d750020fc8fc1d",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1354,16 +1354,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.23",
+            "version": "v8.7.25-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "13513970e75e7ec6ed2da7ee76dd9d98f8662b64"
+                "reference": "f41ea25679bd5e907af1af01ae05a46897e7a03a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/13513970e75e7ec6ed2da7ee76dd9d98f8662b64",
-                "reference": "13513970e75e7ec6ed2da7ee76dd9d98f8662b64",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/f41ea25679bd5e907af1af01ae05a46897e7a03a",
+                "reference": "f41ea25679bd5e907af1af01ae05a46897e7a03a",
                 "shasum": ""
             },
             "require": {
@@ -1391,10 +1391,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.23",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.25-beta",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2020-05-12T08:11:32+00:00"
+            "time": "2020-05-18T08:57:05+00:00"
         },
         {
             "name": "mollie/mollie-api-php",
