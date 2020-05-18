@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81621aabe46300e8e3403da555d7bb4b",
+    "content-hash": "3009e4d36ba7e628b914b04df865fdc3",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -108,16 +108,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.2.6",
+            "version": "1.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e"
+                "reference": "95c63ab2117a72f48f5a55da9740a3273d45b7fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/47fe531de31fca4a1b997f87308e7d7804348f7e",
-                "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/95c63ab2117a72f48f5a55da9740a3273d45b7fd",
+                "reference": "95c63ab2117a72f48f5a55da9740a3273d45b7fd",
                 "shasum": ""
             },
             "require": {
@@ -160,7 +160,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2020-01-13T10:02:55+00:00"
+            "time": "2020-04-08T08:27:21+00:00"
         },
         {
             "name": "dmitryd/typo3-realurl",
@@ -231,16 +231,16 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "1.10.1",
+            "version": "1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "5eb79f3dbdffed6544e1fc287572c0f462bd29bb"
+                "reference": "b9d758e831c70751155c698c2f7df4665314a1cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/5eb79f3dbdffed6544e1fc287572c0f462bd29bb",
-                "reference": "5eb79f3dbdffed6544e1fc287572c0f462bd29bb",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/b9d758e831c70751155c698c2f7df4665314a1cb",
+                "reference": "b9d758e831c70751155c698c2f7df4665314a1cb",
                 "shasum": ""
             },
             "require": {
@@ -296,7 +296,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2020-04-02T12:33:25+00:00"
+            "time": "2020-04-20T09:18:32+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -596,33 +596,38 @@
         },
         {
             "name": "doctrine/inflector",
-            "version": "1.3.1",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "ec3a55242203ffa6a4b27c58176da97ff0a7aec1"
+                "reference": "4111f6853aea6f28b2b1dcfdde83d12dd3d5e6e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/ec3a55242203ffa6a4b27c58176da97ff0a7aec1",
-                "reference": "ec3a55242203ffa6a4b27c58176da97ff0a7aec1",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/4111f6853aea6f28b2b1dcfdde83d12dd3d5e6e3",
+                "reference": "4111f6853aea6f28b2b1dcfdde83d12dd3d5e6e3",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1"
+                "php": "^7.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.2"
+                "doctrine/coding-standard": "^7.0",
+                "phpstan/phpstan": "^0.11",
+                "phpstan/phpstan-phpunit": "^0.11",
+                "phpstan/phpstan-strict-rules": "^0.11",
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector"
+                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector",
+                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -651,15 +656,21 @@
                     "email": "schmittjoh@gmail.com"
                 }
             ],
-            "description": "Common String Manipulations with regard to casing and singular/plural rules.",
-            "homepage": "http://www.doctrine-project.org",
+            "description": "PHP Doctrine Inflector is a small library that can perform string manipulations with regard to upper/lowercase and singular/plural forms of words.",
+            "homepage": "https://www.doctrine-project.org/projects/inflector.html",
             "keywords": [
                 "inflection",
-                "pluralize",
-                "singularize",
-                "string"
+                "inflector",
+                "lowercase",
+                "manipulation",
+                "php",
+                "plural",
+                "singular",
+                "strings",
+                "uppercase",
+                "words"
             ],
-            "time": "2019-10-30T19:59:35+00:00"
+            "time": "2020-05-09T15:09:09+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -906,23 +917,24 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.2",
+            "version": "6.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82"
+                "reference": "aab4ebd862aa7d04f01a4b51849d657db56d882e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/43ece0e75098b7ecd8d13918293029e555a50f82",
-                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/aab4ebd862aa7d04f01a4b51849d657db56d882e",
+                "reference": "aab4ebd862aa7d04f01a4b51849d657db56d882e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/promises": "^1.0",
                 "guzzlehttp/psr7": "^1.6.1",
-                "php": ">=5.5"
+                "php": ">=5.5",
+                "symfony/polyfill-intl-idn": "^1.11"
             },
             "require-dev": {
                 "ext-curl": "*",
@@ -930,7 +942,6 @@
                 "psr/log": "^1.1"
             },
             "suggest": {
-                "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
@@ -969,7 +980,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2019-12-23T11:57:10+00:00"
+            "time": "2020-04-18T10:38:46+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1195,16 +1206,16 @@
         },
         {
             "name": "helhum/typo3-console",
-            "version": "v5.8.3",
+            "version": "v5.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Console/TYPO3-Console.git",
-                "reference": "5539d8a42884982eff19c14458040d34b6abcef5"
+                "reference": "448a2ac57b9bb2f63af84256e7e84441e83fe1a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/5539d8a42884982eff19c14458040d34b6abcef5",
-                "reference": "5539d8a42884982eff19c14458040d34b6abcef5",
+                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/448a2ac57b9bb2f63af84256e7e84441e83fe1a9",
+                "reference": "448a2ac57b9bb2f63af84256e7e84441e83fe1a9",
                 "shasum": ""
             },
             "require": {
@@ -1285,7 +1296,7 @@
                 "console",
                 "typo3"
             ],
-            "time": "2020-03-28T11:01:23+00:00"
+            "time": "2020-04-23T09:35:12+00:00"
         },
         {
             "name": "helhum/typo3-console-plugin",
@@ -1343,16 +1354,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.21-beta",
+            "version": "v8.7.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "554bc01703501317afe4cdb226dc733fc1af8474"
+                "reference": "13513970e75e7ec6ed2da7ee76dd9d98f8662b64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/554bc01703501317afe4cdb226dc733fc1af8474",
-                "reference": "554bc01703501317afe4cdb226dc733fc1af8474",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/13513970e75e7ec6ed2da7ee76dd9d98f8662b64",
+                "reference": "13513970e75e7ec6ed2da7ee76dd9d98f8662b64",
                 "shasum": ""
             },
             "require": {
@@ -1380,23 +1391,23 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.21-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.23",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2020-04-06T12:44:56+00:00"
+            "time": "2020-05-12T08:11:32+00:00"
         },
         {
             "name": "mollie/mollie-api-php",
-            "version": "v2.17.0",
+            "version": "2.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mollie/mollie-api-php.git",
-                "reference": "ee22d0301aee55a41ef2e7d201ef29f86550d1f7"
+                "reference": "8da462ff79fc5875cd1393bbc3602aebff73444d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/ee22d0301aee55a41ef2e7d201ef29f86550d1f7",
-                "reference": "ee22d0301aee55a41ef2e7d201ef29f86550d1f7",
+                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/8da462ff79fc5875cd1393bbc3602aebff73444d",
+                "reference": "8da462ff79fc5875cd1393bbc3602aebff73444d",
                 "shasum": ""
             },
             "require": {
@@ -1469,7 +1480,7 @@
                 "sofortbanking",
                 "subscriptions"
             ],
-            "time": "2020-02-25T12:19:37+00:00"
+            "time": "2020-05-18T07:42:25+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2049,22 +2060,22 @@
         },
         {
             "name": "rkw/rkw-authors",
-            "version": "v7.6.14-stable",
+            "version": "v8.7.5-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwAuthors.git",
-                "reference": "dbbf68d6e744621f64fc44ea42ad7fd8fa9dcaf2"
+                "reference": "b19f34055da359bb2889937cd780eb771a3010af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwAuthors/zipball/dbbf68d6e744621f64fc44ea42ad7fd8fa9dcaf2",
-                "reference": "dbbf68d6e744621f64fc44ea42ad7fd8fa9dcaf2",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwAuthors/zipball/b19f34055da359bb2889937cd780eb771a3010af",
+                "reference": "b19f34055da359bb2889937cd780eb771a3010af",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6",
-                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
+                "rkw/rkw-basics": "~8.7.0",
+                "typo3/cms-core": "~7.6.0 || ~8.7.0"
             },
             "type": "typo3-cms-extension",
             "extra": {
@@ -2103,20 +2114,20 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2019-08-20T14:34:28+00:00"
+            "time": "2020-05-13T08:53:49+00:00"
         },
         {
             "name": "rkw/rkw-basics",
-            "version": "v8.7.15-stable",
+            "version": "v8.7.17-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwBasics.git",
-                "reference": "5a5d19ad113cd75e8b0924ff4fff10afbc1c2bb4"
+                "reference": "6a035ea6759df7d6810eebac86d130f1f65dc92b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/5a5d19ad113cd75e8b0924ff4fff10afbc1c2bb4",
-                "reference": "5a5d19ad113cd75e8b0924ff4fff10afbc1c2bb4",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/6a035ea6759df7d6810eebac86d130f1f65dc92b",
+                "reference": "6a035ea6759df7d6810eebac86d130f1f65dc92b",
                 "shasum": ""
             },
             "require": {
@@ -2159,7 +2170,78 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2020-03-10T12:25:25+00:00"
+            "time": "2020-05-14T13:46:06+00:00"
+        },
+        {
+            "name": "rkw/rkw-events",
+            "version": "v8.7.17-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RKWKomZe/RkwEvents.git",
+                "reference": "94d1d971b11d476b8184da1dcde591bcdb2198ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/94d1d971b11d476b8184da1dcde591bcdb2198ee",
+                "reference": "94d1d971b11d476b8184da1dcde591bcdb2198ee",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "rkw/rkw-basics": "~8.7.0",
+                "rkw/rkw-mailer": "~8.7.0",
+                "sjbr/static-info-tables": "^6.3.7@dev",
+                "typo3/cms-core": "~7.6.0 || ~8.7.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "rkw_events"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "RKW\\RkwEvents\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Steffen Kroggel",
+                    "email": "developer@steffenkroggel.de",
+                    "homepage": "http://www.steffenkroggel.de",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Maximilian Fäßler",
+                    "email": "maximilian@faesslerweb.de",
+                    "homepage": "https://www.faesslerweb.de",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Carlos Meyer",
+                    "email": "cm@davitec.de",
+                    "homepage": "https://www.davitec.de",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Christian Dilger",
+                    "email": "c.dilger@addorange.de",
+                    "homepage": "http://addorange.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Extension for events and registation",
+            "homepage": "https://www.rkw-kompetenzzentrum.de",
+            "keywords": [
+                "RKW",
+                "TYPO3 CMS",
+                "events"
+            ],
+            "time": "2020-05-11T13:45:35+00:00"
         },
         {
             "name": "rkw/rkw-geolocation",
@@ -2226,16 +2308,16 @@
         },
         {
             "name": "rkw/rkw-mailer",
-            "version": "v8.7.28-beta",
+            "version": "v8.7.31-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwMailer.git",
-                "reference": "8d9223a63c4baa814809c7bff14c1df1eed5d255"
+                "reference": "7749822bb206b199f96afa586520c1ca0011a853"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/8d9223a63c4baa814809c7bff14c1df1eed5d255",
-                "reference": "8d9223a63c4baa814809c7bff14c1df1eed5d255",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/7749822bb206b199f96afa586520c1ca0011a853",
+                "reference": "7749822bb206b199f96afa586520c1ca0011a853",
                 "shasum": ""
             },
             "require": {
@@ -2282,28 +2364,28 @@
                 "TYPO3 CMS",
                 "newsletter"
             ],
-            "time": "2020-03-20T09:00:04+00:00"
+            "time": "2020-05-13T08:39:32+00:00"
         },
         {
             "name": "rkw/rkw-newsletter",
-            "version": "v7.6.35-beta",
+            "version": "v8.7.8-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwNewsletter.git",
-                "reference": "44383c4f70cabd3b1e85031a04d884548b626657"
+                "reference": "d3ac12e293ccf76a84e443ca05d41c7f4d2d2801"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwNewsletter/zipball/44383c4f70cabd3b1e85031a04d884548b626657",
-                "reference": "44383c4f70cabd3b1e85031a04d884548b626657",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwNewsletter/zipball/d3ac12e293ccf76a84e443ca05d41c7f4d2d2801",
+                "reference": "d3ac12e293ccf76a84e443ca05d41c7f4d2d2801",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6",
-                "rkw/rkw-basics": ">=8.7.3 <=8.7.99",
-                "rkw/rkw-mailer": ">=8.7.12 <=8.7.99",
-                "rkw/rkw-registration": ">=8.7.0 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
+                "rkw/rkw-basics": "~8.7.15",
+                "rkw/rkw-mailer": "~8.7.26",
+                "rkw/rkw-registration": "~8.7.0",
+                "typo3/cms-core": "~7.6.0 || ~8.7.0"
             },
             "type": "typo3-cms-extension",
             "extra": {
@@ -2341,26 +2423,26 @@
                 "TYPO3 CMS",
                 "newsletter"
             ],
-            "time": "2019-08-22T08:16:26+00:00"
+            "time": "2020-05-13T08:04:33+00:00"
         },
         {
             "name": "rkw/rkw-projects",
-            "version": "v7.6.11-stable",
+            "version": "v8.7.0-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwProjects.git",
-                "reference": "6ca96c66071d6e97a948911a3c1e6219fef5e232"
+                "reference": "e17d7b0295efbb22c95df19d482b64ac73d28b9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/6ca96c66071d6e97a948911a3c1e6219fef5e232",
-                "reference": "6ca96c66071d6e97a948911a3c1e6219fef5e232",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/e17d7b0295efbb22c95df19d482b64ac73d28b9b",
+                "reference": "e17d7b0295efbb22c95df19d482b64ac73d28b9b",
                 "shasum": ""
             },
             "require": {
-                "rkw/rkw-authors": ">=7.6.10 <=8.7.99",
-                "rkw/rkw-basics": ">=7.6.12 <=8.7.99",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
+                "rkw/rkw-authors": "~8.7.0",
+                "rkw/rkw-basics": "~8.7.0",
+                "typo3/cms-core": "~7.6.0 || ~8.7.0"
             },
             "type": "typo3-cms-extension",
             "extra": {
@@ -2380,15 +2462,15 @@
             "authors": [
                 {
                     "name": "Steffen Kroggel",
-                    "role": "Developer",
                     "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de"
+                    "homepage": "http://www.steffenkroggel.de",
+                    "role": "Developer"
                 },
                 {
                     "name": "Maximilian Fäßler",
-                    "role": "Developer",
                     "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de"
+                    "homepage": "https://www.faesslerweb.de",
+                    "role": "Developer"
                 }
             ],
             "description": "Extension for project-details",
@@ -2398,20 +2480,20 @@
                 "TYPO3 CMS",
                 "projects"
             ],
-            "time": "2019-02-05T13:30:26+00:00"
+            "time": "2019-11-12T08:59:54+00:00"
         },
         {
             "name": "rkw/rkw-registration",
-            "version": "v8.7.14-beta",
+            "version": "v8.7.15-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwRegistration.git",
-                "reference": "9c53b7ec9ed8c9842e943dbd5d0a44d6aab5afb6"
+                "reference": "54e694fd536a83fc321a5815b75fa87fa92b48ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/9c53b7ec9ed8c9842e943dbd5d0a44d6aab5afb6",
-                "reference": "9c53b7ec9ed8c9842e943dbd5d0a44d6aab5afb6",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/54e694fd536a83fc321a5815b75fa87fa92b48ce",
+                "reference": "54e694fd536a83fc321a5815b75fa87fa92b48ce",
                 "shasum": ""
             },
             "require": {
@@ -2461,7 +2543,39 @@
                 "register",
                 "registration"
             ],
-            "time": "2020-01-31T07:12:22+00:00"
+            "time": "2020-05-05T13:34:38+00:00"
+        },
+        {
+            "name": "sgalinski/sg-cookie-optin",
+            "version": "3.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.sgalinski.de/typo3/sg_cookie_optin.git",
+                "reference": "8abbc5c930fa9675ba919131ee806c116476263d"
+            },
+            "require": {
+                "php": "^5.5 || ^7.0",
+                "typo3/cms-core": "^6.2 || ^7.6 || ^8.7 || ^9.5 || ^10.4"
+            },
+            "replace": {
+                "sgalinski/sg_cookie_optin": "self.version"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "SGalinski\\SgCookieOptin\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "This extensions adds a cookie optin for the frontend.",
+            "homepage": "https://www.sgalinski.de",
+            "time": "2020-05-15T18:47:15+00:00"
         },
         {
             "name": "sjbr/static-info-tables",
@@ -2563,7 +2677,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.4.7",
+            "version": "v4.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -2639,7 +2753,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v4.4.7",
+            "version": "v4.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -2688,16 +2802,16 @@
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v4.4.7",
+            "version": "v4.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "9072131b5e6e21203db3249c7db26b52897bc73e"
+                "reference": "ade3d89dd3b875b83c8cff2980c9bb0daf6ef297"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/9072131b5e6e21203db3249c7db26b52897bc73e",
-                "reference": "9072131b5e6e21203db3249c7db26b52897bc73e",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/ade3d89dd3b875b83c8cff2980c9bb0daf6ef297",
+                "reference": "ade3d89dd3b875b83c8cff2980c9bb0daf6ef297",
                 "shasum": ""
             },
             "require": {
@@ -2738,20 +2852,20 @@
                 "configuration",
                 "options"
             ],
-            "time": "2020-03-27T16:54:36+00:00"
+            "time": "2020-04-06T10:16:26+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.15.0",
+            "version": "v1.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "4719fa9c18b0464d399f1a63bf624b42b6fa8d14"
+                "reference": "e94c8b1bbe2bc77507a1056cdb06451c75b427f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/4719fa9c18b0464d399f1a63bf624b42b6fa8d14",
-                "reference": "4719fa9c18b0464d399f1a63bf624b42b6fa8d14",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e94c8b1bbe2bc77507a1056cdb06451c75b427f9",
+                "reference": "e94c8b1bbe2bc77507a1056cdb06451c75b427f9",
                 "shasum": ""
             },
             "require": {
@@ -2763,7 +2877,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15-dev"
+                    "dev-master": "1.17-dev"
                 }
             },
             "autoload": {
@@ -2796,20 +2910,82 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2020-02-27T09:26:54+00:00"
+            "time": "2020-05-12T16:14:59+00:00"
         },
         {
-            "name": "symfony/polyfill-mbstring",
-            "version": "v1.15.0",
+            "name": "symfony/polyfill-intl-idn",
+            "version": "v1.17.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "81ffd3a9c6d707be22e3012b827de1c9775fc5ac"
+                "url": "https://github.com/symfony/polyfill-intl-idn.git",
+                "reference": "3bff59ea7047e925be6b7f2059d60af31bb46d6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/81ffd3a9c6d707be22e3012b827de1c9775fc5ac",
-                "reference": "81ffd3a9c6d707be22e3012b827de1c9775fc5ac",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/3bff59ea7047e925be6b7f2059d60af31bb46d6a",
+                "reference": "3bff59ea7047e925be6b7f2059d60af31bb46d6a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/polyfill-mbstring": "^1.3",
+                "symfony/polyfill-php72": "^1.10"
+            },
+            "suggest": {
+                "ext-intl": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.17-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Laurent Bassin",
+                    "email": "laurent@bassin.info"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's idn_to_ascii and idn_to_utf8 functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "idn",
+                "intl",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2020-05-12T16:47:27+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "fa79b11539418b02fc5e1897267673ba2c19419c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fa79b11539418b02fc5e1897267673ba2c19419c",
+                "reference": "fa79b11539418b02fc5e1897267673ba2c19419c",
                 "shasum": ""
             },
             "require": {
@@ -2821,7 +2997,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15-dev"
+                    "dev-master": "1.17-dev"
                 }
             },
             "autoload": {
@@ -2855,20 +3031,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-03-09T19:04:49+00:00"
+            "time": "2020-05-12T16:47:27+00:00"
         },
         {
-            "name": "symfony/polyfill-php73",
-            "version": "v1.15.0",
+            "name": "symfony/polyfill-php72",
+            "version": "v1.17.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/polyfill-php73.git",
-                "reference": "0f27e9f464ea3da33cbe7ca3bdf4eb66def9d0f7"
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "f048e612a3905f34931127360bdd2def19a5e582"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/0f27e9f464ea3da33cbe7ca3bdf4eb66def9d0f7",
-                "reference": "0f27e9f464ea3da33cbe7ca3bdf4eb66def9d0f7",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/f048e612a3905f34931127360bdd2def19a5e582",
+                "reference": "f048e612a3905f34931127360bdd2def19a5e582",
                 "shasum": ""
             },
             "require": {
@@ -2877,7 +3053,62 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15-dev"
+                    "dev-master": "1.17-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2020-05-12T16:47:27+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php73",
+            "version": "v1.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php73.git",
+                "reference": "a760d8964ff79ab9bf057613a5808284ec852ccc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/a760d8964ff79ab9bf057613a5808284ec852ccc",
+                "reference": "a760d8964ff79ab9bf057613a5808284ec852ccc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.17-dev"
                 }
             },
             "autoload": {
@@ -2913,20 +3144,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-02-27T09:26:54+00:00"
+            "time": "2020-05-12T16:47:27+00:00"
         },
         {
             "name": "symfony/process",
-            "version": "v4.4.7",
+            "version": "v4.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "3e40e87a20eaf83a1db825e1fa5097ae89042db3"
+                "reference": "4b6a9a4013baa65d409153cbb5a895bf093dc7f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/3e40e87a20eaf83a1db825e1fa5097ae89042db3",
-                "reference": "3e40e87a20eaf83a1db825e1fa5097ae89042db3",
+                "url": "https://api.github.com/repos/symfony/process/zipball/4b6a9a4013baa65d409153cbb5a895bf093dc7f4",
+                "reference": "4b6a9a4013baa65d409153cbb5a895bf093dc7f4",
                 "shasum": ""
             },
             "require": {
@@ -2962,7 +3193,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-27T16:54:36+00:00"
+            "time": "2020-04-15T15:56:18+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -3024,16 +3255,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.39",
+            "version": "v3.4.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "e701b47e11749970f63803879c4febb520f07b6c"
+                "reference": "8fef49ac1357f4e05c997a1f139467ccb186bffa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/e701b47e11749970f63803879c4febb520f07b6c",
-                "reference": "e701b47e11749970f63803879c4febb520f07b6c",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/8fef49ac1357f4e05c997a1f139467ccb186bffa",
+                "reference": "8fef49ac1357f4e05c997a1f139467ccb186bffa",
                 "shasum": ""
             },
             "require": {
@@ -3079,20 +3310,20 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-25T12:02:26+00:00"
+            "time": "2020-04-24T10:16:04+00:00"
         },
         {
             "name": "typo3/class-alias-loader",
-            "version": "v1.0.2",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/class-alias-loader.git",
-                "reference": "994ee9bebe847da862d0edc6f075df4693dfa8e2"
+                "reference": "ead04a4d7bc215ca1faa895977c5ea349f0b7383"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/class-alias-loader/zipball/994ee9bebe847da862d0edc6f075df4693dfa8e2",
-                "reference": "994ee9bebe847da862d0edc6f075df4693dfa8e2",
+                "url": "https://api.github.com/repos/TYPO3/class-alias-loader/zipball/ead04a4d7bc215ca1faa895977c5ea349f0b7383",
+                "reference": "ead04a4d7bc215ca1faa895977c5ea349f0b7383",
                 "shasum": ""
             },
             "require": {
@@ -3105,7 +3336,7 @@
             "require-dev": {
                 "composer/composer": "^1.1@dev || ^2.0@dev",
                 "mikey179/vfsstream": "~1.4.0@dev",
-                "phpunit/phpunit": "^4.8"
+                "phpunit/phpunit": ">4.8 <8"
             },
             "type": "composer-plugin",
             "extra": {
@@ -3137,7 +3368,7 @@
                 "classloader",
                 "composer"
             ],
-            "time": "2020-03-29T16:12:26+00:00"
+            "time": "2020-05-07T12:46:20+00:00"
         },
         {
             "name": "typo3/cms",
@@ -3590,20 +3821,20 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v2.6.2",
+            "version": "v2.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "c4a653ed3f1ff900baa15b4130c8770b57285b62"
+                "reference": "67d472b1794c986381a8950e4958e1adb779d561"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/c4a653ed3f1ff900baa15b4130c8770b57285b62",
-                "reference": "c4a653ed3f1ff900baa15b4130c8770b57285b62",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/67d472b1794c986381a8950e4958e1adb779d561",
+                "reference": "67d472b1794c986381a8950e4958e1adb779d561",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9",
+                "php": "^5.3.9 || ^7.0 || ^8.0",
                 "symfony/polyfill-ctype": "^1.9"
             },
             "require-dev": {
@@ -3632,9 +3863,14 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com",
+                    "homepage": "https://gjcampbell.co.uk/"
+                },
+                {
                     "name": "Vance Lucas",
                     "email": "vance@vancelucas.com",
-                    "homepage": "http://www.vancelucas.com"
+                    "homepage": "https://vancelucas.com/"
                 }
             ],
             "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
@@ -3643,7 +3879,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2020-03-27T23:16:19+00:00"
+            "time": "2020-05-02T13:38:00+00:00"
         },
         {
             "name": "voku/bounce-mail-handler",
@@ -3707,16 +3943,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598"
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "shasum": ""
             },
             "require": {
@@ -3724,7 +3960,7 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
-                "vimeo/psalm": "<3.6.0"
+                "vimeo/psalm": "<3.9.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
@@ -3751,7 +3987,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-02-14T12:15:55+00:00"
+            "time": "2020-04-18T12:12:48+00:00"
         }
     ],
     "packages-dev": [
@@ -3818,12 +4054,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_donation.git",
-                "reference": "f78046b0dc7c771af7c6caaa6fa7536c82e0c74e"
+                "reference": "139800d398209f117e4d51592a704996065f64e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/f78046b0dc7c771af7c6caaa6fa7536c82e0c74e",
-                "reference": "f78046b0dc7c771af7c6caaa6fa7536c82e0c74e",
+                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/139800d398209f117e4d51592a704996065f64e7",
+                "reference": "139800d398209f117e4d51592a704996065f64e7",
                 "shasum": ""
             },
             "require": {
@@ -3851,10 +4087,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_donation/tree/v8.7.13-beta",
+                "source": "https://github.com/HGONeV/hgon_donation/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_donation/issues"
             },
-            "time": "2020-04-06T09:35:24+00:00"
+            "time": "2020-05-13T14:28:09+00:00"
         },
         {
             "name": "hgon/hgon-payment",
@@ -3908,12 +4144,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_workgroup.git",
-                "reference": "87320670fdfeb4e32c37336f9b936005480da03e"
+                "reference": "2c2e29584375e5147f3fc002d467cce4f3f6119b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/87320670fdfeb4e32c37336f9b936005480da03e",
-                "reference": "87320670fdfeb4e32c37336f9b936005480da03e",
+                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/2c2e29584375e5147f3fc002d467cce4f3f6119b",
+                "reference": "2c2e29584375e5147f3fc002d467cce4f3f6119b",
                 "shasum": ""
             },
             "require": {
@@ -3942,10 +4178,10 @@
             ],
             "description": "For managing working groups",
             "support": {
-                "source": "https://github.com/HGONeV/hgon_workgroup/tree/v8.7.8-beta",
+                "source": "https://github.com/HGONeV/hgon_workgroup/tree/v8.7.9-beta",
                 "issues": "https://github.com/HGONeV/hgon_workgroup/issues"
             },
-            "time": "2020-04-02T12:59:34+00:00"
+            "time": "2020-05-05T12:37:55+00:00"
         },
         {
             "name": "mikey179/vfsStream",
@@ -3987,23 +4223,20 @@
         },
         {
             "name": "phpdocumentor/reflection-common",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a"
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/63a995caa1ca9e5590304cd845c15ad6d482a62a",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~6"
             },
             "type": "library",
             "extra": {
@@ -4035,7 +4268,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2018-08-07T13:53:10+00:00"
+            "time": "2020-04-27T09:25:28+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -4613,71 +4846,6 @@
             "time": "2019-09-05T07:57:18+00:00"
         },
         {
-            "name": "rkw/rkw-events",
-            "version": "dev-feature/showUpcomingPlugin",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwEvents.git",
-                "reference": "bde9fbae1c43d490a6882e691d2f80b22303d51d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/bde9fbae1c43d490a6882e691d2f80b22303d51d",
-                "reference": "bde9fbae1c43d490a6882e691d2f80b22303d51d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6",
-                "rkw/rkw-basics": "~8.7.0",
-                "rkw/rkw-mailer": "~8.7.0",
-                "sjbr/static-info-tables": "^6.3.7@dev",
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_events"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwEvents\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Steffen Kroggel",
-                    "role": "Developer",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de"
-                },
-                {
-                    "name": "Maximilian Fäßler",
-                    "role": "Developer",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de"
-                },
-                {
-                    "name": "Carlos Meyer",
-                    "role": "Developer",
-                    "email": "cm@davitec.de",
-                    "homepage": "https://www.davitec.de"
-                }
-            ],
-            "description": "Extension for events and registation",
-            "homepage": "https://www.rkw-kompetenzzentrum.de",
-            "keywords": [
-                "RKW",
-                "TYPO3 CMS",
-                "events"
-            ],
-            "time": "2019-08-01T13:28:00+00:00"
-        },
-        {
             "name": "sebastian/comparator",
             "version": "1.2.4",
             "source": {
@@ -5056,8 +5224,7 @@
         "mikey179/vfsstream": 20,
         "hgon/hgon-donation": 20,
         "hgon/hgon-workgroup": 20,
-        "hgon/hgon-payment": 20,
-        "rkw/rkw-events": 20
+        "hgon/hgon-payment": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

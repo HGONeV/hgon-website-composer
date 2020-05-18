@@ -39,16 +39,18 @@
        "rkw/rkw-geolocation": "~7.6.11",
        "rkw/rkw-mailer": "~7.6.13 || ~8.7.1",
        "rkw/rkw-registration": "~7.6.11 || ~8.7.0",
-       "rkw/rkw-authors": "~7.6.13",
-       "rkw/rkw-projects": "~7.6.1",
-       "rkw/rkw-newsletter": "~7.6.30",
+       "rkw/rkw-authors": "~8.7.4",
+       "rkw/rkw-projects": "~8.7.0",
+       "rkw/rkw-newsletter": "~8.7.7",
+       "rkw/rkw-events": "~8.7.17",
        "fluidtypo3/vhs": "^5.2",
        "georgringer/news": "^7.2",
        "plusb/pb_social": "^1.4",
        "dmitryd/typo3-realurl": "~2.5.0",
        "hgon/hgon-template": "~8.7.0",
         "reelworx/rx-shariff": "^12.3",
-        "mollie/mollie-api-php": "^2.0"
+        "mollie/mollie-api-php": "^2.0",
+        "sgalinski/sg-cookie-optin": "^3.0"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.4.*@dev",
@@ -57,7 +59,6 @@
         "hgon/hgon-donation": "dev-master",
         "hgon/hgon-workgroup": "dev-master",
         "hgon/hgon-payment": "dev-master",
-        "rkw/rkw-events": "dev-feature/showUpcomingPlugin",
         "rkw/deployment-typo3" : "*"
     },
     "scripts": {

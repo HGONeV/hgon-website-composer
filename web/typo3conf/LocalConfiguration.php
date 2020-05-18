@@ -100,6 +100,7 @@ return [
             'saltedpasswords' => 'a:6:{s:20:"checkConfigurationFE";s:1:"0";s:20:"checkConfigurationBE";s:1:"0";s:3:"FE.";a:5:{s:7:"enabled";s:1:"1";s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\PhpassSalt";s:11:"forceSalted";s:1:"0";s:15:"onlyAuthService";s:1:"0";s:12:"updatePasswd";s:1:"1";}s:3:"BE.";a:4:{s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\PhpassSalt";s:11:"forceSalted";s:1:"0";s:15:"onlyAuthService";s:1:"0";s:12:"updatePasswd";s:1:"1";}s:21:"checkConfigurationFE2";s:1:"0";s:21:"checkConfigurationBE2";s:1:"0";}',
             'scheduler' => 'a:5:{s:11:"maxLifetime";s:4:"1440";s:11:"enableBELog";s:1:"1";s:15:"showSampleTasks";s:1:"1";s:11:"useAtdaemon";s:1:"0";s:30:"listShowTaskDescriptionAsHover";s:1:"1";}',
             'setup' => 'a:0:{}',
+            'sg_cookie_optin' => 'a:2:{s:3:"key";s:27:"HCHZBG-ZW19DD-FKX4WA-DIG8LM";s:6:"folder";s:26:"fileadmin/sg_cookie_optin/";}',
             'static_info_tables' => 'a:1:{s:13:"enableManager";s:1:"0";}',
             'sys_action' => 'a:0:{}',
             'sys_note' => 'a:0:{}',
