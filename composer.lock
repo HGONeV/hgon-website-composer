@@ -1348,7 +1348,7 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.29-beta",
+            "version": "v8.7.30-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
