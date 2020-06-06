@@ -50,6 +50,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array(
 
                     // types from extensions
                     // have to be set here, because otherwise they get ignored in linkBuilder!
+                    'pagetype-newletter'        => 1536732477,
                 ),
                 'noMatch' => 'bypass',
             ),
