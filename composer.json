@@ -47,7 +47,7 @@
        "georgringer/news": "^7.2",
        "plusb/pb_social": "^1.4",
        "dmitryd/typo3-realurl": "~2.5.0",
-       "hgon/hgon-template": "~8.7.25",
+       "hgon/hgon-template": "~8.7.30",
         "reelworx/rx-shariff": "^12.3",
         "mollie/mollie-api-php": "^2.0",
         "sgalinski/sg-cookie-optin": "^3.0"
