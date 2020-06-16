@@ -11,7 +11,7 @@ foreach ($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'] as
 // ====================================================
 // Page not found handling
 // ====================================================
-$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = 'USER_FUNCTION:RKW\\RkwBasics\\UserFunctions\\PageNotFound->pageNotFound';
+$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = 'USER_FUNCTION:HGON\\HgonTemplate\\UserFunctions\\PageNotFound->pageNotFound';
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics'] = array ();
 
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['_DEFAULT'] = array (

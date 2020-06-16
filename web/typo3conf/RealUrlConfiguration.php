@@ -234,6 +234,36 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array(
                 ),
 
                 //===============================================
+                // Journal (HgonTemplate)
+                //===============================================
+                'tx-hgon-journal' => array (
+                    array(
+                        'GETvar' => 'tx_hgontemplate_journal[controller]',
+                        'noMatch' => 'bypass',
+                    ),
+                    array(
+                        'GETvar' => 'tx_hgontemplate_journal[action]' ,
+                        'noMatch' => 'bypass',
+                    ),
+
+                    // look-up table - param has to be set in cHash-ignore in Install-Tool!
+                    array(
+                        'GETvar' => 'tx_hgontemplate_journal[sysCategory]' ,
+                        'lookUpTable' => array(
+                            'table' => 'sys_category',
+                            'id_field' => 'uid',
+                            'alias_field' => 'title',
+                            'addWhereClause' => ' AND NOT deleted AND NOT hidden',
+                            'useUniqueCache' => 1,
+                            'useUniqueCache_conf' => array(
+                                'strtolower' => 1,
+                                'spaceCharacter' => '-',
+                            ),
+                        ),
+                    ),
+                ),
+
+                //===============================================
                 // News
                 //===============================================
                 'tx-news' => [

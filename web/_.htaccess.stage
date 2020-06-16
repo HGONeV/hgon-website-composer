@@ -5,8 +5,6 @@ AuthType Basic
 AuthUserFile /usr/www/users/hgonde/staging/surf/releases/current/web/.htpasswd
 require valid-user
 
-php_value allow_url_fopen On
-
 #####
 # 
 # Example .htaccess file for TYPO3 CMS - for use with Apache Webserver

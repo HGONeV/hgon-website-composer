@@ -4,7 +4,7 @@ return [
         'compressionLevel' => '0',
         'debug' => true,
         'disable_exec_function' => 0,
-        'installToolPassword' => '$P$C8.8X90tS2Djh1XOCTFehnh6Xu5uAp1',
+        'installToolPassword' => '$P$CCPgTtSq.wLoOwR/s8D4XiGa8CX5JW.',
         'lockSSL' => '0',
         'loginSecurityLevel' => 'rsa',
         'sessionTimeout' => '36000',
@@ -129,7 +129,7 @@ return [
         'disableNoCacheParameter' => '1',
         'loginSecurityLevel' => 'normal',
         'pageNotFoundOnCHashError' => false,
-        'pageNotFound_handling' => 'USER_FUNCTION:RKW\\RkwBasics\\UserFunctions\\PageNotFound->pageNotFound',
+        'pageNotFound_handling' => 'USER_FUNCTION:HGON\\HgonTemplate\\UserFunctions\\PageNotFound->pageNotFound',
     ],
     'GFX' => [
         'gdlib_png' => '1',
