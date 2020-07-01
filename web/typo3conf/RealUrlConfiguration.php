@@ -301,6 +301,10 @@ function user_decodeSpURL_preProc(&$params, &$ref) {
     $params['URL'] = str_replace('arbeitskreis/', 'arbeitskreis/tx-hgon-workgroup/', $params['URL']);
     $params['URL'] = str_replace('aktuelles/', 'detail/tx-news/detail/News/', $params['URL']);
     $params['URL'] = str_replace('mit-freude-spenden/', 'mit-freude-spenden/tx-hgon-donation/', $params['URL']);
+    $params['URL'] = str_replace('kategorie/', 'tx-hgon-journal/', $params['URL']);
+
+    // stage
+   // $params['URL'] = str_replace('arbeitskreis/', 'detailansicht/tx-hgon-workgroup/', $params['URL']);
 }
 
 function user_encodeSpURL_postProc(&$params, &$ref) {
@@ -308,4 +312,8 @@ function user_encodeSpURL_postProc(&$params, &$ref) {
     $params['URL'] = str_replace('arbeitskreis/tx-hgon-workgroup/', 'arbeitskreis/', $params['URL']);
     $params['URL'] = str_replace('detail/tx-news/detail/News/', 'aktuelles/', $params['URL']);
     $params['URL'] = str_replace('mit-freude-spenden/tx-hgon-donation/', 'mit-freude-spenden/', $params['URL']);
+    $params['URL'] = str_replace('tx-hgon-journal/', 'kategorie/', $params['URL']);
+
+    // stage
+    //$params['URL'] = str_replace('detailansicht/tx-hgon-workgroup/', 'arbeitskreis/', $params['URL']);
 }
