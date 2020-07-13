@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb92ba669c1fb49f3ebd93f8f2cf8618",
+    "content-hash": "3d8f3a6b8b8aa031abfbbf1197677afc",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -300,16 +300,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "1.10.1",
+            "version": "1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "35a4a70cd94e09e2259dfae7488afc6b474ecbd3"
+                "reference": "13e3381b25847283a91948d04640543941309727"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/35a4a70cd94e09e2259dfae7488afc6b474ecbd3",
-                "reference": "35a4a70cd94e09e2259dfae7488afc6b474ecbd3",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/13e3381b25847283a91948d04640543941309727",
+                "reference": "13e3381b25847283a91948d04640543941309727",
                 "shasum": ""
             },
             "require": {
@@ -378,7 +378,7 @@
                 "redis",
                 "xcache"
             ],
-            "time": "2020-05-27T16:24:54+00:00"
+            "time": "2020-07-07T18:54:01+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -1348,16 +1348,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.35-beta",
+            "version": "v8.7.36-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "4e767e976845bfbd7b4761f8eec7860fb59ec5d9"
+                "reference": "67581632ec00fe52b57d5c6bd8d41ef84e0e5b2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/4e767e976845bfbd7b4761f8eec7860fb59ec5d9",
-                "reference": "4e767e976845bfbd7b4761f8eec7860fb59ec5d9",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/67581632ec00fe52b57d5c6bd8d41ef84e0e5b2c",
+                "reference": "67581632ec00fe52b57d5c6bd8d41ef84e0e5b2c",
                 "shasum": ""
             },
             "require": {
@@ -1385,10 +1385,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.35-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.36-beta",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2020-07-07T13:12:59+00:00"
+            "time": "2020-07-11T11:18:03+00:00"
         },
         {
             "name": "mollie/mollie-api-php",
@@ -2111,16 +2111,16 @@
         },
         {
             "name": "rkw/rkw-basics",
-            "version": "v8.7.21-stable",
+            "version": "v8.7.22-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwBasics.git",
-                "reference": "db18fb83650c254c2adbc37e60041df980d333e2"
+                "reference": "9814cec22129212b790c387bf2848a9efc699efc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/db18fb83650c254c2adbc37e60041df980d333e2",
-                "reference": "db18fb83650c254c2adbc37e60041df980d333e2",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/9814cec22129212b790c387bf2848a9efc699efc",
+                "reference": "9814cec22129212b790c387bf2848a9efc699efc",
                 "shasum": ""
             },
             "require": {
@@ -2163,25 +2163,25 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2020-06-17T13:52:22+00:00"
+            "time": "2020-07-10T19:04:46+00:00"
         },
         {
             "name": "rkw/rkw-events",
-            "version": "v8.7.21-beta",
+            "version": "v8.7.22-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwEvents.git",
-                "reference": "42067ac1c1a7023ef462a9aeb077929fab3106b6"
+                "reference": "7ea942ac18775184dd015cbd724faa34b3cb4101"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/42067ac1c1a7023ef462a9aeb077929fab3106b6",
-                "reference": "42067ac1c1a7023ef462a9aeb077929fab3106b6",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/7ea942ac18775184dd015cbd724faa34b3cb4101",
+                "reference": "7ea942ac18775184dd015cbd724faa34b3cb4101",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6",
-                "rkw/rkw-basics": "~8.7.0",
+                "rkw/rkw-basics": "~8.7.22",
                 "rkw/rkw-mailer": "~8.7.0",
                 "sjbr/static-info-tables": "^6.3.7@dev",
                 "typo3/cms-core": "~7.6.0 || ~8.7.0"
@@ -2234,7 +2234,7 @@
                 "TYPO3 CMS",
                 "events"
             ],
-            "time": "2020-06-18T14:02:53+00:00"
+            "time": "2020-07-10T19:22:08+00:00"
         },
         {
             "name": "rkw/rkw-geolocation",
@@ -2477,16 +2477,16 @@
         },
         {
             "name": "rkw/rkw-registration",
-            "version": "v8.7.16-beta",
+            "version": "v8.7.17-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwRegistration.git",
-                "reference": "11c599dee61f84edb8d30c42804ddd9d7df2a14e"
+                "reference": "7c4986f2144eb9d5740e51949ac1ac6cedbf1799"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/11c599dee61f84edb8d30c42804ddd9d7df2a14e",
-                "reference": "11c599dee61f84edb8d30c42804ddd9d7df2a14e",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/7c4986f2144eb9d5740e51949ac1ac6cedbf1799",
+                "reference": "7c4986f2144eb9d5740e51949ac1ac6cedbf1799",
                 "shasum": ""
             },
             "require": {
@@ -2536,7 +2536,7 @@
                 "register",
                 "registration"
             ],
-            "time": "2020-07-02T13:34:55+00:00"
+            "time": "2020-07-10T19:27:53+00:00"
         },
         {
             "name": "sgalinski/sg-cookie-optin",
@@ -4022,20 +4022,20 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "9dc4f203e36f2b486149058bade43c851dd97451"
+                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/9dc4f203e36f2b486149058bade43c851dd97451",
-                "reference": "9dc4f203e36f2b486149058bade43c851dd97451",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3 || ^7.0",
+                "php": "^5.3.3 || ^7.0 || ^8.0",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
@@ -4067,7 +4067,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-06-16T10:16:42+00:00"
+            "time": "2020-07-08T17:02:28+00:00"
         }
     ],
     "packages-dev": [
@@ -4134,12 +4134,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_donation.git",
-                "reference": "9346138f005c0c1e70b263aeb7a2015a051814ae"
+                "reference": "0e7ab3626836096cb172dca81c52fdc6317a6935"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/9346138f005c0c1e70b263aeb7a2015a051814ae",
-                "reference": "9346138f005c0c1e70b263aeb7a2015a051814ae",
+                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/0e7ab3626836096cb172dca81c52fdc6317a6935",
+                "reference": "0e7ab3626836096cb172dca81c52fdc6317a6935",
                 "shasum": ""
             },
             "require": {
@@ -4167,10 +4167,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_donation/tree/v8.7.22-beta",
+                "source": "https://github.com/HGONeV/hgon_donation/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_donation/issues"
             },
-            "time": "2020-07-07T13:17:53+00:00"
+            "time": "2020-07-11T13:16:47+00:00"
         },
         {
             "name": "hgon/hgon-payment",
@@ -4178,12 +4178,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_payment.git",
-                "reference": "5db9aad06817ce6d1951d9b7d8e4e1f85be985e2"
+                "reference": "1d98340e121411cc694007743f2ff67c32974a4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_payment/zipball/5db9aad06817ce6d1951d9b7d8e4e1f85be985e2",
-                "reference": "5db9aad06817ce6d1951d9b7d8e4e1f85be985e2",
+                "url": "https://api.github.com/repos/HGONeV/hgon_payment/zipball/1d98340e121411cc694007743f2ff67c32974a4f",
+                "reference": "1d98340e121411cc694007743f2ff67c32974a4f",
                 "shasum": ""
             },
             "require": {
@@ -4216,7 +4216,7 @@
                 "source": "https://github.com/HGONeV/hgon_payment/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_payment/issues"
             },
-            "time": "2020-07-03T10:07:31+00:00"
+            "time": "2020-07-11T13:18:02+00:00"
         },
         {
             "name": "hgon/hgon-workgroup",
@@ -4224,12 +4224,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_workgroup.git",
-                "reference": "17e39ec412da9722f5223d14466296b493c409f3"
+                "reference": "32a22132acc6445d7934332a891d39e6ff6a4323"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/17e39ec412da9722f5223d14466296b493c409f3",
-                "reference": "17e39ec412da9722f5223d14466296b493c409f3",
+                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/32a22132acc6445d7934332a891d39e6ff6a4323",
+                "reference": "32a22132acc6445d7934332a891d39e6ff6a4323",
                 "shasum": ""
             },
             "require": {
@@ -4258,10 +4258,10 @@
             ],
             "description": "For managing working groups",
             "support": {
-                "source": "https://github.com/HGONeV/hgon_workgroup/tree/v8.7.12-beta",
+                "source": "https://github.com/HGONeV/hgon_workgroup/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_workgroup/issues"
             },
-            "time": "2020-07-07T13:18:56+00:00"
+            "time": "2020-07-11T13:18:49+00:00"
         },
         {
             "name": "mikey179/vfsStream",
