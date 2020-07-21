@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3fc71e7d67f2a71eb1897c3e5e5204e",
+    "content-hash": "4666bfd9479c71110baf3b68c4e2d5af",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1145,16 +1145,16 @@
         },
         {
             "name": "helhum/dotenv-connector",
-            "version": "v2.2.1",
+            "version": "v2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/helhum/dotenv-connector.git",
-                "reference": "bccfdfc40438c64ef62f5bec24cbff609967dbb6"
+                "reference": "daf70376b2b4bb93d2b4d4d3dfc5179a069c8c0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/helhum/dotenv-connector/zipball/bccfdfc40438c64ef62f5bec24cbff609967dbb6",
-                "reference": "bccfdfc40438c64ef62f5bec24cbff609967dbb6",
+                "url": "https://api.github.com/repos/helhum/dotenv-connector/zipball/daf70376b2b4bb93d2b4d4d3dfc5179a069c8c0d",
+                "reference": "daf70376b2b4bb93d2b4d4d3dfc5179a069c8c0d",
                 "shasum": ""
             },
             "require": {
@@ -1197,7 +1197,7 @@
                 "dotenv",
                 "env"
             ],
-            "time": "2020-02-13T14:18:23+00:00"
+            "time": "2020-02-12T11:00:53+00:00"
         },
         {
             "name": "helhum/typo3-console",
