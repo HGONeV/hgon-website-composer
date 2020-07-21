@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc8fa493e8c98d110df414d95d2976fa",
+    "content-hash": "f3fc71e7d67f2a71eb1897c3e5e5204e",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1145,33 +1145,33 @@
         },
         {
             "name": "helhum/dotenv-connector",
-            "version": "1.1.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/helhum/dotenv-connector.git",
-                "reference": "0bfc785a6f945d21cd46a689ee22be2213302747"
+                "reference": "bccfdfc40438c64ef62f5bec24cbff609967dbb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/helhum/dotenv-connector/zipball/0bfc785a6f945d21cd46a689ee22be2213302747",
-                "reference": "0bfc785a6f945d21cd46a689ee22be2213302747",
+                "url": "https://api.github.com/repos/helhum/dotenv-connector/zipball/bccfdfc40438c64ef62f5bec24cbff609967dbb6",
+                "reference": "bccfdfc40438c64ef62f5bec24cbff609967dbb6",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0",
-                "php": ">=5.3.7",
-                "vlucas/phpdotenv": "^2.0.1"
+                "php": ">=7.0 <7.5",
+                "symfony/dotenv": "^3.3.0 || ^4.0"
             },
             "require-dev": {
                 "composer/composer": "^1.0.0",
-                "mikey179/vfsstream": "~1.6.0",
-                "phpunit/phpunit": "~4.8.0"
+                "mikey179/vfsstream": "^1.6.0",
+                "phpunit/phpunit": "^5"
             },
             "type": "composer-plugin",
             "extra": {
                 "class": "Helhum\\DotEnvConnector\\Plugin",
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -1190,14 +1190,14 @@
                 }
             ],
             "description": "Makes it possible to set environment variables for composer projects.",
-            "homepage": "http://github.com/helhum/dotenv-connector",
+            "homepage": "https://github.com/helhum/dotenv-connector",
             "keywords": [
                 "12factor",
                 "composer",
                 "dotenv",
                 "env"
             ],
-            "time": "2016-09-23T16:32:29+00:00"
+            "time": "2020-02-13T14:18:23+00:00"
         },
         {
             "name": "helhum/typo3-console",
@@ -2111,16 +2111,16 @@
         },
         {
             "name": "rkw/rkw-basics",
-            "version": "v8.7.24-stable",
+            "version": "v8.7.25-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwBasics.git",
-                "reference": "2ac05ba76a0a927f47cf2795d617bb220c13cf99"
+                "reference": "96670f8ef2a9973a0b1bdb61785b8d884f376119"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/2ac05ba76a0a927f47cf2795d617bb220c13cf99",
-                "reference": "2ac05ba76a0a927f47cf2795d617bb220c13cf99",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/96670f8ef2a9973a0b1bdb61785b8d884f376119",
+                "reference": "96670f8ef2a9973a0b1bdb61785b8d884f376119",
                 "shasum": ""
             },
             "require": {
@@ -2163,7 +2163,7 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2020-07-16T10:21:00+00:00"
+            "time": "2020-07-21T07:53:11+00:00"
         },
         {
             "name": "rkw/rkw-events",
@@ -2301,22 +2301,22 @@
         },
         {
             "name": "rkw/rkw-mailer",
-            "version": "v8.7.35-beta",
+            "version": "v8.7.36-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwMailer.git",
-                "reference": "e89447757c39d11c86e383793c37abb71e719a22"
+                "reference": "67a75010c1bd78b85d0bf99af3ecba4faa2d9a05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/e89447757c39d11c86e383793c37abb71e719a22",
-                "reference": "e89447757c39d11c86e383793c37abb71e719a22",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/67a75010c1bd78b85d0bf99af3ecba4faa2d9a05",
+                "reference": "67a75010c1bd78b85d0bf99af3ecba4faa2d9a05",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": ">=5.6",
-                "rkw/rkw-basics": "~8.7.12",
+                "rkw/rkw-basics": "~8.7.25",
                 "typo3/cms-core": "~7.6.0 || ~8.7.0",
                 "voku/bounce-mail-handler": "^5.5"
             },
@@ -2357,7 +2357,7 @@
                 "TYPO3 CMS",
                 "newsletter"
             ],
-            "time": "2020-07-17T12:37:40+00:00"
+            "time": "2020-07-21T08:07:47+00:00"
         },
         {
             "name": "rkw/rkw-newsletter",
@@ -2572,17 +2572,18 @@
         },
         {
             "name": "sjbr/static-info-tables",
-            "version": "v6.8.0",
+            "version": "6.7.5",
             "source": {
                 "type": "git",
                 "url": "https://git.typo3.org/TYPO3CMS/Extensions/static_info_tables.git",
-                "reference": "031a8de213231b4390ce63912eb3bf48461eefdb"
+                "reference": "2788d22cda957d3e937388b74ed0226e7b473832"
             },
             "require": {
-                "php": "^7.0",
-                "typo3/cms-core": ">=8.7, <11.0"
+                "php": ">= 7.0, <7.3",
+                "typo3/cms-core": ">=8.7, <10.0"
             },
             "replace": {
+                "static_info_tables": "self.version",
                 "typo3-ter/static-info-tables": "self.version"
             },
             "type": "typo3-cms-extension",
@@ -2593,7 +2594,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -2611,7 +2612,7 @@
             "keywords": [
                 "typo3"
             ],
-            "time": "2020-06-09T14:37:44+00:00"
+            "time": "2019-10-17T21:15:06+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2743,6 +2744,63 @@
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
             "time": "2020-05-30T20:06:45+00:00"
+        },
+        {
+            "name": "symfony/dotenv",
+            "version": "v4.4.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/dotenv.git",
+                "reference": "24d734ab97c7fb8b4fa10c64ee0c344f2badfcf0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/24d734ab97c7fb8b4fa10c64ee0c344f2badfcf0",
+                "reference": "24d734ab97c7fb8b4fa10c64ee0c344f2badfcf0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "symfony/process": "^3.4.2|^4.0|^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Dotenv\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Registers environment variables from a .env file",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2020-05-26T09:42:42+00:00"
         },
         {
             "name": "symfony/finder",
@@ -4036,68 +4094,6 @@
             ],
             "description": "The TYPO3 Fluid template rendering engine",
             "time": "2020-02-03T10:46:43+00:00"
-        },
-        {
-            "name": "vlucas/phpdotenv",
-            "version": "v2.6.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "e1d57f62db3db00d9139078cbedf262280701479"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/e1d57f62db3db00d9139078cbedf262280701479",
-                "reference": "e1d57f62db3db00d9139078cbedf262280701479",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.9 || ^7.0 || ^8.0",
-                "symfony/polyfill-ctype": "^1.17"
-            },
-            "require-dev": {
-                "ext-filter": "*",
-                "ext-pcre": "*",
-                "phpunit/phpunit": "^4.8.35 || ^5.7.27"
-            },
-            "suggest": {
-                "ext-filter": "Required to use the boolean validator.",
-                "ext-pcre": "Required to use most of the library."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.6-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Dotenv\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Graham Campbell",
-                    "email": "graham@alt-three.com",
-                    "homepage": "https://gjcampbell.co.uk/"
-                },
-                {
-                    "name": "Vance Lucas",
-                    "email": "vance@vancelucas.com",
-                    "homepage": "https://vancelucas.com/"
-                }
-            ],
-            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
-            "keywords": [
-                "dotenv",
-                "env",
-                "environment"
-            ],
-            "time": "2020-07-14T17:54:18+00:00"
         },
         {
             "name": "voku/bounce-mail-handler",
