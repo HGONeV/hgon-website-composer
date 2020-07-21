@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78c13c89792f81fa41b5253fcf4aeaf6",
+    "content-hash": "10d7148a1709d4e63fda372168aaabdd",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1201,16 +1201,16 @@
         },
         {
             "name": "helhum/typo3-console",
-            "version": "v5.8.5",
+            "version": "5.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Console/TYPO3-Console.git",
-                "reference": "448a2ac57b9bb2f63af84256e7e84441e83fe1a9"
+                "reference": "f836bb36deabb2a2f6bf00898fb203b3ed5bdc33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/448a2ac57b9bb2f63af84256e7e84441e83fe1a9",
-                "reference": "448a2ac57b9bb2f63af84256e7e84441e83fe1a9",
+                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/f836bb36deabb2a2f6bf00898fb203b3ed5bdc33",
+                "reference": "f836bb36deabb2a2f6bf00898fb203b3ed5bdc33",
                 "shasum": ""
             },
             "require": {
@@ -1291,7 +1291,7 @@
                 "console",
                 "typo3"
             ],
-            "time": "2020-04-23T09:35:12+00:00"
+            "time": "2020-05-04T20:59:44+00:00"
         },
         {
             "name": "helhum/typo3-console-plugin",
@@ -5502,6 +5502,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "helhum/typo3-console": 20,
         "mikey179/vfsstream": 20,
         "hgon/hgon-donation": 20,
         "hgon/hgon-workgroup": 20,
