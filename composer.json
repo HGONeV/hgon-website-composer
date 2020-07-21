@@ -31,7 +31,7 @@
     "require": {
         "php": "~7.2.0",
         "typo3/cms": "8.7.26",
-        "helhum/typo3-console": "~5.8.0",
+        "helhum/typo3-console": "5.8.5",
         "helhum/dotenv-connector": "~2.1.1",
         "typo3/surf": "^2.0.0",
         "sjbr/static-info-tables" : "~6.7.0",
