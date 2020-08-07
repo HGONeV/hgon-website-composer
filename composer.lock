@@ -382,16 +382,16 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "1.6.6",
+            "version": "1.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "5f0470363ff042d0057006ae7acabc5d7b5252d5"
+                "reference": "55f8b799269a1a472457bd1a41b4f379d4cfba4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/5f0470363ff042d0057006ae7acabc5d7b5252d5",
-                "reference": "5f0470363ff042d0057006ae7acabc5d7b5252d5",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/55f8b799269a1a472457bd1a41b4f379d4cfba4a",
+                "reference": "55f8b799269a1a472457bd1a41b4f379d4cfba4a",
                 "shasum": ""
             },
             "require": {
@@ -443,7 +443,7 @@
                 "iterators",
                 "php"
             ],
-            "time": "2020-06-22T19:14:02+00:00"
+            "time": "2020-07-27T17:53:49+00:00"
         },
         {
             "name": "doctrine/common",
@@ -1348,16 +1348,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.38-beta",
+            "version": "v8.7.39-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "9992b9cd1ca588d21c23515f729bb7e35e4c7fea"
+                "reference": "a48644e7052a492fbde6c41a62d6f02bc81aacf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/9992b9cd1ca588d21c23515f729bb7e35e4c7fea",
-                "reference": "9992b9cd1ca588d21c23515f729bb7e35e4c7fea",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/a48644e7052a492fbde6c41a62d6f02bc81aacf1",
+                "reference": "a48644e7052a492fbde6c41a62d6f02bc81aacf1",
                 "shasum": ""
             },
             "require": {
@@ -1385,23 +1385,23 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.38-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.39-beta",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2020-07-20T13:36:01+00:00"
+            "time": "2020-08-07T14:27:25+00:00"
         },
         {
             "name": "mollie/mollie-api-php",
-            "version": "v2.20.0",
+            "version": "v2.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mollie/mollie-api-php.git",
-                "reference": "89cc577037501c0c715391482e217ca561006eef"
+                "reference": "1511a46f9b1303628aeb71352e9eecafece3e243"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/89cc577037501c0c715391482e217ca561006eef",
-                "reference": "89cc577037501c0c715391482e217ca561006eef",
+                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/1511a46f9b1303628aeb71352e9eecafece3e243",
+                "reference": "1511a46f9b1303628aeb71352e9eecafece3e243",
                 "shasum": ""
             },
             "require": {
@@ -1409,7 +1409,7 @@
                 "ext-curl": "*",
                 "ext-json": "*",
                 "ext-openssl": "*",
-                "guzzlehttp/guzzle": "^6.3",
+                "guzzlehttp/guzzle": "^6.3 || ^7.0",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -1474,20 +1474,20 @@
                 "sofortbanking",
                 "subscriptions"
             ],
-            "time": "2020-07-15T14:52:24+00:00"
+            "time": "2020-07-29T17:35:08+00:00"
         },
         {
             "name": "monolog/monolog",
-            "version": "1.25.4",
+            "version": "1.25.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "3022efff205e2448b560c833c6fbbf91c3139168"
+                "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/3022efff205e2448b560c833c6fbbf91c3139168",
-                "reference": "3022efff205e2448b560c833c6fbbf91c3139168",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1817faadd1846cd08be9a49e905dc68823bc38c0",
+                "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0",
                 "shasum": ""
             },
             "require": {
@@ -1551,7 +1551,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2020-05-22T07:31:27+00:00"
+            "time": "2020-07-23T08:35:51+00:00"
         },
         {
             "name": "neos/utility-files",
@@ -2053,16 +2053,16 @@
         },
         {
             "name": "rkw/rkw-authors",
-            "version": "v8.7.5-beta",
+            "version": "v8.7.6-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwAuthors.git",
-                "reference": "b19f34055da359bb2889937cd780eb771a3010af"
+                "reference": "e1c3989892a256c2b160caf28c57b323bee52d8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwAuthors/zipball/b19f34055da359bb2889937cd780eb771a3010af",
-                "reference": "b19f34055da359bb2889937cd780eb771a3010af",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwAuthors/zipball/e1c3989892a256c2b160caf28c57b323bee52d8f",
+                "reference": "e1c3989892a256c2b160caf28c57b323bee52d8f",
                 "shasum": ""
             },
             "require": {
@@ -2107,20 +2107,20 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2020-05-13T08:53:49+00:00"
+            "time": "2020-07-22T20:11:37+00:00"
         },
         {
             "name": "rkw/rkw-basics",
-            "version": "v8.7.25-stable",
+            "version": "v8.7.31-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwBasics.git",
-                "reference": "96670f8ef2a9973a0b1bdb61785b8d884f376119"
+                "reference": "6caa8dc15fadc5cb757effe1d0e36c86765d8ab3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/96670f8ef2a9973a0b1bdb61785b8d884f376119",
-                "reference": "96670f8ef2a9973a0b1bdb61785b8d884f376119",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/6caa8dc15fadc5cb757effe1d0e36c86765d8ab3",
+                "reference": "6caa8dc15fadc5cb757effe1d0e36c86765d8ab3",
                 "shasum": ""
             },
             "require": {
@@ -2163,20 +2163,20 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2020-07-21T07:53:11+00:00"
+            "time": "2020-07-31T14:08:56+00:00"
         },
         {
             "name": "rkw/rkw-events",
-            "version": "v8.7.25-beta",
+            "version": "v8.7.26-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwEvents.git",
-                "reference": "89a418326bcb3f8bfb3b7bbf3a10e3f81e56ebdf"
+                "reference": "fe714691223243c4dd0a09295f42262ebffee9b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/89a418326bcb3f8bfb3b7bbf3a10e3f81e56ebdf",
-                "reference": "89a418326bcb3f8bfb3b7bbf3a10e3f81e56ebdf",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwEvents/zipball/fe714691223243c4dd0a09295f42262ebffee9b6",
+                "reference": "fe714691223243c4dd0a09295f42262ebffee9b6",
                 "shasum": ""
             },
             "require": {
@@ -2234,7 +2234,7 @@
                 "TYPO3 CMS",
                 "events"
             ],
-            "time": "2020-07-17T12:42:55+00:00"
+            "time": "2020-07-28T12:34:11+00:00"
         },
         {
             "name": "rkw/rkw-geolocation",
@@ -2301,16 +2301,16 @@
         },
         {
             "name": "rkw/rkw-mailer",
-            "version": "v8.7.38-beta",
+            "version": "v8.7.39-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwMailer.git",
-                "reference": "293b1f8c4c4216b4cfd54d43ed63dc0532b6f8a6"
+                "reference": "971b3071fac26bf1e8fbb8ceb328531a62aa5dea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/293b1f8c4c4216b4cfd54d43ed63dc0532b6f8a6",
-                "reference": "293b1f8c4c4216b4cfd54d43ed63dc0532b6f8a6",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/971b3071fac26bf1e8fbb8ceb328531a62aa5dea",
+                "reference": "971b3071fac26bf1e8fbb8ceb328531a62aa5dea",
                 "shasum": ""
             },
             "require": {
@@ -2357,20 +2357,20 @@
                 "TYPO3 CMS",
                 "newsletter"
             ],
-            "time": "2020-07-21T13:02:22+00:00"
+            "time": "2020-07-30T15:41:36+00:00"
         },
         {
             "name": "rkw/rkw-newsletter",
-            "version": "v8.7.13-beta",
+            "version": "v8.7.14-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwNewsletter.git",
-                "reference": "4181cc6ce5e674d34111850c2487f0ec04f61f7c"
+                "reference": "06c998c5272ae0b1d6cd7e79db3ea0bbfba791e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwNewsletter/zipball/4181cc6ce5e674d34111850c2487f0ec04f61f7c",
-                "reference": "4181cc6ce5e674d34111850c2487f0ec04f61f7c",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwNewsletter/zipball/06c998c5272ae0b1d6cd7e79db3ea0bbfba791e7",
+                "reference": "06c998c5272ae0b1d6cd7e79db3ea0bbfba791e7",
                 "shasum": ""
             },
             "require": {
@@ -2416,20 +2416,20 @@
                 "TYPO3 CMS",
                 "newsletter"
             ],
-            "time": "2020-07-21T12:17:25+00:00"
+            "time": "2020-07-30T10:25:01+00:00"
         },
         {
             "name": "rkw/rkw-projects",
-            "version": "v8.7.0-beta",
+            "version": "v8.7.1-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwProjects.git",
-                "reference": "e17d7b0295efbb22c95df19d482b64ac73d28b9b"
+                "reference": "86d63468462d41576773d74f5fcd1c5978be6ed5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/e17d7b0295efbb22c95df19d482b64ac73d28b9b",
-                "reference": "e17d7b0295efbb22c95df19d482b64ac73d28b9b",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/86d63468462d41576773d74f5fcd1c5978be6ed5",
+                "reference": "86d63468462d41576773d74f5fcd1c5978be6ed5",
                 "shasum": ""
             },
             "require": {
@@ -2473,20 +2473,20 @@
                 "TYPO3 CMS",
                 "projects"
             ],
-            "time": "2019-11-12T08:59:54+00:00"
+            "time": "2020-07-22T21:41:43+00:00"
         },
         {
             "name": "rkw/rkw-registration",
-            "version": "v8.7.19-beta",
+            "version": "v8.7.23-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwRegistration.git",
-                "reference": "95a4d9408eafa7ac4d8e19a664db90972a7292d2"
+                "reference": "18b2ec89fe6fd4cb0763d3c118ff8339191a3c20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/95a4d9408eafa7ac4d8e19a664db90972a7292d2",
-                "reference": "95a4d9408eafa7ac4d8e19a664db90972a7292d2",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/18b2ec89fe6fd4cb0763d3c118ff8339191a3c20",
+                "reference": "18b2ec89fe6fd4cb0763d3c118ff8339191a3c20",
                 "shasum": ""
             },
             "require": {
@@ -2536,7 +2536,7 @@
                 "register",
                 "registration"
             ],
-            "time": "2020-07-21T12:35:15+00:00"
+            "time": "2020-08-05T12:57:54+00:00"
         },
         {
             "name": "sgalinski/sg-cookie-optin",
@@ -2670,16 +2670,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.4.10",
+            "version": "v4.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "326b064d804043005526f5a0494cfb49edb59bb0"
+                "reference": "55d07021da933dd0d633ffdab6f45d5b230c7e02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/326b064d804043005526f5a0494cfb49edb59bb0",
-                "reference": "326b064d804043005526f5a0494cfb49edb59bb0",
+                "url": "https://api.github.com/repos/symfony/console/zipball/55d07021da933dd0d633ffdab6f45d5b230c7e02",
+                "reference": "55d07021da933dd0d633ffdab6f45d5b230c7e02",
                 "shasum": ""
             },
             "require": {
@@ -2743,24 +2743,24 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2020-05-30T20:06:45+00:00"
+            "time": "2020-07-06T13:18:39+00:00"
         },
         {
             "name": "symfony/dotenv",
-            "version": "v4.4.10",
+            "version": "v4.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dotenv.git",
-                "reference": "24d734ab97c7fb8b4fa10c64ee0c344f2badfcf0"
+                "reference": "a9eb95c87c2965d0e7dfda9c5e87e4fb590d1f4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dotenv/zipball/24d734ab97c7fb8b4fa10c64ee0c344f2badfcf0",
-                "reference": "24d734ab97c7fb8b4fa10c64ee0c344f2badfcf0",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/a9eb95c87c2965d0e7dfda9c5e87e4fb590d1f4e",
+                "reference": "a9eb95c87c2965d0e7dfda9c5e87e4fb590d1f4e",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3"
+                "php": ">=7.1.3"
             },
             "require-dev": {
                 "symfony/process": "^3.4.2|^4.0|^5.0"
@@ -2800,24 +2800,24 @@
                 "env",
                 "environment"
             ],
-            "time": "2020-05-26T09:42:42+00:00"
+            "time": "2020-07-05T09:39:30+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v4.4.10",
+            "version": "v4.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "5729f943f9854c5781984ed4907bbb817735776b"
+                "reference": "2727aa35fddfada1dd37599948528e9b152eb742"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/5729f943f9854c5781984ed4907bbb817735776b",
-                "reference": "5729f943f9854c5781984ed4907bbb817735776b",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/2727aa35fddfada1dd37599948528e9b152eb742",
+                "reference": "2727aa35fddfada1dd37599948528e9b152eb742",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3"
+                "php": ">=7.1.3"
             },
             "type": "library",
             "extra": {
@@ -2849,24 +2849,24 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-27T16:54:36+00:00"
+            "time": "2020-07-05T09:39:30+00:00"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v4.4.10",
+            "version": "v4.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "73e1d0fe11ffceb7b7d4ca55b7381cd7ce0bac05"
+                "reference": "376bd3a02e7946dbf90b01563361b47dde425025"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/73e1d0fe11ffceb7b7d4ca55b7381cd7ce0bac05",
-                "reference": "73e1d0fe11ffceb7b7d4ca55b7381cd7ce0bac05",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/376bd3a02e7946dbf90b01563361b47dde425025",
+                "reference": "376bd3a02e7946dbf90b01563361b47dde425025",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3"
+                "php": ">=7.1.3"
             },
             "type": "library",
             "extra": {
@@ -2903,11 +2903,11 @@
                 "configuration",
                 "options"
             ],
-            "time": "2020-05-23T12:09:32+00:00"
+            "time": "2020-07-10T09:12:14+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -2969,16 +2969,16 @@
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "bc6549d068d0160e0f10f7a5a23c7d1406b95ebe"
+                "reference": "5dcab1bc7146cf8c1beaa4502a3d9be344334251"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/bc6549d068d0160e0f10f7a5a23c7d1406b95ebe",
-                "reference": "bc6549d068d0160e0f10f7a5a23c7d1406b95ebe",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/5dcab1bc7146cf8c1beaa4502a3d9be344334251",
+                "reference": "5dcab1bc7146cf8c1beaa4502a3d9be344334251",
                 "shasum": ""
             },
             "require": {
@@ -3036,11 +3036,11 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-08-04T06:02:08+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
@@ -3107,7 +3107,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -3170,7 +3170,7 @@
         },
         {
             "name": "symfony/polyfill-php70",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php70.git",
@@ -3233,7 +3233,7 @@
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
@@ -3292,7 +3292,7 @@
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
@@ -3354,7 +3354,7 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -3420,20 +3420,20 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.4.10",
+            "version": "v4.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "c714958428a85c86ab97e3a0c96db4c4f381b7f5"
+                "reference": "65e70bab62f3da7089a8d4591fb23fbacacb3479"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/c714958428a85c86ab97e3a0c96db4c4f381b7f5",
-                "reference": "c714958428a85c86ab97e3a0c96db4c4f381b7f5",
+                "url": "https://api.github.com/repos/symfony/process/zipball/65e70bab62f3da7089a8d4591fb23fbacacb3479",
+                "reference": "65e70bab62f3da7089a8d4591fb23fbacacb3479",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3"
+                "php": ">=7.1.3"
             },
             "type": "library",
             "extra": {
@@ -3465,7 +3465,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2020-05-30T20:06:45+00:00"
+            "time": "2020-07-23T08:31:43+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -3531,16 +3531,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.42",
+            "version": "v3.4.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "7233ac2bfdde24d672f5305f2b3f6b5d741ef8eb"
+                "reference": "e7fa05917ae931332a42d65b577ece4d497aad81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/7233ac2bfdde24d672f5305f2b3f6b5d741ef8eb",
-                "reference": "7233ac2bfdde24d672f5305f2b3f6b5d741ef8eb",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/e7fa05917ae931332a42d65b577ece4d497aad81",
+                "reference": "e7fa05917ae931332a42d65b577ece4d497aad81",
                 "shasum": ""
             },
             "require": {
@@ -3586,7 +3586,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2020-05-11T07:51:54+00:00"
+            "time": "2020-07-23T09:37:51+00:00"
         },
         {
             "name": "typo3/class-alias-loader",
@@ -4007,16 +4007,16 @@
         },
         {
             "name": "typo3/surf",
-            "version": "2.1.1",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/Surf.git",
-                "reference": "6905dec1332029fd1f81eb720c0fe76a4b533568"
+                "reference": "b7cacc872d6ca52ac7a1578d2103436b13f794a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/Surf/zipball/6905dec1332029fd1f81eb720c0fe76a4b533568",
-                "reference": "6905dec1332029fd1f81eb720c0fe76a4b533568",
+                "url": "https://api.github.com/repos/TYPO3/Surf/zipball/b7cacc872d6ca52ac7a1578d2103436b13f794a2",
+                "reference": "b7cacc872d6ca52ac7a1578d2103436b13f794a2",
                 "shasum": ""
             },
             "require": {
@@ -4024,8 +4024,7 @@
                 "monolog/monolog": "^1.17",
                 "neos/utility-files": "^3.0",
                 "padraic/phar-updater": "1.0.5",
-                "paragonie/random_compat": "^2.0 || ^9.99",
-                "php": "^5.6 || >=7.0 <7.5",
+                "php": ">=7.0.8",
                 "symfony/console": "^3.4.17 || ^4.0",
                 "symfony/options-resolver": "^3.0 || ^4.0",
                 "symfony/process": "^3.0 || ^4.0",
@@ -4033,7 +4032,7 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.14",
-                "phpunit/phpunit": "^5.7 || ^6.5",
+                "phpunit/phpunit": "^6.5",
                 "sphpdox/sphpdox": "dev-master",
                 "symfony/finder": "^3.0 || ^4.0"
             },
@@ -4054,7 +4053,7 @@
                 "GPL-3.0-or-later"
             ],
             "description": "TYPO3 Surf is a deployment tool, suited for a wide variety of applications",
-            "time": "2020-05-31T12:01:46+00:00"
+            "time": "2020-07-30T09:16:54+00:00"
         },
         {
             "name": "typo3fluid/fluid",
@@ -4337,12 +4336,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_donation.git",
-                "reference": "7afde72854c32b72a5a332eec54d538a88f06990"
+                "reference": "eec3c6fa0dfa511c4dac3668710f1287165255bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/7afde72854c32b72a5a332eec54d538a88f06990",
-                "reference": "7afde72854c32b72a5a332eec54d538a88f06990",
+                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/eec3c6fa0dfa511c4dac3668710f1287165255bf",
+                "reference": "eec3c6fa0dfa511c4dac3668710f1287165255bf",
                 "shasum": ""
             },
             "require": {
@@ -4370,10 +4369,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_donation/tree/master",
+                "source": "https://github.com/HGONeV/hgon_donation/tree/v8.7.28-beta",
                 "issues": "https://github.com/HGONeV/hgon_donation/issues"
             },
-            "time": "2020-07-20T13:38:20+00:00"
+            "time": "2020-08-07T14:25:27+00:00"
         },
         {
             "name": "hgon/hgon-payment",
