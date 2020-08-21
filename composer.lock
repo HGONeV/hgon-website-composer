@@ -231,16 +231,16 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "1.10.3",
+            "version": "1.10.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "5db60a4969eba0e0c197a19c077780aadbc43c5d"
+                "reference": "bfe91e31984e2ba76df1c1339681770401ec262f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/5db60a4969eba0e0c197a19c077780aadbc43c5d",
-                "reference": "5db60a4969eba0e0c197a19c077780aadbc43c5d",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/bfe91e31984e2ba76df1c1339681770401ec262f",
+                "reference": "bfe91e31984e2ba76df1c1339681770401ec262f",
                 "shasum": ""
             },
             "require": {
@@ -250,7 +250,8 @@
             },
             "require-dev": {
                 "doctrine/cache": "1.*",
-                "phpunit/phpunit": "^7.5"
+                "phpstan/phpstan": "^0.12.20",
+                "phpunit/phpunit": "^7.5 || ^9.1.5"
             },
             "type": "library",
             "extra": {
@@ -296,7 +297,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2020-05-25T17:24:27+00:00"
+            "time": "2020-08-10T19:35:50+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -1348,16 +1349,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.39-beta",
+            "version": "v8.7.41-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "a48644e7052a492fbde6c41a62d6f02bc81aacf1"
+                "reference": "a01a452c3804857c5223abbf430194ceb58cf45b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/a48644e7052a492fbde6c41a62d6f02bc81aacf1",
-                "reference": "a48644e7052a492fbde6c41a62d6f02bc81aacf1",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/a01a452c3804857c5223abbf430194ceb58cf45b",
+                "reference": "a01a452c3804857c5223abbf430194ceb58cf45b",
                 "shasum": ""
             },
             "require": {
@@ -1385,23 +1386,23 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.39-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.41-beta",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2020-08-07T14:27:25+00:00"
+            "time": "2020-08-21T09:00:11+00:00"
         },
         {
             "name": "mollie/mollie-api-php",
-            "version": "v2.21.0",
+            "version": "v2.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mollie/mollie-api-php.git",
-                "reference": "1511a46f9b1303628aeb71352e9eecafece3e243"
+                "reference": "bb5ced8aa23ac97f49113390b0b4749a972a94da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/1511a46f9b1303628aeb71352e9eecafece3e243",
-                "reference": "1511a46f9b1303628aeb71352e9eecafece3e243",
+                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/bb5ced8aa23ac97f49113390b0b4749a972a94da",
+                "reference": "bb5ced8aa23ac97f49113390b0b4749a972a94da",
                 "shasum": ""
             },
             "require": {
@@ -1474,7 +1475,7 @@
                 "sofortbanking",
                 "subscriptions"
             ],
-            "time": "2020-07-29T17:35:08+00:00"
+            "time": "2020-08-20T10:00:49+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2111,16 +2112,16 @@
         },
         {
             "name": "rkw/rkw-basics",
-            "version": "v8.7.31-stable",
+            "version": "v8.7.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwBasics.git",
-                "reference": "6caa8dc15fadc5cb757effe1d0e36c86765d8ab3"
+                "reference": "7affae73ee88ad558c40ad071c7ba7f1f7f88ac4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/6caa8dc15fadc5cb757effe1d0e36c86765d8ab3",
-                "reference": "6caa8dc15fadc5cb757effe1d0e36c86765d8ab3",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwBasics/zipball/7affae73ee88ad558c40ad071c7ba7f1f7f88ac4",
+                "reference": "7affae73ee88ad558c40ad071c7ba7f1f7f88ac4",
                 "shasum": ""
             },
             "require": {
@@ -2163,7 +2164,7 @@
                 "RKW",
                 "TYPO3 CMS"
             ],
-            "time": "2020-07-31T14:08:56+00:00"
+            "time": "2020-08-18T11:19:08+00:00"
         },
         {
             "name": "rkw/rkw-events",
@@ -2301,16 +2302,16 @@
         },
         {
             "name": "rkw/rkw-mailer",
-            "version": "v8.7.39-beta",
+            "version": "v8.7.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwMailer.git",
-                "reference": "971b3071fac26bf1e8fbb8ceb328531a62aa5dea"
+                "reference": "9118e8aa2766d80e398c7755b21cd44f3d1beaed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/971b3071fac26bf1e8fbb8ceb328531a62aa5dea",
-                "reference": "971b3071fac26bf1e8fbb8ceb328531a62aa5dea",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwMailer/zipball/9118e8aa2766d80e398c7755b21cd44f3d1beaed",
+                "reference": "9118e8aa2766d80e398c7755b21cd44f3d1beaed",
                 "shasum": ""
             },
             "require": {
@@ -2357,7 +2358,7 @@
                 "TYPO3 CMS",
                 "newsletter"
             ],
-            "time": "2020-07-30T15:41:36+00:00"
+            "time": "2020-08-18T11:20:38+00:00"
         },
         {
             "name": "rkw/rkw-newsletter",
@@ -2420,16 +2421,16 @@
         },
         {
             "name": "rkw/rkw-projects",
-            "version": "v8.7.1-beta",
+            "version": "v8.7.2-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwProjects.git",
-                "reference": "86d63468462d41576773d74f5fcd1c5978be6ed5"
+                "reference": "5d004f6bdb0aa9805a7388db9c5ff42560dfcce1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/86d63468462d41576773d74f5fcd1c5978be6ed5",
-                "reference": "86d63468462d41576773d74f5fcd1c5978be6ed5",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/5d004f6bdb0aa9805a7388db9c5ff42560dfcce1",
+                "reference": "5d004f6bdb0aa9805a7388db9c5ff42560dfcce1",
                 "shasum": ""
             },
             "require": {
@@ -2473,20 +2474,20 @@
                 "TYPO3 CMS",
                 "projects"
             ],
-            "time": "2020-07-22T21:41:43+00:00"
+            "time": "2020-08-18T11:26:50+00:00"
         },
         {
             "name": "rkw/rkw-registration",
-            "version": "v8.7.23-beta",
+            "version": "v8.7.24-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwRegistration.git",
-                "reference": "18b2ec89fe6fd4cb0763d3c118ff8339191a3c20"
+                "reference": "7837ddf454ac4cd458695612bab57dcb94f5fe14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/18b2ec89fe6fd4cb0763d3c118ff8339191a3c20",
-                "reference": "18b2ec89fe6fd4cb0763d3c118ff8339191a3c20",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwRegistration/zipball/7837ddf454ac4cd458695612bab57dcb94f5fe14",
+                "reference": "7837ddf454ac4cd458695612bab57dcb94f5fe14",
                 "shasum": ""
             },
             "require": {
@@ -2536,7 +2537,7 @@
                 "register",
                 "registration"
             ],
-            "time": "2020-08-05T12:57:54+00:00"
+            "time": "2020-08-11T09:15:07+00:00"
         },
         {
             "name": "sgalinski/sg-cookie-optin",
@@ -4336,12 +4337,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_donation.git",
-                "reference": "eec3c6fa0dfa511c4dac3668710f1287165255bf"
+                "reference": "7369f28cfd1e9680da0ab310ed943e154353df21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/eec3c6fa0dfa511c4dac3668710f1287165255bf",
-                "reference": "eec3c6fa0dfa511c4dac3668710f1287165255bf",
+                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/7369f28cfd1e9680da0ab310ed943e154353df21",
+                "reference": "7369f28cfd1e9680da0ab310ed943e154353df21",
                 "shasum": ""
             },
             "require": {
@@ -4369,10 +4370,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_donation/tree/v8.7.28-beta",
+                "source": "https://github.com/HGONeV/hgon_donation/tree/v8.7.29-beta",
                 "issues": "https://github.com/HGONeV/hgon_donation/issues"
             },
-            "time": "2020-08-07T14:25:27+00:00"
+            "time": "2020-08-21T08:28:53+00:00"
         },
         {
             "name": "hgon/hgon-payment",
@@ -4554,16 +4555,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.2.0",
+            "version": "5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "3170448f5769fe19f456173d833734e0ff1b84df"
+                "reference": "d870572532cd70bc3fab58f2e23ad423c8404c44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/3170448f5769fe19f456173d833734e0ff1b84df",
-                "reference": "3170448f5769fe19f456173d833734e0ff1b84df",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/d870572532cd70bc3fab58f2e23ad423c8404c44",
+                "reference": "d870572532cd70bc3fab58f2e23ad423c8404c44",
                 "shasum": ""
             },
             "require": {
@@ -4602,7 +4603,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-07-20T20:05:34+00:00"
+            "time": "2020-08-15T11:14:08+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
