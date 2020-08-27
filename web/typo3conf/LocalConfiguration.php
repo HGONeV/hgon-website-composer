@@ -114,6 +114,7 @@ return [
             'wizard_crpages' => 'a:0:{}',
             'wizard_sortpages' => 'a:0:{}',
             'workspaces' => 'a:0:{}',
+            'yoast_seo' => 'a:0:{}',
         ],
     ],
     'EXTCONF' => [

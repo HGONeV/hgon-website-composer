@@ -30,7 +30,7 @@ $GLOBALS['TYPO3_CONF_VARS']['FE']['cookieSameSite'] = 'strict' ; // lock cookie 
 $GLOBALS['TYPO3_CONF_VARS']['FE']['cookieDomain'] = ''; // uses [SYS][cookieDomain] if empty
 $GLOBALS['TYPO3_CONF_VARS']['FE']['versionNumberInFilename'] = ''; // deactivate version numbers on css/js-files
 
-$GLOBALS['TYPO3_CONF_VARS']['BE']['lockSSL'] = 1; // lock BE to SSL
+#$GLOBALS['TYPO3_CONF_VARS']['BE']['lockSSL'] = 1; // lock BE to SSL
 $GLOBALS['TYPO3_CONF_VARS']['BE']['sessionTimeout'] = 28800; // set session timeout to 8 hours
 $GLOBALS['TYPO3_CONF_VARS']['BE']['versionNumberInFilename'] = 0; // use filemtime appended to the query-string instead of timestamp
 $GLOBALS['TYPO3_CONF_VARS']['BE']['warning_email_addr'] = 'info@hgon.de'; // sent warnings on failed BE-logins and InstallTool-Logins
@@ -48,7 +48,7 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['cookieDomain'] = '/\\.(hgon)\\.de$/';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['cookieSecure'] = 2; // the cookie uses the secure flag if a secure (HTTPS) connection exists
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxyIP'] = '127.0.0.1'; // revers proxy IP
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLocale'] = 'de_DE.UTF-8'; // locale used for certain system related functions
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['trustedHostsPattern'] = '(.*\\.hgon\\.de)';
+#$GLOBALS['TYPO3_CONF_VARS']['SYS']['trustedHostsPattern'] = '(.*\\.hgon\\.de)';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['generateApacheHtaccess'] = 1; // create .htaccess files for protection
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLog'] = 'mail,srvmsg@hgon.de,3';
 

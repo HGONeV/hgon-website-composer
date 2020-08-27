@@ -1,4 +1,4 @@
-SetEnv TYPO3_CONTEXT Production/Staging
+SetEnv TYPO3_CONTEXT Production
 
 #AuthName "Staging"
 #AuthType Basic
