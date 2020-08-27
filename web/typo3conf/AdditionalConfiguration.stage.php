@@ -55,7 +55,7 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxyIP'] = '127.0.0.1'; // revers pr
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLocale'] = 'de_DE.UTF-8'; // locale used for certain system related functions
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['trustedHostsPattern'] = '(.*\\.hgon\\.de)';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['generateApacheHtaccess'] = 1; // create .htaccess files for protection
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLog'] = 'mail,3';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLog'] = 'mail,srvmsg@hgon.de,3';
 
 $GLOBALS['TYPO3_CONF_VARS']['MAIL']['defaultMailFromName'] = 'HGON e.V.';
 $GLOBALS['TYPO3_CONF_VARS']['MAIL']['defaultMailReturnAddress'] = 'bounces@hgon.de';
