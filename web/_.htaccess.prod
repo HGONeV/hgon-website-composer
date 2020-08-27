@@ -1,253 +1,9 @@
 SetEnv TYPO3_CONTEXT Production
 
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-
-    # Security for git-folder and .gitignore
-    RewriteRule ^.git/ - [NC,F,L]
-    RewriteRule ^.gitignore - [NC,F,L]
-
-    #==================================================
-    # Deny some bullshit and stupid IW Köln
-    RewriteRule ^fileadmin/templates/js/__default__/greybox/(.*)$ - [NC,F,L]
-    RewriteRule ^typo3conf/ext/jh_magnificpopup/(.*)$ - [NC,F,L]
-    RewriteRule ^typo3conf/ext/iwkofa/(.*)$ - [NC,F,L]
-
-    #===================================================
-    # Forced www-subdomain - but only if not static!
-    RewriteCond %{HTTP_HOST} !^static[0-9]+\. [NC]
-    RewriteCond %{HTTP_HOST} !^soap\. [NC]
-    RewriteCond %{HTTP_HOST} !^mein\.rkw\.de$ [NC]
-    RewriteCond %{HTTP_HOST} !^app\.strategische-personalarbeit\.de [NC]
-    RewriteCond %{HTTP_HOST} !^wepstra-app\.rkw-kompetenzzentrum\.de [NC]
-    RewriteCond %{HTTP_HOST} !^startinno\.rkw-thueringen\.de [NC]
-RewriteCond %{HTTP_HOST} !^bremen\.rkw-kompetenzzentrum\.de [NC]
-RewriteCond %{HTTP_HOST} !^nord\.rkw-kompetenzzentrum\.de [NC]
-RewriteCond %{HTTP_HOST} !^management-digital\.rkw-kompetenzzentrum\.de [NC]
-RewriteCond %{HTTP_HOST} !^eanpc\.eu [NC]
-RewriteCond %{HTTP_HOST} !^baumitbim\.de [NC]
-    RewriteCond %{HTTP_HOST} !^www\. [NC]
-    RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [QSA,NC,NE,L,R=301]
-
-RewriteCond %{HTTP_HOST} ^eanpc\.eu [NC]
-RewriteCond %{HTTP_HOST} ^baumitbim\.de [NC]
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}%{REQUEST_URI} [QSA,NC,NE,L=301]
-
-    #====================================================
-    # Fix for stupid people
-    # RewriteCond %{HTTP_HOST} ^wwww\.([^\.]+) [NC]
-    # RewriteRule ^(.*)$ https://www.$1%{REQUEST_URI} [QSA,NC,NE,L,R=301]
-
-    #====================================================
-    # Kill language-segment "de" - this is the default language
-RewriteCond %{HTTP_HOST} !^(www\.)?eanpc\.eu [NC]
-    RewriteRule ^(de|en|fr|ru|it)/(.*)$ https://%{HTTP_HOST}/$2 [QSA,NC,NE,R=301,L]
-
-    #====================================================
-    # Remove noCache- part of URL
-# RewriteCond %{HTTP_HOST} !^(www\.)?frauenambau\.de [NC]
-    RewriteRule ^nc/(.*)$ https://%{HTTP_HOST}/$1 [NC,NE,R=301,L]
-
-    #====================================================
-    # Rewrite for old RSS-Feeds
-    RewriteRule ^rss/rss-feed(.+)$ https://%{HTTP_HOST}/pagetype-rss/ [NC,NE,R=301,L]
-    RewriteRule ^feed(/)?$ https://%{HTTP_HOST}/pagetype-rss [NC,NE,R=301,L]
-    RewriteRule ^nc/pagetype-search-rss(/)?$ https://%{HTTP_HOST}/pagetype-rss/ [NC,NE,R=301,L]
-
-    #===================================================
-    # Fix for Alerts
-#    RewriteCond %{REQUEST_URI} ^suche/tx-rkw-search/search/search(/)?$ [NC]
-#    RewriteCond %{QUERY_STRING} orderAscending [NC]
-#    RewriteCond %{QUERY_STRING} ^(.*)&cHash=(.*)$ [NC]
-#    RewriteRule ^/?(.*)$ /$1?%1 [R=301,L]
-
-    # Problem with long (instead of short) project names
-    RewriteCond %{REQUEST_URI} ^(/)?suche/tx-rkw-search/search/search(/)?$ [NC]
-    RewriteCond %{QUERY_STRING} Gr%C3%BCnden%20ab%20dem%20mittleren%20Alter%2C%2045plus%3A%20Startvorteil%20Erfahrung [NC]
-    RewriteRule .* "http://%{HTTP_HOST}/suche/tx-rkw-search/search/search/?tx_rkwsearch_rkwsearch[searchFilter][project]=Gründen mit Erfahrung&tx_rkwsearch_rkwsearch[searchFilter][ordering]=pubdate&tx_rkwsearch_rkwsearch[searchFilter][orderAscending]=0" [R=301,L]
-
-    # Removing cHash from existing Alert-Links
-    RewriteCond %{REQUEST_URI} ^(/)?mein-rkw/sonstiges/rkw-alerts/tx-rkw-search/search/recent(/)?$ [NC]
-    RewriteCond %{QUERY_STRING} ^(.+)&chash=[0-9a-z]+$ [NC]
-    RewriteRule (.*) /$1?%1 [NC,NE,R=301,L]
-
-    # Fix after Release 3.0.0
-    RewriteCond %{QUERY_STRING} ^(.+)&tx_rkwmailer_rkwmailer\[action\]=redirect(.*)$ [NC]
-    RewriteRule ^(/?)$ https://%{HTTP_HOST}/sonstiges/weiterleitung [NC,NE,R=301,L]
-
-    RewriteCond %{QUERY_STRING} ^(.+)&tx_rkwmailer_rkwmailer%5Baction%5D=redirect(.*)$ [NC]
-    RewriteRule ^(/?)$ https://%{HTTP_HOST}/sonstiges/weiterleitung [NC,NE,R=301,L]
-
-    # ==================================================
-    # Redirect for strange detail-links for authors in Google
-    RewriteCond %{QUERY_STRING} ^(.*)tx_rkwauthors_rkwauthors\[action\]=details(.*)$ [NC]
-    RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI}? [R=301,L]
-
-    RewriteCond %{QUERY_STRING} ^(.*)tx_rkwauthors_rkwauthors%5Baction%5D=details(.*)$ [NC]
-    RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI}? [R=301,L]
-
-
-    #####################################################
-    #####################################################
-    #####################################################
-    # Domain spefific redirects - attention: skip rule must specify lines to skip!
-    RewriteCond %{HTTP_HOST} !^(www\.)?rkw-kompetenzzentrum\.de$
-    RewriteRule  .?  -  [S=67]
-
-    # ==================================================
-	# 7x Redirect events from old website
-	RewriteCond %{REQUEST_URI} ^/(nc/)?veranstaltungen/details/(.*)$ [NC]
-	RewriteCond %{QUERY_STRING} ^(.*)&tx_rkw\[sid\]=(.*)$ [NC]
-	RewriteRule ^(.*)$ http://%{HTTP_HOST}/veranstaltungen/? [R=301,L]
-	RewriteCond %{REQUEST_URI} ^/(nc/)?veranstaltungen/details/(.*)$ [NC]
-	RewriteCond %{QUERY_STRING} ^(.*)&tx_rkw%5Bsid%5D=(.*)$ [NC]
-	RewriteRule ^(.*)$ http://%{HTTP_HOST}/veranstaltungen/? [R=301,L]
-	RewriteRule ^wp-login\.php$ http://%{HTTP_HOST} [NC,NE,R=301,L]
-
-    # ==================================================
-	# 9x Redirect for reduced link deepth
-	RewriteRule ^gruendung/([0-9]{4})/leitfaeden/(.+)$ https://%{HTTP_HOST}/gruendung/leitfaden/$2 [NC,NE,R=301,L]
-	RewriteRule ^gruendung/([0-9]{4})/dokumentationen/(.+)$ https://%{HTTP_HOST}/gruendung/dokumentation/$2 [NC,NE,R=301,L]
-	RewriteRule ^gruendung/([0-9]{4})/studien/(.+)$ https://%{HTTP_HOST}/gruendung/studie/$2 [NC,NE,R=301,L]
-	RewriteRule ^gruendung/([0-9]{4})/((studie|leitfaden|dokumentation|faktenblatt)/(.+))$ https://%{HTTP_HOST}/gruendung/$2 [NC,NE,R=301,L]
-	RewriteRule ^fachkraeftesicherung/([0-9]{4})/leitfaeden/(.+)$ https://%{HTTP_HOST}/fachkraeftesicherung/leitfaden/$2 [NC,NE,R=301,L]
-	RewriteRule ^fachkraeftesicherung/([0-9]{4})/dokumentationen/(.+)$ https://%{HTTP_HOST}/fachkraeftesicherung/dokumentation/$2 [NC,NE,R=301,L]
-	RewriteRule ^fachkraeftesicherung/([0-9]{4})/studien/(.+)$ https://%{HTTP_HOST}/fachkraeftesicherung/studie/$2 [NC,NE,R=301,L]
-	RewriteRule ^fachkraeftesicherung/([0-9]{4})/expertisen/(.+)$ https://%{HTTP_HOST}/fachkraeftesicherung/expertise/$2 [NC,NE,R=301,L]
-	RewriteRule ^fachkraeftesicherung/([0-9]{4})/((studie|leitfaden|dokumentation|faktenblatt|expertise)/(.+))$ https://%{HTTP_HOST}/fachkraeftesicherung/$2 [NC,NE,R=301,L]
-
-    # ==================================================
-	# 2x Redirect for stupid people
-	RewriteRule ^gruendung/gruenderoekosystem-blog/startup-meets-mittelstand(/)?$ https://%{HTTP_HOST}/gruendung/gruenderoekosystem-blog/startup-meets-mittelstand-am-13-juli/ [NC,NE,R=301,L]
-    RewriteRule ^veranstaltungen/details/tx-rkw-events/event/show/fassadenkonstruktionen-problempunkte-qualitaetssicherung-und-sanierung-273(/)?$ https://%{HTTP_HOST}/veranstaltungen/details/tx-rkw-events/event/show/53-frankfurter-bausachverstaendigentag-273/ [NC,NE,R=301,L]
-
-	# ==================================================
-    # 3x Redirect for some dead links
-	RewriteRule ^beratung/unternehmensberatung(/)?$ https://www.rkw-kompetenzzentrum.de/beratung/rkw-netzwerk/ [NC,NE,R=301,L]
-	RewriteRule ^gruendung/praxisbeispiel-und-interview/mit-herz-und-avocadobums-zu-frankfurts-neuem-superteig-start-up-teil-1(/)?$ https://%{HTTP_HOST}/gruendung/praxisbeispiel-und-interview/lizza-frankfurts-startup-mit-herz-und-avocadobums-teil-1/ [NC,NE,R=301,L]
-	RewriteRule ^gruendung/praxisbeispiel-und-interview/mit-herz-und-avocadobums-zu-frankfurts-neuem-superteig-start-up-teil-2(/)?$ https://%{HTTP_HOST}/gruendung/praxisbeispiel-und-interview/lizza-frankfurts-startup-mit-herz-und-avocadobums-teil-2/ [NC,NE,R=301,L]
-
-	# ===================================================
-	# 12x Redirect for dead event links after configuration change
-	RewriteRule ^veranstaltungen/details/tx-rkw-events/event/show/52-frankfurter-bausachverstaendigentag-bauwerksabdichtung-planung-qualitaetssicherung-und-sanierung-128(/)?$ https://%{HTTP_HOST}/veranstaltungen/details/tx-rkw-events/event/show/52-frankfurter-bausachverstaendigentag-128/ [NC,NE,R=301,L]
-	RewriteRule ^veranstaltungen/details/tx-rkw-events/event/show/netzwerktreffen-chefsachen-forum-fuer-alle-die-kleine-und-mittlere-unternehmen-fuehren-und-entwickeln-wollen-geschaeftsmodelle-fuehrung-und-personalstrategien-in-der-digitalisierung-130(/)?$ https://%{HTTP_HOST}/veranstaltungen/details/tx-rkw-events/event/show/netzwerktreffen-chefsachen-forum-fuer-alle-die-kleine-und-mittlere-unternehmen-fuehren-und-entwickeln-wollen-130/ [NC,NE,R=301,L]
-	RewriteRule ^veranstaltungen/details/reservieren/tx-rkw-events/reservation/optIn/netzwerktreffen-chefsachen-forum-fuer-alle-die-kleine-und-mittlere-unternehmen-fuehren-und-entwickeln-wollen-geschaeftsmodelle-fuehrung-und-personalstrategien-in-der-digitalisierung-130(/)?$ https://%{HTTP_HOST}/veranstaltungen/details/reservieren/tx-rkw-events/reservation/optIn/netzwerktreffen-chefsachen-forum-fuer-alle-die-kleine-und-mittlere-unternehmen-fuehren-und-entwickeln-wollen-130/ [NC,NE,R=301,L]
-	RewriteRule ^veranstaltungen/details/tx-rkw-events/event/show/ab-vom-main-stream-die-etwas-andere-veranstaltung-am-deutschen-diversity-tag-127(/)?$ https://%{HTTP_HOST}/veranstaltungen/details/tx-rkw-events/event/show/ab-vom-main-stream-127/ [NC,NE,R=301,L]
-	RewriteRule ^veranstaltungen/details/tx-rkw-events/event/show/workshop-inqa-check-diversity-96(/)?$ http://%{HTTP_HOST}/veranstaltungen/details/tx-rkw-events/event/show/workshop-inqa-check-vielfaltsbewusster-betrieb-96/ [NC,NE,R=301,L]
-	RewriteRule ^veranstaltungen/details/tx-rkw-events/event/show/workshop-startups-meet-mittelstand-24(/)?$ http://%{HTTP_HOST}/veranstaltungen/details/tx-rkw-events/event/show/workshop-startup-meets-mittelstand-24/ [NC,NE,R=301,L]
-	RewriteRule ^veranstaltungen/details/tx-rkw-events/event/show/personalarbeit-zielfuehrend-strategisch-und-effizient-23(/)?$ http://%{HTTP_HOST}/veranstaltungen/details/tx-rkw-events/event/show/personalarbeit-optimieren-fachkraefte-sichern-23/ [NC,NE,R=301,L]
-	RewriteRule ^veranstaltungen/details/tx-rkw-events/event/show/personalarbeit-optimieren-fachkraefte-sichern-personalarbeit-zielfuehrend-strategisch-und-effizient-23(/)?$ http://%{HTTP_HOST}/veranstaltungen/details/tx-rkw-events/event/show/personalarbeit-optimieren-fachkraefte-sichern-23/ [NC,NE,R=301,L]
-	RewriteRule ^veranstaltungen/details/tx-rkw-events/event/show/personalarbeit-zielfuehrend-strategisch-und-effizient-22(/)?$ http://%{HTTP_HOST}/veranstaltungen/details/tx-rkw-events/event/show/personalarbeit-optimieren-fachkraefte-sichern-22/ [NC,NE,R=301,L]
-	RewriteRule ^veranstaltungen/details/tx-rkw-events/event/show/personalarbeit-optimieren-fachkraefte-sichern-personalarbeit-zielfuehrend-strategisch-und-effizient-22(/)?$ http://%{HTTP_HOST}/veranstaltungen/details/tx-rkw-events/event/show/personalarbeit-optimieren-fachkraefte-sichern-22/ [NC,NE,R=301,L]
-	RewriteRule ^veranstaltungen/details/tx-rkw-events/event/show/arbeitgeberattraktivitaet-wunscharbeitgeber-werden-19(/)?$ http://%{HTTP_HOST}/veranstaltungen/details/tx-rkw-events/event/show/ein-attraktives-unternehmen-schaffen-aber-wie-19/ [NC,NE,R=301,L]
-	RewriteRule ^veranstaltungen/details/tx-rkw-events/event/show/roadshow-258(/)?$ http://%{HTTP_HOST}/veranstaltungen/details/tx-rkw-events/event/show/ihr-geschaeftsmodell-40-in-halberstadt-258/ [NC,NE,R=301,L]
-
-	# ==================================================
-	# 6x Redirects for old links
-	RewriteRule ^ueber-uns/rkw-magazin(/)?$ https://%{HTTP_HOST}/rkw-kompetenzzentrum/rkw-magazin/ [NC,NE,R=301,L]
-	RewriteRule ^publication-order/diversity(/)?$ https://%{HTTP_HOST}/fachkraeftesicherung/2014/leitfaeden/fachkraefte-finden-binden-vielfalt-nutzen/ [NC,NE,R=301,L]
-	RewriteRule ^aktuelles/energiegruender(/)?$ https://%{HTTP_HOST}/gruendung/mehr-themen/energiegruender/ [NC,NE,R=301,L]
-	RewriteRule ^gruendung/ueber-uns/was-wir-tun(/)?$ https://%{HTTP_HOST}/rkw-kompetenzzentrum/gruendung/ [NC,NE,R=301,L]
-	RewriteRule ^gruendung/gruenderoekosystem-blog/neue-rkw-studie-beleuchtet-herausforderungsbereiche-von-startup-teams(/)?$ https://%{HTTP_HOST}/gruendung/gruenderoekosystem-blog/neue-rkw-studie-deckt-herausforderungen-von-startup-teams-auf/ [NC,NE,R=301,L]
-	RewriteRule ^fachkraeftesicherung/fachkraefte-blog/was-wann-und-vor-allem-wie-webinare-vermitteln-einstieg-in-strategische-personalarbeit(/)?$ https://%{HTTP_HOST}/fachkraeftesicherung/fachkraefte-blog/was-wann-und-vor-allem-wie/ [NC,NE,R=301,L]
-
-	# 4x old projects
-	RewriteRule ^projekte/produktivitaet-industrieller-dienstleistungen(/)?$ https://%{HTTP_HOST}/innovation/projekte/produktivitaetsmanagement-industrieller-dienstleistungen-staerken/ [NC,NE,R=301,L]
-	RewriteRule ^projekte/erwerbsverlaeufe-in-der-bauwirtschaft-gestalten(/)?$ https://%{HTTP_HOST}/fachkraeftesicherung/projekte/erwerbsverlaeufe-in-der-mittelstaendischen-bauwirtschaft/ [NC,NE,R=301,L]
-	RewriteRule ^projekte/design-fuer-alle(/.*)?$ https://%{HTTP_HOST}/fachkraeftesicherung/projekte/design-fuer-alle/ [NC,NE,R=301,L]
-	RewriteRule ^projekte/europaeischer-unternehmensfoerderpreis(/.*)?$ https://%{HTTP_HOST}/gruendung/projekte/europaeischer-unternehmensfoerderpreis/ [NC,NE,R=301,L]
-
-	# 12x old publications
-	RewriteRule ^nc/ueber-uns/rkw-magazin/details/rkw/rkw-magazin/rkw-magazin-gesundheit-im-betrieb-604/1(/)?$ https://%{HTTP_HOST}/rkw-kompetenzzentrum/rkw-magazin/2012/rkw-magazin-gesundheit-im-betrieb/ [NC,NE,R=301,L]
-	RewriteRule ^/nc/ueber-uns/rkw-magazin/details/rkw/rkw-magazin/vorbild-frau-von-frauen-in-der-wirtschaft-lernen-945/1(/)?$ https://%{HTTP_HOST}/rkw-kompetenzzentrum/rkw-magazin/2015/rkw-magazin-vorbild-frau-von-frauen-in-der-wirtschaft-lernen/ [NC,NE,R=301,L]
-	RewriteRule ^/nc/ueber-uns/rkw-magazin/details/rkw/rkw-magazin/rkw-magazin-treffpunkt-grnderkosystem-931/1(/)?$ https://%{HTTP_HOST}/rkw-kompetenzzentrum/rkw-magazin/2015/rkw-magazin-treffpunkt-gruenderoekosystem/ [NC,NE,R=301,L]
-	RewriteRule ^/nc/publikationen/details/rkw/publikationen/ibr-42015-939/1(/)?$ https://%{HTTP_HOST}/innovation/2015/ibr-informationen-bau-rationalisierung-42015/ [NC,NE,R=301,L]
-	RewriteRule ^nc/publikationen/details/rkw/publikationen/rkw-magazin-kommunikation-im-mittelstand-453/1(/)?$ https://%{HTTP_HOST}/rkw-kompetenzzentrum/rkw-magazin/2013/rkw-magazin-kommunikation-im-mittelstand/ [NC,NE,R=301,L]
-	RewriteRule ^nc/publikationen/details/rkw/publikationen/eschborner-thesen-zur-arbeitsforschung(/)?$ https://%{HTTP_HOST}/fachkraeftesicherung/2014/faktenblatt/eschborner-thesen-zur-arbeitsforschung/ [NC,NE,R=301,L]
-	RewriteRule ^nc/publikationen/details/rkw/publikationen/entrepreneurship-education-921(/)?$ https://%{HTTP_HOST}/gruendung/2015/leitfaeden/entrepreneurship-education/ [NC,NE,R=301,L]
-	RewriteRule ^nc/publikationen/details/rkw/publikationen/fachkrfte-finden--vielfalt-nutzen-811/1(/)?$ https://%{HTTP_HOST}/fachkraeftesicherung/2014/leitfaeden/fachkraefte-finden-binden-vielfalt-nutzen/ [NC,NE,R=301,L]
-	RewriteRule ^nc/publikationen/details/rkw/publikationen/leistungssteigerung-und-wissenstransfer-in-virtueller-teamarbeit--zusammenarbeit-im-21-jahrhundert-542/1(/)?$ https://%{HTTP_HOST}/fachkraeftesicherung/2013/leitfaeden/wissen-im-unternehmen-halten-und-verteilen/ [NC,NE,R=301,L]
-	RewriteRule ^nc/publikationen/details/rkw/publikationen/fachkrfte-finden--vielfalt-nutzen-811/1(/)?$ https://%{HTTP_HOST}/fachkraeftesicherung/2014/leitfaeden/fachkraefte-finden-binden-vielfalt-nutzen/ [NC,NE,R=301,L]
-	RewriteRule ^nc/publikationen/details/rkw/publikationen/fachkrfte-finden--vielfalt-nutzen-843/1(/)?$ https://%{HTTP_HOST}/fachkraeftesicherung/2014/leitfaeden/fachkraefte-finden-binden-vielfalt-nutzen/ [NC,NE,R=301,L]
-	RewriteRule ^nc/publikationen/details/rkw/publikationen/demografiefeste-arbeit-in-thringer-optikunternehmen-937/(/)?$ https://%{HTTP_HOST}/fachkraeftesicherung/2015/studie/demografiefeste-arbeit-in-thueringer-optikunternehmen/ [NC,NE,R=301,L]
-
-	# ===============================================
-	# 12x Redirects for Version 3.0.0
-	RewriteRule ^rkw-kompetenzzentrum/(rkw-magazin|buch|rezension|dokumentation)/(.+)$ https://%{HTTP_HOST}/publikationen/$1/$2 [NC,NE,R=301,L]
-	RewriteRule ^rkw-kompetenzzentrum/rkw-magazin(/?)$ https://%{HTTP_HOST}/das-rkw/rkw-magazin/ [NC,NE,R=301,L]
-	RewriteRule ^veranstaltungen/details/tx-rkw-events/event/show/ideen-impulse-insights-135(/?)$ https://%{HTTP_HOST}/veranstaltungen/details/tx-rkw-events/event/show/ideen-impulse-insights-finde-deine-berufung-135/ [NC,NE,R=301,L]
-	RewriteRule ^mein-rkw/sonstiges/weiterleitung-etracker(/)?$ https://%{HTTP_HOST}/sonstiges/weiterleitung-etracker/ [QSA,NC,NE,R=301,L]
-	RewriteRule ^(gruendung|fachkraeftesicherung|innovation)/(unsere-themen|mehr-themen)/(.*)$ https://%{HTTP_HOST}/$1/projekte/$3 [QSA,NC,NE,R=301,L]
-	RewriteRule ^mein-rkw/login(/?)(.*)$ https://mein.rkw.de/mein-rkw/login? [NC,NE,R=301,L]
-	RewriteRule ^mein-rkw/sonstiges/weiterleitung(/?)(.*)$ https://%{HTTP_HOST}/sonstiges/weiterleitung/$2 [QSA,NC,NE,R=301,L]
-    RewriteRule ^gruendung/(gruenderoekosystem-blog|gruenderjournal/gruenderoekosystem-blog)/(.+)$ https://%{HTTP_HOST}/gruendung/blog/$2 [NE,NC,R=301,L]
-	RewriteRule ^gruendung/(praxisbeispiel-und-interview|gruenderjournal/praxisbeispiel-und-interview|gruenderwohnzimmer/praxisbeispiel-und-interview)/(.+)$ https://%{HTTP_HOST}/gruendung/blog/$2 [NE,NC,R=301,L]
-	RewriteRule ^fachkraeftesicherung/beispiele-aus-der-praxis(/)? https://%{HTTP_HOST}/fachkraeftesicherung/praxisbeispiele/ [NE,NC,R=301,L]
-	RewriteRule ^fachkraeftesicherung/fachkraefte-blog/making-of-workbook-vorurteile-im-betrieb-weniger-sprachlosigkeit-mehr-argumente-fuer-ein-betriebsklima(/?)$ https://%{HTTP_HOST}/fachkraeftesicherung/fachkraefte-blog/making-of-workbook-vorurteile-im-betrieb-weniger-sprachlosigkeit-mehr-argumente-fuer-ein-gutes-betriebsklima/ [NE,NC,R=301,L]
-	RewriteRule ^rkw-kompetenzzentrum/karriere-im-rkw(/)? https://%{HTTP_HOST}/das-rkw/das-rkw/karriere-im-rkw/ [NE,NC,R=301,L]
-
-    #####################################################
-    #####################################################
-    #####################################################
-    # Domain spefific redirects - attention: skip rule must specify lines to skip!
-    RewriteCond %{HTTP_HOST} !^(www\.)?rkw-sachsenanhalt\.de$
-    RewriteRule  .?  -  [S=27]
-
-    # ==================================================
-	# 25x Redirect for old pages to new ones
-	RewriteRule ^beratung(/)?$ http://%{HTTP_HOST}/betriebsberatung/ueberblick/ [NC,NE,R=301,L]
-	RewriteRule ^beratung/unternehmensanalyse.php$ http://%{HTTP_HOST}/betriebsberatung/die-unternehmensanalyse-speziell-fuer-gruender-innen/ [NC,NE,R=301,L]
-    RewriteRule ^beratung/existenzgruendung.php$ http://%{HTTP_HOST}/betriebsberatung/existenzgruendung-und-sicherung/ [NC,NE,R=301,L]
-    RewriteRule ^beratung/existenzsicherung.php$ http://%{HTTP_HOST}/betriebsberatung/existenzgruendung-und-sicherung/ [NC,NE,R=301,L]
-
-	RewriteRule ^technologieberatung(/)?$ http://%{HTTP_HOST}/technologieberatung/ueberblick/ [NC,NE,R=301,L]
-	RewriteRule ^technologieberatung/forschung_und_entwicklung.php$ http://%{HTTP_HOST}/technologieberatung/forschung-und-entwicklung/ [NC,NE,R=301,L]
-	RewriteRule ^technologieberatung/goinno.php$ http://%{HTTP_HOST}/technologieberatung/goinno/ [NC,NE,R=301,L]
-    RewriteRule ^technologieberatung/wissens_und_technologietransfer.php$ http://%{HTTP_HOST}/technologieberatung/wissens-und-technologietransfer/ [NC,NE,R=301,L]
-
-	RewriteRule ^netzwerkmanagement(/)?$ http://%{HTTP_HOST}/innovation/energieeffizienznetzwerk-mittelland/ [NC,NE,R=301,L]
-	RewriteRule ^netzwerkmanagement/dim-design-innovation-maschine.php$ http://%{HTTP_HOST}/innovation/designinnovationmaschine/ [NC,NE,R=301,L]
-	RewriteRule ^netzwerkmanagement/energieeffizienznetzwerk.php$ http://%{HTTP_HOST}/innovation/energieeffizienznetzwerk-mittelland/ [NC,NE,R=301,L]
-
-	RewriteRule ^projekte(/)?$ http://%{HTTP_HOST}/innovation/energieeffizienznetzwerk-mittelland/ [NC,NE,R=301,L]
-	RewriteRule ^projekte/spitzencluster-bioeconomy.php$ http://%{HTTP_HOST}/fachkraefte/fachkraeftestudie-spitzencluster-bioeconomy/ [NC,NE,R=301,L]
-	RewriteRule ^projekte/salzmobil.php$ http://%{HTTP_HOST}/innovation/langfristige-sicherung-von-versorgung-und-mobilitaet-in-laendlichen-raeumen/ [NC,NE,R=301,L]
-	RewriteRule ^projekte/emi.php$ http://%{HTTP_HOST}/gruendung/existenzgruendungmigrationintegration/ [NC,NE,R=301,L]
-	RewriteRule ^projekte/prodigit.php$ http://%{HTTP_HOST}/fachkraefte/flexible-produktion-im-digitalen-zeitalter/ [NC,NE,R=301,L]
-	RewriteRule ^projekte/comweiter.php$ http://%{HTTP_HOST}/fachkraefte/zukunftsorientierte-berufliche-weiterbildung-in-composite-berufen/ [NC,NE,R=301,L]
-
-	RewriteRule ^service/karriere.php$ http://%{HTTP_HOST}/das-rkw/karriere/ [NC,NE,R=301,L]
-	RewriteRule ^kontakt/ansprechpartner.php$ http://%{HTTP_HOST}/kontakt/unsere-experten/ [NC,NE,R=301,L]
-	RewriteRule ^kontakt/ansprechpartner.php$ http://%{HTTP_HOST}/kontakt/unsere-experten/ [NC,NE,R=301,L]
-	RewriteRule ^rkw/rkw_sachsenanhalt_ev.php$ http://%{HTTP_HOST}/das-rkw/rkw-sachsen-anhalt/rkw-sachsen-anhalt-ev/ [NC,NE,R=301,L]
-	RewriteRule ^rkw/rkw_sachsenanhalt_gmbh.php$ http://%{HTTP_HOST}/das-rkw/rkw-sachsen-anhalt/rkw-sachsen-anhalt-gmbh/ [NC,NE,R=301,L]
-	RewriteRule ^kontakt/impressum.php$ http://%{HTTP_HOST}/kontakt/unsere-experten/ [NC,NE,R=301,L]
-	RewriteRule ^rkw/detail.php$ http://%{HTTP_HOST}/veranstaltungen/? [NC,NE,R=301,L]
-	RewriteRule ^rkw/termine.php$ http://%{HTTP_HOST}/veranstaltungen/ [NC,NE,R=301,L]
-	RewriteRule ^rkw(/)?$ http://%{HTTP_HOST}/ [NC,NE,R=301,L]
-
-    #####################################################
-    #####################################################
-    #####################################################
-    # Domain spefific redirects - attention: skip rule must specify lines to skip!
-    RewriteCond %{HTTP_HOST} !^(www\.)?rkw-thueringen\.de$
-    RewriteRule  .?  -  [S=5]
-
-	# ===================================================
-	# 5x Redirects for old pages
-    RewriteRule ^leistung/beratungsfoerderung-thueringen.html$ https://%{HTTP_HOST}/leistung/foerdermoeglichkeiten-fuer-gruender-und-unternehmen/ [NC,NE,R=301,L]
-    RewriteRule ^(rkw-)?leistung(en)?/beratungsfoerderung-thueringen/thueringer-beratungsrichtlinie.html$ https://%{HTTP_HOST}/leistung/foerdermoeglichkeiten-fuer-gruender-und-unternehmen/ [NC,NE,R=301,L]
-    RewriteRule ^(rkw-)?leistung(en)?/beratungsfoerderung-thueringen/thueringer-gruenderrichtlinie.html$ https://%{HTTP_HOST}/leistung/fuer-gruender-und-junge-unternehmen/ [NC,NE,R=301,L]
-    RewriteRule ^ueber-uns/rkw-netzwerk/rkw-thueringen-ev.html$ https://%{HTTP_HOST}/das-rkw/ueber-uns/rkw-thueringen-e-v/ [NC,NE,R=301,L]
-    RewriteRule ^ueber-uns/rkw-thueringen-gmbh.html$ https://%{HTTP_HOST}/das-rkw/ueber-uns/ueber-das-rkw-thueringen/ [NC,NE,R=301,L]
-
-    ####################################################
-    #####################################################
-
-
-
-</IfModule>
-
+#AuthName "Staging"
+#AuthType Basic
+#AuthUserFile /usr/www/users/hgonde/staging/surf/releases/current/web/.htpasswd
+#require valid-user
 
 #####
 #
@@ -294,10 +50,10 @@ RewriteCond %{HTTP_HOST} !^(www\.)?eanpc\.eu [NC]
 #    config.compressJs and config.compressCss for GZIP compression of Frontend JS and CSS files.
 
 #<FilesMatch "\.js\.gzip$">
-#	AddType "text/javascript" .gzip
+#    AddType "text/javascript" .gzip
 #</FilesMatch>
 #<FilesMatch "\.css\.gzip$">
-#	AddType "text/css" .gzip
+#    AddType "text/css" .gzip
 #</FilesMatch>
 #AddEncoding gzip .gzip
 
@@ -401,11 +157,7 @@ RewriteRule .* index.php [L]
 
 
 # Add your own rules here.
-
-# =======================================================
 # For SOAP
 <IfModule mod_rewrite.c>
-    RewriteEngine On
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
 </IfModule>
-
