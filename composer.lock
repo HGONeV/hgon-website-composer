@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c92627d17bf414ca7314d6360b5376d7",
+    "content-hash": "f3b21293f3a9a99f8e2ea7bd24a8a9e5",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1348,6 +1348,96 @@
             "time": "2020-05-28T13:44:02+00:00"
         },
         {
+            "name": "hgon/hgon-donation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HGONeV/hgon_donation.git",
+                "reference": "7369f28cfd1e9680da0ab310ed943e154353df21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/7369f28cfd1e9680da0ab310ed943e154353df21",
+                "reference": "7369f28cfd1e9680da0ab310ed943e154353df21",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^7.6.0 || ^8.7.0"
+            },
+            "replace": {
+                "hgon_donation": "self.version",
+                "typo3-ter/hgon-donation": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "HGON\\HgonDonation\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "HGON\\HgonDonation\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Maximilian Fäßler",
+                    "role": "Developer"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/HGONeV/hgon_donation/tree/v8.7.29-beta",
+                "issues": "https://github.com/HGONeV/hgon_donation/issues"
+            },
+            "time": "2020-08-21T08:28:53+00:00"
+        },
+        {
+            "name": "hgon/hgon-payment",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HGONeV/hgon_payment.git",
+                "reference": "1d98340e121411cc694007743f2ff67c32974a4f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HGONeV/hgon_payment/zipball/1d98340e121411cc694007743f2ff67c32974a4f",
+                "reference": "1d98340e121411cc694007743f2ff67c32974a4f",
+                "shasum": ""
+            },
+            "require": {
+                "mollie/mollie-api-php": "^2.0",
+                "typo3/cms-core": "^8.7.1"
+            },
+            "replace": {
+                "hgon_payment": "self.version",
+                "typo3-ter/hgon-payment": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "HGON\\HgonPayment\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "HGON\\HgonPayment\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Maximilian Fäßler",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Extension for payment services",
+            "support": {
+                "source": "https://github.com/HGONeV/hgon_payment/tree/master",
+                "issues": "https://github.com/HGONeV/hgon_payment/issues"
+            },
+            "time": "2020-07-11T13:18:02+00:00"
+        },
+        {
             "name": "hgon/hgon-template",
             "version": "v8.7.41-beta",
             "source": {
@@ -1390,6 +1480,51 @@
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
             "time": "2020-08-21T09:00:11+00:00"
+        },
+        {
+            "name": "hgon/hgon-workgroup",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HGONeV/hgon_workgroup.git",
+                "reference": "eb868a6a106d1900f32300aa52f383517c0b6230"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/eb868a6a106d1900f32300aa52f383517c0b6230",
+                "reference": "eb868a6a106d1900f32300aa52f383517c0b6230",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^8.7.1"
+            },
+            "replace": {
+                "hgon_workgroup": "self.version",
+                "typo3-ter/hgon-workgroup": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "HGON\\HgonWorkgroup\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "HGON\\HgonWorkgroup\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Maximilian Fäßler",
+                    "role": "Developer"
+                }
+            ],
+            "description": "For managing working groups",
+            "support": {
+                "source": "https://github.com/HGONeV/hgon_workgroup/tree/master",
+                "issues": "https://github.com/HGONeV/hgon_workgroup/issues"
+            },
+            "time": "2020-07-15T15:38:49+00:00"
         },
         {
             "name": "mollie/mollie-api-php",
@@ -4333,141 +4468,6 @@
             "time": "2019-01-20T11:20:47+00:00"
         },
         {
-            "name": "hgon/hgon-donation",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HGONeV/hgon_donation.git",
-                "reference": "7369f28cfd1e9680da0ab310ed943e154353df21"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_donation/zipball/7369f28cfd1e9680da0ab310ed943e154353df21",
-                "reference": "7369f28cfd1e9680da0ab310ed943e154353df21",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "^7.6.0 || ^8.7.0"
-            },
-            "replace": {
-                "hgon_donation": "self.version",
-                "typo3-ter/hgon-donation": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "psr-4": {
-                    "HGON\\HgonDonation\\": "Classes"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "HGON\\HgonDonation\\Tests\\": "Tests"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Maximilian Fäßler",
-                    "role": "Developer"
-                }
-            ],
-            "support": {
-                "source": "https://github.com/HGONeV/hgon_donation/tree/v8.7.29-beta",
-                "issues": "https://github.com/HGONeV/hgon_donation/issues"
-            },
-            "time": "2020-08-21T08:28:53+00:00"
-        },
-        {
-            "name": "hgon/hgon-payment",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HGONeV/hgon_payment.git",
-                "reference": "1d98340e121411cc694007743f2ff67c32974a4f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_payment/zipball/1d98340e121411cc694007743f2ff67c32974a4f",
-                "reference": "1d98340e121411cc694007743f2ff67c32974a4f",
-                "shasum": ""
-            },
-            "require": {
-                "mollie/mollie-api-php": "^2.0",
-                "typo3/cms-core": "^8.7.1"
-            },
-            "replace": {
-                "hgon_payment": "self.version",
-                "typo3-ter/hgon-payment": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "psr-4": {
-                    "HGON\\HgonPayment\\": "Classes"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "HGON\\HgonPayment\\Tests\\": "Tests"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Maximilian Fäßler",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension for payment services",
-            "support": {
-                "source": "https://github.com/HGONeV/hgon_payment/tree/master",
-                "issues": "https://github.com/HGONeV/hgon_payment/issues"
-            },
-            "time": "2020-07-11T13:18:02+00:00"
-        },
-        {
-            "name": "hgon/hgon-workgroup",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HGONeV/hgon_workgroup.git",
-                "reference": "eb868a6a106d1900f32300aa52f383517c0b6230"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_workgroup/zipball/eb868a6a106d1900f32300aa52f383517c0b6230",
-                "reference": "eb868a6a106d1900f32300aa52f383517c0b6230",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "^8.7.1"
-            },
-            "replace": {
-                "hgon_workgroup": "self.version",
-                "typo3-ter/hgon-workgroup": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "psr-4": {
-                    "HGON\\HgonWorkgroup\\": "Classes"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "HGON\\HgonWorkgroup\\Tests\\": "Tests"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Maximilian Fäßler",
-                    "role": "Developer"
-                }
-            ],
-            "description": "For managing working groups",
-            "support": {
-                "source": "https://github.com/HGONeV/hgon_workgroup/tree/master",
-                "issues": "https://github.com/HGONeV/hgon_workgroup/issues"
-            },
-            "time": "2020-07-15T15:38:49+00:00"
-        },
-        {
             "name": "mikey179/vfsStream",
             "version": "v1.4.0",
             "source": {
@@ -5504,10 +5504,10 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "mikey179/vfsstream": 20,
         "hgon/hgon-donation": 20,
         "hgon/hgon-workgroup": 20,
-        "hgon/hgon-payment": 20
+        "hgon/hgon-payment": 20,
+        "mikey179/vfsstream": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

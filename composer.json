@@ -51,15 +51,15 @@
         "reelworx/rx-shariff": "^12.3",
         "mollie/mollie-api-php": "^2.0",
         "sgalinski/sg-cookie-optin": "^3.0",
-        "yoast-seo-for-typo3/yoast_seo": "^6.0"
+        "yoast-seo-for-typo3/yoast_seo": "^6.0",
+        "hgon/hgon-donation": "dev-master",
+        "hgon/hgon-workgroup": "dev-master",
+        "hgon/hgon-payment": "dev-master"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.4.*@dev",
         "phpunit/phpunit": "~4.7.0",
 	    "friendsoftypo3/extension-builder": "~8.10.0",
-        "hgon/hgon-donation": "dev-master",
-        "hgon/hgon-workgroup": "dev-master",
-        "hgon/hgon-payment": "dev-master",
         "rkw/deployment-typo3" : "*"
     },
     "scripts": {
