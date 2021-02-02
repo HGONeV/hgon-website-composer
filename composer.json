@@ -43,6 +43,7 @@
         "rkw/rkw-projects": "v8.7.2-beta",
         "rkw/rkw-newsletter": "v8.7.14-beta",
         "rkw/rkw-events": "v8.7.26-beta",
+        "rkw/rkw-pdf2content": "~8.7.0",
         "fluidtypo3/vhs": "^5.2",
         "georgringer/news": "^7.2",
         "plusb/pb_social": "^1.4",

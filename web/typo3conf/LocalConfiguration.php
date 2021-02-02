@@ -77,6 +77,7 @@ return [
             'rkw_newsletter' => 'a:0:{}',
             'rkw_order' => 'a:0:{}',
             'rkw_page_detector' => 'a:0:{}',
+            'rkw_pdf2content' => 'a:0:{}',
             'rkw_projects' => 'a:0:{}',
             'rkw_quickcheck' => 'a:0:{}',
             'rkw_registration' => 'a:0:{}',
