@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c7bb4f843630a9f50a0d1fef7317f6f",
+    "content-hash": "ef510beaa6e31f632951e83313f51245",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -2374,91 +2374,17 @@
             "time": "2020-07-30T10:25:01+00:00"
         },
         {
-            "name": "rkw/rkw-pdf2content",
-            "version": "v8.7.50-beta",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RKWKomZe/RkwPdf2Content.git",
-                "reference": "7ec97ba8cc1b327e0c2c28a0e6ab75637cae437c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwPdf2Content/zipball/7ec97ba8cc1b327e0c2c28a0e6ab75637cae437c",
-                "reference": "7ec97ba8cc1b327e0c2c28a0e6ab75637cae437c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2",
-                "rkw/rkw-basics": "~8.7.0",
-                "typo3/cms-core": "~8.7.0"
-            },
-            "conflict": {
-                "bm/bm-pdf2content": "*"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "rkw_pdf2content"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RKW\\RkwPdf2content\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Guido Wehner",
-                    "email": "wehner@bergisch-media.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Birger Stöckelmann",
-                    "email": "stoeckelmann@bergisch-media.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Maximilian Fäßler",
-                    "email": "maximilian@faesslerweb.de",
-                    "homepage": "https://www.faesslerweb.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Steffen Kroggel",
-                    "email": "developer@steffenkroggel.de",
-                    "homepage": "http://www.steffenkroggel.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extract text from PDFs and create TYPO3 sites with it!",
-            "homepage": "http://typo3.org",
-            "keywords": [
-                "Magazin",
-                "RKW",
-                "TYPO3 CMS",
-                "ajax",
-                "content",
-                "javascript",
-                "pdf"
-            ],
-            "time": "2020-10-14T07:44:26+00:00"
-        },
-        {
             "name": "rkw/rkw-projects",
-            "version": "v8.7.2-beta",
+            "version": "v8.7.0-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RKWKomZe/RkwProjects.git",
-                "reference": "5d004f6bdb0aa9805a7388db9c5ff42560dfcce1"
+                "reference": "e17d7b0295efbb22c95df19d482b64ac73d28b9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/5d004f6bdb0aa9805a7388db9c5ff42560dfcce1",
-                "reference": "5d004f6bdb0aa9805a7388db9c5ff42560dfcce1",
+                "url": "https://api.github.com/repos/RKWKomZe/RkwProjects/zipball/e17d7b0295efbb22c95df19d482b64ac73d28b9b",
+                "reference": "e17d7b0295efbb22c95df19d482b64ac73d28b9b",
                 "shasum": ""
             },
             "require": {
@@ -2502,7 +2428,7 @@
                 "TYPO3 CMS",
                 "projects"
             ],
-            "time": "2020-08-18T11:26:50+00:00"
+            "time": "2019-11-12T08:59:54+00:00"
         },
         {
             "name": "rkw/rkw-registration",
