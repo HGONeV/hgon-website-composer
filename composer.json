@@ -123,7 +123,8 @@
         "psr-4": {
             "BM\\BmPdf2content\\": "web/typo3conf/ext/bm_pdf2content/Classes",
             "DmitryDulepov\\DdGooglesitemap\\": "web/typo3conf/ext/dd_googlesitemap/Classes",
-            "SJBR\\SrFreecap\\": "web/typo3conf/ext/sr_freecap/Classes"
+            "SJBR\\SrFreecap\\": "web/typo3conf/ext/sr_freecap/Classes",
+            "RKW\\RkwNewsletter\\": "web/typo3conf/ext/rkw_newsletter/Classes"
         }
     }
 }

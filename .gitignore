@@ -59,4 +59,6 @@ bower_components
 # =======================================================
 !/web/typo3conf/ext/bm_pdf2content
 !/web/typo3conf/ext/dd_googlesitemap
+!/web/typo3conf/ext/sr_freecap
+!/web/typo3conf/ext/rkw_newsletter
 !/web/typo3conf/ext/varnish
