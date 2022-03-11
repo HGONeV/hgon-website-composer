@@ -1,0 +1,85 @@
+<?php
+# PackageStates.php
+
+# This file is maintained by TYPO3's package management. Although you can edit it
+# manually, you should rather use the extension manager for maintaining packages.
+# This file will be regenerated automatically if it doesn't exist. Deleting this file
+# should, however, never become necessary if you use the package commands.
+
+return [
+    'packages' => [
+        'core' => [
+            'packagePath' => 'typo3/sysext/core/',
+        ],
+        'extbase' => [
+            'packagePath' => 'typo3/sysext/extbase/',
+        ],
+        'fluid' => [
+            'packagePath' => 'typo3/sysext/fluid/',
+        ],
+        'install' => [
+            'packagePath' => 'typo3/sysext/install/',
+        ],
+        'frontend' => [
+            'packagePath' => 'typo3/sysext/frontend/',
+        ],
+        'fluid_styled_content' => [
+            'packagePath' => 'typo3/sysext/fluid_styled_content/',
+        ],
+        'extensionmanager' => [
+            'packagePath' => 'typo3/sysext/extensionmanager/',
+        ],
+        'lang' => [
+            'packagePath' => 'typo3/sysext/lang/',
+        ],
+        'about' => [
+            'packagePath' => 'typo3/sysext/about/',
+        ],
+        'backend' => [
+            'packagePath' => 'typo3/sysext/backend/',
+        ],
+        'belog' => [
+            'packagePath' => 'typo3/sysext/belog/',
+        ],
+        'cshmanual' => [
+            'packagePath' => 'typo3/sysext/cshmanual/',
+        ],
+        'filelist' => [
+            'packagePath' => 'typo3/sysext/filelist/',
+        ],
+        'filemetadata' => [
+            'packagePath' => 'typo3/sysext/filemetadata/',
+        ],
+        'form' => [
+            'packagePath' => 'typo3/sysext/form/',
+        ],
+        'recordlist' => [
+            'packagePath' => 'typo3/sysext/recordlist/',
+        ],
+        'saltedpasswords' => [
+            'packagePath' => 'typo3/sysext/saltedpasswords/',
+        ],
+        'sv' => [
+            'packagePath' => 'typo3/sysext/sv/',
+        ],
+        'rkw_basics' => [
+            'packagePath' => 'typo3conf/ext/rkw_basics/',
+        ],
+        'rkw_authors' => [
+            'packagePath' => 'typo3conf/ext/rkw_authors/',
+        ],
+        'news' => [
+            'packagePath' => 'typo3conf/ext/news/',
+        ],
+        'pb_social' => [
+            'packagePath' => 'typo3conf/ext/pb_social/',
+        ],
+        'rkw_projects' => [
+            'packagePath' => 'typo3conf/ext/rkw_projects/',
+        ],
+        'bm_pdf2content' => [
+            'packagePath' => 'typo3conf/ext/bm_pdf2content/',
+        ],
+    ],
+    'version' => 5,
+];
