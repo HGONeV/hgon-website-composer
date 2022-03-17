@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T04:19:03Z" product-name="lang">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-11T04:10:51Z" product-name="lang">
 		<header/>
 		<body>
 			<trans-unit id=".alttitle" approved="yes">
@@ -15,9 +15,9 @@
 				<source>Conceptually the Web&gt;Info module is different from the Web&gt;Functions module only by primarily showing information rather than offering functionality. It is up to extension programmers to decide in which of these two modules they want to insert functionality.</source>
 				<target state="translated">Konzeptionell unterscheidet sich das Modul "Web &gt; Info" vom Modul "Web &gt; Funktionen" dadurch, dass es primär Informationen statt Änderungsmöglichkeiten bietet. Es liegt am Programmierer zu entscheiden, in welchem dieser Module seine Backend-Erweiterung erscheinen soll.</target>
 			</trans-unit>
-			<trans-unit id="_.image" approved="yes">
+			<trans-unit id="_.image" approved="no">
 				<source>EXT:lang/Resources/Public/Images/cshimages/pagetree_overview_10.png</source>
-				<target state="translated">EXT:lang/Resources/Public/Images/cshimages/pagetree_overview_10.png</target>
+				<target state="needs-translation">EXT:lang/Resources/Public/Images/cshimages/pagetree_overview_10.png</target>
 				<note from="developer">This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
 				<note>This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
 			</trans-unit>

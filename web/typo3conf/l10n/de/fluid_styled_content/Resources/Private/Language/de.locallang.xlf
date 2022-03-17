@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T01:54:16Z" product-name="fluid_styled_content">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-11T02:19:48Z" product-name="fluid_styled_content">
 		<header/>
 		<body>
-			<trans-unit id="toTop" approved="yes">
+			<trans-unit id="toTop" resname="toTop" approved="yes">
 				<source>To top</source>
 				<target state="translated">Nach oben</target>
 			</trans-unit>

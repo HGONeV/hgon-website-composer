@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T04:18:59Z" product-name="lang">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-11T04:10:44Z" product-name="lang">
 		<header/>
 		<body>
 			<trans-unit id="button.cancel" approved="yes">
 				<source>Cancel</source>
 				<target state="translated">Abbrechen</target>
 			</trans-unit>
-			<trans-unit id="button.close">
+			<trans-unit id="button.close" approved="yes">
 				<source>Close</source>
-				<target/>
-				<alt-trans xml:space="preserve" origin="jokumer">
-					<target>Schließen</target>
-				</alt-trans>
+				<target state="translated">Schließen</target>
 			</trans-unit>
 			<trans-unit id="button.delete" approved="yes">
 				<source>Delete</source>
 				<target state="translated">Löschen</target>
 			</trans-unit>
-			<trans-unit id="button.ok">
+			<trans-unit id="button.ok" approved="yes">
 				<source>OK</source>
-				<target/>
-				<alt-trans xml:space="preserve" origin="jokumer">
-					<target>OK</target>
-				</alt-trans>
+				<target state="translated">OK</target>
 			</trans-unit>
 			<trans-unit id="clip_deleteMarked" approved="yes">
 				<source>Delete marked</source>

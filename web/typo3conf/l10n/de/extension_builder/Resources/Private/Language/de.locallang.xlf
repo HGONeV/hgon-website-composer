@@ -340,12 +340,6 @@
 			<trans-unit id="descr_mapToTable">
 				<source>If the model should extend an existing table, you can configure this here</source>
 			<target></target></trans-unit>
-			<trans-unit id="skipTypeConfiguration">
-				<source>Skip type configuration</source>
-			<target></target></trans-unit>
-			<trans-unit id="descr_skipTypeConfiguration">
-				<source>Don't let the ExtensionBuilder create the type configuration, you have to configure that yourself</source>
-			<target></target></trans-unit>
 			<trans-unit id="parentClass">
 				<source>Extend existing model class</source>
 			<target></target></trans-unit>

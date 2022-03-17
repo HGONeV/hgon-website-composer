@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+			<label index="title">GD-Schriftart für freeCap-CAPTCHA erzeugen</label>
+			<label index="charactersToIncludeInFont">Zeichen in Schriftart:</label>
+			<label index="numbers-only">nur Ziffern (0-9)</label>
+			<label index="ASCII-lowercase-letters">Kleine ASCII-Buchstaben (a-z)</label>
+			<label index="ANSI-extended-ASCII-lowercase-letters">Kleine ANSI-erweiterte ASCII-Buchstaben (a-z,ß-ÿ)</label>
+			<label index="characterWidth">Zeichenbreite:</label>
+			<label index="characterHeight">Zeichenhöhe:</label>
+			<label index="endianness">Byte-Reihenfolge (Endian):</label>
+			<label index="littleEndian">Little-Endian</label>
+			<label index="bigEndian">Big-Endian</label>
+			<label index="pathToTTFFile">Pfad zur TTF-Schriftartdatei relativ zur TYPO3-Site:</label>
+			<label index="gdFontFilePrefix">Präfix für zu erzeugende GD-Schriftartdatei:</label>
+			<label index="makeFont">Schriftart erzeugen</label>
+			<label index="usingFontFile">Folgende TTF-Schriftart wird als Quelle verwendet:</label>
+			<label index="ttfFontFileNotFound">Die TTF-Schriftart-Quelldatei konnte nicht gefunden werden:</label>
+			<label index="pngImageCreated">Folgendes PNG-Bild wurde erzeugt:</label>
+			<label index="gdFontFileCreated">Folgende GD-Schriftartdatei wurde aus obigem Bild erzeugt:</label>
+			<label index="gdFontFileNotCreated">Folgende GD-Schriftartdatei konnte nicht erzeugt werden:</label>
+		</languageKey>
+  </data>
+</T3locallangExt>

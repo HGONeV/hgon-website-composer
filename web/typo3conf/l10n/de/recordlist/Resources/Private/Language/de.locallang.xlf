@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T05:13:46Z" product-name="recordlist">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-11T05:07:16Z" product-name="recordlist">
 		<header/>
 		<body>
-			<trans-unit id="error.linkHandlerTitleMissing" approved="yes">
+			<trans-unit id="error.linkHandlerTitleMissing" resname="error.linkHandlerTitleMissing" approved="yes">
 				<source>[title missing]</source>
 				<target state="translated">[Titel fehlt]</target>
 			</trans-unit>

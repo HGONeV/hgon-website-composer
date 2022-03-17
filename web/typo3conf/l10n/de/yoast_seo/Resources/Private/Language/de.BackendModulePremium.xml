@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+			<label index="mlang_tabs_tab">Premium</label>
+			<label index="mlang_labels_tabdescr">Yoast SEO Premium für TYPO3</label>
+			<label index="mlang_labels_tablabel">Yoast SEO Premium für TYPO3</label>
+			<label index="mod_premium_title">Yoast SEO Premium</label>
+			<label index="mod_premium_subtitle">, optimiere auf dem nächsten Level!</label>
+			<label index="mod_premium_redirectmanager">Weiterleitungsmanager</label>
+			<label index="mod_premium_redirectmanager_descr">Erstelle und verwalte Weiterleitungen direkt in TYpO3</label>
+			<label index="mod_premium_multiple_focus_keywords">Mehrere Fokusschlüsselworte</label>
+			<label index="mod_premium_multiple_focus_keywords_descr">optimiere einzelne Veröffentlichungen für bis zu 5 Schlüsselworte</label>
+			<label index="mod_premium_support">Premium Support</label>
+			<label index="mod_premium_support_descr">Zugriff auf unser 24/7 support Team</label>
+			<label index="installed">Yoast SEO Premium für TYPO3 ist installiert</label>
+			<label index="buy_now">Kaufe YOAST SEO PREMIUM FÜR TYPO3</label>
+			<label index="more_information">Weitere Informationen</label>
+			<label index="guarantee">30-Tage Geld-zurück-Garantie und das ohne lästige Rückfragen</label>
+			<label index="free">Yoast SEO free</label>
+
+			<label index="table.check">Prüfen!</label>
+			<label index="table.feature">Feature</label>
+			<label index="table.feature.keywords">Schlüsselwort-Optimierung</label>
+			<label index="table.feature.preview">Vorschau ihrer Seite</label>
+			<label index="table.feature.readability">Lesbarkeitsprüfung</label>
+			<label index="table.feature.content">Kein doppelter Inhalt</label>
+			<label index="table.feature.algorithm">Immer aktuell für Google’s Algorithmen</label>
+			<label index="table.feature.linking_suggestions">Interne Link Vorschläge</label>
+			<label index="table.feature.insights">Content insights</label>
+			<label index="table.feature.redirect">Weiterleitungsmanager</label>
+			<label index="table.feature.support">1 Jahr Zugriff auf kostenfreien 24/7 support</label>
+			<label index="table.feature.ad_free">Werbefrei</label>
+
+			<label index="table.premium.keywords">Optmiere für Schlüsselworte, Wortgruppen, Synonyme und verwandte Schlüsselworte</label>
+			<label index="table.premium.preview">&lt;b&gt;Google Vorschau:&lt;/b&gt; so würde die Seite aussehen.</label>
+			<label index="table.premium.readability">Wir prüfen die Lesbarkeit des Textes und berechnen den &lt;b&gt;Flesch Reading Ease Score&lt;/b&gt;.</label>
+			<label index="table.premium.content">Ihr Ranking kann sich bei doppelten Inhalten verschlechtern. Yoast SEO setzt canonical URLs um Google zu unterstützen.</label>
+			<label index="table.premium.algorithm">Die Erweiterung wird jeden Minat aktualisiert, so gehen wir sicher, dass Ihre Webseite für den aktuellen Google Algorithmus optimiert ist.</label>
+			<label index="table.premium.insights">Wählen sie die &lt;b&gt;5 Worte oder Wortgruppen&lt;/b&gt; die sie am meisten auf Ihrer Seite verwenden und prüfen Sie ob diese das Optimierungsziel sind.</label>
+			<label index="table.premium.linking_suggestions">Wir schlagen Verknüpfungen auf andere interne Seiten vor, während Sie schreiben.</label>
+			<label index="table.premium.ad_free">In Yoast SEO Premium gibt es &lt;strong&gt;keine Werbung&lt;/strong&gt;.</label>
+			<label index="table.premium.redirect">Erhalten Sie Warnungen und leiten Sie alte URLs einfach auf neue um. Ihre Kunden werden Ihnen danken.</label>
+			<label index="table.premium.support">E-Mail-Kontak zu unserem &lt;strong&gt;Support-Team&lt;/strong&gt;</label>
+
+			<label index="table.free.keywords">Nur ein Schlüsselwort oder eine Wortgruppe</label>
+			<label index="table.free.insights">Sie müssen das leider selber überprüfen</label>
+			<label index="table.free.linking_suggestions">Sie können selbst nach verwandten Seiten suchen und diese verlinken.</label>
+			<label index="table.free.ad_free">Wir präsentieren unsere Produkte und Dienstleistungen.</label>
+			<label index="table.free.redirect">Vergiss nicht, deinem Redakteur zu sagen, dass immer eine Weiterleitung angelegt wird, wenn eine Seite gelöscht wird.</label>
+			<label index="table.free.support">Wir bieten einen umfangreichen FAQ in unserer Hilfe.</label>
+		</languageKey>
+  </data>
+</T3locallangExt>

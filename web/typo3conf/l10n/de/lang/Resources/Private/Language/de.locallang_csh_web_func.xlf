@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T04:18:58Z" product-name="lang">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-11T04:10:44Z" product-name="lang">
 		<header/>
 		<body>
 			<trans-unit id=".alttitle" approved="yes">
@@ -11,13 +11,13 @@
 				<source>The idea of the Web&gt;Functions module is to be a host module for backend applications that wish to perform processing of pages or branches of the page tree.</source>
 				<target state="translated">Das Modul "Web &gt; Funktionen" ist als "Container" für all diejenigen Backend-Erweiterungen gedacht, die Veränderungen an einzelnen Seiten oder am Seitenbaum vornehmen.</target>
 			</trans-unit>
-			<trans-unit id=".details" approved="yes">
+			<trans-unit id=".details" approved="no">
 				<source>Conceptually the Web&gt;Functions module is different from the Web&gt;Info module only by offering processing  functionality rather than offering information only. It is up to extension programmers to decide in which of these two modules they want to insert functionality.</source>
-				<target state="translated">Konzeptionell unterscheidet sich das Modul "Web &gt; Funktionen" vom Modul "Web &gt; Info" lediglich dadurch, dass das Modul die Möglichkeit bietet, auch &lt;em&gt;Änderungen&lt;/em&gt; an den angezeigten Datensätzen vorzunehmen (im Gegensatz zum Modul "Info", das lediglich Informationen zu den Datensätzen anzeigt). Es ist Sache des Entwicklers einer Erweiterung zu entscheiden, in welchem der beiden Module seine Erweiterung erscheinen soll.</target>
+				<target state="needs-translation">Konzeptionell unterscheidet sich das Modul "Web &gt; Funktionen" vom Modul "Web &gt; Info" lediglich dadurch, dass das Modul die Möglichkeit bietet, auch &lt;em&gt;Änderungen&lt;/em&gt; an den angezeigten Datensätzen vorzunehmen (im Gegensatz zum Modul "Info", das lediglich Informationen zu den Datensätzen anzeigt). Es ist Sache des Entwicklers einer Erweiterung zu entscheiden, in welchem der beiden Module seine Erweiterung erscheinen soll.</target>
 			</trans-unit>
-			<trans-unit id="_.image" approved="yes">
+			<trans-unit id="_.image" approved="no">
 				<source>EXT:lang/Resources/Public/Images/cshimages/pagetree_overview_11.png</source>
-				<target state="translated">EXT:lang/Resources/Public/Images/cshimages/pagetree_overview_11.png</target>
+				<target state="needs-translation">EXT:lang/Resources/Public/Images/cshimages/pagetree_overview_11.png</target>
 				<note from="developer">This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
 				<note>This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
 			</trans-unit>

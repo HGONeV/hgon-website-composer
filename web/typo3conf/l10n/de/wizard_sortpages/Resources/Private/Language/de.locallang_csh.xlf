@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T07:09:17Z" product-name="wizard_sortpages">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-11T06:42:55Z" product-name="wizard_sortpages">
 		<header/>
 		<body>
 			<trans-unit id="tx_wizardsortpages.alttitle" approved="yes">

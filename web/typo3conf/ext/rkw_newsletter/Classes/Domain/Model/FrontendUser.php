@@ -25,6 +25,31 @@ namespace RKW\RkwNewsletter\Domain\Model;
  */
 class FrontendUser extends \RKW\RkwRegistration\Domain\Model\FrontendUser
 {
+    /**
+     * @var string
+     * @validate \SJBR\SrFreecap\Validation\Validator\CaptchaValidator
+     */
+    protected $captchaResponse;
+
+    /**
+     * Sets the captchaResponse
+     *
+     * @param string $captchaResponse
+     * @return void
+     */
+    public function setCaptchaResponse($captchaResponse) {
+        $this->captchaResponse = $captchaResponse;
+    }
+
+    /**
+     * Getter for captchaResponse
+     *
+     * @return string
+     */
+    public function getCaptchaResponse() {
+        return $this->captchaResponse;
+    }
+
 
     /**
      * Holds the subscriptions

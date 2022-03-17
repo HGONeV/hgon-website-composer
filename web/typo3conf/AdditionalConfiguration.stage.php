@@ -19,6 +19,16 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['_DEFAULT'] = array (
     'defaultDomain' => 'stage.hgon.de'
 );
 
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['stage.hgon-libellen.de'] = array (
+    'fallbackPid' => 335,
+    'defaultDomain' => 'stage.hgon-libellen.de'
+);
+
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['stage.hgon-rebhuhn.de'] = array (
+    'fallbackPid' => 355,
+    'defaultDomain' => 'stage.hgon-rebhuhn.de'
+);
+
 // ====================================================
 // Important settings
 // ====================================================

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+			<label index="mlang_tabs_tab">Übersicht</label>
+			<label index="mlang_labels_tabdescr">Seitenübersicht</label>
+			<label index="mlang_labels_tablabel">Yoast SEO Übersicht</label>
+			<label index="cornerstoneContent">Cornerstone content</label>
+			<label index="cornerstoneContent.description">Markieren Sie die wichtigsten Seiten als 'cornerstone content' um ihre Seitenstruktur zu verbessern. &lt;a href="%s" target="_blank"&gt;Mehr über cornerstone content erfahren.&lt;/a&gt;</label>
+			<label index="withoutDescription">Seiten ohne Meta Beschreibung</label>
+			<label index="withoutDescription.description">Die Optimierung der Seitenbeschreibung ist sehr wichtig. Prüfen Sie das Hinzufügen von Beschreibungen zu den folgenden Seiten. &lt;a href="%s"&gt;Mehr über die Meta Beschreibung erfahren&lt;/a&gt;</label>
+			<label index="no_pages.title">Keine Seiten gefunden</label>
+			<label index="no_pages.message">Keine Seiten gefunden die den aktuellen Filterkriterien entsprechen.</label>
+			<label index="edit">Seite bearbeiten</label>
+			<label index="page.title">Seitentitel</label>
+			<label index="page.seo_title">SEO Titel</label>
+			<label index="page.score_readability">Lesbarkeit</label>
+			<label index="page.score_seo">SEO</label>
+            <label index="score.ok">OK</label>
+            <label index="score.bad">Verbesserungsmöglichkeiten</label>
+            <label index="score.good">Gut</label>
+
+		</languageKey>
+  </data>
+</T3locallangExt>

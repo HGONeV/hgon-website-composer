@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T00:51:55Z" product-name="context_help">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-11T00:55:29Z" product-name="context_help">
 		<header/>
 		<body>
 			<trans-unit id="basedOn.description" approved="yes">
@@ -15,9 +15,9 @@
 				<source>In the Web &gt; Template / Template Analyser module you can see how far back in the template tree that constants and setup code is inherited.</source>
 				<target state="translated">Innerhalb des Moduls Web &gt; Template können Sie sich mit dem Template Analyzer die Vererbungsstruktur für Konstanten und Setup-Code innerhalb des Vorlagenbaumes anzeigen lassen.</target>
 			</trans-unit>
-			<trans-unit id="_clear.image" approved="yes">
+			<trans-unit id="_clear.image" approved="no">
 				<source>EXT:context_help/Resources/Public/Images/cshimages/systemplate2.png</source>
-				<target state="translated">EXT:context_help/Resources/Public/Images/cshimages/systemplate2.png</target>
+				<target state="needs-translation">EXT:context_help/Resources/Public/Images/cshimages/systemplate2.png</target>
 				<note from="developer">This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
 				<note>This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
 			</trans-unit>
@@ -86,10 +86,10 @@ It's very important to read how to do all this in the documents listed below! Al
 				<source>If the Template Record was the first record on a page hiding it will expose the second record on the page instead.</source>
 				<target state="translated">Wenn der Template-Datensatz der erste Template-Eintrag einer Seite war, so wird stattdessen automatisch der nächste Template-Eintrag aktiviert.</target>
 			</trans-unit>
-			<trans-unit id="_.image" xml:space="preserve" approved="yes">
+			<trans-unit id="_.image" xml:space="preserve" approved="no">
 				<source>EXT:context_help/Resources/Public/Images/cshimages/systemplate.png,
 EXT:context_help/Resources/Public/Images/cshimages/systemplate1.png</source>
-				<target state="translated">EXT:context_help/Resources/Public/Images/cshimages/systemplate.png,
+				<target state="needs-translation">EXT:context_help/Resources/Public/Images/cshimages/systemplate.png,
 EXT:context_help/Resources/Public/Images/cshimages/systemplate1.png</target><note from="developer">This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
 			<note>This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note></trans-unit>
 			<trans-unit id=".image_descr" xml:space="preserve" approved="yes">

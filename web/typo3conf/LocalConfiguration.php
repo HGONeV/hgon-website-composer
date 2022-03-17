@@ -121,7 +121,9 @@ return [
     ],
     'EXTCONF' => [
         'lang' => [
-            'availableLanguages' => [],
+            'availableLanguages' => [
+                'de',
+            ],
         ],
     ],
     'FE' => [

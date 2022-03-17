@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T00:51:55Z" product-name="context_help">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-11T00:55:29Z" product-name="context_help">
 		<header/>
 		<body>
 			<trans-unit id="config.description" approved="yes">
@@ -40,9 +40,9 @@ Achten Sie darauf, dass Sie sich mit jeder neuen TYPO3-Version auch die dazugeh√
 				<source>Editor Configuration - used to configure Stylesheet editor.</source>
 				<target state="translated">Konfiguration des Stilvorlagen-Editors.</target>
 			</trans-unit>
-			<trans-unit id="_.image" approved="yes">
+			<trans-unit id="_.image" approved="no">
 				<source>EXT:context_help/Resources/Public/Images/cshimages/static.png</source>
-				<target state="translated">EXT:context_help/Resources/Public/Images/cshimages/static.png</target>
+				<target state="needs-translation">EXT:context_help/Resources/Public/Images/cshimages/static.png</target>
 				<note from="developer">This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
 				<note>This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
 			</trans-unit>

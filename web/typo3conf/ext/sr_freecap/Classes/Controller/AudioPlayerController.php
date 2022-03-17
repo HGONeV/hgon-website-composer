@@ -1,5 +1,7 @@
 <?php
 namespace SJBR\SrFreecap\Controller;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+
 /***************************************************************
 *  Copyright notice
 *
