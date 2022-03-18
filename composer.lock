@@ -1585,16 +1585,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.44-beta",
+            "version": "v8.7.45-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "22a6d678317c77a5134549119a7fea6a652c5571"
+                "reference": "6730879de12f6e2928b28029d44cfcd97a86e01f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/22a6d678317c77a5134549119a7fea6a652c5571",
-                "reference": "22a6d678317c77a5134549119a7fea6a652c5571",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/6730879de12f6e2928b28029d44cfcd97a86e01f",
+                "reference": "6730879de12f6e2928b28029d44cfcd97a86e01f",
                 "shasum": ""
             },
             "require": {
@@ -1622,10 +1622,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.44-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.45-beta",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2021-02-02T14:09:06+00:00"
+            "time": "2022-03-17T14:24:29+00:00"
         },
         {
             "name": "mollie/mollie-api-php",
@@ -1720,16 +1720,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.26.1",
+            "version": "1.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "c6b00f05152ae2c9b04a448f99c7590beb6042f5"
+                "reference": "52ebd235c1f7e0d5e1b16464b695a28335f8e44a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c6b00f05152ae2c9b04a448f99c7590beb6042f5",
-                "reference": "c6b00f05152ae2c9b04a448f99c7590beb6042f5",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/52ebd235c1f7e0d5e1b16464b695a28335f8e44a",
+                "reference": "52ebd235c1f7e0d5e1b16464b695a28335f8e44a",
                 "shasum": ""
             },
             "require": {
@@ -1790,7 +1790,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/1.26.1"
+                "source": "https://github.com/Seldaek/monolog/tree/1.27.0"
             },
             "funding": [
                 {
@@ -1802,7 +1802,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-28T08:32:12+00:00"
+            "time": "2022-03-13T20:29:46+00:00"
         },
         {
             "name": "neos/utility-files",
