@@ -231,11 +231,13 @@ class ReleaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      */
     public function testListAction()
     {
-
         /** @var \RKW\RkwNewsletter\Domain\Model\BackendUser $backendUser */
         $backendUser = $this->backendUserRepository->findByUid(intval($GLOBALS['BE_USER']->user['uid']));
 
-        $issues = $this->issueRepository->findAllToApproveOrReleaseByBackendUser(intval($GLOBALS['BE_USER']->user['uid']));
+        //$issues = $this->issueRepository->findAllToApproveOrReleaseByBackendUser(intval($GLOBALS['BE_USER']->user['uid']));
+
+        $issues = $this->issueRepository->findAll();
+
         $this->view->assignMultiple(
            [
                 'settings'    => $this->settings,

@@ -1177,16 +1177,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.8.3",
+            "version": "1.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "1afdd860a2566ed3c2b0b4a3de6e23434a79ec85"
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/1afdd860a2566ed3c2b0b4a3de6e23434a79ec85",
-                "reference": "1afdd860a2566ed3c2b0b4a3de6e23434a79ec85",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/337e3ad8e5716c15f9657bd214d16cc5e69df268",
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268",
                 "shasum": ""
             },
             "require": {
@@ -1267,7 +1267,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.8.3"
+                "source": "https://github.com/guzzle/psr7/tree/1.8.5"
             },
             "funding": [
                 {
@@ -1283,7 +1283,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-05T13:56:00+00:00"
+            "time": "2022-03-20T21:51:18+00:00"
         },
         {
             "name": "helhum/config-loader",
@@ -1585,16 +1585,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.45-beta",
+            "version": "v8.7.46-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "6730879de12f6e2928b28029d44cfcd97a86e01f"
+                "reference": "7993ed5bfea52d82424f283b2947d3ba37953f3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/6730879de12f6e2928b28029d44cfcd97a86e01f",
-                "reference": "6730879de12f6e2928b28029d44cfcd97a86e01f",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/7993ed5bfea52d82424f283b2947d3ba37953f3d",
+                "reference": "7993ed5bfea52d82424f283b2947d3ba37953f3d",
                 "shasum": ""
             },
             "require": {
@@ -1622,23 +1622,23 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.45-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.46-beta",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2022-03-17T14:24:29+00:00"
+            "time": "2022-04-20T12:08:50+00:00"
         },
         {
             "name": "mollie/mollie-api-php",
-            "version": "v2.40.2",
+            "version": "v2.42.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mollie/mollie-api-php.git",
-                "reference": "ac3e079bbc86e95dc77d4f33965a62e9e6b95ed8"
+                "reference": "1d3ba6a8c345140f23f52facc4267ece12395b11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/ac3e079bbc86e95dc77d4f33965a62e9e6b95ed8",
-                "reference": "ac3e079bbc86e95dc77d4f33965a62e9e6b95ed8",
+                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/1d3ba6a8c345140f23f52facc4267ece12395b11",
+                "reference": "1d3ba6a8c345140f23f52facc4267ece12395b11",
                 "shasum": ""
             },
             "require": {
@@ -1646,13 +1646,14 @@
                 "ext-curl": "*",
                 "ext-json": "*",
                 "ext-openssl": "*",
-                "php": ">=5.6"
+                "php": "^7.0|^8.0"
             },
             "require-dev": {
-                "eloquent/liberator": "^2.0",
+                "eloquent/liberator": "^2.0||^3.0",
                 "friendsofphp/php-cs-fixer": "^3.0",
                 "guzzlehttp/guzzle": "^6.3 || ^7.0",
-                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.1 || ^8.5 || ^9.5"
+                "phpstan/phpstan": "^1.4",
+                "phpunit/phpunit": "^6.5 || ^7.1 || ^8.5 || ^9.5"
             },
             "suggest": {
                 "mollie/oauth2-mollie-php": "Use OAuth to authenticate with the Mollie API. This is needed for some endpoints. Visit https://docs.mollie.com/ for more information."
@@ -1714,9 +1715,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mollie/mollie-api-php/issues",
-                "source": "https://github.com/mollie/mollie-api-php/tree/v2.40.2"
+                "source": "https://github.com/mollie/mollie-api-php/tree/v2.42.0"
             },
-            "time": "2022-02-08T08:53:18+00:00"
+            "time": "2022-04-05T05:53:07+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2945,16 +2946,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.4.38",
+            "version": "v4.4.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "5a50085bf5460f0c0d60a50b58388c1249826b8a"
+                "reference": "bdcc66f3140421038f495e5b50e3ca6ffa14c773"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/5a50085bf5460f0c0d60a50b58388c1249826b8a",
-                "reference": "5a50085bf5460f0c0d60a50b58388c1249826b8a",
+                "url": "https://api.github.com/repos/symfony/console/zipball/bdcc66f3140421038f495e5b50e3ca6ffa14c773",
+                "reference": "bdcc66f3140421038f495e5b50e3ca6ffa14c773",
                 "shasum": ""
             },
             "require": {
@@ -3015,7 +3016,7 @@
             "description": "Eases the creation of beautiful and testable command line interfaces",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/console/tree/v4.4.38"
+                "source": "https://github.com/symfony/console/tree/v4.4.40"
             },
             "funding": [
                 {
@@ -3031,7 +3032,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-30T21:23:57+00:00"
+            "time": "2022-03-26T22:12:04+00:00"
         },
         {
             "name": "symfony/dotenv",
@@ -3807,16 +3808,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.4.37",
+            "version": "v4.4.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "b2d924e5a4cb284f293d5092b1dbf0d364cb8b67"
+                "reference": "54e9d763759268e07eb13b921d8631fc2816206f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/b2d924e5a4cb284f293d5092b1dbf0d364cb8b67",
-                "reference": "b2d924e5a4cb284f293d5092b1dbf0d364cb8b67",
+                "url": "https://api.github.com/repos/symfony/process/zipball/54e9d763759268e07eb13b921d8631fc2816206f",
+                "reference": "54e9d763759268e07eb13b921d8631fc2816206f",
                 "shasum": ""
             },
             "require": {
@@ -3849,7 +3850,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v4.4.37"
+                "source": "https://github.com/symfony/process/tree/v4.4.40"
             },
             "funding": [
                 {
@@ -3865,20 +3866,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-27T17:14:04+00:00"
+            "time": "2022-03-18T16:18:39+00:00"
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v1.1.11",
+            "version": "v1.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "633df678bec3452e04a7b0337c9bcfe7354124b3"
+                "reference": "eedb374f02031714a48848758a27812f3eca317a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/633df678bec3452e04a7b0337c9bcfe7354124b3",
-                "reference": "633df678bec3452e04a7b0337c9bcfe7354124b3",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/eedb374f02031714a48848758a27812f3eca317a",
+                "reference": "eedb374f02031714a48848758a27812f3eca317a",
                 "shasum": ""
             },
             "require": {
@@ -3928,7 +3929,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/service-contracts/tree/v1.1.11"
+                "source": "https://github.com/symfony/service-contracts/tree/v1.1.12"
             },
             "funding": [
                 {
@@ -3944,7 +3945,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-04T13:32:43+00:00"
+            "time": "2022-03-09T13:39:03+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -5126,16 +5127,16 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "93ebd0014cab80c4ea9f5e297ea48672f1b87706"
+                "reference": "77a32518733312af16a44300404e945338981de3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/93ebd0014cab80c4ea9f5e297ea48672f1b87706",
-                "reference": "93ebd0014cab80c4ea9f5e297ea48672f1b87706",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/77a32518733312af16a44300404e945338981de3",
+                "reference": "77a32518733312af16a44300404e945338981de3",
                 "shasum": ""
             },
             "require": {
@@ -5170,9 +5171,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.0"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.1"
             },
-            "time": "2022-01-04T19:58:01+00:00"
+            "time": "2022-03-15T21:29:03+00:00"
         },
         {
             "name": "phpspec/prophecy",
