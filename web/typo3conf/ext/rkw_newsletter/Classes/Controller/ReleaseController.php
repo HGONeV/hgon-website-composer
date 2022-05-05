@@ -13,6 +13,8 @@ namespace RKW\RkwNewsletter\Controller;
  *
  * The TYPO3 project - inspiring people to share!
  */
+
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
@@ -206,7 +208,7 @@ class ReleaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     public function deferAction()
     {
 
-        $request = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('tx_rkwnewsletter_tools_rkwnewslettermanagement');
+        $request = GeneralUtility::_GP('tx_rkwnewsletter_tools_rkwnewslettermanagement');
         $issue = $this->issueRepository->findByIdentifier(intval($request['issue']));
 
         $issue->setStatus(98);
@@ -263,13 +265,13 @@ class ReleaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     public function testAction()
     {
 
-        $request = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('tx_rkwnewsletter_tools_rkwnewslettermanagement');
+        $request = GeneralUtility::_GP('tx_rkwnewsletter_tools_rkwnewslettermanagement');
         $issue = $this->issueRepository->findByIdentifier(intval($request['issue']));
         $emails = strval($request['emails']);
         $topic = $this->topicRepository->findByIdentifier(intval($request['topic']));
         $title = strval($request['title']);
 
-        $emailList = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $emails);
+        $emailList = GeneralUtility::trimExplode(',', $emails);
         foreach ($emailList as $email) {
             $validateEmail = $this->validatorHelper->email($email);
             if ($validateEmail->hasErrors()) {
@@ -342,8 +344,6 @@ class ReleaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * action sendConfirm
      *
-     * @param \RKW\RkwNewsletter\Domain\Model\Issue $issue
-     * @param string $title
      * @return void
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
@@ -353,8 +353,11 @@ class ReleaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * @ignorevalidation $issue
      * @throws \TYPO3\CMS\Extbase\Configuration\Exception\InvalidConfigurationTypeException
      */
-    public function sendConfirmAction(\RKW\RkwNewsletter\Domain\Model\Issue $issue = null, $title = null)
+    public function sendConfirmAction()
     {
+        $request = GeneralUtility::_GP('tx_rkwnewsletter_tools_rkwnewslettermanagement');
+        $issue = $this->issueRepository->findByIdentifier(intval($request['issue']));
+        $title = strval($request['title']);
 
         // check for issue
         if (! $issue) {
@@ -409,8 +412,6 @@ class ReleaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * action send
      *
-     * @param \RKW\RkwNewsletter\Domain\Model\Issue $issue
-     * @param string $title
      * @return void
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
@@ -421,8 +422,11 @@ class ReleaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * @throws \TYPO3\CMS\Extbase\Configuration\Exception\InvalidConfigurationTypeException
      * @throws \Exception
      */
-    public function sendAction(\RKW\RkwNewsletter\Domain\Model\Issue $issue, $title = null)
+    public function sendAction()
     {
+        $request = GeneralUtility::_GP('tx_rkwnewsletter_tools_rkwnewslettermanagement');
+        $issue = $this->issueRepository->findByIdentifier(intval($request['issue']));
+        $title = strval($request['title']);
 
         // set final title and mark as sending
         $issue->setTitle($title);
@@ -457,7 +461,7 @@ class ReleaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     protected function getSignalSlotDispatcher()
     {
         if (!$this->signalSlotDispatcher) {
-            $objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
+            $objectManager = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
             $this->signalSlotDispatcher = $objectManager->get('TYPO3\\CMS\\Extbase\\SignalSlot\\Dispatcher');
         }
 
