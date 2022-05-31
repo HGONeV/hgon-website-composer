@@ -88,12 +88,15 @@ class IssueRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $query->matching(
             $query->logicalAnd(
                 $query->in('status', array(1, 2)),
-                $query->equals('releaseTstamp', 0),
+                $query->equals('releaseTstamp', 0)
+                /*
+                ,
                 $query->logicalOr(
                     $query->contains('newsletter.approval', $backendUser),
                     $query->contains('approvals.topic.approvalStage1', $backendUser),
                     $query->contains('approvals.topic.approvalStage2', $backendUser)
                 )
+                */
             )
         );
 

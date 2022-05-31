@@ -236,9 +236,7 @@ class ReleaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         /** @var \RKW\RkwNewsletter\Domain\Model\BackendUser $backendUser */
         $backendUser = $this->backendUserRepository->findByUid(intval($GLOBALS['BE_USER']->user['uid']));
 
-        //$issues = $this->issueRepository->findAllToApproveOrReleaseByBackendUser(intval($GLOBALS['BE_USER']->user['uid']));
-
-        $issues = $this->issueRepository->findAll();
+        $issues = $this->issueRepository->findAllToApproveOrReleaseByBackendUser(intval($GLOBALS['BE_USER']->user['uid']));
 
         $this->view->assignMultiple(
            [
@@ -264,9 +262,8 @@ class ReleaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      */
     public function testAction()
     {
-
         $request = GeneralUtility::_GP('tx_rkwnewsletter_tools_rkwnewslettermanagement');
-        $issue = $this->issueRepository->findByIdentifier(intval($request['issue']));
+        $issue = $this->issueRepository->findByIdentifier(intval($request['issue']['__identity']));
         $emails = strval($request['emails']);
         $topic = $this->topicRepository->findByIdentifier(intval($request['topic']));
         $title = strval($request['title']);
@@ -356,7 +353,7 @@ class ReleaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     public function sendConfirmAction()
     {
         $request = GeneralUtility::_GP('tx_rkwnewsletter_tools_rkwnewslettermanagement');
-        $issue = $this->issueRepository->findByIdentifier(intval($request['issue']));
+        $issue = $this->issueRepository->findByIdentifier(intval($request['issue']['__identity']));
         $title = strval($request['title']);
 
         // check for issue
@@ -425,7 +422,7 @@ class ReleaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     public function sendAction()
     {
         $request = GeneralUtility::_GP('tx_rkwnewsletter_tools_rkwnewslettermanagement');
-        $issue = $this->issueRepository->findByIdentifier(intval($request['issue']));
+        $issue = $this->issueRepository->findByIdentifier(intval($request['issue']['__identity']));
         $title = strval($request['title']);
 
         // set final title and mark as sending
