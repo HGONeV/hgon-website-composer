@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ef7e53e8e41749fd1e63484c12b67ee",
+    "content-hash": "bf237557e3fb04efe43e15daa5d0a0ee",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -4740,39 +4740,53 @@
         },
         {
             "name": "yoast-seo-for-typo3/yoast_seo",
-            "version": "v6.0.1",
+            "version": "7.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yoast/Yoast-SEO-for-TYPO3.git",
-                "reference": "6ac88139d28f2e127c067d86b20c86d6b2151093"
+                "reference": "b5794d1e7128aeaeb0b2fe22444a42a9fca2b325"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast/Yoast-SEO-for-TYPO3/zipball/6ac88139d28f2e127c067d86b20c86d6b2151093",
-                "reference": "6ac88139d28f2e127c067d86b20c86d6b2151093",
+                "url": "https://api.github.com/repos/Yoast/Yoast-SEO-for-TYPO3/zipball/b5794d1e7128aeaeb0b2fe22444a42a9fca2b325",
+                "reference": "b5794d1e7128aeaeb0b2fe22444a42a9fca2b325",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-json": "*",
                 "php": "^7.0",
-                "typo3/cms-core": "^8.7|^9.5|^10.3"
+                "typo3/cms-backend": "^8.7|^9.5|^10.3",
+                "typo3/cms-core": "^8.7|^9.5|^10.3",
+                "typo3/cms-extbase": "^8.7|^9.5|^10.3",
+                "typo3/cms-fluid": "^8.7|^9.5|^10.3",
+                "typo3/cms-frontend": "^8.7|^9.5|^10.3",
+                "typo3/cms-install": "^8.7|^9.5|^10.3"
             },
             "replace": {
                 "typo3-ter/yoast-seo": "self.version"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.0",
-                "nimut/testing-framework": "^4.1"
+                "overtrue/phplint": "^2.0",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^0.12.32",
+                "saschaegerer/phpstan-typo3": "dev-master",
+                "slam/phpstan-extensions": "^5.0",
+                "typo3/tailor": "^1.1"
             },
             "suggest": {
                 "typo3/cms-seo": "^9.5|^10.3"
             },
             "type": "typo3-cms-extension",
             "extra": {
+                "branch-alias": {
+                    "dev-master": "6.x-dev"
+                },
                 "typo3/cms": {
                     "cms-package-dir": "{$vendor-dir}/typo3/cms",
-                    "web-dir": ".Build/Web"
+                    "web-dir": "public",
+                    "extension-key": "yoast_seo"
                 }
             },
             "autoload": {
@@ -4806,9 +4820,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Yoast/Yoast-SEO-for-TYPO3/issues",
-                "source": "https://github.com/Yoast/Yoast-SEO-for-TYPO3/tree/master"
+                "source": "https://github.com/Yoast/Yoast-SEO-for-TYPO3/tree/7.2.3"
             },
-            "time": "2020-04-22T18:46:17+00:00"
+            "time": "2021-08-10T07:23:01+00:00"
         }
     ],
     "packages-dev": [

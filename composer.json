@@ -54,7 +54,7 @@
         "reelworx/rx-shariff": "^12.3",
         "mollie/mollie-api-php": "^2.0",
         "sgalinski/sg-cookie-optin": "^3.0",
-        "yoast-seo-for-typo3/yoast_seo": "^6.0"
+        "yoast-seo-for-typo3/yoast_seo": "^7.2"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.4.*@dev",
