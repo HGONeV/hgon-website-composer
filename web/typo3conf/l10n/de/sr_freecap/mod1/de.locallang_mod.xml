@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+			<label index="mlang_labels_tablabel">GD-Schriftartgenerator für freeCap CAPTCHA</label>
+			<label index="mlang_labels_tabdescr">Erzeugung von GD-Schriftartdateien zur Verwendung mit freeCap CAPTCHA.</label>
+			<label index="mlang_tabs_tab">GD-Schriftartgenerator</label>
+		</languageKey>
+  </data>
+</T3locallangExt>

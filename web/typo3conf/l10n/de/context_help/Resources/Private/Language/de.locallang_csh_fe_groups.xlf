@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T00:51:54Z" product-name="context_help">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-11T00:55:29Z" product-name="context_help">
 		<header/>
 		<body>
 			<trans-unit id=".description" approved="yes">
@@ -33,19 +33,19 @@ For instance if a page or content element was assigned access only by this group
 				<note from="developer">This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
 				<note>This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
 			</trans-unit>
-			<trans-unit id="_.image" xml:space="preserve" approved="yes">
+			<trans-unit id="_.image" xml:space="preserve" approved="no">
 				<source>EXT:context_help/Resources/Public/Images/cshimages/fegroups_3.png,
 EXT:context_help/Resources/Public/Images/cshimages/fegroups_4.png</source>
-				<target state="translated">EXT:context_help/Resources/Public/Images/cshimages/fegroups_3.png,
+				<target state="needs-translation">EXT:context_help/Resources/Public/Images/cshimages/fegroups_3.png,
 EXT:context_help/Resources/Public/Images/cshimages/fegroups_4.png</target><note from="developer">This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
 			<note>This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note></trans-unit>
 			<trans-unit id=".image_descr" xml:space="preserve" approved="yes">
 				<source>The form for editing frontend users groups.
 Pages, Content Elements and other records for frontend display often have a selector box where you can define access restriction by selecting access for a certain group only.</source>
 			<target state="translated">Ein Teil der Eingabemaske für Frontend-Benutzergruppen. Seiten, Inhaltselemente und andere Datensätze, die auf der Website angezeigt werden sollen, besitzen oftmals ein Auswahlfeld, über die man Zugriffsbeschränkungen für diese Elemente regeln kann.</target></trans-unit>
-			<trans-unit id="lockToDomain.description" approved="yes">
+			<trans-unit id="lockToDomain.description" approved="no">
 				<source>Enter the host name from which the group will be available only. NOTICE: this is not a security feature and can be circumvented by faking HTTP_HOST.</source>
-				<target state="translated">Geben Sie hier den Namen der Domäne an, für welche diese Benutzergruppe ausschließlich gelten soll. HINWEIS: Das ist keine Sicherheitsfunktion und kann umgangen werden, wenn HTTP_HOST gefälscht wird.</target>
+				<target state="needs-translation">Geben Sie hier den Namen der Domäne an, für welche diese Benutzergruppe ausschließlich gelten soll. HINWEIS: Das ist keine Sicherheitsfunktion und kann umgangen werden, wenn HTTP_HOST gefälscht wird.</target>
 			</trans-unit>
 			<trans-unit id="lockToDomain.details" xml:space="preserve" approved="yes">
 				<source>This options may be important if you have multiple websites in the same TYPO3 database but still only one main storage page for all Website users. Thus the users may log in on any of the website URLs. This may be considered a feature (having a global login as a user) or a problem (in which case you should have multiple user storages anyway). However you may wish to limit the use of a Website usergroup to a specific website and thus you don't want the group to be enabled for the user when he logs in at another URL (still from the same database of course). By entering the host name of the website here, you restrict the group to be used only from within this domain.

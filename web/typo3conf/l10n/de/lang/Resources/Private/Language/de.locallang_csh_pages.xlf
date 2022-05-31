@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T04:19:03Z" product-name="lang">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-11T04:10:47Z" product-name="lang">
 		<header/>
 		<body>
 			<trans-unit id=".description" approved="yes">
@@ -91,9 +91,9 @@ EXT:lang/Resources/Public/Images/cshimages/pages_2.png,</target><note from="deve
 Pages are arranged in a page tree in TYPO3. The page from the editing form in the previous screenshot was the "Intro" page from this page tree. As you can see it belongs in the root of the page tree and has a number of subpages pages under it.</source>
 			<target state="translated">Die wichtigsten Felder einer "Seite" sind: die Option "Seite deaktivieren", der Typ der Seite ("doktype") und der "Seitentitel".
 Seiten sind in TYPO3 in einem Baum organisiert. Die gezeigte Seite des Bearbeitungsformulars im Bild ist die Seite "Intro" des Seitenbaums. Wie Sie sehen können, ist sie der Wurzel des Baums zugeordnet und besitzt eine Reihe von "Kindseiten".</target></trans-unit>
-			<trans-unit id="php_tree_stop.description" approved="no">
+			<trans-unit id="php_tree_stop.description" approved="yes">
 				<source>If enabled, this option excludes the subtree from rendering in the backend.</source>
-				<target state="needs-translation">Stoppt die Darstellung des Seitenbaums in der Navigation und Listen.</target>
+				<target state="translated">Schließt den Unterbaum von der Darstellung im Backend aus.</target>
 			</trans-unit>
 			<trans-unit id="php_tree_stop.details" xml:space="preserve" approved="yes">
 				<source>If you enable this option, the page tree will not expand that branch. Instead you will see a red "+" which indicates that the page tree stops here because the Stop Page Tree option is enabled.

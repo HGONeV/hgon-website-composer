@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T03:03:36Z" product-name="info_pagetsconfig">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-11T03:33:48Z" product-name="info_pagetsconfig">
 		<header/>
 		<body>
 			<trans-unit id="editThisColumn" approved="yes">
@@ -22,6 +22,7 @@
 			<trans-unit id="included_tsconfig_files" approved="yes">
 				<source>Included Files:</source>
 				<target state="translated">Eingebundene Dateien:</target>
+				<note>This label is deprecated (not used anymore) since TYPO3v6</note>
 			</trans-unit>
 			<trans-unit id="mod_pagetsconfig" approved="yes">
 				<source>Page TSconfig</source>
@@ -30,6 +31,7 @@
 			<trans-unit id="pagetitle" approved="yes">
 				<source>Pagetitle:</source>
 				<target state="translated">Seitentitel:</target>
+				<note>This label is deprecated (not used anymore) since TYPO3v6</note>
 			</trans-unit>
 			<trans-unit id="sort_alphabetic" approved="yes">
 				<source>Sort alphabetically</source>
@@ -42,6 +44,7 @@
 			<trans-unit id="tsconf_noPageTSconfig" approved="yes">
 				<source>There are no pages containing custom Page TSconfig settings in the page configuration.</source>
 				<target state="translated">Es gibt keine Seiten mit eigenen Seiten-TSconfig-Einstellungen in der Seiten-Konfiguration.</target>
+				<note>This label is deprecated (not used anymore) since TYPO3v6</note>
 			</trans-unit>
 			<trans-unit id="tsconf_parts_0" approved="yes">
 				<source>All</source>
@@ -86,6 +89,7 @@
 			<trans-unit id="written_tsconfig_lines" approved="yes">
 				<source>Lines:</source>
 				<target state="translated">Zeilen:</target>
+				<note>This label is deprecated (not used anymore) since TYPO3v6</note>
 			</trans-unit>
 		</body>
 	</file>

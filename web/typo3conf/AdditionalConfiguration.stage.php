@@ -19,9 +19,20 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['_DEFAULT'] = array (
     'defaultDomain' => 'stage.hgon.de'
 );
 
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['stage.hgon-libellen.de'] = array (
+    'fallbackPid' => 335,
+    'defaultDomain' => 'stage.hgon-libellen.de'
+);
+
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rkw_basics']['stage.hgon-heuschrecken.de'] = array (
+    'fallbackPid' => 355,
+    'defaultDomain' => 'stage.hgon-heuschrecken.de'
+);
+
 // ====================================================
 // Important settings
 // ====================================================
+/*
 $GLOBALS['TYPO3_CONF_VARS']['FE']['cHashExcludedParameters'] = 'L, v, type, pk_campaign, pk_kwd, utm_source, utm_medium, utm_campaign, utm_term, utm_content, tx_rkwevents_pi1[event]';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['disableNoCacheParameter'] = 1; // disable &no_cache=1 param; relevant for performance and security
 $GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFoundOnCHashError'] = 0; // simply show page if cHash is invalid
@@ -75,5 +86,5 @@ $GLOBALS['TYPO3_CONF_VARS']['GFX']['processor_stripColorProfileByDefault'] = 1; 
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['processor_stripColorProfileCommand'] = '+profile \'*\''; // command to strip the profile information
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['processor_colorspace'] = 'sRGB'; // Colorspace to use
 
-
+*/
 

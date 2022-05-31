@@ -5,6 +5,14 @@ SetEnv TYPO3_CONTEXT Production
 #AuthUserFile /usr/www/users/hgonde/staging/surf/releases/current/web/.htpasswd
 #require valid-user
 
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [QSA,NC,NE,L,R=301]
+
+</IfModule>
+
 #####
 #
 # Example .htaccess file for TYPO3 CMS - for use with Apache Webserver
@@ -131,6 +139,7 @@ RewriteCond %{REQUEST_FILENAME} !-l
 # RewriteRule .* /TYPO3root/index.php [L]
 RewriteRule .* index.php [L]
 
+php_value memory_limit 4096M
 </IfModule>
 
 ### End: Settings for mod_rewrite ###

@@ -80,7 +80,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array(
             'spaceCharacter' 	=> '-',
             'languageGetVar' 	=> 'L',
             'expireDays' 		=> 3,
-            'rootpage_id' 		=> 1,
+            'rootpage_id' 		=> 1
         ),
 
 
@@ -170,7 +170,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array(
                         'lookUpTable' => array(
                             'table' => 'tx_hgonworkgroup_domain_model_workgroup',
                             'id_field' => 'uid',
-                            'alias_field' => 'CONCAT(title, "-", district)',
+                            'alias_field' => 'CONCAT(title)',
                             'addWhereClause' => ' AND NOT deleted AND NOT hidden',
                             'useUniqueCache' => 1,
                             'useUniqueCache_conf' => array(
@@ -301,7 +301,7 @@ function user_decodeSpURL_preProc(&$params, &$ref) {
     $params['URL'] = str_replace('aktuelles/', 'detail/tx-news/detail/News/', $params['URL']);
     $params['URL'] = str_replace('mit-freude-spenden/', 'mit-freude-spenden/tx-hgon-donation/', $params['URL']);
     $params['URL'] = str_replace('kategorie/', 'tx-hgon-journal/', $params['URL']);
-    $params['URL'] = str_replace('arbeitskreis/', 'detailansicht/tx-hgon-workgroup/', $params['URL']);
+    $params['URL'] = preg_replace('/arbeitskreis\/\b/', 'detailansicht/tx-hgon-workgroup/', $params['URL']);
 }
 
 function user_encodeSpURL_postProc(&$params, &$ref) {
@@ -310,4 +310,35 @@ function user_encodeSpURL_postProc(&$params, &$ref) {
     $params['URL'] = str_replace('mit-freude-spenden/tx-hgon-donation/', 'mit-freude-spenden/', $params['URL']);
     $params['URL'] = str_replace('tx-hgon-journal/', 'kategorie/', $params['URL']);
     $params['URL'] = str_replace('detailansicht/tx-hgon-workgroup/', 'arbeitskreis/', $params['URL']);
+}
+
+
+
+/**
+ * Development environment
+ * TYPO3_CONTEXT Development
+ */
+if(\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopment()) {
+
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['hgon-libellen.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['hgon-libellen.rkw.local']['pagePath']['rootpage_id'] = 78;
+
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['hgon-heuschrecken.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['hgon-heuschrecken.rkw.local']['pagePath']['rootpage_id'] = 91;
+}
+
+/**
+ * Staging environment
+ * TYPO3_CONTEXT Production/Staging
+ */
+if(
+    (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isProduction())
+    && (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->__toString() === 'Production/Staging')
+){
+
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['stage-typo3.libellen-hessen.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['stage-typo3.libellen-hessen.de']['pagePath']['rootpage_id'] = 333;
+
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['stage-typo3.heuschrecken-hessen.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['stage-typo3.heuschrecken-hessen.de']['pagePath']['rootpage_id'] = 345;
 }

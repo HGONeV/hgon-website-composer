@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="de" type="array">
+			<label index="altText">CAPTCHA-Bild zum Spam-Schutz</label>
+			<label index="notice">Bitte geben Sie hier das Wort ein, das im Bild angezeigt wird.</label>
+			<label index="notice_informal">Gib hier das Wort ein, das im Bild angezeigt wird.</label>
+			<label index="explain">Dies dient der Spam-Abwehr.</label>
+			<label index="cant_read1">Wenn Sie das Wort nicht lesen können,</label>
+			<label index="cant_read1_informal">Wenn du das Wort nicht lesen kannst,</label>
+			<label index="click_here">bitte hier klicken</label>
+			<label index="click_here_informal">hier klicken</label>
+			<label index="click_here_accessible">Klicken Sie hier, um das einzugebende Wort anzuhören.</label>
+			<label index="click_here_accessible_informal">Klicke hier, um das einzugebende Wort anzuhören.</label>
+			<label index="click_here_accessible_before_link">Für</label>
+			<label index="click_here_accessible_before_link_informal">Für</label>
+			<label index="click_here_accessible_link">die Audioversion des Wortes</label>
+			<label index="click_here_accessible_link_informal">die Audioversion des Wortes</label>
+			<label index="click_here_accessible_after_link">Klicken Sie auf diesen Link.</label>
+			<label index="click_here_accessible_after_link_informal">Klicken Sie auf diesen Link.</label>
+			<label index="cant_read2">.</label>
+			<label index="noImageMessage">Entschuldigung, wir können nicht automatisch ein neues Bild zeigen. Schicken Sie das Formular ab und ein neues Bild wird geladen.</label>
+			<label index="noPlayMessage">Entschuldigung, wir können das Wort aus dem Bild nicht abspielen.</label>
+		</languageKey>
+  </data>
+</T3locallangExt>

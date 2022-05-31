@@ -23,6 +23,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/rkw-kompetenzzentrum/Deployment-TYPO3.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/RKWKomZe/static_info_tables"
         }
     ],
     "name": "rkw/typo3-distribution",
@@ -31,17 +35,16 @@
     "require": {
         "php": "~7.2.0",
         "typo3/cms": "8.7.26",
-        "helhum/typo3-console": "~5.8.0",
-        "helhum/dotenv-connector": "~2.1.1",
+        "helhum/typo3-console": "5.x-dev",
+        "helhum/dotenv-connector": "~2.3.0",
         "typo3/surf": "^2.0.0",
-        "sjbr/static-info-tables" : "~6.7.0",
+        "sjbr/static-info-tables" : "~6.8.0",
         "rkw/rkw-basics": "v8.7.32-stable",
         "rkw/rkw-geolocation": "v7.6.14-stable",
         "rkw/rkw-mailer": "v8.7.41-beta",
         "rkw/rkw-registration": "v8.7.24-beta",
         "rkw/rkw-authors": "v8.7.6-beta",
-        "rkw/rkw-projects": "v8.7.2-beta",
-        "rkw/rkw-newsletter": "v8.7.14-beta",
+        "rkw/rkw-projects": "v8.7.0-beta",
         "rkw/rkw-events": "v8.7.26-beta",
         "fluidtypo3/vhs": "^5.2",
         "georgringer/news": "^7.2",
@@ -108,12 +111,20 @@
             "rkw/*": "source",
             "hgon/*": "source",
             "*": "dist"
+        },
+        "allow-plugins": {
+            "typo3/cms-composer-installers": true,
+            "typo3/class-alias-loader": true,
+            "helhum/dotenv-connector": true,
+            "helhum/typo3-console-plugin": true
         }
     },
     "autoload": {
         "psr-4": {
             "BM\\BmPdf2content\\": "web/typo3conf/ext/bm_pdf2content/Classes",
-            "DmitryDulepov\\DdGooglesitemap\\": "web/typo3conf/ext/dd_googlesitemap/Classes"
+            "DmitryDulepov\\DdGooglesitemap\\": "web/typo3conf/ext/dd_googlesitemap/Classes",
+            "SJBR\\SrFreecap\\": "web/typo3conf/ext/sr_freecap/Classes",
+            "RKW\\RkwNewsletter\\": "web/typo3conf/ext/rkw_newsletter/Classes"
         }
     }
 }

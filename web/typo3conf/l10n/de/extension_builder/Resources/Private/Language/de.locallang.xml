@@ -105,8 +105,6 @@
 			<label index="descr_enableCategorizable"/>
 			<label index="mapToTable"/>
 			<label index="descr_mapToTable"/>
-			<label index="skipTypeConfiguration"/>
-			<label index="descr_skipTypeConfiguration"/>
 			<label index="parentClass"/>
 			<label index="descr_parentClass"/>
 			<label index="defaultActions">Standardaktionen</label>

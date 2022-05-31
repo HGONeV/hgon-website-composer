@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T04:19:02Z" product-name="lang">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-11T04:10:51Z" product-name="lang">
 		<header/>
 		<body>
 			<trans-unit id="1_selectType" approved="yes">
@@ -38,6 +38,7 @@
 			<trans-unit id="bookmark_description" approved="yes">
 				<source>This is the bookmarks menu. You do not have any bookmarks added yet, you can do so by clicking the bookmark icon %s, which you can find on each page in the backend.</source>
 				<target state="translated">Dieses Menü zeigt von Ihnen angelegte Lesezeichen an. Sie haben noch keine Lesezeichen hinzugefügt, können das aber mit einem Mausklick auf das Lesezeichensymbol %s tun, das auf jeder Seite des Backends vorhanden ist.</target>
+				<note>This label is deprecated (not used anymore) since TYPO3v6</note>
 			</trans-unit>
 			<trans-unit id="bookmark_edit" approved="yes">
 				<source>Edit</source>
@@ -194,9 +195,9 @@
 				<source>File meta data not found</source>
 				<target state="translated">Meta-Daten der Datei nicht gefunden</target>
 			</trans-unit>
-			<trans-unit id="fileUpload_allError2038" approved="yes">
+			<trans-unit id="fileUpload_allError2038" approved="no">
 				<source>An input/output error occurred (Error #2038). This i.e. happens with servers using a self-signed SSL certificate, which is a limitation of your browser's Flash plugin.</source>
-				<target state="translated">Ein Lese-/Schreibfehler ist aufgetreten (Fehler #2038). Dies ist häufig auf ein selbstsigniertes SSL-Zertifikat zurückzuführen. Leider wird dies von dem von Ihnen verwendeten Flash-Plug-In nicht unterstützt.</target>
+				<target state="needs-translation">Ein Lese-/Schreibfehler ist aufgetreten (Fehler #2038). Dies ist häufig auf ein selbstsigniertes SSL-Zertifikat zurückzuführen. Leider wird dies von dem von Ihnen verwendeten Flash-Plug-In nicht unterstützt.</target>
 			</trans-unit>
 			<trans-unit id="fileUpload_allError401" approved="yes">
 				<source>The server returned the status code 401, which is related to a .htaccess file used for password protection on your server. Unfortunately this can not be handled by your browser's Flash plugin.</source>
@@ -574,6 +575,7 @@
 			<trans-unit id="viewPort_tooltipNavigationContainerSplitClick" approved="yes">
 				<source>Click to toggle the page tree area</source>
 				<target state="translated">Klicken Sie hier, um den Seitenbaum umzuschalten</target>
+				<note>This label is deprecated (not used anymore) since TYPO3v6</note>
 			</trans-unit>
 			<trans-unit id="viewPort_tooltipNavigationContainerSplitDrag" approved="yes">
 				<source>Drag to resize or double click to collapse the page tree area</source>

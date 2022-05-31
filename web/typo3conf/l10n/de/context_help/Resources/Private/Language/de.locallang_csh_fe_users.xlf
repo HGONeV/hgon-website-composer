@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-08-05T00:51:54Z" product-name="context_help">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-11T00:55:28Z" product-name="context_help">
 		<header/>
 		<body>
 			<trans-unit id="address.description" approved="yes">
@@ -43,10 +43,10 @@
 				<source>See "Start"</source>
 				<target state="translated">Siehe "Start".</target>
 			</trans-unit>
-			<trans-unit id="_.image" xml:space="preserve" approved="yes">
+			<trans-unit id="_.image" xml:space="preserve" approved="no">
 				<source>EXT:context_help/Resources/Public/Images/cshimages/feusers_1.png,
 EXT:context_help/Resources/Public/Images/cshimages/feusers_2.png,</source>
-				<target state="translated">EXT:context_help/Resources/Public/Images/cshimages/feusers_1.png,
+				<target state="needs-translation">EXT:context_help/Resources/Public/Images/cshimages/feusers_1.png,
 EXT:context_help/Resources/Public/Images/cshimages/feusers_2.png,</target><note from="developer">This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note>
 			<note>This string contains an internal text, which must not be changed. Just copy the original text into the translation field. For more information have a look at the Tutorial.</note></trans-unit>
 			<trans-unit id=".image_descr" xml:space="preserve" approved="yes">
@@ -61,9 +61,9 @@ A typical login box (standard) on the website where frontend users can login.</s
 				<source>This field shows the user's last log in date.</source>
 				<target state="translated">Zeigt das Datum an, zu dem sich der Benutzer zuletzt angemeldet hat.</target>
 			</trans-unit>
-			<trans-unit id="lockToDomain.description" approved="yes">
+			<trans-unit id="lockToDomain.description" approved="no">
 				<source>Enter the host name from which the user is forced to login. NOTICE: this is not a security feature and can be circumvented by faking HTTP_HOST.</source>
-				<target state="translated">Geben Sie den Rechnernamen oder die Netzwerkadresse an, von welchem sich der Benutzer einloggen muss. HINWEIS: Das ist keine Sicherheitsfunktion und kann umgangen werden, wenn HTTP_HOST gefälscht wird.</target>
+				<target state="needs-translation">Geben Sie den Rechnernamen oder die Netzwerkadresse an, von welchem sich der Benutzer einloggen muss. HINWEIS: Das ist keine Sicherheitsfunktion und kann umgangen werden, wenn HTTP_HOST gefälscht wird.</target>
 			</trans-unit>
 			<trans-unit id="lockToDomain.details" approved="yes">
 				<source>A TYPO3 system may have multiple domains pointing to it. Therefore this option secures that users can login only from a certain host name.</source>

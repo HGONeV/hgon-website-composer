@@ -4,7 +4,7 @@ return [
         'compressionLevel' => '0',
         'debug' => true,
         'disable_exec_function' => 0,
-        'installToolPassword' => '$P$CCPgTtSq.wLoOwR/s8D4XiGa8CX5JW.',
+        'installToolPassword' => '$P$Cy0VMMtP2NPonUSsS3mS0ttey8rxp9/',
         'lockSSL' => '0',
         'loginSecurityLevel' => 'rsa',
         'sessionTimeout' => '36000',
@@ -13,15 +13,15 @@ return [
     'DB' => [
         'Connections' => [
             'Default' => [
-                'charset' => 'utf8',
+                'charset' => 'utf8mb4',
                 'dbname' => 'hgon',
                 'driver' => 'mysqli',
                 'host' => 'localhost',
+                'initCommands' => 'utf8mb4',
                 'password' => 'hgon',
                 'user' => 'hgon',
             ],
         ],
-        'extTablesDefinitionScript' => 'extTables.php',
     ],
     'EXT' => [
         'extCache' => 0,
@@ -56,7 +56,7 @@ return [
             'lowlevel' => 'a:0:{}',
             'news' => 'a:17:{s:13:"prependAtCopy";s:1:"1";s:6:"tagPid";s:1:"1";s:12:"rteForTeaser";s:1:"0";s:22:"contentElementRelation";s:1:"1";s:21:"contentElementPreview";s:1:"1";s:13:"manualSorting";s:1:"0";s:19:"categoryRestriction";s:0:"";s:34:"categoryBeGroupTceFormsRestriction";s:1:"0";s:19:"dateTimeNotRequired";s:1:"0";s:11:"archiveDate";s:4:"date";s:12:"mediaPreview";s:5:"false";s:20:"advancedMediaPreview";s:1:"1";s:24:"showAdministrationModule";s:1:"1";s:35:"hidePageTreeForAdministrationModule";s:1:"0";s:12:"showImporter";s:1:"0";s:18:"storageUidImporter";s:1:"1";s:22:"resourceFolderImporter";s:12:"/news_import";}',
             'opendocs' => 'a:0:{}',
-            'pb_social' => 'a:1:{s:11:"socialfeed.";a:11:{s:6:"devmod";s:1:"0";s:15:"ignoreVerifySSL";s:1:"0";s:9:"facebook.";a:1:{s:4:"api.";a:2:{s:2:"id";s:0:"";s:6:"secret";s:0:"";}}s:10:"instagram.";a:1:{s:7:"client.";a:5:{s:2:"id";s:0:"";s:6:"secret";s:0:"";s:8:"callback";s:0:"";s:11:"access_code";s:0:"";s:12:"access_token";s:0:"";}}s:9:"linkedin.";a:2:{s:7:"client.";a:3:{s:3:"key";s:0:"";s:6:"secret";s:0:"";s:12:"callback_url";s:0:"";}s:12:"access_token";s:0:"";}s:10:"pinterest.";a:1:{s:4:"app.";a:3:{s:2:"id";s:0:"";s:6:"secret";s:0:"";s:4:"code";s:0:"";}}s:8:"twitter.";a:2:{s:9:"consumer.";a:2:{s:3:"key";s:25:"ofcr9QLLMje0a5lQuhKaJvkS9";s:6:"secret";s:50:"KK79mSpfUhhXaszuIdvsu0mZKNJuf9UBKGh6u3xuaK3B1Q2iMT";}s:6:"oauth.";a:1:{s:7:"access.";a:2:{s:5:"token";s:50:"1156475750368915458-d9cHPePHr668zxSvXeaXPWO8vBW2vM";s:12:"token_secret";s:45:"3mQTCd1GFc79j6Gwxx8SxigPfdwTIFXP1lBIo8ESzvuzl";}}}s:8:"youtube.";a:1:{s:6:"apikey";s:0:"";}s:6:"vimeo.";a:2:{s:7:"client.";a:2:{s:10:"identifier";s:0:"";s:6:"secret";s:0:"";}s:5:"token";s:0:"";}s:7:"tumblr.";a:3:{s:9:"consumer.";a:2:{s:3:"key";s:0:"";s:6:"secret";s:0:"";}s:5:"token";s:0:"";s:12:"token_secret";s:0:"";}s:6:"imgur.";a:1:{s:7:"client.";a:2:{s:2:"id";s:0:"";s:6:"secret";s:0:"";}}}}',
+            'pb_social' => 'a:1:{s:11:"socialfeed.";a:11:{s:6:"devmod";s:1:"1";s:15:"ignoreVerifySSL";s:1:"0";s:9:"facebook.";a:1:{s:4:"api.";a:3:{s:2:"id";s:0:"";s:6:"secret";s:0:"";s:15:"pageaccesstoken";s:0:"";}}s:10:"instagram.";a:1:{s:7:"client.";a:5:{s:2:"id";s:0:"";s:6:"secret";s:0:"";s:8:"callback";s:0:"";s:11:"access_code";s:0:"";s:12:"access_token";s:0:"";}}s:9:"linkedin.";a:2:{s:7:"client.";a:3:{s:3:"key";s:0:"";s:6:"secret";s:0:"";s:12:"callback_url";s:0:"";}s:12:"access_token";s:0:"";}s:10:"pinterest.";a:1:{s:4:"app.";a:3:{s:2:"id";s:0:"";s:6:"secret";s:0:"";s:4:"code";s:0:"";}}s:8:"twitter.";a:2:{s:9:"consumer.";a:2:{s:3:"key";s:25:"ofcr9QLLMje0a5lQuhKaJvkS9";s:6:"secret";s:50:"KK79mSpfUhhXaszuIdvsu0mZKNJuf9UBKGh6u3xuaK3B1Q2iMT";}s:6:"oauth.";a:1:{s:7:"access.";a:2:{s:5:"token";s:50:"1156475750368915458-d9cHPePHr668zxSvXeaXPWO8vBW2vM";s:12:"token_secret";s:45:"3mQTCd1GFc79j6Gwxx8SxigPfdwTIFXP1lBIo8ESzvuzl";}}}s:8:"youtube.";a:1:{s:6:"apikey";s:0:"";}s:6:"vimeo.";a:2:{s:7:"client.";a:2:{s:10:"identifier";s:0:"";s:6:"secret";s:0:"";}s:5:"token";s:0:"";}s:7:"tumblr.";a:3:{s:9:"consumer.";a:2:{s:3:"key";s:0:"";s:6:"secret";s:0:"";}s:5:"token";s:0:"";s:12:"token_secret";s:0:"";}s:6:"imgur.";a:1:{s:7:"client.";a:2:{s:2:"id";s:0:"";s:6:"secret";s:0:"";}}}}',
             'phpunit' => 'a:6:{s:17:"excludeextensions";s:8:"lib, div";s:12:"composerpath";s:0:"";s:13:"selenium_host";s:9:"localhost";s:13:"selenium_port";s:4:"4444";s:16:"selenium_browser";s:8:"*firefox";s:19:"selenium_browserurl";s:0:"";}',
             'realurl' => 'a:7:{s:10:"configFile";s:34:"typo3conf/RealUrlConfiguration.php";s:14:"enableAutoConf";s:1:"0";s:14:"autoConfFormat";s:1:"0";s:17:"segTitleFieldList";s:0:"";s:12:"enableDevLog";s:1:"0";s:10:"moduleIcon";s:1:"0";s:19:"enableChashUrlDebug";s:1:"0";}',
             'recycler' => 'a:0:{}',
@@ -77,6 +77,7 @@ return [
             'rkw_newsletter' => 'a:0:{}',
             'rkw_order' => 'a:0:{}',
             'rkw_page_detector' => 'a:0:{}',
+            'rkw_pdf2content' => 'a:0:{}',
             'rkw_projects' => 'a:0:{}',
             'rkw_quickcheck' => 'a:0:{}',
             'rkw_registration' => 'a:0:{}',
@@ -100,7 +101,8 @@ return [
             'saltedpasswords' => 'a:6:{s:20:"checkConfigurationFE";s:1:"0";s:20:"checkConfigurationBE";s:1:"0";s:3:"FE.";a:5:{s:7:"enabled";s:1:"1";s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\PhpassSalt";s:11:"forceSalted";s:1:"0";s:15:"onlyAuthService";s:1:"0";s:12:"updatePasswd";s:1:"1";}s:3:"BE.";a:4:{s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\PhpassSalt";s:11:"forceSalted";s:1:"0";s:15:"onlyAuthService";s:1:"0";s:12:"updatePasswd";s:1:"1";}s:21:"checkConfigurationFE2";s:1:"0";s:21:"checkConfigurationBE2";s:1:"0";}',
             'scheduler' => 'a:5:{s:11:"maxLifetime";s:4:"1440";s:11:"enableBELog";s:1:"1";s:15:"showSampleTasks";s:1:"1";s:11:"useAtdaemon";s:1:"0";s:30:"listShowTaskDescriptionAsHover";s:1:"1";}',
             'setup' => 'a:0:{}',
-            'sg_cookie_optin' => 'a:2:{s:3:"key";s:27:"HCHZBG-ZW19DD-FKX4WA-DIG8LM";s:6:"folder";s:26:"fileadmin/sg_cookie_optin/";}',
+            'sg_cookie_optin' => 'a:3:{s:3:"key";s:27:"HCHZBG-ZW19DD-FKX4WA-DIG8LM";s:6:"folder";s:26:"fileadmin/sg_cookie_optin/";s:29:"hideModuleInProductionContext";s:5:"FALSE";}',
+            'sr_freecap' => 'a:2:{s:19:"encryptionAlgorithm";s:11:"AES-256-CBC";s:4:"salt";s:64:"cH!swe!retReGu7W6bEDRup7usuDUh9THeD2CHeGE*ewr4n39=E@rAsp7c-Ph@pH";}',
             'static_info_tables' => 'a:1:{s:13:"enableManager";s:1:"0";}',
             'sys_action' => 'a:0:{}',
             'sys_note' => 'a:0:{}',
@@ -119,7 +121,9 @@ return [
     ],
     'EXTCONF' => [
         'lang' => [
-            'availableLanguages' => [],
+            'availableLanguages' => [
+                'de',
+            ],
         ],
     ],
     'FE' => [
