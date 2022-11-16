@@ -8,7 +8,8 @@ SetEnv TYPO3_CONTEXT Production
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    #RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteCond %{HTTP_HOST} !^(www\.|neu\.) [NC]
     RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [QSA,NC,NE,L,R=301]
 
 </IfModule>

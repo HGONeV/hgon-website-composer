@@ -44,11 +44,11 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['UTF8filesystem'] = 1; // use utf-8 to store 
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['fileCreateMask'] = '0664'; // File mode mask for Unix file systems
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['folderCreateMask'] = '2775'; // Folder mode mask for Unix file systems
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['ipAnonymization'] = 2; // Mask the last two bytes for IPv4 addresses / Mask the Interface ID and SLA ID for IPv6 addresses
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['cookieDomain'] = '/\\.(hgon)\\.de$/';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['cookieDomain'] = '/\\.(hgon|libellen-hessen|heuschrecken-hessen)\\.de$/';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['cookieSecure'] = 2; // the cookie uses the secure flag if a secure (HTTPS) connection exists
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxyIP'] = '127.0.0.1'; // revers proxy IP
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLocale'] = 'de_DE.UTF-8'; // locale used for certain system related functions
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['trustedHostsPattern'] = '(.*\\.hgon\\.de)';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['trustedHostsPattern'] = '(.*\\.hgon\\.de|.*\\.libellen-hessen\\.de|.*\\.heuschrecken-hessen\\.de)';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['generateApacheHtaccess'] = 1; // create .htaccess files for protection
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLog'] = 'mail,srvmsg@hgon.de,3';
 

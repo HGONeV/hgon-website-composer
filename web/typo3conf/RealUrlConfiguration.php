@@ -312,7 +312,17 @@ function user_encodeSpURL_postProc(&$params, &$ref) {
     $params['URL'] = str_replace('detailansicht/tx-hgon-workgroup/', 'arbeitskreis/', $params['URL']);
 }
 
+// LIBELLEN HESSEN
+$TYPO3_CONF_VARS['EXTCONF']['realurl']['neu.libellen-hessen.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
+$TYPO3_CONF_VARS['EXTCONF']['realurl']['neu.libellen-hessen.de']['pagePath']['rootpage_id'] = 345;
+$TYPO3_CONF_VARS['EXTCONF']['realurl']['libellen-hessen.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
+$TYPO3_CONF_VARS['EXTCONF']['realurl']['libellen-hessen.de']['pagePath']['rootpage_id'] = 345;
 
+// HEUSCHRECKEN
+$TYPO3_CONF_VARS['EXTCONF']['realurl']['neu.heuschrecken-hessen.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
+$TYPO3_CONF_VARS['EXTCONF']['realurl']['neu.heuschrecken-hessen.de']['pagePath']['rootpage_id'] = 346;
+$TYPO3_CONF_VARS['EXTCONF']['realurl']['heuschrecken-hessen.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
+$TYPO3_CONF_VARS['EXTCONF']['realurl']['heuschrecken-hessen.de']['pagePath']['rootpage_id'] = 346;
 
 /**
  * Development environment
@@ -322,7 +332,6 @@ if(\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopmen
 
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['hgon-libellen.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['hgon-libellen.rkw.local']['pagePath']['rootpage_id'] = 78;
-
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['hgon-heuschrecken.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['hgon-heuschrecken.rkw.local']['pagePath']['rootpage_id'] = 91;
 }
@@ -335,10 +344,8 @@ if(
     (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isProduction())
     && (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->__toString() === 'Production/Staging')
 ){
-
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['stage-typo3.libellen-hessen.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['stage-typo3.libellen-hessen.de']['pagePath']['rootpage_id'] = 333;
-
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['stage-typo3.heuschrecken-hessen.de'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['stage-typo3.heuschrecken-hessen.de']['pagePath']['rootpage_id'] = 345;
 }
