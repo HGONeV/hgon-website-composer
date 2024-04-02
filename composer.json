@@ -22,6 +22,10 @@
         },
         {
             "type": "vcs",
+            "url": "https://github.com/HGONeV/hgon_species.git"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/rkw-kompetenzzentrum/Deployment-TYPO3.git"
         },
         {
@@ -63,6 +67,7 @@
         "hgon/hgon-donation": "dev-master",
         "hgon/hgon-workgroup": "dev-master",
         "hgon/hgon-payment": "dev-master",
+        "hgon/hgon-species": "dev-master",
         "rkw/deployment-typo3" : "*"
     },
     "scripts": {
