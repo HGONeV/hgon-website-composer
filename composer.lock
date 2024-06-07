@@ -4908,12 +4908,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_species.git",
-                "reference": "fd31a70ef9a7a737e18c1889233d1d8a0b9a94e9"
+                "reference": "ad7775eaed837158e3e466629c5dc8a2cee7a47d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_species/zipball/fd31a70ef9a7a737e18c1889233d1d8a0b9a94e9",
-                "reference": "fd31a70ef9a7a737e18c1889233d1d8a0b9a94e9",
+                "url": "https://api.github.com/repos/HGONeV/hgon_species/zipball/ad7775eaed837158e3e466629c5dc8a2cee7a47d",
+                "reference": "ad7775eaed837158e3e466629c5dc8a2cee7a47d",
                 "shasum": ""
             },
             "require": {
@@ -4945,7 +4945,7 @@
                 "source": "https://github.com/HGONeV/hgon_species/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_species/issues"
             },
-            "time": "2024-05-31T09:39:13+00:00"
+            "time": "2024-06-07T12:31:36+00:00"
         },
         {
             "name": "hgon/hgon-workgroup",
