@@ -331,7 +331,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['heuschrecken-hessen.de']['pagePath']['ro
 if(\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopment()) {
 
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['hgon-libellen.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
-    $TYPO3_CONF_VARS['EXTCONF']['realurl']['hgon-libellen.rkw.local']['pagePath']['rootpage_id'] = 78;
+    $TYPO3_CONF_VARS['EXTCONF']['realurl']['hgon-libellen.rkw.local']['pagePath']['rootpage_id'] = 80;
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['hgon-heuschrecken.rkw.local'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
     $TYPO3_CONF_VARS['EXTCONF']['realurl']['hgon-heuschrecken.rkw.local']['pagePath']['rootpage_id'] = 91;
 }

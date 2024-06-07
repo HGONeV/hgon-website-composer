@@ -1682,16 +1682,16 @@
         },
         {
             "name": "mollie/mollie-api-php",
-            "version": "v2.66.0",
+            "version": "v2.67.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mollie/mollie-api-php.git",
-                "reference": "d7d09ac62a565e818bf49d04acb2f0432da758a9"
+                "reference": "ed5b2ba1dc8f30a4674f10ca78ad547c2df91008"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/d7d09ac62a565e818bf49d04acb2f0432da758a9",
-                "reference": "d7d09ac62a565e818bf49d04acb2f0432da758a9",
+                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/ed5b2ba1dc8f30a4674f10ca78ad547c2df91008",
+                "reference": "ed5b2ba1dc8f30a4674f10ca78ad547c2df91008",
                 "shasum": ""
             },
             "require": {
@@ -1766,7 +1766,7 @@
                 "sofortbanking",
                 "subscriptions"
             ],
-            "time": "2024-03-19T13:33:42+00:00"
+            "time": "2024-05-07T07:59:20+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -4908,12 +4908,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_species.git",
-                "reference": "97090e3cb4546992168405ad53c85d743a00e86b"
+                "reference": "fd31a70ef9a7a737e18c1889233d1d8a0b9a94e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_species/zipball/97090e3cb4546992168405ad53c85d743a00e86b",
-                "reference": "97090e3cb4546992168405ad53c85d743a00e86b",
+                "url": "https://api.github.com/repos/HGONeV/hgon_species/zipball/fd31a70ef9a7a737e18c1889233d1d8a0b9a94e9",
+                "reference": "fd31a70ef9a7a737e18c1889233d1d8a0b9a94e9",
                 "shasum": ""
             },
             "require": {
@@ -4945,7 +4945,7 @@
                 "source": "https://github.com/HGONeV/hgon_species/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_species/issues"
             },
-            "time": "2024-04-02T14:54:40+00:00"
+            "time": "2024-05-31T09:39:13+00:00"
         },
         {
             "name": "hgon/hgon-workgroup",
