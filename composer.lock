@@ -1638,16 +1638,16 @@
         },
         {
             "name": "hgon/hgon-template",
-            "version": "v8.7.49-beta",
+            "version": "v8.7.50-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_template.git",
-                "reference": "269b5d77d510afb798c68680f32d26fa7ad1fb72"
+                "reference": "7a91b57ea69170e5f0668b6a2ead3ffd96eb2252"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/269b5d77d510afb798c68680f32d26fa7ad1fb72",
-                "reference": "269b5d77d510afb798c68680f32d26fa7ad1fb72",
+                "url": "https://api.github.com/repos/HGONeV/hgon_template/zipball/7a91b57ea69170e5f0668b6a2ead3ffd96eb2252",
+                "reference": "7a91b57ea69170e5f0668b6a2ead3ffd96eb2252",
                 "shasum": ""
             },
             "require": {
@@ -1675,23 +1675,23 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.49-beta",
+                "source": "https://github.com/HGONeV/hgon_template/tree/v8.7.50-beta",
                 "issues": "https://github.com/HGONeV/hgon_template/issues"
             },
-            "time": "2024-06-07T12:58:20+00:00"
+            "time": "2024-07-05T09:13:39+00:00"
         },
         {
             "name": "mollie/mollie-api-php",
-            "version": "v2.69.0",
+            "version": "v2.70.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mollie/mollie-api-php.git",
-                "reference": "9a53f8bd6c89ae3e62982921a2f9d8ed68f9900d"
+                "reference": "a825578aba98605db3f6b6bc5b86c196276dc3f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/9a53f8bd6c89ae3e62982921a2f9d8ed68f9900d",
-                "reference": "9a53f8bd6c89ae3e62982921a2f9d8ed68f9900d",
+                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/a825578aba98605db3f6b6bc5b86c196276dc3f9",
+                "reference": "a825578aba98605db3f6b6bc5b86c196276dc3f9",
                 "shasum": ""
             },
             "require": {
@@ -1766,7 +1766,7 @@
                 "sofortbanking",
                 "subscriptions"
             ],
-            "time": "2024-06-24T11:52:46+00:00"
+            "time": "2024-07-03T19:11:11+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -4908,12 +4908,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HGONeV/hgon_species.git",
-                "reference": "b42546251b9ed85cc99af823f724d4244bcbeae2"
+                "reference": "9895f60790c95d0db4ee489435f9040275a96985"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HGONeV/hgon_species/zipball/b42546251b9ed85cc99af823f724d4244bcbeae2",
-                "reference": "b42546251b9ed85cc99af823f724d4244bcbeae2",
+                "url": "https://api.github.com/repos/HGONeV/hgon_species/zipball/9895f60790c95d0db4ee489435f9040275a96985",
+                "reference": "9895f60790c95d0db4ee489435f9040275a96985",
                 "shasum": ""
             },
             "require": {
@@ -4945,7 +4945,7 @@
                 "source": "https://github.com/HGONeV/hgon_species/tree/master",
                 "issues": "https://github.com/HGONeV/hgon_species/issues"
             },
-            "time": "2024-07-02T12:35:41+00:00"
+            "time": "2024-07-05T09:11:04+00:00"
         },
         {
             "name": "hgon/hgon-workgroup",
